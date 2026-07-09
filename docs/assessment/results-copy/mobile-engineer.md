@@ -1,0 +1,25 @@
+## What this role actually is
+
+Mobile Engineer covers building and shipping the native (or cross-platform) app itself — iOS, Android, or both, via Swift/SwiftUI, Kotlin/Jetpack Compose, or a shared framework like React Native or Flutter. It's easy to file this under "UI work" and move on, but the job spans real systems-engineering problems: offline-first data sync, memory- and battery-constrained performance tuning, binary size budgets, and a release process with no instant rollback once a build ships to the store. The underlying skill — structuring an app, managing state, working with APIs — transfers across iOS, Android, and even backend work more readily than the "iOS developer" or "Android developer" label suggests.
+
+## Why you matched
+
+You matched with Mobile Engineer because your answers put {{top_dimension_1}}, {{top_dimension_2}}, and {{top_dimension_3}} close to what this role actually demands day to day — those are the parts of your profile pulling hardest toward this match.
+
+For example: a profile with high **coding_intensity**, moderate **physical_constraint_engineering**, and moderate **debugging_diagnostic_depth** would land here — someone who wants to be hands-on-keyboard building the shipped product most of the week, is comfortable treating performance budgets (cold start, battery, frame drops) as real constraints, and can debug across the app-code/OS boundary without it being the defining feature of the job.
+
+## A day in this role
+
+Most of the day is building UI and business logic against a design spec, then wiring it to backend APIs and handling the parts of that connection a backend engineer never has to think about — flaky networks, offline caching, sync conflicts. You'll profile startup time, memory footprint, or jank on a mid-tier Android device because those numbers are gated in CI, not just nice-to-haves. Release weeks bring their own rhythm: App Store or Play Store submission, staged rollouts, and watching crash-reporting dashboards (Crashlytics/Sentry) since you can't hotfix a shipped binary the way you'd redeploy a server. At senior+, expect code review, mentoring, and — eventually — owning modularization or build-time decisions that affect the whole team, not just your feature.
+
+## Comp structure
+
+Base + equity (RSUs at public/late-stage companies, options earlier) + bonus — the same general shape as other software engineering roles, with no separate variable or commission component. Reported medians cluster around $190K-$220K total comp depending on platform and source, with big tech (Meta, LinkedIn) running meaningfully higher and smaller/non-tech-hub employers running lower — company tier moves the number more than iOS vs. Android does.
+
+## Growth areas — if this wasn't a perfect fit
+
+If {{growth_dimension}} came back lower than this role typically wants, that's worth a closer look rather than a red flag — it usually means a specific, testable gap, not a wrong match. For example: if your **systems_design_scale** score is on the low side, know that this role is mostly scoped to one app or team rather than a platform serving many consuming teams — real architectural ownership shows up at staff+ but stays bounded to your own codebase, which is worth weighing if you're specifically looking for platform-scale design work.
+
+## How to test this cheaply
+
+Build and ship something small to the App Store or Play Store yourself — even a single-screen utility app — and see whether the release-and-rollback constraints (no instant hotfix, review queue delays) feel like a real constraint or an annoyance. Separately, spend a week profiling an existing open-source app's cold-start time or memory footprint with the platform's own tooling (Xcode Instruments, Android Studio Profiler) to get a direct read on whether that kind of performance-budget work is engaging or tedious to you.

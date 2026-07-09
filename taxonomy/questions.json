@@ -1,0 +1,234 @@
+{
+  "version": "1.0",
+  "notes": "Phase 3 deliverable. 2 questions per dimension in taxonomy/dimensions.json (32 total), plus a short stack-intake block. Each dimension question's `value` options span the dimension's 1-5 scale; a user's final U[d] fed into taxonomy/scoring.md is the average of their answered questions for that dimension (nulls excluded per scoring.md's skip handling). `section` matches docs/assessment/flow.md's four sections.",
+  "stackIntake": {
+    "notes": "Fast structured input, not scored against the 16 trait dimensions directly — used to personalize result copy and lightly qualify technical_breadth_depth/coding_intensity self-reports against a sanity check. Deliberately short per PLAN.md Phase 3 spec.",
+    "fields": [
+      {"id": "years_experience", "label": "How many years have you been working as a software engineer (or equivalent)?", "type": "number", "min": 0, "max": 50},
+      {"id": "primary_languages", "label": "Which languages do you use most?", "type": "multi_select_with_other", "options": ["JavaScript/TypeScript", "Python", "Java", "Go", "C#", "C/C++", "Rust", "Ruby", "PHP", "Swift", "Kotlin", "SQL"]},
+      {"id": "domains", "label": "Which of these describe work you've done? (select all that apply)", "type": "multi_select", "options": ["Web frontend", "Backend/APIs", "Mobile (iOS/Android)", "Data/ML", "Infra/DevOps/Cloud", "Embedded/firmware", "Security", "Client-facing/pre-sales", "Support/customer-facing", "People management"]},
+      {"id": "current_title", "label": "What's your current (or most recent) job title?", "type": "free_text", "optional": true}
+    ]
+  },
+  "questions": [
+    {"id": "q_ambiguity_1", "dimension": "ambiguity_tolerance", "section": "work_style", "format": "scenario_choice",
+      "prompt": "Your manager says: “We think there's an opportunity here, but we don't have a clear spec — go figure out what we should build.” How do you honestly feel?",
+      "options": [
+        {"label": "I'd want at least a rough spec before starting — this feels like a setup for wasted work.", "value": 1},
+        {"label": "I'd dig in, but I'd want to agree on a rough goal with my manager first.", "value": 3},
+        {"label": "I'd be energized — defining the problem myself is half the fun.", "value": 5}
+      ]},
+    {"id": "q_ambiguity_2", "dimension": "ambiguity_tolerance", "section": "work_style", "format": "scenario_choice",
+      "prompt": "Your team's goal for a project is described only as “make customers happier,” with no agreed metric for what that means. Honest reaction?",
+      "options": [
+        {"label": "Frustrating — I want a number to aim at before I start.", "value": 1},
+        {"label": "Workable, but I'd push hard to define a metric before executing.", "value": 3},
+        {"label": "Fine by me — I'll figure out how to tell if it worked as I go.", "value": 5}
+      ]},
+
+    {"id": "q_interrupt_1", "dimension": "interrupt_tolerance", "section": "work_style", "format": "scenario_choice",
+      "prompt": "It's 10am and you had two hours blocked for deep work, but three “quick question” Slack messages come in. What do you do?",
+      "options": [
+        {"label": "Ignore them until my blocked time is over — deep work comes first.", "value": 1},
+        {"label": "Glance at them, answer the truly quick one, defer the rest.", "value": 3},
+        {"label": "Answer all three right away — I like the variety and the momentum.", "value": 5}
+      ]},
+    {"id": "q_interrupt_2", "dimension": "interrupt_tolerance", "section": "work_style", "format": "behavioral_anchor",
+      "prompt": "Which describes your ideal workday cadence best?",
+      "options": [
+        {"label": "Long stretches of self-scheduled focus time, few unplanned check-ins.", "value": 1},
+        {"label": "A mix of planned meetings and occasional interruptions I can usually predict.", "value": 3},
+        {"label": "A stream of live requests I respond to as they come in — that's the job.", "value": 5}
+      ]},
+
+    {"id": "q_oncall_1", "dimension": "oncall_incident_appetite", "section": "work_style", "format": "scenario_choice",
+      "prompt": "Your phone buzzes at 2am: production is down. How do you feel about that possibility being a real part of your job?",
+      "options": [
+        {"label": "A dealbreaker — I don't want to be woken up for work.", "value": 1},
+        {"label": "Fine as part of a fair rotation, but I wouldn't seek it out.", "value": 3},
+        {"label": "Bring it on — I like the pressure and the payoff of fixing it live.", "value": 5}
+      ]},
+    {"id": "q_oncall_2", "dimension": "oncall_incident_appetite", "section": "work_style", "format": "scenario_choice",
+      "prompt": "A serious incident happens on a system you're responsible for, outside work hours. Your gut reaction?",
+      "options": [
+        {"label": "I'd want someone else to own that call entirely.", "value": 1},
+        {"label": "I'd help if truly necessary, but I'd hope it's rare.", "value": 3},
+        {"label": "I'd want to be the one leading the response.", "value": 5}
+      ]},
+
+    {"id": "q_debugging_1", "dimension": "debugging_diagnostic_depth", "section": "work_style", "format": "behavioral_anchor",
+      "prompt": "When something breaks and the cause isn't obvious, which describes you best?",
+      "options": [
+        {"label": "I can usually trace it from application logs pretty quickly.", "value": 1},
+        {"label": "I can dig into logs, third-party services, or infra config, given time to research.", "value": 3},
+        {"label": "I can form and test hypotheses across totally different failure domains under real time pressure.", "value": 5}
+      ]},
+    {"id": "q_debugging_2", "dimension": "debugging_diagnostic_depth", "section": "work_style", "format": "behavioral_anchor",
+      "prompt": "Think of the hardest bug you've personally solved. Which is closest to what happened?",
+      "options": [
+        {"label": "A clear stack trace pointed me right at the fix.", "value": 1},
+        {"label": "I had to check a couple of systems/services before finding the real cause.", "value": 3},
+        {"label": "The cause spanned multiple totally different systems, and I had to rule out several wrong theories first.", "value": 5}
+      ]},
+
+    {"id": "q_systems_design_1", "dimension": "systems_design_scale", "section": "work_style", "format": "behavioral_anchor",
+      "prompt": "How would you describe the systems you've designed?",
+      "options": [
+        {"label": "Well-specified components that fit a defined spec.", "value": 1},
+        {"label": "Services or schemas that work well for my team's current scale.", "value": 3},
+        {"label": "Platforms meant to serve many teams or scale far beyond current load.", "value": 5}
+      ]},
+    {"id": "q_systems_design_2", "dimension": "systems_design_scale", "section": "work_style", "format": "behavioral_anchor",
+      "prompt": "When you design something, how far ahead do you typically think?",
+      "options": [
+        {"label": "Whether it solves the immediate problem correctly.", "value": 1},
+        {"label": "Whether it'll hold up for my team over the next year or so.", "value": 3},
+        {"label": "Whether it'll hold up as the org and traffic grow by 10x, for teams I'll never talk to.", "value": 5}
+      ]},
+
+    {"id": "q_breadth_1", "dimension": "technical_breadth_depth", "section": "stack", "format": "slider",
+      "prompt": "Where do you naturally sit?",
+      "scale": {"min": 1, "max": 5, "minLabel": "Deep specialist in one narrow layer or platform", "maxLabel": "Fluid across many stacks/platforms — I prefer variety"}},
+    {"id": "q_breadth_2", "dimension": "technical_breadth_depth", "section": "stack", "format": "slider",
+      "prompt": "How many different technologies or platforms are you comfortable being thrown into on short notice?",
+      "scale": {"min": 1, "max": 5, "minLabel": "One — I go deep and stay there", "maxLabel": "Any — I'll pick up whatever the situation needs"}},
+
+    {"id": "q_outcome_1", "dimension": "outcome_accountability", "section": "incentives", "format": "scenario_choice",
+      "prompt": "A metric you're responsible for goes bad, partly due to factors outside your control. How do you feel about being the named owner of that?",
+      "options": [
+        {"label": "Uncomfortable — I shouldn't be blamed for things I don't control.", "value": 1},
+        {"label": "OK, as long as there's fair attribution before real blame lands.", "value": 3},
+        {"label": "Fine — I'll own it and focus on the fix, regardless of the cause.", "value": 5}
+      ]},
+    {"id": "q_outcome_2", "dimension": "outcome_accountability", "section": "incentives", "format": "scenario_choice",
+      "prompt": "What matters more to you, day to day?",
+      "options": [
+        {"label": "That the system/design is well-built and technically sound.", "value": 1},
+        {"label": "Both — sound systems that also produce results.", "value": 3},
+        {"label": "That it drives the actual business/user outcome, even if the tech underneath isn't elegant.", "value": 5}
+      ]},
+
+    {"id": "q_stakeholder_1", "dimension": "stakeholder_client_comfort", "section": "people", "format": "scenario_choice",
+      "prompt": "You're in a room with a skeptical senior engineer, a procurement person, and an exec — all at once, and you need all three to trust you. Reaction?",
+      "options": [
+        {"label": "I'd rather email each of them separately.", "value": 1},
+        {"label": "Doable if I've prepared, but not my favorite setting.", "value": 3},
+        {"label": "This is exactly the kind of moment I'm good at.", "value": 5}
+      ]},
+    {"id": "q_stakeholder_2", "dimension": "stakeholder_client_comfort", "section": "people", "format": "scenario_choice",
+      "prompt": "Someone from another team (or a client) treats you like a vendor they need convincing to use. Honest reaction?",
+      "options": [
+        {"label": "Frustrating — I'd rather just be told what to build.", "value": 1},
+        {"label": "Fair enough, I'll make the case if I have to.", "value": 3},
+        {"label": "I like this dynamic — earning adoption is part of the job.", "value": 5}
+      ]},
+
+    {"id": "q_teaching_1", "dimension": "teaching_enjoyment", "section": "people", "format": "scenario_choice",
+      "prompt": "You've just solved a tricky problem. Someone asks you to turn it into a tutorial for people who've never seen it before. Reaction?",
+      "options": [
+        {"label": "I'd rather just move on to the next problem.", "value": 1},
+        {"label": "I'll do it if it's expected, and I don't mind it.", "value": 3},
+        {"label": "I'd genuinely enjoy this — teaching it well is its own reward.", "value": 5}
+      ]},
+    {"id": "q_teaching_2", "dimension": "teaching_enjoyment", "section": "people", "format": "scenario_choice",
+      "prompt": "A customer doesn't understand something you explained clearly to a peer five minutes ago. What now?",
+      "options": [
+        {"label": "Frustrating — I already explained it once.", "value": 1},
+        {"label": "I'll rephrase and try again — it's part of the job.", "value": 3},
+        {"label": "I enjoy finding the explanation that finally clicks for them.", "value": 5}
+      ]},
+
+    {"id": "q_account_1", "dimension": "account_relationship_ownership", "section": "people", "format": "scenario_choice",
+      "prompt": "Which sounds better to you?",
+      "options": [
+        {"label": "A big rotating variety of people/problems — nothing sticks around too long.", "value": 1},
+        {"label": "A defined project with a clear start and end, same client throughout.", "value": 3},
+        {"label": "The same account or person, for years — I really get to know their whole situation.", "value": 5}
+      ]},
+    {"id": "q_account_2", "dimension": "account_relationship_ownership", "section": "people", "format": "scenario_choice",
+      "prompt": "How do you feel about picking up “whoever's next in the queue,” with no history or context?",
+      "options": [
+        {"label": "I actually prefer this — fresh problem, no baggage.", "value": 1},
+        {"label": "It's fine — not my preference, but workable.", "value": 3},
+        {"label": "I'd rather have continuity — knowing someone's whole history feels more meaningful.", "value": 5}
+      ]},
+
+    {"id": "q_variable_comp_1", "dimension": "variable_comp_appetite", "section": "incentives", "format": "scenario_choice",
+      "prompt": "You're offered a role where 30% of your pay depends on hitting a quarterly number you don't fully control. Reaction?",
+      "options": [
+        {"label": "No thanks — I want my pay decoupled from things outside my control.", "value": 1},
+        {"label": "I could live with a modest bonus tied to a soft proxy, not a hard sales number.", "value": 3},
+        {"label": "I want that upside — bring on the risk/reward.", "value": 5}
+      ]},
+    {"id": "q_variable_comp_2", "dimension": "variable_comp_appetite", "section": "incentives", "format": "scenario_choice",
+      "prompt": "How do you feel about your income varying meaningfully quarter to quarter based on performance?",
+      "options": [
+        {"label": "I want predictable, stable pay.", "value": 1},
+        {"label": "Some variability is fine if it's modest.", "value": 3},
+        {"label": "I'd actively choose more variable upside over a flatter salary.", "value": 5}
+      ]},
+
+    {"id": "q_coding_1", "dimension": "coding_intensity", "section": "stack", "format": "behavioral_anchor",
+      "prompt": "How much of your ideal week is spent personally writing/reviewing/debugging the code that ships?",
+      "options": [
+        {"label": "Little to none — I'd rather review, advise, or direct others' work.", "value": 1},
+        {"label": "Some — enough to prototype or validate, but not the majority of my time.", "value": 3},
+        {"label": "Most of it — shipping code I wrote is the main thing I do.", "value": 5}
+      ]},
+    {"id": "q_coding_2", "dimension": "coding_intensity", "section": "stack", "format": "slider",
+      "prompt": "Roughly what share of your time this past year was (or would be) spent hands-on-keyboard writing production code?",
+      "scale": {"min": 1, "max": 5, "minLabel": "Under 10%", "maxLabel": "70%+"}},
+
+    {"id": "q_travel_1", "dimension": "travel_embed_willingness", "section": "incentives", "format": "slider",
+      "prompt": "How do you feel about travel for work?",
+      "scale": {"min": 1, "max": 5, "minLabel": "Working from one place is important — travel is a dealbreaker", "maxLabel": "I'm happy being on the road or embedded at a client site most weeks"}},
+    {"id": "q_travel_2", "dimension": "travel_embed_willingness", "section": "incentives", "format": "scenario_choice",
+      "prompt": "Picture being physically embedded at a client's office for weeks at a time. Reaction?",
+      "options": [
+        {"label": "Not for me.", "value": 1},
+        {"label": "I could do this occasionally.", "value": 3},
+        {"label": "I'd genuinely enjoy this rhythm.", "value": 5}
+      ]},
+
+    {"id": "q_adversarial_1", "dimension": "adversarial_threat_modeling", "section": "work_style", "format": "scenario_choice",
+      "prompt": "You're reviewing a new feature before launch. What's your first instinct?",
+      "options": [
+        {"label": "Does it work correctly for the intended use case?", "value": 1},
+        {"label": "Does it work correctly, and are there a few obvious abuse cases to check?", "value": 3},
+        {"label": "How would someone deliberately try to break or exploit this?", "value": 5}
+      ]},
+    {"id": "q_adversarial_2", "dimension": "adversarial_threat_modeling", "section": "work_style", "format": "behavioral_anchor",
+      "prompt": "How often do you find yourself thinking about how a system could be attacked, not just how it could fail by accident?",
+      "options": [
+        {"label": "Rarely, if ever.", "value": 1},
+        {"label": "Sometimes, as part of general engineering diligence.", "value": 3},
+        {"label": "Constantly — it's my default lens on any system.", "value": 5}
+      ]},
+
+    {"id": "q_physical_1", "dimension": "physical_constraint_engineering", "section": "stack", "format": "slider",
+      "prompt": "How do you feel about hard physical limits (power, memory, real-time deadlines) as pass/fail constraints rather than nice-to-haves?",
+      "scale": {"min": 1, "max": 5, "minLabel": "Not part of my work at all", "maxLabel": "I treat these as absolute gates and debug at the hardware/software boundary"}},
+    {"id": "q_physical_2", "dimension": "physical_constraint_engineering", "section": "stack", "format": "behavioral_anchor",
+      "prompt": "Have you used tools like an oscilloscope, logic analyzer, or JTAG debugger as a normal part of your work?",
+      "options": [
+        {"label": "No, and I don't expect to.", "value": 1},
+        {"label": "Not really, but I'm comfortable with CI-tracked performance budgets.", "value": 3},
+        {"label": "Yes, regularly, as part of my normal debugging process.", "value": 5}
+      ]},
+
+    {"id": "q_people_mgmt_1", "dimension": "people_management_orientation", "section": "people", "format": "scenario_choice",
+      "prompt": "Imagine your performance review next year is based entirely on your team's retention, morale, and growth — not anything you personally built. Reaction?",
+      "options": [
+        {"label": "That sounds like a distraction from real work.", "value": 1},
+        {"label": "I could do this, and I'd take it seriously, but I'd miss building things myself.", "value": 3},
+        {"label": "That's exactly the kind of success I want to be judged on.", "value": 5}
+      ]},
+    {"id": "q_people_mgmt_2", "dimension": "people_management_orientation", "section": "people", "format": "scenario_choice",
+      "prompt": "A teammate is underperforming and it's affecting the team's mood. Handling this kind of situation, honestly:",
+      "options": [
+        {"label": "I'd rather someone else deal with this entirely.", "value": 1},
+        {"label": "I'd handle it if it were my job, but it's draining.", "value": 3},
+        {"label": "I'd want to be the one who works through this — it's part of what I find meaningful.", "value": 5}
+      ]}
+  ]
+}

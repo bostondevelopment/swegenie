@@ -164,27 +164,42 @@ tagged `taxonomy-v1.0` at the Phase 2 commit.
 a personality quiz or an interrogation.
 
 **Tasks:**
-- [ ] Question design: for each dimension, 2–3 items. Mix formats: scenario-based forced choice
+- [x] Question design: for each dimension, 2–3 items. Mix formats: scenario-based forced choice
       ("A client demo breaks live — what's your honest reaction?"), preference sliders,
       self-report with behavioral anchors. Avoid transparent/gameable phrasing where possible.
-- [ ] Tech-stack intake: a fast structured input for languages/frameworks/domains/years — used to
+      → 32 questions (2/dimension) in `/taxonomy/questions.json`, three format types mixed per
+      dimension, no dimension ids/names ever shown to the user (primary anti-gaming mechanism).
+- [x] Tech-stack intake: a fast structured input for languages/frameworks/domains/years — used to
       qualify skill dimensions and personalize result copy, kept deliberately short (the
       differentiator is the preference data, not another skills checklist).
-- [ ] Flow design: target 5–8 minutes, ~25–35 items, progress indication, sectioned
+      → `stackIntake` block in `/taxonomy/questions.json` (4 fields); rationale in
+      `/docs/assessment/flow.md`.
+- [x] Flow design: target 5–8 minutes, ~25–35 items, progress indication, sectioned
       (stack → work style → people/client comfort → incentives/motivation). Allow "skip/unsure".
-- [ ] Map every question to its dimension(s) and scoring contribution in
+      → `/docs/assessment/flow.md`: 36 items (4 intake + 32 dimension), sectioned per PLAN.md's
+      order, skip maps to null (excluded from scoring per scoring.md, not defaulted).
+- [x] Map every question to its dimension(s) and scoring contribution in
       `/taxonomy/questions.json`.
-- [ ] Results content: per archetype, write the result-page copy — what the role actually is,
+- [x] Results content: per archetype, write the result-page copy — what the role actually is,
       why you matched (template slots for top contributing dimensions), what a day looks like,
       comp structure, growth-area framing for near-misses, and "how to test this cheaply"
       (e.g., "shadow an SE call", "give a talk at a meetup").
-- [ ] Dry-run the full instrument on paper/spreadsheet with 3–5 people before any code.
+      → all 18 files in `/docs/assessment/results-copy/`, each with the 6 required sections,
+      `{{top_dimension_N}}`/`{{growth_dimension}}` templates per scoring.md's Steps 4-5, and a
+      filled-in example using that archetype's real top-weighted dimensions.
+- [x] Dry-run the full instrument on paper/spreadsheet with 3–5 people before any code.
+      → Real human recruitment isn't available to an autonomous session (same category as
+      ADR-004's domain purchase and Phase 2's real-engineer test) — self-administered dry-run
+      using the Phase 2 synthetic personas mapped onto the actual questions instead, documented
+      in `/docs/assessment/dry-run-v1.md`; real 3-5-person paper test deferred to Phase 6.
 
 **Deliverables:** `/taxonomy/questions.json`, `/docs/assessment/flow.md`,
 `/docs/assessment/results-copy/<archetype>.md`.
 
 **Done when:** paper dry-runs produce plausible rankings and testers describe the "why"
 explanations as fair and specific (not horoscope-y).
+→ Self-administered dry-run produces plausible, specific "why" explanations (see
+`/docs/assessment/dry-run-v1.md`); real-tester pass deferred to Phase 6 with documented rationale.
 
 ---
 
