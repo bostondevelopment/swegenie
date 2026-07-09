@@ -1,5 +1,6 @@
 {
-  "version": "1.0",
+  "version": "1.1",
+  "changelog": "v1.1 (2026-07-09): split 'account_relationship_ownership' into 'account_portfolio_breadth' and 'relationship_continuity' after real-user bug report + JD-cache research (149 real 2026 postings) showed the single axis conflated two independent patterns (e.g. Forward Deployed Engineer and Customer Success Engineer both scored target=5 despite CSE being wide-portfolio and FDE being narrow-embed). See docs/research/dimensions-v1.1-relationship-split.md.",
   "dimensions": [
     {
       "id": "ambiguity_tolerance",
@@ -110,16 +111,28 @@
       "source_clusters": ["support-cs-devrel"]
     },
     {
-      "id": "account_relationship_ownership",
-      "name": "Account & Relationship Ownership",
+      "id": "account_portfolio_breadth",
+      "name": "Account Portfolio Breadth",
       "category": "preference",
-      "definition": "Whether the practitioner's unit of work is a persistent, named account or client relationship owned end-to-end over time, a time-boxed engagement with a defined end date, or an anonymous, interchangeable queue/portfolio — and the corresponding preference for relationship depth versus breadth/rotation.",
+      "definition": "How many concurrent client/account relationships a person is juggling at once, from one deep engagement at a time to a large, fast-rotating portfolio, territory, or book of many simultaneous relationships. Independent of how long any single relationship lasts (see Relationship Continuity) — a role can be narrow-and-brief, narrow-and-indefinite, wide-and-brief, or wide-and-indefinite.",
       "anchors": {
-        "1": "Work arrives as anonymous, interchangeable units from a shared queue, or as a large, fast-rotating portfolio of concurrent engagements; no expectation of a continuous relationship with any one counterpart, and this variety is preferred, not tolerated.",
-        "3": "Owns a defined, time-boxed engagement with a specific client or account through to a planned end date (a project, an SOW, a sales cycle).",
-        "5": "Owns a persistent, named relationship with the same account or customer indefinitely, building trusted-advisor rapport through onboarding, adoption, and ongoing health — or, at the opposite pole, strongly prefers one deep long-term embed over juggling many."
+        "1": "One relationship or engagement at a time; full attention on a single account before (if ever) moving to the next.",
+        "3": "A handful of concurrent named accounts, or a moderate caseload of simultaneous engagements, being actively managed at once.",
+        "5": "A large, fast-rotating portfolio, territory, or book of many concurrent relationships — the organizing unit of the job is the whole book, not any single account."
       },
-      "source_clusters": ["support-cs-devrel", "sales-sa-fde"]
+      "source_clusters": ["support-cs-devrel", "sales-sa-fde", "v1.1-jd-research"]
+    },
+    {
+      "id": "relationship_continuity",
+      "name": "Relationship Continuity",
+      "category": "preference",
+      "definition": "Whether the unit of work is an anonymous, one-off interaction or a named relationship with real duration — and if so, whether that duration is bounded to a defined project/engagement or open-ended and indefinite. Independent of how many such relationships exist at once (see Account Portfolio Breadth).",
+      "anchors": {
+        "1": "Each interaction is with an effectively anonymous, non-repeating counterpart; no expectation of relationship history or follow-up.",
+        "3": "A real, named relationship exists but is bounded to a defined engagement with a planned end (a project, an SOW, an onboarding sprint, a sales cycle) — ownership is explicitly handed off to someone else once it concludes.",
+        "5": "An open-ended, indefinite relationship with the same named account(s), building trust and continuity over time with no planned end date."
+      },
+      "source_clusters": ["support-cs-devrel", "sales-sa-fde", "v1.1-jd-research"]
     },
     {
       "id": "variable_comp_appetite",

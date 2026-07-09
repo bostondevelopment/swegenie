@@ -56,7 +56,20 @@ export function scoreArchetype(
 
   if (totalWeight === 0) return null;
 
-  const fitScore = weightedFitSum / totalWeight;
+  const rawFitScore = weightedFitSum / totalWeight;
+
+  // Step 2.5 (v1.1): an archetype's score can never exceed its fit on that
+  // archetype's own most heavily-weighted dimension(s). Without this, an
+  // archetype can rank highly on broad agreement across secondary dimensions
+  // despite a mediocre match on the one trait that actually defines it — the
+  // exact bug a real user found (Security Engineer ranking #4 on a weak
+  // adversarial_threat_modeling match, propped up by lower-weight agreement
+  // elsewhere). See taxonomy/scoring.md Step 2.5.
+  const topWeight = Math.max(...contributions.map((c) => c.weight));
+  const worstTopFit = Math.min(
+    ...contributions.filter((c) => c.weight === topWeight).map((c) => c.fit)
+  );
+  const fitScore = Math.min(rawFitScore, worstTopFit);
 
   const topContributors = [...contributions]
     .sort((a, b) => b.contribution - a.contribution || b.weight - a.weight)

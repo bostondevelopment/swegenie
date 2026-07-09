@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "notes": "Phase 3 deliverable. 2 questions per dimension in taxonomy/dimensions.json (32 total), plus a short stack-intake block. Each dimension question's `value` options span the dimension's 1-5 scale; a user's final U[d] fed into taxonomy/scoring.md is the average of their answered questions for that dimension (nulls excluded per scoring.md's skip handling). `section` matches docs/assessment/flow.md's four sections.",
+  "version": "1.1",
+  "notes": "v1.1: replaced q_account_1/q_account_2 (old account_relationship_ownership dimension) with q_breadth_1/q_breadth_2 (account_portfolio_breadth) and q_continuity_1/q_continuity_2 (relationship_continuity) per the v1.1 dimension split — see docs/research/dimensions-v1.1-relationship-split.md. 2 questions per dimension in taxonomy/dimensions.json (34 total, 17 dimensions), plus a short stack-intake block. Each dimension question's `value` options span the dimension's 1-5 scale; a user's final U[d] fed into taxonomy/scoring.md is the average of their answered questions for that dimension (nulls excluded per scoring.md's skip handling). `section` matches docs/assessment/flow.md's four sections.",
   "stackIntake": {
     "notes": "Fast structured input, not scored against the 16 trait dimensions directly — used to personalize result copy and lightly qualify technical_breadth_depth/coding_intensity self-reports against a sanity check. Deliberately short per PLAN.md Phase 3 spec.",
     "fields": [
@@ -138,19 +138,33 @@
         {"label": "I enjoy finding the explanation that finally clicks for them.", "value": 5}
       ]},
 
-    {"id": "q_account_1", "dimension": "account_relationship_ownership", "section": "people", "format": "scenario_choice",
-      "prompt": "Which sounds better to you?",
+    {"id": "q_breadth_1", "dimension": "account_portfolio_breadth", "section": "people", "format": "scenario_choice",
+      "prompt": "Which sounds more like you?",
       "options": [
-        {"label": "A big rotating variety of people/problems — nothing sticks around too long.", "value": 1},
-        {"label": "A defined project with a clear start and end, same client throughout.", "value": 3},
-        {"label": "The same account or person, for years — I really get to know their whole situation.", "value": 5}
+        {"label": "One account or project at a time — full focus until it's done.", "value": 1},
+        {"label": "A handful of things going at once — enough to stay interesting without feeling scattered.", "value": 3},
+        {"label": "A large portfolio of many things running in parallel — I like the pace of juggling a lot at once.", "value": 5}
       ]},
-    {"id": "q_account_2", "dimension": "account_relationship_ownership", "section": "people", "format": "scenario_choice",
+    {"id": "q_breadth_2", "dimension": "account_portfolio_breadth", "section": "people", "format": "scenario_choice",
+      "prompt": "Your manager can give you one deep engagement to own for months, or a rotating set of 5-6 smaller ones at once. Which do you pick?",
+      "options": [
+        {"label": "The one deep engagement, no question.", "value": 1},
+        {"label": "Either is fine — depends on the specifics.", "value": 3},
+        {"label": "The rotating set — I like having several things moving at once.", "value": 5}
+      ]},
+    {"id": "q_continuity_1", "dimension": "relationship_continuity", "section": "people", "format": "scenario_choice",
       "prompt": "How do you feel about picking up “whoever's next in the queue,” with no history or context?",
       "options": [
         {"label": "I actually prefer this — fresh problem, no baggage.", "value": 1},
         {"label": "It's fine — not my preference, but workable.", "value": 3},
         {"label": "I'd rather have continuity — knowing someone's whole history feels more meaningful.", "value": 5}
+      ]},
+    {"id": "q_continuity_2", "dimension": "relationship_continuity", "section": "people", "format": "scenario_choice",
+      "prompt": "A client or account you worked with wraps up, and you're told you probably won't work with them again. Reaction?",
+      "options": [
+        {"label": "Totally fine — on to the next one.", "value": 1},
+        {"label": "A little bittersweet, but that's how the job works.", "value": 3},
+        {"label": "That's the part of a job I'd like least — I want relationships that keep going.", "value": 5}
       ]},
 
     {"id": "q_variable_comp_1", "dimension": "variable_comp_appetite", "section": "incentives", "format": "scenario_choice",

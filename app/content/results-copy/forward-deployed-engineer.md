@@ -6,7 +6,7 @@ Forward Deployed Engineer (FDE, or Forward Deployed Software Engineer at Palanti
 
 You matched with Forward Deployed Engineer because your answers put {{top_dimension_1}}, {{top_dimension_2}}, and {{top_dimension_3}} close to what this role actually demands day to day — those are the parts of your profile pulling hardest toward this match.
 
-For example: a profile with high **Outcome Accountability**, high **Coding Intensity**, and high **Account & Relationship Ownership** would land here — someone who's genuinely comfortable being the named owner of a customer's production outcome even when upstream factors are outside their control, who wants coding to be the dominant activity of the week rather than an occasional prototype, and who'd rather go deep on one long-term embed than juggle a rotating portfolio of accounts.
+For example: a profile with high **Outcome Accountability**, high **Coding Intensity**, and high **Relationship Continuity** would land here — someone who's genuinely comfortable being the named owner of a customer's production outcome even when upstream factors are outside their control, who wants coding to be the dominant activity of the week rather than an occasional prototype, and who'd rather go deep on one long-term embed than juggle a rotating portfolio of accounts.
 
 ## A day in this role
 

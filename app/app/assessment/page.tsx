@@ -2,10 +2,9 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { FLOW, TOTAL_STEPS } from "@/lib/assessment-flow";
+import { FLOW, TOTAL_STEPS, aggregateAnswersToProfile } from "@/lib/assessment-flow";
 import { encodeProfile } from "@/lib/encode";
 import { track } from "@/lib/analytics";
-import type { UserProfile } from "@/lib/scoring";
 
 const STORAGE_KEY = "roleprint_assessment_v1";
 
@@ -68,7 +67,8 @@ export default function AssessmentPage() {
   useEffect(() => {
     if (!state?.done) return;
     track("assessment_complete");
-    const encoded = encodeProfile(state.answers as UserProfile);
+    const profile = aggregateAnswersToProfile(state.answers);
+    const encoded = encodeProfile(profile);
     const stackParam = encodeURIComponent(JSON.stringify(state.intake));
     window.localStorage.removeItem(STORAGE_KEY);
     router.push(`/results?a=${encoded}&s=${stackParam}`);

@@ -10,21 +10,27 @@ import { dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy, fillWhyMatched, fillGrowthArea } from "@/lib/results-copy";
 
 type SearchParams = Promise<{ a?: string; s?: string }>;
+type RankedState =
+  | { kind: "none" }
+  | { kind: "stale" }
+  | { kind: "ranked"; ranked: ReturnType<typeof rankArchetypes> };
 
-async function getRanked(searchParams: SearchParams) {
+async function getRanked(searchParams: SearchParams): Promise<RankedState> {
   const { a } = await searchParams;
-  if (!a) return null;
+  if (!a) return { kind: "none" };
   const profile = decodeProfile(a);
+  if (profile === null) return { kind: "stale" }; // encoded under a prior taxonomy version
   const answeredCount = Object.values(profile).filter((v) => v !== null && v !== undefined).length;
-  if (answeredCount === 0) return null;
-  return rankArchetypes(profile);
+  if (answeredCount === 0) return { kind: "none" };
+  return { kind: "ranked", ranked: rankArchetypes(profile) };
 }
 
 export async function generateMetadata({ searchParams }: { searchParams: SearchParams }): Promise<Metadata> {
-  const ranked = await getRanked(searchParams);
-  if (!ranked || ranked.length === 0) {
+  const state = await getRanked(searchParams);
+  if (state.kind !== "ranked" || state.ranked.length === 0) {
     return { title: "Results" };
   }
+  const ranked = state.ranked;
   const top = ranked[0];
   const pct = fitPercent(top.fitScore);
   const { a } = await searchParams;
@@ -47,9 +53,28 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
 }
 
 export default async function ResultsPage({ searchParams }: { searchParams: SearchParams }) {
-  const ranked = await getRanked(searchParams);
+  const state = await getRanked(searchParams);
 
-  if (!ranked) {
+  if (state.kind === "stale") {
+    return (
+      <>
+        <SiteHeader />
+        <main className="flex-1 mx-auto max-w-2xl px-4 sm:px-6 py-16 text-center">
+          <h1 className="font-display text-2xl font-semibold mb-4">This result is from an older version</h1>
+          <p className="text-[var(--color-muted)] mb-8">
+            The assessment&apos;s scoring model has been updated since this link was created, so it
+            can&apos;t be read anymore. Retake the assessment to get a result under the current model.
+          </p>
+          <Link href="/assessment" className="btn-primary px-5 py-3 font-medium">
+            Retake the assessment
+          </Link>
+        </main>
+        <SiteFooter />
+      </>
+    );
+  }
+
+  if (state.kind === "none") {
     return (
       <>
         <SiteHeader />
@@ -67,6 +92,7 @@ export default async function ResultsPage({ searchParams }: { searchParams: Sear
     );
   }
 
+  const ranked = state.ranked;
   const top = ranked[0];
   const topCopy = getResultsCopy(top.id);
   const topDimNames = top.topContributors.map((c) => dimensionById.get(c.dimension)?.name ?? c.dimension);

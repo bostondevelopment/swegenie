@@ -6,7 +6,7 @@ Customer Success / Customer Solutions Engineer is the proactive, named-account-e
 
 You matched with Customer Success / Customer Solutions Engineer because your answers put {{top_dimension_1}}, {{top_dimension_2}}, and {{top_dimension_3}} close to what this role actually demands day to day — those are the parts of your profile pulling hardest toward this match.
 
-For example: a profile with high **Account & Relationship Ownership**, high **Ambiguity Tolerance**, and high **Teaching & Public Visibility** would land here — someone who wants a persistent, named relationship with the same accounts over time rather than an anonymous queue, who's comfortable being judged on a qualitative "trusted-advisor" signal instead of a crisp SLA number, and who enjoys designing and running enablement workshops as a core part of the job, not a side task.
+For example: a profile with high **Relationship Continuity**, high **Ambiguity Tolerance**, and high **Teaching & Public Visibility** would land here — someone who wants a persistent, named relationship with the same accounts over time rather than an anonymous queue, who's comfortable being judged on a qualitative "trusted-advisor" signal instead of a crisp SLA number, and who enjoys designing and running enablement workshops as a core part of the job, not a side task.
 
 ## A day in this role
 
@@ -18,7 +18,7 @@ Base-heavy, with a modest annual bonus — not sales-style commission, and (unli
 
 ## Growth areas — if this wasn't a perfect fit
 
-If {{growth_dimension}} came back lower than this role typically wants, that's worth a closer look rather than a red flag — it usually means a specific, testable gap, not a wrong match. For example: if your **Account & Relationship Ownership** score is on the low side, know that the organizing unit of this job is a persistent, named account relationship, not a ticket queue or a rotating portfolio — if you'd rather have variety across many anonymous, interchangeable problems than depth with the same handful of customers over months or years, that's the sharpest mismatch to weigh here.
+If {{growth_dimension}} came back lower than this role typically wants, that's worth a closer look rather than a red flag — it usually means a specific, testable gap, not a wrong match. For example: if your **Relationship Continuity** score is on the low side, know that the organizing unit of this job is a persistent, named account relationship, not a ticket queue or a rotating portfolio — if you'd rather have variety across many anonymous, interchangeable problems than depth with the same handful of customers over months or years, that's the sharpest mismatch to weigh here.
 
 ## How to test this cheaply
 

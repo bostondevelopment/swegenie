@@ -1,9 +1,10 @@
-# Scoring Algorithm Spec (v1.0)
+# Scoring Algorithm Spec (v1.1)
 
-**Status:** Phase 2 deliverable. This is the spec Phase 5's scoring engine (`app/`) implements as a
-pure, unit-tested module. Phase 2's persona validation (`docs/research/validation-v1.md`) exercises
-this exact algorithm by hand/spreadsheet before any code is written, per PLAN.md's "Done when"
-criteria for this phase.
+**Status:** Phase 2 deliverable, revised v1.1 (2026-07-09) after a real user's result surfaced the
+exact dilution failure mode flagged (but left unfixed) in v1.0's Known Limitations — see Step 2.5
+below. This is the spec Phase 5's scoring engine (`app/`) implements as a pure, unit-tested module.
+Phase 2's persona validation (`docs/research/validation-v1.md`) exercises this exact algorithm by
+hand/spreadsheet before any code is written, per PLAN.md's "Done when" criteria for this phase.
 
 ## Inputs
 
@@ -13,9 +14,9 @@ criteria for this phase.
 2. **Archetype profile** `A` (one entry in `taxonomy/archetypes.json`): for each dimension id, a
    `target` (1-5) and a `weight` (0.0-1.0).
 
-Both are keyed by the same 16 dimension ids — this is the data contract between `/taxonomy/*.json`
-and the scoring engine; a schema change to either file requires a taxonomy version bump (per
-PLAN.md's Agent execution notes).
+Both are keyed by the same dimension ids (17 as of v1.1) — this is the data contract between
+`/taxonomy/*.json` and the scoring engine; a schema change to either file requires a taxonomy
+version bump (per PLAN.md's Agent execution notes).
 
 ## Step 1 — Per-dimension fit
 
@@ -46,6 +47,33 @@ fitScore = sum( A[d].weight * fit(d) for d in answered ) / totalWeight
 for an archetype (i.e., the user skipped every dimension that archetype cares about), that archetype
 is excluded from ranking entirely and flagged as "not enough signal" rather than shown with a
 misleading score.
+
+## Step 2.5 — Top-dimension floor (v1.1)
+
+Added after a real user's result ranked Security Engineer #4 despite a mediocre answer on
+`adversarial_threat_modeling` — Security's *only* weight-1.0 dimension, the one trait the archetype
+is built around. The raw weighted average let four other moderately-well-matched 0.5-0.7-weight
+dimensions paper over a bad match on the defining trait. This is exactly the "dilution-by-low-weight-
+agreement" pattern v1.0 flagged as a risk (see Known Limitations) and is now corrected structurally,
+not just documented:
+
+```
+topWeight     = max( A[d].weight for d in answered )
+topDims       = { d in answered : A[d].weight == topWeight }   // ties included, not just one
+worstTopFit   = min( fit(d) for d in topDims )
+fitScore      = min( fitScore_from_step_2, worstTopFit )
+```
+
+In words: **an archetype's score can never exceed how well the user matched its single most
+important dimension(s).** A strong aggregate score built mostly from secondary traits can no longer
+outrank a mediocre match on the trait that actually defines the archetype. If an archetype has
+multiple dimensions tied at the maximum weight (e.g., Forward Deployed Engineer has three
+weight-1.0 dimensions), the floor uses the *worst* of those — failing any one of several equally
+load-bearing traits should cap the score, not just the average of all of them.
+
+This changes nothing for a well-matched top archetype (the floor is a no-op whenever `worstTopFit`
+is already ≥ the raw fitScore) and only demotes archetypes whose apparent fit was propped up by
+secondary-dimension agreement rather than a real match on what makes that archetype what it is.
 
 ## Step 3 — Ranking
 
@@ -131,15 +159,19 @@ external calls, and no hidden state — every step above is directly unit-testab
   transparent linear model over documented dimensions is the explicit product bet over the phase
   boundary, with v2's crowdsourced calibration (Phase 8) as the intended place to revisit this if
   linear scoring proves too coarse.
-- **Dilution-by-low-weight-agreement (found during persona validation, see
-  `docs/research/validation-v1.md` Finding 1).** Because Step 2 is a weighted *average*, an archetype
-  whose non-defining dimensions happen to align with a user's incidental answers can out-rank an
-  archetype whose one truly defining dimension the user mismatches on, if that archetype's remaining
-  weights are spread thin across many low-weight dimensions. A concrete case: a user who scores low
-  on Platform Engineering's single highest-weight dimension (`stakeholder_client_comfort`) can still
-  rank a low-stakeholder-weighted archetype like Mobile Engineer above Platform, if their other
-  answers happen to match Mobile's low-weighted dimensions well. This is the first mechanism to
-  suspect if Phase 6 beta data shows real users' actual roles aren't appearing in their top-3 — a
-  candidate v1.1 fix is a minimum-fit floor on an archetype's single highest-weight dimension (e.g.,
-  if `fit(d) < 0.3` for the dimension with the highest `weight` in an archetype's profile, cap that
-  archetype's displayed rank regardless of aggregate `fitScore`), not just relying on the aggregate.
+- **Dilution-by-low-weight-agreement — FIXED in v1.1 (Step 2.5).** Originally found during Phase 2
+  persona validation (`docs/research/validation-v1.md` Finding 1) and left as a documented risk
+  rather than fixed, on the reasoning that it hadn't yet bitten a real case. It did: a real user's
+  result ranked Security Engineer #4 despite a mediocre match on `adversarial_threat_modeling` (its
+  only weight-1.0 dimension), propped up by broad agreement on several lower-weight dimensions. The
+  top-dimension floor (Step 2.5) now caps an archetype's score at its fit on that archetype's own
+  most heavily-weighted dimension(s), closing this gap structurally. Retained here as a record of
+  what was found and why the fix works, per the project's practice of not silently deleting
+  documented limitations once they're addressed.
+- **The top-dimension floor (Step 2.5) is itself a new, less-tested mechanism.** It was validated
+  against the Phase 2 persona suite (re-run after adding it — see `app/lib/scoring.test.ts`) and the
+  specific real case that motivated it, but has not yet been exercised against a large volume of real
+  user profiles the way the base weighted-average has. If Phase 6 beta feedback shows the floor is
+  too aggressive (demoting archetypes that should still rank respectably despite one weak dimension)
+  or not aggressive enough, the threshold logic (currently a hard `min()`, not a softened blend) is
+  the first thing to revisit.
