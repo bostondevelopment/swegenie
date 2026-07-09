@@ -14,6 +14,10 @@ them. The taxonomy is the product; the assessment is the delivery vehicle.
 rubric-based matcher (no black-box ML). v2 layers on crowdsourced refinement from
 LinkedIn-verified role-holders and hiring managers. The data model supports both from day one.
 
+**⚠ If you are an agent picking this up: read [`docs/HANDOFF.md`](docs/HANDOFF.md) first.** It
+has the current phase status, explicit authorization to run through Phase 5 unattended, open
+items to resolve without asking, and operational guardrails from a prior session's mistakes.
+
 ---
 
 ## How to use this plan
@@ -174,20 +178,26 @@ explanations as fair and specific (not horoscope-y).
 **Goal:** Name, voice, and visual system. Runs in parallel with Phases 2–3.
 
 **Tasks:**
-- [ ] Positioning: one-liner, audience definition, tone (credible-technical, not
+- [x] Positioning: one-liner, audience definition, tone (credible-technical, not
       HR-flavored; think levels.fyi/Pragmatic Engineer energy, not corporate career portal).
-- [ ] Name + domain: 5–10 candidates, availability check (domain, GitHub, X/LinkedIn handles),
-      trademark sanity scan, pick one (ADR-004).
-- [ ] Visual identity: logo/wordmark, palette, typography, component look (light+dark),
+      → `/docs/brand/positioning.md`.
+- [x] Name + domain: 5–10 candidates, availability check (domain, GitHub, X/LinkedIn handles),
+      trademark sanity scan, pick one (ADR-004). → Draft pick: **Roleprint**. Search-based
+      sanity checks only — real WHOIS/trademark/handle verification and purchase still need the
+      human; ADR-004 stays DRAFT until then. Use "Roleprint" as the working name in Phase 5 in
+      the meantime (see `docs/HANDOFF.md`).
+- [x] Visual identity: logo/wordmark, palette, typography, component look (light+dark),
       OG/social card templates — the result page IS the marketing surface, since shared results
-      are the growth loop, so design result-card shareability first-class.
-- [ ] Copy system: microcopy voice guide, archetype naming style (memorable but not cutesy —
-      these names will be how people describe themselves, e.g. in bios).
+      are the growth loop, so design result-card shareability first-class. → `/docs/brand/identity.md`.
+- [x] Copy system: microcopy voice guide, archetype naming style (memorable but not cutesy —
+      these names will be how people describe themselves, e.g. in bios). → `/docs/brand/identity.md`.
 
 **Deliverables:** `/docs/brand/positioning.md`, `/docs/brand/identity.md` + assets,
 `/docs/adr/004-name.md`.
 
 **Done when:** name registered, visual kit usable by the app build, voice guide exists.
+→ Visual kit and voice guide done; name registration blocked on human (domain purchase,
+trademark clearance) — not something an agent can complete autonomously.
 
 ---
 
