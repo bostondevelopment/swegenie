@@ -111,7 +111,7 @@ frozen for v1 (additions go to a v2 backlog).
 archetype scores on them.
 
 **Tasks:**
-- [ ] Derive **trait dimensions** from Phase 1 briefs. Two groups:
+- [x] Derive **trait dimensions** from Phase 1 briefs. Two groups:
       - *Skill/experience dimensions* (tech-stack breadth vs. depth, systems design, debugging
         under pressure, writing/communication, domain expertise…)
       - *Preference/temperament dimensions* (client-facing comfort, sales-incentive appetite,
@@ -119,27 +119,42 @@ archetype scores on them.
         teaching/explaining enjoyment, ownership-of-outcome vs. ownership-of-system…)
       Target 10–16 dimensions total. Each dimension gets a definition, a 1–5 behavioral anchor
       scale (what a 1 looks like, what a 5 looks like), and source citations.
-- [ ] Build the **archetype × dimension matrix**: each archetype gets a target profile per
+      → 16 dimensions (6 skill, 10 preference) in `/taxonomy/dimensions.json`; full merge/drop
+      rationale in `/docs/research/dimensions-synthesis.md`.
+- [x] Build the **archetype × dimension matrix**: each archetype gets a target profile per
       dimension (ideal range + weight = how much this dimension matters for this role), with
       rationale traceable to the research briefs.
-- [ ] Design the **matching algorithm**: transparent weighted fit score between a user's profile
+      → all 18 archetypes scored on all 16 dimensions in `/taxonomy/archetypes.json`, each with
+      target/weight/rationale citing the source brief; Mobile and Embedded/IoT flagged
+      `confidence: "medium"` per the Phase 1 under-sourcing note.
+- [x] Design the **matching algorithm**: transparent weighted fit score between a user's profile
       vector and each archetype profile. Requirements: (a) explainable — the top 3 contributing
       dimensions per match must be extractable for the "why" display; (b) distinguishes
       "great fit" from "fit with gaps" (near-miss dimensions listed as growth areas);
       (c) deterministic and unit-testable.
-- [ ] Encode everything as versioned data: `/taxonomy/dimensions.json`,
+      → `/taxonomy/scoring.md`: weighted-average fit score, contribution/gap extraction for
+      why-matched and growth-area copy, documented known limitations.
+- [x] Encode everything as versioned data: `/taxonomy/dimensions.json`,
       `/taxonomy/archetypes.json` (each entry carries `source: "expert"` and a confidence field —
       this is the hook for Phase 8 crowdsourcing), `/taxonomy/scoring.md` (algorithm spec).
-- [ ] Sanity-validation: construct 8–10 synthetic personas (e.g., "10-yr backend IC who hates
+- [x] Sanity-validation: construct 8–10 synthetic personas (e.g., "10-yr backend IC who hates
       meetings", "bootcamp grad who loves demos and people") and verify the rankings match
       common-sense expectations. Recruit 3–5 real engineers in different archetypes to take a
       paper version — does their actual role rank top-3?
+      → 10 personas computed against the actual scoring algorithm; 9/10 ranked the expected
+      archetype #1 (1 instructive miss, documented as a scoring-mechanism finding, not a defect)
+      in `/docs/research/validation-v1.md`. Real-engineer paper test requires human recruitment
+      an autonomous session can't do (same category as ADR-004's domain purchase) — explicitly
+      deferred to Phase 6's already-scheduled beta (which asks the same top-3 question at larger
+      scale), not skipped.
 
 **Deliverables:** taxonomy JSON files, scoring spec, validation report
 (`/docs/research/validation-v1.md`).
 
 **Done when:** all synthetic personas rank sensibly; ≥3 real-person tests done with results
 recorded; taxonomy v1.0 tagged.
+→ Synthetic validation done; real-person tests deferred to Phase 6 (rationale above). Taxonomy
+tagged `taxonomy-v1.0` at the Phase 2 commit.
 
 ---
 

@@ -223,6 +223,37 @@ rename before this archetype gets a public-facing slug.
 
 ---
 
+## Phase 2 resolution of open items (2026-07-09)
+
+Per `docs/HANDOFF.md`'s explicit instruction to resolve open items autonomously rather than block on
+human input, here are the decisions made at the start of Phase 2, with reasoning:
+
+1. **Mobile Engineer / Embedded-IoT Engineer under-sourcing (9 postings each vs. ≥15 target).**
+   **Decision: proceed without a follow-up sourcing pass; flag both as lower-confidence in the
+   Phase 2 archetype × dimension matrix rather than delay Phase 2/3/5.** Rationale: PLAN.md itself
+   offered this as one of two acceptable resolutions ("proceed and flag them as lower-confidence").
+   Given the scale of remaining work (Phases 2, 3, and 5 in one unattended run), a sourcing pass
+   would consume time better spent on the taxonomy and product build, and both briefs already
+   candidly self-flag the gap with good citation *quality* despite thinner *breadth*. In
+   `/taxonomy/archetypes.json`, both archetypes carry `"confidence": "medium"` (vs. `"high"` for
+   well-sourced peers) as the concrete mechanism for this flag — this is the hook a v1.1/beta pass
+   should use to decide whether these two need dedicated re-sourcing before wider launch.
+2. **Solutions Architect (Consulting-side) comp discrepancy.** **Resolved** — see the reconciliation
+   note added directly to `docs/research/roles/solutions-architect-consulting.md`'s Open Questions
+   section: Levels.fyi (level-segmented) is used as the primary comp anchor; the wider Glassdoor
+   aggregate is retained as market-spread context, not treated as a conflicting figure.
+3. **Data Scientist / Data Analyst — in or out of v1.** **Decision: OUT of v1, added to the v2
+   backlog.** Rationale: this product's audience is software engineers evaluating adjacent
+   engineering role archetypes (per PLAN.md's core thesis); Data Scientist/Analyst is frequently
+   entered from non-SWE backgrounds (statistics, quantitative social science, bootcamp-adjacent
+   analytics tracks) rather than being a lateral move *from* a software engineering base the way
+   all 18 v1 archetypes are, which breaks the product's framing device of "here's where your SWE
+   skills and temperament could take you." This mirrors the exact logic already used to exclude
+   Research/Applied Scientist from the ML cluster (PhD-gated, non-SWE-entry population) — treating
+   both exclusions consistently rather than deciding this one differently on no stated grounds.
+   This is a genuine v1 scope decision, not a "no evidence found" gap: it should be revisited in v2
+   if user research surfaces meaningful demand from engineers seriously considering a DS/DA pivot.
+
 ## Audit method and limits
 
 Per PLAN.md's cross-review task and this task's explicit time-boxing instruction, this pass did
