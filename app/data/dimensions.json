@@ -1,0 +1,197 @@
+{
+  "version": "1.0",
+  "dimensions": [
+    {
+      "id": "ambiguity_tolerance",
+      "name": "Ambiguity Tolerance",
+      "category": "preference",
+      "definition": "Comfort operating without a pre-defined spec, backlog, or crisp success metric — defining the problem, scope, and even what 'success' means as part of the job, versus wanting well-scoped work with clear, agreed acceptance criteria handed down. Includes tolerance for contested or qualitative success metrics, not just undefined technical scope.",
+      "anchors": {
+        "1": "Wants a ticket with clear acceptance criteria (or an audited numeric target like an SLA) before starting; ambiguous asks or contested success metrics feel uncomfortable or blocking.",
+        "3": "Can work from a rough one-paragraph brief or a portfolio of multiple KPIs and fill in details, but wants the underlying goal or a defined deliverable to crystallize before/while executing.",
+        "5": "Thrives being handed a vague business outcome or 'figure out the problem yourself' mandate with no defined technical approach and no single agreed metric; enjoys defining the problem, and the criteria for solving it, as much as solving it."
+      },
+      "source_clusters": ["swe-infra", "sales-sa-fde", "support-cs-devrel", "em-tpm", "mobile-embedded-security"]
+    },
+    {
+      "id": "interrupt_tolerance",
+      "name": "Interrupt Tolerance",
+      "category": "preference",
+      "definition": "How much a person's ideal workday tolerates being pulled out of focused work by external demands arriving on someone else's timeline (Slack, tickets, stakeholder requests, in-progress incidents) versus needing long, self-scheduled, uninterrupted blocks. This is about daytime attention fragmentation and work cadence generally, distinct from the specific off-hours paging captured in On-Call/Incident Appetite.",
+      "anchors": {
+        "1": "Wants a fully self-scheduled calendar; can block off days or weeks for planned work with no expectation of same-day interruption, and resents unplanned context switches.",
+        "3": "Comfortable with scheduled, plannable interruptions (standups, PR review, workshops, SOW milestones) and will drop them occasionally for real urgency, but expects most of the week to be self-directed.",
+        "5": "Work arrives primarily via an inbound queue, page, or live urgent request with a clock running; is energized by fielding a stream of unplanned demands all day rather than experiencing them as a tax on 'real work.'"
+      },
+      "source_clusters": ["swe-infra", "support-cs-devrel"]
+    },
+    {
+      "id": "oncall_incident_appetite",
+      "name": "On-Call / Incident Appetite",
+      "category": "preference",
+      "definition": "Willingness and psychological comfort with being paged for production or field issues — including nights/weekends — and doing live incident response under real business, safety, or security pressure. Distinct from Interrupt Tolerance: a person can enjoy the adrenaline of an on-call page while disliking routine daytime interruptions, or vice versa.",
+      "anchors": {
+        "1": "Actively avoids any on-call responsibility; a job requiring nights/weekends paging or crisis response is a dealbreaker.",
+        "3": "Will do on-call as part of a fair rotation with reasonable tooling/escalation support for moderate-urgency issues (e.g., crash-rate spikes), but doesn't seek out high-stakes incidents.",
+        "5": "Comfortable owning live, high-stakes incidents in real time — production outages, security breaches, or safety-critical field failures with organizational or legal visibility — and may find the pressure and problem-solving rewarding rather than distressing."
+      },
+      "source_clusters": ["swe-infra", "mobile-embedded-security", "support-cs-devrel"]
+    },
+    {
+      "id": "debugging_diagnostic_depth",
+      "name": "Debugging / Diagnostic Depth",
+      "category": "skill",
+      "definition": "Skill at diagnosing unfamiliar technical problems quickly using production-grade tooling (logs, traces, SQL, hardware debuggers, feature flags), especially when the root cause could span multiple ambiguous layers (application vs. infrastructure, hardware vs. firmware, code vs. adversary) before a fix is even possible.",
+      "anchors": {
+        "1": "Root cause is nearly always legible from application-level logs or stack traces; debugging is single-layer and rarely time-pressured.",
+        "3": "Regularly debugs real technical problems that cross a layer or two (app code and third-party/OS behavior, or a workshop-surfaced integration issue) with room to research before resolving.",
+        "5": "Routinely diagnoses and fixes unfamiliar production issues within minutes to hours under an SLA or live-audience clock, forming and discarding hypotheses across fundamentally different failure domains (hardware, firmware, network, adversarial intent) as needed."
+      },
+      "source_clusters": ["support-cs-devrel", "mobile-embedded-security", "swe-infra"]
+    },
+    {
+      "id": "systems_design_scale",
+      "name": "Systems Design at Scale",
+      "category": "skill",
+      "definition": "Skill at designing structures (services, data models, pipelines, platforms) that hold up as scale, load, or organizational complexity grows, as opposed to tactical, feature-level implementation skill.",
+      "anchors": {
+        "1": "Comfortable implementing well-specified components; hasn't designed a system that needed to survive significant scale or multi-team dependency.",
+        "3": "Can design a service, pipeline, or schema that works well for a single team's current scale; needs support extrapolating far beyond current load.",
+        "5": "Regularly designs systems or platforms intended to serve many consuming teams or scale multiple orders of magnitude, and is judged on whether that design held up over time."
+      },
+      "source_clusters": ["swe-infra"]
+    },
+    {
+      "id": "technical_breadth_depth",
+      "name": "Technical Breadth vs. Depth",
+      "category": "skill",
+      "definition": "Preference and skill for going deep in one technology, platform, or discipline (a single distributed system, one vendor's product, one ML framework, or a second formal discipline like electrical engineering) versus ranging fluidly across many layers, platforms, or vendors as the situation demands.",
+      "anchors": {
+        "1": "Deep specialist in one narrow technical layer, platform, or discipline; prefers to keep building expertise there rather than context-switch, even if it requires formal study of a second discipline (e.g., EE/RF for embedded work).",
+        "3": "Comfortable in 2-3 adjacent layers or platforms (e.g., backend + data, or deep on one vendor's stack applied across many customer domains).",
+        "5": "Moves fluidly across many platforms, vendors, clouds, or stack layers as needed; prefers variety over specialization and readily picks up whatever a given engagement requires."
+      },
+      "source_clusters": ["swe-infra", "sales-sa-fde", "mobile-embedded-security"]
+    },
+    {
+      "id": "outcome_accountability",
+      "name": "Outcome Accountability",
+      "category": "preference",
+      "definition": "Whether a person's sense of responsibility is anchored to a measurable external outcome they can be held accountable for in production (a KPI, an SLO, a deployed system's uptime, a business result) even when they don't fully control every contributing factor, versus stewardship of a system's technical soundness or a design/recommendation whose real-world outcome is someone else's to own. Includes where in the customer lifecycle that accountability sits (pre-contract vs. post-sale/delivery) and whether motivation centers on the system's craft versus the business/user outcome it enables.",
+      "anchors": {
+        "1": "Accountability ends at a technical win, a design document, or a handed-off recommendation; motivated by the system's technical soundness for its own sake, and uncomfortable being on the hook for a metric influenced by factors outside their control.",
+        "3": "Comfortable owning a metric, SLA, or project deliverable for a system they mostly control, and may span from late pre-sale into early implementation, but wants clear attribution before accepting blame for what happens after handoff.",
+        "5": "Readily accepts being the named owner of a KPI/SLO/production incident from post-sale through sustained operation, even when upstream factors they don't control contribute; treats technology as a means to a business/user end and that accountability as motivating rather than unfair."
+      },
+      "source_clusters": ["swe-infra", "sales-sa-fde"]
+    },
+    {
+      "id": "stakeholder_client_comfort",
+      "name": "Stakeholder & Client-Facing Comfort",
+      "category": "preference",
+      "definition": "Comfort and skill operating as a service provider to others — whether internal engineering teams treated as customers, or external clients ranging from skeptical practitioners to business executives — including adapting communication register across that range as a sustained daily mode rather than an occasional task.",
+      "anchors": {
+        "1": "Prefers to be handed requirements and left alone to build; uncomfortable 'selling' adoption of their own work or fielding open-ended requests from other teams, and executive- or client-facing communication is rare.",
+        "3": "Willing to gather requirements and communicate with other teams or a client's technical practitioners when the process is structured (tickets, planning cycles, workshops), but sustained day-to-day counterparts are technical peers, not executives.",
+        "5": "Actively enjoys the requirements-gathering/advocacy/adoption loop of treating other engineers or clients as customers, and fluidly shifts register across a skeptical engineer, a procurement stakeholder, and a C-suite sponsor, often within the same week."
+      },
+      "source_clusters": ["swe-infra", "sales-sa-fde"]
+    },
+    {
+      "id": "teaching_enjoyment",
+      "name": "Teaching & Public Visibility",
+      "category": "preference",
+      "definition": "Enjoyment of and skill at translating technical concepts into terms a non-expert or unfamiliar audience can act on, as a primary job output rather than an incidental byproduct of having the knowledge — and, at the high end, comfort doing this in public, one-to-many visibility (conference talks, published content, open community forums) rather than only privately with a specific customer or account, including tolerance for the exposure and burnout risk of a public professional persona.",
+      "anchors": {
+        "1": "Communicates mainly with technical peers; no explicit expectation of translating concepts for non-experts, and no public content or speaking expectation.",
+        "3": "Regularly explains technical concepts to one customer or account's team as part of delivery (workshops, support replies, enablement plans), but this stays private/1:1 or 1:few and is one part of a broader role.",
+        "5": "Primary job output is teaching content or enablement material designed for an audience who wasn't in the room, delivered publicly — tutorials, conference talks, published videos, open community moderation — and this is a named, evaluated, and enjoyed part of the job."
+      },
+      "source_clusters": ["support-cs-devrel"]
+    },
+    {
+      "id": "account_relationship_ownership",
+      "name": "Account & Relationship Ownership",
+      "category": "preference",
+      "definition": "Whether the practitioner's unit of work is a persistent, named account or client relationship owned end-to-end over time, a time-boxed engagement with a defined end date, or an anonymous, interchangeable queue/portfolio — and the corresponding preference for relationship depth versus breadth/rotation.",
+      "anchors": {
+        "1": "Work arrives as anonymous, interchangeable units from a shared queue, or as a large, fast-rotating portfolio of concurrent engagements; no expectation of a continuous relationship with any one counterpart, and this variety is preferred, not tolerated.",
+        "3": "Owns a defined, time-boxed engagement with a specific client or account through to a planned end date (a project, an SOW, a sales cycle).",
+        "5": "Owns a persistent, named relationship with the same account or customer indefinitely, building trusted-advisor rapport through onboarding, adoption, and ongoing health — or, at the opposite pole, strongly prefers one deep long-term embed over juggling many."
+      },
+      "source_clusters": ["support-cs-devrel", "sales-sa-fde"]
+    },
+    {
+      "id": "variable_comp_appetite",
+      "name": "Variable Compensation Appetite",
+      "category": "preference",
+      "definition": "Comfort with, and preference for, compensation that is directly and periodically tied to an external, partly-out-of-one's-control business outcome — sales/deal attainment, or a tracked billable-utilization target — rather than a stable salary with at most a modest, outcome-decoupled bonus.",
+      "anchors": {
+        "1": "Wants compensation fully decoupled from any sales outcome or hour-tracked utilization target; would be unsettled by a bonus tied to deal-closing or billable-hours performance.",
+        "3": "Comfortable with a modest bonus tied to a proxy like utilization or margin, or occasional variable comp, but not deal-by-deal commission risk.",
+        "5": "Actively wants meaningful upside/downside tied to quarterly deal attainment or a tracked billable-utilization percentage; treats variable comp as a feature, not a risk."
+      },
+      "source_clusters": ["sales-sa-fde", "support-cs-devrel"]
+    },
+    {
+      "id": "coding_intensity",
+      "name": "Coding Intensity",
+      "category": "skill",
+      "definition": "The share of a typical week spent personally writing, reviewing, or debugging production (or production-bound) code, and how much residual hands-on-keyboard fluency the role requires versus reading/reasoning about others' code or letting that fluency fade.",
+      "anchors": {
+        "1": "Little to no hands-on coding; role is almost entirely advisory, design, or people-management work, and hands-on fluency is not expected to be maintained.",
+        "3": "Codes to prototype, demo, or validate technical fit, or reads code/specs closely enough to judge estimates and architecture, but this is not the dominant weekly activity and isn't what ships.",
+        "5": "Coding is the dominant weekly activity and the code produced is the actual production deliverable a customer or the business runs on."
+      },
+      "source_clusters": ["sales-sa-fde", "em-tpm"]
+    },
+    {
+      "id": "travel_embed_willingness",
+      "name": "Travel / Physical Embed Willingness",
+      "category": "preference",
+      "definition": "Willingness to spend a substantial share of working time traveling to, or physically embedded at, a client or customer site rather than working from a home base.",
+      "anchors": {
+        "1": "Wants to work from one location; travel is a hard constraint or dealbreaker.",
+        "3": "Comfortable with periodic travel for key moments (finalist presentations, kickoffs, a conference) but expects a mostly home-based rhythm most weeks.",
+        "5": "Comfortable being on the road or physically embedded at a client site the majority of working weeks, potentially for extended stretches."
+      },
+      "source_clusters": ["sales-sa-fde"]
+    },
+    {
+      "id": "adversarial_threat_modeling",
+      "name": "Adversarial / Threat-Model Thinking",
+      "category": "skill",
+      "definition": "Default orientation toward reasoning about what a motivated adversary would do to break or exploit a system, as opposed to reasoning primarily about the most likely accidental failure mode.",
+      "anchors": {
+        "1": "Never models adversarial behavior; all reasoning is about accidental or random failure modes.",
+        "3": "Occasionally considers abuse cases (input validation, basic auth) as part of a broader engineering job, not a primary lens.",
+        "5": "Default mental model for any system is 'how would someone try to break or exploit this'; runs threat modeling and risk assessments as a primary work product."
+      },
+      "source_clusters": ["mobile-embedded-security"]
+    },
+    {
+      "id": "physical_constraint_engineering",
+      "name": "Physical Constraint Engineering",
+      "category": "skill",
+      "definition": "Comfort and skill reasoning about hard physical resource budgets (power, memory, real-time deadlines, RF/signal behavior) as pass/fail constraints rather than soft optimization targets, including debugging at the hardware/software boundary.",
+      "anchors": {
+        "1": "Physical constraints are irrelevant to daily work; optimizes purely for logical/software correctness.",
+        "3": "Aware of soft resource budgets (app size, battery drain, cold-start time) tracked as CI-gated metrics, but not safety-critical hard-stops.",
+        "5": "Treats power/memory/timing budgets as absolute pass/fail gates; routinely debugs at the hardware/software boundary with oscilloscopes, logic analyzers, or JTAG."
+      },
+      "source_clusters": ["mobile-embedded-security"]
+    },
+    {
+      "id": "people_management_orientation",
+      "name": "People-Outcome Management Orientation",
+      "category": "preference",
+      "definition": "The degree to which a person wants their success to be defined by the growth, performance, and retention of other people rather than by their own individual technical output, including willingness to absorb the emotional and organizational labor (conflict, stress, politics) that comes with that responsibility.",
+      "anchors": {
+        "1": "Wants success judged almost entirely on personal output; managing others' growth, morale, or conflicts holds no appeal and would feel like a distraction from real work.",
+        "3": "Enjoys informally mentoring or leading a workstream and can handle occasional team friction, but wants their own evaluation to stay primarily about personal deliverables.",
+        "5": "Wants a formal role where team retention, morale, growth, and hiring are the actual basis of their own performance review, and is willing to make absorbing team stress and navigating conflict a core, daily part of the job."
+      },
+      "source_clusters": ["em-tpm"]
+    }
+  ]
+}

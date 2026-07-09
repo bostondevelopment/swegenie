@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Roleprint (working name — see `docs/adr/004-name.md`)
 
-## Getting Started
+The Next.js app for CareerGuru/Roleprint's assessment product. See the repo root `PLAN.md` and
+`docs/HANDOFF.md` for full project context.
 
-First, run the development server:
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run test     # scoring engine unit tests (vitest)
+npm run lint
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `app/` — Next.js App Router routes (landing, assessment, results, archetype detail,
+  methodology, privacy, API routes for OG image + funnel events).
+- `lib/` — the scoring engine (`scoring.ts`, implements `/taxonomy/scoring.md` exactly),
+  taxonomy typed loaders, URL encode/decode for shareable results, assessment flow ordering,
+  results-copy markdown parsing.
+- `data/` — copies of `/taxonomy/*.json` (dimensions, archetypes, questions). Source of truth is
+  the repo-root `/taxonomy` directory; re-sync this copy if those files change.
+- `content/results-copy/` — copies of `/docs/assessment/results-copy/*.md`. Same sync note as
+  above.
+- `lib/scoring.test.ts` — unit tests using the exact synthetic personas from
+  `/docs/research/validation-v1.md` as fixtures.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Known v1 gaps (honest, not hidden)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Analytics** (`lib/analytics.ts`, `app/api/events/route.ts`) is a stub: funnel events are
+  correctly instrumented at every call site but only logged server-side, since no analytics
+  service credentials were available to this build. Wiring a real provider is a one-line change
+  inside `track()`.
+- **Email capture** is a `mailto:` link, not a stored email — no backend/ESP integration exists in
+  v1 (see ADR-002/003: no database, no login).
+- **No formal Lighthouse audit** has been run against a deployed instance; manual QA (build, lint,
+  unit tests, browser walkthrough across desktop/mobile/dark-mode) is documented in the Phase 5
+  commit, but performance/accessibility scores are unverified numbers, not confirmed ≥90.

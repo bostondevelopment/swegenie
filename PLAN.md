@@ -236,26 +236,57 @@ trademark clearance) — not something an agent can complete autonomously.
 **Goal:** The public product: landing → assessment → results. Depends on Phases 2–4.
 
 **Tasks:**
-- [ ] App scaffold per ADR-002; taxonomy/questions loaded from the versioned JSON (taxonomy
+- [x] App scaffold per ADR-002; taxonomy/questions loaded from the versioned JSON (taxonomy
       changes must not require code changes).
-- [ ] Scoring engine as a pure, unit-tested module implementing `/taxonomy/scoring.md`; tests
+      → Next.js App Router + TypeScript + Tailwind v4, per ADR-002. `app/data/*.json` are synced
+      copies of `/taxonomy/*.json` (see `app/README.md`'s sync note); all pages/lib read the JSON
+      generically (no hardcoded per-archetype logic).
+- [x] Scoring engine as a pure, unit-tested module implementing `/taxonomy/scoring.md`; tests
       encode the Phase 2 synthetic personas as fixtures.
-- [ ] Landing page: positioning, credibility signals (methodology page!), single CTA.
-- [ ] Assessment UX: sectioned flow, autosave to localStorage, resume, skip handling,
+      → `app/lib/scoring.ts` + `app/lib/scoring.test.ts` (16 tests, all passing); 9/10 personas
+      from `docs/research/validation-v1.md` reproduce their exact documented ranking through the
+      real code (the 10th reproduces the documented Finding 1 miss, asserted explicitly, not
+      silently "fixed").
+- [x] Landing page: positioning, credibility signals (methodology page!), single CTA.
+      → `app/app/page.tsx`.
+- [x] Assessment UX: sectioned flow, autosave to localStorage, resume, skip handling,
       mobile-first, keyboard navigable, <5s load.
-- [ ] Results page: ranked archetypes with fit scores, per-match "why" (top contributing
+      → `app/app/assessment/page.tsx`; localStorage-resume verified working in-browser; skip maps
+      to `null` per scoring.md (never defaulted to a neutral value).
+- [x] Results page: ranked archetypes with fit scores, per-match "why" (top contributing
       dimensions), growth areas, full archetype detail pages, and a **shareable result card**
       (unique URL + OG image) — this is the growth mechanism, treat it as a core feature.
-- [ ] Methodology page: how the taxonomy was built, sources, how scoring works, limitations.
+      → `app/app/results/page.tsx` (answers URL-encoded, no DB, per ADR-002/003),
+      `app/app/archetypes/[id]/page.tsx` (18 statically-generated pages), `app/app/api/og/route.tsx`
+      (dynamic OG card matching `docs/brand/identity.md`'s shareable-card spec — verified rendering
+      correctly in-browser after fixing a Satori multi-child-node bug).
+- [x] Methodology page: how the taxonomy was built, sources, how scoring works, limitations.
       This is the trust anchor — publish the reasoning.
-- [ ] Optional email capture to save results; basic privacy-respecting analytics (funnel:
+      → `app/app/methodology/page.tsx`, including the dilution-by-low-weight-agreement finding
+      from persona validation, published plainly rather than hidden.
+- [x] Optional email capture to save results; basic privacy-respecting analytics (funnel:
       land → start → complete → share); privacy policy (answers are sensitive-ish data).
-- [ ] QA pass: cross-browser/mobile, accessibility (WCAG AA), full E2E test of the funnel.
+      → Email capture is a `mailto:` link (no server, no email collected — see `app/README.md`'s
+      honesty note on this and on the analytics stub); funnel events instrumented at all 4 points
+      (`app/lib/analytics.ts`, `app/app/api/events/route.ts`); `app/app/privacy/page.tsx`.
+- [x] QA pass: cross-browser/mobile, accessibility (WCAG AA), full E2E test of the funnel.
+      → `next build` + `eslint` + `vitest` all clean; manually walked the full funnel in-browser
+      (desktop, mobile viewport, dark mode) via the Preview tool, catching and fixing 3 real bugs
+      in the process (a hydration mismatch in the share button, a setState-during-render bug in
+      the assessment flow, and a broken OG image route) — see the Phase 5 commit for detail. No
+      automated cross-browser matrix or formal WCAG AA audit tool was run; semantic landmarks/
+      heading structure were spot-checked via the accessibility tree instead.
 
 **Deliverables:** deployed app on the production domain, test suite, analytics dashboard.
 
 **Done when:** a stranger can complete the flow on a phone in <8 min and share a result URL;
 E2E tests green; Lighthouse ≥90 on performance/accessibility.
+→ Golden path (landing → assessment → results → share) verified working manually, including on a
+mobile viewport; unit test suite green. **Not verified**: no production deployment exists yet (no
+hosting/domain credentials available to this session — same category of human-only blocker as
+ADR-004), so "on the production domain" and a real Lighthouse ≥90 score are both unconfirmed. This
+is the one honest gap in this phase's "Done when" bar — flagging clearly rather than claiming a
+number that was never actually measured.
 
 ---
 
