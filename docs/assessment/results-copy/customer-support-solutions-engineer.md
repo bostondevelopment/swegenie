@@ -6,7 +6,7 @@ Customer Success / Customer Solutions Engineer is the proactive, named-account-e
 
 You matched with Customer Success / Customer Solutions Engineer because your answers put {{top_dimension_1}}, {{top_dimension_2}}, and {{top_dimension_3}} close to what this role actually demands day to day — those are the parts of your profile pulling hardest toward this match.
 
-For example: a profile with high **Relationship Continuity**, high **Ambiguity Tolerance**, and high **Teaching & Public Visibility** would land here — someone who wants a persistent, named relationship with the same accounts over time rather than an anonymous queue, who's comfortable being judged on a qualitative "trusted-advisor" signal instead of a crisp SLA number, and who enjoys designing and running enablement workshops as a core part of the job, not a side task.
+For example: a profile with high **Relationship Continuity**, high **Ambiguity Tolerance**, and high **Teaching / Explaining Enjoyment** would land here — someone who wants a persistent, named relationship with the same accounts over time rather than an anonymous queue, who's comfortable being judged on a qualitative "trusted-advisor" signal instead of a crisp SLA number, and who enjoys designing and running enablement workshops as a core part of the job, not a side task.
 
 ## A day in this role
 

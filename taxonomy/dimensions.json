@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "changelog": "v1.1 (2026-07-09): split 'account_relationship_ownership' into 'account_portfolio_breadth' and 'relationship_continuity' after real-user bug report + JD-cache research (149 real 2026 postings) showed the single axis conflated two independent patterns (e.g. Forward Deployed Engineer and Customer Success Engineer both scored target=5 despite CSE being wide-portfolio and FDE being narrow-embed). See docs/research/dimensions-v1.1-relationship-split.md.",
+  "version": "1.2",
+  "changelog": "v1.2 (2026-07-09): (1) split 'teaching_enjoyment' into itself (renamed 'Teaching / Explaining Enjoyment') plus new 'public_visibility_comfort', after a real user's private-teaching-only answers registered as a full match for Developer Relations' public-visibility-defining trait. (2) Added 4 new skill dimensions — ml_engineering_fluency, mobile_platform_fluency, data_infrastructure_fluency, cloud_infrastructure_fluency — after the same user's ML Engineer #1 match had zero relationship to their self-reported (non-ML) domain background; these mirror the existing physical_constraint_engineering/adversarial_threat_modeling pattern of a real domain-fluency gate rather than a personality trait. v1.1 (2026-07-09): split 'account_relationship_ownership' into 'account_portfolio_breadth' and 'relationship_continuity' after real-user bug report + JD-cache research (149 real 2026 postings) showed the single axis conflated two independent patterns (e.g. Forward Deployed Engineer and Customer Success Engineer both scored target=5 despite CSE being wide-portfolio and FDE being narrow-embed). See docs/research/dimensions-v1.1-relationship-split.md.",
   "dimensions": [
     {
       "id": "ambiguity_tolerance",
@@ -100,15 +100,27 @@
     },
     {
       "id": "teaching_enjoyment",
-      "name": "Teaching & Public Visibility",
+      "name": "Teaching / Explaining Enjoyment",
       "category": "preference",
-      "definition": "Enjoyment of and skill at translating technical concepts into terms a non-expert or unfamiliar audience can act on, as a primary job output rather than an incidental byproduct of having the knowledge — and, at the high end, comfort doing this in public, one-to-many visibility (conference talks, published content, open community forums) rather than only privately with a specific customer or account, including tolerance for the exposure and burnout risk of a public professional persona.",
+      "definition": "Enjoyment of and skill at translating technical concepts into terms a non-expert or unfamiliar audience can act on, as a primary job output rather than an incidental byproduct of having the knowledge. Deliberately silent on audience size or publicness — a person can score high here while only ever teaching one customer's team at a time (see Public Visibility Comfort for that separate axis).",
       "anchors": {
-        "1": "Communicates mainly with technical peers; no explicit expectation of translating concepts for non-experts, and no public content or speaking expectation.",
-        "3": "Regularly explains technical concepts to one customer or account's team as part of delivery (workshops, support replies, enablement plans), but this stays private/1:1 or 1:few and is one part of a broader role.",
-        "5": "Primary job output is teaching content or enablement material designed for an audience who wasn't in the room, delivered publicly — tutorials, conference talks, published videos, open community moderation — and this is a named, evaluated, and enjoyed part of the job."
+        "1": "Communicates mainly with technical peers; no explicit expectation of translating concepts for non-experts.",
+        "3": "Regularly explains technical concepts to one customer or account's team as part of delivery (workshops, support replies, enablement plans), and finds this a genuine, not merely tolerated, part of the job.",
+        "5": "Primary job output is teaching or enablement content — tutorials, workshops, onboarding material — designed for an audience who wasn't in the room, and this is a named, evaluated, and enjoyed part of the job, regardless of whether that audience is one account or the public."
       },
       "source_clusters": ["support-cs-devrel"]
+    },
+    {
+      "id": "public_visibility_comfort",
+      "name": "Public Visibility Comfort",
+      "category": "preference",
+      "definition": "Comfort being a visible, named, one-to-many public presence — conference talks, published content under one's own name, open community engagement (social media, forums, Discord) — as opposed to work that stays private between the practitioner and a specific customer, account, or team, however much teaching or explaining that private work involves. This was split out from Teaching / Explaining Enjoyment (v1.2) after real-user testing showed the merged dimension let private-teaching-only answers register as a full match for public-facing roles like Developer Relations.",
+      "anchors": {
+        "1": "All interactions are private, 1:1, or 1:few with a specific customer, account, or team; no public content, social presence, or speaking expectation, and this person has no interest in building one.",
+        "3": "Occasional internal cross-team presentation, or a single conference talk/post as a rare event, not a sustained public presence.",
+        "5": "Regularly public and visible under their own name — conference talks, published content, active social/community presence — and actively wants this, tolerating the exposure and scrutiny that comes with it as a real part of the job."
+      },
+      "source_clusters": ["support-cs-devrel", "v1.2-real-user-finding"]
     },
     {
       "id": "account_portfolio_breadth",
@@ -193,6 +205,54 @@
         "5": "Treats power/memory/timing budgets as absolute pass/fail gates; routinely debugs at the hardware/software boundary with oscilloscopes, logic analyzers, or JTAG."
       },
       "source_clusters": ["mobile-embedded-security"]
+    },
+    {
+      "id": "ml_engineering_fluency",
+      "name": "ML Engineering Fluency",
+      "category": "skill",
+      "definition": "Self-rated hands-on experience building, training, deploying, or productionizing machine learning systems — data pipelines feeding models, model training/evaluation, or ML serving infrastructure — as opposed to theoretical familiarity or none at all. Added in v1.2 after real-user testing showed ML Engineer could rank #1 purely on generic senior-engineer temperament (ambiguity tolerance, systems design, coding intensity) with zero check against actual ML background, since no prior dimension measured this directly. Mirrors the existing pattern of Physical Constraint Engineering (Embedded) and Adversarial Threat Modeling (Security) — a real domain-fluency gate, not a personality trait.",
+      "anchors": {
+        "1": "No hands-on experience with ML or data-pipeline work; machine learning has not been part of what I've built.",
+        "3": "Some working exposure — used ML APIs/libraries or built a model or pipeline component, but not as the primary focus of a role.",
+        "5": "Deep, current hands-on experience — I've built, trained, deployed, or maintained production ML systems as a core, ongoing part of my work."
+      },
+      "source_clusters": ["v1.2-real-user-finding"]
+    },
+    {
+      "id": "mobile_platform_fluency",
+      "name": "Mobile Platform Fluency",
+      "category": "skill",
+      "definition": "Self-rated hands-on experience building native or cross-platform mobile applications (iOS/Android), as opposed to web/backend/other platforms. Added in v1.2 alongside ML Engineering Fluency for the same reason: Mobile Engineer had no dimension directly measuring actual mobile-platform background.",
+      "anchors": {
+        "1": "No hands-on mobile app development experience.",
+        "3": "Some exposure — built a small app or contributed to a mobile codebase, but not a primary focus of a role.",
+        "5": "Deep, current hands-on experience — I've built and shipped mobile apps as a core, ongoing part of my work."
+      },
+      "source_clusters": ["v1.2-real-user-finding"]
+    },
+    {
+      "id": "data_infrastructure_fluency",
+      "name": "Data Infrastructure Fluency",
+      "category": "skill",
+      "definition": "Self-rated hands-on experience building and operating data pipelines, warehouses, or ETL/ELT infrastructure, as opposed to just consuming data or none at all. Added in v1.2 for the same reason as ML Engineering Fluency and Mobile Platform Fluency — Data Engineer previously had no dimension directly measuring actual data-infrastructure background.",
+      "anchors": {
+        "1": "No hands-on experience building data pipelines or warehouse infrastructure.",
+        "3": "Some exposure — written ETL/ELT jobs or queried/maintained a warehouse, but not as a primary focus of a role.",
+        "5": "Deep, current hands-on experience — I've built and operated production data pipelines or warehouse infrastructure as a core, ongoing part of my work."
+      },
+      "source_clusters": ["v1.2-real-user-finding"]
+    },
+    {
+      "id": "cloud_infrastructure_fluency",
+      "name": "Cloud Infrastructure Fluency",
+      "category": "skill",
+      "definition": "Self-rated hands-on experience building and operating cloud infrastructure, internal developer platforms, or CI/CD systems, as opposed to only using infrastructure someone else built. Added in v1.2 for the same reason as the other domain-fluency dimensions — Platform/Infrastructure Engineer previously had no dimension directly measuring actual infra-building background (Systems Design at Scale measures a related but distinct architectural-thinking skill, not hands-on tool experience).",
+      "anchors": {
+        "1": "No hands-on experience building or operating cloud/infrastructure systems.",
+        "3": "Some exposure — configured cloud resources or CI/CD for my own team's use, but not as a primary focus of a role.",
+        "5": "Deep, current hands-on experience — I've built and operated cloud infrastructure or internal developer platforms as a core, ongoing part of my work."
+      },
+      "source_clusters": ["v1.2-real-user-finding"]
     },
     {
       "id": "people_management_orientation",

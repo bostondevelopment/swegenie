@@ -1,30 +1,123 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "generated": "2026-07-09",
-  "notes": "v1.1: rescored account_relationship_ownership as two independent dimensions (account_portfolio_breadth, relationship_continuity) per docs/research/dimensions-v1.1-relationship-split.md, grounded in a 149-posting real-JD research pass triggered by a real user bug report. v1.0 base: merged from 5 parallel cluster-scoring drafts (taxonomy/archetypes-draft-*.json), each scoring its archetypes against all 16 v1.0 dimensions in taxonomy/dimensions.json (target 1-5, weight 0.0-1.0, rationale citing the source brief). confidence is \"medium\" for Mobile Engineer and Embedded/IoT Engineer per the Phase 1 handoff decision (under-sourced, 9 postings vs. the 15 target); \"high\" for the other 16. Every archetype's scores object contains all 17 dimension ids in taxonomy/dimensions.json v1.1.",
+  "notes": "v1.2: (1) split teaching_enjoyment into itself (private teaching) + new public_visibility_comfort (public/social visibility), making public_visibility_comfort Developer Relations' true weight-1.0 defining trait and correctly keeping Customer Success Engineer's teaching_enjoyment high while its public_visibility_comfort stays low. (2) Added 4 new domain-fluency skill dimensions (ml_engineering_fluency, mobile_platform_fluency, data_infrastructure_fluency, cloud_infrastructure_fluency) as real gates for ML Engineer, Mobile Engineer, Data Engineer, and Platform Engineer respectively, mirroring the existing physical_constraint_engineering/adversarial_threat_modeling pattern. Both changes made after a real user's second assessment run showed ML Engineer winning on pure generic temperament (with zero self-reported ML/data background) and Developer Relations scoring high despite answers describing only private, not public, teaching preference. v1.1: rescored account_relationship_ownership as two independent dimensions (account_portfolio_breadth, relationship_continuity) per docs/research/dimensions-v1.1-relationship-split.md, grounded in a 149-posting real-JD research pass triggered by a real user bug report. v1.0 base: merged from 5 parallel cluster-scoring drafts (taxonomy/archetypes-draft-*.json), each scoring its archetypes against all 16 v1.0 dimensions in taxonomy/dimensions.json (target 1-5, weight 0.0-1.0, rationale citing the source brief). confidence is \"medium\" for Mobile Engineer and Embedded/IoT Engineer per the Phase 1 handoff decision (under-sourced, 9 postings vs. the 15 target); \"high\" for the other 16. Every archetype's scores object contains all 22 dimension ids in taxonomy/dimensions.json v1.2.",
   "archetypes": [
     {
       "id": "product-full-stack-software-engineer",
       "name": "Product / Full-Stack Software Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.6, "rationale": "Brief describes taking a product requirement from design/PM handoff through delivery and dealing with ambiguous or changing requirements, but scope typically crystallizes via PM/design partnership rather than being self-defined from a vague business outcome."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.5, "rationale": "Cross-functional collaboration is constant, but most of the week is self-directed feature work between planned syncs."},
-        "oncall_incident_appetite": {"target": 3, "weight": 0.5, "rationale": "On-call is 'common at Series B+ startups and scale-ups, less universal at very early-stage startups' — a fair-rotation expectation, not a defining identity."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.5, "rationale": "Debugging is one of several named activities, with no evidence of routine cross-layer diagnosis under live time pressure."},
-        "systems_design_scale": {"target": 3, "weight": 0.5, "rationale": "Senior+ engineers architect end-to-end features and staff+ set technical direction, but center of gravity is feature delivery for one product, not platform-scale systems."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.7, "rationale": "Frontend-lean, backend-lean, and generalist variants coexist under one archetype; generalists 'move across the stack fluidly' at seed/Series A — anchor-3 breadth."},
-        "outcome_accountability": {"target": 3, "weight": 0.5, "rationale": "Success centers on 'shipping working software that survives contact with production,' real accountability but not a named business KPI/SLO."},
-        "stakeholder_client_comfort": {"target": 3, "weight": 0.5, "rationale": "Constant cross-functional collaboration with Product/Design/Platform, but counterparts are internal technical/product peers, not external clients or executives."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.3, "rationale": "Code review and mentorship are named senior activities but private peer-to-peer, not designed public-facing teaching content."},
-        "account_portfolio_breadth": {"target":2,"weight":0.2,"rationale":"Not a meaningful axis; work organizes around product/team ownership, not named accounts."},
-        "relationship_continuity": {"target":2,"weight":0.2,"rationale":"Not a meaningful axis; work organizes around product/team ownership, not named accounts."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.3, "rationale": "Comp section explicitly states 'no variable/commission component' — base+equity by company stage."},
-        "coding_intensity": {"target": 4, "weight": 0.8, "rationale": "Shipped code is 'the actual production deliverable' and the defining skill axis distinguishing this archetype from advisory/management roles."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.2, "rationale": "No travel or client-embed expectation appears anywhere in the brief."},
-        "adversarial_threat_modeling": {"target": 2, "weight": 0.2, "rationale": "Not discussed beyond generic engineering diligence; not a named success criterion."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.1, "rationale": "No hardware/physical-resource constraints appear anywhere in this brief."},
-        "people_management_orientation": {"target": 2, "weight": 0.4, "rationale": "IC and management are framed as parallel tracks; most product engineers stay IC-focused."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Brief describes taking a product requirement from design/PM handoff through delivery and dealing with ambiguous or changing requirements, but scope typically crystallizes via PM/design partnership rather than being self-defined from a vague business outcome."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Cross-functional collaboration is constant, but most of the week is self-directed feature work between planned syncs."
+        },
+        "oncall_incident_appetite": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "On-call is 'common at Series B+ startups and scale-ups, less universal at very early-stage startups' — a fair-rotation expectation, not a defining identity."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Debugging is one of several named activities, with no evidence of routine cross-layer diagnosis under live time pressure."
+        },
+        "systems_design_scale": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Senior+ engineers architect end-to-end features and staff+ set technical direction, but center of gravity is feature delivery for one product, not platform-scale systems."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "Frontend-lean, backend-lean, and generalist variants coexist under one archetype; generalists 'move across the stack fluidly' at seed/Series A — anchor-3 breadth."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Success centers on 'shipping working software that survives contact with production,' real accountability but not a named business KPI/SLO."
+        },
+        "stakeholder_client_comfort": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Constant cross-functional collaboration with Product/Design/Platform, but counterparts are internal technical/product peers, not external clients or executives."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Code review and mentorship are named senior activities but private peer-to-peer, not designed public-facing teaching content."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not a meaningful axis; work organizes around product/team ownership, not named accounts."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not a meaningful axis; work organizes around product/team ownership, not named accounts."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.3,
+          "rationale": "Comp section explicitly states 'no variable/commission component' — base+equity by company stage."
+        },
+        "coding_intensity": {
+          "target": 4,
+          "weight": 0.8,
+          "rationale": "Shipped code is 'the actual production deliverable' and the defining skill axis distinguishing this archetype from advisory/management roles."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No travel or client-embed expectation appears anywhere in the brief."
+        },
+        "adversarial_threat_modeling": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not discussed beyond generic engineering diligence; not a named success criterion."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No hardware/physical-resource constraints appear anywhere in this brief."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "IC and management are framed as parallel tracks; most product engineers stay IC-focused."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No public content or speaking expectation appears anywhere in the brief."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not a required background for the generalist archetype; ML-specific hands-on experience isn't discussed in the brief."
+        },
+        "mobile_platform_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "A generalist full-stack engineer may occasionally touch mobile, but it's not core to the archetype as scoped."
+        },
+        "data_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not core to the archetype; data-pipeline work belongs to the Data Engineer archetype specifically."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Some infra exposure is common for full-stack engineers but building/operating infra itself belongs to the Platform Engineer archetype."
+        }
       }
     },
     {
@@ -32,23 +125,116 @@
       "name": "Platform / Infrastructure Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 4, "weight": 0.7, "rationale": "Requires defining a 'minimum viable platform' by gathering requirements from internal customers and iterating, rather than working from a top-down mandate."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.5, "rationale": "Constant cross-team collaboration is real, but this is requirements-gathering/advocacy work, not an inbound page/ticket queue."},
-        "oncall_incident_appetite": {"target": 3, "weight": 0.4, "rationale": "Platform Engineer and SRE frequently blend at smaller companies implying some on-call exposure, but developer experience is the defining mandate, not reliability."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.5, "rationale": "Managing cloud infra/IaC/Kubernetes implies real debugging, but success criteria emphasize adoption over live incident diagnosis."},
-        "systems_design_scale": {"target": 5, "weight": 1.0, "rationale": "Defining skill: building internal developer platforms and shared infra meant to hold up for many consuming teams at organizational scale — the line distinguishing this from classic DevOps at senior/staff level."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.6, "rationale": "Requires fluency across IaC, Kubernetes, networking, and client-library development — 2-3 adjacent infra layers."},
-        "outcome_accountability": {"target": 3, "weight": 0.6, "rationale": "Success is measured by adoption and developer cognitive-load reduction — real internal-customer accountability, but not a production SLO the way SRE is judged."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.9, "rationale": "'Platform as a product' — gathering requirements from internal teams and advocacy is defining, not incidental; misconceptions section warns engineers who dislike stakeholder work are a poor fit."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.3, "rationale": "Some internal enablement implied (golden paths, docs) but not framed as public-facing teaching content."},
-        "account_portfolio_breadth": {"target":2,"weight":0.2,"rationale":"No named external account structure; internal 'customers' are other engineering teams generally, not counted as a portfolio."},
-        "relationship_continuity": {"target":2,"weight":0.2,"rationale":"No named external account structure; internal 'customers' are other engineering teams generally, not a relationship with duration."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "Comp section states 'no material sales-style variable comp,' base+equity mirroring general SWE comp."},
-        "coding_intensity": {"target": 4, "weight": 0.6, "rationale": "Writes client libraries and infra tooling other engineers consume directly — real hands-on production code, tempered by stakeholder-layer time."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.1, "rationale": "No travel or physical-embed expectation anywhere in the brief."},
-        "adversarial_threat_modeling": {"target": 2, "weight": 0.2, "rationale": "Not a named focus, distinct from a security-engineering archetype; some baseline access-control awareness implied."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.1, "rationale": "No physical/hardware resource constraints discussed; cost/scale optimization is a cloud-economics concern."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Platform Engineer to EM(Platform/Infra) is a common move given stakeholder-management muscle, but the archetype itself is IC-centered."}
+        "ambiguity_tolerance": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Requires defining a 'minimum viable platform' by gathering requirements from internal customers and iterating, rather than working from a top-down mandate."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Constant cross-team collaboration is real, but this is requirements-gathering/advocacy work, not an inbound page/ticket queue."
+        },
+        "oncall_incident_appetite": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Platform Engineer and SRE frequently blend at smaller companies implying some on-call exposure, but developer experience is the defining mandate, not reliability."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Managing cloud infra/IaC/Kubernetes implies real debugging, but success criteria emphasize adoption over live incident diagnosis."
+        },
+        "systems_design_scale": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "Defining skill: building internal developer platforms and shared infra meant to hold up for many consuming teams at organizational scale — the line distinguishing this from classic DevOps at senior/staff level."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Requires fluency across IaC, Kubernetes, networking, and client-library development — 2-3 adjacent infra layers."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Success is measured by adoption and developer cognitive-load reduction — real internal-customer accountability, but not a production SLO the way SRE is judged."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "'Platform as a product' — gathering requirements from internal teams and advocacy is defining, not incidental; misconceptions section warns engineers who dislike stakeholder work are a poor fit."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Some internal enablement implied (golden paths, docs) but not framed as public-facing teaching content."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No named external account structure; internal 'customers' are other engineering teams generally, not counted as a portfolio."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No named external account structure; internal 'customers' are other engineering teams generally, not a relationship with duration."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Comp section states 'no material sales-style variable comp,' base+equity mirroring general SWE comp."
+        },
+        "coding_intensity": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Writes client libraries and infra tooling other engineers consume directly — real hands-on production code, tempered by stakeholder-layer time."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No travel or physical-embed expectation anywhere in the brief."
+        },
+        "adversarial_threat_modeling": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not a named focus, distinct from a security-engineering archetype; some baseline access-control awareness implied."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No physical/hardware resource constraints discussed; cost/scale optimization is a cloud-economics concern."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Platform Engineer to EM(Platform/Infra) is a common move given stakeholder-management muscle, but the archetype itself is IC-centered."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Internal-facing role; no public content or speaking expectation described."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope (developer platforms/cloud infra, not ML systems)."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Some adjacency (both build internal infrastructure other teams depend on) but data-pipeline specifics belong to Data Engineer."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "v1.2: added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — building and operating cloud infrastructure/internal developer platforms is the literal, hands-on core of the job, not just a related architectural-thinking skill (see systems_design_scale for that separate axis)."
+        }
       }
     },
     {
@@ -56,23 +242,116 @@
       "name": "SRE / Production Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.5, "rationale": "Design/influence/review of architecture and standards involves real scoping judgment, but success is anchored to a defined SLO/error-budget metric, not an open-ended business outcome."},
-        "interrupt_tolerance": {"target": 4, "weight": 0.6, "rationale": "2025 SRE Report shows a rising 30% operational-time share; daytime work is regularly interrupted by alerts/incidents even outside formal on-call windows."},
-        "oncall_incident_appetite": {"target": 5, "weight": 1.0, "rationale": "Defining trait: 24/7 follow-the-sun on-call rotations, live-outage escalation ownership; misconceptions section states the role 'rewards people who specifically enjoy incident composure.'"},
-        "debugging_diagnostic_depth": {"target": 5, "weight": 0.9, "rationale": "Owning escalation during live outages and driving MTTD/MTTR down under real time pressure is core to the role."},
-        "systems_design_scale": {"target": 4, "weight": 0.7, "rationale": "Senior SREs influence architecture and standards broadly, designing resilience patterns across services owned by other teams — strong but reliability-focused rather than platform-building."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Requires coding (Python/Go), distributed systems, and observability tooling fluency across supported services — 2-3 layer breadth."},
-        "outcome_accountability": {"target": 5, "weight": 0.9, "rationale": "Central success metric is service availability against SLOs/error-budget adherence — a named, measured production outcome even when upstream code is owned by other teams."},
-        "stakeholder_client_comfort": {"target": 3, "weight": 0.4, "rationale": "Works jointly with product/dev teams on architecture, but counterparts are internal engineering teams during structured reviews and incidents."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.2, "rationale": "Postmortems/architecture reviews involve internal knowledge-sharing but no public-facing teaching output."},
-        "account_portfolio_breadth": {"target":2,"weight":0.2,"rationale":"No account/client structure; SREs own services/systems, not a portfolio of external relationships."},
-        "relationship_continuity": {"target":2,"weight":0.2,"rationale":"No account/client structure; SREs own services/systems, not named external relationships with duration."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "On-call is 'generally not separately compensated as variable pay' at most companies; bands track standard SWE ladders."},
-        "coding_intensity": {"target": 4, "weight": 0.6, "rationale": "'An engineering role, not a ticket-queue role,' requiring years of Python/automation coding — kept below 5 since roughly half the role is operational/incident work."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.1, "rationale": "No travel/embed expectation discussed."},
-        "adversarial_threat_modeling": {"target": 2, "weight": 0.2, "rationale": "Reliability work is about accidental/systemic failure modes, not adversarial threat modeling, which is a separate security-engineering concern."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.1, "rationale": "No hardware/physical-resource constraint discussion in the brief."},
-        "people_management_orientation": {"target": 2, "weight": 0.4, "rationale": "A notable minority of SREs move into people management earlier than typical given incident-coordination cross-team muscle, but this is a common exit path, not core to the IC archetype."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Design/influence/review of architecture and standards involves real scoping judgment, but success is anchored to a defined SLO/error-budget metric, not an open-ended business outcome."
+        },
+        "interrupt_tolerance": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "2025 SRE Report shows a rising 30% operational-time share; daytime work is regularly interrupted by alerts/incidents even outside formal on-call windows."
+        },
+        "oncall_incident_appetite": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "Defining trait: 24/7 follow-the-sun on-call rotations, live-outage escalation ownership; misconceptions section states the role 'rewards people who specifically enjoy incident composure.'"
+        },
+        "debugging_diagnostic_depth": {
+          "target": 5,
+          "weight": 0.9,
+          "rationale": "Owning escalation during live outages and driving MTTD/MTTR down under real time pressure is core to the role."
+        },
+        "systems_design_scale": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Senior SREs influence architecture and standards broadly, designing resilience patterns across services owned by other teams — strong but reliability-focused rather than platform-building."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Requires coding (Python/Go), distributed systems, and observability tooling fluency across supported services — 2-3 layer breadth."
+        },
+        "outcome_accountability": {
+          "target": 5,
+          "weight": 0.9,
+          "rationale": "Central success metric is service availability against SLOs/error-budget adherence — a named, measured production outcome even when upstream code is owned by other teams."
+        },
+        "stakeholder_client_comfort": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Works jointly with product/dev teams on architecture, but counterparts are internal engineering teams during structured reviews and incidents."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Postmortems/architecture reviews involve internal knowledge-sharing but no public-facing teaching output."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No account/client structure; SREs own services/systems, not a portfolio of external relationships."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No account/client structure; SREs own services/systems, not named external relationships with duration."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "On-call is 'generally not separately compensated as variable pay' at most companies; bands track standard SWE ladders."
+        },
+        "coding_intensity": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "'An engineering role, not a ticket-queue role,' requiring years of Python/automation coding — kept below 5 since roughly half the role is operational/incident work."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No travel/embed expectation discussed."
+        },
+        "adversarial_threat_modeling": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Reliability work is about accidental/systemic failure modes, not adversarial threat modeling, which is a separate security-engineering concern."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No hardware/physical-resource constraint discussion in the brief."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "A notable minority of SREs move into people management earlier than typical given incident-coordination cross-team muscle, but this is a common exit path, not core to the IC archetype."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No public content or speaking expectation described."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not core; SRE reliability work spans many service types, not specifically data infrastructure."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "v1.2: SREs work hands-on with cloud infrastructure and observability tooling constantly, though the archetype's defining trait remains oncall_incident_appetite/outcome_accountability rather than infra-building itself."
+        }
       }
     },
     {
@@ -80,23 +359,116 @@
       "name": "Data Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.5, "rationale": "Translates data-science/analyst needs into pipeline/schema requirements and makes build-vs-buy calls at senior level, but work is generally scoped around a defined pipeline problem."},
-        "interrupt_tolerance": {"target": 4, "weight": 0.6, "rationale": "Practitioner accounts describe checking a monitoring dashboard before Slack each morning since 'pipeline failures often surface overnight' — daytime work frequently fragmented by reactive firefighting."},
-        "oncall_incident_appetite": {"target": 4, "weight": 0.7, "rationale": "Formal on-call/pager rotations documented (Uber: dedicated on-call for 20,000+ pipelines); 87%-blame finding centers on firefighting and being blamed when data breaks."},
-        "debugging_diagnostic_depth": {"target": 4, "weight": 0.7, "rationale": "'Diary of a Data Engineer' account shows a nominal one-day task spanning schema discovery, Spark/JVM debugging, and cluster-contention troubleshooting over three weeks."},
-        "systems_design_scale": {"target": 4, "weight": 0.8, "rationale": "Senior/staff engineers own platform-wide architecture (warehouse migration, streaming platform) meant to hold up as the company scales."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Requires fluency across ingestion, warehouse/lakehouse design, orchestration, and Spark/Flink — 2-3 adjacent layers."},
-        "outcome_accountability": {"target": 3, "weight": 0.6, "rationale": "Accountable for pipeline reliability/freshness SLAs and described as the default blame target when data looks wrong even when root cause is upstream."},
-        "stakeholder_client_comfort": {"target": 3, "weight": 0.5, "rationale": "Constant collaboration with data scientists, analysts, and PMs to translate needs into pipeline requirements — structured internal stakeholder work."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.2, "rationale": "No public-facing teaching expectation; internal requirements-translation is the closest analog but stays private."},
-        "account_portfolio_breadth": {"target":2,"weight":0.2,"rationale":"Not relevant for most postings; a minority consulting-flavored variant involves a small caseload of client partnerships."},
-        "relationship_continuity": {"target":2,"weight":0.2,"rationale":"Not relevant for most postings; a minority consulting-flavored variant involves closer, longer client partnership."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "'Overwhelmingly salaried, not commission... a build/operate role, not a revenue-attributed one.'"},
-        "coding_intensity": {"target": 4, "weight": 0.6, "rationale": "Building/maintaining production ETL/ELT pipelines is the core shipped deliverable, tempered by meeting/triage time."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.1, "rationale": "No travel/embed expectation for the core archetype."},
-        "adversarial_threat_modeling": {"target": 2, "weight": 0.2, "rationale": "Data-access governance work mentioned but this is compliance/access-control, not adversarial threat-modeling as a primary lens."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.1, "rationale": "No hardware/physical-resource constraints discussed; cost/storage optimization is cloud-economics, not physical budget."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Career ladder includes a management branch, but this is a standard parallel-track option, not defining."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Translates data-science/analyst needs into pipeline/schema requirements and makes build-vs-buy calls at senior level, but work is generally scoped around a defined pipeline problem."
+        },
+        "interrupt_tolerance": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Practitioner accounts describe checking a monitoring dashboard before Slack each morning since 'pipeline failures often surface overnight' — daytime work frequently fragmented by reactive firefighting."
+        },
+        "oncall_incident_appetite": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Formal on-call/pager rotations documented (Uber: dedicated on-call for 20,000+ pipelines); 87%-blame finding centers on firefighting and being blamed when data breaks."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "'Diary of a Data Engineer' account shows a nominal one-day task spanning schema discovery, Spark/JVM debugging, and cluster-contention troubleshooting over three weeks."
+        },
+        "systems_design_scale": {
+          "target": 4,
+          "weight": 0.8,
+          "rationale": "Senior/staff engineers own platform-wide architecture (warehouse migration, streaming platform) meant to hold up as the company scales."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Requires fluency across ingestion, warehouse/lakehouse design, orchestration, and Spark/Flink — 2-3 adjacent layers."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Accountable for pipeline reliability/freshness SLAs and described as the default blame target when data looks wrong even when root cause is upstream."
+        },
+        "stakeholder_client_comfort": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Constant collaboration with data scientists, analysts, and PMs to translate needs into pipeline requirements — structured internal stakeholder work."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No public-facing teaching expectation; internal requirements-translation is the closest analog but stays private."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not relevant for most postings; a minority consulting-flavored variant involves a small caseload of client partnerships."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not relevant for most postings; a minority consulting-flavored variant involves closer, longer client partnership."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "'Overwhelmingly salaried, not commission... a build/operate role, not a revenue-attributed one.'"
+        },
+        "coding_intensity": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Building/maintaining production ETL/ELT pipelines is the core shipped deliverable, tempered by meeting/triage time."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No travel/embed expectation for the core archetype."
+        },
+        "adversarial_threat_modeling": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Data-access governance work mentioned but this is compliance/access-control, not adversarial threat-modeling as a primary lens."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No hardware/physical-resource constraints discussed; cost/storage optimization is cloud-economics, not physical budget."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Career ladder includes a management branch, but this is a standard parallel-track option, not defining."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No public content or speaking expectation described."
+        },
+        "ml_engineering_fluency": {
+          "target": 4,
+          "weight": 0.4,
+          "rationale": "v1.2: real adjacency — data engineers frequently build the pipelines that feed ML systems — but the archetype's own scope is explicitly distinguished from ML Engineer at the feature-pipeline boundary, so this is a meaningful but secondary signal, not the defining one."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "v1.2: added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — building and operating production data pipelines/warehouse infrastructure is the literal, hands-on core of the job."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 3,
+          "weight": 0.3,
+          "rationale": "Real adjacency (modern data infra is usually cloud-native) but distinct from the archetype's core data-pipeline focus."
+        }
       }
     },
     {
@@ -104,23 +476,116 @@
       "name": "ML Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 4, "weight": 0.7, "rationale": "Seniority inferred from 'the ability to translate vague business problems into measurable ML objectives' — defining the problem and its success metric is itself a senior-level skill."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.4, "rationale": "ML Platform/MLOps variant sees 40-70% ops work, but the generalist MLE center-of-gravity is closer to standard SWE planned-interruption cadence."},
-        "oncall_incident_appetite": {"target": 3, "weight": 0.5, "rationale": "Production ML requires continuous monitoring/retraining and the MLOps flavor carries real on-call burden, but described as fair-rotation, not a defining identity."},
-        "debugging_diagnostic_depth": {"target": 4, "weight": 0.6, "rationale": "Most time goes to 'building resilient systems that can survive contact with reality' and diagnosing why training data doesn't represent real-world distribution — genuine cross-layer diagnosis, not usually under a live incident clock."},
-        "systems_design_scale": {"target": 4, "weight": 0.7, "rationale": "ML Platform/Infra variant requires designing feature stores and serving infra for many ML teams (Uber's Michelangelo: ~400 projects/5,000+ models) — a variant within the archetype, not universal."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Core work spans modeling, data pipelines, APIs, and monitoring ('a full stack developer of the data science')."},
-        "outcome_accountability": {"target": 4, "weight": 0.7, "rationale": "Success is 'A/B test outcomes and business KPIs moved, not offline model metrics' — a model 'isn't successful because it achieves high AUC, but because it survives the real world.'"},
-        "stakeholder_client_comfort": {"target": 3, "weight": 0.5, "rationale": "Cross-functional collaboration with product/data science named; ML Platform variant treats other ML engineers as customers."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.2, "rationale": "GitLab's Staff MLE definition includes acting as external spokesperson, a narrow senior exception, not a primary output for the archetype broadly."},
-        "account_portfolio_breadth": {"target":2,"weight":0.2,"rationale":"No account/client structure described; internal 'customers' in the platform variant are other ML/data teams generally, not a portfolio."},
-        "relationship_continuity": {"target":2,"weight":0.2,"rationale":"No account/client structure described; internal 'customers' in the platform variant are other ML/data teams generally, not a relationship with duration."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "Comp mirrors general software engineering — a title/focus-tag on the generalist SWE ladder, equity not sales-style variable comp."},
-        "coding_intensity": {"target": 4, "weight": 0.7, "rationale": "'The majority of your code is not tied to machine learning' but is still production code (pipelines, APIs, monitoring) that ships."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.1, "rationale": "No travel/embed expectation discussed anywhere in the brief."},
-        "adversarial_threat_modeling": {"target": 2, "weight": 0.3, "rationale": "Anthropic's Safeguards MLE role does red-teaming/adversarial robustness work, but this is a specific sub-flavor, not the generalist archetype."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.1, "rationale": "No hardware/physical-resource constraints discussed; compute/GPU budgets are cost-optimization, not hard real-time/power/RF constraints."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Career ladder includes a separate EM(ML) branch, a standard optional parallel track, not defining for the IC archetype."}
+        "ambiguity_tolerance": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Seniority inferred from 'the ability to translate vague business problems into measurable ML objectives' — defining the problem and its success metric is itself a senior-level skill."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "ML Platform/MLOps variant sees 40-70% ops work, but the generalist MLE center-of-gravity is closer to standard SWE planned-interruption cadence."
+        },
+        "oncall_incident_appetite": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Production ML requires continuous monitoring/retraining and the MLOps flavor carries real on-call burden, but described as fair-rotation, not a defining identity."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Most time goes to 'building resilient systems that can survive contact with reality' and diagnosing why training data doesn't represent real-world distribution — genuine cross-layer diagnosis, not usually under a live incident clock."
+        },
+        "systems_design_scale": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "ML Platform/Infra variant requires designing feature stores and serving infra for many ML teams (Uber's Michelangelo: ~400 projects/5,000+ models) — a variant within the archetype, not universal."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Core work spans modeling, data pipelines, APIs, and monitoring ('a full stack developer of the data science')."
+        },
+        "outcome_accountability": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Success is 'A/B test outcomes and business KPIs moved, not offline model metrics' — a model 'isn't successful because it achieves high AUC, but because it survives the real world.'"
+        },
+        "stakeholder_client_comfort": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Cross-functional collaboration with product/data science named; ML Platform variant treats other ML engineers as customers."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "GitLab's Staff MLE definition includes acting as external spokesperson, a narrow senior exception, not a primary output for the archetype broadly."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No account/client structure described; internal 'customers' in the platform variant are other ML/data teams generally, not a portfolio."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No account/client structure described; internal 'customers' in the platform variant are other ML/data teams generally, not a relationship with duration."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Comp mirrors general software engineering — a title/focus-tag on the generalist SWE ladder, equity not sales-style variable comp."
+        },
+        "coding_intensity": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "'The majority of your code is not tied to machine learning' but is still production code (pipelines, APIs, monitoring) that ships."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No travel/embed expectation discussed anywhere in the brief."
+        },
+        "adversarial_threat_modeling": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Anthropic's Safeguards MLE role does red-teaming/adversarial robustness work, but this is a specific sub-flavor, not the generalist archetype."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No hardware/physical-resource constraints discussed; compute/GPU budgets are cost-optimization, not hard real-time/power/RF constraints."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Career ladder includes a separate EM(ML) branch, a standard optional parallel track, not defining for the IC archetype."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "GitLab's Staff MLE external-spokesperson duty is a narrow senior exception, not core to the archetype."
+        },
+        "ml_engineering_fluency": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "v1.2: added as a real domain-fluency gate after real-user testing showed this archetype could rank #1 purely on generic senior-engineer temperament (ambiguity tolerance, systems design, coding intensity, outcome accountability) with no check against actual ML/data background — none of those dimensions are ML-specific. Mirrors physical_constraint_engineering (Embedded) and adversarial_threat_modeling (Security), both of which already functioned as real domain gates before this archetype had one."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 4,
+          "weight": 0.4,
+          "rationale": "Real adjacency — most ML engineering work is data pipelines and production hardening, per the brief's own emphasis — but distinguished from Data Engineer by the modeling/serving-layer focus captured in ml_engineering_fluency specifically."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 3,
+          "weight": 0.3,
+          "rationale": "The ML Platform/Infra variant converges with Platform Engineer's profile, but this is a sub-variant, not the modal case for the archetype."
+        }
       }
     },
     {
@@ -128,23 +593,116 @@
       "name": "Mobile Engineer (iOS / Android)",
       "confidence": "medium",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.4, "rationale": "Cross-functional feasibility/UX tradeoff work with Product/Design, but most work starts from design specs translated into shipped screens."},
-        "interrupt_tolerance": {"target": 2, "weight": 0.3, "rationale": "Code review, mentoring, and sustained feature-building with cross-functional collaboration, none framed as inbound-queue driven."},
-        "oncall_incident_appetite": {"target": 3, "weight": 0.5, "rationale": "Crash-reporting triage, staged rollouts, and rollback/kill-switch ownership imply real incident responsibility, but nothing rises to safety-critical/high-stakes-breach level."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.5, "rationale": "Performance work (startup time, memory, battery, jank) crosses app-code and OS/device layers, matching the anchor-3 'crosses a layer or two' description."},
-        "systems_design_scale": {"target": 2, "weight": 0.3, "rationale": "Staff+ engineers own architecture across a growing app (modularization, build-time reduction), scoped to one app/team rather than platforms serving many teams."},
-        "technical_breadth_depth": {"target": 2, "weight": 0.5, "rationale": "iOS/Android kept as one archetype specifically because skillset stays within one platform layer; Staff+ work spans one app's modularization, not multiple platforms."},
-        "outcome_accountability": {"target": 3, "weight": 0.4, "rationale": "Success criteria include crash-free rate and App Store rating trend, a real production metric scoped to the shipped app."},
-        "stakeholder_client_comfort": {"target": 2, "weight": 0.3, "rationale": "Cross-functional work with Product/Design is structured collaboration on feasibility, not client-facing advocacy or executive communication."},
-        "teaching_enjoyment": {"target": 1, "weight": 0.2, "rationale": "Only internal code review and mentoring at senior+ as an incidental duty; no public teaching component named."},
-        "account_portfolio_breadth": {"target":1,"weight":0.2,"rationale":"No mention of named client or account ownership; work organizes around app/feature ownership, not a portfolio of relationships."},
-        "relationship_continuity": {"target":1,"weight":0.2,"rationale":"No mention of named client or account ownership; work organizes around app/feature ownership, not relationship duration."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "Comp explicitly states mobile 'does not carry a distinct comp structure' (base+equity+bonus like other SWE roles)."},
-        "coding_intensity": {"target": 5, "weight": 0.9, "rationale": "Day-to-day is dominated by building UI/business logic and shipping the actual production app at every level described."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.2, "rationale": "No client-site travel described; entirely home-base/office engineering."},
-        "adversarial_threat_modeling": {"target": 2, "weight": 0.3, "rationale": "Not a named lens; App Store review/platform-gatekeeping is compliance/process, not adversarial threat modeling."},
-        "physical_constraint_engineering": {"target": 3, "weight": 0.6, "rationale": "Performance budgets (cold-start time, frame drops, app size, battery drain) are 'explicit, measurable, and often gated in CI' — soft resource budgets, not hard pass/fail hardware-boundary work."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Mentoring/pattern-setting named at senior+, but evaluation centers on shipped features/architecture impact, not team growth/retention."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Cross-functional feasibility/UX tradeoff work with Product/Design, but most work starts from design specs translated into shipped screens."
+        },
+        "interrupt_tolerance": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Code review, mentoring, and sustained feature-building with cross-functional collaboration, none framed as inbound-queue driven."
+        },
+        "oncall_incident_appetite": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Crash-reporting triage, staged rollouts, and rollback/kill-switch ownership imply real incident responsibility, but nothing rises to safety-critical/high-stakes-breach level."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Performance work (startup time, memory, battery, jank) crosses app-code and OS/device layers, matching the anchor-3 'crosses a layer or two' description."
+        },
+        "systems_design_scale": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Staff+ engineers own architecture across a growing app (modularization, build-time reduction), scoped to one app/team rather than platforms serving many teams."
+        },
+        "technical_breadth_depth": {
+          "target": 2,
+          "weight": 0.5,
+          "rationale": "iOS/Android kept as one archetype specifically because skillset stays within one platform layer; Staff+ work spans one app's modularization, not multiple platforms."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Success criteria include crash-free rate and App Store rating trend, a real production metric scoped to the shipped app."
+        },
+        "stakeholder_client_comfort": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Cross-functional work with Product/Design is structured collaboration on feasibility, not client-facing advocacy or executive communication."
+        },
+        "teaching_enjoyment": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Only internal code review and mentoring at senior+ as an incidental duty; no public teaching component named."
+        },
+        "account_portfolio_breadth": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of named client or account ownership; work organizes around app/feature ownership, not a portfolio of relationships."
+        },
+        "relationship_continuity": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of named client or account ownership; work organizes around app/feature ownership, not relationship duration."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Comp explicitly states mobile 'does not carry a distinct comp structure' (base+equity+bonus like other SWE roles)."
+        },
+        "coding_intensity": {
+          "target": 5,
+          "weight": 0.9,
+          "rationale": "Day-to-day is dominated by building UI/business logic and shipping the actual production app at every level described."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No client-site travel described; entirely home-base/office engineering."
+        },
+        "adversarial_threat_modeling": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Not a named lens; App Store review/platform-gatekeeping is compliance/process, not adversarial threat modeling."
+        },
+        "physical_constraint_engineering": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Performance budgets (cold-start time, frame drops, app size, battery drain) are 'explicit, measurable, and often gated in CI' — soft resource budgets, not hard pass/fail hardware-boundary work."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Mentoring/pattern-setting named at senior+, but evaluation centers on shipped features/architecture impact, not team growth/retention."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No public content or speaking expectation described."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "v1.2: added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — hands-on native/cross-platform mobile development experience is the literal core of the job, addressing the same real-user finding that motivated ml_engineering_fluency for ML Engineer."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        }
       }
     },
     {
@@ -152,23 +710,116 @@
       "name": "Embedded / IoT Engineer",
       "confidence": "medium",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.4, "rationale": "Root-causing hardware-vs-firmware failures is routine and Principal-level scope includes architecting firmware across a product line, but most work starts from a defined product/board requirement."},
-        "interrupt_tolerance": {"target": 2, "weight": 0.3, "rationale": "Occasional international teleconferences outside normal hours at senior+, but the bulk of the role is sustained bring-up/debugging/validation work."},
-        "oncall_incident_appetite": {"target": 4, "weight": 0.6, "rationale": "Success criteria frame field diagnostic ability under pressure as core ('why their $2M production line just crashed at 3 AM'), though not necessarily a formal page rotation like SRE/security."},
-        "debugging_diagnostic_depth": {"target": 5, "weight": 0.9, "rationale": "Diagnostic speed across fundamentally different failure domains (hardware, firmware, protocol, timing) is the actual hiring bar — 'a problem-solving discipline, not knowledge recall.'"},
-        "systems_design_scale": {"target": 2, "weight": 0.3, "rationale": "Principal-level scope is architecting firmware across a product line — real design responsibility but scoped to one hardware product line, not a platform serving many teams."},
-        "technical_breadth_depth": {"target": 4, "weight": 0.7, "rationale": "EE/CompE backgrounds commonly preferred over pure CS; the field spans bare-metal MCU, embedded Linux, RF/wireless, and safety-critical domains requiring a second formal discipline."},
-        "outcome_accountability": {"target": 4, "weight": 0.5, "rationale": "Bugs 'surface as device recalls, warranty claims, or safety incidents' — a direct real-world production outcome the engineer is on the hook for even though hardware defects are outside their control."},
-        "stakeholder_client_comfort": {"target": 2, "weight": 0.3, "rationale": "Cross-functional leadership between hardware, systems, and QA teams named at senior+, but this is internal cross-team collaboration, not sustained external client-facing work."},
-        "teaching_enjoyment": {"target": 1, "weight": 0.2, "rationale": "No teaching, content, or public-visibility component appears anywhere in the brief."},
-        "account_portfolio_breadth": {"target":1,"weight":0.2,"rationale":"No named client/account relationship structure; work organized around products/boards, not a portfolio."},
-        "relationship_continuity": {"target":1,"weight":0.2,"rationale":"No named client/account relationship structure; work organized around products/boards, not relationship duration."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "Embedded roles disproportionately at non-VC-backed industrial/medical/automotive/defense companies where comp is close to 100% cash — stable-cash-leaning, not commission/utilization-linked."},
-        "coding_intensity": {"target": 4, "weight": 0.7, "rationale": "Writing/debugging firmware in C/C++ is the dominant language requirement across nearly every posting reviewed and is the actual shipped deliverable."},
-        "travel_embed_willingness": {"target": 3, "weight": 0.4, "rationale": "Occasional travel to manufacturing partners/international teleconferences at senior+ — a travel dimension largely absent from typical SaaS engineering roles, but periodic rather than majority-embedded."},
-        "adversarial_threat_modeling": {"target": 2, "weight": 0.3, "rationale": "Testing/validation focus is on hardware failure and compliance, not exploit-oriented thinking, aside from security-hardened firmware as one sub-specialization."},
-        "physical_constraint_engineering": {"target": 5, "weight": 1.0, "rationale": "Power/memory/real-time constraints are 'hard constraints, not nice-to-haves'; 'your elegant software design is worthless' if it violates them, with routine hardware bring-up debugging via oscilloscopes/logic analyzers/JTAG."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Cross-functional leadership/mentoring at senior+/Principal, but success criteria remain centered on field-failure rate, not team growth/retention."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Root-causing hardware-vs-firmware failures is routine and Principal-level scope includes architecting firmware across a product line, but most work starts from a defined product/board requirement."
+        },
+        "interrupt_tolerance": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Occasional international teleconferences outside normal hours at senior+, but the bulk of the role is sustained bring-up/debugging/validation work."
+        },
+        "oncall_incident_appetite": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Success criteria frame field diagnostic ability under pressure as core ('why their $2M production line just crashed at 3 AM'), though not necessarily a formal page rotation like SRE/security."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 5,
+          "weight": 0.9,
+          "rationale": "Diagnostic speed across fundamentally different failure domains (hardware, firmware, protocol, timing) is the actual hiring bar — 'a problem-solving discipline, not knowledge recall.'"
+        },
+        "systems_design_scale": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Principal-level scope is architecting firmware across a product line — real design responsibility but scoped to one hardware product line, not a platform serving many teams."
+        },
+        "technical_breadth_depth": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "EE/CompE backgrounds commonly preferred over pure CS; the field spans bare-metal MCU, embedded Linux, RF/wireless, and safety-critical domains requiring a second formal discipline."
+        },
+        "outcome_accountability": {
+          "target": 4,
+          "weight": 0.5,
+          "rationale": "Bugs 'surface as device recalls, warranty claims, or safety incidents' — a direct real-world production outcome the engineer is on the hook for even though hardware defects are outside their control."
+        },
+        "stakeholder_client_comfort": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Cross-functional leadership between hardware, systems, and QA teams named at senior+, but this is internal cross-team collaboration, not sustained external client-facing work."
+        },
+        "teaching_enjoyment": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No teaching, content, or public-visibility component appears anywhere in the brief."
+        },
+        "account_portfolio_breadth": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No named client/account relationship structure; work organized around products/boards, not a portfolio."
+        },
+        "relationship_continuity": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No named client/account relationship structure; work organized around products/boards, not relationship duration."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Embedded roles disproportionately at non-VC-backed industrial/medical/automotive/defense companies where comp is close to 100% cash — stable-cash-leaning, not commission/utilization-linked."
+        },
+        "coding_intensity": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Writing/debugging firmware in C/C++ is the dominant language requirement across nearly every posting reviewed and is the actual shipped deliverable."
+        },
+        "travel_embed_willingness": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Occasional travel to manufacturing partners/international teleconferences at senior+ — a travel dimension largely absent from typical SaaS engineering roles, but periodic rather than majority-embedded."
+        },
+        "adversarial_threat_modeling": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Testing/validation focus is on hardware failure and compliance, not exploit-oriented thinking, aside from security-hardened firmware as one sub-specialization."
+        },
+        "physical_constraint_engineering": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "Power/memory/real-time constraints are 'hard constraints, not nice-to-haves'; 'your elegant software design is worthless' if it violates them, with routine hardware bring-up debugging via oscilloscopes/logic analyzers/JTAG."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Cross-functional leadership/mentoring at senior+/Principal, but success criteria remain centered on field-failure rate, not team growth/retention."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No public content or speaking expectation described."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope; this archetype's real domain-fluency gate is physical_constraint_engineering, already scored."
+        }
       }
     },
     {
@@ -176,23 +827,116 @@
       "name": "Security Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 4, "weight": 0.7, "rationale": "Anthropic's Staff+ posting lists 'ability to operate with high autonomy and ambiguity' as a minimum requirement, and threat modeling for AI systems 'whose risks fall outside existing frameworks' is an explicit job task."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.4, "rationale": "Incident response and vulnerability triage arrive on others' timelines, but most day-to-day work (architecture, risk assessments, SDLC consulting) is plannable engineering work."},
-        "oncall_incident_appetite": {"target": 4, "weight": 0.7, "rationale": "Detection & Response sub-specialization centers on owning incident response; Anthropic's Staff+ posting names 'standard on-call for incident response' as a job requirement."},
-        "debugging_diagnostic_depth": {"target": 4, "weight": 0.6, "rationale": "Risk/vulnerability assessment and incident postmortems require crossing layers (app code, infra, adversary behavior) under real-time hypothesis-forming."},
-        "systems_design_scale": {"target": 3, "weight": 0.5, "rationale": "Designs comprehensive cybersecurity architecture across an organization's systems, but this is architecture-for-defense rather than scaling a system under growing load."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Title splits into cloud/AppSec/network/detection-response sub-specializations, with engineers typically deep in one."},
-        "outcome_accountability": {"target": 4, "weight": 0.6, "rationale": "Success ties to 'reduction in exploitable vulnerabilities reaching production' and incident response quality; AppSec engineers increasingly judged on whether developers actually use the guardrails they build."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.7, "rationale": "AppSec is embedded partnership: 'working closely with engineering teams,' consulting with developers/PMs on security standards, educating teams — explicitly not the 'security cop' stereotype."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.3, "rationale": "Educating teams on secure coding is core, but this is private/1:few enablement of internal teams, not public one-to-many content."},
-        "account_portfolio_breadth": {"target":1,"weight":0.2,"rationale":"No named external client/account relationship; work organized around internal engineering-team partnerships, not a portfolio."},
-        "relationship_continuity": {"target":1,"weight":0.2,"rationale":"No named external client/account relationship; work organized around an anonymous portfolio of vulnerabilities/incidents, not relationship duration."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "Pay is 'base-heavy with equity, tracking general software engineering comp discipline' — no sales/utilization-linked variable component."},
-        "coding_intensity": {"target": 4, "weight": 0.6, "rationale": "Postings value 'production-grade coding ability' as a direct hiring bar for AppSec, though the role also spans policy/architecture/consulting work."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.2, "rationale": "No travel or physical site-embed requirement appears anywhere in the brief."},
-        "adversarial_threat_modeling": {"target": 5, "weight": 1.0, "rationale": "Threat modeling is named as an explicit, primary work product at the frontier (Anthropic's Staff+ posting includes 'threat modeling for AI systems' as core scope)."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No power/memory/timing/RF hardware constraints anywhere; the domain is software/cloud/network."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Staff level mentors engineers and Principal has an ambassadorial role, but ladder criteria center on technical/strategic influence, not team retention/growth."}
+        "ambiguity_tolerance": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Anthropic's Staff+ posting lists 'ability to operate with high autonomy and ambiguity' as a minimum requirement, and threat modeling for AI systems 'whose risks fall outside existing frameworks' is an explicit job task."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Incident response and vulnerability triage arrive on others' timelines, but most day-to-day work (architecture, risk assessments, SDLC consulting) is plannable engineering work."
+        },
+        "oncall_incident_appetite": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Detection & Response sub-specialization centers on owning incident response; Anthropic's Staff+ posting names 'standard on-call for incident response' as a job requirement."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Risk/vulnerability assessment and incident postmortems require crossing layers (app code, infra, adversary behavior) under real-time hypothesis-forming."
+        },
+        "systems_design_scale": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Designs comprehensive cybersecurity architecture across an organization's systems, but this is architecture-for-defense rather than scaling a system under growing load."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Title splits into cloud/AppSec/network/detection-response sub-specializations, with engineers typically deep in one."
+        },
+        "outcome_accountability": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Success ties to 'reduction in exploitable vulnerabilities reaching production' and incident response quality; AppSec engineers increasingly judged on whether developers actually use the guardrails they build."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "AppSec is embedded partnership: 'working closely with engineering teams,' consulting with developers/PMs on security standards, educating teams — explicitly not the 'security cop' stereotype."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Educating teams on secure coding is core, but this is private/1:few enablement of internal teams, not public one-to-many content."
+        },
+        "account_portfolio_breadth": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No named external client/account relationship; work organized around internal engineering-team partnerships, not a portfolio."
+        },
+        "relationship_continuity": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No named external client/account relationship; work organized around an anonymous portfolio of vulnerabilities/incidents, not relationship duration."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Pay is 'base-heavy with equity, tracking general software engineering comp discipline' — no sales/utilization-linked variable component."
+        },
+        "coding_intensity": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "Postings value 'production-grade coding ability' as a direct hiring bar for AppSec, though the role also spans policy/architecture/consulting work."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No travel or physical site-embed requirement appears anywhere in the brief."
+        },
+        "adversarial_threat_modeling": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "Threat modeling is named as an explicit, primary work product at the frontier (Anthropic's Staff+ posting includes 'threat modeling for AI systems' as core scope)."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No power/memory/timing/RF hardware constraints anywhere; the domain is software/cloud/network."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Staff level mentors engineers and Principal has an ambassadorial role, but ladder criteria center on technical/strategic influence, not team retention/growth."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Educating teams on secure coding is private/1:few internal enablement, not public content."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to the generalist archetype, though a named trust/safety sub-variant does this work — flagged as a minority case, not the modal one."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Cloud security work touches infrastructure, but this archetype's real domain-fluency gate is adversarial_threat_modeling, already scored at weight 1.0."
+        }
       }
     },
     {
@@ -200,23 +944,116 @@
       "name": "Sales Engineer / Pre-Sales Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.5, "rationale": "Runs discovery to scope POC success criteria and improvises live technical objections, but each deal cycle is a defined engagement with a technical-win endpoint, not an open-ended mandate."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.4, "rationale": "Work is organized around scheduled discovery calls, demos, and POCs, with deal urgency creating plannable-but-real interruptions."},
-        "oncall_incident_appetite": {"target": 1, "weight": 0.2, "rationale": "Never mentions paging or production incident ownership; risk is reputational/deal-based, not operational on-call."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.5, "rationale": "Debugs live failures in front of the customer with the deal on the line, but this is demo/POC-environment debugging, not production root-causing under an SLA clock."},
-        "systems_design_scale": {"target": 2, "weight": 0.3, "rationale": "Designs POC architectures tailored to a prospect's environment, proving fit for one customer's stack, not platforms for many teams."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Must position feature-for-feature against competitors and demo against varied prospect stacks — breadth within one vendor's product applied across many customer domains."},
-        "outcome_accountability": {"target": 3, "weight": 0.7, "rationale": "Variable comp tied to team/territory quota attainment, a real external metric, but accountability ends at the pre-sale 'technical win,' not sustained post-sale ownership."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.9, "rationale": "The entire role is built around discovery calls, tailored demos, and being the technical half of a two-person deal team — central to the archetype's identity."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.3, "rationale": "Explains technical concepts during demos to one prospect at a time; no public content or one-to-many teaching output described."},
-        "account_portfolio_breadth": {"target":5,"weight":0.7,"rationale":"v1.1 JD research: the most consistent cluster in a 149-posting review — 100% of substantive SE postings (Saviynt, CoreView, Vantage, Abnormal AI) describe territory/segment coverage paired with an Account Executive, not a single client. CoreView: 'support North American SLED accounts'; Vantage: 'help prospective customers across all segments.'"},
-        "relationship_continuity": {"target":2,"weight":0.6,"rationale":"v1.1 JD research: predominantly deal/sales-cycle-bounded — each opportunity is transactional — though 'trusted advisor' language (Vantage, Saviynt) shows some SEs maintain relationships across expansion cycles with the same enterprise account, keeping this above the pure anchor-1 floor."},
-        "variable_comp_appetite": {"target": 5, "weight": 1.0, "rationale": "The defining feature of the archetype: 80/20 or 70/30 base-to-variable OTE tied to quota attainment, with explicit quarter-to-quarter income volatility."},
-        "coding_intensity": {"target": 2, "weight": 0.6, "rationale": "Writes custom demo configurations and stands up POC/trial environments, proving fit rather than shipping the production deliverable."},
-        "travel_embed_willingness": {"target": 3, "weight": 0.5, "rationale": "Travel 'varies widely by deal size — enterprise SEs may be on planes weekly... SMB/mid-market SEs may be almost entirely remote.'"},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Not discussed anywhere; competitive positioning is about product capability, not adversarial/security thinking."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware or physical constraints anywhere in the brief."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Senior/Principal SEs mentor juniors, but success criteria are individual/team-quota-based, not people-outcome based."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Runs discovery to scope POC success criteria and improvises live technical objections, but each deal cycle is a defined engagement with a technical-win endpoint, not an open-ended mandate."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Work is organized around scheduled discovery calls, demos, and POCs, with deal urgency creating plannable-but-real interruptions."
+        },
+        "oncall_incident_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Never mentions paging or production incident ownership; risk is reputational/deal-based, not operational on-call."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Debugs live failures in front of the customer with the deal on the line, but this is demo/POC-environment debugging, not production root-causing under an SLA clock."
+        },
+        "systems_design_scale": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Designs POC architectures tailored to a prospect's environment, proving fit for one customer's stack, not platforms for many teams."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Must position feature-for-feature against competitors and demo against varied prospect stacks — breadth within one vendor's product applied across many customer domains."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "Variable comp tied to team/territory quota attainment, a real external metric, but accountability ends at the pre-sale 'technical win,' not sustained post-sale ownership."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "The entire role is built around discovery calls, tailored demos, and being the technical half of a two-person deal team — central to the archetype's identity."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Explains technical concepts during demos to one prospect at a time; no public content or one-to-many teaching output described."
+        },
+        "account_portfolio_breadth": {
+          "target": 5,
+          "weight": 0.7,
+          "rationale": "v1.1 JD research: the most consistent cluster in a 149-posting review — 100% of substantive SE postings (Saviynt, CoreView, Vantage, Abnormal AI) describe territory/segment coverage paired with an Account Executive, not a single client. CoreView: 'support North American SLED accounts'; Vantage: 'help prospective customers across all segments.'"
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.6,
+          "rationale": "v1.1 JD research: predominantly deal/sales-cycle-bounded — each opportunity is transactional — though 'trusted advisor' language (Vantage, Saviynt) shows some SEs maintain relationships across expansion cycles with the same enterprise account, keeping this above the pure anchor-1 floor."
+        },
+        "variable_comp_appetite": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "The defining feature of the archetype: 80/20 or 70/30 base-to-variable OTE tied to quota attainment, with explicit quarter-to-quarter income volatility."
+        },
+        "coding_intensity": {
+          "target": 2,
+          "weight": 0.6,
+          "rationale": "Writes custom demo configurations and stands up POC/trial environments, proving fit rather than shipping the production deliverable."
+        },
+        "travel_embed_willingness": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Travel 'varies widely by deal size — enterprise SEs may be on planes weekly... SMB/mid-market SEs may be almost entirely remote.'"
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed anywhere; competitive positioning is about product capability, not adversarial/security thinking."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware or physical constraints anywhere in the brief."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Senior/Principal SEs mentor juniors, but success criteria are individual/team-quota-based, not people-outcome based."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "SE's live-demo work is real-time and client-facing but not public one-to-many broadcast — the audience is always a specific prospect, not the public."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        }
       }
     },
     {
@@ -224,23 +1061,116 @@
       "name": "Solutions Architect (Vendor-Side)",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.5, "rationale": "Runs discovery workshops and value-stream assessments to define scope, owning multi-year transformation narratives, but work is framed around defined POC/POV deliverables and TCO analyses."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.4, "rationale": "Scheduled consultations and workshops across support/service/sales teams as 'the technical glue' — plannable but frequent cross-team demands."},
-        "oncall_incident_appetite": {"target": 1, "weight": 0.2, "rationale": "No paging or incident-response responsibility described; risk is deal/relationship-based."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.5, "rationale": "Hand-builds POC environments against real customer data/infra under time pressure, a real but bounded-scope diagnostic activity."},
-        "systems_design_scale": {"target": 3, "weight": 0.5, "rationale": "Designs future-state architecture and migration plans for large/strategic accounts, but scoped to one customer's environment rather than serving many consuming teams."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Deep on one vendor's stack (e.g., AWS-certified), 'expert in how to apply a particular platform,' applied across many customer domains."},
-        "outcome_accountability": {"target": 3, "weight": 0.7, "rationale": "GitLab's handbook ties SA success to sales KPIs (bookings, adoption, win rate), but comp split is 'usually less aggressive than a pure SE's' and engagement is pre-sale-to-early-implementation bounded."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.9, "rationale": "Explicitly the 'trusted advisor to prospects and clients,' running consultations with stakeholders at all levels from engineers to executives."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.3, "rationale": "Produces reusable technical reference content and runs discovery workshops for one account, but no public conference/content component mentioned."},
-        "account_portfolio_breadth": {"target":4,"weight":0.6,"rationale":"v1.1 JD research: Temporal's Sr Manager, Solutions Architecture posting describes a team 'supporting Scale and Enterprise accounts' (plural) with 'account strategies' (plural) — a territory/segment of many accounts, not one."},
-        "relationship_continuity": {"target":2,"weight":0.6,"rationale":"v1.1 JD research: Temporal explicitly describes ensuring 'seamless post-sale transitions' to Customer Success/Professional Services — the SA's own relationship is pre-sale/deal-bounded and formally handed off once the deal closes."},
-        "variable_comp_appetite": {"target": 4, "weight": 0.9, "rationale": "Carries variable/incentive comp tied to territory attainment per GitLab's handbook, but 'usually less aggressive than a pure SE's (more base-weighted).'"},
-        "coding_intensity": {"target": 2, "weight": 0.6, "rationale": "Hand-builds POC/migration environments, but this proves technical fit and produces collateral, not the production deliverable the customer runs on."},
-        "travel_embed_willingness": {"target": 3, "weight": 0.5, "rationale": "'Travel to onsite customer meetings and hands-on migration work' at large cloud vendors — regular but not majority-of-weeks embed."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Not discussed; competitive positioning and TCO/migration analysis are the focus."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware/power/timing constraints anywhere in the brief."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "Ladder branches into SA management at senior levels, but day-to-day success criteria remain individual/account-based."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Runs discovery workshops and value-stream assessments to define scope, owning multi-year transformation narratives, but work is framed around defined POC/POV deliverables and TCO analyses."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Scheduled consultations and workshops across support/service/sales teams as 'the technical glue' — plannable but frequent cross-team demands."
+        },
+        "oncall_incident_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No paging or incident-response responsibility described; risk is deal/relationship-based."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Hand-builds POC environments against real customer data/infra under time pressure, a real but bounded-scope diagnostic activity."
+        },
+        "systems_design_scale": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Designs future-state architecture and migration plans for large/strategic accounts, but scoped to one customer's environment rather than serving many consuming teams."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Deep on one vendor's stack (e.g., AWS-certified), 'expert in how to apply a particular platform,' applied across many customer domains."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "GitLab's handbook ties SA success to sales KPIs (bookings, adoption, win rate), but comp split is 'usually less aggressive than a pure SE's' and engagement is pre-sale-to-early-implementation bounded."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "Explicitly the 'trusted advisor to prospects and clients,' running consultations with stakeholders at all levels from engineers to executives."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Produces reusable technical reference content and runs discovery workshops for one account, but no public conference/content component mentioned."
+        },
+        "account_portfolio_breadth": {
+          "target": 4,
+          "weight": 0.6,
+          "rationale": "v1.1 JD research: Temporal's Sr Manager, Solutions Architecture posting describes a team 'supporting Scale and Enterprise accounts' (plural) with 'account strategies' (plural) — a territory/segment of many accounts, not one."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.6,
+          "rationale": "v1.1 JD research: Temporal explicitly describes ensuring 'seamless post-sale transitions' to Customer Success/Professional Services — the SA's own relationship is pre-sale/deal-bounded and formally handed off once the deal closes."
+        },
+        "variable_comp_appetite": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "Carries variable/incentive comp tied to territory attainment per GitLab's handbook, but 'usually less aggressive than a pure SE's (more base-weighted).'"
+        },
+        "coding_intensity": {
+          "target": 2,
+          "weight": 0.6,
+          "rationale": "Hand-builds POC/migration environments, but this proves technical fit and produces collateral, not the production deliverable the customer runs on."
+        },
+        "travel_embed_willingness": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "'Travel to onsite customer meetings and hands-on migration work' at large cloud vendors — regular but not majority-of-weeks embed."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed; competitive positioning and TCO/migration analysis are the focus."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware/power/timing constraints anywhere in the brief."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Ladder branches into SA management at senior levels, but day-to-day success criteria remain individual/account-based."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Client consultations and workshops are private, addressed to a specific account, not public content."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope, though an AI-solutions-specific variant would score higher — not the modal case."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Vendor SAs often work with cloud platforms, but the archetype's defining traits are stakeholder comfort and territory breadth, not hands-on infra-building."
+        }
       }
     },
     {
@@ -248,23 +1178,116 @@
       "name": "Solutions Architect (Consulting-Side)",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.5, "rationale": "Establishes project boundaries/timeline/budget before a SOW is signed and translates open-ended client priorities into a value proposition, but converges on a defined SOW/blueprint deliverable."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.4, "rationale": "Juggles a portfolio of concurrent billable engagements, workshops, and steering committees rather than an inbound ticket queue."},
-        "oncall_incident_appetite": {"target": 1, "weight": 0.2, "rationale": "No paging or incident-response duties described; risk is engagement/utilization-based."},
-        "debugging_diagnostic_depth": {"target": 2, "weight": 0.3, "rationale": "Architecture review and environment provisioning described, but not live multi-layer production debugging under an SLA clock — design/oversight-oriented per the boundary note vs. Consulting Engineer."},
-        "systems_design_scale": {"target": 4, "weight": 0.7, "rationale": "Produces solution blueprints, sequence diagrams, and integration models across multiple environments/cloud stacks — genuine cross-system design, though per-client rather than for many internal teams."},
-        "technical_breadth_depth": {"target": 4, "weight": 0.9, "rationale": "Needs 'breadth across platforms, integration technologies, cloud services, enterprise patterns,' directly contrasted against vendor SAs who go deep on one platform — one of the archetype's most central traits."},
-        "outcome_accountability": {"target": 2, "weight": 0.6, "rationale": "Measured by utilization rate and client satisfaction, not a single owned production KPI; 'owns the design that gets handed off to someone else to run.'"},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.9, "rationale": "Leads technical discussions, solutioning workshops, and architectural reviews, acting as 'an alignment point between the bid team and the client.'"},
-        "teaching_enjoyment": {"target": 2, "weight": 0.3, "rationale": "Enablement is implicit in workshops with one client's team; no public content or conference speaking documented."},
-        "account_portfolio_breadth": {"target":5,"weight":0.8,"rationale":"v1.1 JD research reinforces the original utilization-model finding: Cortex's Sr PS Engineer posting (a close analog) describes a regional 'book of business,' and the archetype's own utilization-rate staffing model (75-85% target) structurally requires juggling a portfolio of concurrent billable engagements — one of the most confidently wide-breadth archetypes in the taxonomy."},
-        "relationship_continuity": {"target":2,"weight":0.5,"rationale":"v1.1 JD research: Proton.ai's SA posting describes 'clean hand-off to Implementation' after the sales cycle — time-boxed to the SOW/deal, not an indefinite relationship, consistent with the original brief's utilization/billable-engagement framing."},
-        "variable_comp_appetite": {"target": 2, "weight": 0.9, "rationale": "Per the resolved comp note, Levels.fyi-anchored figures show a modest bonus (~6-15% of base) tied to utilization/margin, explicitly NOT commission."},
-        "coding_intensity": {"target": 2, "weight": 0.6, "rationale": "Thoughtworks postings mandate SAs continue to code alongside developers, but 'codes mainly to prototype and prove technical fit' — coding 'not the bulk of the job.'"},
-        "travel_embed_willingness": {"target": 3, "weight": 0.6, "rationale": "Firm-dependent: 'Accenture and most other Big Four firms carry 50%+ travel' vs. Slalom's local-team model with comparatively less travel."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Security/access-control governance mentioned as one responsibility among many, but not a default reasoning lens."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware/power/timing constraints anywhere in the brief."},
-        "people_management_orientation": {"target": 2, "weight": 0.4, "rationale": "Management-track ladder exists (Manager through Partner), but partner-track promotion depends on book of business, not team-outcome metrics."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Establishes project boundaries/timeline/budget before a SOW is signed and translates open-ended client priorities into a value proposition, but converges on a defined SOW/blueprint deliverable."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Juggles a portfolio of concurrent billable engagements, workshops, and steering committees rather than an inbound ticket queue."
+        },
+        "oncall_incident_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No paging or incident-response duties described; risk is engagement/utilization-based."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Architecture review and environment provisioning described, but not live multi-layer production debugging under an SLA clock — design/oversight-oriented per the boundary note vs. Consulting Engineer."
+        },
+        "systems_design_scale": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Produces solution blueprints, sequence diagrams, and integration models across multiple environments/cloud stacks — genuine cross-system design, though per-client rather than for many internal teams."
+        },
+        "technical_breadth_depth": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "Needs 'breadth across platforms, integration technologies, cloud services, enterprise patterns,' directly contrasted against vendor SAs who go deep on one platform — one of the archetype's most central traits."
+        },
+        "outcome_accountability": {
+          "target": 2,
+          "weight": 0.6,
+          "rationale": "Measured by utilization rate and client satisfaction, not a single owned production KPI; 'owns the design that gets handed off to someone else to run.'"
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "Leads technical discussions, solutioning workshops, and architectural reviews, acting as 'an alignment point between the bid team and the client.'"
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Enablement is implicit in workshops with one client's team; no public content or conference speaking documented."
+        },
+        "account_portfolio_breadth": {
+          "target": 5,
+          "weight": 0.8,
+          "rationale": "v1.1 JD research reinforces the original utilization-model finding: Cortex's Sr PS Engineer posting (a close analog) describes a regional 'book of business,' and the archetype's own utilization-rate staffing model (75-85% target) structurally requires juggling a portfolio of concurrent billable engagements — one of the most confidently wide-breadth archetypes in the taxonomy."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.5,
+          "rationale": "v1.1 JD research: Proton.ai's SA posting describes 'clean hand-off to Implementation' after the sales cycle — time-boxed to the SOW/deal, not an indefinite relationship, consistent with the original brief's utilization/billable-engagement framing."
+        },
+        "variable_comp_appetite": {
+          "target": 2,
+          "weight": 0.9,
+          "rationale": "Per the resolved comp note, Levels.fyi-anchored figures show a modest bonus (~6-15% of base) tied to utilization/margin, explicitly NOT commission."
+        },
+        "coding_intensity": {
+          "target": 2,
+          "weight": 0.6,
+          "rationale": "Thoughtworks postings mandate SAs continue to code alongside developers, but 'codes mainly to prototype and prove technical fit' — coding 'not the bulk of the job.'"
+        },
+        "travel_embed_willingness": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Firm-dependent: 'Accenture and most other Big Four firms carry 50%+ travel' vs. Slalom's local-team model with comparatively less travel."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Security/access-control governance mentioned as one responsibility among many, but not a default reasoning lens."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware/power/timing constraints anywhere in the brief."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "Management-track ladder exists (Manager through Partner), but partner-track promotion depends on book of business, not team-outcome metrics."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Client workshops and steering committees are private, account-specific, not public content."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Breadth across cloud platforms is part of the archetype's defining technical_breadth_depth, but hands-on infra-building isn't the deliverable — design and advisory are."
+        }
       }
     },
     {
@@ -272,23 +1295,116 @@
       "name": "Forward Deployed Engineer",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 4, "weight": 0.7, "rationale": "Embeds with 'one customer, many capabilities,' scoping a project's future with a client one week and pair-programming the next, though still within standard engineering rigor."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.4, "rationale": "Week-to-week work varies between conventional SWE work and live client demos/scoping — embed-driven variability rather than an inbound queue."},
-        "oncall_incident_appetite": {"target": 2, "weight": 0.3, "rationale": "Participates in production monitoring as a core function, but no formal paging/on-call rotations described."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.5, "rationale": "Real production engineering (PySpark transforms, integration pipelines) with standard code review/monitoring, but not described as time-pressured multi-layer diagnosis the way a pure infra/SRE role is."},
-        "systems_design_scale": {"target": 3, "weight": 0.5, "rationale": "Architects technical solutions and integration pipelines for a customer's specific problems — real design work, scoped to one customer's deployment."},
-        "technical_breadth_depth": {"target": 4, "weight": 0.7, "rationale": "'Cultivate breadth across systems and industries,' trading depth-in-one-codebase for breadth, ranging across whatever a given customer engagement demands."},
-        "outcome_accountability": {"target": 5, "weight": 1.0, "rationale": "The sharpest, most directly sourced anchor-5 case in the cluster: FDE 'owns the customer outcome in production' (vs. SA who owns the design that gets handed off)."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.8, "rationale": "Live-demos to analysts and pair-programs with a client's junior engineer, embedding directly with the customer team, though counterparts skew technical/operational rather than fully executive."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.3, "rationale": "Pair-programming so the client can maintain the system after the engagement ends is real but private/1:1, not public one-to-many teaching."},
-        "account_portfolio_breadth": {"target":2,"weight":0.5,"rationale":"v1.1 JD research finding: FDE breadth is genuinely bimodal by company type, not a single value. Defense/frontier-AI employers (Anthropic: 'embeds directly with our most strategic customers' per engagement; Palantir's canonical 'Delta' model; Defense Unicorns: 'embed with strategic customers' singular) run true single-client embeds. Scaled product companies running FDE as a volume post-sales motion (Cresta, Ramp: 'serve our largest customers' plural, Warp: 'multiple concurrent customer engagements' explicit requirement, OpenRouter: 'a set of post-sales customers') run explicit multi-account portfolios. Target leans toward the archetype's originating Palantir-model case, but weight is deliberately lowered from a would-be 0.9 to 0.5 to reflect this real, evidenced uncertainty rather than false precision — a beta/crowdsourcing pass should revisit whether this archetype needs to split the way Solutions Architect already did into vendor/consulting variants."},
-        "relationship_continuity": {"target":5,"weight":0.8,"rationale":"v1.1 JD research: persistence stays confidently high regardless of breadth — even the portfolio-style FDEs describe ongoing relationships (Ramp: 'expand value over time'; OpenRouter: 30/60/90-day onboarding transitioning to 'ongoing account ownership'; Cresta: 'trusted technical advisor for the customer'). This is the dimension where FDE and CSE genuinely agree despite disagreeing sharply on breadth."},
-        "variable_comp_appetite": {"target": 1, "weight": 1.0, "rationale": "'The one archetype in this cluster where no quota/commission is the norm, not the exception' — comp structured like core SWE comp."},
-        "coding_intensity": {"target": 5, "weight": 1.0, "rationale": "Coding is 'the single biggest time block' of the week, with FDEs spending '70 to 90%' of the week writing production code the client actually runs on."},
-        "travel_embed_willingness": {"target": 4, "weight": 0.7, "rationale": "'25-50% onsite, up to 25% travel expected at Palantir' with embeds sustained over the life of a deployment."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Not discussed; FDE reasoning is framed around deployment/integration engineering."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware/power/timing constraints; FDE work is software integration/deployment."},
-        "people_management_orientation": {"target": 2, "weight": 0.3, "rationale": "People-management of an FDE pod exists at senior levels, but core IC success criteria are engineering/deployment-outcome based."}
+        "ambiguity_tolerance": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Embeds with 'one customer, many capabilities,' scoping a project's future with a client one week and pair-programming the next, though still within standard engineering rigor."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.4,
+          "rationale": "Week-to-week work varies between conventional SWE work and live client demos/scoping — embed-driven variability rather than an inbound queue."
+        },
+        "oncall_incident_appetite": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Participates in production monitoring as a core function, but no formal paging/on-call rotations described."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Real production engineering (PySpark transforms, integration pipelines) with standard code review/monitoring, but not described as time-pressured multi-layer diagnosis the way a pure infra/SRE role is."
+        },
+        "systems_design_scale": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Architects technical solutions and integration pipelines for a customer's specific problems — real design work, scoped to one customer's deployment."
+        },
+        "technical_breadth_depth": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "'Cultivate breadth across systems and industries,' trading depth-in-one-codebase for breadth, ranging across whatever a given customer engagement demands."
+        },
+        "outcome_accountability": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "The sharpest, most directly sourced anchor-5 case in the cluster: FDE 'owns the customer outcome in production' (vs. SA who owns the design that gets handed off)."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.8,
+          "rationale": "Live-demos to analysts and pair-programs with a client's junior engineer, embedding directly with the customer team, though counterparts skew technical/operational rather than fully executive."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Pair-programming so the client can maintain the system after the engagement ends is real but private/1:1, not public one-to-many teaching."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.5,
+          "rationale": "v1.1 JD research finding: FDE breadth is genuinely bimodal by company type, not a single value. Defense/frontier-AI employers (Anthropic: 'embeds directly with our most strategic customers' per engagement; Palantir's canonical 'Delta' model; Defense Unicorns: 'embed with strategic customers' singular) run true single-client embeds. Scaled product companies running FDE as a volume post-sales motion (Cresta, Ramp: 'serve our largest customers' plural, Warp: 'multiple concurrent customer engagements' explicit requirement, OpenRouter: 'a set of post-sales customers') run explicit multi-account portfolios. Target leans toward the archetype's originating Palantir-model case, but weight is deliberately lowered from a would-be 0.9 to 0.5 to reflect this real, evidenced uncertainty rather than false precision — a beta/crowdsourcing pass should revisit whether this archetype needs to split the way Solutions Architect already did into vendor/consulting variants."
+        },
+        "relationship_continuity": {
+          "target": 5,
+          "weight": 0.8,
+          "rationale": "v1.1 JD research: persistence stays confidently high regardless of breadth — even the portfolio-style FDEs describe ongoing relationships (Ramp: 'expand value over time'; OpenRouter: 30/60/90-day onboarding transitioning to 'ongoing account ownership'; Cresta: 'trusted technical advisor for the customer'). This is the dimension where FDE and CSE genuinely agree despite disagreeing sharply on breadth."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 1,
+          "rationale": "'The one archetype in this cluster where no quota/commission is the norm, not the exception' — comp structured like core SWE comp."
+        },
+        "coding_intensity": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "Coding is 'the single biggest time block' of the week, with FDEs spending '70 to 90%' of the week writing production code the client actually runs on."
+        },
+        "travel_embed_willingness": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "'25-50% onsite, up to 25% travel expected at Palantir' with embeds sustained over the life of a deployment."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed; FDE reasoning is framed around deployment/integration engineering."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware/power/timing constraints; FDE work is software integration/deployment."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "People-management of an FDE pod exists at senior levels, but core IC success criteria are engineering/deployment-outcome based."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Client-embedded work (demos to analysts, pair-programming) is private to the customer, not public content."
+        },
+        "ml_engineering_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Real adjacency — many current FDE postings are explicitly 'Forward Deployed AI Engineer' roles — but not the modal case across the whole archetype."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "FDEs build integration pipelines as part of customer deployments, a real but secondary adjacency to Data Engineer's core focus."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "FDEs often work with cloud/container infra as part of deployments, but this is in service of the customer outcome, not the archetype's defining trait."
+        }
       }
     },
     {
@@ -297,23 +1413,116 @@
       "confidence": "high",
       "overall_notes": "Reactive, ticket/SLA-driven, queue-based post-sales support archetype. Distinguished sharply from CSE/DevRel by low account continuity, high interrupt/on-call load, and crisp numeric success metrics (SLA/CSAT/FCR).",
       "scores": {
-        "ambiguity_tolerance": {"target": 2, "weight": 0.7, "rationale": "Success anchored to explicit numeric SLA/CSAT/FCR targets rather than contested qualitative goals; tickets arrive as discrete, scoped problems."},
-        "interrupt_tolerance": {"target": 5, "weight": 1.0, "rationale": "Work arrives as an inbound ticket/case queue by design — the defining trait of this archetype vs. CSE/DevRel/Consulting."},
-        "oncall_incident_appetite": {"target": 4, "weight": 0.8, "rationale": "PagerDuty's tier covers scheduled SLA/on-call windows including occasional weekends; the Cloudflare CRE variant owns high-severity incidents with weekend on-call."},
-        "debugging_diagnostic_depth": {"target": 4, "weight": 0.9, "rationale": "Reading distributed traces, writing SQL, using feature flags, and shipping a fix within the first response — fast, cross-layer diagnosis under SLA pressure is the core differentiator of the modern version of this job."},
-        "systems_design_scale": {"target": 2, "weight": 0.3, "rationale": "Debugging and tooling/script-building described, but not designing platforms for many consuming teams; the CRE boundary case is flagged as an outlier."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.6, "rationale": "Often specializes within a product area but must range across app code, infra, and third-party behavior to debug — moderate, 2-3-layer breadth."},
-        "outcome_accountability": {"target": 3, "weight": 0.7, "rationale": "SLA/CSAT/FCR are named, tracked metrics, but accountability is bounded to the ticket/queue level rather than a named account's sustained health."},
-        "stakeholder_client_comfort": {"target": 3, "weight": 0.6, "rationale": "Structured, ticket-based customer communication and cross-functional partnership, but counterparts are typically technical practitioners case-by-case."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.5, "rationale": "Documentation/runbook improvement is a byproduct of resolving tickets, not a primary evaluated output; no public-facing component."},
-        "account_portfolio_breadth": {"target":5,"weight":0.8,"rationale":"Explicitly an anonymous, high-volume ticket/case queue model — a large number of different customers move through the queue continuously, the opposite of a stable portfolio of named accounts."},
-        "relationship_continuity": {"target":1,"weight":0.9,"rationale":"Explicitly an anonymous, interchangeable ticket/case queue model with no named, persistent account ownership — the clearest low-end anchor case in the cluster."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.6, "rationale": "Variable comp is 'typically a modest bonus rather than commission-driven,' structurally decoupled from sales-style outcomes."},
-        "coding_intensity": {"target": 3, "weight": 0.6, "rationale": "Real hands-on technical work (SQL, cURL, feature flags, internal tooling), but 'diagnostic/troubleshooting expertise rather than full software-development expertise.'"},
-        "travel_embed_willingness": {"target": 1, "weight": 0.2, "rationale": "Nothing indicates travel or physical embedding; queue/ticket-based and remote-eligible."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Debugging examples (webhooks, SQL, feature flags) are accidental-failure-mode diagnosis, not adversarial/security threat modeling."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware/physical resource constraints; a pure software/SaaS support context."},
-        "people_management_orientation": {"target": 1, "weight": 0.3, "rationale": "The IC ladder is the dominant path; management is only one named lateral exit path."}
+        "ambiguity_tolerance": {
+          "target": 2,
+          "weight": 0.7,
+          "rationale": "Success anchored to explicit numeric SLA/CSAT/FCR targets rather than contested qualitative goals; tickets arrive as discrete, scoped problems."
+        },
+        "interrupt_tolerance": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "Work arrives as an inbound ticket/case queue by design — the defining trait of this archetype vs. CSE/DevRel/Consulting."
+        },
+        "oncall_incident_appetite": {
+          "target": 4,
+          "weight": 0.8,
+          "rationale": "PagerDuty's tier covers scheduled SLA/on-call windows including occasional weekends; the Cloudflare CRE variant owns high-severity incidents with weekend on-call."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "Reading distributed traces, writing SQL, using feature flags, and shipping a fix within the first response — fast, cross-layer diagnosis under SLA pressure is the core differentiator of the modern version of this job."
+        },
+        "systems_design_scale": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Debugging and tooling/script-building described, but not designing platforms for many consuming teams; the CRE boundary case is flagged as an outlier."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Often specializes within a product area but must range across app code, infra, and third-party behavior to debug — moderate, 2-3-layer breadth."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "SLA/CSAT/FCR are named, tracked metrics, but accountability is bounded to the ticket/queue level rather than a named account's sustained health."
+        },
+        "stakeholder_client_comfort": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Structured, ticket-based customer communication and cross-functional partnership, but counterparts are typically technical practitioners case-by-case."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.5,
+          "rationale": "Documentation/runbook improvement is a byproduct of resolving tickets, not a primary evaluated output; no public-facing component."
+        },
+        "account_portfolio_breadth": {
+          "target": 5,
+          "weight": 0.8,
+          "rationale": "Explicitly an anonymous, high-volume ticket/case queue model — a large number of different customers move through the queue continuously, the opposite of a stable portfolio of named accounts."
+        },
+        "relationship_continuity": {
+          "target": 1,
+          "weight": 0.9,
+          "rationale": "Explicitly an anonymous, interchangeable ticket/case queue model with no named, persistent account ownership — the clearest low-end anchor case in the cluster."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.6,
+          "rationale": "Variable comp is 'typically a modest bonus rather than commission-driven,' structurally decoupled from sales-style outcomes."
+        },
+        "coding_intensity": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Real hands-on technical work (SQL, cURL, feature flags, internal tooling), but 'diagnostic/troubleshooting expertise rather than full software-development expertise.'"
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Nothing indicates travel or physical embedding; queue/ticket-based and remote-eligible."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Debugging examples (webhooks, SQL, feature flags) are accidental-failure-mode diagnosis, not adversarial/security threat modeling."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware/physical resource constraints; a pure software/SaaS support context."
+        },
+        "people_management_orientation": {
+          "target": 1,
+          "weight": 0.3,
+          "rationale": "The IC ladder is the dominant path; management is only one named lateral exit path."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Ticket-based support is private, 1:1 with a specific customer, not public content."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        }
       }
     },
     {
@@ -322,23 +1531,116 @@
       "confidence": "high",
       "overall_notes": "Proactive, named-account-embedded technical advisor archetype — the deliberate opposite pole from Customer Support Engineer on cadence and account ownership. Source brief is comparatively thin on citation density vs. its Support Engineer sibling, per docs/research/roles-summary.md; split rationale itself is solid.",
       "scores": {
-        "ambiguity_tolerance": {"target": 4, "weight": 0.7, "rationale": "Success criteria are explicitly qualitative and contested — 'trusted-advisor/relationship quality' is 'less quantifiable than Support's SLA/CSAT metrics,' named by the brief itself as taxonomy-relevant."},
-        "interrupt_tolerance": {"target": 2, "weight": 0.9, "rationale": "Explicitly contrasted against Support's inbound-queue/on-call model: 'scheduled cadence, not shift-based' (recurring check-ins, QBRs, project milestones)."},
-        "oncall_incident_appetite": {"target": 2, "weight": 0.5, "rationale": "On-call described as 'rare here vs. standard there' (Support pole); no on-call rotation or paging structure described."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.6, "rationale": "Resolves complex issues and runs technical workshops, but Databricks' framing has CSEs as 'quarterbacks' coordinating specialist SAs for the deepest technical work."},
-        "systems_design_scale": {"target": 2, "weight": 0.3, "rationale": "Not discussed; role is implementation/onboarding project management and enablement design per-account, not platform design."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Needs hands-on product fluency sufficient to run workshops — deep on one vendor's stack applied across many accounts."},
-        "outcome_accountability": {"target": 3, "weight": 0.7, "rationale": "Measured on time-to-value and adoption depth for owned accounts, 'rarely comped directly on renewal/expansion' (that's the CSM's number)."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.8, "rationale": "Defined as 'a designated technical contact and trusted advisor' requiring sustained, proactive relationship management over time — a daily mode."},
-        "teaching_enjoyment": {"target": 4, "weight": 0.8, "rationale": "Designing and running workshops and building custom adoption/enablement plans is core, but stays private/1:1 or 1:few with a specific account's team."},
-        "account_portfolio_breadth": {"target":4,"weight":0.7,"rationale":"v1.1 JD research corrects the original v1.0 assumption: every substantive CSE/CSM/TAM posting reviewed (dbt Labs, LaunchDarkly, Upbound) describes a portfolio/book of many concurrent accounts, never a single deep relationship. LaunchDarkly: 'own a number [of accounts] and forecast weekly'; Upbound: 'map every account,' 'across your accounts.' The archetype's own brief already said 'named book of accounts' (plural) — v1.0 incorrectly scored this dimension as if breadth were low/single-account."},
-        "relationship_continuity": {"target":5,"weight":0.9,"rationale":"v1.1 JD research reinforces the original finding: LaunchDarkly's renewal-cycle ownership and Upbound's 'genuine, trusted relationships... own the post-sale relationship' both describe indefinite, ongoing accountability per account — the same defining sentence as v1.0 ('CSEs own a named book of accounts through onboarding, adoption, and ongoing technical health') still holds, it was simply paired with the wrong breadth value before the split."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.5, "rationale": "Comp is 'base-heavy... modest annual bonus, not sales-style commission,' contrasted with quota-carrying CSM/Sales roles."},
-        "coding_intensity": {"target": 2, "weight": 0.4, "rationale": "Requires product fluency for workshops, but Databricks routes deep technical specialist work to Solution Architects — advisory/enablement-centric."},
-        "travel_embed_willingness": {"target": 2, "weight": 0.3, "rationale": "Onboarding/QBR cadence implies some periodic in-person engagement without sustained physical embedding."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Not discussed anywhere; technical work described is product implementation and enablement."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware or physical resource constraints; a SaaS product-adoption context throughout."},
-        "people_management_orientation": {"target": 1, "weight": 0.3, "rationale": "IC-track career ladder; management appears only as a senior-level branch option."}
+        "ambiguity_tolerance": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Success criteria are explicitly qualitative and contested — 'trusted-advisor/relationship quality' is 'less quantifiable than Support's SLA/CSAT metrics,' named by the brief itself as taxonomy-relevant."
+        },
+        "interrupt_tolerance": {
+          "target": 2,
+          "weight": 0.9,
+          "rationale": "Explicitly contrasted against Support's inbound-queue/on-call model: 'scheduled cadence, not shift-based' (recurring check-ins, QBRs, project milestones)."
+        },
+        "oncall_incident_appetite": {
+          "target": 2,
+          "weight": 0.5,
+          "rationale": "On-call described as 'rare here vs. standard there' (Support pole); no on-call rotation or paging structure described."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Resolves complex issues and runs technical workshops, but Databricks' framing has CSEs as 'quarterbacks' coordinating specialist SAs for the deepest technical work."
+        },
+        "systems_design_scale": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Not discussed; role is implementation/onboarding project management and enablement design per-account, not platform design."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Needs hands-on product fluency sufficient to run workshops — deep on one vendor's stack applied across many accounts."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "Measured on time-to-value and adoption depth for owned accounts, 'rarely comped directly on renewal/expansion' (that's the CSM's number)."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.8,
+          "rationale": "Defined as 'a designated technical contact and trusted advisor' requiring sustained, proactive relationship management over time — a daily mode."
+        },
+        "teaching_enjoyment": {
+          "target": 4,
+          "weight": 0.8,
+          "rationale": "Designing and running workshops and building custom adoption/enablement plans is core, but stays private/1:1 or 1:few with a specific account's team."
+        },
+        "account_portfolio_breadth": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "v1.1 JD research corrects the original v1.0 assumption: every substantive CSE/CSM/TAM posting reviewed (dbt Labs, LaunchDarkly, Upbound) describes a portfolio/book of many concurrent accounts, never a single deep relationship. LaunchDarkly: 'own a number [of accounts] and forecast weekly'; Upbound: 'map every account,' 'across your accounts.' The archetype's own brief already said 'named book of accounts' (plural) — v1.0 incorrectly scored this dimension as if breadth were low/single-account."
+        },
+        "relationship_continuity": {
+          "target": 5,
+          "weight": 0.9,
+          "rationale": "v1.1 JD research reinforces the original finding: LaunchDarkly's renewal-cycle ownership and Upbound's 'genuine, trusted relationships... own the post-sale relationship' both describe indefinite, ongoing accountability per account — the same defining sentence as v1.0 ('CSEs own a named book of accounts through onboarding, adoption, and ongoing technical health') still holds, it was simply paired with the wrong breadth value before the split."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.5,
+          "rationale": "Comp is 'base-heavy... modest annual bonus, not sales-style commission,' contrasted with quota-carrying CSM/Sales roles."
+        },
+        "coding_intensity": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "Requires product fluency for workshops, but Databricks routes deep technical specialist work to Solution Architects — advisory/enablement-centric."
+        },
+        "travel_embed_willingness": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Onboarding/QBR cadence implies some periodic in-person engagement without sustained physical embedding."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed anywhere; technical work described is product implementation and enablement."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware or physical resource constraints; a SaaS product-adoption context throughout."
+        },
+        "people_management_orientation": {
+          "target": 1,
+          "weight": 0.3,
+          "rationale": "IC-track career ladder; management appears only as a senior-level branch option."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.3,
+          "rationale": "v1.2: explicitly the low pole distinguishing this archetype from Developer Relations — CSE's workshops and enablement plans stay private to a specific account's team; the brief's own defining sentence is about a *named account* relationship, never a public audience."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        }
       }
     },
     {
@@ -347,23 +1649,116 @@
       "confidence": "high",
       "overall_notes": "Billable, project/SOW-scoped, client-embedded delivery archetype spanning vendor PS orgs and systems integrators. Distinguished by utilization-based variable comp, time-boxed account ownership, and moderate-to-high travel depending on firm model.",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.6, "rationale": "Work is scoped by an SOW with a defined deliverable, but engineers navigate scope creep and architecture decisions within that scope."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.6, "rationale": "Organized around structured, plannable cadences (workshops, milestones) rather than an inbound queue, but client escalations create real scheduled interruptions."},
-        "oncall_incident_appetite": {"target": 2, "weight": 0.3, "rationale": "Not a named feature; success criteria (utilization, SPI/CPI, margin) are project-delivery metrics, not incident/paging metrics."},
-        "debugging_diagnostic_depth": {"target": 3, "weight": 0.6, "rationale": "Debugging integrations and custom scripting are part of implementation delivery, within a scoped engagement with research time, not a live SLA/audience clock."},
-        "systems_design_scale": {"target": 3, "weight": 0.5, "rationale": "Guides architecture decisions for enterprise customer implementations, but scoped to one client's environment/SOW."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.6, "rationale": "Vendor PS roles blend hands-on engineering with support within one product; systems integrators require multi-vendor stack fluency — both cluster around 2-3 adjacent layers."},
-        "outcome_accountability": {"target": 3, "weight": 0.7, "rationale": "Held accountable for SOW margin and schedule/cost performance (SPI/CPI) and utilization — real but bounded to a time-boxed engagement's delivery."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.7, "rationale": "Day-to-day centers on technical workshops with client stakeholders as a sustained, daily mode, though counterparts stay technical-to-mid-level more often than fully executive."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.4, "rationale": "Documentation/implementation-standards authorship is private client-specific delivery documentation, not public teaching content."},
-        "account_portfolio_breadth": {"target":4,"weight":0.7,"rationale":"v1.1 JD research: every substantive PS/Implementation posting reviewed (Cortex, Yoodli, Warp, Submittable) explicitly requires managing multiple simultaneous client engagements — Warp and Submittable both use the literal phrase 'manage multiple concurrent/simultaneous engagements' as a stated requirement."},
-        "relationship_continuity": {"target":3,"weight":0.7,"rationale":"v1.1 JD research confirms the original brief precisely: every posting describes a defined start and end per engagement (Cortex: 'kickoff → delivery → handover'; Submittable: 'kick-off to launch'; Paperless Parts: 'sales handoff through go-live and transition to Customer Success') — time-boxed, with ongoing account ownership explicitly passed to a different role (CSE) once the engagement concludes."},
-        "variable_comp_appetite": {"target": 4, "weight": 0.9, "rationale": "Concrete ~70% base/30% incentive mix tied to billable utilization; utilization is 'the dominant KPI' with 75-85% targets treated as a first-class, actively-managed number."},
-        "coding_intensity": {"target": 3, "weight": 0.6, "rationale": "Writing code/configurations and debugging integrations are core delivery activities, but the deliverable is a configured client solution, not shipped product code the business runs on at large."},
-        "travel_embed_willingness": {"target": 3, "weight": 0.8, "rationale": "Bimodal but real: historically 4-5 days/week on-site at consultancies, shifted post-COVID to biweekly hybrid; vendor in-house PS runs lighter."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Not discussed anywhere; delivery work is configuration/integration-focused."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware/physical resource constraints; software configuration/integration delivery."},
-        "people_management_orientation": {"target": 2, "weight": 0.4, "rationale": "Ladders bifurcate into business and technical tracks at senior levels, but the core IC role is evaluated on delivery/utilization metrics."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Work is scoped by an SOW with a defined deliverable, but engineers navigate scope creep and architecture decisions within that scope."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Organized around structured, plannable cadences (workshops, milestones) rather than an inbound queue, but client escalations create real scheduled interruptions."
+        },
+        "oncall_incident_appetite": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Not a named feature; success criteria (utilization, SPI/CPI, margin) are project-delivery metrics, not incident/paging metrics."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Debugging integrations and custom scripting are part of implementation delivery, within a scoped engagement with research time, not a live SLA/audience clock."
+        },
+        "systems_design_scale": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Guides architecture decisions for enterprise customer implementations, but scoped to one client's environment/SOW."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Vendor PS roles blend hands-on engineering with support within one product; systems integrators require multi-vendor stack fluency — both cluster around 2-3 adjacent layers."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "Held accountable for SOW margin and schedule/cost performance (SPI/CPI) and utilization — real but bounded to a time-boxed engagement's delivery."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Day-to-day centers on technical workshops with client stakeholders as a sustained, daily mode, though counterparts stay technical-to-mid-level more often than fully executive."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "Documentation/implementation-standards authorship is private client-specific delivery documentation, not public teaching content."
+        },
+        "account_portfolio_breadth": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "v1.1 JD research: every substantive PS/Implementation posting reviewed (Cortex, Yoodli, Warp, Submittable) explicitly requires managing multiple simultaneous client engagements — Warp and Submittable both use the literal phrase 'manage multiple concurrent/simultaneous engagements' as a stated requirement."
+        },
+        "relationship_continuity": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "v1.1 JD research confirms the original brief precisely: every posting describes a defined start and end per engagement (Cortex: 'kickoff → delivery → handover'; Submittable: 'kick-off to launch'; Paperless Parts: 'sales handoff through go-live and transition to Customer Success') — time-boxed, with ongoing account ownership explicitly passed to a different role (CSE) once the engagement concludes."
+        },
+        "variable_comp_appetite": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "Concrete ~70% base/30% incentive mix tied to billable utilization; utilization is 'the dominant KPI' with 75-85% targets treated as a first-class, actively-managed number."
+        },
+        "coding_intensity": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Writing code/configurations and debugging integrations are core delivery activities, but the deliverable is a configured client solution, not shipped product code the business runs on at large."
+        },
+        "travel_embed_willingness": {
+          "target": 3,
+          "weight": 0.8,
+          "rationale": "Bimodal but real: historically 4-5 days/week on-site at consultancies, shifted post-COVID to biweekly hybrid; vendor in-house PS runs lighter."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed anywhere; delivery work is configuration/integration-focused."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware/physical resource constraints; software configuration/integration delivery."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "Ladders bifurcate into business and technical tracks at senior levels, but the core IC role is evaluated on delivery/utilization metrics."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Client workshops and delivery documentation are private, engagement-specific, not public content."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Implementation work often touches cloud/CI-CD configuration for the client's environment, a real but secondary skill relative to the archetype's delivery/consulting focus."
+        }
       }
     },
     {
@@ -372,23 +1767,116 @@
       "confidence": "high",
       "overall_notes": "Public-facing, community/ecosystem-oriented archetype with no account or ticket ownership. Sharpest contrast in the cluster on teaching_enjoyment, account_relationship_ownership, and variable_comp_appetite.",
       "scores": {
-        "ambiguity_tolerance": {"target": 4, "weight": 0.8, "rationale": "Brief names a 'DevRel metrics problem' — no single accepted success metric exists (active users, DQLs, NPS all compete); practitioners had to invent proxy metrics precisely because none were trusted."},
-        "interrupt_tolerance": {"target": 2, "weight": 0.6, "rationale": "Structured around planned content production and scheduled talks/events, though community moderation introduces some real-time responsiveness."},
-        "oncall_incident_appetite": {"target": 1, "weight": 0.2, "rationale": "Not mentioned anywhere; no on-call/paging/incident-response structure described."},
-        "debugging_diagnostic_depth": {"target": 2, "weight": 0.4, "rationale": "Some sub-variants skew toward SDK/docs/CLI improvement, but secondary to content/community work and not done under SLA pressure."},
-        "systems_design_scale": {"target": 1, "weight": 0.2, "rationale": "Not discussed; technical work is sample apps/POCs/SDK improvements, not platform design for scale."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.5, "rationale": "Builds sample applications across whatever the product/ecosystem requires, but scoped to one company's product ecosystem."},
-        "outcome_accountability": {"target": 2, "weight": 0.5, "rationale": "Measured on soft/contested proxies rather than a hard owned KPI/SLO with production accountability."},
-        "stakeholder_client_comfort": {"target": 3, "weight": 0.6, "rationale": "Engages developers/community/internal product teams via feedback loops, but public/community-facing rather than sustained one-to-one client register."},
-        "teaching_enjoyment": {"target": 5, "weight": 1.0, "rationale": "The archetype's defining trait: blog posts, conference talks, video content, and community moderation are the named, evaluated, primary job output."},
-        "account_portfolio_breadth": {"target":1,"weight":0.3,"rationale":"Not an individual-relationship-based role at all; the audience is a broadcast community, not a countable portfolio of accounts."},
-        "relationship_continuity": {"target":1,"weight":0.8,"rationale":"'DevRel is not tied to specific accounts or tickets... success is measured by community/ecosystem health' — the clearest opposite pole from CSE's named, ongoing account relationships."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.6, "rationale": "Comp is 'overwhelmingly base + equity, with little to no sales-style variable compensation.'"},
-        "coding_intensity": {"target": 2, "weight": 0.5, "rationale": "Writes code/sample apps, but most time goes to 'creating content, speaking at events, and building relationships.'"},
-        "travel_embed_willingness": {"target": 3, "weight": 0.7, "rationale": "Conference talks/events are a named, real activity and burnout from conference travel is documented, though some roles minimize travel via remote video."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "Not discussed anywhere; technical work is demos, SDKs, and docs."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "No mention of hardware or physical resource constraints anywhere."},
-        "people_management_orientation": {"target": 2, "weight": 0.4, "rationale": "Ladder tops out in Principal/Head/Director/VP with team management at the senior end, but the core IC archetype is evaluated on personal output."}
+        "ambiguity_tolerance": {
+          "target": 4,
+          "weight": 0.8,
+          "rationale": "Brief names a 'DevRel metrics problem' — no single accepted success metric exists (active users, DQLs, NPS all compete); practitioners had to invent proxy metrics precisely because none were trusted."
+        },
+        "interrupt_tolerance": {
+          "target": 2,
+          "weight": 0.6,
+          "rationale": "Structured around planned content production and scheduled talks/events, though community moderation introduces some real-time responsiveness."
+        },
+        "oncall_incident_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not mentioned anywhere; no on-call/paging/incident-response structure described."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "Some sub-variants skew toward SDK/docs/CLI improvement, but secondary to content/community work and not done under SLA pressure."
+        },
+        "systems_design_scale": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed; technical work is sample apps/POCs/SDK improvements, not platform design for scale."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Builds sample applications across whatever the product/ecosystem requires, but scoped to one company's product ecosystem."
+        },
+        "outcome_accountability": {
+          "target": 2,
+          "weight": 0.5,
+          "rationale": "Measured on soft/contested proxies rather than a hard owned KPI/SLO with production accountability."
+        },
+        "stakeholder_client_comfort": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Engages developers/community/internal product teams via feedback loops, but public/community-facing rather than sustained one-to-one client register."
+        },
+        "teaching_enjoyment": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "The archetype's defining trait: blog posts, conference talks, video content, and community moderation are the named, evaluated, primary job output."
+        },
+        "account_portfolio_breadth": {
+          "target": 1,
+          "weight": 0.3,
+          "rationale": "Not an individual-relationship-based role at all; the audience is a broadcast community, not a countable portfolio of accounts."
+        },
+        "relationship_continuity": {
+          "target": 1,
+          "weight": 0.8,
+          "rationale": "'DevRel is not tied to specific accounts or tickets... success is measured by community/ecosystem health' — the clearest opposite pole from CSE's named, ongoing account relationships."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.6,
+          "rationale": "Comp is 'overwhelmingly base + equity, with little to no sales-style variable compensation.'"
+        },
+        "coding_intensity": {
+          "target": 2,
+          "weight": 0.5,
+          "rationale": "Writes code/sample apps, but most time goes to 'creating content, speaking at events, and building relationships.'"
+        },
+        "travel_embed_willingness": {
+          "target": 3,
+          "weight": 0.7,
+          "rationale": "Conference talks/events are a named, real activity and burnout from conference travel is documented, though some roles minimize travel via remote video."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed anywhere; technical work is demos, SDKs, and docs."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of hardware or physical resource constraints anywhere."
+        },
+        "people_management_orientation": {
+          "target": 2,
+          "weight": 0.4,
+          "rationale": "Ladder tops out in Principal/Head/Director/VP with team management at the senior end, but the core IC archetype is evaluated on personal output."
+        },
+        "public_visibility_comfort": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "v1.2: this is now the archetype's true defining trait, split out of the old merged teaching_enjoyment dimension after real-user testing showed private-teaching-only answers could register as a full match here. The brief's own core framing — conference talks, published content, open community moderation as the named, evaluated, primary job output — is specifically about public, one-to-many visibility, not teaching ability in the abstract; someone who loves 1:1 customer teaching but would never want a public platform is a poor fit regardless of how well they teach."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        }
       }
     },
     {
@@ -396,23 +1884,116 @@
       "name": "Engineering Management (Track)",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 3, "weight": 0.5, "rationale": "Mixes structured cadences with genuinely undefined problems (team morale, conflict) that have no crisp metric, but is framed around known responsibilities rather than 'define the problem yourself' mandates."},
-        "interrupt_tolerance": {"target": 4, "weight": 0.7, "rationale": "Explicitly moves 'between strategic planning and tactical firefighting within the same hour' (escalations, on-call handling as manager)."},
-        "oncall_incident_appetite": {"target": 2, "weight": 0.3, "rationale": "Handles escalations from on-call, but this is secondhand exposure as manager/escalation point, not personally paging or doing live diagnosis."},
-        "debugging_diagnostic_depth": {"target": 1, "weight": 0.2, "rationale": "'In the code, not writing code' with hands-on coding cadence as low as a day every 3-4 months — diagnostic depth is not a job requirement."},
-        "systems_design_scale": {"target": 2, "weight": 0.3, "rationale": "Reviews architectural proposals and stays connected via architectural discussion, but is evaluator, not designer."},
-        "technical_breadth_depth": {"target": 2, "weight": 0.3, "rationale": "Stays connected via code review and occasional pairing, useful for credibility but not a central evaluated competency."},
-        "outcome_accountability": {"target": 4, "weight": 0.7, "rationale": "Explicit team-level KPIs (velocity, MTTR, defect density, retention) owned even without personally producing the code."},
-        "stakeholder_client_comfort": {"target": 3, "weight": 0.5, "rationale": "Coordinates with product/design and cross-team representation, a structured-but-recurring posture, not fluid executive-to-engineer register-shifting."},
-        "teaching_enjoyment": {"target": 2, "weight": 0.2, "rationale": "No discussion of public teaching/content; growth-plan coaching is private 1:1 mentorship."},
-        "account_portfolio_breadth": {"target":2,"weight":0.2,"rationale":"Not discussed; EM's 'accounts' are internal reports and stakeholders, not a portfolio of client relationships."},
-        "relationship_continuity": {"target":2,"weight":0.2,"rationale":"Not discussed; EM's relationships with reports are ongoing but this isn't a client/account relationship in the sense this dimension measures."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.3, "rationale": "Comp is 'base + bonus + equity, same shape as senior IC comp — not commission/variable-based.'"},
-        "coding_intensity": {"target": 1, "weight": 0.9, "rationale": "Headline claim: 'in the code, not writing code,' hands-on cadence roughly a day every 3-4 months, never in the critical path."},
-        "travel_embed_willingness": {"target": 1, "weight": 0.2, "rationale": "Not discussed; an internal, office/remote-based role with no travel component mentioned."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "No mention of threat modeling or adversarial thinking anywhere in the brief."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "Not discussed anywhere; EM's technical exposure is architectural/code-review level."},
-        "people_management_orientation": {"target": 5, "weight": 1.0, "rationale": "The defining trait of the entire archetype: 1:1s, growth plans, hiring, and retention/morale are the actual basis of the EM's own performance review."}
+        "ambiguity_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Mixes structured cadences with genuinely undefined problems (team morale, conflict) that have no crisp metric, but is framed around known responsibilities rather than 'define the problem yourself' mandates."
+        },
+        "interrupt_tolerance": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Explicitly moves 'between strategic planning and tactical firefighting within the same hour' (escalations, on-call handling as manager)."
+        },
+        "oncall_incident_appetite": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Handles escalations from on-call, but this is secondhand exposure as manager/escalation point, not personally paging or doing live diagnosis."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "'In the code, not writing code' with hands-on coding cadence as low as a day every 3-4 months — diagnostic depth is not a job requirement."
+        },
+        "systems_design_scale": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Reviews architectural proposals and stays connected via architectural discussion, but is evaluator, not designer."
+        },
+        "technical_breadth_depth": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Stays connected via code review and occasional pairing, useful for credibility but not a central evaluated competency."
+        },
+        "outcome_accountability": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Explicit team-level KPIs (velocity, MTTR, defect density, retention) owned even without personally producing the code."
+        },
+        "stakeholder_client_comfort": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Coordinates with product/design and cross-team representation, a structured-but-recurring posture, not fluid executive-to-engineer register-shifting."
+        },
+        "teaching_enjoyment": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "No discussion of public teaching/content; growth-plan coaching is private 1:1 mentorship."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not discussed; EM's 'accounts' are internal reports and stakeholders, not a portfolio of client relationships."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not discussed; EM's relationships with reports are ongoing but this isn't a client/account relationship in the sense this dimension measures."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.3,
+          "rationale": "Comp is 'base + bonus + equity, same shape as senior IC comp — not commission/variable-based.'"
+        },
+        "coding_intensity": {
+          "target": 1,
+          "weight": 0.9,
+          "rationale": "Headline claim: 'in the code, not writing code,' hands-on cadence roughly a day every 3-4 months, never in the critical path."
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed; an internal, office/remote-based role with no travel component mentioned."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of threat modeling or adversarial thinking anywhere in the brief."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed anywhere; EM's technical exposure is architectural/code-review level."
+        },
+        "people_management_orientation": {
+          "target": 5,
+          "weight": 1,
+          "rationale": "The defining trait of the entire archetype: 1:1s, growth plans, hiring, and retention/morale are the actual basis of the EM's own performance review."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "No public content or speaking expectation described; growth-plan coaching is private 1:1 mentorship."
+        },
+        "ml_engineering_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope; EM's technical exposure is architectural/code-review level, not hands-on infra."
+        }
       }
     },
     {
@@ -420,23 +2001,116 @@
       "name": "Technical Product Manager",
       "confidence": "high",
       "scores": {
-        "ambiguity_tolerance": {"target": 4, "weight": 0.9, "rationale": "Centers day-to-day on owning roadmap/requirements for a technical surface, making build-vs-buy and prioritization calls under ambiguous, non-numeric trade-offs — absorbed the old roadmap/prioritization-ownership concept per dimensions.json's merge notes."},
-        "interrupt_tolerance": {"target": 3, "weight": 0.5, "rationale": "A day full of conversations with engineers and cross-functional coordination — plannable, meeting-driven interruptions rather than an inbound queue or page."},
-        "oncall_incident_appetite": {"target": 1, "weight": 0.2, "rationale": "Not discussed; TPMs own API/platform reliability as a metric but there's no mention of the TPM personally being paged."},
-        "debugging_diagnostic_depth": {"target": 2, "weight": 0.3, "rationale": "Reads code/specs closely enough to catch bad estimates and occasionally scripts, implying light diagnostic engagement, evaluative not hands-on."},
-        "systems_design_scale": {"target": 3, "weight": 0.6, "rationale": "Judgment calls are 'functionally systems-design decisions' (build-vs-buy, API/data-model lifecycle), but the TPM shapes/evaluates designs rather than personally engineering them."},
-        "technical_breadth_depth": {"target": 3, "weight": 0.6, "rationale": "Requires fluency across APIs, SDKs, developer platforms, and ML infra, spanning multiple adjacent technical layers."},
-        "outcome_accountability": {"target": 3, "weight": 0.5, "rationale": "Success criteria (adoption, reliability, time-to-market) are partly attributable to engineering execution the TPM doesn't fully control."},
-        "stakeholder_client_comfort": {"target": 4, "weight": 0.7, "rationale": "Sustained cross-functional coordination and stakeholder satisfaction with roadmap execution as an explicit success metric, though 'customer' is mostly internal engineering teams."},
-        "teaching_enjoyment": {"target": 1, "weight": 0.2, "rationale": "Not discussed at all; TPM communication is internal spec-writing and design-review discussion with engineering peers."},
-        "account_portfolio_breadth": {"target":2,"weight":0.2,"rationale":"Not a discussed axis; TPMs own a product/roadmap surface, not a portfolio of client accounts."},
-        "relationship_continuity": {"target":2,"weight":0.2,"rationale":"Not a discussed axis; TPMs own a product/roadmap surface, not a persistent named client relationship."},
-        "variable_comp_appetite": {"target": 1, "weight": 0.2, "rationale": "Comp is 'base + bonus + equity... similar structure to senior IC engineering — not commission/variable-heavy like sales-adjacent roles.'"},
-        "coding_intensity": {"target": 1, "weight": 0.8, "rationale": "The single most emphasized misconception: 'I'll stay technical and keep writing code' — reality is technical fluency is used 'to evaluate and shape engineering work, not to do it.'"},
-        "travel_embed_willingness": {"target": 1, "weight": 0.2, "rationale": "Not discussed; an internal, office/remote cross-functional role with no travel component mentioned."},
-        "adversarial_threat_modeling": {"target": 1, "weight": 0.2, "rationale": "No mention of threat modeling or adversarial reasoning; API auth/error-handling is framed as lifecycle ownership, not adversarial thinking."},
-        "physical_constraint_engineering": {"target": 1, "weight": 0.2, "rationale": "Not discussed anywhere; TPM's technical surfaces are software-layer, no hardware/physical-constraint debugging mentioned."},
-        "people_management_orientation": {"target": 1, "weight": 0.3, "rationale": "Career ladder contrasts IC-track Principal/Staff PM against the Group PM management track; the core TPM archetype scoped here has no direct reports."}
+        "ambiguity_tolerance": {
+          "target": 4,
+          "weight": 0.9,
+          "rationale": "Centers day-to-day on owning roadmap/requirements for a technical surface, making build-vs-buy and prioritization calls under ambiguous, non-numeric trade-offs — absorbed the old roadmap/prioritization-ownership concept per dimensions.json's merge notes."
+        },
+        "interrupt_tolerance": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "A day full of conversations with engineers and cross-functional coordination — plannable, meeting-driven interruptions rather than an inbound queue or page."
+        },
+        "oncall_incident_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed; TPMs own API/platform reliability as a metric but there's no mention of the TPM personally being paged."
+        },
+        "debugging_diagnostic_depth": {
+          "target": 2,
+          "weight": 0.3,
+          "rationale": "Reads code/specs closely enough to catch bad estimates and occasionally scripts, implying light diagnostic engagement, evaluative not hands-on."
+        },
+        "systems_design_scale": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Judgment calls are 'functionally systems-design decisions' (build-vs-buy, API/data-model lifecycle), but the TPM shapes/evaluates designs rather than personally engineering them."
+        },
+        "technical_breadth_depth": {
+          "target": 3,
+          "weight": 0.6,
+          "rationale": "Requires fluency across APIs, SDKs, developer platforms, and ML infra, spanning multiple adjacent technical layers."
+        },
+        "outcome_accountability": {
+          "target": 3,
+          "weight": 0.5,
+          "rationale": "Success criteria (adoption, reliability, time-to-market) are partly attributable to engineering execution the TPM doesn't fully control."
+        },
+        "stakeholder_client_comfort": {
+          "target": 4,
+          "weight": 0.7,
+          "rationale": "Sustained cross-functional coordination and stakeholder satisfaction with roadmap execution as an explicit success metric, though 'customer' is mostly internal engineering teams."
+        },
+        "teaching_enjoyment": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed at all; TPM communication is internal spec-writing and design-review discussion with engineering peers."
+        },
+        "account_portfolio_breadth": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not a discussed axis; TPMs own a product/roadmap surface, not a portfolio of client accounts."
+        },
+        "relationship_continuity": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "Not a discussed axis; TPMs own a product/roadmap surface, not a persistent named client relationship."
+        },
+        "variable_comp_appetite": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Comp is 'base + bonus + equity... similar structure to senior IC engineering — not commission/variable-heavy like sales-adjacent roles.'"
+        },
+        "coding_intensity": {
+          "target": 1,
+          "weight": 0.8,
+          "rationale": "The single most emphasized misconception: 'I'll stay technical and keep writing code' — reality is technical fluency is used 'to evaluate and shape engineering work, not to do it.'"
+        },
+        "travel_embed_willingness": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed; an internal, office/remote cross-functional role with no travel component mentioned."
+        },
+        "adversarial_threat_modeling": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "No mention of threat modeling or adversarial reasoning; API auth/error-handling is framed as lifecycle ownership, not adversarial thinking."
+        },
+        "physical_constraint_engineering": {
+          "target": 1,
+          "weight": 0.2,
+          "rationale": "Not discussed anywhere; TPM's technical surfaces are software-layer, no hardware/physical-constraint debugging mentioned."
+        },
+        "people_management_orientation": {
+          "target": 1,
+          "weight": 0.3,
+          "rationale": "Career ladder contrasts IC-track Principal/Staff PM against the Group PM management track; the core TPM archetype scoped here has no direct reports."
+        },
+        "public_visibility_comfort": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not discussed at all; TPM communication is internal spec-writing and design-review discussion with engineering peers."
+        },
+        "ml_engineering_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "A TPM scoped to an ML/AI platform would score higher, but this isn't the modal case across the archetype as a whole."
+        },
+        "mobile_platform_fluency": {
+          "target": 1,
+          "weight": 0.1,
+          "rationale": "Not relevant to this archetype's scope."
+        },
+        "data_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "A TPM scoped to a data platform would score higher, but this isn't the modal case across the archetype as a whole."
+        },
+        "cloud_infrastructure_fluency": {
+          "target": 2,
+          "weight": 0.2,
+          "rationale": "A TPM scoped to an infra/developer-platform product would score higher, but this isn't the modal case across the archetype as a whole."
+        }
       }
     }
   ]

@@ -5,26 +5,38 @@
 
 ## Target
 
-5-8 minutes, ~36 items total (4 stack-intake fields + 32 dimension questions), sectioned, with
-progress indication and "skip/unsure" always available. This slightly favors the low end of PLAN.md's
-"~25-35 items" estimate on pure dimension questions (32) plus a short intake block on top — the intake
-fields are fast multi-select/number inputs (seconds each), not full scenario questions, so they don't
-meaningfully add to completion time despite adding to the raw item count.
+**v1.2 update:** 6-9 minutes, ~43 items total (4 stack-intake fields + 39 dimension questions),
+sectioned, with progress indication and "skip/unsure" always available. This grew from v1.0's
+36-item / 5-8 minute target after two rounds of real-user-found taxonomy fixes: v1.1 added 2
+questions (splitting one dimension into two), and v1.2 added 5 more (splitting
+`teaching_enjoyment`'s public-visibility half out, plus 4 new domain-fluency self-rating questions
+for ML/Mobile/Data/Cloud-infra archetypes — see `docs/research/dimensions-v1.2-teaching-split-and-domain-fluency.md`).
+The user explicitly approved trading assessment length for accuracy when authorizing the domain-
+fluency additions. This now exceeds PLAN.md's original "~25-35 items" / "5-8 minutes" estimates —
+noted here as a deliberate, user-approved deviation, not an oversight. If length becomes a real
+completion-rate problem in Phase 6 beta data, the domain-fluency questions (currently 1 each, not
+2 like every other dimension) are the first candidates to look at cutting or making conditional
+(e.g., only ask about ML/mobile/data/cloud fluency if the stack-intake domains checklist suggests
+it's relevant), rather than cutting into the temperament/preference core of the instrument.
 
 ## Sections, in order
 
 1. **Stack** (`taxonomy/questions.json`'s `stackIntake` block, plus the `stack`-sectioned dimension
    questions: `technical_breadth_depth` ×2, `coding_intensity` ×2, `physical_constraint_engineering`
-   ×2). ~45-60 seconds. This section exists to (a) personalize later result copy ("as a
-   Python/backend engineer with 6 years...") and (b) sanity-check the self-reported technical
-   dimensions against concrete stack/domain signal, per PLAN.md's intent that this be "a fast
-   structured input... kept deliberately short."
+   ×2, plus v1.2's `ml_engineering_fluency` ×1, `mobile_platform_fluency` ×1,
+   `data_infrastructure_fluency` ×1, `cloud_infrastructure_fluency` ×1 — 10 dimension questions total
+   in this section). ~90 seconds. This section exists to (a) personalize later result copy ("as a
+   Python/backend engineer with 6 years...") and (b), as of v1.2, provide real scored self-ratings
+   that gate domain-specific archetypes (ML/Mobile/Data/Platform Engineer) — a deliberate reversal of
+   the original "not another skills checklist" framing, made at the user's explicit request after a
+   real result matched ML Engineer with zero relationship to the user's self-reported background.
 2. **Work style** (`ambiguity_tolerance`, `interrupt_tolerance`, `oncall_incident_appetite`,
    `debugging_diagnostic_depth`, `systems_design_scale`, `adversarial_threat_modeling` — 12
    questions). The "how do you actually want to spend your working hours" section.
 3. **People & client comfort** (`stakeholder_client_comfort`, `teaching_enjoyment`,
-   `account_relationship_ownership`, `people_management_orientation` — 8 questions). The
-   "who do you want to spend your working hours with, and how" section.
+   `public_visibility_comfort` (new in v1.2), `account_portfolio_breadth`, `relationship_continuity`,
+   `people_management_orientation` — 11 questions). The "who do you want to spend your working hours
+   with, and how" section.
 4. **Incentives & motivation** (`outcome_accountability`, `variable_comp_appetite`,
    `travel_embed_willingness` — 6 questions). The "what trade-offs are you actually willing to make"
    section — deliberately last, since these are the most identity-adjacent questions (comp risk,
@@ -36,7 +48,7 @@ comfort → incentives/motivation") exactly.
 
 ## Progress & UX requirements (for Phase 5)
 
-- **Progress indicator**: a slim bar or "12 of 36" counter, visible throughout, per-section
+- **Progress indicator**: a slim bar or "12 of 43" counter, visible throughout, per-section
   sub-progress optional but the overall counter is required (users abandoning quizzes cite "not
   knowing how much is left" as a top complaint — avoid it outright).
 - **Skip/unsure**: every dimension question has a visible "skip" affordance that maps to `null` for
@@ -48,8 +60,9 @@ comfort → incentives/motivation") exactly.
   where they left off, not restart. No login required, consistent with ADR-003's no-login-in-v1
   decision.
 - **Mobile-first, single question per screen** (not a long scrolling form) — keeps each screen fast
-  to parse and matches the "5-8 minutes on a phone" target explicitly named in PLAN.md's Phase 5
-  "Done when" bar.
+  to parse. This was written to match PLAN.md's original "5-8 minutes on a phone" Phase 5 "Done when"
+  bar; as of v1.2 the real target has grown to ~6-9 minutes per the user-approved length trade-off
+  noted above — the single-question-per-screen UX pattern itself is unaffected either way.
 - **Format variety by design**: `taxonomy/questions.json` deliberately mixes `scenario_choice`
   (a vivid situational prompt with 3 labeled options), `slider` (a 1-5 continuous scale with only the
   two end labels shown, no middle label, to avoid anchoring bias toward the literal anchor-3 text),
@@ -65,9 +78,9 @@ comfort → incentives/motivation") exactly.
 ## Tech-stack intake — design rationale
 
 Per PLAN.md's explicit instruction that "the differentiator is the preference data, not another
-skills checklist," the stack intake is intentionally minimal: 4 fields (years of experience, primary
-languages, domains worked in, current title — the last optional). It is **not** scored against the 16
-trait dimensions directly. Its two jobs are:
+skills checklist," the stack intake (`questions.json`'s `stackIntake` block) is intentionally
+minimal: 4 fields (years of experience, primary languages, domains worked in, current title — the
+last optional). It is **not** scored against any trait dimension. Its two jobs are:
 1. **Personalization** — result copy can say "given your 6 years in backend Python, here's what a
    jump to X would concretely look like" instead of generic copy.
 2. **Light sanity-check** — if someone reports 15 years of experience across 8 domains but answers
@@ -75,6 +88,17 @@ trait dimensions directly. Its two jobs are:
    plausible signal worth a soft "does this feel right?" confirmation UI in Phase 5 (not built into
    the scoring math itself — this is a UX nicety, not an algorithmic gate, since PLAN.md's scoring
    spec is explicitly the user's self-reported preference data, not a corrective layer overriding it).
+
+**v1.2 note — a distinct, newer mechanism sits next to this in the same "Stack" flow section, and
+the two should not be confused.** The `ml_engineering_fluency`/`mobile_platform_fluency`/
+`data_infrastructure_fluency`/`cloud_infrastructure_fluency` questions added in v1.2 (see
+`docs/research/dimensions-v1.2-teaching-split-and-domain-fluency.md`) render in the same "Stack"
+section for flow purposes, but structurally they are ordinary scored `questions[]` entries, not
+`stackIntake` fields — they **are** scored against real dimensions with real archetype weights, by
+explicit user request, reversing the "not another skills checklist" framing above for this specific
+narrow purpose (gating domain-specific archetypes like ML/Mobile/Data/Platform Engineer). The
+original 4-field `stackIntake` block's "not scored" property is unchanged; only these 4 new,
+separate questions carry real scoring weight.
 
 ## Dry-run validation — deferred to Phase 6, not skipped
 

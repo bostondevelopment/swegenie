@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "notes": "v1.1: replaced q_account_1/q_account_2 (old account_relationship_ownership dimension) with q_breadth_1/q_breadth_2 (account_portfolio_breadth) and q_continuity_1/q_continuity_2 (relationship_continuity) per the v1.1 dimension split — see docs/research/dimensions-v1.1-relationship-split.md. 2 questions per dimension in taxonomy/dimensions.json (34 total, 17 dimensions), plus a short stack-intake block. Each dimension question's `value` options span the dimension's 1-5 scale; a user's final U[d] fed into taxonomy/scoring.md is the average of their answered questions for that dimension (nulls excluded per scoring.md's skip handling). `section` matches docs/assessment/flow.md's four sections.",
+  "version": "1.2",
+  "notes": "v1.2: added q_public_visibility_1 (new public_visibility_comfort dimension, split out of teaching_enjoyment) and 4 new domain-fluency questions (q_ml_fluency_1, q_mobile_fluency_1, q_data_fluency_1, q_cloud_fluency_1) for ml_engineering_fluency/mobile_platform_fluency/data_infrastructure_fluency/cloud_infrastructure_fluency, each with only 1 question (not 2) to limit assessment-length growth — see docs/research/dimensions-v1.2-teaching-split-and-domain-fluency.md. v1.1: replaced q_account_1/q_account_2 (old account_relationship_ownership dimension) with q_breadth_1/q_breadth_2 (account_portfolio_breadth) and q_continuity_1/q_continuity_2 (relationship_continuity) per the v1.1 dimension split — see docs/research/dimensions-v1.1-relationship-split.md. Each dimension question's `value` options span the dimension's 1-5 scale; a user's final U[d] fed into taxonomy/scoring.md is the average of their answered questions for that dimension (nulls excluded per scoring.md's skip handling). `section` matches docs/assessment/flow.md's four sections.",
   "stackIntake": {
     "notes": "Fast structured input, not scored against the 16 trait dimensions directly — used to personalize result copy and lightly qualify technical_breadth_depth/coding_intensity self-reports against a sanity check. Deliberately short per PLAN.md Phase 3 spec.",
     "fields": [
@@ -138,6 +138,14 @@
         {"label": "I enjoy finding the explanation that finally clicks for them.", "value": 5}
       ]},
 
+    {"id": "q_public_visibility_1", "dimension": "public_visibility_comfort", "section": "people", "format": "scenario_choice",
+      "prompt": "Someone suggests you give a talk about your work at a public meetup or conference. Honest reaction?",
+      "options": [
+        {"label": "Hard pass — that's not something I want any part of.", "value": 1},
+        {"label": "I could do it once in a while, but I wouldn't seek it out.", "value": 3},
+        {"label": "I'd genuinely want to do this regularly — being known publicly for what I do sounds appealing, not draining.", "value": 5}
+      ]},
+
     {"id": "q_breadth_1", "dimension": "account_portfolio_breadth", "section": "people", "format": "scenario_choice",
       "prompt": "Which sounds more like you?",
       "options": [
@@ -228,6 +236,38 @@
         {"label": "No, and I don't expect to.", "value": 1},
         {"label": "Not really, but I'm comfortable with CI-tracked performance budgets.", "value": 3},
         {"label": "Yes, regularly, as part of my normal debugging process.", "value": 5}
+      ]},
+
+    {"id": "q_ml_fluency_1", "dimension": "ml_engineering_fluency", "section": "stack", "format": "behavioral_anchor",
+      "prompt": "How much hands-on experience do you have building, training, or deploying machine learning systems?",
+      "options": [
+        {"label": "None — machine learning hasn't been part of what I've built.", "value": 1},
+        {"label": "Some — I've used ML APIs/libraries or built a model or pipeline component.", "value": 3},
+        {"label": "A lot — I've built, trained, deployed, or maintained production ML systems as a core part of my work.", "value": 5}
+      ]},
+
+    {"id": "q_mobile_fluency_1", "dimension": "mobile_platform_fluency", "section": "stack", "format": "behavioral_anchor",
+      "prompt": "How much hands-on experience do you have building native or cross-platform mobile apps (iOS/Android)?",
+      "options": [
+        {"label": "None — I haven't built mobile apps.", "value": 1},
+        {"label": "Some — I've built a small app or contributed to a mobile codebase.", "value": 3},
+        {"label": "A lot — I've built and shipped mobile apps as a core part of my work.", "value": 5}
+      ]},
+
+    {"id": "q_data_fluency_1", "dimension": "data_infrastructure_fluency", "section": "stack", "format": "behavioral_anchor",
+      "prompt": "How much hands-on experience do you have building or operating data pipelines or warehouse infrastructure?",
+      "options": [
+        {"label": "None — I haven't built data pipelines or warehouse infrastructure.", "value": 1},
+        {"label": "Some — I've written ETL/ELT jobs or maintained a warehouse.", "value": 3},
+        {"label": "A lot — I've built and operated production data infrastructure as a core part of my work.", "value": 5}
+      ]},
+
+    {"id": "q_cloud_fluency_1", "dimension": "cloud_infrastructure_fluency", "section": "stack", "format": "behavioral_anchor",
+      "prompt": "How much hands-on experience do you have building or operating cloud infrastructure or CI/CD systems?",
+      "options": [
+        {"label": "None — I haven't built or operated cloud/infra systems.", "value": 1},
+        {"label": "Some — I've configured cloud resources or CI/CD for my own team's use.", "value": 3},
+        {"label": "A lot — I've built and operated cloud infrastructure or internal platforms as a core part of my work.", "value": 5}
       ]},
 
     {"id": "q_people_mgmt_1", "dimension": "people_management_orientation", "section": "people", "format": "scenario_choice",

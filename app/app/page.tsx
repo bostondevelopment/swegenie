@@ -19,7 +19,7 @@ export default function Home() {
           </h1>
           <p className="text-lg text-[var(--color-muted)] leading-relaxed mb-8 max-w-2xl">
             Sales engineer, forward-deployed engineer, SRE, developer advocate, solutions
-            architect — nobody mapped the option space for you. Take the 6-minute assessment.
+            architect — nobody mapped the option space for you. Take the 8-minute assessment.
             See your top role matches, ranked and explained.
           </p>
           <div className="flex flex-wrap items-center gap-4">
@@ -43,8 +43,8 @@ export default function Home() {
             <div>
               <div className="font-mono text-[var(--color-accent)] mb-1">01</div>
               <p className="text-[var(--color-muted)]">
-                Answer 36 short questions about how you actually like to work — not another
-                skills checklist.
+                Answer 43 short questions about how you actually like to work, plus a few real
+                self-ratings on specific technical domains — not a generic personality quiz.
               </p>
             </div>
             <div>

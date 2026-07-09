@@ -29,18 +29,24 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 3, interrupt_tolerance: 1, oncall_incident_appetite: 3, debugging_diagnostic_depth: 5,
       systems_design_scale: 5, technical_breadth_depth: 2, outcome_accountability: 3, stakeholder_client_comfort: 1,
-      teaching_enjoyment: 1, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 5,
-      travel_embed_willingness: 1, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 1,
+      teaching_enjoyment: 1, public_visibility_comfort: 1, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 5,
+      travel_embed_willingness: 1, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 2, cloud_infrastructure_fluency: 3, people_management_orientation: 1,
     },
-    expectedTop: "mobile-engineer", // documented Finding 1 miss, not platform/sre/data
+    // v1.2 update: this used to be the documented Finding 1 miss (mobile-engineer,
+    // see validation-v1.md) — the mobile_platform_fluency gate added in v1.2 (this
+    // persona correctly reports no mobile experience) now demotes Mobile Engineer
+    // as an unplanned but genuine side effect, and the persona lands on a much more
+    // sensible match instead. Kept as a positive regression test for that fix rather
+    // than re-tuning the persona to force the old (wrong) answer.
+    expectedTop: "product-full-stack-software-engineer",
   },
   {
     name: "Bootcamp Grad Who Loves Demos and People",
     profile: {
       ambiguity_tolerance: 3, interrupt_tolerance: 3, oncall_incident_appetite: 1, debugging_diagnostic_depth: 2,
       systems_design_scale: 1, technical_breadth_depth: 3, outcome_accountability: 3, stakeholder_client_comfort: 5,
-      teaching_enjoyment: 3, account_portfolio_breadth: 4, relationship_continuity: 2, variable_comp_appetite: 5, coding_intensity: 2,
-      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 2,
+      teaching_enjoyment: 3, public_visibility_comfort: 2, account_portfolio_breadth: 4, relationship_continuity: 2, variable_comp_appetite: 5, coding_intensity: 2,
+      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 1, people_management_orientation: 2,
     },
     expectedTop: "sales-engineer-pre-sales",
   },
@@ -49,8 +55,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 4, interrupt_tolerance: 2, oncall_incident_appetite: 1, debugging_diagnostic_depth: 2,
       systems_design_scale: 1, technical_breadth_depth: 3, outcome_accountability: 2, stakeholder_client_comfort: 3,
-      teaching_enjoyment: 5, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 2,
-      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 2,
+      teaching_enjoyment: 5, public_visibility_comfort: 5, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 2,
+      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 1, people_management_orientation: 2,
     },
     expectedTop: "developer-relations-advocacy",
   },
@@ -59,8 +65,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 3, interrupt_tolerance: 2, oncall_incident_appetite: 4, debugging_diagnostic_depth: 5,
       systems_design_scale: 2, technical_breadth_depth: 4, outcome_accountability: 4, stakeholder_client_comfort: 2,
-      teaching_enjoyment: 1, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 4,
-      travel_embed_willingness: 3, adversarial_threat_modeling: 2, physical_constraint_engineering: 5, people_management_orientation: 2,
+      teaching_enjoyment: 1, public_visibility_comfort: 1, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 4,
+      travel_embed_willingness: 3, adversarial_threat_modeling: 2, physical_constraint_engineering: 5, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 1, people_management_orientation: 2,
     },
     expectedTop: "embedded-iot-engineer",
   },
@@ -69,8 +75,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 2, interrupt_tolerance: 5, oncall_incident_appetite: 4, debugging_diagnostic_depth: 4,
       systems_design_scale: 2, technical_breadth_depth: 3, outcome_accountability: 3, stakeholder_client_comfort: 3,
-      teaching_enjoyment: 2, account_portfolio_breadth: 4, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 3,
-      travel_embed_willingness: 1, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 1,
+      teaching_enjoyment: 2, public_visibility_comfort: 1, account_portfolio_breadth: 4, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 3,
+      travel_embed_willingness: 1, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 1, people_management_orientation: 1,
     },
     expectedTop: "customer-support-engineer",
   },
@@ -79,8 +85,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 3, interrupt_tolerance: 4, oncall_incident_appetite: 2, debugging_diagnostic_depth: 1,
       systems_design_scale: 2, technical_breadth_depth: 2, outcome_accountability: 4, stakeholder_client_comfort: 3,
-      teaching_enjoyment: 2, account_portfolio_breadth: 2, relationship_continuity: 2, variable_comp_appetite: 1, coding_intensity: 1,
-      travel_embed_willingness: 1, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 5,
+      teaching_enjoyment: 2, public_visibility_comfort: 1, account_portfolio_breadth: 2, relationship_continuity: 2, variable_comp_appetite: 1, coding_intensity: 1,
+      travel_embed_willingness: 1, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 2, mobile_platform_fluency: 1, data_infrastructure_fluency: 2, cloud_infrastructure_fluency: 2, people_management_orientation: 5,
     },
     expectedTop: "engineering-management",
   },
@@ -89,8 +95,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 4, interrupt_tolerance: 3, oncall_incident_appetite: 2, debugging_diagnostic_depth: 3,
       systems_design_scale: 3, technical_breadth_depth: 4, outcome_accountability: 5, stakeholder_client_comfort: 4,
-      teaching_enjoyment: 2, account_portfolio_breadth: 1, relationship_continuity: 5, variable_comp_appetite: 1, coding_intensity: 5,
-      travel_embed_willingness: 4, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 2,
+      teaching_enjoyment: 2, public_visibility_comfort: 1, account_portfolio_breadth: 1, relationship_continuity: 5, variable_comp_appetite: 1, coding_intensity: 5,
+      travel_embed_willingness: 4, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 1, people_management_orientation: 2,
     },
     expectedTop: "forward-deployed-engineer",
   },
@@ -99,8 +105,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 3, interrupt_tolerance: 3, oncall_incident_appetite: 1, debugging_diagnostic_depth: 3,
       systems_design_scale: 2, technical_breadth_depth: 3, outcome_accountability: 3, stakeholder_client_comfort: 4,
-      teaching_enjoyment: 2, account_portfolio_breadth: 4, relationship_continuity: 2, variable_comp_appetite: 5, coding_intensity: 2,
-      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 2,
+      teaching_enjoyment: 2, public_visibility_comfort: 2, account_portfolio_breadth: 4, relationship_continuity: 2, variable_comp_appetite: 5, coding_intensity: 2,
+      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 2, people_management_orientation: 2,
     },
     expectedTop: "sales-engineer-pre-sales",
   },
@@ -109,8 +115,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 4, interrupt_tolerance: 3, oncall_incident_appetite: 4, debugging_diagnostic_depth: 4,
       systems_design_scale: 3, technical_breadth_depth: 3, outcome_accountability: 4, stakeholder_client_comfort: 4,
-      teaching_enjoyment: 2, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 4,
-      travel_embed_willingness: 1, adversarial_threat_modeling: 5, physical_constraint_engineering: 1, people_management_orientation: 2,
+      teaching_enjoyment: 2, public_visibility_comfort: 1, account_portfolio_breadth: 1, relationship_continuity: 1, variable_comp_appetite: 1, coding_intensity: 4,
+      travel_embed_willingness: 1, adversarial_threat_modeling: 5, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 3, people_management_orientation: 2,
     },
     expectedTop: "security-engineer",
   },
@@ -119,8 +125,8 @@ const personas: Array<{
     profile: {
       ambiguity_tolerance: 3, interrupt_tolerance: 3, oncall_incident_appetite: 1, debugging_diagnostic_depth: 2,
       systems_design_scale: 4, technical_breadth_depth: 4, outcome_accountability: 2, stakeholder_client_comfort: 4,
-      teaching_enjoyment: 2, account_portfolio_breadth: 4, relationship_continuity: 2, variable_comp_appetite: 2, coding_intensity: 2,
-      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, people_management_orientation: 2,
+      teaching_enjoyment: 2, public_visibility_comfort: 1, account_portfolio_breadth: 4, relationship_continuity: 2, variable_comp_appetite: 2, coding_intensity: 2,
+      travel_embed_willingness: 3, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 1, mobile_platform_fluency: 1, data_infrastructure_fluency: 1, cloud_infrastructure_fluency: 3, people_management_orientation: 2,
     },
     expectedTop: "solutions-architect-consulting",
   },
@@ -247,5 +253,57 @@ describe("Step 2.5 top-dimension floor (v1.1 regression)", () => {
     const result = scoreArchetype(profile, archetype)!;
     const expectedFloor = 1 - Math.abs(profile[firstTiedDim] - firstTiedScore.target) / 4;
     expect(result.fitScore).toBeCloseTo(expectedFloor, 5);
+  });
+});
+
+describe("v1.2 regressions (teaching/visibility split + domain-fluency gates)", () => {
+  it("does not let private-teaching-only answers register as a full Developer Relations match", () => {
+    // Reproduces the real reported bug: answers describing only 1:1/private teaching
+    // (tutorials, explaining to a customer) with no public-speaking interest at all.
+    const archetype = archetypeById.get("developer-relations-advocacy")!;
+    const profile = {
+      teaching_enjoyment: 5, // loves private teaching
+      public_visibility_comfort: 1, // but hates public visibility — DevRel's other weight-1.0 dim
+    };
+    const result = scoreArchetype(profile, archetype)!;
+    // fit on public_visibility_comfort: 1 - |1-5|/4 = 0 -> floors the whole score to 0,
+    // regardless of the perfect teaching_enjoyment match.
+    expect(result.fitScore).toBeCloseTo(0, 5);
+  });
+
+  it("Customer Success Engineer keeps high teaching_enjoyment but low public_visibility_comfort, unlike DevRel", () => {
+    const cse = archetypeById.get("customer-support-solutions-engineer")!;
+    const devrel = archetypeById.get("developer-relations-advocacy")!;
+    expect(cse.scores.teaching_enjoyment.target).toBeGreaterThanOrEqual(4);
+    expect(cse.scores.public_visibility_comfort.target).toBeLessThanOrEqual(2);
+    expect(devrel.scores.public_visibility_comfort.weight).toBe(1);
+  });
+
+  it("caps ML Engineer's score when the user reports no hands-on ML experience, even with generic strong-engineer temperament", () => {
+    // Reproduces the real reported bug: high ambiguity/outcome/systems-design/coding
+    // answers (generic senior-engineer temperament) but explicit non-ML background.
+    const archetype = archetypeById.get("ml-engineer")!;
+    const profile = {
+      ambiguity_tolerance: 5, outcome_accountability: 4, systems_design_scale: 4, coding_intensity: 4,
+      ml_engineering_fluency: 1, // target 5, weight 1.0 — reports no ML background
+    };
+    const result = scoreArchetype(profile, archetype)!;
+    // fit on ml_engineering_fluency: 1 - |1-5|/4 = 0 -> floors the score to 0.
+    expect(result.fitScore).toBeCloseTo(0, 5);
+  });
+
+  it("every domain-fluency dimension is a weight-1.0-or-near gate for exactly its own archetype", () => {
+    const gates: Array<[string, string]> = [
+      ["ml_engineering_fluency", "ml-engineer"],
+      ["mobile_platform_fluency", "mobile-engineer"],
+      ["data_infrastructure_fluency", "data-engineer"],
+      ["cloud_infrastructure_fluency", "platform-infrastructure-engineer"],
+    ];
+    for (const [dim, archetypeId] of gates) {
+      const archetype = archetypeById.get(archetypeId)!;
+      const score = archetype.scores[dim as keyof typeof archetype.scores];
+      expect(score.weight).toBeGreaterThanOrEqual(0.9);
+      expect(score.target).toBe(5);
+    }
   });
 });

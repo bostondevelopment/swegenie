@@ -6,7 +6,7 @@ Developer Relations / Developer Advocacy is public-facing technical content and 
 
 You matched with Developer Relations / Developer Advocacy because your answers put {{top_dimension_1}}, {{top_dimension_2}}, and {{top_dimension_3}} close to what this role actually demands day to day — those are the parts of your profile pulling hardest toward this match.
 
-For example: a profile with high **Teaching & Public Visibility**, high **Ambiguity Tolerance**, and moderate **Travel / Physical Embed Willingness** would land here — someone whose primary job output is publicly-facing teaching content (tutorials, talks, videos) built for an audience who wasn't in the room, who's comfortable that no single trusted success metric exists for this work (active users, DQLs, and NPS all compete, and practitioners have had to invent proxy metrics for exactly that reason), and who's fine with conference travel being a real, recurring part of the job without needing it to dominate the calendar.
+For example: a profile with high **Public Visibility Comfort**, high **Ambiguity Tolerance**, and moderate **Travel / Physical Embed Willingness** would land here — someone whose primary job output is publicly-facing teaching content (tutorials, talks, videos) built for an audience who wasn't in the room, who's comfortable that no single trusted success metric exists for this work (active users, DQLs, and NPS all compete, and practitioners have had to invent proxy metrics for exactly that reason), and who's fine with conference travel being a real, recurring part of the job without needing it to dominate the calendar.
 
 ## A day in this role
 
@@ -18,7 +18,7 @@ Base plus equity, with little to no sales-style variable comp — a structural d
 
 ## Growth areas — if this wasn't a perfect fit
 
-If {{growth_dimension}} came back lower than this role typically wants, that's worth a closer look rather than a red flag — it usually means a specific, testable gap, not a wrong match. For example: if your **Teaching & Public Visibility** score is on the low side, know that this is the archetype's single defining trait — the job's primary, evaluated output is public one-to-many teaching content, not private peer communication or occasional documentation as a side effect of other work — if putting yourself out there publicly and repeatedly (not just occasionally explaining something to a teammate) doesn't sound appealing, that's the sharpest mismatch to weigh here, independent of your technical depth.
+If {{growth_dimension}} came back lower than this role typically wants, that's worth a closer look rather than a red flag — it usually means a specific, testable gap, not a wrong match. For example: if your **Public Visibility Comfort** score is on the low side, know that this is the archetype's single defining trait — the job's primary, evaluated output is public one-to-many teaching content, not private peer communication or occasional documentation as a side effect of other work — if putting yourself out there publicly and repeatedly (not just occasionally explaining something to a teammate) doesn't sound appealing, that's the sharpest mismatch to weigh here, independent of your technical depth.
 
 ## How to test this cheaply
 
