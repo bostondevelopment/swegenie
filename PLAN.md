@@ -61,7 +61,7 @@ of prior phases (all committed to this repo). Update the status checkboxes as wo
 highest-leverage phase — everything downstream inherits its quality.
 
 **Tasks (parallelizable — one agent per role cluster):**
-- [ ] Enumerate candidate archetypes (target 12–18 for v1). Initial list to validate:
+- [x] Enumerate candidate archetypes (target 12–18 for v1). Initial list to validate:
       - Product/full-stack SWE (frontend-lean, backend-lean, true generalist)
       - Infrastructure / platform engineer
       - SRE / production engineer
@@ -78,12 +78,20 @@ highest-leverage phase — everything downstream inherits its quality.
       - Consulting engineer / professional services
       - Technical product manager (boundary case — decide in or out)
       - Engineering management track (boundary case — decide in or out)
-- [ ] Per archetype, produce a **role research brief** from primary sources (≥15 real job
+- [x] Per archetype, produce a **role research brief** from primary sources (≥15 real job
       descriptions across company sizes, blog posts/talks by practitioners, comp data from
       levels.fyi/Glassdoor): day-to-day activities, success criteria, comp structure (base vs.
       variable), career ladder, common entry paths, common exit paths, top misconceptions.
-- [ ] Cross-review pass: a separate agent audits all briefs for stereotype-vs-evidence
+      → 18 briefs in `/docs/research/roles/`; two briefs (Mobile, Embedded/IoT) fell short of the
+      ≥15-posting target (9 each) and are flagged for a follow-up sourcing pass — see
+      `/docs/research/roles-summary.md`.
+- [x] Cross-review pass: a separate agent audits all briefs for stereotype-vs-evidence
       (every trait claim must cite a source), and for overlap/gaps between archetypes.
+      → Resolved a duplicate Solutions Architect (Consulting-side) pair (merged and deleted one
+      file, 19→18 briefs); verified the Customer Support vs. Customer Success/Solutions Engineer
+      split and the vendor/consulting/FDE three-way split are both evidence-based, not
+      duplicates; light-audited all briefs for uncited claims (none found) and thinness (2
+      flagged). Full results in `/docs/research/roles-summary.md`.
 
 **Deliverables:** `/docs/research/roles/<archetype>.md` (one brief each),
 `/docs/research/roles-summary.md` (the validated archetype list with in/out rationale).
