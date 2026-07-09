@@ -1,6 +1,6 @@
 {
-  "version": "1.2",
-  "notes": "v1.2: added q_public_visibility_1 (new public_visibility_comfort dimension, split out of teaching_enjoyment) and 4 new domain-fluency questions (q_ml_fluency_1, q_mobile_fluency_1, q_data_fluency_1, q_cloud_fluency_1) for ml_engineering_fluency/mobile_platform_fluency/data_infrastructure_fluency/cloud_infrastructure_fluency, each with only 1 question (not 2) to limit assessment-length growth — see docs/research/dimensions-v1.2-teaching-split-and-domain-fluency.md. v1.1: replaced q_account_1/q_account_2 (old account_relationship_ownership dimension) with q_breadth_1/q_breadth_2 (account_portfolio_breadth) and q_continuity_1/q_continuity_2 (relationship_continuity) per the v1.1 dimension split — see docs/research/dimensions-v1.1-relationship-split.md. Each dimension question's `value` options span the dimension's 1-5 scale; a user's final U[d] fed into taxonomy/scoring.md is the average of their answered questions for that dimension (nulls excluded per scoring.md's skip handling). `section` matches docs/assessment/flow.md's four sections.",
+  "version": "1.3",
+  "notes": "v1.3: added a 3rd adversarial_threat_modeling question (q_adversarial_3) after a real user's Security Engineer match landed exactly at the scoring floor (50%) because both existing questions' anchor-3 options ('a few obvious abuse cases,' 'sometimes, as part of general engineering diligence') describe ordinary responsible-engineer behavior that most conscientious engineers would honestly claim, regardless of any real draw toward security work — a 'safe middle answer' problem, not a scoring bug. The new question asks about actual behavioral history (sought-out security work, CTFs, bug bounties) rather than an abstract frequency self-rating, which is harder to safely answer in the middle. adversarial_threat_modeling is now averaged over 3 questions instead of 2 (every other dimension still has 2, except v1.2's domain-fluency dimensions which have 1). v1.2: added q_public_visibility_1 (new public_visibility_comfort dimension, split out of teaching_enjoyment) and 4 new domain-fluency questions (q_ml_fluency_1, q_mobile_fluency_1, q_data_fluency_1, q_cloud_fluency_1) for ml_engineering_fluency/mobile_platform_fluency/data_infrastructure_fluency/cloud_infrastructure_fluency, each with only 1 question (not 2) to limit assessment-length growth — see docs/research/dimensions-v1.2-teaching-split-and-domain-fluency.md. v1.1: replaced q_account_1/q_account_2 (old account_relationship_ownership dimension) with q_breadth_1/q_breadth_2 (account_portfolio_breadth) and q_continuity_1/q_continuity_2 (relationship_continuity) per the v1.1 dimension split — see docs/research/dimensions-v1.1-relationship-split.md. Each dimension question's `value` options span the dimension's 1-5 scale; a user's final U[d] fed into taxonomy/scoring.md is the average of their answered questions for that dimension (nulls excluded per scoring.md's skip handling). `section` matches docs/assessment/flow.md's four sections.",
   "stackIntake": {
     "notes": "Fast structured input, not scored against the 16 trait dimensions directly — used to personalize result copy and lightly qualify technical_breadth_depth/coding_intensity self-reports against a sanity check. Deliberately short per PLAN.md Phase 3 spec.",
     "fields": [
@@ -225,6 +225,13 @@
         {"label": "Rarely, if ever.", "value": 1},
         {"label": "Sometimes, as part of general engineering diligence.", "value": 3},
         {"label": "Constantly — it's my default lens on any system.", "value": 5}
+      ]},
+    {"id": "q_adversarial_3", "dimension": "adversarial_threat_modeling", "section": "work_style", "format": "behavioral_anchor",
+      "prompt": "Which is closer to your actual work history, not just how you'd like to see yourself?",
+      "options": [
+        {"label": "I've never sought out security-focused work, reviews, or assignments — it's not something I gravitate toward.", "value": 1},
+        {"label": "I've done security-adjacent work when it landed on my plate, but haven't gone looking for it.", "value": 3},
+        {"label": "I've actively sought out security-focused work — a CTF, bug bounty, a security review rotation, or a dedicated security role or project.", "value": 5}
       ]},
 
     {"id": "q_physical_1", "dimension": "physical_constraint_engineering", "section": "stack", "format": "slider",

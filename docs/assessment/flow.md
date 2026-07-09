@@ -5,7 +5,7 @@
 
 ## Target
 
-**v1.2 update:** 6-9 minutes, ~43 items total (4 stack-intake fields + 39 dimension questions),
+**v1.2 update:** 6-9 minutes, ~44 items total (4 stack-intake fields + 40 dimension questions),
 sectioned, with progress indication and "skip/unsure" always available. This grew from v1.0's
 36-item / 5-8 minute target after two rounds of real-user-found taxonomy fixes: v1.1 added 2
 questions (splitting one dimension into two), and v1.2 added 5 more (splitting
@@ -31,8 +31,12 @@ it's relevant), rather than cutting into the temperament/preference core of the 
    the original "not another skills checklist" framing, made at the user's explicit request after a
    real result matched ML Engineer with zero relationship to the user's self-reported background.
 2. **Work style** (`ambiguity_tolerance`, `interrupt_tolerance`, `oncall_incident_appetite`,
-   `debugging_diagnostic_depth`, `systems_design_scale`, `adversarial_threat_modeling` — 12
-   questions). The "how do you actually want to spend your working hours" section.
+   `debugging_diagnostic_depth`, `systems_design_scale`, `adversarial_threat_modeling` — 13
+   questions as of v1.3, since `adversarial_threat_modeling` got a 3rd question after a real
+   user's Security Engineer match landed exactly at the scoring floor because both original
+   anchor-3 options described ordinary responsible-engineer behavior rather than anything
+   distinctively security-oriented — a "safe middle answer" problem, not a scoring bug). The
+   "how do you actually want to spend your working hours" section.
 3. **People & client comfort** (`stakeholder_client_comfort`, `teaching_enjoyment`,
    `public_visibility_comfort` (new in v1.2), `account_portfolio_breadth`, `relationship_continuity`,
    `people_management_orientation` — 11 questions). The "who do you want to spend your working hours
@@ -48,7 +52,7 @@ comfort → incentives/motivation") exactly.
 
 ## Progress & UX requirements (for Phase 5)
 
-- **Progress indicator**: a slim bar or "12 of 43" counter, visible throughout, per-section
+- **Progress indicator**: a slim bar or "12 of 44" counter, visible throughout, per-section
   sub-progress optional but the overall counter is required (users abandoning quizzes cite "not
   knowing how much is left" as a top complaint — avoid it outright).
 - **Skip/unsure**: every dimension question has a visible "skip" affordance that maps to `null` for

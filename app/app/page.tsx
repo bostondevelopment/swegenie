@@ -43,7 +43,7 @@ export default function Home() {
             <div>
               <div className="font-mono text-[var(--color-accent)] mb-1">01</div>
               <p className="text-[var(--color-muted)]">
-                Answer 43 short questions about how you actually like to work, plus a few real
+                Answer 44 short questions about how you actually like to work, plus a few real
                 self-ratings on specific technical domains — not a generic personality quiz.
               </p>
             </div>
