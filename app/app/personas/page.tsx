@@ -5,7 +5,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { FitBar } from "@/components/FitBar";
 import { personas } from "@/lib/personas";
 import { aggregateAnswersToProfile } from "@/lib/assessment-flow";
-import { encodeProfile } from "@/lib/encode";
 import { rankArchetypes, fitPercent } from "@/lib/scoring";
 import { archetypeById } from "@/lib/taxonomy";
 
@@ -18,9 +17,11 @@ export const metadata: Metadata = {
  * Internal QA tool, not part of the product funnel: one card per persona
  * from app/lib/personas.ts (see docs/research/persona-suite-v1.md), showing
  * where that persona's own answers currently rank against its target
- * archetype, with a link to the exact same results page a real test-taker
- * would land on. Not linked from the main nav — reachable via /personas or
- * the small link in the footer.
+ * archetype, with a link to a detail page showing the full dimension
+ * breakdown and every question/answer that produced it, plus a link from
+ * there to the exact results page a real test-taker would land on. Not
+ * linked from the main nav — reachable via /personas or the small link in
+ * the footer.
  */
 export default function PersonasPage() {
   const rows = personas.map((persona) => {
@@ -28,12 +29,11 @@ export default function PersonasPage() {
     const ranked = rankArchetypes(profile);
     const rank = ranked.findIndex((r) => r.id === persona.targetArchetypeId) + 1;
     const result = ranked.find((r) => r.id === persona.targetArchetypeId)!;
-    const encoded = encodeProfile(profile);
     return {
       persona,
       rank,
       percent: fitPercent(result.fitScore),
-      href: `/results?a=${encoded}`,
+      href: `/personas/${persona.id}`,
       targetName: archetypeById.get(persona.targetArchetypeId)?.name ?? persona.targetArchetypeId,
     };
   });
@@ -48,7 +48,7 @@ export default function PersonasPage() {
           One synthetic persona per archetype, each built from that archetype&apos;s own target
           profile and run through the real assessment scoring pipeline (see{" "}
           <code className="font-mono text-sm">docs/research/persona-suite-v1.md</code>). Click a
-          card to see the actual results page that profile produces.
+          card to see the full dimension breakdown and every question/answer behind its score.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4">
