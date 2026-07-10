@@ -75,6 +75,31 @@ This changes nothing for a well-matched top archetype (the floor is a no-op when
 is already ≥ the raw fitScore) and only demotes archetypes whose apparent fit was propped up by
 secondary-dimension agreement rather than a real match on what makes that archetype what it is.
 
+## Step 2.6 — Floor tie-break (v1.4)
+
+Added after a real user found four archetypes (SRE, Sales Engineer, Forward Deployed Engineer,
+Developer Relations) all capped at *exactly* 50%, for four completely unrelated reasons. Root cause:
+the 1-5 answer scale only produces 5 possible `fit()` values (1.0/0.75/0.5/0.25/0), so Step 2.5's hard
+floor collapses archetypes with meaningfully different overall matches onto identical scores whenever
+their worst-top-dimension gap happens to be the same integer distance. This is a real information-loss
+problem in the display, not a scoring error — the underlying `rawFitScore`s were already different
+(e.g. 65-71% in the reported case) before Step 2.5 capped them all to the same 50%.
+
+```
+TIEBREAK_EPSILON = 0.1
+fitScore = rawFitScore <= worstTopFit
+  ? rawFitScore                                                   // floor doesn't bind — unchanged
+  : worstTopFit + TIEBREAK_EPSILON * (rawFitScore - worstTopFit)   // floor binds — small upward nudge
+```
+
+In words: when the floor isn't binding (the raw score is already at or below the worst-top-fit value),
+nothing changes. When it *is* binding, the capped score is nudged up by at most 10% of the gap between
+the floor and the raw score — enough to break ties between archetypes capped at the same value for
+different reasons, while preserving Step 2.5's core guarantee: an archetype can never come close to
+escaping a bad match on its own defining trait through secondary-dimension agreement. A "0.5 nudged by
+10% of a large gap" still reads as roughly the same percentage on the results page; it just stops being
+bit-for-bit identical to three other archetypes' scores for unrelated reasons.
+
 ## Step 3 — Ranking
 
 Sort archetypes descending by `fitScore`. The result page shows the ranked list (PLAN.md Phase 5

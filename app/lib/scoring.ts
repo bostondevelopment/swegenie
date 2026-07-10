@@ -69,7 +69,21 @@ export function scoreArchetype(
   const worstTopFit = Math.min(
     ...contributions.filter((c) => c.weight === topWeight).map((c) => c.fit)
   );
-  const fitScore = Math.min(rawFitScore, worstTopFit);
+
+  // Step 2.6 (v1.4): tie-break within the floor using the raw score. The 1-5
+  // answer scale only produces 5 possible fit() values per dimension, so the
+  // floor alone often collapses archetypes with meaningfully different
+  // overall matches onto the exact same capped value (e.g. a real user saw
+  // four different archetypes all land on precisely 0.5, for four unrelated
+  // reasons). TIEBREAK_EPSILON lets rawFitScore break that tie, but only by
+  // a small, one-directional nudge upward from the floor — an archetype can
+  // never recover more than 10% of the gap between its floor and its
+  // (diluted) raw score, preserving Step 2.5's disqualifying intent.
+  const TIEBREAK_EPSILON = 0.1;
+  const fitScore =
+    rawFitScore <= worstTopFit
+      ? rawFitScore
+      : worstTopFit + TIEBREAK_EPSILON * (rawFitScore - worstTopFit);
 
   const topContributors = [...contributions]
     .sort((a, b) => b.contribution - a.contribution || b.weight - a.weight)

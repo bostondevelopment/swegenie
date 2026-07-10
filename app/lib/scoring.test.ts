@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { rankArchetypes, scoreArchetype, fitPercent } from "./scoring";
-import { archetypeById } from "./taxonomy";
+import { archetypeById, type Archetype } from "./taxonomy";
 
 /**
  * Fixtures originally from docs/research/validation-v1.md's Phase 2 synthetic
@@ -204,8 +204,25 @@ describe("scoreArchetype arithmetic", () => {
   });
 });
 
-describe("Step 2.5 top-dimension floor (v1.1 regression)", () => {
-  it("caps Security Engineer's score at its fit on adversarial_threat_modeling, its only weight-1.0 dimension", () => {
+const TIEBREAK_EPSILON = 0.1;
+
+/** Mirrors scoring.ts's Step 2.5 + 2.6 math so tests can compute an exact expected fitScore. */
+function expectedFitScore(profile: Record<string, number>, archetype: Archetype): number {
+  const entries = Object.entries(profile).map(([d, v]) => {
+    const s = archetype.scores[d as keyof typeof archetype.scores];
+    return { weight: s.weight, fit: 1 - Math.abs(v - s.target) / 4 };
+  });
+  const totalWeight = entries.reduce((sum, e) => sum + e.weight, 0);
+  const rawFitScore = entries.reduce((sum, e) => sum + e.weight * e.fit, 0) / totalWeight;
+  const topWeight = Math.max(...entries.map((e) => e.weight));
+  const worstTopFit = Math.min(...entries.filter((e) => e.weight === topWeight).map((e) => e.fit));
+  return rawFitScore <= worstTopFit
+    ? rawFitScore
+    : worstTopFit + TIEBREAK_EPSILON * (rawFitScore - worstTopFit);
+}
+
+describe("Step 2.5 top-dimension floor (v1.1) + Step 2.6 tie-break (v1.4)", () => {
+  it("caps Security Engineer's score near its fit on adversarial_threat_modeling, its only weight-1.0 dimension", () => {
     const archetype = archetypeById.get("security-engineer")!;
     // A profile that scores well on several 0.5-0.7-weighted dimensions but only
     // middling (3 vs. target 5) on the archetype's single defining trait —
@@ -222,10 +239,14 @@ describe("Step 2.5 top-dimension floor (v1.1 regression)", () => {
         return sum + s.weight * (1 - Math.abs(v - s.target) / 4);
       }, 0) / Object.keys(profile).reduce((sum, d) => sum + archetype.scores[d as keyof typeof archetype.scores].weight, 0);
 
-    // Fit on the mismatched top dimension: 1 - |3-5|/4 = 0.5.
-    expect(result.fitScore).toBeCloseTo(0.5, 5);
+    // Fit on the mismatched top dimension is 0.5; Step 2.6 nudges up by at most
+    // 10% of the gap to the (higher) raw score, so the final score sits close
+    // to 0.5 but not bit-for-bit equal to it.
+    expect(result.fitScore).toBeCloseTo(expectedFitScore(profile, archetype), 10);
+    expect(result.fitScore).toBeGreaterThanOrEqual(0.5);
+    expect(result.fitScore).toBeLessThan(0.5 + TIEBREAK_EPSILON * (rawWeightedAverage - 0.5) + 1e-9);
     // Without the floor, the raw weighted average would have been noticeably higher —
-    // confirms the floor is actually doing something here, not a no-op.
+    // confirms the floor is still doing the heavy lifting, not a no-op.
     expect(rawWeightedAverage).toBeGreaterThan(result.fitScore);
   });
 
@@ -251,8 +272,52 @@ describe("Step 2.5 top-dimension floor (v1.1 regression)", () => {
     profile[firstTiedDim] = firstTiedScore.target === 5 ? 1 : 5;
 
     const result = scoreArchetype(profile, archetype)!;
-    const expectedFloor = 1 - Math.abs(profile[firstTiedDim] - firstTiedScore.target) / 4;
-    expect(result.fitScore).toBeCloseTo(expectedFloor, 5);
+    expect(result.fitScore).toBeCloseTo(expectedFitScore(profile, archetype), 10);
+    const worstTopFit = 1 - Math.abs(profile[firstTiedDim] - firstTiedScore.target) / 4;
+    // Still capped close to the worst-tied-dimension fit, not rescued by the other two.
+    expect(result.fitScore).toBeLessThan(worstTopFit + TIEBREAK_EPSILON * (1 - worstTopFit) + 1e-9);
+  });
+
+  it("Step 2.6: breaks ties between two profiles floored at the same value for unrelated reasons", () => {
+    // Reproduces the real reported case: SRE, Sales Engineer, Forward Deployed
+    // Engineer, and Developer Relations all landed at exactly 50% pre-fix, for
+    // four unrelated dimension mismatches, because the 1-5 scale only produces
+    // 5 possible fit() values. Two profiles hitting the SAME floor value on
+    // the SAME archetype, but differing in how well they match everything
+    // else, should no longer render as bit-for-bit identical scores.
+    const sre = archetypeById.get("sre-production-engineer")!;
+
+    // Profile A: perfect on every other dimension, one 2-point gap on the
+    // floor-triggering dimension (on-call appetite) -> floors at 0.5 with a
+    // high raw score (strong secondary-dimension match).
+    const profileA: Record<string, number> = {};
+    for (const [dim, s] of Object.entries(sre.scores)) profileA[dim] = s.target;
+    profileA.oncall_incident_appetite = sre.scores.oncall_incident_appetite.target === 5 ? 3 : 5;
+
+    // Profile B: same 2-point gap on the same floor-triggering dimension, but
+    // mediocre (2-point-average) on every other dimension too -> floors at
+    // the same 0.5, but with a much lower raw score (weak secondary match).
+    const profileB: Record<string, number> = {};
+    for (const [dim, s] of Object.entries(sre.scores)) {
+      profileB[dim] = s.target >= 3 ? s.target - 2 : s.target + 2;
+    }
+    profileB.oncall_incident_appetite = profileA.oncall_incident_appetite;
+
+    const resultA = scoreArchetype(profileA, sre)!;
+    const resultB = scoreArchetype(profileB, sre)!;
+
+    expect(resultA.fitScore).toBeCloseTo(expectedFitScore(profileA, sre), 10);
+    expect(resultB.fitScore).toBeCloseTo(expectedFitScore(profileB, sre), 10);
+    // Both still cluster tightly around the 0.5 floor (preserving Step 2.5's
+    // disqualifying power)...
+    expect(resultA.fitScore).toBeGreaterThanOrEqual(0.5);
+    expect(resultB.fitScore).toBeGreaterThanOrEqual(0.5);
+    expect(resultA.fitScore).toBeLessThan(0.5 + TIEBREAK_EPSILON + 1e-9);
+    expect(resultB.fitScore).toBeLessThan(0.5 + TIEBREAK_EPSILON + 1e-9);
+    // ...but they're no longer identical: the stronger secondary-dimension
+    // match (A) ends up meaningfully above the weaker one (B), which is
+    // exactly the tie-breaking property this step exists to add.
+    expect(resultA.fitScore).toBeGreaterThan(resultB.fitScore);
   });
 });
 
@@ -266,9 +331,11 @@ describe("v1.2 regressions (teaching/visibility split + domain-fluency gates)", 
       public_visibility_comfort: 1, // but hates public visibility — DevRel's other weight-1.0 dim
     };
     const result = scoreArchetype(profile, archetype)!;
-    // fit on public_visibility_comfort: 1 - |1-5|/4 = 0 -> floors the whole score to 0,
+    // fit on public_visibility_comfort: 1 - |1-5|/4 = 0 -> floors the whole score
+    // near 0 (Step 2.6 permits a small upward nudge from the raw score),
     // regardless of the perfect teaching_enjoyment match.
-    expect(result.fitScore).toBeCloseTo(0, 5);
+    expect(result.fitScore).toBeCloseTo(expectedFitScore(profile, archetype), 10);
+    expect(result.fitScore).toBeLessThan(TIEBREAK_EPSILON + 1e-9);
   });
 
   it("Customer Success Engineer keeps high teaching_enjoyment but low public_visibility_comfort, unlike DevRel", () => {
@@ -288,8 +355,10 @@ describe("v1.2 regressions (teaching/visibility split + domain-fluency gates)", 
       ml_engineering_fluency: 1, // target 5, weight 1.0 — reports no ML background
     };
     const result = scoreArchetype(profile, archetype)!;
-    // fit on ml_engineering_fluency: 1 - |1-5|/4 = 0 -> floors the score to 0.
-    expect(result.fitScore).toBeCloseTo(0, 5);
+    // fit on ml_engineering_fluency: 1 - |1-5|/4 = 0 -> floors the score near 0
+    // (Step 2.6 permits a small upward nudge from the raw score).
+    expect(result.fitScore).toBeCloseTo(expectedFitScore(profile, archetype), 10);
+    expect(result.fitScore).toBeLessThan(TIEBREAK_EPSILON + 1e-9);
   });
 
   it("every domain-fluency dimension is a weight-1.0-or-near gate for exactly its own archetype", () => {
