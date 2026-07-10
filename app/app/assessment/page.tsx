@@ -129,6 +129,7 @@ export default function AssessmentPage() {
           />
         ) : (
           <QuestionStep
+            key={step.question.id}
             question={step.question}
             value={state.answers[step.question.id]}
             onAnswer={(v) => setAnswer(step.question.id, v)}
@@ -243,7 +244,8 @@ function QuestionStep({
   value: number | null | undefined;
   onAnswer: (v: number) => void;
 }) {
-  const [sliderValue, setSliderValue] = useState(3);
+  const [sliderValue, setSliderValue] = useState(typeof value === "number" ? value : 3);
+  const [sliderTouched, setSliderTouched] = useState(typeof value === "number");
 
   return (
     <div>
@@ -273,14 +275,26 @@ function QuestionStep({
             min={question.scale.min}
             max={question.scale.max}
             value={sliderValue}
-            onChange={(e) => setSliderValue(Number(e.target.value))}
+            onChange={(e) => {
+              setSliderValue(Number(e.target.value));
+              setSliderTouched(true);
+            }}
             className="w-full accent-[var(--color-accent)]"
           />
           <div className="flex justify-between text-xs text-[var(--color-muted)] mt-2 mb-6">
             <span className="max-w-[45%]">{question.scale.minLabel}</span>
             <span className="max-w-[45%] text-right">{question.scale.maxLabel}</span>
           </div>
-          <button onClick={() => onAnswer(sliderValue)} className="btn-primary px-5 py-2.5 font-medium">
+          {!sliderTouched && (
+            <p className="text-xs text-[var(--color-muted)] mb-3">
+              Drag the slider to set your answer, or use &ldquo;Skip / unsure&rdquo; below.
+            </p>
+          )}
+          <button
+            onClick={() => onAnswer(sliderValue)}
+            disabled={!sliderTouched}
+            className="btn-primary px-5 py-2.5 font-medium disabled:opacity-40 disabled:cursor-not-allowed"
+          >
             Continue
           </button>
         </div>
