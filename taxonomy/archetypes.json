@@ -1,7 +1,7 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "generated": "2026-07-09",
-  "notes": "v1.2: (1) split teaching_enjoyment into itself (private teaching) + new public_visibility_comfort (public/social visibility), making public_visibility_comfort Developer Relations' true weight-1.0 defining trait and correctly keeping Customer Success Engineer's teaching_enjoyment high while its public_visibility_comfort stays low. (2) Added 4 new domain-fluency skill dimensions (ml_engineering_fluency, mobile_platform_fluency, data_infrastructure_fluency, cloud_infrastructure_fluency) as real gates for ML Engineer, Mobile Engineer, Data Engineer, and Platform Engineer respectively, mirroring the existing physical_constraint_engineering/adversarial_threat_modeling pattern. Both changes made after a real user's second assessment run showed ML Engineer winning on pure generic temperament (with zero self-reported ML/data background) and Developer Relations scoring high despite answers describing only private, not public, teaching preference. v1.1: rescored account_relationship_ownership as two independent dimensions (account_portfolio_breadth, relationship_continuity) per docs/research/dimensions-v1.1-relationship-split.md, grounded in a 149-posting real-JD research pass triggered by a real user bug report. v1.0 base: merged from 5 parallel cluster-scoring drafts (taxonomy/archetypes-draft-*.json), each scoring its archetypes against all 16 v1.0 dimensions in taxonomy/dimensions.json (target 1-5, weight 0.0-1.0, rationale citing the source brief). confidence is \"medium\" for Mobile Engineer and Embedded/IoT Engineer per the Phase 1 handoff decision (under-sourced, 9 postings vs. the 15 target); \"high\" for the other 16. Every archetype's scores object contains all 22 dimension ids in taxonomy/dimensions.json v1.2.",
+  "notes": "v1.3: raised Product/Full-Stack Software Engineer's stakeholder_client_comfort (0.5->0.7) and people_management_orientation (0.4->0.7) weights, after a real user reported strong client-facing/people-management answers not meaningfully suppressing a Product/Full-Stack SWE #1 match. Root cause: this archetype has no single weight>=0.8 defining trait (unlike Security/DevRel/ML/Mobile/Data/Platform, which each have a real gate), so it wins largely by exact-match 'free fit' on several dimensions where its own target is neutral (3) -- a structural advantage of generalist archetypes over specialist ones that a 2-dimension weight bump only partially offsets (verified: raw score for the reporting user's profile moved 72.5%->71.1%, still #1, ~1 point ahead of Solutions Architect Consulting-Side and Engineering Management). Flagged as a real, only-partially-resolved limitation, not claimed as fully fixed -- see the scoring-mechanism discussion in conversation with the user. All 10 Phase 2 synthetic personas + all regression tests still pass unchanged. v1.2: (1) split teaching_enjoyment into itself (private teaching) + new public_visibility_comfort (public/social visibility), making public_visibility_comfort Developer Relations' true weight-1.0 defining trait and correctly keeping Customer Success Engineer's teaching_enjoyment high while its public_visibility_comfort stays low. (2) Added 4 new domain-fluency skill dimensions (ml_engineering_fluency, mobile_platform_fluency, data_infrastructure_fluency, cloud_infrastructure_fluency) as real gates for ML Engineer, Mobile Engineer, Data Engineer, and Platform Engineer respectively, mirroring the existing physical_constraint_engineering/adversarial_threat_modeling pattern. Both changes made after a real user's second assessment run showed ML Engineer winning on pure generic temperament (with zero self-reported ML/data background) and Developer Relations scoring high despite answers describing only private, not public, teaching preference. v1.1: rescored account_relationship_ownership as two independent dimensions (account_portfolio_breadth, relationship_continuity) per docs/research/dimensions-v1.1-relationship-split.md, grounded in a 149-posting real-JD research pass triggered by a real user bug report. v1.0 base: merged from 5 parallel cluster-scoring drafts (taxonomy/archetypes-draft-*.json), each scoring its archetypes against all 16 v1.0 dimensions in taxonomy/dimensions.json (target 1-5, weight 0.0-1.0, rationale citing the source brief). confidence is \"medium\" for Mobile Engineer and Embedded/IoT Engineer per the Phase 1 handoff decision (under-sourced, 9 postings vs. the 15 target); \"high\" for the other 16. Every archetype's scores object contains all 22 dimension ids in taxonomy/dimensions.json v1.2.",
   "archetypes": [
     {
       "id": "product-full-stack-software-engineer",
@@ -45,8 +45,8 @@
         },
         "stakeholder_client_comfort": {
           "target": 3,
-          "weight": 0.5,
-          "rationale": "Constant cross-functional collaboration with Product/Design/Platform, but counterparts are internal technical/product peers, not external clients or executives."
+          "weight": 0.7,
+          "rationale": "Constant cross-functional collaboration with Product/Design/Platform, but counterparts are internal technical/product peers, not external clients or executives. (weight raised 0.5->0.7 in a targeted fix: high client-facing comfort is a real signal toward SA/FDE/consulting-type archetypes and should be able to meaningfully suppress a pure-generalist-IC match, not just nudge it.)"
         },
         "teaching_enjoyment": {
           "target": 2,
@@ -90,8 +90,8 @@
         },
         "people_management_orientation": {
           "target": 2,
-          "weight": 0.4,
-          "rationale": "IC and management are framed as parallel tracks; most product engineers stay IC-focused."
+          "weight": 0.7,
+          "rationale": "IC and management are framed as parallel tracks; most product engineers stay IC-focused. (weight raised 0.4->0.7 in a targeted fix: this is one of the clearest available signals toward the EM track and should carry real weight against a pure-IC match, not be diluted by several neutral moderate-target dimensions elsewhere.)"
         },
         "public_visibility_comfort": {
           "target": 1,
