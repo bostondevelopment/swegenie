@@ -1,0 +1,1424 @@
+{
+  "product-full-stack-software-engineer": {
+    "personaName": "Product / Full-Stack Software Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9801587301587302,
+    "rankedList": [
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.98
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.755
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.743
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.528
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.525
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.525
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.381
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.304
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.303
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.299
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.296
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.078
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.076
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.076
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.073
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.072
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.069
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.065
+      }
+    ]
+  },
+  "platform-infrastructure-engineer": {
+    "personaName": "Platform / Infrastructure Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9898148148148146,
+    "rankedList": [
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.99
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.9
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.8
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.743
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.526
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.525
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.523
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.381
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.301
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.301
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.3
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.289
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.076
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.073
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.07
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.068
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.063
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.063
+      }
+    ]
+  },
+  "sre-production-engineer": {
+    "personaName": "SRE / Production Engineer",
+    "targetRank": 1,
+    "targetScore": 0.981060606060606,
+    "rankedList": [
+      {
+        "id": "sre-production-engineer",
+        "score": 0.981
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.861
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.751
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.734
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.698
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.694
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.526
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.378
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.294
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.293
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.293
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.286
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.078
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.075
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.072
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.062
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.061
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.057
+      }
+    ]
+  },
+  "data-engineer": {
+    "personaName": "Data Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9868913857677902,
+    "rankedList": [
+      {
+        "id": "data-engineer",
+        "score": 0.987
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.897
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.76
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.757
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.735
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.723
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.536
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.53
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.52
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.38
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.298
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.297
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.293
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.291
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.069
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.066
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.066
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.059
+      }
+    ]
+  },
+  "ml-engineer": {
+    "personaName": "ML Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9857954545454547,
+    "rankedList": [
+      {
+        "id": "ml-engineer",
+        "score": 0.986
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.894
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.771
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.75
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.71
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.536
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.534
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.532
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.524
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.383
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.297
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.296
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.294
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.292
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.068
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.066
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.064
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.062
+      }
+    ]
+  },
+  "mobile-engineer": {
+    "personaName": "Mobile Engineer (iOS / Android)",
+    "targetRank": 1,
+    "targetScore": 0.9967532467532468,
+    "rankedList": [
+      {
+        "id": "mobile-engineer",
+        "score": 0.997
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.76
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.662
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.524
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.516
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.514
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.509
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.371
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.294
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.291
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.289
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.286
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.061
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.059
+      }
+    ]
+  },
+  "embedded-iot-engineer": {
+    "personaName": "Embedded / IoT Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9968750000000001,
+    "rankedList": [
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.997
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.805
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.751
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.692
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.633
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.515
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.375
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.295
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.291
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.288
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.286
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.069
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.067
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.066
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.062
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.06
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.059
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.058
+      }
+    ]
+  },
+  "security-engineer": {
+    "personaName": "Security Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9941176470588234,
+    "rankedList": [
+      {
+        "id": "security-engineer",
+        "score": 0.994
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.869
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.789
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.753
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.743
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.678
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.526
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.296
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.296
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.29
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.076
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.075
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.072
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.072
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.067
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.065
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.064
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.064
+      }
+    ]
+  },
+  "sales-engineer-pre-sales": {
+    "personaName": "Sales Engineer / Pre-Sales Engineer",
+    "targetRank": 1,
+    "targetScore": 1,
+    "rankedList": [
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 1
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.769
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.765
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.757
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.53
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.523
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.309
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.301
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.295
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.067
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.063
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.062
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.06
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.06
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.058
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.058
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.058
+      }
+    ]
+  },
+  "solutions-architect-vendor-side": {
+    "personaName": "Solutions Architect (Vendor-Side)",
+    "targetRank": 1,
+    "targetScore": 0.9945054945054946,
+    "rankedList": [
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.995
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.956
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.769
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.76
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.536
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.533
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.522
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.303
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.295
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.291
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.071
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.067
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.065
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.063
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.063
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.061
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.058
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.058
+      }
+    ]
+  },
+  "solutions-architect-consulting": {
+    "personaName": "Solutions Architect (Consulting-Side)",
+    "targetRank": 1,
+    "targetScore": 0.9948453608247424,
+    "rankedList": [
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.995
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.756
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.537
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.534
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.527
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.521
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.31
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.299
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.293
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.292
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.07
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.068
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.061
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.061
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.061
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.057
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.056
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.053
+      }
+    ]
+  },
+  "forward-deployed-engineer": {
+    "personaName": "Forward Deployed Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9859813084112152,
+    "rankedList": [
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.986
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.756
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.755
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.75
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.719
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.51
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.3
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.295
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.294
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.286
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.072
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.072
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.068
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.064
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.063
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.062
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.057
+      }
+    ]
+  },
+  "customer-support-engineer": {
+    "personaName": "Customer Support Engineer",
+    "targetRank": 1,
+    "targetScore": 1,
+    "rankedList": [
+      {
+        "id": "customer-support-engineer",
+        "score": 1
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.757
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.74
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.716
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.522
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.51
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.298
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.298
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.073
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.071
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.071
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.067
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.066
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.066
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.063
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.062
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.06
+      }
+    ]
+  },
+  "customer-support-solutions-engineer": {
+    "personaName": "Customer Success / Customer Solutions Engineer",
+    "targetRank": 1,
+    "targetScore": 1,
+    "rankedList": [
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 1
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.842
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.751
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.527
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.304
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.304
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.3
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.292
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.282
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.075
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.069
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.068
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.066
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.065
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.062
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.059
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.058
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.057
+      }
+    ]
+  },
+  "consulting-engineer-professional-services": {
+    "personaName": "Consulting Engineer / Professional Services Engineer",
+    "targetRank": 1,
+    "targetScore": 0.9950980392156864,
+    "rankedList": [
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.995
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.956
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.766
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.761
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.756
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.533
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.531
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.523
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.296
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.293
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.29
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.073
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.07
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.066
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.066
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.062
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.062
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.061
+      }
+    ]
+  },
+  "developer-relations-advocacy": {
+    "personaName": "Developer Relations / Developer Advocacy",
+    "targetRank": 1,
+    "targetScore": 1,
+    "rankedList": [
+      {
+        "id": "developer-relations-advocacy",
+        "score": 1
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.783
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.709
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.524
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.295
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.292
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.291
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.288
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.286
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.072
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.066
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.06
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.059
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.057
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.057
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.056
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.052
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.049
+      }
+    ]
+  },
+  "engineering-management": {
+    "personaName": "Engineering Management (Track)",
+    "targetRank": 1,
+    "targetScore": 1,
+    "rankedList": [
+      {
+        "id": "engineering-management",
+        "score": 1
+      },
+      {
+        "id": "technical-product-manager",
+        "score": 0.754
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.69
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.517
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.298
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.295
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.292
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.292
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.284
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.066
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.063
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.061
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.061
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.059
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.059
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.058
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.056
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.051
+      }
+    ]
+  },
+  "technical-product-manager": {
+    "personaName": "Technical Product Manager",
+    "targetRank": 1,
+    "targetScore": 0.980263157894737,
+    "rankedList": [
+      {
+        "id": "technical-product-manager",
+        "score": 0.98
+      },
+      {
+        "id": "solutions-architect-consulting",
+        "score": 0.753
+      },
+      {
+        "id": "customer-support-engineer",
+        "score": 0.518
+      },
+      {
+        "id": "solutions-architect-vendor-side",
+        "score": 0.305
+      },
+      {
+        "id": "product-full-stack-software-engineer",
+        "score": 0.304
+      },
+      {
+        "id": "customer-support-solutions-engineer",
+        "score": 0.301
+      },
+      {
+        "id": "consulting-engineer-professional-services",
+        "score": 0.3
+      },
+      {
+        "id": "engineering-management",
+        "score": 0.074
+      },
+      {
+        "id": "sales-engineer-pre-sales",
+        "score": 0.073
+      },
+      {
+        "id": "platform-infrastructure-engineer",
+        "score": 0.072
+      },
+      {
+        "id": "forward-deployed-engineer",
+        "score": 0.069
+      },
+      {
+        "id": "security-engineer",
+        "score": 0.068
+      },
+      {
+        "id": "developer-relations-advocacy",
+        "score": 0.066
+      },
+      {
+        "id": "ml-engineer",
+        "score": 0.064
+      },
+      {
+        "id": "data-engineer",
+        "score": 0.06
+      },
+      {
+        "id": "sre-production-engineer",
+        "score": 0.057
+      },
+      {
+        "id": "mobile-engineer",
+        "score": 0.056
+      },
+      {
+        "id": "embedded-iot-engineer",
+        "score": 0.053
+      }
+    ]
+  }
+}
