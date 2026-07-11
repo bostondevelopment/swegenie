@@ -5,7 +5,7 @@ export function SiteHeader() {
     <header className="border-b border-[var(--color-border)]">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 h-14 flex items-center justify-between">
         <Link href="/" className="font-display font-semibold text-lg tracking-tight">
-          Roleprint<span className="text-[var(--color-accent)]">.</span>
+          SWE Genie<span className="text-[var(--color-accent)]">.</span>
         </Link>
         <nav className="flex items-center gap-3 sm:gap-5 text-sm text-[var(--color-muted)]">
           <Link

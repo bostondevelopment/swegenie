@@ -1,11 +1,15 @@
 # ADR-004: Product name and domain
 
-**Status:** DRAFT — pending human confirmation. Nothing in this ADR should be purchased,
-registered, or baked into user-facing copy/URLs/legal filings until a human has independently
-verified availability and signed off. This was written autonomously (no human in the loop) per
-explicit instruction; treat every availability claim below as a lead, not a fact.
+**Status:** Name ACCEPTED (human-confirmed, overriding the autonomous recommendation below) —
+domain/trademark/handle verification still pending. **SWE Genie** is the product name, confirmed
+directly by the user on 2026-07-11, in place of this ADR's original "Roleprint" recommendation.
+The evaluation below is kept as a historical record of the autonomous naming pass, not because
+Roleprint is still under consideration. Nothing about the *domain* (swegenie.com/.dev/.io, GitHub
+org, X/LinkedIn handles) should be purchased, registered, or treated as available until a human
+independently runs a real WHOIS/handle/trademark check — none of that diligence has been done for
+"SWE Genie" yet, same caveat this ADR always had for "Roleprint."
 
-**Date:** 2026-07-09
+**Date:** 2026-07-09 (original autonomous draft); name decision updated 2026-07-11
 
 ## Context
 
@@ -49,7 +53,21 @@ trademark screen before any purchase or public commitment.**
 | 7 | **Archetype(s).dev** | Direct archetype framing | `archetype.dev` is a **live, unrelated product** (billing-as-a-service for API teams) | Ruled out — direct domain collision |
 | 8 | **What Kind of Engineer** (descriptive, `.engineer`/`.engineering` alt-TLD) | Descriptive/SEO-first | No direct collision found; `.engineer` and `.engineering` are real, live gTLDs well-suited to this content (career/portfolio sites already use them) | Viable as a *content/SEO* domain, weak as a spoken brand name |
 
-## Decision (proposed — needs confirmation)
+## Decision update (2026-07-11): superseded by direct human choice
+
+The user picked **SWE Genie** directly, in the same conversation that requested launching the
+site on GitHub Pages — not by working through this ADR's candidate list or evaluation criteria.
+That's a valid, higher-authority decision than an autonomous recommendation regardless of how it
+was reached, so it overrides the "Top recommendation: Roleprint" section below. The candidate
+evaluation and "Roleprint" rationale are kept as-is beneath this note for historical record (what
+was actually considered and why), not as live guidance — treat "SWE Genie" as the name going
+forward everywhere in this doc's "What still needs human sign-off" and "Consequences" sections.
+
+The unfinished diligence items in this ADR (real WHOIS/handle/trademark checks, purchase) still
+apply — just against "SWE Genie" / `swegenie.*` instead of "Roleprint" / `roleprint.*`. None of
+that has been run yet.
+
+## Original decision (2026-07-09, superseded above)
 
 **Top recommendation: Roleprint**, with `roleprint.dev` as primary domain candidate and
 `roleprint.com` as a stretch/monitor target if available.
@@ -79,22 +97,24 @@ collision).
 
 ## What still needs human sign-off before this is final
 
-1. **Real domain availability check** (WHOIS, not search-engine guessing) for `roleprint.com`,
+1. **Real domain availability check** (WHOIS, not search-engine guessing) for `swegenie.com`,
    `.dev`, `.io`, and `.ai` — pick based on availability + price, `.com` preferred if free/cheap.
-2. **Handle checks**: GitHub org, X/Twitter, LinkedIn company page for "roleprint" (or close
+2. **Handle checks**: GitHub org, X/Twitter, LinkedIn company page for "swegenie" (or close
    variants if taken).
 3. **Trademark sanity screen** — at minimum a USPTO TESS search in software/career-services
-   classes; "print" compounds are common enough that a proper screen matters more than usual.
+   classes.
 4. **Purchase/registration** — not to be done by an agent; needs a human with payment
    credentials and legal authority to commit the org to a brand name.
-5. **Fallback plan** — if `roleprint.*` fails diligence, re-run this evaluation on the runner-up
-   (`.engineer` descriptive domain) or pull 2-3 fresh candidates; do not default silently to the
-   ADR-001 placeholder table without a new decision record.
+5. **Fallback plan** — if `swegenie.*` fails diligence, that's a decision for the human to make
+   (variant spelling, different TLD, or a fresh name entirely) — don't default silently back to
+   Roleprint or the ADR-001 placeholder without a new decision record.
 
 ## Consequences
 
-- Until a human confirms, all app code, copy, and docs should keep using "CareerGuru (working
-  name)" per ADR-001 — do not start replacing it based on this draft alone.
-- Once confirmed, this ADR should be updated to Status: Accepted with the actual registered
-  domain and handles recorded, and the rename sweep (repo, domain, copy) described in ADR-001's
-  Consequences should be executed as a single tracked pass.
+- The **name** "SWE Genie" is confirmed and safe to use everywhere in app code, copy, and docs
+  (done as of the 2026-07-11 rebrand sweep — see the commit that introduced this update) —
+  unlike the original Roleprint draft, this one didn't need to wait, since it came from the human
+  directly rather than an autonomous recommendation needing confirmation.
+- The **domain/handles/trademark** are not confirmed — `metadataBase`, ADR references, etc. use a
+  placeholder (`swegenie.example`) until a human completes the checks in the section above and
+  this ADR is updated with the real registered domain.

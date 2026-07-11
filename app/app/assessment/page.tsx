@@ -6,7 +6,7 @@ import { FLOW, TOTAL_STEPS, aggregateAnswersToProfile } from "@/lib/assessment-f
 import { encodeProfile } from "@/lib/encode";
 import { track } from "@/lib/analytics";
 
-const STORAGE_KEY = "roleprint_assessment_v1";
+const STORAGE_KEY = "swegenie_assessment_v1";
 
 interface StoredState {
   version: 1;

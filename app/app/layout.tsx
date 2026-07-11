@@ -20,10 +20,10 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://roleprint.example"),
+  metadataBase: new URL("https://swegenie.example"),
   title: {
-    default: "Roleprint — find your engineering role archetype",
-    template: "%s — Roleprint",
+    default: "SWE Genie — find your engineering role archetype",
+    template: "%s — SWE Genie",
   },
   description:
     "A 6-minute assessment that ranks 18 engineering role archetypes against how you actually work, with an explainable, sourced fit score for each.",

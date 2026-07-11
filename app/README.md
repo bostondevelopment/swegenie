@@ -1,6 +1,6 @@
-# Roleprint (working name — see `docs/adr/004-name.md`)
+# SWE Genie (see `docs/adr/004-name.md`)
 
-The Next.js app for CareerGuru/Roleprint's assessment product. See the repo root `PLAN.md` and
+The Next.js app for CareerGuru/SWE Genie's assessment product. See the repo root `PLAN.md` and
 `docs/HANDOFF.md` for full project context.
 
 ## Development

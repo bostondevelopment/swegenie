@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Privacy",
-  description: "What Roleprint collects, what it doesn't, and how your answers are handled.",
+  description: "What SWE Genie collects, what it doesn't, and how your answers are handled.",
 };
 
 export default function PrivacyPage() {

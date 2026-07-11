@@ -212,10 +212,11 @@ explanations as fair and specific (not horoscope-y).
       HR-flavored; think levels.fyi/Pragmatic Engineer energy, not corporate career portal).
       → `/docs/brand/positioning.md`.
 - [x] Name + domain: 5–10 candidates, availability check (domain, GitHub, X/LinkedIn handles),
-      trademark sanity scan, pick one (ADR-004). → Draft pick: **Roleprint**. Search-based
-      sanity checks only — real WHOIS/trademark/handle verification and purchase still need the
-      human; ADR-004 stays DRAFT until then. Use "Roleprint" as the working name in Phase 5 in
-      the meantime (see `docs/HANDOFF.md`).
+      trademark sanity scan, pick one (ADR-004). → Autonomous draft pick was **Roleprint**;
+      superseded 2026-07-11 by the human directly choosing **SWE Genie** instead (see ADR-004's
+      2026-07-11 update). The *name* is confirmed and used everywhere in app code/copy as of the
+      rebrand sweep; real WHOIS/trademark/handle verification and purchase for the domain still
+      need the human.
 - [x] Visual identity: logo/wordmark, palette, typography, component look (light+dark),
       OG/social card templates — the result page IS the marketing surface, since shared results
       are the growth loop, so design result-card shareability first-class. → `/docs/brand/identity.md`.

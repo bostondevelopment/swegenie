@@ -16,9 +16,9 @@ export function ShareBar({ topArchetypeName, fitPercent }: { topArchetypeName: s
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMailtoHref(
       `mailto:?subject=${encodeURIComponent(
-        `My Roleprint result: ${topArchetypeName}`
+        `My SWE Genie result: ${topArchetypeName}`
       )}&body=${encodeURIComponent(
-        `I ranked #1 as ${topArchetypeName} (${fitPercent}% fit) on Roleprint's engineering role assessment:\n\n${window.location.href}`
+        `I ranked #1 as ${topArchetypeName} (${fitPercent}% fit) on SWE Genie's engineering role assessment:\n\n${window.location.href}`
       )}`
     );
   }, [topArchetypeName, fitPercent]);
