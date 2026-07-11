@@ -1,7 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
-
-const CONTENT_DIR = path.join(process.cwd(), "content", "results-copy");
+import resultsCopyData from "@/data/results-copy.json";
 
 export interface ResultsCopy {
   whatThisIs: string;
@@ -12,48 +9,18 @@ export interface ResultsCopy {
   howToTestCheaply: string;
 }
 
-const SECTION_KEYS: Record<string, keyof ResultsCopy> = {
-  "What this role actually is": "whatThisIs",
-  "Why you matched": "whyMatchedTemplate",
-  "A day in this role": "aDayInThisRole",
-  "Comp structure": "compStructure",
-  "Growth areas — if this wasn't a perfect fit": "growthAreasTemplate",
-  "How to test this cheaply": "howToTestCheaply",
-};
-
-function parseSections(markdown: string): ResultsCopy {
-  const lines = markdown.split("\n");
-  const sections: Partial<Record<keyof ResultsCopy, string[]>> = {};
-  let current: keyof ResultsCopy | null = null;
-
-  for (const line of lines) {
-    const heading = line.match(/^##\s+(.*)$/);
-    if (heading) {
-      const key = SECTION_KEYS[heading[1].trim()];
-      current = key ?? null;
-      if (current && !sections[current]) sections[current] = [];
-      continue;
-    }
-    if (current) sections[current]!.push(line);
-  }
-
-  const result = {} as ResultsCopy;
-  for (const key of Object.values(SECTION_KEYS)) {
-    result[key] = (sections[key] ?? []).join("\n").trim();
-  }
-  return result;
-}
-
-const cache = new Map<string, ResultsCopy>();
+// Precomputed at build time from content/results-copy/*.md by
+// scripts/generate-results-copy.mjs (npm run results-copy:generate) — not
+// read from disk at runtime, so this module is safe to import from a
+// Client Component (needed by ResultsClient.tsx) as well as a Server
+// Component; Node's `fs` module can't be bundled for the browser, which is
+// what the old fs.readFileSync-per-request version couldn't do here.
+const data = resultsCopyData as Record<string, ResultsCopy>;
 
 export function getResultsCopy(archetypeId: string): ResultsCopy {
-  const cached = cache.get(archetypeId);
-  if (cached) return cached;
-  const filePath = path.join(CONTENT_DIR, `${archetypeId}.md`);
-  const raw = fs.readFileSync(filePath, "utf8");
-  const parsed = parseSections(raw);
-  cache.set(archetypeId, parsed);
-  return parsed;
+  const copy = data[archetypeId];
+  if (!copy) throw new Error(`No results copy for archetype id: ${archetypeId}`);
+  return copy;
 }
 
 /** Fills {{top_dimension_1}}, {{top_dimension_2}}, {{top_dimension_3}} in a why-matched template. */
