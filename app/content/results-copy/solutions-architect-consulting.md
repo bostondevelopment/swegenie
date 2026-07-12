@@ -22,4 +22,5 @@ If {{growth_dimension}} came back lower than this role typically wants, that's w
 
 ## How to test this cheaply
 
-Take on (or volunteer for) a cross-team or cross-vendor integration problem at your current job — something that forces you to reason across two unfamiliar platforms or cloud stacks rather than your usual one — and notice whether the context-switching feels energizing or just tiring. Separately, try drafting a solution blueprint or level-of-effort estimate for a hypothetical multi-vendor client problem and see whether you'd rather own that design document or be the one implementing it — that distinction (design-and-handoff versus build-and-run) is the sharpest real test of fit for this archetype.
+- Take on (or volunteer for) a cross-team or cross-vendor integration problem at your current job — something that forces you to reason across two unfamiliar platforms or cloud stacks rather than your usual one — and notice whether the context-switching feels energizing or just tiring.
+- Separately, try drafting a solution blueprint or level-of-effort estimate for a hypothetical multi-vendor client problem and see whether you'd rather own that design document or be the one implementing it — that distinction (design-and-handoff versus build-and-run) is the sharpest real test of fit for this archetype.

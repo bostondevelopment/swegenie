@@ -22,4 +22,5 @@ If {{growth_dimension}} came back lower than this role typically wants, that's w
 
 ## How to test this cheaply
 
-Shadow an SE on a live discovery call or demo at your current company (or ask your network for an intro) and watch how they handle an unscripted technical objection in real time — that improvisational, audience-pressure debugging is the actual job, not the slide deck around it. Separately, volunteer to demo your own team's product or feature to a non-technical stakeholder or a prospective customer once; if narrating and defending your work live to someone who can say "no" feels energizing rather than draining, that's a real signal.
+- Shadow an SE on a live discovery call or demo at your current company (or ask your network for an intro) and watch how they handle an unscripted technical objection in real time — that improvisational, audience-pressure debugging is the actual job, not the slide deck around it.
+- Separately, volunteer to demo your own team's product or feature to a non-technical stakeholder or a prospective customer once; if narrating and defending your work live to someone who can say "no" feels energizing rather than draining, that's a real signal.

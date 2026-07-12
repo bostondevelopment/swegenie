@@ -22,4 +22,5 @@ If {{growth_dimension}} came back lower than this role typically wants, that's w
 
 ## How to test this cheaply
 
-Give a lightning talk at a local meetup or write one public tutorial for a tool you actually use, then honestly ask yourself whether you'd want to do it again next month — the recurring, sustained cadence is what separates DevRel from an engineer who occasionally enjoys writing a blog post. Separately, spend a week answering questions in a public developer community (a product's Discord, a subreddit, Stack Overflow) and notice whether "translating for a stranger who wasn't in the room" energizes you or feels like a tax on real work — that's the job's daily texture, distilled.
+- Give a lightning talk at a local meetup or write one public tutorial for a tool you actually use, then honestly ask yourself whether you'd want to do it again next month — the recurring, sustained cadence is what separates DevRel from an engineer who occasionally enjoys writing a blog post.
+- Separately, spend a week answering questions in a public developer community (a product's Discord, a subreddit, Stack Overflow) and notice whether "translating for a stranger who wasn't in the room" energizes you or feels like a tax on real work — that's the job's daily texture, distilled.

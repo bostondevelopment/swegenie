@@ -20,4 +20,5 @@ If {{growth_dimension}} showed up as a gap in your answers, it's worth checking 
 
 ## How to test this cheaply
 
-Pull up 3-4 real postings across company stages (an early-stage startup, a scale-up like ClassDojo or WHOOP, and a big-tech listing) and read the actual bullet points, not just the title — see how much of your week would go to feature ownership versus meetings/review at each stage. If you can, shadow a code review session or a sprint planning meeting at a company your size to get a feel for how much of the job is collaboration versus heads-down building before you commit to the switch.
+- Pull up 3-4 real postings across company stages (an early-stage startup, a scale-up like ClassDojo or WHOOP, and a big-tech listing) and read the actual bullet points, not just the title — see how much of your week would go to feature ownership versus meetings/review at each stage.
+- If you can, shadow a code review session or a sprint planning meeting at a company your size to get a feel for how much of the job is collaboration versus heads-down building before you commit to the switch.

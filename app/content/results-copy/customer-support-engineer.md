@@ -22,4 +22,5 @@ If {{growth_dimension}} came back lower than this role typically wants, that's w
 
 ## How to test this cheaply
 
-Spend a day answering technical questions on a public forum (a product's Discord/Discourse, or Stack Overflow tagged for a tool you use) under a self-imposed response-time target, and notice whether the "someone else's clock, right now" pressure feels energizing or draining. Separately, ask a Support Engineer at a company you admire for 20 minutes to walk you through a real recent ticket end-to-end — the debugging tools they reached for tell you more about the actual job than the title does.
+- Spend a day answering technical questions on a public forum (a product's Discord/Discourse, or Stack Overflow tagged for a tool you use) under a self-imposed response-time target, and notice whether the "someone else's clock, right now" pressure feels energizing or draining.
+- Separately, ask a Support Engineer at a company you admire for 20 minutes to walk you through a real recent ticket end-to-end — the debugging tools they reached for tell you more about the actual job than the title does.

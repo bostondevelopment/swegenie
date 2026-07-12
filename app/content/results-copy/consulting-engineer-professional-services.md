@@ -22,4 +22,5 @@ If {{growth_dimension}} came back lower than this role typically wants, that's w
 
 ## How to test this cheaply
 
-Track your own hours against a self-imposed "billable vs. non-billable" split for a few weeks on your current job — including the unglamorous admin and internal-meeting time — and see how it feels to actively manage that ratio rather than ignore it. Separately, ask a consulting or vendor-PS engineer to walk you through how a recent SOW's scope crept and how they handled the client conversation about it — that negotiation, done under a live budget and timeline, is the part of the job a portfolio project can't simulate.
+- Track your own hours against a self-imposed "billable vs. non-billable" split for a few weeks on your current job — including the unglamorous admin and internal-meeting time — and see how it feels to actively manage that ratio rather than ignore it.
+- Separately, ask a consulting or vendor-PS engineer to walk you through how a recent SOW's scope crept and how they handled the client conversation about it — that negotiation, done under a live budget and timeline, is the part of the job a portfolio project can't simulate.

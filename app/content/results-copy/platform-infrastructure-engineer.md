@@ -20,4 +20,5 @@ If {{growth_dimension}} showed up as a gap in your answers, it's worth pausing o
 
 ## How to test this cheaply
 
-Find a "platform engineering" or "developer platform" team at a company you know and ask to sit in on one of their internal roadmap or requirements-gathering meetings with a consuming team — that conversation is the actual job in miniature. Alternatively, try building a small internal tool (a shared CI template, a self-service provisioning script) for a team you're not on and see whether the requirements-gathering and adoption-chasing part of it energizes you or feels like a tax on the "real" engineering work.
+- Find a "platform engineering" or "developer platform" team at a company you know and ask to sit in on one of their internal roadmap or requirements-gathering meetings with a consuming team — that conversation is the actual job in miniature.
+- Alternatively, try building a small internal tool (a shared CI template, a self-service provisioning script) for a team you're not on and see whether the requirements-gathering and adoption-chasing part of it energizes you or feels like a tax on the "real" engineering work.

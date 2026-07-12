@@ -6,7 +6,7 @@ export interface ResultsCopy {
   aDayInThisRole: string;
   compStructure: string;
   growthAreasTemplate: string;
-  howToTestCheaply: string;
+  howToTestCheaply: string[];
 }
 
 // Precomputed at build time from content/results-copy/*.md by

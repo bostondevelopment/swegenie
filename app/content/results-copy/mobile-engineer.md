@@ -22,4 +22,5 @@ If {{growth_dimension}} came back lower than this role typically wants, that's w
 
 ## How to test this cheaply
 
-Build and ship something small to the App Store or Play Store yourself — even a single-screen utility app — and see whether the release-and-rollback constraints (no instant hotfix, review queue delays) feel like a real constraint or an annoyance. Separately, spend a week profiling an existing open-source app's cold-start time or memory footprint with the platform's own tooling (Xcode Instruments, Android Studio Profiler) to get a direct read on whether that kind of performance-budget work is engaging or tedious to you.
+- Build and ship something small to the App Store or Play Store yourself — even a single-screen utility app — and see whether the release-and-rollback constraints (no instant hotfix, review queue delays) feel like a real constraint or an annoyance.
+- Separately, spend a week profiling an existing open-source app's cold-start time or memory footprint with the platform's own tooling (Xcode Instruments, Android Studio Profiler) to get a direct read on whether that kind of performance-budget work is engaging or tedious to you.

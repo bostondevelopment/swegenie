@@ -38,7 +38,14 @@ function parseSections(markdown) {
 
   const result = {};
   for (const key of Object.values(SECTION_KEYS)) {
-    result[key] = (sections[key] ?? []).join("\n").trim();
+    const body = (sections[key] ?? []).join("\n").trim();
+    const nonEmptyLines = body.split("\n").filter((line) => line.trim() !== "");
+    const isBulletList =
+      nonEmptyLines.length > 0 &&
+      nonEmptyLines.every((line) => line.trim().startsWith("- "));
+    result[key] = isBulletList
+      ? nonEmptyLines.map((line) => line.trim().slice(2).trim())
+      : body;
   }
   return result;
 }

@@ -20,4 +20,5 @@ If {{growth_dimension}} showed up as a gap in your answers, it's worth digging i
 
 ## How to test this cheaply
 
-Try building a small end-to-end pipeline yourself — pull data from a public API, land it in a warehouse (BigQuery/Snowflake free tier), add a basic freshness/schema-drift check, and let it run unattended for a week to see how you react when something breaks overnight. If you know a data engineer, ask to see their actual on-call runbook or their last postmortem — it'll tell you more about the real operational load than any job posting will.
+- Try building a small end-to-end pipeline yourself — pull data from a public API, land it in a warehouse (BigQuery/Snowflake free tier), add a basic freshness/schema-drift check, and let it run unattended for a week to see how you react when something breaks overnight.
+- If you know a data engineer, ask to see their actual on-call runbook or their last postmortem — it'll tell you more about the real operational load than any job posting will.

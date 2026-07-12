@@ -22,4 +22,5 @@ If {{growth_dimension}} came back lower than this role typically wants, treat it
 
 ## How to test this cheaply
 
-Get a cheap dev board (Arduino, ESP32, or similar) and build something small end to end — sensor input, a wireless protocol, a real-time constraint you have to hit — to see whether hardware-software boundary debugging feels engaging or frustrating. Because self-taught entry here is genuinely harder than in mobile or web (there's no "ship an app to the store" equivalent low-cost proof point), also consider whether you can shadow or pair with an embedded engineer for a bring-up session before committing further — it'll surface the hardware-debugging temperament question faster than solo tinkering alone.
+- Get a cheap dev board (Arduino, ESP32, or similar) and build something small end to end — sensor input, a wireless protocol, a real-time constraint you have to hit — to see whether hardware-software boundary debugging feels engaging or frustrating.
+- Because self-taught entry here is genuinely harder than in mobile or web (there's no "ship an app to the store" equivalent low-cost proof point), also consider whether you can shadow or pair with an embedded engineer for a bring-up session before committing further — it'll surface the hardware-debugging temperament question faster than solo tinkering alone.

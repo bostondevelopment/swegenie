@@ -20,4 +20,5 @@ If {{growth_dimension}} showed up as a gap in your answers, it's worth being hon
 
 ## How to test this cheaply
 
-Ask an SRE at a company you're interested in if you can shadow one on-call shift (even passively, watching how they triage an alert) to see how it actually feels under a live page. Separately, try running a small "game day" for yourself — deliberately break something in a side project or staging environment and time how you handle the diagnosis and fix under self-imposed pressure — it's a decent proxy for whether incident composure is something you enjoy or just tolerate.
+- Ask an SRE at a company you're interested in if you can shadow one on-call shift (even passively, watching how they triage an alert) to see how it actually feels under a live page.
+- Separately, try running a small "game day" for yourself — deliberately break something in a side project or staging environment and time how you handle the diagnosis and fix under self-imposed pressure — it's a decent proxy for whether incident composure is something you enjoy or just tolerate.

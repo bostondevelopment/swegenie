@@ -16,6 +16,11 @@ import { RateRole } from "@/components/RateRole";
 import { CompSection } from "@/components/comp";
 import type { CompByTierData } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
+import { QuickFacts } from "@/components/QuickFacts";
+import { Callout } from "@/components/Callout";
+import { Badge } from "@/components/Badge";
+import { DimensionScale } from "@/components/DimensionScale";
+import { ActionCard } from "@/components/ActionCard";
 
 export function generateStaticParams() {
   return archetypes.map((a) => ({ id: a.id }));
@@ -103,6 +108,28 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           </p>
         </section>
 
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 pb-8">
+          <QuickFacts
+            comp={
+              comp
+                ? {
+                    low: comp.low,
+                    high: comp.high,
+                    typical: comp.typical,
+                    confidence: comp.confidence,
+                    mix: comp.mix,
+                    sourceCompanyCount: comp.sourceCompanyCount,
+                  }
+                : null
+            }
+            definingDimensions={archetype.defining_dimension.map((dimId) => ({
+              name: dimensionById.get(dimId)?.name ?? dimId,
+              weight: archetype.scores[dimId].weight,
+              target: archetype.scores[dimId].target,
+            }))}
+          />
+        </section>
+
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
@@ -115,11 +142,14 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
                 <div key={dimId} className="grid sm:grid-cols-[220px_1fr] gap-4 sm:gap-6 items-start">
                   <div className="font-semibold text-base pt-0.5">{dim.name}</div>
                   <div>
-                    <div className="h-1.5 rounded-full bg-[var(--color-border)] overflow-hidden mb-3">
-                      <div
-                        className="h-full rounded-full bg-[var(--color-accent)]"
-                        style={{ width: `${score.weight * 100}%` }}
-                      />
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="h-1.5 flex-1 rounded-full bg-[var(--color-border)] overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-[var(--color-accent)]"
+                          style={{ width: `${score.weight * 100}%` }}
+                        />
+                      </div>
+                      <DimensionScale target={score.target} />
                     </div>
                     <p className="text-[15px] text-[var(--color-muted)] leading-[1.65]">{score.rationale}</p>
                   </div>
@@ -145,9 +175,20 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           {comp && (
             <div className="mb-6 pt-4">
               <CompBandBar low={comp.low} high={comp.high} typical={comp.typical} />
-              {comp.mix && (
+              {comp.mix && comp.mix.basePct + comp.mix.bonusPct + comp.mix.equityPct > 0 && (
                 <div className="mt-6">
                   <CompMixBar mix={comp.mix} />
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {comp.mix.basePct > 0 && (
+                      <Badge variant="neutral">{comp.mix.basePct}% base</Badge>
+                    )}
+                    {comp.mix.bonusPct > 0 && (
+                      <Badge variant="neutral">{comp.mix.bonusPct}% bonus</Badge>
+                    )}
+                    {comp.mix.equityPct > 0 && (
+                      <Badge variant="neutral">{comp.mix.equityPct}% equity</Badge>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
@@ -155,6 +196,13 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
             {copy.compStructure}
           </p>
+          {comp && (
+            <div className="mt-6">
+              <Callout tone="caveat" title="Caveat">
+                {comp.caveat}
+              </Callout>
+            </div>
+          )}
         </section>
 
         {comp?.levels && (
@@ -208,9 +256,13 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-2xl font-semibold mb-4">How to test this cheaply</h2>
-          <p className="text-lg text-[var(--color-muted)] leading-[1.7] whitespace-pre-line max-w-2xl mb-9">
-            {copy.howToTestCheaply}
-          </p>
+          <div className="flex flex-col gap-4 max-w-2xl mb-9">
+            {copy.howToTestCheaply.map((step, i) => (
+              <ActionCard key={i} n={i + 1}>
+                {step}
+              </ActionCard>
+            ))}
+          </div>
           <Link href="/assessment" className="btn-primary px-7 py-4 text-[17px] font-semibold inline-block">
             See if this is your match
           </Link>

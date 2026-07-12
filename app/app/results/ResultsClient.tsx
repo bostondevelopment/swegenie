@@ -9,7 +9,7 @@ import { ShareBar } from "@/components/ShareBar";
 import { BetaSurvey } from "@/components/BetaSurvey";
 import { decodeProfile } from "@/lib/encode";
 import { rankArchetypes, fitPercent } from "@/lib/scoring";
-import { dimensionById } from "@/lib/taxonomy";
+import { archetypeById, dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy, fillWhyMatched, fillGrowthArea } from "@/lib/results-copy";
 import { getCompStructure } from "@/lib/comp-structure";
 import { CompBandBar } from "@/components/CompBandBar";
@@ -19,6 +19,10 @@ import { CompProgressionChart } from "@/components/CompProgressionChart";
 import { TierCompChart } from "@/components/comp";
 import type { CompByTierData, Level } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
+import { QuickFacts } from "@/components/QuickFacts";
+import { Callout } from "@/components/Callout";
+import { ActionCard } from "@/components/ActionCard";
+import { Badge } from "@/components/Badge";
 
 // Comp-by-tier detail keyed by archetype id (static JSON — works under
 // `output: 'export'`). Same cast the archetype detail page uses.
@@ -131,6 +135,12 @@ export default function ResultsClient() {
   }));
 
   const topComp = getCompStructure(top.id);
+  const topArchetype = archetypeById.get(top.id);
+  const definingDimensions = (topArchetype?.defining_dimension ?? []).map((dimId) => ({
+    name: dimensionById.get(dimId)?.name ?? dimId,
+    weight: topArchetype!.scores[dimId].weight,
+    target: topArchetype!.scores[dimId].target,
+  }));
   const comparisonOthers = ranked
     .slice(1)
     .map((r) => {
@@ -186,6 +196,12 @@ export default function ResultsClient() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 mt-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <QuickFacts comp={topComp ?? null} definingDimensions={definingDimensions} />
+        </section>
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-xl font-semibold mb-4">What this role actually is</h2>
           <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
             {topCopy.whatThisIs}
@@ -223,6 +239,17 @@ export default function ResultsClient() {
               {topComp.mix && (
                 <div className="mt-6">
                   <CompMixBar mix={topComp.mix} />
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {topComp.mix.basePct > 0 && (
+                      <Badge variant="neutral">{topComp.mix.basePct}% base</Badge>
+                    )}
+                    {topComp.mix.bonusPct > 0 && (
+                      <Badge variant="neutral">{topComp.mix.bonusPct}% bonus</Badge>
+                    )}
+                    {topComp.mix.equityPct > 0 && (
+                      <Badge variant="neutral">{topComp.mix.equityPct}% equity</Badge>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
@@ -230,6 +257,11 @@ export default function ResultsClient() {
           <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
             {topCopy.compStructure}
           </p>
+          {topComp && (
+            <div className="mt-6 max-w-2xl">
+              <Callout tone="caveat">{topComp.caveat}</Callout>
+            </div>
+          )}
         </section>
 
         {topComp?.levels && (
@@ -321,9 +353,13 @@ export default function ResultsClient() {
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-xl font-semibold mb-4">How to test this cheaply</h2>
-          <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
-            {topCopy.howToTestCheaply}
-          </p>
+          <div className="flex flex-col gap-4 max-w-2xl">
+            {topCopy.howToTestCheaply.map((step, i) => (
+              <ActionCard key={i} n={i + 1}>
+                {step}
+              </ActionCard>
+            ))}
+          </div>
           <div className="mt-8">
             <Link href={`/archetypes/${top.id}`} className="btn-primary inline-flex px-5 py-3 font-medium">
               Explore {top.name} in depth
