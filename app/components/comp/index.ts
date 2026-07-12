@@ -4,6 +4,7 @@
 export { CompRangeBar } from './CompRangeBar';
 export { TierCompChart } from './TierCompChart';
 export { EquityTwoLane } from './EquityTwoLane';
+export { EquityCallout } from './EquityCallout';
 export { CompSection } from './CompSection';
 export { StaffCrossTable, type StaffCrossRow } from './StaffCrossTable';
 

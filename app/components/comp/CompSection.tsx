@@ -104,7 +104,7 @@ export function CompSection({ archetypeId, data, userLevel }: CompSectionProps) 
           </div>
         </div>
 
-        <EquityTwoLane tier={tier} level={level} data={equityCell} />
+        <EquityTwoLane tier={tier} level={level} data={equityCell} archetypeId={archetypeId} />
       </section>
     </>
   );
