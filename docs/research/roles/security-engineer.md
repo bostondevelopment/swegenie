@@ -1,5 +1,22 @@
 # Security Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **586 real, currently-live job postings across 219 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 219 total):
+
+- **Axonius** — "Senior Product Security Architect"
+- **Affirm** — "Senior Product Security Engineer"
+- **Ripple** — "Senior Staff Security Engineer, Ripple Treasury"
+- **Human Interest** — "Security Engineer II"
+- **Astranis** — "Product Security Engineer"
+- **Movable Ink** — "Product Security Engineer"
+- **Saronic** — "Security Engineer, Detection Engineering"
+- **Rockstar Games** — "Application Security Engineer"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Infrastructure & Reliability
 **Status:** v1 draft — expert-authored, sourced
 

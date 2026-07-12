@@ -1,0 +1,608 @@
+{
+  "version": "1.0",
+  "generated": "2026-07-11",
+  "notes": "Keyword/regex rubric for programmatically classifying ~56K real ATS job posting titles into the 18 SWE Genie archetypes (see taxonomy/archetypes.json for canonical ids/names, docs/research/roles-summary.md and docs/research/roles/*.md for scope). All patterns are Python `re` syntax, intended to be compiled with re.IGNORECASE. Application order: for each title, iterate archetypes in ascending `priority` order; for the first archetype whose title matches ANY of its positive_patterns AND matches NONE of its negative_patterns, assign that archetype. If a title matches an entry in always_exclude_patterns, do not classify it into any archetype regardless of priority order (check this first, before the priority loop). If a title exactly (or near-exactly, ignoring level suffixes like II/III/Senior) matches an entry in known_ambiguous_titles, route it to manual/sample review instead of auto-classifying, even if a positive_patterns regex would otherwise match. This is a precision-over-recall rubric: tighter patterns and more manual-review flags are preferred over broad recall, per product requirement (a wrong classification pollutes assessment credibility).",
+  "archetypes": [
+    {
+      "id": "forward-deployed-engineer",
+      "priority": 1,
+      "positive_patterns": [
+        "\\bforward[\\s-]?deploy(ed|ment)\\s+(software\\s+|ai\\s+)?engineer\\b",
+        "\\bforward\\s+deploy(ed|ment)\\s+engineering\\b",
+        "\\bfdse\\b",
+        "\\bfde\\b"
+      ],
+      "negative_patterns": [
+        "\\bsales\\b",
+        "\\bsupport\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "Distinct from Consulting Engineer/Professional Services (FDE writes and owns production code shipped into the customer's environment, is not billable-utilization-comped, and doesn't carry a SOW end date) and from Solutions Architect (FDE codes 70-90% of the week vs. an SA's design/advisory focus). The bare acronym 'FDE' has no other common meaning in software job titles so is safe to match directly, unlike most 3-4 letter acronyms in this rubric. CORRECTED after a precision spot-check found 'Forward Deployment Engineer' (Databricks) and 'AI Deployment Engineer, Enterprise' (OpenAI -- OpenAI's own name for its FDE-equivalent role, modeled on Palantir's) falling through to consulting-engineer-professional-services because the rubric only matched 'deployed', not the 'deployment' word-order variant; added both."
+    },
+    {
+      "id": "embedded-iot-engineer",
+      "priority": 2,
+      "positive_patterns": [
+        "\\bembedded\\s+(software\\s+|systems?\\s+|firmware\\s+)?(engineer|developer)\\b",
+        "\\b(software\\s+)?(engineer|developer)\\s*[,\\-–]\\s*embedded\\s+systems?\\b",
+        "\\bfirmware\\s+(engineer|developer)\\b",
+        "\\b(iot|io[ -]t)\\s+(engineer|developer|firmware\\s+engineer)\\b",
+        "\\brtos\\s+engineer\\b",
+        "\\bbare[\\s-]?metal\\s+(firmware\\s+)?engineer\\b",
+        "\\bembedded\\s+linux\\s+engineer\\b",
+        "\\bavionics\\s+(software|firmware)?\\s*engineer\\b",
+        "\\b(mcu|microcontroller)\\s+(firmware\\s+)?engineer\\b"
+      ],
+      "negative_patterns": [
+        "\\bmobile\\b",
+        "\\b(ios|android)\\b",
+        "\\bsales\\b",
+        "\\bsupport\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "'Embedded Software Engineer' should match here, not the generic product-full-stack-software-engineer catch-all, hence its low (early-checked) priority number. Watch for 'Embedded' used as a business-context adjective unrelated to firmware (e.g. 'Embedded Finance Engineer', 'Embedded Analyst' at a client site) -- these are rare in practice but worth a spot-check during rollout since 'embedded' + a non-hardware noun can slip past the positive pattern's \\b(engineer|developer)\\b requirement only if the intervening word count is small; monitor false-positive rate. CORRECTED after a precision spot-check found the reversed word order 'Software Engineer, Embedded Systems' / 'Software Engineer - Embedded Systems' (Roku, Applied Intuition) falling through to UNCLASSIFIED -- added a pattern for engineer/developer followed by 'embedded systems'."
+    },
+    {
+      "id": "mobile-engineer",
+      "priority": 3,
+      "positive_patterns": [
+        "\\b(ios|android)\\s+(software\\s+)?(engineer|developer)\\b",
+        "\\bmobile\\s+(software\\s+)?(engineer|developer)\\b",
+        "\\bmobile\\s+app(lication)?\\s+(engineer|developer)\\b",
+        "\\breact[\\s-]?native\\s+(engineer|developer)\\b",
+        "\\bflutter\\s+(engineer|developer)\\b",
+        "\\bswiftui?\\s+(engineer|developer)\\b"
+      ],
+      "negative_patterns": [
+        "\\bmobile\\s+(sales|notary|home|crisis|clinic|veterinary|groomer|mechanic|x-?ray|phlebotomist|technician|repair|crane|home\\s+health|patrol|unit)\\b",
+        "\\bsales\\b",
+        "\\brecruit(er|ing)\\b",
+        "\\bnurs(e|ing)\\b"
+      ],
+      "disambiguation_note": "Bare '\\bmobile\\b' is deliberately excluded from positive_patterns per the task's own example ('Mobile Sales Rep') -- it must co-occur with 'engineer'/'developer'/'app' or a mobile-specific platform token (ios/android/react native/flutter/swiftui). 'Mobile' alone is one of the highest false-positive-risk tokens in a mixed ATS title corpus (mobile crisis counselor, mobile notary, mobile home sales, mobile phlebotomist, mobile veterinary tech all appear in real ATS data)."
+    },
+    {
+      "id": "sre-production-engineer",
+      "priority": 4,
+      "positive_patterns": [
+        "\\bsite\\s+reliability\\s+engineer\\b",
+        "\\bsre\\b",
+        "\\bproduction\\s+engineer(ing)?\\b"
+      ],
+      "negative_patterns": [
+        "\\b(plant|manufacturing|food|beverage|oil\\s*&?\\s*gas|chemical|pharma(ceutical)?|automotive\\s+plant|factory|refinery|mining)\\b",
+        "\\bmechanical\\b",
+        "\\belectrical\\b",
+        "\\bcivil\\b",
+        "\\bsales\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "'Production Engineer' and bare 'Reliability Engineer' are both genuinely overloaded with non-software usage (oil & gas, manufacturing, plant/process reliability engineering) -- see known_ambiguous_titles. Only 'Site Reliability Engineer' and the 'SRE' acronym are treated as unambiguous positives here; bare 'Production Engineer' is included as positive but guarded by the manufacturing/industrial negative-pattern list, and should still be spot-checked post-classification given the scale of industrial-sector postings in a generic ATS harvest. 'Customer Reliability Engineer' (Cloudflare-style) is a distinct boundary case -- see known_ambiguous_titles, not auto-routed here despite containing 'Reliability Engineer'."
+    },
+    {
+      "id": "ml-engineer",
+      "priority": 5,
+      "positive_patterns": [
+        "\\b(ml|machine\\s+learning)\\s+engineer\\b",
+        "\\bmlops\\s+engineer\\b",
+        "\\bml\\s+(platform|infra(structure)?)\\s+engineer\\b",
+        "\\bapplied\\s+machine\\s+learning\\s+engineer\\b",
+        "\\bai\\s+engineer\\b",
+        "\\bdeep\\s+learning\\s+engineer\\b",
+        "\\b(nlp|computer\\s+vision)\\s+engineer\\b",
+        "\\bllm\\s+engineer\\b"
+      ],
+      "negative_patterns": [
+        "\\bdata\\s+scientist\\b",
+        "\\bresearch\\s+scientist\\b",
+        "\\bapplied\\s+scientist\\b",
+        "\\bdata\\s+engineer\\b",
+        "\\bsales\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "Explicitly excludes Research/Applied Scientist (PhD-gated, publication-oriented, out of v1 scope per roles-summary.md) even though these titles sometimes appear adjacent to 'ML Engineer' postings at the same company -- see always_exclude_patterns. 'AI Engineer' is a fast-growing 2025-2026 title that's mostly a synonym for ML Engineer/LLM application engineer in practice, but watch for drift if 'AI Engineer' starts being used for non-technical AI-adjacent roles (AI product/policy) in the dataset."
+    },
+    {
+      "id": "data-engineer",
+      "priority": 6,
+      "positive_patterns": [
+        "\\bdata\\s+engineer(ing)?\\b",
+        "\\bbig\\s+data\\s+engineer\\b",
+        "\\betl\\s+(engineer|developer)\\b",
+        "\\bdata\\s+pipeline\\s+engineer\\b",
+        "\\bdata\\s+platform\\s+engineer\\b",
+        "\\b(data\\s+warehouse|dw)\\s+engineer\\b",
+        "\\banalytics\\s+engineer\\b"
+      ],
+      "negative_patterns": [
+        "\\bdata\\s+scientist\\b",
+        "\\bdata\\s+analyst\\b",
+        "\\b(machine\\s+learning|ml)\\s+engineer\\b",
+        "\\bsales\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "'Analytics Engineer' is folded in here per data-engineer.md's own scope note (treated as a sub-specialty of data engineering, not a separate archetype). Distinguished from ML Engineer at the feature-pipeline boundary -- titles with both 'data' and 'ML/machine learning' should route to ml-engineer (checked at lower priority number / earlier), enforced here via the negative pattern."
+    },
+    {
+      "id": "security-engineer",
+      "priority": 7,
+      "positive_patterns": [
+        "\\b(security|cyber\\s*security|cybersecurity|infosec|information\\s+security|appsec|application\\s+security|cloud\\s+security|network\\s+security|detection\\s*(and|&)\\s*response)\\s+(engineer|architect)\\b",
+        "\\bsecurity\\s+(software\\s+)?engineer\\b"
+      ],
+      "negative_patterns": [
+        "\\bsecurity\\s+(guard|officer)\\b",
+        "\\barmed\\s+security\\b",
+        "\\bsales\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "Requires 'engineer' or 'architect' in the title, which naturally excludes 'Security Analyst'/'Security Specialist' titles (a real, more junior/adjacent title family this rubric deliberately does not claim). Offensive-security titles ('Penetration Tester', 'Red Team Engineer') are NOT included as positive matches here even though they're software-security-adjacent, because the source brief explicitly scopes this archetype as defensive/proactive-posture work 'not primarily offensive/hacking' -- see known_ambiguous_titles. Non-software 'Security Guard/Officer' titles are excluded via negative_patterns and also appear in always_exclude_patterns as a backstop."
+    },
+    {
+      "id": "platform-infrastructure-engineer",
+      "priority": 8,
+      "positive_patterns": [
+        "\\bplatform\\s+(software\\s+)?(engineer|developer)\\b",
+        "\\binfrastructure\\s+engineer\\b",
+        "\\bcloud\\s+(infrastructure\\s+)?engineer\\b",
+        "\\bdev\\s*ops\\s+engineer\\b",
+        "\\bbuild\\s+(and\\s+|&\\s*)?release\\s+engineer\\b",
+        "\\bdeveloper\\s+(productivity|experience)\\s+engineer\\b",
+        "\\binternal\\s+(developer\\s+)?platform\\s+engineer\\b",
+        "\\bkubernetes\\s+engineer\\b",
+        "\\bsre\\s*/\\s*platform\\s+engineer\\b"
+      ],
+      "negative_patterns": [
+        "\\bsite\\s+reliability\\b",
+        "\\bsre\\b",
+        "\\bsecurity\\b",
+        "\\bdata\\s+(pipeline\\s+)?engineer\\b",
+        "\\b(ml|machine\\s+learning)\\s+engineer\\b",
+        "\\bmobile\\b",
+        "\\b(ios|android)\\b",
+        "\\bembedded\\b",
+        "\\bfirmware\\b",
+        "\\bsales\\b",
+        "\\brecruit(er|ing)\\b",
+        "\\b(dft|design[\\s-]for[\\s-]test|tape[\\s-]?out|wafer|fab\\b|silicon|asic|characterization|cell\\s+librar\\w*|photo\\b|etch\\b|cmp\\b|lithograph\\w*)\\b"
+      ],
+      "disambiguation_note": "Genuinely blurs with sre-production-engineer at smaller companies per platform-infrastructure-engineer.md's own scope note ('Platform Engineers do both DevOps and SRE work' at many shops) -- the negative pattern pushes titles with explicit SRE/reliability language to the SRE archetype (checked at an earlier priority number), which is the intended behavior, not a bug. 'Developer Experience Engineer' / 'DX Engineer' also collides with developer-relations-advocacy's DX sub-variant -- see known_ambiguous_titles. Bare 'Cloud Engineer' and bare 'Systems Engineer' are deliberately NOT included as positive patterns -- both are too overloaded across IT/ops/embedded/defense contexts to auto-classify; see known_ambiguous_titles. CORRECTED after a precision spot-check found bare 'Infrastructure Engineer' matching semiconductor/chip-design-manufacturing titles at Intel/Micron ('DFT Verification Infrastructure Engineer', 'Design Infrastructure Engineer... Cell Characterization') -- these are hardware fab/silicon-process engineering roles, not software platform engineering; added semiconductor-manufacturing negative patterns."
+    },
+    {
+      "id": "sales-engineer-pre-sales",
+      "priority": 9,
+      "positive_patterns": [
+        "\\b(sales|pre[\\s-]?sales|presales|technical\\s+sales)\\s+engineer\\b",
+        "\\bpre[\\s-]?sales\\s+customer\\s+engineer\\b",
+        "\\bcustomer\\s+engineer\\b.{0,30}\\bpre[\\s-]?sales\\b",
+        "\\bpre[\\s-]?sales\\b.{0,30}\\bcustomer\\s+engineer\\b",
+        "\\bcustomer\\s+engineer\\b(?!.{0,30}\\bpost[\\s-]?sales\\b)",
+        "\\bsolutions?\\s+consultant\\b(?!.{0,30}\\bpost[\\s-]?sales\\b)"
+      ],
+      "negative_patterns": [
+        "\\bsolutions?\\s+architect\\b",
+        "\\bcustomer\\s+(success|solutions)\\b",
+        "\\bpost[\\s-]?sales\\b",
+        "\\brecruit(er|ing)\\b",
+        "\\bcare\\s+solutions?\\s+consultant\\b"
+      ],
+      "disambiguation_note": "Deliberately does NOT include bare 'Solutions Engineer' as a positive pattern, even though sales-engineer-pre-sales.md documents it as a common synonym at many B2B SaaS companies -- 'Solutions Engineer' alone is a genuine 3-way collision with solutions-architect-vendor-side and customer-support-solutions-engineer that title text cannot resolve without company/seniority/comp context. Bare 'Solutions Engineer' is routed to known_ambiguous_titles for manual review instead. 'Sales Engineer' and 'Presales Engineer' are unambiguous and safe to auto-classify directly. CORRECTED after a precision spot-check found two real recall gaps: (1) 'Customer Engineer' (Google/Cloudflare's actual title for this exact role, e.g. 'Customer Engineer, India', 'Pre-Sales Customer Engineer') was entirely unmatched -- added, with an explicit negative-lookahead excluding any 'Post-Sales' qualified variant (which belongs to customer-support-solutions-engineer instead); (2) 'Solutions Consultant' (Ramp, Plaid, Oyster) is a very common real-world synonym for this role when NOT explicitly qualified 'Post Sales' -- added the same way, defaulting to pre-sales since that's the more common unqualified usage, while the explicitly post-sales-qualified variant routes to customer-support-solutions-engineer."
+    },
+    {
+      "id": "solutions-architect-vendor-side",
+      "priority": 10,
+      "positive_patterns": [
+        "\\b(aws|amazon\\s+web\\s+services|azure|microsoft\\s+azure|gcp|google\\s+cloud|salesforce|servicenow|snowflake|databricks|mongodb|workday|sap|oracle\\s+cloud)\\b.{0,40}\\bsolutions?\\s+architect\\b",
+        "\\bsolutions?\\s+architect\\b.{0,40}\\b(aws|amazon\\s+web\\s+services|azure|microsoft\\s+azure|gcp|google\\s+cloud|salesforce|servicenow|snowflake|databricks|mongodb|workday|sap)\\b",
+        "\\bfield\\s+solutions?\\s+architect\\b",
+        "\\bpartner\\s+solutions?\\s+architect\\b",
+        "\\bcloud\\s+solutions?\\s+architect\\b",
+        "\\btechnical\\s+account\\s+architect\\b"
+      ],
+      "negative_patterns": [
+        "\\bconsulting\\b",
+        "\\bprofessional\\s+services\\b",
+        "\\bsystems?\\s+integrat\\w*\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "Vendor-side vs. consulting-side Solutions Architect cannot be reliably distinguished from title text alone -- both use the identical base title 'Solutions Architect' / 'Solution Architect'. This rubric resolves it only when the title carries an explicit vendor-product token (AWS/Azure/GCP/Salesforce/etc.) or an explicit consulting/SI qualifier (see solutions-architect-consulting); bare 'Solutions Architect' with neither signal is NOT auto-classified here -- see known_ambiguous_titles. Real-world ATS data will under-trigger this archetype relative to its true prevalence because company name (the strongest real-world signal) is not part of the title string in most postings."
+    },
+    {
+      "id": "solutions-architect-consulting",
+      "priority": 11,
+      "positive_patterns": [
+        "\\bsolutions?\\s+architect\\b.{0,40}\\b(consulting|professional\\s+services|systems?\\s+integrat\\w*|delivery)\\b",
+        "\\b(consulting|professional\\s+services)\\b.{0,40}\\bsolutions?\\s+architect\\b",
+        "\\bsolution\\s+architect,?\\s*senior\\s+consultant\\b",
+        "\\btechnology\\s+architect\\b.{0,40}\\b(consulting|professional\\s+services|systems?\\s+integrat\\w*|client|delivery)\\b",
+        "\\benterprise\\s+architect\\b.{0,40}\\b(consulting|professional\\s+services|systems?\\s+integrat\\w*|client|delivery)\\b"
+      ],
+      "negative_patterns": [
+        "\\b(aws|amazon\\s+web\\s+services|azure|microsoft\\s+azure|gcp|google\\s+cloud|salesforce|servicenow|snowflake|databricks)\\b",
+        "\\bsales\\s+engineer\\b",
+        "\\brecruit(er|ing)\\b",
+        "\\b(it|internal|corporate|digital\\s+engineering)\\b"
+      ],
+      "disambiguation_note": "CORRECTED after a precision spot-check found bare 'Enterprise Architect'/'Technology Architect' matching internal-corporate-IT roles at non-consultancy companies (GM, Micron, Disney, Humana, HPE) rather than actual consultancy-employed architects -- removed as unqualified positive signals, now require an explicit consulting/SI/client/delivery qualifier in the title itself, same as the other patterns. This sacrifices recall (won't catch a bare 'Enterprise Architect' title truly meant as consulting-side) in favor of precision, consistent with the rubric's stated philosophy. Bare 'Solutions Architect' remains intentionally unmatched by both SA archetypes -- see known_ambiguous_titles."
+    },
+    {
+      "id": "customer-support-engineer",
+      "priority": 12,
+      "positive_patterns": [
+        "\\b(technical\\s+)?(customer\\s+)?support\\s+engineer\\b",
+        "\\bsupport\\s+engineering\\b",
+        "\\bapplication\\s+support\\s+engineer\\b",
+        "\\bit\\s+support\\s+engineer\\b"
+      ],
+      "negative_patterns": [
+        "\\bcustomer\\s+success\\b",
+        "\\bcustomer\\s+solutions\\b",
+        "\\bsales\\b",
+        "\\bpre[\\s-]?sales\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "Distinguished from customer-support-solutions-engineer purely on the reactive/ticket-queue ('Support') vs. proactive/named-account ('Success'/'Solutions') keyword split documented in customer-support-solutions-engineer.md's own scope-decision section. 'Customer Reliability Engineer' (Cloudflare-style, SRE-staffed support role) is intentionally NOT matched by the plain 'support engineer' pattern and is not auto-classified here -- see known_ambiguous_titles."
+    },
+    {
+      "id": "customer-support-solutions-engineer",
+      "priority": 13,
+      "positive_patterns": [
+        "\\bcustomer\\s+success\\s+engineer\\b",
+        "\\bcustomer\\s+solutions\\s+engineer\\b",
+        "\\bcustomer\\s+experience\\s+engineer\\b",
+        "\\btechnical\\s+account\\s+manager\\b",
+        "\\bsolutions?\\s+consultant\\b.{0,30}\\bpost[\\s-]?sales\\b",
+        "\\bpost[\\s-]?sales\\b.{0,30}\\bsolutions?\\s+consultant\\b",
+        "\\bcustomer\\s+engineer\\b.{0,30}\\bpost[\\s-]?sales\\b"
+      ],
+      "negative_patterns": [
+        "\\bsupport\\s+engineer\\b",
+        "\\bsales\\b(?<!post[\\s-]sales)",
+        "\\bpre[\\s-]?sales\\b",
+        "\\bsolutions?\\s+architect\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "'Technical Account Manager' (TAM) is folded in here as a synonym per customer-support-solutions-engineer.md, which found no evidence of a consistently distinct TAM archetype. Note the filename/in-document-title mismatch flagged in roles-summary.md ('customer-support-solutions-engineer.md' vs. in-document title 'Customer Success Engineer / Customer Solutions Engineer') is cosmetic and doesn't affect this rubric's id usage (uses the archetypes.json id, customer-support-solutions-engineer). CORRECTED after a precision spot-check found 'Solutions Consultant, Post Sales' (Ramp) -- a real, common post-sales-qualified variant -- was unmatched anywhere; added, paired with sales-engineer-pre-sales' complementary un-qualified/pre-sales version of the same pattern so the two archetypes split this title family consistently rather than either double-counting or dropping it. NOTE: the generic '\\bsales\\b' negative pattern would incorrectly exclude 'Post Sales' matches too since 'sales' is a substring -- added a fixed-width negative lookbehind so 'post-sales'/'post sales' doesn't trigger the exclusion; tested directly against both hyphen and space variants, confirmed correct."
+    },
+    {
+      "id": "consulting-engineer-professional-services",
+      "priority": 14,
+      "positive_patterns": [
+        "\\b(consulting|professional\\s+services)\\s+engineer\\b",
+        "\\bimplementation\\s+(engineer|consultant)\\b",
+        "\\bdelivery\\s+consultant\\b",
+        "\\btechnical\\s+consultant\\b",
+        "\\bimplementation\\s+consultant\\b",
+        "\\bprofessional\\s+services\\b.{0,20}\\barchitect\\b",
+        "\\barchitect\\b.{0,20}\\bprofessional\\s+services\\b"
+      ],
+      "negative_patterns": [
+        "\\bsales\\b",
+        "\\bsolutions?\\s+architect\\b(?!.{0,20}professional\\s+services)",
+        "\\bforward[\\s-]?deploy(ed|ment)\\b",
+        "\\brecruit(er|ing)\\b",
+        "\\b(asic|soc|silicon|semiconductor|chip|ic\\s+design|rtl)\\b"
+      ],
+      "disambiguation_note": "Distinguished from Forward-Deployed Engineer (billable/SOW-scoped with a defined end date vs. FDE's open-ended embedded product-engineering ownership) and from Solutions Architect (implementation-led/hands-on vs. design-led/advisory) per consulting-engineer-professional-services.md's own scoping section. 'Technical Consultant' alone is a genuinely softer signal (could also describe a consulting-side Solutions Architect at more senior levels) -- flagged in known_ambiguous_titles for spot-review of the auto-classified population. CORRECTED after a precision spot-check found (1) 'ASIC Implementation Engineer' (Broadcom, semiconductor chip design) false-positiving on the bare 'implementation engineer' pattern -- added semiconductor-context negative patterns; (2) bare 'deployment engineer' REMOVED as a positive pattern entirely -- a cross-company sample showed it means wildly different things depending on employer (OpenAI/Writer: FDE-equivalent AI deployment; Supabase/Crusoe/Anduril: infrastructure/network deployment tooling, closer to platform-infrastructure-engineer; Figure AI/Skydio/Path Robotics/Locus Robotics/Applied Intuition: physical robot/hardware site installation, arguably not a software archetype at all) -- no single archetype fits all of these, so it's now handled via company-context override (OpenAI specifically, whose 'AI Deployment Engineer' is publicly known to be modeled on Palantir's FDE) plus known_ambiguous_titles for the rest rather than a blanket regex guess."
+    },
+    {
+      "id": "developer-relations-advocacy",
+      "priority": 15,
+      "positive_patterns": [
+        "\\bdeveloper\\s+advoca(te|cy)\\b",
+        "\\bdev\\s*rel\\b",
+        "\\bdeveloper\\s+relations\\b",
+        "\\btechnical\\s+evangelist\\b",
+        "\\bdeveloper\\s+evangelist\\b",
+        "\\bcommunity\\s+engineer\\b",
+        "\\bcommunity\\s+advocate\\b"
+      ],
+      "negative_patterns": [
+        "\\bsales\\b",
+        "\\bsupport\\s+engineer\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "'Developer Experience Engineer' / 'DX Engineer' is deliberately NOT included as a positive pattern here despite developer-relations-advocacy.md noting DX-titled roles sit 'under the broader DevRel umbrella' -- in practice this title is used as often for internal-platform-tooling work (which belongs to platform-infrastructure-engineer) as for external SDK/docs DevRel work. Left for known_ambiguous_titles rather than guessed either direction. CORRECTED after a precision spot-check found bare 'Developer Relations' (Linear, WorkOS) and 'Director/Head, Developer Relations' (CoreWeave, Chainguard) falling through to UNCLASSIFIED because the pattern required an 'Engineer' suffix -- broadened to match 'Developer Relations' on its own."
+    },
+    {
+      "id": "engineering-management",
+      "priority": 16,
+      "positive_patterns": [
+        "\\bengineering\\s+manager\\b",
+        "\\bsoftware\\s+engineering\\s+manager\\b",
+        "\\b(director|vp|vice\\s+president|head)\\s+of\\s+engineering\\b",
+        "\\bengineering\\s+director\\b",
+        "^cto\\b",
+        "\\bchief\\s+technology\\s+officer\\b"
+      ],
+      "negative_patterns": [
+        "\\btechnical\\s+program\\s+manager\\b",
+        "\\bproduct\\s+manager\\b",
+        "\\brecruit(er|ing)\\b",
+        "\\b(assistant|chief\\s+of\\s+staff|office\\s+of|coordinator)\\s+to\\b",
+        "\\bto\\s+(the\\s+)?cto\\b"
+      ],
+      "disambiguation_note": "Checked before the generalist product-full-stack-software-engineer archetype specifically because 'Engineering Manager' and 'Director of Engineering' both contain 'engineering' and would otherwise risk a loose generic-SWE pattern matching them. CORRECTED after a precision spot-check found bare '\\bcto\\b' matching 'Executive Assistant to CTO' -- anchored the CTO pattern to only match when it's the leading token of the title (the actual CTO role, not a title that merely mentions a CTO), and added negative patterns for 'assistant/chief of staff/coordinator to' and 'to the CTO'. 'Tech Lead' / 'Team Lead' are deliberately NOT included as positive patterns -- these titles are genuinely split in real usage between IC-with-informal-leadership-duties (belongs in product-full-stack-software-engineer) and first-line people managers (belongs here), and the taxonomy's own source brief is explicit that EM is defined by evaluator-not-implementer status, which a bare 'Tech Lead' title doesn't reliably signal. See known_ambiguous_titles."
+    },
+    {
+      "id": "technical-product-manager",
+      "priority": 17,
+      "positive_patterns": [
+        "\\btechnical\\s+product\\s+manager\\b",
+        "\\bproduct\\s+manager,?\\s*technical\\b",
+        "\\bproduct\\s+manager\\s*\\(technical\\)"
+      ],
+      "negative_patterns": [
+        "\\btechnical\\s+program\\s+manager\\b",
+        "\\bprogram\\s+manager\\b",
+        "\\bproject\\s+manager\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "CRITICAL: 'Technical Product Manager' (TPM) and 'Technical Program Manager' (also commonly abbreviated TPM) are genuinely different roles that must NOT be merged -- Technical Product Manager owns a technical product's roadmap and makes architecture trade-off calls (per technical-product-manager.md); Technical Program Manager is a cross-team delivery/execution-coordination role closer to project management, not one of the 18 archetypes. The negative_pattern explicitly excludes 'Technical Program Manager'. The bare 'TPM' acronym is NOT used as a positive pattern anywhere in this rubric because it is genuinely ambiguous between the two meanings in real ATS data -- see known_ambiguous_titles. 'Product Owner' is also deliberately excluded from positive_patterns (often a Scrum-process role without the technical-architecture-tradeoff scope this archetype requires) -- see known_ambiguous_titles. CORRECTED after a precision spot-check found the original rubric's '\\bproduct\\s+manager,?\\s*(api|platform|infrastructure|developer|technical)\\b' pattern was matching generic 'Product Manager, Platform' / 'Product Manager, Infrastructure' / 'Product Manager, API' titles (Roku, Ripple, Grafana Labs, Coinbase, LayerZero -- 8 of 12 sampled matches) that don't say 'technical' anywhere -- these PMs own a technical product AREA but that's a topical/domain distinction, not evidence the person personally makes architecture trade-off calls, which is this archetype's actual defining trait per its own brief. Owning the Platform or API product area doesn't imply the 'technical' qualifier this archetype requires; removed the domain-keyword alternation and the bare 'API/Platform Product Manager' patterns entirely, now requires the literal word 'technical' adjacent to 'product manager'."
+    },
+    {
+      "id": "product-full-stack-software-engineer",
+      "priority": 18,
+      "positive_patterns": [
+        "\\b(software|full[\\s-]?stack)\\s+(engineer|developer)\\b",
+        "\\bfront[\\s-]?end\\s+(engineer|developer)\\b",
+        "\\bback[\\s-]?end\\s+(engineer|developer)\\b",
+        "\\bweb\\s+(developer|engineer)\\b",
+        "\\bapplication\\s+(engineer|developer)\\b",
+        "\\bproduct\\s+engineer\\b",
+        "\\b(swe|sde)\\s*(i|ii|iii|iv|1|2|3|4)?\\b",
+        "\\bprogrammer\\b"
+      ],
+      "negative_patterns": [
+        "\\bembedded\\b",
+        "\\bfirmware\\b",
+        "\\bmobile\\b",
+        "\\b(ios|android)\\b",
+        "\\bdata\\s+engineer\\b",
+        "\\b(machine\\s+learning|ml|ai)\\s+engineer\\b",
+        "\\b(platform|infrastructure|devops|cloud)\\s+engineer\\b",
+        "\\bsite\\s+reliability\\b",
+        "\\bsre\\b",
+        "\\bproduction\\s+engineer\\b",
+        "\\bsecurity\\b",
+        "\\bsales\\s+engineer\\b",
+        "\\bsolutions?\\s+engineer\\b",
+        "\\bsolutions?\\s+architect\\b",
+        "\\bforward[\\s-]?deployed\\b",
+        "\\bfdse?\\b",
+        "\\bsupport\\s+engineer\\b",
+        "\\bcustomer\\s+(success|support|solutions)\\s+engineer\\b",
+        "\\b(consulting|professional\\s+services)\\s+engineer\\b",
+        "\\bimplementation\\s+(engineer|consultant)\\b",
+        "\\bdeveloper\\s+advoca(te|cy)\\b",
+        "\\bdev\\s*rel\\b",
+        "\\bengineering\\s+manager\\b",
+        "\\bdirector\\s+of\\s+engineering\\b",
+        "\\bvp\\s+of\\s+engineering\\b",
+        "\\bcto\\b",
+        "\\btechnical\\s+product\\s+manager\\b",
+        "\\bsoftware\\s+engineer\\s+in\\s+test\\b",
+        "\\bsdet\\b",
+        "\\b(qa|quality\\s+assurance|test)\\s+engineer\\b",
+        "\\brecruit(er|ing)\\b"
+      ],
+      "disambiguation_note": "This is the generalist catch-all and MUST be checked last (highest priority number of all 18) -- the substring 'software engineer' or 'developer' appears inside the vast majority of the other 17 archetypes' real-world titles (Embedded Software Engineer, Security Software Engineer, Data Engineer -- wait, not that one, but Site Reliability Software Engineer, ML Software Engineer, etc.), so this archetype's negative_patterns list is intentionally the longest in the rubric, mirroring every other archetype's positive signal as a defensive exclusion. 'Software Engineer in Test' / 'SDET' / 'QA Engineer' are excluded here (and appear in always_exclude_patterns too) because no QA/test archetype exists among the 18 -- these titles should NOT be force-fit into the generalist bucket just because they contain 'software engineer'."
+    }
+  ],
+  "known_ambiguous_titles": [
+    {
+      "pattern": "Solutions Engineer (bare, no other qualifier)",
+      "collision": [
+        "sales-engineer-pre-sales",
+        "solutions-architect-vendor-side",
+        "customer-support-solutions-engineer"
+      ],
+      "reason": "Explicitly documented in roles-summary.md's 'Naming ambiguity' section as a 3-way title collision used interchangeably across all three archetypes depending on company culture. Title text alone cannot resolve it; recommend routing to manual/sample review or using company-name/seniority/comp-band signals if available downstream."
+    },
+    {
+      "pattern": "Solutions Architect / Solution Architect (bare, no vendor-product or consulting/SI qualifier)",
+      "collision": [
+        "solutions-architect-vendor-side",
+        "solutions-architect-consulting"
+      ],
+      "reason": "Both archetypes use the identical base title. This rubric only auto-classifies when a vendor-product token (AWS/Azure/Salesforce/etc.) or a consulting/SI qualifier is present in the title; bare 'Solutions Architect' should be flagged for manual review rather than guessed, especially since company name (the strongest real signal) usually isn't in the title string."
+    },
+    {
+      "pattern": "TPM (bare acronym, or 'Technical Product Manager' vs 'Technical Program Manager' unclear from truncated/abbreviated titles)",
+      "collision": [
+        "technical-product-manager",
+        "(out-of-taxonomy: Technical Program Manager)"
+      ],
+      "reason": "The same 3-letter acronym is used for two genuinely different roles. Do not treat bare 'TPM' as a positive signal for technical-product-manager; require the full spelled-out phrase."
+    },
+    {
+      "pattern": "Customer Reliability Engineer",
+      "collision": [
+        "sre-production-engineer",
+        "customer-support-engineer"
+      ],
+      "reason": "Cloudflare-originated title (and now used more broadly) for a role that is nominally in a support org but staffed/leveled like SRE with proactive reliability engineering as a core function, per customer-support-engineer.md's own boundary-case note."
+    },
+    {
+      "pattern": "Production Engineer (bare, no software/tech-company context)",
+      "collision": [
+        "sre-production-engineer",
+        "(out-of-taxonomy: manufacturing/industrial production engineer)"
+      ],
+      "reason": "Meta/Facebook popularized 'Production Engineer' as an SRE-equivalent title, but the identical title is extremely common in manufacturing/industrial/food/beverage contexts for a non-software role. Volume-check this pattern's hit rate against SIC/industry data if available before trusting the auto-classification at scale."
+    },
+    {
+      "pattern": "Reliability Engineer (bare, no 'Site' qualifier)",
+      "collision": [
+        "sre-production-engineer",
+        "(out-of-taxonomy: mechanical/plant/asset reliability engineer)"
+      ],
+      "reason": "Extremely common non-software title in manufacturing, oil & gas, utilities, and plant-maintenance contexts (reliability-centered maintenance, RCM). Only 'Site Reliability Engineer' is treated as an unambiguous SRE signal in this rubric."
+    },
+    {
+      "pattern": "Systems Engineer (bare)",
+      "collision": [
+        "platform-infrastructure-engineer",
+        "embedded-iot-engineer",
+        "(out-of-taxonomy: IT/network systems engineer, defense/aerospace systems engineering)"
+      ],
+      "reason": "One of the most overloaded titles in any general job-title corpus -- spans DevOps/platform work, embedded/hardware systems engineering, general IT/network administration, and formal defense-industry 'systems engineering' (requirements/V&V across a whole product). No positive pattern in this rubric matches bare 'Systems Engineer' for exactly this reason."
+    },
+    {
+      "pattern": "Technical Project Manager / Engineering Project Manager",
+      "collision": [
+        "technical-product-manager",
+        "(out-of-taxonomy: Technical Program Manager / general project management)"
+      ],
+      "reason": "Deliberately left unclassified by this rubric (not matched by technical-product-manager's positive_patterns, and carved out of the project-manager always_exclude_pattern via negative lookbehind rather than blanket-excluded). Real usage splits between roadmap/delivery-coordination work (out of scope, PM-not-PdM) and, less commonly, a de facto TPM-equivalent at companies that don't use 'Product Manager' internally. Low enough volume and confidence to warrant manual review rather than a guess in either direction."
+    },
+    {
+      "pattern": "Technical Consultant (bare)",
+      "collision": [
+        "consulting-engineer-professional-services",
+        "solutions-architect-consulting"
+      ],
+      "reason": "Used for both hands-on implementation-delivery roles and more senior design-led consulting-SA roles depending on the firm; consulting-engineer-professional-services.md and solutions-architect-consulting.md both cite overlapping real postings using this exact title."
+    },
+    {
+      "pattern": "Developer Experience Engineer / DX Engineer",
+      "collision": [
+        "platform-infrastructure-engineer",
+        "developer-relations-advocacy"
+      ],
+      "reason": "developer-relations-advocacy.md notes DX-titled roles sit 'under the broader DevRel umbrella,' but in practice this title is also widely used for internal-developer-platform/tooling engineers whose 'customers' are other engineers, not external developers -- a platform-infrastructure-engineer scope. Title text alone doesn't disambiguate internal vs. external audience."
+    },
+    {
+      "pattern": "Tech Lead / Team Lead (bare, no 'Engineering Manager' qualifier)",
+      "collision": [
+        "product-full-stack-software-engineer",
+        "engineering-management"
+      ],
+      "reason": "Genuinely split in real usage between a senior IC with informal technical leadership duties (still an implementer) and a first-line people manager who has stopped being the primary implementer. The engineering-management.md brief's own defining test (evaluator vs. implementer) isn't reliably signaled by this title alone."
+    },
+    {
+      "pattern": "Product Owner",
+      "collision": [
+        "technical-product-manager",
+        "(out-of-taxonomy: Scrum/process-focused product owner)"
+      ],
+      "reason": "Ranges from a lightly-technical backlog-management role (not a good fit for technical-product-manager's architecture-tradeoff scope) to a role functionally identical to a TPM at some companies. Not confidently mapped to any of the 18 archetypes by title alone."
+    },
+    {
+      "pattern": "Implementation Specialist",
+      "collision": [
+        "consulting-engineer-professional-services",
+        "customer-support-solutions-engineer"
+      ],
+      "reason": "Onboarding-flavored title that could describe either SOW-scoped technical implementation work (consulting-engineer-professional-services) or account-embedded customer onboarding with lighter technical depth (customer-support-solutions-engineer), depending on the employer."
+    },
+    {
+      "pattern": "Field Engineer (bare)",
+      "collision": [
+        "forward-deployed-engineer",
+        "customer-support-engineer",
+        "(out-of-taxonomy: hardware/telecom field service engineer)"
+      ],
+      "reason": "Extremely overloaded across industries -- telecom/hardware field service (non-software), on-site customer support, and forward-deployed-style embedded delivery all use this exact title. No positive pattern in this rubric matches it."
+    },
+    {
+      "pattern": "Deployment Engineer (bare, no forward/AI-company-specific qualifier)",
+      "collision": [
+        "forward-deployed-engineer",
+        "platform-infrastructure-engineer",
+        "consulting-engineer-professional-services"
+      ],
+      "reason": "Cross-company sample showed this means different things per employer: OpenAI/Writer use it as their FDE-equivalent (AI embedded at customer sites); Supabase/Crusoe/Anduril use it for infrastructure/network deployment tooling; robotics companies (Figure AI, Skydio, Path Robotics, Locus Robotics, Applied Intuition) use it for physical robot/hardware site installation. No single archetype fits all cases -- resolved via a company-context override for OpenAI specifically (publicly documented as FDE-modeled), left ambiguous/unclassified elsewhere rather than guessed."
+    }
+  ],
+  "always_exclude_patterns": [
+    {
+      "pattern": "\\b(manufacturing|process|mechanical|civil|chemical|structural|industrial|environmental|materials?|nuclear|petroleum|mining)\\s+engineer(ing)?\\b",
+      "reason": "Non-software engineering disciplines. Adjacency-based (e.g. 'Mechanical Engineer') so does not false-positive on titles like 'Mechanical Design Software Engineer' where 'engineer' isn't immediately adjacent to the discipline word in the exact discipline+engineer bigram."
+    },
+    {
+      "pattern": "\\b(automotive|aerospace)\\s+engineer\\b",
+      "reason": "Bare discipline+engineer titles (non-software). Does not match 'Aerospace Software Engineer' or 'Automotive Embedded Engineer' since those have an intervening software/embedded/firmware token, which correctly routes them to embedded-iot-engineer or product-full-stack-software-engineer instead."
+    },
+    {
+      "pattern": "\\belectrical\\s+engineer\\b",
+      "reason": "Non-software discipline; does not match 'Electrical/Firmware Engineer' hybrid titles due to adjacency requirement."
+    },
+    {
+      "pattern": "\\b(qa|quality\\s+assurance|test)\\s+engineer\\b",
+      "reason": "No dedicated QA/Test archetype exists among the 18 SWE Genie archetypes. Excluded from all archetypes including the generalist product-full-stack-software-engineer fallback, per the task's own worked example."
+    },
+    {
+      "pattern": "\\bsoftware\\s+engineer\\s+in\\s+test\\b",
+      "reason": "Same rationale as QA/Test Engineer -- SEIT/SDET-family titles have no home in this 18-archetype taxonomy."
+    },
+    {
+      "pattern": "\\bsdet\\b",
+      "reason": "Software Development Engineer in Test acronym -- same QA/test exclusion rationale."
+    },
+    {
+      "pattern": "\\bsecurity\\s+(guard|officer)\\b",
+      "reason": "Physical security, not software security engineering."
+    },
+    {
+      "pattern": "\\barmed\\s+security\\b",
+      "reason": "Physical security, not software security engineering."
+    },
+    {
+      "pattern": "\\bpenetration\\s+test(er|ing)\\b",
+      "reason": "Offensive-security work; security-engineer.md's own scope note explicitly frames this archetype as defensive/proactive-posture, 'not primarily offensive/hacking work.' No dedicated offensive-security archetype exists in v1."
+    },
+    {
+      "pattern": "\\bred\\s+team\\b",
+      "reason": "Offensive-security work, same rationale as Penetration Tester above."
+    },
+    {
+      "pattern": "\\b(data\\s+scientist|data\\s+analyst|business\\s+intelligence\\s+analyst)\\b",
+      "reason": "Explicitly decided OUT of v1 scope in roles-summary.md's Phase 2 resolution ('Data Scientist / Data Analyst -- in or out of v1... Decision: OUT of v1, added to the v2 backlog'), on the grounds that this population is frequently entered from non-SWE backgrounds, breaking the product's core 'lateral move from a software engineering base' framing."
+    },
+    {
+      "pattern": "\\b(research|applied)\\s+scientist\\b",
+      "reason": "Explicitly and deliberately excluded from ml-engineer.md as a PhD-gated, publication-oriented role out of scope for this software-engineer-facing taxonomy. Does not match if 'Engineer' is the terminal word (e.g. a hybrid 'Research Engineer' title with clear production-shipping scope would need separate human judgment; this pattern targets the bare Scientist-suffixed title)."
+    },
+    {
+      "pattern": "\\b(?<!technical\\s)(?<!engineering\\s)project\\s+manager\\b",
+      "reason": "Generic, non-technical project management. 'Technical Project Manager' / 'Engineering Project Manager' are excluded from this always-exclude pattern via negative lookbehind since those are closer to the TPM/program-manager boundary and arguably more software-adjacent -- treat as known_ambiguous rather than confidently mapping them into technical-product-manager, but do not blanket-exclude them either."
+    },
+    {
+      "pattern": "\\bscrum\\s+master\\b",
+      "reason": "Agile process-facilitation role, not a software engineering archetype."
+    },
+    {
+      "pattern": "\\bagile\\s+coach\\b",
+      "reason": "Agile process-facilitation role, not a software engineering archetype."
+    },
+    {
+      "pattern": "\\b(recruiter|recruiting|talent\\s+acquisition)\\b",
+      "reason": "Pure HR/recruiting function, including technical recruiters -- explicitly out of scope for an engineering-career-archetype taxonomy."
+    },
+    {
+      "pattern": "\\b(human\\s+resources|hr)\\s+(coordinator|specialist|manager|partner|generalist|business\\s+partner)\\b",
+      "reason": "Pure HR function."
+    },
+    {
+      "pattern": "\\b(accountant|bookkeeper|controller|financial\\s+analyst|accounts\\s+(payable|receivable))\\b",
+      "reason": "Finance function, unrelated to any of the 18 engineering archetypes."
+    },
+    {
+      "pattern": "\\bmarketing\\s+(manager|specialist|coordinator|associate|director)\\b",
+      "reason": "Marketing function, unrelated to any of the 18 engineering archetypes."
+    },
+    {
+      "pattern": "\\b(retail|store)\\s+(associate|manager|clerk|supervisor)\\b",
+      "reason": "Retail/hourly-labor role."
+    },
+    {
+      "pattern": "\\b(warehouse|forklift|delivery\\s+driver|cashier|barista|server|line\\s+cook|dishwasher)\\b",
+      "reason": "Hourly-labor / non-engineering role that occasionally appears in mixed multi-vertical ATS harvests (e.g. a retailer's public ATS board mixed with its engineering postings)."
+    },
+    {
+      "pattern": "\\bsales\\s+(representative|associate|executive|manager|director)\\b",
+      "reason": "Pure (non-technical) sales roles without 'engineer' in the title -- these should never fall through to any engineering archetype, including sales-engineer-pre-sales, which requires the word 'engineer'."
+    }
+  ]
+}

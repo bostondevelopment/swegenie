@@ -93,7 +93,9 @@ decide and document" instruction above, make the call and note it in the relevan
    vs. the ≥15 target in PLAN.md). Either do a quick follow-up sourcing pass before Phase 2 locks
    in trait weights for these archetypes, or proceed and flag them as lower-confidence in the
    Phase 2 archetype × dimension matrix. Your call — document whichever you pick in
-   `docs/research/roles-summary.md`.
+   `docs/research/roles-summary.md`. **Resolved 2026-07-11:** the deferred follow-up sourcing pass
+   was run; both briefs are now past the ≥15-posting target and marked high confidence — see
+   `docs/research/roles-summary.md`'s "Phase 2 resolution of open items" section.
 2. **Solutions Architect (consulting-side) has an unreconciled ~$100K+ comp discrepancy**
    between two merged sources (Levels.fyi vs. Glassdoor bands). Pick a reasonable resolution
    (e.g., widen the stated range, prefer the more directly-sourced figure, or note both with

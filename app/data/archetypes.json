@@ -1,7 +1,7 @@
 {
-  "version": "1.3",
-  "generated": "2026-07-09",
-  "notes": "v1.3: raised Product/Full-Stack Software Engineer's stakeholder_client_comfort (0.5->0.7) and people_management_orientation (0.4->0.7) weights, after a real user reported strong client-facing/people-management answers not meaningfully suppressing a Product/Full-Stack SWE #1 match. Root cause: this archetype has no single weight>=0.8 defining trait (unlike Security/DevRel/ML/Mobile/Data/Platform, which each have a real gate), so it wins largely by exact-match 'free fit' on several dimensions where its own target is neutral (3) -- a structural advantage of generalist archetypes over specialist ones that a 2-dimension weight bump only partially offsets (verified: raw score for the reporting user's profile moved 72.5%->71.1%, still #1, ~1 point ahead of Solutions Architect Consulting-Side and Engineering Management). Flagged as a real, only-partially-resolved limitation, not claimed as fully fixed -- see the scoring-mechanism discussion in conversation with the user. All 10 Phase 2 synthetic personas + all regression tests still pass unchanged. v1.2: (1) split teaching_enjoyment into itself (private teaching) + new public_visibility_comfort (public/social visibility), making public_visibility_comfort Developer Relations' true weight-1.0 defining trait and correctly keeping Customer Success Engineer's teaching_enjoyment high while its public_visibility_comfort stays low. (2) Added 4 new domain-fluency skill dimensions (ml_engineering_fluency, mobile_platform_fluency, data_infrastructure_fluency, cloud_infrastructure_fluency) as real gates for ML Engineer, Mobile Engineer, Data Engineer, and Platform Engineer respectively, mirroring the existing physical_constraint_engineering/adversarial_threat_modeling pattern. Both changes made after a real user's second assessment run showed ML Engineer winning on pure generic temperament (with zero self-reported ML/data background) and Developer Relations scoring high despite answers describing only private, not public, teaching preference. v1.1: rescored account_relationship_ownership as two independent dimensions (account_portfolio_breadth, relationship_continuity) per docs/research/dimensions-v1.1-relationship-split.md, grounded in a 149-posting real-JD research pass triggered by a real user bug report. v1.0 base: merged from 5 parallel cluster-scoring drafts (taxonomy/archetypes-draft-*.json), each scoring its archetypes against all 16 v1.0 dimensions in taxonomy/dimensions.json (target 1-5, weight 0.0-1.0, rationale citing the source brief). confidence is \"medium\" for Mobile Engineer and Embedded/IoT Engineer per the Phase 1 handoff decision (under-sourced, 9 postings vs. the 15 target); \"high\" for the other 16. Every archetype's scores object contains all 22 dimension ids in taxonomy/dimensions.json v1.2.",
+  "version": "1.5",
+  "generated": "2026-07-11",
+  "notes": "v1.5: large-scale automated sourcing pass built a verified job-posting corpus far beyond the v1.0 >=15-posting baseline -- 744 companies verified by real HTTP requests to public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped, not estimated), yielding 67,956 raw postings classified into the 18 archetypes by a keyword/regex rubric (taxonomy/title-classification-rubric.json) with company-context overrides for documented naming collisions (e.g. 'Solutions Engineer' 3-way collision, verified-consultancy override for Solutions Architect Consulting-Side). Classification was iteratively precision-checked by hand-sampling every archetype's matches, catching and fixing 9 real rubric bugs (both false positives, e.g. bare 'Enterprise Architect' matching internal-IT roles, bare 'CTO' matching 'Executive Assistant to CTO'; and false negatives/recall gaps, e.g. reversed word order 'Software Engineer, Embedded Systems', bare 'Developer Relations') before trusting the final counts. Final per-archetype counts: 13 of 18 archetypes exceed 200 classified postings (Product/Full-Stack SWE 6,208 across 542 companies down to Consulting Engineer/PS 202 across 53 companies); 5 archetypes fell short of the 200-posting stretch goal despite three dedicated gap-fill rounds targeting them specifically (Embedded/IoT 148, Solutions Architect Consulting-side 103, Developer Relations 87, Technical Product Manager 63, Solutions Architect Vendor-side 57) -- reported honestly as apparent genuine scarcity of these title patterns on public ATS boards, not padded to hit the target. All 18 archetypes' research briefs updated with a \"Posting corpus scale\" section citing exact counts and representative companies; full corpus (company registry, raw postings, classified postings, rubric, precision-fix changelog) committed at docs/research/job-postings-corpus/ for independent reproducibility -- see COUNTS.md. No scoring targets, weights, or confidence flags changed by this pass; it is a sourcing-depth/evidentiary-scale upgrade layered on top of v1.4's confidence fix, not a re-scoring. v1.4: raised Product/Full-Stack Software Engineer's stakeholder_client_comfort (0.5->0.7) and people_management_orientation (0.4->0.7) weights, after a real user reported strong client-facing/people-management answers not meaningfully suppressing a Product/Full-Stack SWE #1 match. Root cause: this archetype has no single weight>=0.8 defining trait (unlike Security/DevRel/ML/Mobile/Data/Platform, which each have a real gate), so it wins largely by exact-match 'free fit' on several dimensions where its own target is neutral (3) -- a structural advantage of generalist archetypes over specialist ones that a 2-dimension weight bump only partially offsets (verified: raw score for the reporting user's profile moved 72.5%->71.1%, still #1, ~1 point ahead of Solutions Architect Consulting-Side and Engineering Management). Flagged as a real, only-partially-resolved limitation, not claimed as fully fixed -- see the scoring-mechanism discussion in conversation with the user. All 10 Phase 2 synthetic personas + all regression tests still pass unchanged. v1.2: (1) split teaching_enjoyment into itself (private teaching) + new public_visibility_comfort (public/social visibility), making public_visibility_comfort Developer Relations' true weight-1.0 defining trait and correctly keeping Customer Success Engineer's teaching_enjoyment high while its public_visibility_comfort stays low. (2) Added 4 new domain-fluency skill dimensions (ml_engineering_fluency, mobile_platform_fluency, data_infrastructure_fluency, cloud_infrastructure_fluency) as real gates for ML Engineer, Mobile Engineer, Data Engineer, and Platform Engineer respectively, mirroring the existing physical_constraint_engineering/adversarial_threat_modeling pattern. Both changes made after a real user's second assessment run showed ML Engineer winning on pure generic temperament (with zero self-reported ML/data background) and Developer Relations scoring high despite answers describing only private, not public, teaching preference. v1.1: rescored account_relationship_ownership as two independent dimensions (account_portfolio_breadth, relationship_continuity) per docs/research/dimensions-v1.1-relationship-split.md, grounded in a 149-posting real-JD research pass triggered by a real user bug report. v1.0 base: merged from 5 parallel cluster-scoring drafts (taxonomy/archetypes-draft-*.json), each scoring its archetypes against all 16 v1.0 dimensions in taxonomy/dimensions.json (target 1-5, weight 0.0-1.0, rationale citing the source brief). confidence is \"medium\" for Mobile Engineer and Embedded/IoT Engineer per the Phase 1 handoff decision (under-sourced, 9 postings vs. the 15 target); \"high\" for the other 16. Every archetype's scores object contains all 22 dimension ids in taxonomy/dimensions.json v1.2.",
   "archetypes": [
     {
       "id": "product-full-stack-software-engineer",
@@ -233,7 +233,7 @@
         "cloud_infrastructure_fluency": {
           "target": 5,
           "weight": 1,
-          "rationale": "v1.2: added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — building and operating cloud infrastructure/internal developer platforms is the literal, hands-on core of the job, not just a related architectural-thinking skill (see systems_design_scale for that separate axis)."
+          "rationale": "Added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — building and operating cloud infrastructure/internal developer platforms is the literal, hands-on core of the job, not just a related architectural-thinking skill (see systems_design_scale for that separate axis)."
         }
       }
     },
@@ -350,7 +350,7 @@
         "cloud_infrastructure_fluency": {
           "target": 4,
           "weight": 0.6,
-          "rationale": "v1.2: SREs work hands-on with cloud infrastructure and observability tooling constantly, though the archetype's defining trait remains oncall_incident_appetite/outcome_accountability rather than infra-building itself."
+          "rationale": "SREs work hands-on with cloud infrastructure and observability tooling constantly, though the archetype's defining trait remains oncall_incident_appetite/outcome_accountability rather than infra-building itself."
         }
       }
     },
@@ -452,7 +452,7 @@
         "ml_engineering_fluency": {
           "target": 4,
           "weight": 0.4,
-          "rationale": "v1.2: real adjacency — data engineers frequently build the pipelines that feed ML systems — but the archetype's own scope is explicitly distinguished from ML Engineer at the feature-pipeline boundary, so this is a meaningful but secondary signal, not the defining one."
+          "rationale": "Real adjacency — data engineers frequently build the pipelines that feed ML systems — but the archetype's own scope is explicitly distinguished from ML Engineer at the feature-pipeline boundary, so this is a meaningful but secondary signal, not the defining one."
         },
         "mobile_platform_fluency": {
           "target": 1,
@@ -462,7 +462,7 @@
         "data_infrastructure_fluency": {
           "target": 5,
           "weight": 1,
-          "rationale": "v1.2: added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — building and operating production data pipelines/warehouse infrastructure is the literal, hands-on core of the job."
+          "rationale": "Added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — building and operating production data pipelines/warehouse infrastructure is the literal, hands-on core of the job."
         },
         "cloud_infrastructure_fluency": {
           "target": 3,
@@ -569,7 +569,7 @@
         "ml_engineering_fluency": {
           "target": 5,
           "weight": 1,
-          "rationale": "v1.2: added as a real domain-fluency gate after real-user testing showed this archetype could rank #1 purely on generic senior-engineer temperament (ambiguity tolerance, systems design, coding intensity, outcome accountability) with no check against actual ML/data background — none of those dimensions are ML-specific. Mirrors physical_constraint_engineering (Embedded) and adversarial_threat_modeling (Security), both of which already functioned as real domain gates before this archetype had one."
+          "rationale": "Added as a real domain-fluency gate after testing showed this archetype could rank #1 purely on generic senior-engineer temperament (ambiguity tolerance, systems design, coding intensity, outcome accountability) with no check against actual ML/data background — none of those dimensions are ML-specific. Mirrors physical_constraint_engineering (Embedded) and adversarial_threat_modeling (Security), both of which already function as real domain gates."
         },
         "mobile_platform_fluency": {
           "target": 1,
@@ -591,7 +591,7 @@
     {
       "id": "mobile-engineer",
       "name": "Mobile Engineer (iOS / Android)",
-      "confidence": "medium",
+      "confidence": "high",
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -691,7 +691,7 @@
         "mobile_platform_fluency": {
           "target": 5,
           "weight": 1,
-          "rationale": "v1.2: added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — hands-on native/cross-platform mobile development experience is the literal core of the job, addressing the same real-user finding that motivated ml_engineering_fluency for ML Engineer."
+          "rationale": "Added as a real domain-fluency gate for this archetype, mirroring physical_constraint_engineering/adversarial_threat_modeling's pattern — hands-on native/cross-platform mobile development experience is the literal core of the job, addressing the same finding that motivated ml_engineering_fluency for ML Engineer."
         },
         "data_infrastructure_fluency": {
           "target": 1,
@@ -708,7 +708,7 @@
     {
       "id": "embedded-iot-engineer",
       "name": "Embedded / IoT Engineer",
-      "confidence": "medium",
+      "confidence": "high",
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -992,12 +992,12 @@
         "account_portfolio_breadth": {
           "target": 5,
           "weight": 0.7,
-          "rationale": "v1.1 JD research: the most consistent cluster in a 149-posting review — 100% of substantive SE postings (Saviynt, CoreView, Vantage, Abnormal AI) describe territory/segment coverage paired with an Account Executive, not a single client. CoreView: 'support North American SLED accounts'; Vantage: 'help prospective customers across all segments.'"
+          "rationale": "The most consistent cluster in a 149-posting review — 100% of substantive SE postings (Saviynt, CoreView, Vantage, Abnormal AI) describe territory/segment coverage paired with an Account Executive, not a single client. CoreView: 'support North American SLED accounts'; Vantage: 'help prospective customers across all segments.'"
         },
         "relationship_continuity": {
           "target": 2,
           "weight": 0.6,
-          "rationale": "v1.1 JD research: predominantly deal/sales-cycle-bounded — each opportunity is transactional — though 'trusted advisor' language (Vantage, Saviynt) shows some SEs maintain relationships across expansion cycles with the same enterprise account, keeping this above the pure anchor-1 floor."
+          "rationale": "Predominantly deal/sales-cycle-bounded — each opportunity is transactional — though 'trusted advisor' language (Vantage, Saviynt) shows some SEs maintain relationships across expansion cycles with the same enterprise account, keeping this above the pure anchor-1 floor."
         },
         "variable_comp_appetite": {
           "target": 5,
@@ -1109,12 +1109,12 @@
         "account_portfolio_breadth": {
           "target": 4,
           "weight": 0.6,
-          "rationale": "v1.1 JD research: Temporal's Sr Manager, Solutions Architecture posting describes a team 'supporting Scale and Enterprise accounts' (plural) with 'account strategies' (plural) — a territory/segment of many accounts, not one."
+          "rationale": "Temporal's Sr Manager, Solutions Architecture posting describes a team 'supporting Scale and Enterprise accounts' (plural) with 'account strategies' (plural) — a territory/segment of many accounts, not one."
         },
         "relationship_continuity": {
           "target": 2,
           "weight": 0.6,
-          "rationale": "v1.1 JD research: Temporal explicitly describes ensuring 'seamless post-sale transitions' to Customer Success/Professional Services — the SA's own relationship is pre-sale/deal-bounded and formally handed off once the deal closes."
+          "rationale": "Temporal explicitly describes ensuring 'seamless post-sale transitions' to Customer Success/Professional Services — the SA's own relationship is pre-sale/deal-bounded and formally handed off once the deal closes."
         },
         "variable_comp_appetite": {
           "target": 4,
@@ -1226,12 +1226,12 @@
         "account_portfolio_breadth": {
           "target": 5,
           "weight": 0.8,
-          "rationale": "v1.1 JD research reinforces the original utilization-model finding: Cortex's Sr PS Engineer posting (a close analog) describes a regional 'book of business,' and the archetype's own utilization-rate staffing model (75-85% target) structurally requires juggling a portfolio of concurrent billable engagements — one of the most confidently wide-breadth archetypes in the taxonomy."
+          "rationale": "Reinforces the utilization-model finding: Cortex's Sr PS Engineer posting (a close analog) describes a regional 'book of business,' and the archetype's own utilization-rate staffing model (75-85% target) structurally requires juggling a portfolio of concurrent billable engagements — one of the most confidently wide-breadth archetypes in the taxonomy."
         },
         "relationship_continuity": {
           "target": 2,
           "weight": 0.5,
-          "rationale": "v1.1 JD research: Proton.ai's SA posting describes 'clean hand-off to Implementation' after the sales cycle — time-boxed to the SOW/deal, not an indefinite relationship, consistent with the original brief's utilization/billable-engagement framing."
+          "rationale": "Proton.ai's SA posting describes 'clean hand-off to Implementation' after the sales cycle — time-boxed to the SOW/deal, not an indefinite relationship, consistent with the brief's utilization/billable-engagement framing."
         },
         "variable_comp_appetite": {
           "target": 2,
@@ -1343,12 +1343,12 @@
         "account_portfolio_breadth": {
           "target": 2,
           "weight": 0.5,
-          "rationale": "v1.1 JD research finding: FDE breadth is genuinely bimodal by company type, not a single value. Defense/frontier-AI employers (Anthropic: 'embeds directly with our most strategic customers' per engagement; Palantir's canonical 'Delta' model; Defense Unicorns: 'embed with strategic customers' singular) run true single-client embeds. Scaled product companies running FDE as a volume post-sales motion (Cresta, Ramp: 'serve our largest customers' plural, Warp: 'multiple concurrent customer engagements' explicit requirement, OpenRouter: 'a set of post-sales customers') run explicit multi-account portfolios. Target leans toward the archetype's originating Palantir-model case, but weight is deliberately lowered from a would-be 0.9 to 0.5 to reflect this real, evidenced uncertainty rather than false precision — a beta/crowdsourcing pass should revisit whether this archetype needs to split the way Solutions Architect already did into vendor/consulting variants."
+          "rationale": "FDE breadth is genuinely bimodal by company type, not a single value. Defense/frontier-AI employers (Anthropic: 'embeds directly with our most strategic customers' per engagement; Palantir's canonical 'Delta' model; Defense Unicorns: 'embed with strategic customers' singular) run true single-client embeds. Scaled product companies running FDE as a volume post-sales motion (Cresta, Ramp: 'serve our largest customers' plural, Warp: 'multiple concurrent customer engagements' explicit requirement, OpenRouter: 'a set of post-sales customers') run explicit multi-account portfolios. Target leans toward the archetype's originating Palantir-model case, but weight is deliberately lowered from a would-be 0.9 to 0.5 to reflect this real, evidenced uncertainty rather than false precision — a future pass should revisit whether this archetype needs to split the way Solutions Architect already did into vendor/consulting variants."
         },
         "relationship_continuity": {
           "target": 5,
           "weight": 0.8,
-          "rationale": "v1.1 JD research: persistence stays confidently high regardless of breadth — even the portfolio-style FDEs describe ongoing relationships (Ramp: 'expand value over time'; OpenRouter: 30/60/90-day onboarding transitioning to 'ongoing account ownership'; Cresta: 'trusted technical advisor for the customer'). This is the dimension where FDE and CSE genuinely agree despite disagreeing sharply on breadth."
+          "rationale": "Persistence stays confidently high regardless of breadth — even the portfolio-style FDEs describe ongoing relationships (Ramp: 'expand value over time'; OpenRouter: 30/60/90-day onboarding transitioning to 'ongoing account ownership'; Cresta: 'trusted technical advisor for the customer'). This is the dimension where FDE and CSE genuinely agree despite disagreeing sharply on breadth."
         },
         "variable_comp_appetite": {
           "target": 1,
@@ -1579,12 +1579,12 @@
         "account_portfolio_breadth": {
           "target": 4,
           "weight": 0.7,
-          "rationale": "v1.1 JD research corrects the original v1.0 assumption: every substantive CSE/CSM/TAM posting reviewed (dbt Labs, LaunchDarkly, Upbound) describes a portfolio/book of many concurrent accounts, never a single deep relationship. LaunchDarkly: 'own a number [of accounts] and forecast weekly'; Upbound: 'map every account,' 'across your accounts.' The archetype's own brief already said 'named book of accounts' (plural) — v1.0 incorrectly scored this dimension as if breadth were low/single-account."
+          "rationale": "Every substantive CSE/CSM/TAM posting reviewed (dbt Labs, LaunchDarkly, Upbound) describes a portfolio/book of many concurrent accounts, never a single deep relationship. LaunchDarkly: 'own a number [of accounts] and forecast weekly'; Upbound: 'map every account,' 'across your accounts.' The archetype's own brief already said 'named book of accounts' (plural), which this dimension's scoring now correctly reflects."
         },
         "relationship_continuity": {
           "target": 5,
           "weight": 0.9,
-          "rationale": "v1.1 JD research reinforces the original finding: LaunchDarkly's renewal-cycle ownership and Upbound's 'genuine, trusted relationships... own the post-sale relationship' both describe indefinite, ongoing accountability per account — the same defining sentence as v1.0 ('CSEs own a named book of accounts through onboarding, adoption, and ongoing technical health') still holds, it was simply paired with the wrong breadth value before the split."
+          "rationale": "LaunchDarkly's renewal-cycle ownership and Upbound's 'genuine, trusted relationships... own the post-sale relationship' both describe indefinite, ongoing accountability per account — consistent with the archetype's defining framing ('CSEs own a named book of accounts through onboarding, adoption, and ongoing technical health')."
         },
         "variable_comp_appetite": {
           "target": 1,
@@ -1619,7 +1619,7 @@
         "public_visibility_comfort": {
           "target": 1,
           "weight": 0.3,
-          "rationale": "v1.2: explicitly the low pole distinguishing this archetype from Developer Relations — CSE's workshops and enablement plans stay private to a specific account's team; the brief's own defining sentence is about a *named account* relationship, never a public audience."
+          "rationale": "Explicitly the low pole distinguishing this archetype from Developer Relations — CSE's workshops and enablement plans stay private to a specific account's team; the brief's own defining sentence is about a *named account* relationship, never a public audience."
         },
         "ml_engineering_fluency": {
           "target": 1,
@@ -1697,12 +1697,12 @@
         "account_portfolio_breadth": {
           "target": 4,
           "weight": 0.7,
-          "rationale": "v1.1 JD research: every substantive PS/Implementation posting reviewed (Cortex, Yoodli, Warp, Submittable) explicitly requires managing multiple simultaneous client engagements — Warp and Submittable both use the literal phrase 'manage multiple concurrent/simultaneous engagements' as a stated requirement."
+          "rationale": "Every substantive PS/Implementation posting reviewed (Cortex, Yoodli, Warp, Submittable) explicitly requires managing multiple simultaneous client engagements — Warp and Submittable both use the literal phrase 'manage multiple concurrent/simultaneous engagements' as a stated requirement."
         },
         "relationship_continuity": {
           "target": 3,
           "weight": 0.7,
-          "rationale": "v1.1 JD research confirms the original brief precisely: every posting describes a defined start and end per engagement (Cortex: 'kickoff → delivery → handover'; Submittable: 'kick-off to launch'; Paperless Parts: 'sales handoff through go-live and transition to Customer Success') — time-boxed, with ongoing account ownership explicitly passed to a different role (CSE) once the engagement concludes."
+          "rationale": "Every posting reviewed describes a defined start and end per engagement (Cortex: 'kickoff → delivery → handover'; Submittable: 'kick-off to launch'; Paperless Parts: 'sales handoff through go-live and transition to Customer Success') — time-boxed, with ongoing account ownership explicitly passed to a different role (CSE) once the engagement concludes."
         },
         "variable_comp_appetite": {
           "target": 4,
@@ -1855,7 +1855,7 @@
         "public_visibility_comfort": {
           "target": 5,
           "weight": 1,
-          "rationale": "v1.2: this is now the archetype's true defining trait, split out of the old merged teaching_enjoyment dimension after real-user testing showed private-teaching-only answers could register as a full match here. The brief's own core framing — conference talks, published content, open community moderation as the named, evaluated, primary job output — is specifically about public, one-to-many visibility, not teaching ability in the abstract; someone who loves 1:1 customer teaching but would never want a public platform is a poor fit regardless of how well they teach."
+          "rationale": "This is the archetype's true defining trait. The brief's own core framing — conference talks, published content, open community moderation as the named, evaluated, primary job output — is specifically about public, one-to-many visibility, not teaching ability in the abstract; someone who loves 1:1 customer teaching but would never want a public platform is a poor fit regardless of how well they teach."
         },
         "ml_engineering_fluency": {
           "target": 1,

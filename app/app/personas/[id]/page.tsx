@@ -72,99 +72,85 @@ export default async function PersonaDetailPage({ params }: { params: Promise<{ 
   return (
     <>
       <SiteHeader />
-      <main className="flex-1 mx-auto max-w-3xl px-4 sm:px-6 py-12">
-        <Link href="/personas" className="text-xs text-[var(--color-muted)] hover:text-[var(--color-fg)] mb-4 inline-block">
+      <main className="flex-1 mx-auto max-w-3xl px-4 sm:px-6 pt-14 pb-20">
+        <Link href="/personas" className="font-mono text-[13px] text-[var(--color-muted-2)] hover:text-[var(--color-fg)] mb-5 inline-block">
           &larr; All personas
         </Link>
-        <p className="font-mono text-xs text-[var(--color-muted)] mb-2">
+        <p className="font-mono text-[13px] text-[var(--color-muted-2)] mb-2.5">
           internal / QA &middot; target: {targetArchetype?.name ?? persona.targetArchetypeId}
         </p>
-        <h1 className="font-display text-2xl sm:text-3xl font-semibold mb-3">{persona.personaName}</h1>
-        <p className="text-[var(--color-muted)] mb-6 max-w-2xl">{persona.narrative}</p>
+        <h1 className="font-display text-4xl font-bold tracking-tight mb-[18px]">{persona.personaName}</h1>
+        <p className="text-lg text-[var(--color-muted)] leading-[1.7] mb-8 max-w-2xl">{persona.narrative}</p>
 
-        <div className="card p-5 mb-4 flex flex-col sm:flex-row sm:items-center gap-4">
-          <div className="flex-1">
-            <div className="font-mono text-xs text-[var(--color-muted)] mb-1">
+        <div className="card p-6 mb-5 flex flex-col sm:flex-row sm:items-center gap-6">
+          <div className="flex-1 flex flex-wrap items-center gap-6">
+            <span className="font-mono text-[13px] text-[var(--color-muted-2)] whitespace-nowrap">
               ranked #{rank} of {ranked.length}
-              {rank > 3 && <span className="text-[var(--color-accent)]"> — out of top 3</span>}
+            </span>
+            <div className="flex-1 min-w-[180px]">
+              <FitBar percent={fitPercent(result.fitScore)} />
             </div>
-            <FitBar percent={fitPercent(result.fitScore)} />
           </div>
-          <Link href={`/results?a=${encoded}`} className="btn-primary px-4 py-2 text-sm font-medium whitespace-nowrap">
+          <Link href={`/results?a=${encoded}`} className="btn-primary self-start sm:self-auto px-[22px] py-3 text-[15px] font-semibold whitespace-nowrap">
             View full results page
           </Link>
         </div>
 
-        <details className="card p-4 mb-8 text-sm">
-          <summary className="cursor-pointer font-medium">Full ranking (all {ranked.length} archetypes)</summary>
-          <ol className="mt-3 flex flex-col gap-1.5">
-            {ranked.map((r, i) => (
-              <li key={r.id} className="flex justify-between gap-3">
-                <span className={r.id === persona.targetArchetypeId ? "font-semibold" : "text-[var(--color-muted)]"}>
-                  {i + 1}. {r.name}
-                </span>
-                <span className="font-mono">{fitPercent(r.fitScore)}%</span>
-              </li>
-            ))}
-          </ol>
+        <details className="card p-5 mb-11">
+          <summary className="cursor-pointer font-semibold text-[15px]">&#9656; Full ranking (all {ranked.length} archetypes)</summary>
+          <p className="mt-3.5 text-sm text-[var(--color-muted-2)]">
+            See the <Link href={`/results?a=${encoded}`} className="text-[var(--color-accent)]">full results page</Link> for the complete ranked list of all {ranked.length} archetypes.
+          </p>
         </details>
 
-        <h2 className="font-display text-lg font-semibold mb-3">
+        <h2 className="font-display text-2xl font-semibold mb-3.5">
           How the {targetArchetype?.name} match was scored
         </h2>
-        <p className="text-sm text-[var(--color-muted)] mb-4">
+        <p className="text-[15px] text-[var(--color-muted)] leading-[1.7] mb-7">
           Each row is one dimension: this persona&apos;s aggregated answer, {targetArchetype?.name}&apos;s
           target for that dimension, how much it&apos;s weighted, and the resulting fit. Sorted by weight
           — the top rows are what actually drove the score.
         </p>
-        <div className="overflow-x-auto mb-10">
-          <table className="w-full text-sm border-collapse">
-            <thead>
-              <tr className="text-left text-xs text-[var(--color-muted)] border-b border-[var(--color-border)]">
-                <th className="py-2 pr-3 font-medium">Dimension</th>
-                <th className="py-2 pr-3 font-medium">Answer</th>
-                <th className="py-2 pr-3 font-medium">Target</th>
-                <th className="py-2 pr-3 font-medium">Weight</th>
-                <th className="py-2 font-medium">Fit</th>
-              </tr>
-            </thead>
-            <tbody>
-              {dimensionRows.map((row) => (
-                <tr key={row.dimId} className="border-b border-[var(--color-border)]/60">
-                  <td className="py-2 pr-3">{row.name}</td>
-                  <td className="py-2 pr-3 font-mono">{row.uv == null ? "—" : row.uv.toFixed(2)}</td>
-                  <td className="py-2 pr-3 font-mono">{row.target}</td>
-                  <td className="py-2 pr-3 font-mono">{row.weight.toFixed(1)}</td>
-                  <td className="py-2 font-mono">{row.fit == null ? "—" : row.fit.toFixed(2)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="overflow-x-auto mb-14">
+          <div className="min-w-[520px]">
+            <div className="grid grid-cols-[1fr_90px_90px_90px_70px] py-2.5 border-b border-[rgba(245,245,242,0.15)] font-mono text-xs uppercase tracking-wide text-[var(--color-muted-2)]">
+              <div>Dimension</div><div>Answer</div><div>Target</div><div>Weight</div><div>Fit</div>
+            </div>
+            {dimensionRows.map((row) => (
+              <div key={row.dimId} className="grid grid-cols-[1fr_90px_90px_90px_70px] py-3 border-b border-[var(--color-border)] text-[15px]">
+                <div>{row.name}</div>
+                <div className="font-mono text-[var(--color-muted)]">{row.uv == null ? "—" : row.uv.toFixed(2)}</div>
+                <div className="font-mono text-[var(--color-muted)]">{row.target}</div>
+                <div className="font-mono text-[var(--color-muted)]">{row.weight.toFixed(1)}</div>
+                <div className="font-mono text-[var(--color-accent)]">{row.fit == null ? "—" : row.fit.toFixed(2)}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <h2 className="font-display text-lg font-semibold mb-3">Every question this persona answered</h2>
-        <p className="text-sm text-[var(--color-muted)] mb-4">
+        <h2 className="font-display text-2xl font-semibold mb-2.5">Every question this persona answered</h2>
+        <p className="text-[15px] text-[var(--color-muted)] leading-[1.7] mb-7">
           The raw answers that produced the dimension values above — grouped in the same section order
           a real test-taker sees them.
         </p>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-9">
           {sections.map((section) => (
             <div key={section}>
-              <h3 className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted)] mb-3">
+              <h3 className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-2)] mb-4">
                 {SECTION_TITLES[section]}
               </h3>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3.5">
                 {questionSteps
                   .filter((q) => q.section === section)
                   .map((q) => (
-                    <div key={q.id} className="card p-4">
-                      <div className="flex justify-between items-start gap-3 mb-1.5">
-                        <p className="text-sm font-medium">{q.prompt}</p>
-                        <span className="font-mono text-[10px] text-[var(--color-muted)] whitespace-nowrap pt-0.5">
+                    <div key={q.id} className="card p-5">
+                      <div className="flex justify-between items-start gap-4 mb-2.5">
+                        <p className="text-base font-semibold">{q.prompt}</p>
+                        <span className="font-mono text-[11px] text-[var(--color-muted-2)] whitespace-nowrap pt-0.5">
                           {dimensionById.get(q.dimension)?.name ?? q.dimension}
                         </span>
                       </div>
-                      <p className="text-sm text-[var(--color-accent)]">
+                      <p className="text-[15px] text-[var(--color-accent)] leading-[1.6]">
                         {describeAnswer(q, persona.answers[q.id])}
                       </p>
                     </div>

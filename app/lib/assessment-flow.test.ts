@@ -55,4 +55,30 @@ describe("aggregateAnswersToProfile", () => {
     expect(ranked.length).toBeGreaterThan(0);
     expect(ranked[0].fitScore).toBeGreaterThan(0);
   });
+
+  it("folds a selected domain in as an additional data point, not a replacement", () => {
+    const qsForDim = questions.filter((q) => q.dimension === "mobile_platform_fluency");
+    expect(qsForDim.length).toBe(1);
+    const answers = { [qsForDim[0].id]: 2 };
+    const profile = aggregateAnswersToProfile(answers, ["Mobile (iOS/Android)"]);
+    // (2 from the direct answer + 4 implied by the domain selection) / 2 = 3
+    expect(profile.mobile_platform_fluency).toBe(3);
+  });
+
+  it("still fills in a value from domains alone when the direct question was skipped", () => {
+    const profile = aggregateAnswersToProfile({}, ["Security"]);
+    expect(profile.adversarial_threat_modeling).toBe(4);
+  });
+
+  it("maps 'Data/ML' onto both ml_engineering_fluency and data_infrastructure_fluency", () => {
+    const profile = aggregateAnswersToProfile({}, ["Data/ML"]);
+    expect(profile.ml_engineering_fluency).toBe(4);
+    expect(profile.data_infrastructure_fluency).toBe(4);
+  });
+
+  it("ignores unmapped or unknown domain strings", () => {
+    const before = aggregateAnswersToProfile({});
+    const after = aggregateAnswersToProfile({}, ["Web frontend", "Backend/APIs", "made-up-domain"]);
+    expect(after).toEqual(before);
+  });
 });

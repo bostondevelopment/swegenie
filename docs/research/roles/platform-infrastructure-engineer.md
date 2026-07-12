@@ -1,5 +1,22 @@
 # Platform / Infrastructure Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **416 real, currently-live job postings across 202 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 202 total):
+
+- **Bybit** — "Principal DevOps Engineer"
+- **Krafton** — "[AI Transformation Dept.] Sr. AI DevOps Engineer (7년 이상)"
+- **Via** — "Senior Platform Engineer"
+- **Langfuse** — "Senior Cloud Infrastructure Engineer"
+- **Physical Intelligence** — "Build & Release Engineer"
+- **ChargePoint** — "Staff Cloud Infrastructure Engineer"
+- **Figure AI** — "AI Training Infrastructure Engineer – Humanoid Whole Body Control"
+- **Nextdoor** — "Client Platform Engineer, AI & Automation"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Infrastructure & Reliability
 **Status:** v1 draft — expert-authored, sourced
 

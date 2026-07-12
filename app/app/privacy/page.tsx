@@ -11,10 +11,10 @@ export default function PrivacyPage() {
   return (
     <>
       <SiteHeader />
-      <main className="flex-1 mx-auto max-w-2xl px-4 sm:px-6 py-12">
-        <h1 className="font-display text-3xl font-semibold tracking-tight mb-8">Privacy</h1>
+      <main className="flex-1 mx-auto max-w-2xl px-4 sm:px-6 pt-14 pb-20">
+        <h1 className="font-display text-4xl font-bold tracking-tight mb-9">Privacy</h1>
 
-        <div className="text-sm text-[var(--color-muted)] leading-relaxed space-y-6">
+        <div className="text-[17px] text-[var(--color-muted)] leading-[1.7] space-y-8">
           <p>
             This assessment asks about your work preferences and, for some archetypes, comfort
             with things like risk, ambiguity, or people management — that&apos;s more sensitive
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           </p>
 
           <div>
-            <h2 className="font-display text-base font-semibold text-[var(--color-fg)] mb-2">
+            <h2 className="font-display text-lg font-semibold text-[var(--color-fg)] mb-2.5">
               No account, no login
             </h2>
             <p>
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-base font-semibold text-[var(--color-fg)] mb-2">
+            <h2 className="font-display text-lg font-semibold text-[var(--color-fg)] mb-2.5">
               Your answers live in your browser and in your URL
             </h2>
             <p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-base font-semibold text-[var(--color-fg)] mb-2">
+            <h2 className="font-display text-lg font-semibold text-[var(--color-fg)] mb-2.5">
               Email capture is optional and doesn&apos;t go to a server
             </h2>
             <p>
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-base font-semibold text-[var(--color-fg)] mb-2">
+            <h2 className="font-display text-lg font-semibold text-[var(--color-fg)] mb-2.5">
               Analytics
             </h2>
             <p>
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-base font-semibold text-[var(--color-fg)] mb-2">
+            <h2 className="font-display text-lg font-semibold text-[var(--color-fg)] mb-2.5">
               Questions
             </h2>
             <p>This is a research project, not a company with a support line yet — check the methodology page for how the product works, or the project&apos;s repository for how it&apos;s built.</p>

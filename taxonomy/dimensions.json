@@ -150,11 +150,11 @@
       "id": "variable_comp_appetite",
       "name": "Variable Compensation Appetite",
       "category": "preference",
-      "definition": "Comfort with, and preference for, compensation that is directly and periodically tied to an external, partly-out-of-one's-control business outcome — sales/deal attainment, or a tracked billable-utilization target — rather than a stable salary with at most a modest, outcome-decoupled bonus.",
+      "definition": "Comfort with, and preference for, compensation that is directly and periodically tied to an external, partly-out-of-one's-control business outcome — OTE-style quota/commission attainment, or (in a consulting context) a tracked billable-utilization target — rather than a stable salary with at most a modest, outcome-decoupled bonus.",
       "anchors": {
-        "1": "Wants compensation fully decoupled from any sales outcome or hour-tracked utilization target; would be unsettled by a bonus tied to deal-closing or billable-hours performance.",
-        "3": "Comfortable with a modest bonus tied to a proxy like utilization or margin, or occasional variable comp, but not deal-by-deal commission risk.",
-        "5": "Actively wants meaningful upside/downside tied to quarterly deal attainment or a tracked billable-utilization percentage; treats variable comp as a feature, not a risk."
+        "1": "Wants compensation fully decoupled from any quota/commission outcome or hour-tracked utilization target; would be unsettled by a bonus tied to deal-closing, OTE attainment, or billable-hours performance.",
+        "3": "Comfortable with a modest bonus tied to a proxy like utilization or margin, or occasional variable comp, but not OTE-style quota/commission risk.",
+        "5": "Actively wants meaningful upside/downside tied to OTE-style quota/commission attainment (or, in a consulting context, a tracked billable-utilization target); treats variable comp as a feature, not a risk."
       },
       "source_clusters": ["sales-sa-fde", "support-cs-devrel"]
     },

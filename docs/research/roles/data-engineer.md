@@ -1,5 +1,22 @@
 # Role Archetype Brief: Data Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **525 real, currently-live job postings across 209 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 209 total):
+
+- **Obsidian Security** — "Senior Security Data Engineer"
+- **Verkada** — "Staff Data Engineer"
+- **Take-Two Interactive** — "Data Engineer (Python/Spark)"
+- **Life360** — "Director, Data Engineering (AI Native)"
+- **Pendo** — "Sr. AI-First Backend & Data Engineer"
+- **Attentive** — "Staff Data Engineer, Cloud Optimization"
+- **Fidelity** — "Principal Data Engineer"
+- **Supabase** — "Senior Data Engineer"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Data & ML Engineering
 **Status:** Draft v1 (Phase 1 research)
 **Author note:** Autonomous research pass across two sequential sessions (initial draft plus a

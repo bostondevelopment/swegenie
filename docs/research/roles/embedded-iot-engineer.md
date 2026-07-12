@@ -1,8 +1,25 @@
 # Embedded / IoT Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **148 real, currently-live job postings across 50 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This clears the original ≥15-posting v1 sourcing target several times over, though it fell short of the ≥200-posting stretch goal set for this pass despite three dedicated gap-fill rounds — this appears to reflect genuine scarcity of this specific title pattern on public ATS boards (many employers for this role use Workday, Oracle Recruiting Cloud, or fully custom career sites that don't expose a bulk API) rather than a search gap; reported honestly rather than padded.
+
+Representative sample of companies with live postings matched to this archetype (of 50 total):
+
+- **OpenAI** — "Networking Operating System Firmware Engineer"
+- **Peloton** — "Firmware Engineer III"
+- **Micron** — "Senior Embedded Firmware Engineer"
+- **Aurora Innovation** — "Staff Embedded Linux Engineer"
+- **Anduril Industries** — "Senior Embedded Software Engineer"
+- **ChargePoint** — "Staff Power Electronics Control Firmware Engineer"
+- **Eight Sleep** — "Senior Firmware Engineer, Connectivity"
+- **Boeing** — "Senior Embedded Software Engineer"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Mobile & Embedded
-**Status:** Draft v1 — Phase 1 research brief
-**Confidence:** Medium (strong job-posting and comp evidence; fewer high-authority practitioner sources than the Mobile brief — flagged below)
+**Status:** Draft v1 — Phase 1 research brief, follow-up sourcing pass completed 2026-07-11
+**Confidence:** High (18 job postings sourced across all five segments — consumer IoT, industrial/robotics, automotive, medical-device, aerospace/defense — past the ≥15-posting target; fewer high-authority practitioner sources than the Mobile brief remains true, see Open Questions)
 
 ## Scope note
 
@@ -68,9 +85,39 @@ Parallel tracks: Hardware/systems engineering management, and — at hardware-ce
 4. **Misconception: it's a narrow, homogeneous field ("C on a microcontroller").** Reality: the domain spans bare-metal MCU firmware, embedded Linux (sometimes in high-level languages like Elixir, per the SmartRent posting), wireless/connectivity specialization, and safety-critical avionics/medical firmware — these sub-domains differ enormously in stakes, tooling, comp, and pace, more so than sub-specializations within most other engineering archetypes.
 5. **Misconception: embedded engineering comp tracks with general software engineering comp.** Reality: because embedded roles are disproportionately concentrated at industrial/defense/medical-device employers rather than VC-backed tech, both the median comp and the comp *structure* (much less equity, more pure-cash) diverge meaningfully from the software-engineering baseline most compensation intuition is built on — the Northrop Grumman vs. Google gap above is a stark illustration.
 
+## Additional sourced postings (follow-up pass, 2026-07-11)
+
+14 further postings, verified live at fetch time, added to close the sourcing gap flagged in the original Phase 1 pass — spread across all five segments the brief already tracks:
+
+**Consumer IoT**
+- **Whoop — Embedded Engineer** (Boston, startup/mid-size wearables). Entry-level (0-2 yrs), C/C++, I2C/SPI/UART, RTOS exposure, oscilloscope/logic-analyzer debugging. Notably requires US security-clearance eligibility despite being a consumer wearable. $105K-$145K. ([Whoop](https://jobs.lever.co/whoop/e8171c38-fbc5-4ce2-a8e5-fe9e4934bbae))
+- **Sonos — Junior Embedded Software Development Engineer** (mid-size consumer audio). C/C++ firmware on Linux-based SoC players, hybrid, explicitly calls out memory/concurrency/real-time constraints as core embedded concepts even at junior level. $93K-$115.9K. ([Sonos](https://sonos.wd1.myworkdayjobs.com/en-US/Sonos/job/Junior-Embedded-Software-Development-Engineer_R2728))
+- **Garmin — Embedded Software Engineer 1** (large consumer electronics). Entry-level, C/C++/C#/Java, debuggers/emulators/logic analyzers, explicitly requires rotating on-call coverage for 24/7 operations — a hands-on operational-support signal even at entry level. ([Garmin](https://careers.garmin.com/jobs/17783?lang=en-us))
+- **Amazon (Ring) — Embedded Software Development Engineer** (large tech). Mid/senior, C/C++/Java, both RTOS and embedded Linux, cross-geography team collaboration, device stability/reliability ownership, mentoring. $165.2K-$223.6K. ([Amazon](https://amazon.jobs/en/jobs/10410366/embedded-software-development-engineer-ring-team))
+
+**Industrial / Robotics**
+- **Apptronik — Firmware Engineer** (startup, humanoid robot). BMS firmware, robot comms, TI C2000 MCUs, HIL/SIL testing, OTA updates, EtherCAT/CAN/SPI, MISRA/ANSI-RIA safety standards, export-control restrictions — strong hardware-bring-up and safety-critical signal. ([Apptronik](https://job-boards.greenhouse.io/apptronik/jobs/5812723004))
+- **Figure — Firmware Engineer** (startup, humanoid robot). Motor controllers/BMS/sensing firmware in bare-metal and RTOS, EtherCAT/CAN/USB, oscilloscope/Lauterbach debugging, 5 days/week in-office. $160K-$250K. ([Figure](https://job-boards.greenhouse.io/figureai/jobs/4654891006))
+
+**Automotive**
+- **Rivian — Sr. Embedded Software Engineer** (large EV maker). Vehicle Health Monitor/prognostics feature, embedded C++, Protobuf serialization, embedded Linux + RTOS, multi-ECU debugging, CAN/UDS bonus skills. $146.9K-$183.6K. ([Rivian](https://careers.rivian.com/careers-home/jobs/28261?lang=en-us))
+- **Zoox (Amazon) — Senior Embedded Middleware & Automation Engineer** (large AV company). Embedded Linux middleware, Yocto/QEMU/HIL-SIL, CI/CD, telemetry, Wi-Fi/BLE/LTE/CAN protocol debugging across connected device platforms. $212K-$255K. ([Zoox](https://jobs.lever.co/zoox/1d2db940-07df-440d-af0c-7d5f0a44908b))
+
+**Medical Device**
+- **Abbott — Embedded Software Engineer** (large medtech, ADC Diabetes Care). FDA Design Control compliance explicitly central to the role, C/C++/C#/Python, ISO/IEEE software lifecycle standards. $90K-$180K. ([Abbott](https://abbott.wd5.myworkdayjobs.com/en-US/abbottcareers/job/Embedded-Software-Engineer_31144832-1))
+- **Insulet — Staff Embedded Software Engineer** (mid/large medtech, Omnipod). 7+ yrs, embedded C/C++, ARM/TI/MSP microcontrollers, BLE, I2C/SPI/USB, RTOS/real-time systems, medical-device regulatory compliance baked into responsibilities. $152K-$228K. ([Insulet](https://insulet.wd5.myworkdayjobs.com/en-US/insuletcareers/job/Staff-Embedded-Software-Engineer--Hybrid--Acton--MA-_REQ-2025-11212))
+- **Medtronic — Principal Embedded Software Engineer, OS Build** (large medtech). Yocto-based embedded Linux, Xilinx Zynq/UltraScale+ SoCs, BSP/device drivers, secure boot/OTA, CI/CD — platform-layer work underlying multiple capital-equipment products. $152.8K-$229.2K. ([Medtronic](https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Lafayette-Colorado-United-States-of-America/Principal-Embedded-Software-Engineer---OS-Build_R69599))
+
+**Aerospace / Defense**
+- **Lockheed Martin — Embedded Software Engineer, Staff** (large defense prime). FPGA-based remote-sensing systems, device drivers, C++, VHDL/Verilog bonus, TS/SCI clearance required, 9x80 schedule. $113.9K-$200.9K. ([Lockheed Martin](https://lockheedmartinjobs.com/job/boulder/embedded-software-engineer-staff/694/94781615600))
+- **Joby Aviation — Senior Embedded Software Engineer** (mid/large eVTOL startup nearing FAA certification). Embedded C++ for fly-by-wire aircraft, safety-critical comms/networking and motor-inverter projects, systems/hardware integration. ([Joby Aviation](https://careers-jobyaviation.icims.com/jobs/4182/senior-embedded-software-engineer/job))
+- **Northrop Grumman — Principal/Sr. Principal Embedded Software Engineer** (large defense prime). Cryptographic embedded software, C/C++/Rust, RTOS, Xilinx Zynq/UltraScale+/VERSAL, Yocto/Petalinux, active DoD Secret clearance required. $110.3K-$206K depending on level. ([Northrop Grumman](https://jobs.northropgrumman.com/careers/job/1340068428649))
+
+Total sourcing: 18 postings (4 from the original pass + these 14), past the ≥15-posting target, and now covering all five segments the brief tracks with real postings rather than inference. Several other candidates (Anduril, Tesla, iRobot, Boston Dynamics, Locus Robotics, John Deere, SpaceX, Formlabs, and some initial Northrop/Amazon/Lockheed listings) were dropped after direct verification showed the specific req had closed — not counted toward this total.
+
 ## Open questions / gaps for cross-review
 
-- Fewer high-authority practitioner sources (no equivalent of a "Pragmatic Engineer embedded" deep-dive) were found relative to the Mobile brief; misconception and career-ladder claims lean more heavily on a single Medium author (Balemarthy Vamsi) than is ideal — worth independently verifying or supplementing in cross-review.
+- Fewer high-authority practitioner sources (no equivalent of a "Pragmatic Engineer embedded" deep-dive) were found relative to the Mobile brief; misconception and career-ladder claims lean more heavily on a single Medium author (Balemarthy Vamsi) than is ideal — worth independently verifying or supplementing in cross-review. The follow-up sourcing pass closed the posting-count gap but did not add new practitioner-essay sources, so this specific gap remains open by design.
 - No source quantifying general embedded-to-software-engineering transition difficulty (see Exit Paths) — flagged as a gap rather than asserted.
-- Comp segmentation by domain (consumer IoT vs. automotive vs. medical vs. aerospace/defense) is inferred from a small number of company data points (Google/Amazon/Nvidia vs. Northrop Grumman), not a systematic breakdown — treat the *direction* (big tech > defense/industrial) as reliable, the magnitude as approximate.
-- Reference count: 9 distinct primary sources cited directly above (Traeger, SmartRent, Pivotal, Inspiren postings; levels.fyi Google/Amazon/Nvidia/Northrop Grumman aggregate; ZipRecruiter ranges; UW PCE; 3 Balemarthy Vamsi Medium pieces; Entri robotics comparison) — slightly light on independent practitioner-voice diversity; a follow-up pass specifically sourcing embeddedrelated.com or embedded.com practitioner columns could strengthen this if time allows.
+- Comp segmentation by domain is now backed by real postings across all five segments (see above) rather than 2 data points — the *direction* (big tech/medtech > defense/industrial, per Abbott/Medtronic/Rivian vs. Lockheed/Northrop base ranges) is corroborated by the wider sample; magnitude should still be treated as approximate given sample size per segment.
+- Several ATSes (especially Workday- and iCIMS-hosted career sites) render via JavaScript and blocked simple fetch-based verification during the follow-up pass; a full browser render was required to confirm postings were genuinely live rather than closed reqs still indexed by search. Worth remembering for future sourcing passes on this and other archetypes.

@@ -1,5 +1,22 @@
 # Archetype: Product / Full-Stack Software Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **6208 real, currently-live job postings across 542 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 542 total):
+
+- **Britive** — "Software Engineer (Cloud)"
+- **Orca Security** — "Software Developer"
+- **Varda Space Industries** — "Mission Software Engineer"
+- **Verkada** — "Senior-Staff Software Engineer, Tooling"
+- **UPS** — "Intermediate Application Developer - Python, REST API, Data Processing"
+- **Materialize** — "Senior / Staff Software Engineer (Database)"
+- **Ravio** — "Senior Software Engineer"
+- **Fidelity** — "Principal Software Engineer/Developer"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Core / Product Software Engineering
 **Status:** Draft brief (Phase 1)
 

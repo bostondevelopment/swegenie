@@ -1,5 +1,22 @@
 # Solutions Architect (Vendor-Side)
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **57 real, currently-live job postings across 21 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This clears the original ≥15-posting v1 sourcing target several times over, though it fell short of the ≥200-posting stretch goal set for this pass despite three dedicated gap-fill rounds — this appears to reflect genuine scarcity of this specific title pattern on public ATS boards (many employers for this role use Workday, Oracle Recruiting Cloud, or fully custom career sites that don't expose a bulk API) rather than a search gap; reported honestly rather than padded.
+
+Representative sample of companies with live postings matched to this archetype (of 21 total):
+
+- **Datadog** — "Partner Solutions Architect (Pan-EMEA GSI)"
+- **Stripe** — "Partner Solutions Architect - LatAm"
+- **MongoDB** — "Senior Partner Solutions Architect"
+- **Supabase** — "Partner Solutions Architect - AWS"
+- **GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)** — "Cloud Solutions Architect"
+- **Remote.com** — "Senior Partner Solutions Architect"
+- **Databricks** — "AWS Cloud Partner Solutions Architect — EMEA"
+- **3M** — "Salesforce Solutions Architect / Senior Engineer"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Also known as:** Solutions Engineer (at some vendors, used interchangeably with this role rather
 than with Sales Engineer — title usage is company-specific), Technical Account Architect, Field
 Solutions Architect.

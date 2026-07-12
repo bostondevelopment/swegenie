@@ -5,6 +5,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { archetypes, archetypeById, dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy } from "@/lib/results-copy";
+import archetypeJobExamples from "@/data/archetype-job-examples.json";
+import { JobExamplesAccordion } from "@/components/JobExamplesAccordion";
 
 export function generateStaticParams() {
   return archetypes.map((a) => ({ id: a.id }));
@@ -33,60 +35,75 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
   const topDimensions = Object.entries(archetype.scores)
     .sort((a, b) => b[1].weight - a[1].weight)
     .slice(0, 5);
+  const jobExamples =
+    (archetypeJobExamples.examples as Record<
+      string,
+      {
+        company: string;
+        title: string;
+        location: string | null;
+        url: string;
+        sections: { heading: string; paragraph?: string; bullets?: string[] }[];
+      }[]
+    >)[id] ?? [];
 
   return (
     <>
       <SiteHeader />
       <main className="flex-1">
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-12 pb-8">
-          <Link href="/" className="text-xs text-[var(--color-muted)] hover:text-[var(--color-fg)] mb-4 inline-block">
-            &larr; All archetypes
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-14 pb-8">
+          <Link href="/" className="font-mono text-[13px] text-[var(--color-muted-2)] hover:text-[var(--color-fg)] mb-5 inline-block">
+            &larr; Home
           </Link>
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight mb-3">
+          <h1 className="font-display text-4xl sm:text-[44px] font-bold tracking-tight mb-5">
             {archetype.name}
           </h1>
           {archetype.confidence === "medium" && (
-            <p className="text-xs font-mono text-[var(--color-signal-warn,#B9770E)] mb-4">
+            <p className="text-xs font-mono text-[var(--color-signal-warn)] mb-5">
               Lower-confidence sourcing (below target job-posting count) — see methodology.
             </p>
           )}
-          <p className="text-[var(--color-fg)] leading-relaxed max-w-2xl whitespace-pre-line">
+          <p className="text-lg text-[var(--color-muted)] leading-[1.7] max-w-2xl whitespace-pre-line">
             {copy.whatThisIs}
           </p>
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 border-t border-[var(--color-border)] grid sm:grid-cols-2 gap-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12 grid sm:grid-cols-2 gap-12">
           <div>
-            <h2 className="font-display font-semibold mb-3">A day in this role</h2>
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line">
+            <h2 className="font-display text-xl font-semibold mb-4">A day in this role</h2>
+            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {copy.aDayInThisRole}
             </p>
           </div>
           <div>
-            <h2 className="font-display font-semibold mb-3">Comp structure</h2>
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line">
+            <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
+            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {copy.compStructure}
             </p>
           </div>
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 border-t border-[var(--color-border)]">
-          <h2 className="font-display font-semibold mb-4">What matters most for this role</h2>
-          <div className="flex flex-col gap-3">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-2xl font-semibold mb-7">What matters most for this role</h2>
+          <div className="flex flex-col gap-7">
             {topDimensions.map(([dimId, score]) => {
               const dim = dimensionById.get(dimId);
               if (!dim) return null;
               return (
-                <div key={dimId} className="flex items-start gap-4">
-                  <div className="w-40 shrink-0 text-sm font-medium pt-0.5">{dim.name}</div>
-                  <div className="flex-1">
-                    <div className="h-1.5 rounded-sm bg-[var(--color-border)] overflow-hidden mb-1">
+                <div key={dimId} className="grid sm:grid-cols-[220px_1fr] gap-4 sm:gap-6 items-start">
+                  <div className="font-semibold text-base pt-0.5">{dim.name}</div>
+                  <div>
+                    <div className="h-1.5 rounded-full bg-[var(--color-border)] overflow-hidden mb-3">
                       <div
-                        className="h-full rounded-sm bg-[var(--color-accent)]"
+                        className="h-full rounded-full bg-[var(--color-accent)]"
                         style={{ width: `${score.weight * 100}%` }}
                       />
                     </div>
-                    <p className="text-xs text-[var(--color-muted)]">{score.rationale}</p>
+                    <p className="text-[15px] text-[var(--color-muted)] leading-[1.65]">{score.rationale}</p>
                   </div>
                 </div>
               );
@@ -94,12 +111,33 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           </div>
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 border-t border-[var(--color-border)]">
-          <h2 className="font-display font-semibold mb-3">How to test this cheaply</h2>
-          <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line max-w-2xl mb-8">
+        {jobExamples.length > 0 && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <div className="flex items-baseline justify-between gap-4 mb-2 flex-wrap">
+                <h2 className="font-display text-2xl font-semibold">Examples of real job postings</h2>
+                <span className="font-mono text-[11px] text-[var(--color-muted-2)] whitespace-nowrap">
+                  snapshot from {archetypeJobExamples.generated}
+                </span>
+              </div>
+              <p className="text-[15px] text-[var(--color-muted)] leading-[1.6] mb-6">
+                Real postings from the research corpus behind this archetype. Click one to read the actual listing.
+              </p>
+              <JobExamplesAccordion examples={jobExamples} />
+            </section>
+          </>
+        )}
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-2xl font-semibold mb-4">How to test this cheaply</h2>
+          <p className="text-lg text-[var(--color-muted)] leading-[1.7] whitespace-pre-line max-w-2xl mb-9">
             {copy.howToTestCheaply}
           </p>
-          <Link href="/assessment" className="btn-primary px-5 py-3 font-medium inline-block">
+          <Link href="/assessment" className="btn-primary px-7 py-4 text-[17px] font-semibold inline-block">
             See if this is your match
           </Link>
         </section>

@@ -41,42 +41,40 @@ export default function PersonasPage() {
   return (
     <>
       <SiteHeader />
-      <main className="flex-1 mx-auto max-w-4xl px-4 sm:px-6 py-12">
-        <p className="font-mono text-xs text-[var(--color-muted)] mb-2">internal / QA — not linked from the main site</p>
-        <h1 className="font-display text-2xl font-semibold mb-2">Persona previews</h1>
-        <p className="text-[var(--color-muted)] mb-8 max-w-2xl">
+      <main className="flex-1 mx-auto max-w-4xl px-4 sm:px-6 pt-14 pb-20">
+        <p className="font-mono text-[13px] text-[var(--color-muted-2)] mb-[18px]">internal / QA — not linked from the main site</p>
+        <h1 className="font-display text-4xl font-bold tracking-tight mb-[18px]">Persona previews</h1>
+        <p className="text-lg text-[var(--color-muted)] leading-[1.7] max-w-2xl mb-11">
           One synthetic persona per archetype, each built from that archetype&apos;s own target
           profile and run through the real assessment scoring pipeline (see{" "}
-          <code className="font-mono text-sm">docs/research/persona-suite-v1.md</code>). Click a
+          <code className="font-mono text-[15px] text-[var(--color-muted-2)]">docs/research/persona-suite-v1.md</code>). Click a
           card to see the full dimension breakdown and every question/answer behind its score.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-5">
           {rows.map(({ persona, rank, percent, href, targetName }) => (
             <Link
               key={persona.id}
               href={href}
-              className="card p-5 hover:border-[var(--color-accent)] transition-colors flex flex-col gap-3"
+              className="card p-[26px] hover:border-[var(--color-accent)]/40 transition-colors flex flex-col gap-0"
             >
-              <div>
-                <div className="font-mono text-xs text-[var(--color-muted)] mb-1">
-                  target: {targetName}
-                </div>
-                <h2 className="font-display text-lg font-semibold leading-snug">{persona.personaName}</h2>
+              <div className="font-mono text-xs text-[var(--color-muted-2)] mb-2">
+                target: {targetName}
               </div>
-              <p className="text-sm text-[var(--color-muted)] flex-1">{persona.narrative}</p>
-              <div>
-                <div className="flex items-baseline justify-between mb-1">
-                  <span className="font-mono text-xs text-[var(--color-muted)]">
-                    ranked #{rank} of 18
-                  </span>
-                  {rank > 3 && (
-                    <span className="font-mono text-xs text-[var(--color-accent)]">
-                      out of top 3
-                    </span>
-                  )}
+              <h2 className="font-display text-xl font-semibold leading-snug mb-3">{persona.personaName}</h2>
+              <p className="text-[15px] text-[var(--color-muted)] leading-[1.65] mb-[18px]">{persona.narrative}</p>
+              <div className="flex items-center gap-3.5">
+                <span className="font-mono text-xs text-[var(--color-muted-2)] whitespace-nowrap">
+                  ranked #{rank} of 18
+                </span>
+                <div className="flex-1">
+                  <FitBar percent={percent} size="sm" />
                 </div>
-                <FitBar percent={percent} size="sm" />
+                {rank > 3 && (
+                  <span className="font-mono text-xs text-[var(--color-accent)] whitespace-nowrap">
+                    out of top 3
+                  </span>
+                )}
               </div>
             </Link>
           ))}

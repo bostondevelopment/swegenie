@@ -12,6 +12,24 @@ overlap/gaps between archetypes"). Scope of this pass: resolve known duplicates,
 for uncited claims/overlap/thinness, and produce this summary. Not a full re-verification of every
 citation in every brief — see "Audit method and limits" at the end of this document.
 
+**Large-scale sourcing pass (2026-07-11):** a multi-agent sourcing effort verified 744 companies
+directly against their public Greenhouse/Lever/Ashby/Workday job-board APIs and classified 67,956
+real, currently-live postings into the 18 archetypes via a keyword/regex rubric
+(`taxonomy/title-classification-rubric.json`) with company-context overrides for documented
+naming collisions. Classification was iteratively precision-checked by hand-sampling every
+archetype's matches — 9 real rubric bugs found and fixed (both false positives and recall gaps)
+before the final counts were trusted. 13 of 18 archetypes now clear 200 classified postings each
+(Product/Full-Stack SWE tops out at 6,208 across 542 companies); 5 fell short of that stretch goal
+despite three dedicated gap-fill rounds (Embedded/IoT Engineer 148, Solutions Architect
+Consulting-side 103, Developer Relations 87, Technical Product Manager 63, Solutions Architect
+Vendor-side 57) — reported as-is rather than padded, likely reflecting that many employers for
+these specific roles use Workday/Oracle Recruiting Cloud/custom career sites without a public bulk
+API rather than a search gap. Full corpus (registry, raw postings, classified postings, rubric,
+per-fix changelog) committed at `docs/research/job-postings-corpus/`; see `COUNTS.md` there for
+the complete breakdown and each archetype's own brief for a representative citation sample. Every
+number is independently reproducible from that dataset. Taxonomy version bumped to v1.5 for this
+pass (`taxonomy/archetypes.json`) — no scoring targets, weights, or confidence flags changed.
+
 ---
 
 ## Final v1 archetype list (18 archetypes)
@@ -23,8 +41,8 @@ citation in every brief — see "Audit method and limits" at the end of this doc
 | 3 | SRE / Production Engineer | Owns production reliability, on-call, and incident response for live systems, with an error-budget/SLO-driven success model. | `sre-production-engineer.md` | Well-sourced, expert-authored per its own status line. |
 | 4 | Data Engineer | Builds and operates data pipelines, warehouses, and the infrastructure that feeds analytics/ML consumers. | `data-engineer.md` | Well-sourced (75 citation markers, longest non-ML brief); explicitly distinguished from ML Engineer at the feature-pipeline boundary. |
 | 5 | ML Engineer | Builds and productionizes ML systems — the majority of the job is data pipelines, APIs, monitoring, and production hardening, not model tuning. | `ml-engineer.md` | Strongest-sourced brief in the corpus (111 citation markers, 570 lines, cross-checks its own statistics across multiple surveys). Explicitly excludes Research/Applied Scientist as out of scope (see Excluded below). |
-| 6 | Mobile Engineer (iOS / Android) | Builds native or cross-platform mobile apps; deliberately kept as one archetype with platform as a skill-dimension, not a split. | `mobile-engineer.md` | Medium-high confidence per its own header. Below the ≥15-posting target (9 sourced) — thinner posting breadth than most peers, though citation quality is high and gaps are candidly self-flagged. |
-| 7 | Embedded / IoT Engineer | Firmware/embedded software engineering across consumer IoT, industrial, automotive, and medical-device contexts, with hardware-constrained success criteria. | `embedded-iot-engineer.md` | Medium confidence per its own header — fewer high-authority practitioner sources than its Mobile sibling (leans on one Medium author for several claims), below the ≥15-posting target (9 sourced). Flagged for beta validation. |
+| 6 | Mobile Engineer (iOS / Android) | Builds native or cross-platform mobile apps; deliberately kept as one archetype with platform as a skill-dimension, not a split. | `mobile-engineer.md` | High confidence per its own header. A 2026-07-11 follow-up pass added 10 verified postings (18 total), past the ≥15-posting target; citation quality was always high, breadth is now too. |
+| 7 | Embedded / IoT Engineer | Firmware/embedded software engineering across consumer IoT, industrial, automotive, and medical-device contexts, with hardware-constrained success criteria. | `embedded-iot-engineer.md` | High confidence per its own header. A 2026-07-11 follow-up pass added 14 verified postings across all five segments (18 total), past the ≥15-posting target. Still leans on one Medium author for several career-ladder/misconception claims — see its Open Questions. |
 | 8 | Security Engineer | Builds and operates an org's security posture — proactive defense, incident response, risk/compliance — not primarily offensive/hacking work. | `security-engineer.md` | Well-sourced, expert-authored per its own status line. |
 | 9 | Sales Engineer / Pre-Sales Engineer | Technical seller: runs live discovery, POCs, and technical objection-handling pre-sale, compensated with sales-attainment-linked variable pay. | `sales-engineer-pre-sales.md` | Solidly sourced; explicitly documents the "Solutions Engineer" naming collision with both the vendor-side SA and Customer Solutions Engineer archetypes (see Naming ambiguity below). |
 | 10 | Solutions Architect (Vendor-Side) | Deep, single-product-stack technical advisor employed by a software vendor (e.g., AWS, Salesforce, Google Cloud), pre-sales through implementation guidance. | `solutions-architect-vendor-side.md` | Solidly sourced. |
@@ -229,15 +247,17 @@ Per `docs/HANDOFF.md`'s explicit instruction to resolve open items autonomously 
 human input, here are the decisions made at the start of Phase 2, with reasoning:
 
 1. **Mobile Engineer / Embedded-IoT Engineer under-sourcing (9 postings each vs. ≥15 target).**
-   **Decision: proceed without a follow-up sourcing pass; flag both as lower-confidence in the
-   Phase 2 archetype × dimension matrix rather than delay Phase 2/3/5.** Rationale: PLAN.md itself
-   offered this as one of two acceptable resolutions ("proceed and flag them as lower-confidence").
-   Given the scale of remaining work (Phases 2, 3, and 5 in one unattended run), a sourcing pass
-   would consume time better spent on the taxonomy and product build, and both briefs already
-   candidly self-flag the gap with good citation *quality* despite thinner *breadth*. In
-   `/taxonomy/archetypes.json`, both archetypes carry `"confidence": "medium"` (vs. `"high"` for
-   well-sourced peers) as the concrete mechanism for this flag — this is the hook a v1.1/beta pass
-   should use to decide whether these two need dedicated re-sourcing before wider launch.
+   **Decision (2026-07-09): proceed without a follow-up sourcing pass; flag both as lower-confidence
+   in the Phase 2 archetype × dimension matrix rather than delay Phase 2/3/5.** Rationale: PLAN.md
+   itself offered this as one of two acceptable resolutions ("proceed and flag them as
+   lower-confidence"). Given the scale of remaining work (Phases 2, 3, and 5 in one unattended run),
+   a sourcing pass would consume time better spent on the taxonomy and product build, and both
+   briefs already candidly self-flag the gap with good citation *quality* despite thinner *breadth*.
+   **Superseded (2026-07-11): the deferred follow-up sourcing pass was run.** 10 new postings were
+   added for Mobile Engineer (18 total) and 14 for Embedded/IoT Engineer (18 total, now spanning all
+   five segments the brief tracks), both past the ≥15-posting target and verified live at fetch
+   time — see each brief's "Additional sourced postings" section. `/taxonomy/archetypes.json` now
+   carries `"confidence": "high"` for both archetypes; all 18 archetypes are high-confidence.
 2. **Solutions Architect (Consulting-side) comp discrepancy.** **Resolved** — see the reconciliation
    note added directly to `docs/research/roles/solutions-architect-consulting.md`'s Open Questions
    section: Levels.fyi (level-segmented) is used as the primary comp anchor; the wider Glassdoor

@@ -86,73 +86,84 @@ export default function ResultsClient() {
     <>
       <SiteHeader />
       <main className="flex-1">
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-12 pb-8">
-          <p className="font-mono text-xs text-[var(--color-muted)] mb-3">
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-14 pb-8">
+          <p className="font-mono text-sm text-[var(--color-muted-2)] mb-[18px]">
             Ranked #1 of {ranked.length} engineering role archetypes
           </p>
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
+          <h1 className="font-display text-4xl sm:text-[44px] font-bold tracking-tight mb-6">
             {top.name}
           </h1>
-          <div className="max-w-xs mb-6">
+          <div className="max-w-md mb-8">
             <FitBar percent={fitPercent(top.fitScore)} />
           </div>
-          <p className="text-[var(--color-fg)] leading-relaxed mb-8 max-w-2xl whitespace-pre-line">
+          <p className="text-lg text-[var(--color-muted)] leading-[1.7] mb-9 max-w-2xl whitespace-pre-line">
             {whyMatched}
           </p>
           <ShareBar topArchetypeName={top.name} fitPercent={fitPercent(top.fitScore)} />
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 border-t border-[var(--color-border)] grid sm:grid-cols-2 gap-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 mt-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12 grid sm:grid-cols-2 gap-10">
           <div>
-            <h2 className="font-display font-semibold mb-3">What this role actually is</h2>
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line">
+            <h2 className="font-display text-xl font-semibold mb-4">What this role actually is</h2>
+            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {topCopy.whatThisIs}
             </p>
           </div>
           <div>
-            <h2 className="font-display font-semibold mb-3">A day in this role</h2>
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line">
+            <h2 className="font-display text-xl font-semibold mb-4">A day in this role</h2>
+            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {topCopy.aDayInThisRole}
             </p>
           </div>
           <div>
-            <h2 className="font-display font-semibold mb-3">Comp structure</h2>
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line">
+            <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
+            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {topCopy.compStructure}
             </p>
           </div>
           <div>
-            <h2 className="font-display font-semibold mb-3">How to test this cheaply</h2>
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line">
+            <h2 className="font-display text-xl font-semibold mb-4">How to test this cheaply</h2>
+            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {topCopy.howToTestCheaply}
             </p>
           </div>
         </section>
 
         {growthText && (
-          <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 border-t border-[var(--color-border)]">
-            <h2 className="font-display font-semibold mb-3">Growth areas — if this wasn&apos;t a perfect fit</h2>
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed whitespace-pre-line max-w-2xl">
-              {growthText}
-            </p>
-          </section>
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-4">Growth areas — if this wasn&apos;t a perfect fit</h2>
+              <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
+                {growthText}
+              </p>
+            </section>
+          </>
         )}
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 border-t border-[var(--color-border)]">
-          <h2 className="font-display font-semibold mb-4">Full ranking</h2>
-          <div className="flex flex-col gap-1">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-2xl font-semibold mb-6">Full ranking</h2>
+          <div className="flex flex-col">
             {ranked.map((r, i) => (
               <Link
                 key={r.id}
                 href={`/archetypes/${r.id}`}
-                className="flex items-center gap-4 py-2.5 px-3 -mx-3 rounded hover:bg-[var(--color-border)]/20 transition-colors"
+                className={`grid grid-cols-[32px_1fr_auto] sm:grid-cols-[32px_1fr_200px] items-center gap-4 py-3.5 border-b border-[var(--color-border)] transition-colors hover:bg-[var(--color-fg)]/[0.03] ${
+                  i === 0 ? "bg-[var(--color-fg)]/[0.03]" : ""
+                }`}
               >
-                <span className="font-mono text-xs text-[var(--color-muted)] w-6">{i + 1}</span>
-                <span className="flex-1 text-sm">{r.name}</span>
-                {r.confidence === "medium" && (
-                  <span className="text-xs text-[var(--color-muted)] font-mono">lower-confidence sourcing</span>
-                )}
-                <span className="w-28">
+                <span className="font-mono text-sm text-[var(--color-muted-2)]">{i + 1}</span>
+                <span className={`text-[15px] truncate ${i === 0 ? "font-semibold" : ""}`}>
+                  {r.name}
+                  {r.confidence === "medium" && (
+                    <span className="ml-2 font-mono text-[11px] text-[var(--color-muted-2)]">lower-confidence</span>
+                  )}
+                </span>
+                <span className="hidden sm:block w-full">
                   <FitBar percent={fitPercent(r.fitScore)} size="sm" />
                 </span>
               </Link>

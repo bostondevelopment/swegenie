@@ -1,5 +1,22 @@
 # Sales Engineer / Pre-Sales Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **372 real, currently-live job postings across 105 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 105 total):
+
+- **Corelight** — "Sr. Sales Engineer - Federal"
+- **Monte Carlo Data** — "Senior Pre-Sales Engineer, Strategic Accounts — EMEA"
+- **Collibra** — "Senior Customer Engineer"
+- **Contentsquare** — "Solution Consultant"
+- **Payscale** — "Solutions Consultant, Data & Insights"
+- **Astronomer** — "Sales Engineer"
+- **FourKites** — "Senior Customer Engineer"
+- **Decagon** — "Customer Engineer, Agent Builder"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Also known as:** Solutions Engineer (many SaaS companies use this title interchangeably with
 Sales Engineer — see Naming Note), Presales Engineer, Technical Sales Engineer.
 

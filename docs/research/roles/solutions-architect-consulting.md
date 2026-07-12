@@ -1,5 +1,22 @@
 # Role Archetype Research Brief: Solutions Architect — Consulting-side
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **103 real, currently-live job postings across 17 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This clears the original ≥15-posting v1 sourcing target several times over, though it fell short of the ≥200-posting stretch goal set for this pass despite three dedicated gap-fill rounds — this appears to reflect genuine scarcity of this specific title pattern on public ATS boards (many employers for this role use Workday, Oracle Recruiting Cloud, or fully custom career sites that don't expose a bulk API) rather than a search gap; reported honestly rather than padded.
+
+Representative sample of companies with live postings matched to this archetype (of 17 total):
+
+- **DEPT** — "Architect, Software Engineering  (Adobe - AEM/WorkFront)"
+- **Klaviyo** — "Senior Solution Architect - Professional Services"
+- **VML (Wunderman Thompson)** — "Adobe Enterprise Architect"
+- **Reply** — "SAP Cloud Architect"
+- **Valtech** — "Google Cloud Architect"
+- **Effectual** — "Senior Cloud Architect"
+- **Snowflake** — "Senior Solutions Architect - AI/ML - Services Delivery"
+- **Solita** — "AI Architect"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Pre-Sales & Client-Facing Technical (siblings: Sales Engineer, Forward-Deployed Engineer — see separate briefs)
 **Scope:** Systems integrator / consultancy SA or technical architect who works across many vendors' products for client engagements (e.g., Accenture, Deloitte Digital, Slalom, Capgemini, Infosys, TCS, boutique SIs) — as distinct from a vendor-employed SA (AWS/Salesforce/Google Cloud) who is deep on one product stack.
 

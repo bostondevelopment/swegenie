@@ -1,5 +1,22 @@
 # Technical Product Manager
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **63 real, currently-live job postings across 43 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This clears the original ≥15-posting v1 sourcing target several times over, though it fell short of the ≥200-posting stretch goal set for this pass despite three dedicated gap-fill rounds — this appears to reflect genuine scarcity of this specific title pattern on public ATS boards (many employers for this role use Workday, Oracle Recruiting Cloud, or fully custom career sites that don't expose a bulk API) rather than a search gap; reported honestly rather than padded.
+
+Representative sample of companies with live postings matched to this archetype (of 43 total):
+
+- **Posh** — "Lead Technical Product Manager, Platform"
+- **Vannevar Labs** — "Staff Technical Product Manager"
+- **Scale AI** — "Staff Technical Product Manager"
+- **Zoox** — "Technical Product Manager, Mobile Growth"
+- **Shield AI** — "Principal Technical Product Manager (R5249)"
+- **Broadcom** — "Technical Product Manager"
+- **Hasbro** — "Sr Principal Technical Product Manager, Marketing & Creative"
+- **Humana** — "AI Technical Product Manager"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Status: IN** — included in the v1 taxonomy.
 
 ## In/out rationale

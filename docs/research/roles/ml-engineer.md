@@ -1,5 +1,22 @@
 # Role Archetype Brief: ML Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **755 real, currently-live job postings across 235 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 235 total):
+
+- **Bubble** — "Senior Applied AI Engineer"
+- **Oura** — "Senior AI Engineer – Health Intelligence"
+- **Deliveroo** — "Machine Learning Engineer"
+- **HPE** — "AI and Machine Learning Engineer"
+- **Motional** — "Senior Machine Learning Engineer - Prediction"
+- **Fireblocks** — "Data Analytics AI Engineer"
+- **Path Robotics** — "Senior Machine Learning Engineer, Neural Simulators"
+- **CoreWeave** — "Senior Software and AI Engineer"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Data & ML Engineering
 **Status:** Draft v1 (Phase 1 research)
 **Author note:** Multi-agent parallel research pass (job postings, comp/ladder, and

@@ -1,5 +1,22 @@
 # Role Research Brief: Customer Support Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **319 real, currently-live job postings across 136 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 136 total):
+
+- **Redis** — "Technical Support Engineer"
+- **Greenhouse** — "Senior Support Engineer"
+- **Docker** — "Principal Support Engineer"
+- **Roboflow** — "Named Technical Support Engineer"
+- **Tanium** — "Associate Technical Support Engineer"
+- **Drata** — "Associate Technical Support Engineer - AUS"
+- **HPE** — "Technical Support Engineer L2 – Network Management"
+- **Cresta** — "Application Support Engineer"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Scope note:** This brief covers the *reactive*, ticket/SLA-driven, post-sales technical
 support archetype — variously titled Support Engineer, Technical Support Engineer, or
 Customer Support Engineer. It is explicitly **not** the proactive, quota-carrying, pre-sales

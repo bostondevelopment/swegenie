@@ -1,5 +1,22 @@
 # SRE / Production Engineer
 
+## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
+
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **316 real, currently-live job postings across 127 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+
+Representative sample of companies with live postings matched to this archetype (of 127 total):
+
+- **Caterpillar** — "Senior SRE Engineer-Production Support"
+- **Life360** — "Senior Site Reliability Engineer II - Infrastructure (AI Native)"
+- **Harvey** — "Senior Software Engineer, Site Reliability Engineer"
+- **Synthesia** — "Senior Site Reliability Engineer"
+- **Anduril Industries** — "Senior Site Reliability Engineer"
+- **Instructure** — "Sr Production Engineer - US Remote"
+- **HPE** — "Site Reliability Engineer Staff"
+- **Bybit** — "SRE Leader"
+
+Full methodology, the complete verified company registry, and the raw/classified posting corpus are in `docs/research/job-postings-corpus/` (see `COUNTS.md` for the full per-archetype breakdown and `title-classification-rubric.json` for the exact classification logic — every number here is independently reproducible from that dataset).
+
 **Cluster:** Infrastructure & Reliability
 **Status:** v1 draft — expert-authored, sourced
 

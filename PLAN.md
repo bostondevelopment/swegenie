@@ -86,9 +86,9 @@ highest-leverage phase — everything downstream inherits its quality.
       descriptions across company sizes, blog posts/talks by practitioners, comp data from
       levels.fyi/Glassdoor): day-to-day activities, success criteria, comp structure (base vs.
       variable), career ladder, common entry paths, common exit paths, top misconceptions.
-      → 18 briefs in `/docs/research/roles/`; two briefs (Mobile, Embedded/IoT) fell short of the
-      ≥15-posting target (9 each) and are flagged for a follow-up sourcing pass — see
-      `/docs/research/roles-summary.md`.
+      → 18 briefs in `/docs/research/roles/`; two briefs (Mobile, Embedded/IoT) initially fell
+      short of the ≥15-posting target (9 each). Follow-up sourcing pass (2026-07-11) closed the
+      gap — both now at 18 postings — see `/docs/research/roles-summary.md`.
 - [x] Cross-review pass: a separate agent audits all briefs for stereotype-vs-evidence
       (every trait claim must cite a source), and for overlap/gaps between archetypes.
       → Resolved a duplicate Solutions Architect (Consulting-side) pair (merged and deleted one
