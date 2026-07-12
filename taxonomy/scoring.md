@@ -21,7 +21,7 @@ by hand/spreadsheet before any code is written, per PLAN.md's "Done when" criter
 2. **Archetype profile** `A` (one entry in `taxonomy/archetypes.json`): for each dimension id, a
    `target` (1-5) and a `weight` (0.0-1.0).
 
-Both are keyed by the same dimension ids (17 as of v1.1) — this is the data contract between
+Both are keyed by the same dimension ids (22 as of v1.2) — this is the data contract between
 `/taxonomy/*.json` and the scoring engine; a schema change to either file requires a taxonomy
 version bump (per PLAN.md's Agent execution notes).
 
