@@ -52,11 +52,15 @@ export default function MethodologyPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-2xl font-semibold mb-[18px]">2. The 16 trait dimensions</h2>
+          <h2 className="font-display text-2xl font-semibold mb-[18px]">2. The 22 trait dimensions</h2>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-7">
-            Every archetype is scored against the same 16 dimensions — 6 skill/experience
-            dimensions and 10 preference/temperament dimensions. Each dimension was derived from
-            patterns across multiple research briefs, not written top-down before the research.
+            Every archetype is scored against the same 22 dimensions — 10 skill/experience
+            dimensions and 12 preference/temperament dimensions. Each dimension was derived from
+            patterns across multiple research briefs, not written top-down before the research. The
+            set has grown since v1: real-user results exposed gaps — an ML-only skill axis that
+            couldn&apos;t tell a domain match from a personality one, and a &ldquo;teaching&rdquo;
+            trait that conflated private mentoring with public visibility — and each gap was closed
+            by adding or splitting a dimension rather than papering over it.
           </p>
           <div className="grid sm:grid-cols-2 gap-x-10">
             {dimensions.map((d) => (
@@ -75,11 +79,21 @@ export default function MethodologyPage() {
             drawn from its research brief. Your answers produce a 1-5 value per dimension. Fit is
             a weighted average of how close your answers land to each archetype&apos;s targets,
             weighted by how much that dimension actually matters for that role — not a raw
-            distance across all 16 dimensions equally. Closeness is scored with a non-linear
+            distance across all 22 dimensions equally. Closeness is scored with a non-linear
             penalty, so a large gap on a dimension counts far more heavily than a small one. And a
             role&apos;s overall score is capped by how well you match its single defining trait —
             its highest-weighted dimension — so no role can reach the top of your list on incidental
             agreement while you mismatch on the thing that actually makes it that role.
+          </p>
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-4">
+            One more layer sits on top: some traits reliably travel together across the 18 roles —
+            depth at cross-layer debugging with appetite for on-call incidents, comfort teaching
+            with comfort being publicly visible. Those pairs are measured directly from the
+            taxonomy (a committed script, not a hidden model), and when your answers on a correlated
+            pair line up the way a role&apos;s own profile does, that coherent combination nudges its
+            score up; when they pull in opposite directions it nudges down. It&apos;s a deliberate
+            tie-breaker between close matches — it can reorder neighbors but never override the
+            defining-trait cap above it.
           </p>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7]">
             The &ldquo;why you matched&rdquo; explanation is not written after the fact — it is
@@ -112,10 +126,10 @@ export default function MethodologyPage() {
           <h2 className="font-display text-2xl font-semibold mb-[18px]">5. Compensation data</h2>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
             The comp-by-tier charts on each archetype page (and the Staff cross-role ranking) are a
-            separate, hand-curated dataset from the salary ranges in the research briefs. They break
-            total compensation into base, bonus, and annualized equity across five company tiers —
-            AI labs, FAANG/Mag7, high-growth public, growth-stage private, and early-stage — at four
-            career levels (L3, L4, L5, Staff).
+            separate, hand-curated dataset from the salary ranges in the research briefs. They cover
+            all 18 archetypes and break total compensation into base, bonus, and annualized equity
+            across five company tiers — AI labs, FAANG/Mag7, high-growth public, growth-stage
+            private, and early-stage — at four career levels (L3, L4, L5, Staff).
           </p>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
             <strong className="text-[var(--color-fg)]">Sources.</strong> Manually curated from
