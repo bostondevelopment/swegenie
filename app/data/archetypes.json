@@ -7,6 +7,7 @@
       "id": "product-full-stack-software-engineer",
       "name": "Product / Full-Stack Software Engineer",
       "confidence": "high",
+      "defining_dimension": ["coding_intensity"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -124,6 +125,7 @@
       "id": "platform-infrastructure-engineer",
       "name": "Platform / Infrastructure Engineer",
       "confidence": "high",
+      "defining_dimension": ["systems_design_scale", "cloud_infrastructure_fluency"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 4,
@@ -241,6 +243,7 @@
       "id": "sre-production-engineer",
       "name": "SRE / Production Engineer",
       "confidence": "high",
+      "defining_dimension": ["oncall_incident_appetite"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -358,6 +361,7 @@
       "id": "data-engineer",
       "name": "Data Engineer",
       "confidence": "high",
+      "defining_dimension": ["data_infrastructure_fluency"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -475,6 +479,7 @@
       "id": "ml-engineer",
       "name": "ML Engineer",
       "confidence": "high",
+      "defining_dimension": ["ml_engineering_fluency"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 4,
@@ -592,6 +597,7 @@
       "id": "mobile-engineer",
       "name": "Mobile Engineer (iOS / Android)",
       "confidence": "high",
+      "defining_dimension": ["mobile_platform_fluency"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -709,6 +715,7 @@
       "id": "embedded-iot-engineer",
       "name": "Embedded / IoT Engineer",
       "confidence": "high",
+      "defining_dimension": ["physical_constraint_engineering"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -826,6 +833,7 @@
       "id": "security-engineer",
       "name": "Security Engineer",
       "confidence": "high",
+      "defining_dimension": ["adversarial_threat_modeling"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 4,
@@ -943,6 +951,7 @@
       "id": "sales-engineer-pre-sales",
       "name": "Sales Engineer / Pre-Sales Engineer",
       "confidence": "high",
+      "defining_dimension": ["variable_comp_appetite"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -1060,6 +1069,7 @@
       "id": "solutions-architect-vendor-side",
       "name": "Solutions Architect (Vendor-Side)",
       "confidence": "high",
+      "defining_dimension": ["stakeholder_client_comfort", "variable_comp_appetite"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -1177,6 +1187,7 @@
       "id": "solutions-architect-consulting",
       "name": "Solutions Architect (Consulting-Side)",
       "confidence": "high",
+      "defining_dimension": ["technical_breadth_depth", "stakeholder_client_comfort", "variable_comp_appetite"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -1294,6 +1305,7 @@
       "id": "forward-deployed-engineer",
       "name": "Forward Deployed Engineer",
       "confidence": "high",
+      "defining_dimension": ["outcome_accountability", "variable_comp_appetite", "coding_intensity"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 4,
@@ -1411,6 +1423,7 @@
       "id": "customer-support-engineer",
       "name": "Customer Support Engineer",
       "confidence": "high",
+      "defining_dimension": ["interrupt_tolerance"],
       "overall_notes": "Reactive, ticket/SLA-driven, queue-based post-sales support archetype. Distinguished sharply from CSE/DevRel by low account continuity, high interrupt/on-call load, and crisp numeric success metrics (SLA/CSAT/FCR).",
       "scores": {
         "ambiguity_tolerance": {
@@ -1529,6 +1542,7 @@
       "id": "customer-support-solutions-engineer",
       "name": "Customer Success / Customer Solutions Engineer",
       "confidence": "high",
+      "defining_dimension": ["interrupt_tolerance", "relationship_continuity"],
       "overall_notes": "Proactive, named-account-embedded technical advisor archetype — the deliberate opposite pole from Customer Support Engineer on cadence and account ownership. Source brief is comparatively thin on citation density vs. its Support Engineer sibling, per docs/research/roles-summary.md; split rationale itself is solid.",
       "scores": {
         "ambiguity_tolerance": {
@@ -1647,6 +1661,7 @@
       "id": "consulting-engineer-professional-services",
       "name": "Consulting Engineer / Professional Services Engineer",
       "confidence": "high",
+      "defining_dimension": ["variable_comp_appetite"],
       "overall_notes": "Billable, project/SOW-scoped, client-embedded delivery archetype spanning vendor PS orgs and systems integrators. Distinguished by utilization-based variable comp, time-boxed account ownership, and moderate-to-high travel depending on firm model.",
       "scores": {
         "ambiguity_tolerance": {
@@ -1765,6 +1780,7 @@
       "id": "developer-relations-advocacy",
       "name": "Developer Relations / Developer Advocacy",
       "confidence": "high",
+      "defining_dimension": ["teaching_enjoyment", "public_visibility_comfort"],
       "overall_notes": "Public-facing, community/ecosystem-oriented archetype with no account or ticket ownership. Sharpest contrast in the cluster on teaching_enjoyment, account_relationship_ownership, and variable_comp_appetite.",
       "scores": {
         "ambiguity_tolerance": {
@@ -1883,6 +1899,7 @@
       "id": "engineering-management",
       "name": "Engineering Management (Track)",
       "confidence": "high",
+      "defining_dimension": ["people_management_orientation"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 3,
@@ -2000,6 +2017,7 @@
       "id": "technical-product-manager",
       "name": "Technical Product Manager",
       "confidence": "high",
+      "defining_dimension": ["ambiguity_tolerance"],
       "scores": {
         "ambiguity_tolerance": {
           "target": 4,

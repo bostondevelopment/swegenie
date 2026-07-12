@@ -20,11 +20,23 @@ describe("degenerate inputs: all-affirmative (5/5 on everything)", () => {
   const ranked = rankArchetypes(profile);
 
   it("no archetype looks like a confident, near-perfect match for a self-contradictory profile", () => {
-    expect(ranked[0].fitScore).toBeLessThan(0.75);
+    // Under the v1.5 squared penalty small per-dimension gaps are forgiven more,
+    // so absolute scores read higher than the old linear scale — but a
+    // self-contradictory all-5s profile still tops out well short of a confident
+    // (~0.85+) match.
+    expect(ranked[0].fitScore).toBeLessThan(0.8);
   });
 
-  it("SRE / Production Engineer is the top match (no dimension wants it low, several want it maxed)", () => {
-    expect(ranked[0].id).toBe("sre-production-engineer");
+  it("an everything-high archetype tops the list, and they cluster tightly (no clear winner)", () => {
+    // All-5s aligns with the archetypes whose profile wants nearly everything
+    // high — SRE, Data Engineer, and ML Engineer all sit within a point of each
+    // other. Which one edges out #1 is not meaningful for a degenerate profile;
+    // the guarantee is that the winner comes from this cluster, not that it's
+    // any single one.
+    const everythingHigh = ["sre-production-engineer", "data-engineer", "ml-engineer"];
+    expect(everythingHigh).toContain(ranked[0].id);
+    const top3 = ranked.slice(0, 3).map((r) => r.fitScore);
+    expect(top3[0] - top3[2]).toBeLessThan(0.05); // tightly clustered, no confident winner
   });
 
   it("Forward Deployed Engineer is hard-capped near the floor by variable_comp_appetite (wants 1, got 5)", () => {
@@ -53,7 +65,10 @@ describe("degenerate inputs: all-negative (1/5 on everything)", () => {
   const ranked = rankArchetypes(profile);
 
   it("no archetype looks like a confident match — the best available is still weak", () => {
-    expect(ranked[0].fitScore).toBeLessThan(0.4);
+    // Every archetype with an extreme-high defining trait is floored near zero;
+    // the best that survives is a moderate-target generalist (e.g. TPM), still a
+    // decidedly weak sub-0.5 match.
+    expect(ranked[0].fitScore).toBeLessThan(0.5);
   });
 
   it("Engineering Management is hard-capped near the floor by people_management_orientation (wants 5, got 1)", () => {
@@ -83,10 +98,18 @@ describe("degenerate inputs: all-neutral (3/5 on everything)", () => {
   const ranked = rankArchetypes(profile);
 
   it("no archetype looks like a confident match — a wishy-washy profile shouldn't produce near-100%", () => {
-    expect(ranked[0].fitScore).toBeLessThan(0.85);
+    // The v1.5 squared penalty forgives 1-point gaps heavily, so generalist
+    // archetypes whose targets sit at 2-4 read high (~0.94) for an all-3s
+    // profile — higher than the old linear scale. It still stays under a literal
+    // near-100%, and the meaningful signal is the *separation* below: archetypes
+    // with an extreme-target defining trait are held ~0.18 lower by the floor.
+    expect(ranked[0].fitScore).toBeLessThan(0.95);
   });
 
-  it("archetypes whose defining trait sits at an extreme (1 or 5) cluster tightly near the 0.5 floor", () => {
+  it("archetypes whose defining trait sits at an extreme (1 or 5) cluster tightly near the 0.75 floor", () => {
+    // A neutral (3) answer is a 2-point gap from an extreme (1 or 5) defining
+    // target, so the squared penalty floors these at 1 - (2/4)^2 = 0.75 (plus a
+    // small Step 2.6 nudge) — where the linear model put them at 0.5.
     const extremeTierIds = archetypes
       .filter((a) => {
         const topWeight = Math.max(...Object.values(a.scores).map((s) => s.weight));
@@ -101,13 +124,15 @@ describe("degenerate inputs: all-neutral (3/5 on everything)", () => {
 
     for (const id of extremeTierIds) {
       const result = ranked.find((r) => r.id === id)!;
-      expect(result.fitScore, `${id} should sit near the neutral-answer floor of 0.5`).toBeGreaterThanOrEqual(0.45);
-      expect(result.fitScore, `${id} should sit near the neutral-answer floor of 0.5`).toBeLessThanOrEqual(0.6);
+      expect(result.fitScore, `${id} should sit near the neutral-answer floor of 0.75`).toBeGreaterThanOrEqual(0.74);
+      expect(result.fitScore, `${id} should sit near the neutral-answer floor of 0.75`).toBeLessThanOrEqual(0.79);
     }
   });
 
   it("at least one archetype without an extreme-target defining trait scores meaningfully higher than that cluster", () => {
+    // The best generalist (moderate targets, no extreme-target floor) must clear
+    // the ~0.75-0.79 extreme-defining cluster by a real margin, not tie it.
     const best = ranked[0];
-    expect(best.fitScore).toBeGreaterThan(0.65);
+    expect(best.fitScore).toBeGreaterThan(0.85);
   });
 });

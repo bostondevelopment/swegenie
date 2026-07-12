@@ -1,10 +1,14 @@
-# Scoring Algorithm Spec (v1.1)
+# Scoring Algorithm Spec (v1.5)
 
-**Status:** Phase 2 deliverable, revised v1.1 (2026-07-09) after a real user's result surfaced the
-exact dilution failure mode flagged (but left unfixed) in v1.0's Known Limitations — see Step 2.5
-below. This is the spec Phase 5's scoring engine (`app/`) implements as a pure, unit-tested module.
-Phase 2's persona validation (`docs/research/validation-v1.md`) exercises this exact algorithm by
-hand/spreadsheet before any code is written, per PLAN.md's "Done when" criteria for this phase.
+**Status:** Phase 2 deliverable, revised through v1.5. v1.1 (2026-07-09) added the top-dimension
+floor (Step 2.5) after a real user's result surfaced the exact dilution failure mode flagged (but
+left unfixed) in v1.0's Known Limitations. v1.5 (2026-07-12) replaced v1's linear per-dimension gap
+penalty with a **non-linear (squared) penalty** (Step 1) so large mismatches cost disproportionately
+more than small ones, and made each archetype's defining dimension(s) an explicit, published field
+(`defining_dimension` in `archetypes.json`) that drives the Step 2.5 floor. This is the spec Phase 5's
+scoring engine (`app/`) implements as a pure, unit-tested module. Phase 2's persona validation
+(`docs/research/validation-v1.md`) exercises this exact algorithm by hand/spreadsheet before any code
+is written, per PLAN.md's "Done when" criteria for this phase.
 
 ## Inputs
 
@@ -18,14 +22,33 @@ Both are keyed by the same dimension ids (17 as of v1.1) — this is the data co
 `/taxonomy/*.json` and the scoring engine; a schema change to either file requires a taxonomy
 version bump (per PLAN.md's Agent execution notes).
 
-## Step 1 — Per-dimension fit
+## Step 1 — Per-dimension fit (non-linear, v1.5)
 
 For each dimension `d` where the user answered (`U[d] != null`):
 
 ```
-distance(d)  = abs(U[d] - A[d].target)          // 0..4 on a 1-5 scale
-fit(d)       = 1 - distance(d) / 4              // 1.0 = exact match, 0.0 = maximally opposite
+distance(d)  = abs(U[d] - A[d].target)              // 0..4 on a 1-5 scale
+fit(d)       = 1 - (distance(d) / 4)^2              // 1.0 = exact match, 0.0 = maximally opposite
 ```
+
+**Why squared, not linear (v1.5 change).** v1 used a linear penalty (`fit = 1 - distance/4`), which
+treats a 2-point gap as *exactly* twice as costly as a 1-point gap — a modeling choice, not a
+proven-optimal one (v1's own Known Limitations flagged it). v1.5 penalizes the **square** of the
+normalized distance instead, so the cost of a gap grows super-linearly:
+
+| distance | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| linear `fit`  | 1.0 | 0.75 | 0.50 | 0.25 | 0.0 |
+| **squared `fit`** | **1.0** | **0.9375** | **0.75** | **0.4375** | **0.0** |
+
+A 2-point gap now costs 4× a 1-point gap (penalty 0.25 vs. 0.0625), not 2×. In words: **small
+mismatches are treated as near-noise, while large mismatches hurt disproportionately** — which is the
+behavior we want from a discriminating fit model, and it is still simple, monotonic, bounded to
+`[0, 1]`, and fully reproducible from the user's answers (no black-box). The endpoints are unchanged
+(exact match = 1.0, maximal opposite = 0.0), so an archetype the user matches perfectly still scores
+100%. The tradeoff — that the convex curve reads more generously on small per-dimension gaps, lifting
+absolute scores for near-miss and lukewarm profiles relative to the old linear scale — is noted in
+Known Limitations.
 
 Skipped dimensions are excluded entirely from every downstream calculation for that scoring run —
 they are not imputed to a neutral value, since a neutral guess would silently understate or overstate
@@ -57,19 +80,32 @@ dimensions paper over a bad match on the defining trait. This is exactly the "di
 agreement" pattern v1.0 flagged as a risk (see Known Limitations) and is now corrected structurally,
 not just documented:
 
+Each archetype's **defining dimension(s)** are published explicitly in `archetypes.json` as a
+`defining_dimension` field — the highest-weight trait(s) in its profile (an array, because several
+archetypes tie multiple dimensions at the maximum weight; e.g. Forward Deployed Engineer ties three
+at weight 1.0, Developer Relations ties `teaching_enjoyment` and `public_visibility_comfort`). The
+floor caps the score at the user's fit on those trait(s):
+
 ```
-topWeight     = max( A[d].weight for d in answered )
-topDims       = { d in answered : A[d].weight == topWeight }   // ties included, not just one
-worstTopFit   = min( fit(d) for d in topDims )
+definingDims  = A.defining_dimension ∩ answered              // the declared defining trait(s) the user answered
+if definingDims is empty:                                    // user skipped every defining trait
+    topWeight    = max( A[d].weight for d in answered )
+    definingDims = { d in answered : A[d].weight == topWeight }   // fall back to best available signal
+worstTopFit   = min( fit(d) for d in definingDims )
 fitScore      = min( fitScore_from_step_2, worstTopFit )
 ```
 
 In words: **an archetype's score can never exceed how well the user matched its single most
 important dimension(s).** A strong aggregate score built mostly from secondary traits can no longer
-outrank a mediocre match on the trait that actually defines the archetype. If an archetype has
-multiple dimensions tied at the maximum weight (e.g., Forward Deployed Engineer has three
-weight-1.0 dimensions), the floor uses the *worst* of those — failing any one of several equally
-load-bearing traits should cap the score, not just the average of all of them.
+outrank a mediocre match on the trait that actually defines the archetype. When an archetype has
+multiple defining dimensions, the floor uses the *worst* of those — failing any one of several
+equally load-bearing traits should cap the score, not just the average of all of them. If the user
+skipped every declared defining dimension, the floor falls back to the highest-weight dimension(s)
+they *did* answer, so it still binds on the most important available signal rather than silently
+disappearing. (Publishing `defining_dimension` in the data, rather than only recomputing it from
+weights at runtime, keeps the floor's target self-documenting and lets the results UI name the trait
+each archetype is gated on. A validation test asserts each declared `defining_dimension` really is the
+archetype's max-weight trait set, so the data and the weights cannot silently drift apart.)
 
 This changes nothing for a well-matched top archetype (the floor is a no-op whenever `worstTopFit`
 is already ≥ the raw fitScore) and only demotes archetypes whose apparent fit was propped up by
@@ -165,12 +201,25 @@ external calls, and no hidden state — every step above is directly unit-testab
   version bump per PLAN.md's Agent execution notes, since a scoring algorithm change is
   taxonomy-versioned the same way a data change is).
 
-## Known limitations (v1, documented rather than silently accepted)
+## Known limitations (documented rather than silently accepted)
 
-- **Linear distance is a modeling choice, not a proven-optimal one.** Treating a 2-point gap as
-  exactly twice as bad as a 1-point gap is an assumption; Phase 6 beta feedback (does the #1 match
-  feel right?) is the intended calibration signal for whether this needs to become non-linear
-  (e.g., penalize gaps on high-weight dimensions super-linearly) in v1.1.
+- **Linear distance — FIXED in v1.5 (Step 1).** v1 treated a 2-point gap as exactly twice as bad as
+  a 1-point gap. This was flagged from the start as an assumption, not a proven-optimal choice.
+  v1.5 replaced it with a squared-distance penalty (see Step 1), so a 2-point gap now costs 4× a
+  1-point gap: large mismatches hurt disproportionately more than small ones, which is the
+  discriminating behavior we want. Retained here as a record of what changed and why.
+- **The squared penalty reads more generously on small per-dimension gaps.** Because the penalty
+  curve is convex (below the old linear line for every gap between 0 and 4), absolute fit scores sit
+  higher than under v1's linear model — most visibly for lukewarm profiles (e.g. an all-neutral
+  answer set, every gap ≤ 2, now reads in the 0.75–0.95 band rather than clustering at 0.50). This is
+  the intended flip side of "small mismatches are near-noise," and it does not affect the *floor's*
+  disqualifying power (an archetype the user mismatches on its defining trait is still capped — just
+  at 0.75 for a 2-point defining-trait gap, where v1 capped at 0.50). Ranking discrimination on large
+  mismatches is preserved and sharpened. The open item is *display calibration* — whether the raw
+  `fitScore` percentage shown to users should be normalized (e.g. against the spread of that user's
+  own ranked archetypes) so a 90% reads as "strong relative fit," not "you are 90% of this role." That
+  is a results-copy/UI concern (Phase 6 beta signal: does the headline percentage feel right?), not a
+  ranking-correctness one.
 - **Skipped-dimension renormalization assumes remaining answered dimensions are still representative**
   of the archetype's overall shape. A user who skips most high-weight dimensions for an archetype
   gets a fitScore computed from whatever's left, which may not be very meaningful — this is why

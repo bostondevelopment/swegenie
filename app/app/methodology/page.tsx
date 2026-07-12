@@ -75,7 +75,11 @@ export default function MethodologyPage() {
             drawn from its research brief. Your answers produce a 1-5 value per dimension. Fit is
             a weighted average of how close your answers land to each archetype&apos;s targets,
             weighted by how much that dimension actually matters for that role — not a raw
-            distance across all 16 dimensions equally.
+            distance across all 16 dimensions equally. Closeness is scored with a non-linear
+            penalty, so a large gap on a dimension counts far more heavily than a small one. And a
+            role&apos;s overall score is capped by how well you match its single defining trait —
+            its highest-weighted dimension — so no role can reach the top of your list on incidental
+            agreement while you mismatch on the thing that actually makes it that role.
           </p>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7]">
             The &ldquo;why you matched&rdquo; explanation is not written after the fact — it is
@@ -90,9 +94,9 @@ export default function MethodologyPage() {
           <h2 className="font-display text-2xl font-semibold mb-[18px]">4. What this doesn&apos;t capture</h2>
           <div className="flex flex-col gap-4">
             {[
-              "This is a linear model: a 2-point gap on a dimension is treated as exactly twice as costly as a 1-point gap. That's a modeling choice, not a proven-optimal one.",
+              "Fit uses a non-linear (squared) gap penalty: a 2-point gap on a dimension costs four times as much as a 1-point gap, not twice. Small mismatches are treated as near-noise while large mismatches count sharply against a role — a deliberate improvement over an earlier linear model that penalized every gap in flat proportion. One side effect: because small gaps are forgiven, the headline percentages read a little generously, so a match is best understood relative to your other ranked roles rather than as an absolute grade.",
               "Dimensions are scored independently — the model doesn't know that some temperament traits tend to co-occur in practice.",
-              "An archetype whose non-defining dimensions happen to match your incidental answers can occasionally out-rank an archetype where you mismatch on its one truly defining trait. We found this in our own persona validation before launch — it's a known limitation of weighted-average scoring, not a bug we missed.",
+              "An archetype's score is floored at how well you match its one truly defining trait (its highest-weighted dimension) — so an archetype whose incidental dimensions happen to match your answers can no longer float to the top on broad agreement while you mismatch on the trait that actually defines it. We caught this pattern in our own persona validation before launch and fixed it structurally rather than leaving it as a caveat.",
               "This is a v1, expert-authored taxonomy, not yet calibrated against crowdsourced input from verified practitioners in each role. That's the explicit plan for a later version — see the roadmap below.",
               "Two candidate dimensions were evaluated against the job-posting corpus and deliberately not added. AI-coding-assistant fluency (Copilot/Cursor/Claude Code as a day-to-day workflow expectation) is real and growing, but it shows up at a broadly similar rate across nearly every engineering archetype — a trait that doesn't vary much between roles gives a ranking model nothing to discriminate on, so it's addressed in role write-ups instead of as a scored axis. Government/federal security-clearance eligibility is a strong, concentrated signal in a few archetypes (Forward-Deployed Engineer especially), but it's closer to a binary eligibility fact than a point on a 1-5 preference or skill spectrum, so it doesn't fit this model's shape either — it's called out directly in the relevant role pages instead.",
             ].map((text, i) => (

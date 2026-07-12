@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { rankArchetypes, scoreArchetype, fitPercent } from "./scoring";
-import { archetypeById, type Archetype } from "./taxonomy";
+import { archetypes, archetypeById, type Archetype } from "./taxonomy";
 
 /**
  * Fixtures originally from docs/research/validation-v1.md's Phase 2 synthetic
@@ -206,11 +206,17 @@ describe("scoreArchetype arithmetic", () => {
 
 const TIEBREAK_EPSILON = 0.1;
 
+/** Squared-distance per-dimension fit, mirroring scoring.ts's fit() (v1.5). */
+function sqFit(v: number, target: number): number {
+  const normalized = Math.abs(v - target) / 4;
+  return 1 - normalized * normalized;
+}
+
 /** Mirrors scoring.ts's Step 2.5 + 2.6 math so tests can compute an exact expected fitScore. */
 function expectedFitScore(profile: Record<string, number>, archetype: Archetype): number {
   const entries = Object.entries(profile).map(([d, v]) => {
     const s = archetype.scores[d as keyof typeof archetype.scores];
-    return { weight: s.weight, fit: 1 - Math.abs(v - s.target) / 4 };
+    return { weight: s.weight, fit: sqFit(v, s.target) };
   });
   const totalWeight = entries.reduce((sum, e) => sum + e.weight, 0);
   const rawFitScore = entries.reduce((sum, e) => sum + e.weight * e.fit, 0) / totalWeight;
@@ -236,15 +242,17 @@ describe("Step 2.5 top-dimension floor (v1.1) + Step 2.6 tie-break (v1.4)", () =
     const rawWeightedAverage =
       Object.entries(profile).reduce((sum, [d, v]) => {
         const s = archetype.scores[d as keyof typeof archetype.scores];
-        return sum + s.weight * (1 - Math.abs(v - s.target) / 4);
+        return sum + s.weight * sqFit(v, s.target);
       }, 0) / Object.keys(profile).reduce((sum, d) => sum + archetype.scores[d as keyof typeof archetype.scores].weight, 0);
 
-    // Fit on the mismatched top dimension is 0.5; Step 2.6 nudges up by at most
-    // 10% of the gap to the (higher) raw score, so the final score sits close
-    // to 0.5 but not bit-for-bit equal to it.
+    // Under the v1.5 squared penalty, fit on the mismatched defining dimension
+    // (adversarial_threat_modeling, answered 3 vs. target 5, a 2-point gap) is
+    // 1 - (2/4)^2 = 0.75. Step 2.6 nudges up by at most 10% of the gap to the
+    // (higher) raw score, so the final score sits close to 0.75 but not equal.
+    const worstTopFit = sqFit(3, 5); // 0.75
     expect(result.fitScore).toBeCloseTo(expectedFitScore(profile, archetype), 10);
-    expect(result.fitScore).toBeGreaterThanOrEqual(0.5);
-    expect(result.fitScore).toBeLessThan(0.5 + TIEBREAK_EPSILON * (rawWeightedAverage - 0.5) + 1e-9);
+    expect(result.fitScore).toBeGreaterThanOrEqual(worstTopFit);
+    expect(result.fitScore).toBeLessThan(worstTopFit + TIEBREAK_EPSILON * (rawWeightedAverage - worstTopFit) + 1e-9);
     // Without the floor, the raw weighted average would have been noticeably higher —
     // confirms the floor is still doing the heavy lifting, not a no-op.
     expect(rawWeightedAverage).toBeGreaterThan(result.fitScore);
@@ -306,14 +314,17 @@ describe("Step 2.5 top-dimension floor (v1.1) + Step 2.6 tie-break (v1.4)", () =
     const resultA = scoreArchetype(profileA, sre)!;
     const resultB = scoreArchetype(profileB, sre)!;
 
+    // Under the squared penalty the shared 2-point gap on the floor-triggering
+    // dimension caps both at 1 - (2/4)^2 = 0.75, not the old linear 0.5.
+    const floor = sqFit(3, 5); // 0.75
     expect(resultA.fitScore).toBeCloseTo(expectedFitScore(profileA, sre), 10);
     expect(resultB.fitScore).toBeCloseTo(expectedFitScore(profileB, sre), 10);
-    // Both still cluster tightly around the 0.5 floor (preserving Step 2.5's
+    // Both still cluster tightly around the shared floor (preserving Step 2.5's
     // disqualifying power)...
-    expect(resultA.fitScore).toBeGreaterThanOrEqual(0.5);
-    expect(resultB.fitScore).toBeGreaterThanOrEqual(0.5);
-    expect(resultA.fitScore).toBeLessThan(0.5 + TIEBREAK_EPSILON + 1e-9);
-    expect(resultB.fitScore).toBeLessThan(0.5 + TIEBREAK_EPSILON + 1e-9);
+    expect(resultA.fitScore).toBeGreaterThanOrEqual(floor);
+    expect(resultB.fitScore).toBeGreaterThanOrEqual(floor);
+    expect(resultA.fitScore).toBeLessThan(floor + TIEBREAK_EPSILON + 1e-9);
+    expect(resultB.fitScore).toBeLessThan(floor + TIEBREAK_EPSILON + 1e-9);
     // ...but they're no longer identical: the stronger secondary-dimension
     // match (A) ends up meaningfully above the weaker one (B), which is
     // exactly the tie-breaking property this step exists to add.
@@ -359,6 +370,22 @@ describe("v1.2 regressions (teaching/visibility split + domain-fluency gates)", 
     // (Step 2.6 permits a small upward nudge from the raw score).
     expect(result.fitScore).toBeCloseTo(expectedFitScore(profile, archetype), 10);
     expect(result.fitScore).toBeLessThan(TIEBREAK_EPSILON + 1e-9);
+  });
+
+  it("every archetype's declared defining_dimension is exactly its set of max-weight dimensions", () => {
+    // Keeps the published data field honest against the weights it summarizes:
+    // defining_dimension must be the full set of dimensions tied at the highest
+    // weight (this is what the Step 2.5 floor caps on), never a stale subset or a
+    // lower-weight trait, so data and algorithm cannot silently drift apart.
+    for (const a of archetypes) {
+      const maxWeight = Math.max(...Object.values(a.scores).map((s) => s.weight));
+      const maxWeightDims = Object.entries(a.scores)
+        .filter(([, s]) => s.weight === maxWeight)
+        .map(([d]) => d)
+        .sort();
+      expect(a.defining_dimension.length).toBeGreaterThan(0);
+      expect([...a.defining_dimension].sort(), `${a.id} defining_dimension`).toEqual(maxWeightDims);
+    }
   });
 
   it("every domain-fluency dimension is a weight-1.0-or-near gate for exactly its own archetype", () => {

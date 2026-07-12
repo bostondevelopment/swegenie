@@ -23,6 +23,14 @@ export interface Archetype {
   id: string;
   name: string;
   confidence: "high" | "medium";
+  /**
+   * The archetype's defining dimension(s): the highest-weight trait(s) in its
+   * profile — what actually makes it what it is. Usually one dimension; an array
+   * because several archetypes tie multiple dimensions at the maximum weight
+   * (e.g. Forward Deployed Engineer ties three at weight 1.0). Drives the Step 2.5
+   * defining-trait floor in scoring.ts. See taxonomy/scoring.md Step 2.5.
+   */
+  defining_dimension: string[];
   overall_notes?: string;
   scores: Record<string, ArchetypeScore>;
 }
