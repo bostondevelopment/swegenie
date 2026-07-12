@@ -185,41 +185,51 @@ export default function ResultsClient() {
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6 mt-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12 grid sm:grid-cols-2 gap-10">
-          <div>
-            <h2 className="font-display text-xl font-semibold mb-4">What this role actually is</h2>
-            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
-              {topCopy.whatThisIs}
-            </p>
-          </div>
-          <div>
-            <h2 className="font-display text-xl font-semibold mb-4">A day in this role</h2>
-            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
-              {topCopy.aDayInThisRole}
-            </p>
-          </div>
-          <div>
-            <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
-            {topComp && (
-              <div className="mb-6 pt-4">
-                <CompBandBar low={topComp.low} high={topComp.high} typical={topComp.typical} />
-                {topComp.mix && (
-                  <div className="mt-6">
-                    <CompMixBar mix={topComp.mix} />
-                  </div>
-                )}
-              </div>
-            )}
-            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
-              {topCopy.compStructure}
-            </p>
-          </div>
-          <div>
-            <h2 className="font-display text-xl font-semibold mb-4">How to test this cheaply</h2>
-            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
-              {topCopy.howToTestCheaply}
-            </p>
-          </div>
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-xl font-semibold mb-4">What this role actually is</h2>
+          <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
+            {topCopy.whatThisIs}
+          </p>
+        </section>
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-xl font-semibold mb-4">A day in this role</h2>
+          <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
+            {topCopy.aDayInThisRole}
+          </p>
+        </section>
+
+        {growthText && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-4">Growth areas — if this wasn&apos;t a perfect fit</h2>
+              <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
+                {growthText}
+              </p>
+            </section>
+          </>
+        )}
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
+          {topComp && (
+            <div className="mb-6 pt-4">
+              <CompBandBar low={topComp.low} high={topComp.high} typical={topComp.typical} />
+              {topComp.mix && (
+                <div className="mt-6">
+                  <CompMixBar mix={topComp.mix} />
+                </div>
+              )}
+            </div>
+          )}
+          <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
+            {topCopy.compStructure}
+          </p>
         </section>
 
         {topComp?.levels && (
@@ -243,18 +253,6 @@ export default function ResultsClient() {
                 current={{ archetypeId: top.id, label: top.name, low: topComp.low, high: topComp.high, typical: topComp.typical }}
                 others={comparisonOthers}
               />
-            </section>
-          </>
-        )}
-
-        {growthText && (
-          <>
-            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-              <h2 className="font-display text-xl font-semibold mb-4">Growth areas — if this wasn&apos;t a perfect fit</h2>
-              <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
-                {growthText}
-              </p>
             </section>
           </>
         )}
@@ -316,6 +314,20 @@ export default function ResultsClient() {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-xl font-semibold mb-4">How to test this cheaply</h2>
+          <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
+            {topCopy.howToTestCheaply}
+          </p>
+          <div className="mt-8">
+            <Link href={`/archetypes/${top.id}`} className="btn-primary inline-flex px-5 py-3 font-medium">
+              Explore {top.name} in depth
+            </Link>
           </div>
         </section>
 
