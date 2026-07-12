@@ -19,7 +19,7 @@ import { CompProgressionChart } from "@/components/CompProgressionChart";
 import { TierCompChart } from "@/components/comp";
 import type { CompByTierData, Level } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
-import { QuickFacts } from "@/components/QuickFacts";
+import { CompHeadline } from "@/components/CompHeadline";
 import { Callout } from "@/components/Callout";
 import { ActionCard } from "@/components/ActionCard";
 import { Badge } from "@/components/Badge";
@@ -190,12 +190,6 @@ export default function ResultsClient() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 mt-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <QuickFacts comp={topComp ?? null} />
-        </section>
-
-        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-xl font-semibold mb-4">What this role actually is</h2>
           <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
             {topCopy.whatThisIs}
@@ -229,6 +223,7 @@ export default function ResultsClient() {
           <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
           {topComp && (
             <div className="mb-6 pt-4">
+              <CompHeadline typical={topComp.typical} sourceCompanyCount={topComp.sourceCompanyCount} />
               <CompBandBar low={topComp.low} high={topComp.high} typical={topComp.typical} />
               {topComp.mix && (
                 <div className="mt-6">

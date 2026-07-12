@@ -16,7 +16,7 @@ import { RateRole } from "@/components/RateRole";
 import { CompSection } from "@/components/comp";
 import type { CompByTierData } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
-import { QuickFacts } from "@/components/QuickFacts";
+import { CompHeadline } from "@/components/CompHeadline";
 import { Callout } from "@/components/Callout";
 import { Badge } from "@/components/Badge";
 import { ActionCard } from "@/components/ActionCard";
@@ -107,23 +107,6 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           </p>
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 pb-8">
-          <QuickFacts
-            comp={
-              comp
-                ? {
-                    low: comp.low,
-                    high: comp.high,
-                    typical: comp.typical,
-                    confidence: comp.confidence,
-                    mix: comp.mix,
-                    sourceCompanyCount: comp.sourceCompanyCount,
-                  }
-                : null
-            }
-          />
-        </section>
-
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
@@ -165,6 +148,7 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
           {comp && (
             <div className="mb-6 pt-4">
+              <CompHeadline typical={comp.typical} sourceCompanyCount={comp.sourceCompanyCount} />
               <CompBandBar low={comp.low} high={comp.high} typical={comp.typical} />
               {comp.mix && comp.mix.basePct + comp.mix.bonusPct + comp.mix.equityPct > 0 && (
                 <div className="mt-6">
