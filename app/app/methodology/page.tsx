@@ -108,8 +108,51 @@ export default function MethodologyPage() {
           </div>
         </section>
 
+        <section className="mb-14">
+          <h2 className="font-display text-2xl font-semibold mb-[18px]">5. Compensation data</h2>
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
+            The comp-by-tier charts on each archetype page (and the Staff cross-role ranking) are a
+            separate, hand-curated dataset from the salary ranges in the research briefs. They break
+            total compensation into base, bonus, and annualized equity across five company tiers —
+            AI labs, FAANG/Mag7, high-growth public, growth-stage private, and early-stage — at four
+            career levels (L3, L4, L5, Staff).
+          </p>
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
+            <strong className="text-[var(--color-fg)]">Sources.</strong> Manually curated from
+            Levels.fyi public role pages, the Carta H1 2025 State of Startup Compensation report,
+            techinterview.org, and the Cadence engineering-comp blog. It is a{" "}
+            <strong className="text-[var(--color-fg)]">mid-2025 snapshot, not a real-time feed</strong> —
+            treat it as directional, and expect drift as the market moves.
+          </p>
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
+            <strong className="text-[var(--color-fg)]">What the percentiles mean.</strong> Each band
+            (P10 / P25 / P50 / P75 / P90) reflects individual-contributor total-comp submissions for
+            the US market. The P50 is the median; the P25–P75 interquartile band is the thick middle
+            of each bar. Equity is <em>annualized paper value at vest</em>, not liquid cash — and for
+            growth-stage and early-stage tiers that equity is illiquid, so the equity figure is an
+            expected value against a wide, uncertain outcome, not money in hand.
+          </p>
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
+            <strong className="text-[var(--color-fg)]">Confidence.</strong> Each cell is tagged
+            high, medium, or low confidence by how much public data backs that specific
+            role/tier/level combination. Cells marked low carry a{" "}
+            <span className="font-mono text-[13px] text-[var(--color-signal-warn)]">limited data</span>{" "}
+            badge on the chart. The same five archetypes that came in below the posting-count bar
+            above (Embedded/IoT, both Solutions Architect variants, Developer Relations, Technical
+            Product Manager) also have thinner comp sourcing, especially at the AI-labs and
+            early-stage extremes — read those ranges as rough.
+          </p>
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7]">
+            <strong className="text-[var(--color-fg)]">Not financial advice.</strong> This is
+            directional context to help you weigh paths, not a negotiation figure, an offer
+            prediction, or personalized financial guidance. Your actual comp depends on company,
+            location, level calibration, timing, and negotiation — none of which this dataset knows
+            about you.
+          </p>
+        </section>
+
         <section>
-          <h2 className="font-display text-2xl font-semibold mb-[18px]">5. What&apos;s next</h2>
+          <h2 className="font-display text-2xl font-semibold mb-[18px]">6. What&apos;s next</h2>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7]">
             A future version layers in verified practitioners and hiring managers rating what
             their role actually demands day-to-day, with expert-seeded weights adjusted by that

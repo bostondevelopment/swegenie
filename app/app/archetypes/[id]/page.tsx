@@ -13,6 +13,9 @@ import { CompMixBar } from "@/components/CompMixBar";
 import { CompComparisonChart } from "@/components/CompComparisonChart";
 import { CompProgressionChart } from "@/components/CompProgressionChart";
 import { RateRole } from "@/components/RateRole";
+import { CompSection } from "@/components/comp";
+import type { CompByTierData } from "@/components/comp";
+import compByTierData from "@/data/comp-by-tier.json";
 
 export function generateStaticParams() {
   return archetypes.map((a) => ({ id: a.id }));
@@ -58,6 +61,14 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
   const rateDimensions = topDimensions
     .slice(0, 3)
     .map(([dimId]) => ({ id: dimId, name: dimensionById.get(dimId)?.name ?? dimId }));
+
+  // Comp-by-tier detail (base + bonus + annualized equity across 5 company
+  // tiers × 4 levels). Static JSON import — no fetch — so it works under
+  // `output: 'export'`. Silent no-op if this archetype isn't in the data.
+  const archetypeCompData = (compByTierData.archetypes as unknown as CompByTierData)[id];
+  if (!archetypeCompData && process.env.NODE_ENV !== "production") {
+    console.warn(`[comp-by-tier] no data for archetype "${id}" — skipping comp-by-tier sections`);
+  }
 
   const comp = getCompStructure(id);
   const comparisonOthers = archetypes
@@ -143,6 +154,9 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
             </section>
           </>
         )}
+
+        {/* Comp by company tier + equity reality check (static comp-by-tier data). */}
+        {archetypeCompData && <CompSection archetypeId={id} data={archetypeCompData} />}
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 

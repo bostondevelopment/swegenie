@@ -12,6 +12,12 @@ interface CompRangeBarProps {
   highlight?: boolean;
   /** Chart-wide max (largest P90 across all tiers) for a shared x-axis. */
   maxValue: number;
+  /**
+   * Overrides the row label. Defaults to the tier's display name — but views
+   * that stack one-tier-per-row (e.g. the Staff cross-role table) pass the
+   * archetype name here so the tier isn't repeated on every bar.
+   */
+  label?: string;
 }
 
 // Percent position of a dollar value along the shared 0..maxValue axis.
@@ -24,7 +30,7 @@ function pct(value: number, maxValue: number): number {
 // interquartile bar, and a bright P50 median tick, all on a shared x-axis.
 // Renders without overflow down to 320px (the label/value header wraps above a
 // full-width track, so the bar never competes with text for horizontal space).
-export function CompRangeBar({ tier, data, highlight, maxValue }: CompRangeBarProps) {
+export function CompRangeBar({ tier, data, highlight, maxValue, label }: CompRangeBarProps) {
   const total = totalComp(data);
   const dimmed = highlight === false;
   const limitedData = data.confidence === 'low';
@@ -44,7 +50,7 @@ export function CompRangeBar({ tier, data, highlight, maxValue }: CompRangeBarPr
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2 min-w-0">
           <span className="truncate text-[13px] font-medium text-[var(--color-fg)]">
-            {TIER_LABELS[tier]}
+            {label ?? TIER_LABELS[tier]}
           </span>
           {limitedData && (
             <span className="shrink-0 rounded-full border border-[var(--color-signal-warn)]/40 px-1.5 py-0.5 text-[10px] font-mono uppercase tracking-wide text-[var(--color-signal-warn)]">
