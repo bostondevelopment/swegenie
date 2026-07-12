@@ -16,6 +16,35 @@ import { CompBandBar } from "@/components/CompBandBar";
 import { CompMixBar } from "@/components/CompMixBar";
 import { CompComparisonChart } from "@/components/CompComparisonChart";
 import { CompProgressionChart } from "@/components/CompProgressionChart";
+import { TierCompChart } from "@/components/comp";
+import type { CompByTierData, Level } from "@/components/comp";
+import compByTierData from "@/data/comp-by-tier.json";
+
+// Comp-by-tier detail keyed by archetype id (static JSON — works under
+// `output: 'export'`). Same cast the archetype detail page uses.
+const compByTier = compByTierData.archetypes as unknown as CompByTierData;
+
+/**
+ * Infer the user's career level from the stack-intake `s=` param (JSON blob set
+ * by the assessment: `/results?a=…&s=…`). `years_experience` is the only YOE
+ * signal we collect — the dimension answers in `a=` are preference scores, not
+ * seniority. Falls back to L4 when the param is missing, malformed, or has no
+ * usable years value. Bands: L3 0–2yr, L4 3–6yr, L5 7–12yr, Staff 12+yr.
+ */
+function inferLevel(stackRaw: string | null): Level {
+  if (!stackRaw) return "L4";
+  try {
+    const intake = JSON.parse(stackRaw) as { years_experience?: unknown };
+    const yoe = Number(intake.years_experience);
+    if (!Number.isFinite(yoe)) return "L4";
+    if (yoe < 3) return "L3";
+    if (yoe < 7) return "L4";
+    if (yoe <= 12) return "L5";
+    return "Staff";
+  } catch {
+    return "L4";
+  }
+}
 
 type RankedState =
   | { kind: "none" }
@@ -81,6 +110,7 @@ export default function ResultsClient() {
   }
 
   const ranked = state.ranked;
+  const inferredLevel = inferLevel(searchParams.get("s"));
   const top = ranked[0];
   const topCopy = getResultsCopy(top.id);
   const topDimNames = top.topContributors.map((c) => dimensionById.get(c.dimension)?.name ?? c.dimension);
@@ -234,26 +264,58 @@ export default function ResultsClient() {
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-2xl font-semibold mb-6">Full ranking</h2>
           <div className="flex flex-col">
-            {ranked.map((r, i) => (
-              <Link
-                key={r.id}
-                href={`/archetypes/${r.id}`}
-                className={`grid grid-cols-[32px_1fr_auto] sm:grid-cols-[32px_1fr_200px] items-center gap-4 py-3.5 border-b border-[var(--color-border)] transition-colors hover:bg-[var(--color-fg)]/[0.03] ${
-                  i === 0 ? "bg-[var(--color-fg)]/[0.03]" : ""
-                }`}
-              >
-                <span className="font-mono text-sm text-[var(--color-muted-2)]">{i + 1}</span>
-                <span className={`text-[15px] truncate ${i === 0 ? "font-semibold" : ""}`}>
-                  {r.name}
-                  {r.confidence === "medium" && (
-                    <span className="ml-2 font-mono text-[11px] text-[var(--color-muted-2)]">lower-confidence</span>
+            {ranked.map((r, i) => {
+              const compData = compByTier[r.id];
+              return (
+                <div key={r.id} className="border-b border-[var(--color-border)]">
+                  <Link
+                    href={`/archetypes/${r.id}`}
+                    className={`grid grid-cols-[32px_1fr_auto] sm:grid-cols-[32px_1fr_200px] items-center gap-4 py-3.5 transition-colors hover:bg-[var(--color-fg)]/[0.03] ${
+                      i === 0 ? "bg-[var(--color-fg)]/[0.03]" : ""
+                    }`}
+                  >
+                    <span className="font-mono text-sm text-[var(--color-muted-2)]">{i + 1}</span>
+                    <span className={`text-[15px] truncate ${i === 0 ? "font-semibold" : ""}`}>
+                      {r.name}
+                      {r.confidence === "medium" && (
+                        <span className="ml-2 font-mono text-[11px] text-[var(--color-muted-2)]">lower-confidence</span>
+                      )}
+                    </span>
+                    <span className="hidden sm:block w-full">
+                      <FitBar percent={fitPercent(r.fitScore)} size="sm" />
+                    </span>
+                  </Link>
+
+                  {/* Compact comp-by-tier chart per matched archetype. Silent
+                      no-op when this archetype has no comp-by-tier data. Pure-CSS
+                      collapse (checkbox peer): collapsed by default on mobile,
+                      forced-open at >=768px where the toggle is hidden. */}
+                  {compData && (
+                    <div className="pb-4 pl-[46px] pr-1">
+                      <input
+                        type="checkbox"
+                        id={`comp-toggle-${r.id}`}
+                        className="peer sr-only"
+                      />
+                      <label
+                        htmlFor={`comp-toggle-${r.id}`}
+                        className="md:hidden inline-flex cursor-pointer select-none items-center gap-1 font-mono text-[12px] text-[var(--color-muted-2)] hover:text-[var(--color-fg)]"
+                      >
+                        Compensation by tier
+                        <span aria-hidden>&#9662;</span>
+                      </label>
+                      <div className="hidden peer-checked:block md:block mt-4">
+                        <TierCompChart
+                          archetypeId={r.id}
+                          data={compData}
+                          defaultLevel={inferredLevel}
+                        />
+                      </div>
+                    </div>
                   )}
-                </span>
-                <span className="hidden sm:block w-full">
-                  <FitBar percent={fitPercent(r.fitScore)} size="sm" />
-                </span>
-              </Link>
-            ))}
+                </div>
+              );
+            })}
           </div>
         </section>
 
