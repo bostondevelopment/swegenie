@@ -9,7 +9,7 @@ import { ShareBar } from "@/components/ShareBar";
 import { BetaSurvey } from "@/components/BetaSurvey";
 import { decodeProfile } from "@/lib/encode";
 import { rankArchetypes, fitPercent } from "@/lib/scoring";
-import { archetypeById, dimensionById } from "@/lib/taxonomy";
+import { dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy, fillWhyMatched, fillGrowthArea } from "@/lib/results-copy";
 import { getCompStructure } from "@/lib/comp-structure";
 import { CompBandBar } from "@/components/CompBandBar";
@@ -135,12 +135,6 @@ export default function ResultsClient() {
   }));
 
   const topComp = getCompStructure(top.id);
-  const topArchetype = archetypeById.get(top.id);
-  const definingDimensions = (topArchetype?.defining_dimension ?? []).map((dimId) => ({
-    name: dimensionById.get(dimId)?.name ?? dimId,
-    weight: topArchetype!.scores[dimId].weight,
-    target: topArchetype!.scores[dimId].target,
-  }));
   const comparisonOthers = ranked
     .slice(1)
     .map((r) => {
@@ -196,7 +190,7 @@ export default function ResultsClient() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 mt-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <QuickFacts comp={topComp ?? null} definingDimensions={definingDimensions} />
+          <QuickFacts comp={topComp ?? null} />
         </section>
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
@@ -257,7 +251,7 @@ export default function ResultsClient() {
           <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
             {topCopy.compStructure}
           </p>
-          {topComp && (
+          {topComp?.caveat && (
             <div className="mt-6 max-w-2xl">
               <Callout tone="caveat">{topComp.caveat}</Callout>
             </div>

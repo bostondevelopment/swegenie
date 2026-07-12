@@ -121,11 +121,6 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
                   }
                 : null
             }
-            definingDimensions={archetype.defining_dimension.map((dimId) => ({
-              name: dimensionById.get(dimId)?.name ?? dimId,
-              weight: archetype.scores[dimId].weight,
-              target: archetype.scores[dimId].target,
-            }))}
           />
         </section>
 
@@ -192,7 +187,7 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
             {copy.compStructure}
           </p>
-          {comp && (
+          {comp?.caveat && (
             <div className="mt-6">
               <Callout tone="caveat" title="Caveat">
                 {comp.caveat}
