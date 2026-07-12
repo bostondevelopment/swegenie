@@ -105,61 +105,6 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12 grid sm:grid-cols-2 gap-12">
-          <div>
-            <h2 className="font-display text-xl font-semibold mb-4">A day in this role</h2>
-            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
-              {copy.aDayInThisRole}
-            </p>
-          </div>
-          <div>
-            <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
-            {comp && (
-              <div className="mb-6 pt-4">
-                <CompBandBar low={comp.low} high={comp.high} typical={comp.typical} />
-                {comp.mix && (
-                  <div className="mt-6">
-                    <CompMixBar mix={comp.mix} />
-                  </div>
-                )}
-              </div>
-            )}
-            <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
-              {copy.compStructure}
-            </p>
-          </div>
-        </section>
-
-        {comp?.levels && (
-          <>
-            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-              <h2 className="font-display text-xl font-semibold mb-6">Comp by level</h2>
-              <CompProgressionChart
-                levels={comp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
-              />
-            </section>
-          </>
-        )}
-
-        {comp && comparisonOthers.length > 0 && (
-          <>
-            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-              <h2 className="font-display text-xl font-semibold mb-6">How this compares to other archetypes</h2>
-              <CompComparisonChart
-                current={{ archetypeId: archetype.id, label: archetype.name, low: comp.low, high: comp.high, typical: comp.typical }}
-                others={comparisonOthers}
-              />
-            </section>
-          </>
-        )}
-
-        {/* Comp by company tier + equity reality check (static comp-by-tier data). */}
-        {archetypeCompData && <CompSection archetypeId={id} data={archetypeCompData} />}
-
-        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-2xl font-semibold mb-7">What matters most for this role</h2>
           <div className="flex flex-col gap-7">
@@ -184,6 +129,62 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           </div>
         </section>
 
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-xl font-semibold mb-4">A day in this role</h2>
+          <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
+            {copy.aDayInThisRole}
+          </p>
+        </section>
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
+          {comp && (
+            <div className="mb-6 pt-4">
+              <CompBandBar low={comp.low} high={comp.high} typical={comp.typical} />
+              {comp.mix && (
+                <div className="mt-6">
+                  <CompMixBar mix={comp.mix} />
+                </div>
+              )}
+            </div>
+          )}
+          <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
+            {copy.compStructure}
+          </p>
+        </section>
+
+        {comp?.levels && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-6">Comp by level</h2>
+              <CompProgressionChart
+                levels={comp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
+              />
+            </section>
+          </>
+        )}
+
+        {/* Comp by company tier + equity reality check (static comp-by-tier data). */}
+        {archetypeCompData && <CompSection archetypeId={id} data={archetypeCompData} />}
+
+        {comp && comparisonOthers.length > 0 && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-6">How this compares to other archetypes</h2>
+              <CompComparisonChart
+                current={{ archetypeId: archetype.id, label: archetype.name, low: comp.low, high: comp.high, typical: comp.typical }}
+                others={comparisonOthers}
+              />
+            </section>
+          </>
+        )}
+
         {jobExamples.length > 0 && (
           <>
             <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
@@ -205,10 +206,6 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
-        <RateRole archetypeId={archetype.id} dimensions={rateDimensions} />
-
-        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-2xl font-semibold mb-4">How to test this cheaply</h2>
           <p className="text-lg text-[var(--color-muted)] leading-[1.7] whitespace-pre-line max-w-2xl mb-9">
@@ -218,6 +215,10 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
             See if this is your match
           </Link>
         </section>
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <RateRole archetypeId={archetype.id} dimensions={rateDimensions} />
       </main>
       <SiteFooter />
     </>
