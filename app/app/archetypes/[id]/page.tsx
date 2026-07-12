@@ -19,7 +19,6 @@ import compByTierData from "@/data/comp-by-tier.json";
 import { QuickFacts } from "@/components/QuickFacts";
 import { Callout } from "@/components/Callout";
 import { Badge } from "@/components/Badge";
-import { DimensionScale } from "@/components/DimensionScale";
 import { ActionCard } from "@/components/ActionCard";
 
 export function generateStaticParams() {
@@ -142,14 +141,11 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
                 <div key={dimId} className="grid sm:grid-cols-[220px_1fr] gap-4 sm:gap-6 items-start">
                   <div className="font-semibold text-base pt-0.5">{dim.name}</div>
                   <div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="h-1.5 flex-1 rounded-full bg-[var(--color-border)] overflow-hidden">
-                        <div
-                          className="h-full rounded-full bg-[var(--color-accent)]"
-                          style={{ width: `${score.weight * 100}%` }}
-                        />
-                      </div>
-                      <DimensionScale target={score.target} />
+                    <div className="h-1.5 rounded-full bg-[var(--color-border)] overflow-hidden mb-3">
+                      <div
+                        className="h-full rounded-full bg-[var(--color-accent)]"
+                        style={{ width: `${score.weight * 100}%` }}
+                      />
                     </div>
                     <p className="text-[15px] text-[var(--color-muted)] leading-[1.65]">{score.rationale}</p>
                   </div>
