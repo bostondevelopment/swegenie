@@ -21,10 +21,15 @@ describe("degenerate inputs: all-affirmative (5/5 on everything)", () => {
 
   it("no archetype looks like a confident, near-perfect match for a self-contradictory profile", () => {
     // Under the v1.5 squared penalty small per-dimension gaps are forgiven more,
-    // so absolute scores read higher than the old linear scale — but a
-    // self-contradictory all-5s profile still tops out well short of a confident
-    // (~0.85+) match.
-    expect(ranked[0].fitScore).toBeLessThan(0.8);
+    // so absolute scores read higher than the old linear scale. The v1.6
+    // co-occurrence layer (Step 2.7) lifts the everything-high archetypes a
+    // little further: an all-5s profile is, by construction, internally coherent
+    // on every *positive* correlated pair (both dims high together), so it earns
+    // the reinforcing nudge on clusters like systems_design/cloud and
+    // oncall/debugging — the model can no more tell a saturating "yes to
+    // everything" apart from a genuine both-high person here than the base model
+    // could. It still tops out well short of a confident (~0.85+) match.
+    expect(ranked[0].fitScore).toBeLessThan(0.85);
   });
 
   it("an everything-high archetype tops the list, and they cluster tightly (no clear winner)", () => {

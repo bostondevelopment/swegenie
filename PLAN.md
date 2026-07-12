@@ -297,14 +297,28 @@ number that was never actually measured.
 
 **Tasks:**
 - [ ] Recruit 15–25 beta users spanning ≥6 archetypes (personal network, targeted asks in
-      engineering communities).
-- [ ] Instrumented beta: completion rate, drop-off points, time-to-complete.
-- [ ] Post-result survey: "Does your top-3 include your current role?" "Did the *why* feel
-      specific to you?" "Did you learn about a role you didn't know?" "Would you share this?"
+      engineering communities). → Blocked on human outreach (same category as the ADR-004 domain
+      purchase) — an autonomous session can't recruit people. The collection pipeline they'd feed
+      is built and waiting (below).
+- [~] Instrumented beta: completion rate, drop-off points, time-to-complete. → In progress. The
+      funnel is already instrumented at all four points via `app/lib/analytics.ts` (land → start →
+      complete → share), currently a no-op sink pending a static-host-friendly provider; the
+      post-result survey pipeline below is the new, live piece.
+- [~] Post-result survey: "Is your current role in your top 3?" "Did the *why* feel specific?"
+      "Would you share this?" + optional open text. → **Live (in progress).** Survey UI is on the
+      results page (`app/components/BetaSurvey.tsx`), POSTing to `app/app/api/beta-feedback/route.ts`,
+      which validates and appends to `data/beta-feedback.jsonl`. An internal read-only dashboard at
+      `/admin/beta` (`app/app/admin/beta/page.tsx`) shows totals, % top-3-yes, % would-share-yes, and
+      recent open-text. Runtime caveat: the POST route only executes when the app is served by a Node
+      server (`next dev`, or a server build with `output: "export"` removed) — the beta hosting model —
+      and is silently dropped from the GitHub Pages static export, where the survey degrades
+      gracefully. No DB/auth/email (JSONL only).
 - [ ] Calibration pass: adjust weights/questions from beta data; re-run persona fixtures to
-      catch regressions; bump taxonomy version.
+      catch regressions; bump taxonomy version. → Not started (needs real beta responses first).
 
 **Deliverables:** `/docs/research/beta-report.md`, taxonomy v1.1.
+→ Collection pipeline delivered (survey → `/api/beta-feedback` → `data/beta-feedback.jsonl` →
+`/admin/beta`); beta-report and v1.1 bump await real recruited responses.
 
 **Done when:** ≥70% of beta users' actual role appears in their top-3 (sanity bar, not proof of
 correctness); ≥50% say they'd share; known issues triaged.
@@ -335,15 +349,34 @@ baselines established.
 **Goal:** The Glassdoor-style loop: verified practitioners and hiring managers refine the
 taxonomy. Gate: only start once traffic can produce ≥20 contributors per major archetype.
 
+**Data model — scaffolded (2026-07-12).** The Phase 8 contributor-signal shape is now specified and
+has a working (schema-validated) collection path, so v1 can start gathering signals opportunistically
+before the full v2 build begins:
+- Signal schema: `taxonomy/contributor-signals-schema.json` (archetype_id, dimension_id,
+  contributor_role [role-holder|hiring-manager], signal_value 1–5, verified_title, years_in_role,
+  timestamp, session_id).
+- Collection endpoint: `app/app/api/contribute/route.ts` validates each signal against the taxonomy
+  and appends to `data/contributor-signals.jsonl`. Same runtime caveat as the beta pipeline (Node
+  server only; dropped from static export).
+- Contributor UI: a "Rate this role" collapsible on each archetype page
+  (`app/components/RateRole.tsx`) with sliders for the archetype's top-3 dimensions, a role-holder /
+  hiring-manager selector, and optional years-in-role; posts one signal per dimension, linked by a
+  per-session id.
+- **Explicitly NOT built** (correctly gated behind the Phase 8 traffic threshold): verification,
+  aggregation, and any mutation of the expert taxonomy. Signals are raw capture only.
+
 **Tasks:**
 - [ ] LinkedIn OAuth for role verification (verifies stated current title only — combine with
-      self-reported years-in-role; store verification level per contribution).
-- [ ] Contributor flows, kept as **separate signals**: (a) role-holders rate what the role
+      self-reported years-in-role; store verification level per contribution). → Not built. The
+      schema reserves `verified_title`; v1 capture is self-reported/unverified.
+- [~] Contributor flows, kept as **separate signals**: (a) role-holders rate what the role
       actually demands day-to-day; (b) managers rate what they screen/hire for. The gap between
-      the two is itself a publishable insight per role.
+      the two is itself a publishable insight per role. → Capture scaffold live (see data-model note
+      above); `contributor_role` keeps the two sides separate at the record level. Aggregation into
+      the publishable gap is still Phase 8 proper.
 - [ ] Aggregation model: expert-seeded weights + crowdsourced adjustments, with minimum-n
       thresholds before any weight moves (anti-brigading), outlier damping, and full audit
-      history (taxonomy stays versioned; every change traceable).
+      history (taxonomy stays versioned; every change traceable). → Not started (gated on traffic).
 - [ ] Contributor incentive: show contributors how their input shifted the model; role-community
       pages ("what 47 sales engineers say this job really takes").
 - [ ] Governance doc: moderation, gaming resistance, data privacy for contributors.

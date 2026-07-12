@@ -6,10 +6,16 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FitBar } from "@/components/FitBar";
 import { ShareBar } from "@/components/ShareBar";
+import { BetaSurvey } from "@/components/BetaSurvey";
 import { decodeProfile } from "@/lib/encode";
 import { rankArchetypes, fitPercent } from "@/lib/scoring";
 import { dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy, fillWhyMatched, fillGrowthArea } from "@/lib/results-copy";
+import { getCompStructure } from "@/lib/comp-structure";
+import { CompBandBar } from "@/components/CompBandBar";
+import { CompMixBar } from "@/components/CompMixBar";
+import { CompComparisonChart } from "@/components/CompComparisonChart";
+import { CompProgressionChart } from "@/components/CompProgressionChart";
 
 type RankedState =
   | { kind: "none" }
@@ -82,6 +88,30 @@ export default function ResultsClient() {
   const growthDim = top.topGaps[0] ? dimensionById.get(top.topGaps[0].dimension)?.name : undefined;
   const growthText = growthDim ? fillGrowthArea(topCopy.growthAreasTemplate, growthDim) : null;
 
+  // Step 2.7 (v1.6) — surface how correlated dimension *combinations* helped or
+  // hurt this match, beyond the per-dimension "why". Only shown when the
+  // co-occurrence layer actually moved the top match's score.
+  const dimName = (id: string) => dimensionById.get(id)?.name ?? id;
+  const correlationNotes = top.correlationAdjustment.pairs.map((p) => ({
+    kind: p.kind,
+    text:
+      p.kind === "reinforcing"
+        ? `Your combination of ${dimName(p.a)} and ${dimName(p.b)} is a strong signal for this role.`
+        : `Your answers on ${dimName(p.a)} and ${dimName(p.b)} pull in opposite directions for this role.`,
+  }));
+
+  const topComp = getCompStructure(top.id);
+  const comparisonOthers = ranked
+    .slice(1)
+    .map((r) => {
+      const comp = getCompStructure(r.id);
+      return comp
+        ? { archetypeId: r.id, label: r.name, low: comp.low, high: comp.high, typical: comp.typical }
+        : null;
+    })
+    .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
+    .slice(0, 4);
+
   return (
     <>
       <SiteHeader />
@@ -99,6 +129,27 @@ export default function ResultsClient() {
           <p className="text-lg text-[var(--color-muted)] leading-[1.7] mb-9 max-w-2xl whitespace-pre-line">
             {whyMatched}
           </p>
+          {correlationNotes.length > 0 && (
+            <ul className="mb-9 max-w-2xl flex flex-col gap-2.5">
+              {correlationNotes.map((note, i) => (
+                <li
+                  key={i}
+                  className="flex items-start gap-3 text-[15px] text-[var(--color-muted)] leading-[1.6] border-l-2 pl-3.5 py-0.5"
+                  style={{
+                    borderColor:
+                      note.kind === "reinforcing"
+                        ? "var(--color-accent, #6ee7b7)"
+                        : "var(--color-muted-2)",
+                  }}
+                >
+                  <span className="font-mono text-[11px] uppercase tracking-wide text-[var(--color-muted-2)] mt-1 shrink-0">
+                    {note.kind === "reinforcing" ? "+ signal" : "− tension"}
+                  </span>
+                  <span>{note.text}</span>
+                </li>
+              ))}
+            </ul>
+          )}
           <ShareBar topArchetypeName={top.name} fitPercent={fitPercent(top.fitScore)} />
         </section>
 
@@ -119,6 +170,16 @@ export default function ResultsClient() {
           </div>
           <div>
             <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
+            {topComp && (
+              <div className="mb-6 pt-4">
+                <CompBandBar low={topComp.low} high={topComp.high} typical={topComp.typical} />
+                {topComp.mix && (
+                  <div className="mt-6">
+                    <CompMixBar mix={topComp.mix} />
+                  </div>
+                )}
+              </div>
+            )}
             <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {topCopy.compStructure}
             </p>
@@ -130,6 +191,31 @@ export default function ResultsClient() {
             </p>
           </div>
         </section>
+
+        {topComp?.levels && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-6">Comp by level</h2>
+              <CompProgressionChart
+                levels={topComp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
+              />
+            </section>
+          </>
+        )}
+
+        {topComp && comparisonOthers.length > 0 && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-6">How this compares to other archetypes</h2>
+              <CompComparisonChart
+                current={{ archetypeId: top.id, label: top.name, low: topComp.low, high: topComp.high, typical: topComp.typical }}
+                others={comparisonOthers}
+              />
+            </section>
+          </>
+        )}
 
         {growthText && (
           <>
@@ -169,6 +255,12 @@ export default function ResultsClient() {
               </Link>
             ))}
           </div>
+        </section>
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <BetaSurvey topArchetype={top.id} />
         </section>
       </main>
       <SiteFooter />

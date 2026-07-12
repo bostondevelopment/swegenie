@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Runtime beta/contributor capture (Phase 6/8 pipeline) — written by the
+# /api/beta-feedback and /api/contribute route handlers when the app is served
+# by a Node server (next dev / next start). Not committed: these accumulate at
+# runtime and aren't source. See app/app/api/*/route.ts.
+/data/beta-feedback.jsonl
+/data/contributor-signals.jsonl

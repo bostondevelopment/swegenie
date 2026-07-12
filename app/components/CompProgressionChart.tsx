@@ -1,0 +1,60 @@
+interface LevelBand {
+  level: string;
+  low: number;
+  high: number;
+  typical?: number;
+}
+
+interface CompProgressionChartProps {
+  levels: LevelBand[] | null;
+  max?: number;
+}
+
+export function CompProgressionChart({ levels, max = 400000 }: CompProgressionChartProps) {
+  if (!levels || levels.length === 0) return null;
+
+  return (
+    <div className="flex flex-col gap-2.5">
+      {levels.map((lvl, i) => {
+        const low = Math.min(lvl.low, max);
+        const high = Math.min(lvl.high, max);
+        const overflow = lvl.high > max;
+        const opacity = 0.45 + (i / Math.max(levels.length - 1, 1)) * 0.55;
+
+        return (
+          <div key={`${lvl.level}-${i}`} className="flex items-center gap-3">
+            <span className="w-14 shrink-0 text-xs font-mono text-[var(--color-muted)]">{lvl.level}</span>
+            <div className="relative flex-1 h-2 rounded-full bg-[var(--color-border)] overflow-hidden">
+              <div
+                className="absolute top-0 bottom-0 rounded-full bg-[var(--color-accent)]"
+                style={{
+                  left: `${(low / max) * 100}%`,
+                  width: `${((high - low) / max) * 100}%`,
+                  opacity,
+                }}
+              />
+              {lvl.typical !== undefined && (
+                <div
+                  className="absolute top-1/2 -translate-y-1/2 w-0.5 h-3 rounded-full bg-[var(--color-accent)]"
+                  style={{ left: `${(Math.min(lvl.typical, max) / max) * 100}%` }}
+                />
+              )}
+              {overflow && (
+                <span className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full pl-0.5 text-[var(--color-muted-2)] text-xs">
+                  ›
+                </span>
+              )}
+            </div>
+            <span className="w-24 shrink-0 text-right font-mono text-xs tabular-nums text-[var(--color-fg)]">
+              ${Math.round(lvl.high / 1000)}k
+            </span>
+          </div>
+        );
+      })}
+      <div className="flex justify-between text-xs font-mono text-[var(--color-muted-2)] mt-1 pl-[calc(theme(spacing.28)+theme(spacing.3))]">
+        <span>$0</span>
+        <span>${max / 1000}K</span>
+      </div>
+    </div>
+  );
+}

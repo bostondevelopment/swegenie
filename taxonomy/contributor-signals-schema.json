@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sweGenie/taxonomy/contributor-signals-schema.json",
+  "title": "Contributor signal (Phase 8 crowdsourced taxonomy)",
+  "description": "One rating of how much a single trait dimension matters for a single archetype, submitted by a verified role-holder or hiring manager. This is the v2 crowdsourcing input described in PLAN.md Phase 8: role-holders and managers are kept as SEPARATE signals (contributor_role) so the gap between what a role demands day-to-day and what managers screen for is itself measurable. Each line in data/contributor-signals.jsonl is one object of this shape. Signals are raw, unaggregated input — the expert-seeded taxonomy in taxonomy/archetypes.json is never mutated by a single submission; aggregation with minimum-n thresholds, outlier damping, and audit history is the separate Phase 8 aggregation model (not yet built).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["archetype_id", "dimension_id", "contributor_role", "signal_value", "timestamp"],
+  "properties": {
+    "archetype_id": {
+      "type": "string",
+      "description": "Stable id of the archetype being rated. Must match an id in taxonomy/archetypes.json (e.g. \"sales-engineer\")."
+    },
+    "dimension_id": {
+      "type": "string",
+      "description": "Stable id of the trait dimension being rated for this archetype. Must match an id in taxonomy/dimensions.json (e.g. \"client_facing_comfort\")."
+    },
+    "contributor_role": {
+      "type": "string",
+      "enum": ["role-holder", "hiring-manager"],
+      "description": "Which side of the market the contributor is on. Role-holders rate what the role actually demands day-to-day; hiring managers rate what they screen/hire for. Kept as separate signals on purpose — the gap between the two is a publishable per-role insight."
+    },
+    "signal_value": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "How much this dimension matters for this archetype, on the same 1-5 behavioral-anchor scale the expert taxonomy uses. 1 = barely relevant, 5 = defining."
+    },
+    "verified_title": {
+      "type": ["string", "null"],
+      "description": "The contributor's current job title as verified (Phase 8 target: LinkedIn OAuth verifies the stated current title only). Null/absent until a verification provider is wired up; v1 collection is self-reported and should be treated as unverified."
+    },
+    "years_in_role": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Self-reported years in this kind of role. Combined with verified_title to weight a signal's credibility; not a verification by itself."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp stamped server-side at submission (not client-supplied), so ordering and rate-analysis don't depend on client clocks."
+    },
+    "session_id": {
+      "type": ["string", "null"],
+      "description": "Opaque per-visit id (client-generated UUID) linking the several dimension signals submitted together in one 'Rate this role' interaction. Not tied to any account or personal identity — no login exists in v1/v2 collection. Enables per-session dedup and outlier detection during aggregation."
+    }
+  }
+}

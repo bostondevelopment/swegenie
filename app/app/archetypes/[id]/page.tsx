@@ -7,6 +7,12 @@ import { archetypes, archetypeById, dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy } from "@/lib/results-copy";
 import archetypeJobExamples from "@/data/archetype-job-examples.json";
 import { JobExamplesAccordion } from "@/components/JobExamplesAccordion";
+import { getCompStructure } from "@/lib/comp-structure";
+import { CompBandBar } from "@/components/CompBandBar";
+import { CompMixBar } from "@/components/CompMixBar";
+import { CompComparisonChart } from "@/components/CompComparisonChart";
+import { CompProgressionChart } from "@/components/CompProgressionChart";
+import { RateRole } from "@/components/RateRole";
 
 export function generateStaticParams() {
   return archetypes.map((a) => ({ id: a.id }));
@@ -47,6 +53,24 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
       }[]
     >)[id] ?? [];
 
+  // The archetype's top 3 dimensions by weight — what a contributor rates in the
+  // Phase 8 "Rate this role" widget.
+  const rateDimensions = topDimensions
+    .slice(0, 3)
+    .map(([dimId]) => ({ id: dimId, name: dimensionById.get(dimId)?.name ?? dimId }));
+
+  const comp = getCompStructure(id);
+  const comparisonOthers = archetypes
+    .filter((a) => a.id !== id)
+    .map((a) => {
+      const otherComp = getCompStructure(a.id);
+      return otherComp
+        ? { archetypeId: a.id, label: a.name, low: otherComp.low, high: otherComp.high, typical: otherComp.typical }
+        : null;
+    })
+    .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
+    .slice(0, 4);
+
   return (
     <>
       <SiteHeader />
@@ -79,11 +103,46 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           </div>
           <div>
             <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
+            {comp && (
+              <div className="mb-6 pt-4">
+                <CompBandBar low={comp.low} high={comp.high} typical={comp.typical} />
+                {comp.mix && (
+                  <div className="mt-6">
+                    <CompMixBar mix={comp.mix} />
+                  </div>
+                )}
+              </div>
+            )}
             <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line">
               {copy.compStructure}
             </p>
           </div>
         </section>
+
+        {comp?.levels && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-6">Comp by level</h2>
+              <CompProgressionChart
+                levels={comp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
+              />
+            </section>
+          </>
+        )}
+
+        {comp && comparisonOthers.length > 0 && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-xl font-semibold mb-6">How this compares to other archetypes</h2>
+              <CompComparisonChart
+                current={{ archetypeId: archetype.id, label: archetype.name, low: comp.low, high: comp.high, typical: comp.typical }}
+                others={comparisonOthers}
+              />
+            </section>
+          </>
+        )}
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
@@ -129,6 +188,10 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
             </section>
           </>
         )}
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <RateRole archetypeId={archetype.id} dimensions={rateDimensions} />
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 

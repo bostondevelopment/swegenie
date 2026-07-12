@@ -1,5 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { rankArchetypes, scoreArchetype, fitPercent } from "./scoring";
+import {
+  rankArchetypes,
+  scoreArchetype,
+  fitPercent,
+  computeCorrelationAdjustment,
+} from "./scoring";
 import { archetypes, archetypeById, type Archetype } from "./taxonomy";
 
 /**
@@ -212,14 +217,20 @@ function sqFit(v: number, target: number): number {
   return 1 - normalized * normalized;
 }
 
-/** Mirrors scoring.ts's Step 2.5 + 2.6 math so tests can compute an exact expected fitScore. */
+/** Mirrors scoring.ts's Step 2.5 + 2.6 + 2.7 math so tests can compute an exact expected fitScore. */
 function expectedFitScore(profile: Record<string, number>, archetype: Archetype): number {
   const entries = Object.entries(profile).map(([d, v]) => {
     const s = archetype.scores[d as keyof typeof archetype.scores];
     return { weight: s.weight, fit: sqFit(v, s.target) };
   });
   const totalWeight = entries.reduce((sum, e) => sum + e.weight, 0);
-  const rawFitScore = entries.reduce((sum, e) => sum + e.weight * e.fit, 0) / totalWeight;
+  // Step 2.7 (v1.6): the correlation adjustment is folded into the raw fit
+  // before the floor, so the exact-arithmetic mirror must include it too.
+  const adjustment = computeCorrelationAdjustment(profile, archetype).total;
+  const rawFitScore = Math.min(
+    1,
+    Math.max(0, entries.reduce((sum, e) => sum + e.weight * e.fit, 0) / totalWeight + adjustment)
+  );
   const topWeight = Math.max(...entries.map((e) => e.weight));
   const worstTopFit = Math.min(...entries.filter((e) => e.weight === topWeight).map((e) => e.fit));
   return rawFitScore <= worstTopFit
@@ -329,6 +340,110 @@ describe("Step 2.5 top-dimension floor (v1.1) + Step 2.6 tie-break (v1.4)", () =
     // match (A) ends up meaningfully above the weaker one (B), which is
     // exactly the tie-breaking property this step exists to add.
     expect(resultA.fitScore).toBeGreaterThan(resultB.fitScore);
+  });
+});
+
+describe("Step 2.7 inter-dimension co-occurrence adjustment (v1.6)", () => {
+  it("rewards answers that reinforce an archetype's correlated cluster", () => {
+    // SRE's profile expresses two positive clusters: oncall<->debugging and
+    // systems_design<->cloud (both dims high, both meaningfully weighted). A user
+    // who is high on both members of a cluster reinforces it.
+    const sre = archetypeById.get("sre-production-engineer")!;
+    const profile = { oncall_incident_appetite: 5, debugging_diagnostic_depth: 5 };
+    const adj = computeCorrelationAdjustment(profile, sre);
+    expect(adj.total).toBeGreaterThan(0);
+    const pair = adj.pairs.find(
+      (p) =>
+        (p.a === "oncall_incident_appetite" && p.b === "debugging_diagnostic_depth") ||
+        (p.a === "debugging_diagnostic_depth" && p.b === "oncall_incident_appetite")
+    );
+    expect(pair?.kind).toBe("reinforcing");
+    expect(pair!.delta).toBeGreaterThan(0);
+  });
+
+  it("penalizes answers that pull in opposite directions for an archetype's cluster", () => {
+    // DevRel's teaching_enjoyment<->public_visibility_comfort is a positive
+    // cluster (both target 5, both weight 1.0). Loving private teaching but
+    // avoiding public visibility contradicts the co-occurrence the role expects.
+    const devrel = archetypeById.get("developer-relations-advocacy")!;
+    const adj = computeCorrelationAdjustment(
+      { teaching_enjoyment: 5, public_visibility_comfort: 1 },
+      devrel
+    );
+    expect(adj.total).toBeLessThan(0);
+    expect(adj.pairs[0].kind).toBe("conflicting");
+    expect(adj.pairs[0].delta).toBeLessThan(0);
+  });
+
+  it("emits no adjustment for neutral (3) answers — a midpoint carries no directional signal", () => {
+    const sre = archetypeById.get("sre-production-engineer")!;
+    const adj = computeCorrelationAdjustment(
+      { oncall_incident_appetite: 3, debugging_diagnostic_depth: 3 },
+      sre
+    );
+    expect(adj.total).toBe(0);
+    expect(adj.pairs).toHaveLength(0);
+  });
+
+  it("emits no adjustment for a pair the archetype only weights weakly", () => {
+    // Mobile Engineer weights neither oncall nor debugging as a defining trait,
+    // so even a strongly-directional answer on that pair shouldn't move its score.
+    const mobile = archetypeById.get("mobile-engineer")!;
+    const adj = computeCorrelationAdjustment(
+      { oncall_incident_appetite: 5, debugging_diagnostic_depth: 5 },
+      mobile
+    );
+    expect(adj.pairs.every((p) => !(p.a.includes("oncall") || p.b.includes("oncall")))).toBe(true);
+  });
+
+  it("clamps the total adjustment to +/- 0.10 and keeps surfaced deltas summing to it", () => {
+    for (const archetype of archetypes) {
+      // An all-5s profile maximizes reinforcing hits on positive clusters.
+      const allHigh: Record<string, number> = {};
+      for (const dim of Object.keys(archetype.scores)) allHigh[dim] = 5;
+      const adj = computeCorrelationAdjustment(allHigh, archetype);
+      expect(adj.total).toBeLessThanOrEqual(0.1 + 1e-9);
+      expect(adj.total).toBeGreaterThanOrEqual(-0.1 - 1e-9);
+      const summed = adj.pairs.reduce((s, p) => s + p.delta, 0);
+      expect(summed).toBeCloseTo(adj.total, 10);
+    }
+  });
+
+  it("cannot rescue an archetype the user mismatches on its defining trait (floor still binds)", () => {
+    // Security's defining trait is adversarial_threat_modeling (weight 1.0). Even
+    // with a reinforcing oncall<->debugging cluster, a bad answer on the defining
+    // trait must keep the score floored near that trait's fit.
+    const security = archetypeById.get("security-engineer")!;
+    const profile = {
+      adversarial_threat_modeling: 1, // target 5 -> fit 0, the defining-trait miss
+      oncall_incident_appetite: 5,
+      debugging_diagnostic_depth: 5, // reinforcing cluster, positive adjustment
+    };
+    const adj = computeCorrelationAdjustment(profile, security);
+    expect(adj.total).toBeGreaterThan(0); // the nudge really is positive...
+    const result = scoreArchetype(profile, security)!;
+    // ...yet the floor still caps the score near 0 (Step 2.6 permits only a small nudge).
+    expect(result.fitScore).toBeLessThan(TIEBREAK_EPSILON + 1e-9);
+    expect(result.fitScore).toBeCloseTo(expectedFitScore(profile, security), 10);
+  });
+
+  it("every scored archetype carries a correlationAdjustment field for the UI", () => {
+    const persona = personas[0];
+    const ranked = rankArchetypes(persona.profile);
+    for (const r of ranked) {
+      expect(r.correlationAdjustment).toBeDefined();
+      expect(typeof r.correlationAdjustment.total).toBe("number");
+      expect(Array.isArray(r.correlationAdjustment.pairs)).toBe(true);
+    }
+  });
+
+  it("keeps every Phase 2 persona's #1 match unchanged vs. correlation-off scoring (nudge, not overturn)", () => {
+    // The adjustment is a small tie-breaker: it may reorder near-neighbors by a
+    // position or two, but must never overturn a persona's intended top match.
+    for (const persona of personas) {
+      const ranked = rankArchetypes(persona.profile);
+      expect(ranked[0].id, persona.name).toBe(persona.expectedTop);
+    }
   });
 });
 

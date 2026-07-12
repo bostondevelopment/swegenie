@@ -1,6 +1,7 @@
 import dimensionsData from "@/data/dimensions.json";
 import archetypesData from "@/data/archetypes.json";
 import questionsData from "@/data/questions.json";
+import dimensionCorrelationsData from "@/data/dimension-correlations.json";
 
 export type DimensionCategory = "skill" | "preference";
 
@@ -62,11 +63,28 @@ export interface StackIntakeField {
   optional?: boolean;
 }
 
+/**
+ * A pair of dimensions whose `target` vectors across the 18 archetypes are
+ * meaningfully correlated (|Pearson r| > 0.7), computed by
+ * scripts/compute-dimension-correlations.js. `direction` is "positive" (the two
+ * traits co-occur — both high or both low across archetypes) or "negative" (they
+ * trade off). Consumed by scoring.ts's Step 2.7 co-occurrence adjustment. See
+ * taxonomy/scoring.md Step 2.7 and taxonomy/dimension-correlations.json.
+ */
+export interface DimensionCorrelationPair {
+  a: string;
+  b: string;
+  r: number;
+  direction: "positive" | "negative";
+}
+
 export const dimensions: Dimension[] = dimensionsData.dimensions as Dimension[];
 export const archetypes: Archetype[] = archetypesData.archetypes as Archetype[];
 export const questions: Question[] = questionsData.questions as Question[];
 export const stackIntakeFields: StackIntakeField[] =
   questionsData.stackIntake.fields as StackIntakeField[];
+export const correlatedDimensionPairs: DimensionCorrelationPair[] =
+  dimensionCorrelationsData.correlated_pairs as DimensionCorrelationPair[];
 
 export const dimensionById = new Map(dimensions.map((d) => [d.id, d]));
 export const archetypeById = new Map(archetypes.map((a) => [a.id, a]));

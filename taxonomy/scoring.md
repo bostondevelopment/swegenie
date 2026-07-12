@@ -1,14 +1,17 @@
-# Scoring Algorithm Spec (v1.5)
+# Scoring Algorithm Spec (v1.6)
 
-**Status:** Phase 2 deliverable, revised through v1.5. v1.1 (2026-07-09) added the top-dimension
+**Status:** Phase 2 deliverable, revised through v1.6. v1.1 (2026-07-09) added the top-dimension
 floor (Step 2.5) after a real user's result surfaced the exact dilution failure mode flagged (but
 left unfixed) in v1.0's Known Limitations. v1.5 (2026-07-12) replaced v1's linear per-dimension gap
 penalty with a **non-linear (squared) penalty** (Step 1) so large mismatches cost disproportionately
 more than small ones, and made each archetype's defining dimension(s) an explicit, published field
-(`defining_dimension` in `archetypes.json`) that drives the Step 2.5 floor. This is the spec Phase 5's
-scoring engine (`app/`) implements as a pure, unit-tested module. Phase 2's persona validation
-(`docs/research/validation-v1.md`) exercises this exact algorithm by hand/spreadsheet before any code
-is written, per PLAN.md's "Done when" criteria for this phase.
+(`defining_dimension` in `archetypes.json`) that drives the Step 2.5 floor. v1.6 (2026-07-12) added
+the **inter-dimension co-occurrence adjustment** (Step 2.7), closing the "each dimension is scored
+independently" limitation that v1 documented and deferred: the model now knows which traits
+empirically co-occur across the archetype roster and rewards (or penalizes) answer *combinations*
+accordingly. This is the spec Phase 5's scoring engine (`app/`) implements as a pure, unit-tested
+module. Phase 2's persona validation (`docs/research/validation-v1.md`) exercises this exact algorithm
+by hand/spreadsheet before any code is written, per PLAN.md's "Done when" criteria for this phase.
 
 ## Inputs
 
@@ -136,6 +139,86 @@ escaping a bad match on its own defining trait through secondary-dimension agree
 10% of a large gap" still reads as roughly the same percentage on the results page; it just stops being
 bit-for-bit identical to three other archetypes' scores for unrelated reasons.
 
+## Step 2.7 — Inter-dimension co-occurrence adjustment (v1.6)
+
+Added to close the **"no inter-dimension correlation modeling"** limitation that v1 documented and
+deferred to a hypothetical Phase 8 crowdsourced-calibration pass. The base model (Steps 1–2) scores
+every dimension independently, so it cannot see that some traits co-occur in practice — that a role
+wanting high `oncall_incident_appetite` almost always also wants high `debugging_diagnostic_depth`,
+for example. A user who answers *consistently with* such a cluster is giving a more coherent signal
+than the per-dimension average alone can express; a user whose answers on a co-occurring pair pull in
+opposite directions is giving a subtly *contradictory* one. v1.6 makes that legible without any
+black-box ML, staying within the project's "transparent linear model over documented dimensions"
+bet.
+
+**Where the correlations come from.** `scripts/compute-dimension-correlations.js` computes the Pearson
+correlation between every pair of dimensions' `target` vectors across all 18 archetype profiles in
+`archetypes.json`, and writes the full matrix plus the pairs above threshold to
+`taxonomy/dimension-correlations.json` (mirrored to `app/data/` for the runtime engine). This is
+derived **entirely from the existing taxonomy** — no outside data, fully reproducible by re-running
+the script. Pairs with `|r| > 0.7` are treated as meaningfully correlated. As of the v1.6 taxonomy
+the four qualifying pairs are all positive:
+
+| pair | r |
+|---|---|
+| `ml_engineering_fluency` ↔ `data_infrastructure_fluency` | +0.92 |
+| `systems_design_scale` ↔ `cloud_infrastructure_fluency` | +0.91 |
+| `oncall_incident_appetite` ↔ `debugging_diagnostic_depth` | +0.80 |
+| `teaching_enjoyment` ↔ `public_visibility_comfort` | +0.75 |
+
+**When a pair applies to an archetype.** The adjustment only fires where the cluster is a *defining
+feature* of the archetype, not merely present:
+
+```
+applies(pair, A) iff
+    max(A[a].weight, A[b].weight) >= 0.6      // at least one is a defining-tier trait
+    and min(A[a].weight, A[b].weight) >= 0.3  // the other is at least moderately weighted
+    and sign(A[a].target - 3) != 0 and sign(A[b].target - 3) != 0   // A is off-neutral on both
+    and sign(A[a].target - 3) * sign(A[b].target - 3) == sign(r)     // A's own targets express the correlation
+```
+
+**The adjustment.** For an applicable pair where the user answered both dims off-neutral
+(`U[a] != 3` and `U[b] != 3`):
+
+```
+matchA = sign(U[a] - 3) == sign(A[a].target - 3)   // user leans A's way on dim a
+matchB = sign(U[b] - 3) == sign(A[b].target - 3)   // user leans A's way on dim b
+delta(r) = 0.02 + clamp((|r| - 0.7) / 0.3, 0, 1) * (0.05 - 0.02)   // 0.02 at r=0.7 → 0.05 at r=1.0
+
+if matchA and matchB:   adjustment += delta(r)   // reinforcing: coherent co-occurring signal
+elif matchA != matchB:  adjustment -= delta(r)   // conflicting: answers pull in opposite directions
+else:                   (no change)              // user opposes the role on both — a plain fit miss,
+                                                 //   already penalized in Steps 1–2, not double-counted
+```
+
+Neutral (3) answers carry no directional signal and are skipped — a midpoint answer is never
+rewarded or penalized by this layer. The signed total per archetype is **clamped to `[-0.10, +0.10]`**
+(with the surfaced per-pair deltas rescaled to still sum to the clamped total, so the UI's breakdown
+stays honest).
+
+**Where it sits in the pipeline.** The adjustment is folded into the raw fit *before* the Step 2.5
+floor:
+
+```
+rawFitScore = clamp( fitScore_from_step_2 + correlationAdjustment.total , 0, 1 )   // then Steps 2.5/2.6 as before
+```
+
+This ordering is deliberate: the co-occurrence layer is a **nudge, not an override.** When an
+archetype's defining trait is well-matched (its floor is a no-op), a reinforcing bonus flows through
+to the final score and can reorder near-neighbors. When the user mismatches the defining trait, the
+Step 2.5 floor still caps the score at that trait's fit — a positive correlation bonus **cannot rescue
+a fundamentally bad match.** By construction the layer shifts rankings by at most one or two
+positions; it never overturns a defining-trait verdict (verified against the Phase 2 persona suite and
+the all-5s/all-1s/all-3s degenerate inputs — each persona's intended #1 is unchanged, max observed
+rank shift is 1).
+
+**Explainability.** The scoring result exposes a `correlationAdjustment` object (`{ total, pairs[] }`),
+each pair tagged `reinforcing` or `conflicting` with its signed `delta`, so the results UI can render a
+plain-language line per pair — "Your combination of *On-Call / Incident Appetite* and *Debugging /
+Diagnostic Depth* is a strong signal for this role" (reinforcing) or "Your answers on *A* and *B* pull
+in opposite directions for this role" (conflicting) — keeping the whole layer as transparent and
+inspectable as the per-dimension `fit`.
+
 ## Step 3 — Ranking
 
 Sort archetypes descending by `fitScore`. The result page shows the ranked list (PLAN.md Phase 5
@@ -227,12 +310,22 @@ external calls, and no hidden state — every step above is directly unit-testab
   the floor itself (currently: `totalWeight == 0`, i.e., only fully-blank archetypes excluded) is a
   conservative first cut. If beta feedback shows partial-signal scores feel unreliable, raise this
   floor (e.g., require `totalWeight >= 0.5 * archetype's full totalWeight`) in v1.1.
-- **No inter-dimension correlation modeling.** Each dimension is scored independently; the algorithm
-  doesn't know that, e.g., `oncall_incident_appetite` and `interrupt_tolerance` tend to co-occur. This
-  is intentional simplicity for v1 (per PLAN.md's "no black-box ML" sequencing principle) — a
-  transparent linear model over documented dimensions is the explicit product bet over the phase
-  boundary, with v2's crowdsourced calibration (Phase 8) as the intended place to revisit this if
-  linear scoring proves too coarse.
+- **No inter-dimension correlation modeling — ADDRESSED in v1.6 (Step 2.7).** v1 scored every
+  dimension independently, with no notion that some traits co-occur in practice (e.g.
+  `oncall_incident_appetite` and `debugging_diagnostic_depth`). It was left as intentional v1
+  simplicity, with v2's crowdsourced calibration (Phase 8) as the deferred place to revisit it.
+  v1.6 addressed it earlier and without any black-box ML: `scripts/compute-dimension-correlations.js`
+  derives the co-occurrence structure directly from the taxonomy (Pearson correlation of dimension
+  `target` vectors across the 18 archetypes; `|r| > 0.7` → a meaningful pair), and Step 2.7 rewards
+  answer combinations that reinforce an archetype's own correlated clusters and penalizes ones that
+  contradict them. It stays fully transparent — the correlations are a committed, reproducible data
+  file, and each adjustment is surfaced per-pair in the result — and stays a *nudge*: folded in under
+  the Step 2.5 floor, capped at ±0.10, it reorders near-neighbors without ever overturning a
+  defining-trait verdict. What Phase 8 crowdsourced data could still improve is the *source* of the
+  correlations — the current pairs are derived from the taxonomy's own expert-scored targets (18
+  archetypes is a small sample, so only strong structural pairs clear `|r| > 0.7`), whereas real
+  user-outcome data could calibrate both which pairs matter and how much. Retained here as a record
+  of the original limitation and the shape of the fix.
 - **Dilution-by-low-weight-agreement — FIXED in v1.1 (Step 2.5).** Originally found during Phase 2
   persona validation (`docs/research/validation-v1.md` Finding 1) and left as a documented risk
   rather than fixed, on the reasoning that it hadn't yet bitten a real case. It did: a real user's
