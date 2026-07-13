@@ -80,3 +80,30 @@ body {
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
 }
+
+.swe-orbit-wrap {
+  width: 355px;
+  height: 444px;
+}
+.swe-orbit-box {
+  transform: scale(0.58);
+  transform-origin: top left;
+}
+@media (min-width: 640px) {
+  .swe-orbit-wrap {
+    width: 466px;
+    height: 582px;
+  }
+  .swe-orbit-box {
+    transform: scale(0.76);
+  }
+}
+@media (min-width: 1024px) {
+  .swe-orbit-wrap {
+    width: 612px;
+    height: 765px;
+  }
+  .swe-orbit-box {
+    transform: none;
+  }
+}

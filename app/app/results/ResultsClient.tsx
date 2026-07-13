@@ -9,16 +9,19 @@ import { ShareBar } from "@/components/ShareBar";
 import { BetaSurvey } from "@/components/BetaSurvey";
 import { decodeProfile } from "@/lib/encode";
 import { rankArchetypes, fitPercent } from "@/lib/scoring";
-import { dimensionById } from "@/lib/taxonomy";
+import { archetypeById, dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy, fillWhyMatched, fillGrowthArea } from "@/lib/results-copy";
 import { getCompStructure } from "@/lib/comp-structure";
 import { CompBandBar } from "@/components/CompBandBar";
 import { CompMixBar } from "@/components/CompMixBar";
 import { CompComparisonChart } from "@/components/CompComparisonChart";
 import { CompProgressionChart } from "@/components/CompProgressionChart";
-import { TierCompChart } from "@/components/comp";
+import { TierCompChart, CompSection } from "@/components/comp";
 import type { CompByTierData, Level } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
+import archetypeJobExamples from "@/data/archetype-job-examples.json";
+import { JobExamplesAccordion } from "@/components/JobExamplesAccordion";
+import { RateRole } from "@/components/RateRole";
 import { CompHeadline } from "@/components/CompHeadline";
 import { ExpandableCard } from "@/components/ExpandableCard";
 import { ActionCard } from "@/components/ActionCard";
@@ -133,6 +136,26 @@ export default function ResultsClient() {
         : `Your answers on ${dimName(p.a)} and ${dimName(p.b)} pull in opposite directions for this role.`,
   }));
 
+  const topArchetype = archetypeById.get(top.id);
+  const topDimensions = topArchetype
+    ? Object.entries(topArchetype.scores).sort((a, b) => b[1].weight - a[1].weight).slice(0, 5)
+    : [];
+  const rateDimensions = topDimensions
+    .slice(0, 3)
+    .map(([dimId]) => ({ id: dimId, name: dimensionById.get(dimId)?.name ?? dimId }));
+  const jobExamples =
+    (archetypeJobExamples.examples as Record<
+      string,
+      {
+        company: string;
+        title: string;
+        location: string | null;
+        url: string;
+        sections: { heading: string; paragraph?: string; bullets?: string[] }[];
+      }[]
+    >)[top.id] ?? [];
+  const archetypeCompData = compByTier[top.id];
+
   const topComp = getCompStructure(top.id);
   const comparisonOthers = ranked
     .slice(1)
@@ -153,9 +176,18 @@ export default function ResultsClient() {
           <p className="font-mono text-sm text-[var(--color-muted-2)] mb-[18px]">
             Ranked #1 of {ranked.length} engineering role archetypes
           </p>
-          <h1 className="font-display text-4xl sm:text-[44px] font-bold tracking-tight mb-6">
+          <h1 className="font-display text-4xl sm:text-[44px] font-bold tracking-tight mb-5">
             {top.name}
           </h1>
+          {top.confidence === "medium" && (
+            <p className="text-xs font-mono text-[var(--color-signal-warn)] mb-5">
+              Lower-confidence sourcing (below target job-posting count) — see{" "}
+              <Link href="/methodology" className="underline hover:text-[var(--color-fg)]">
+                methodology
+              </Link>
+              .
+            </p>
+          )}
           <div className="max-w-md mb-8">
             <FitBar percent={fitPercent(top.fitScore)} />
           </div>
@@ -194,6 +226,35 @@ export default function ResultsClient() {
             {topCopy.whatThisIs}
           </p>
         </section>
+
+        {topDimensions.length > 0 && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <h2 className="font-display text-2xl font-semibold mb-7">What matters most for this role</h2>
+              <div className="flex flex-col gap-7">
+                {topDimensions.map(([dimId, score]) => {
+                  const dim = dimensionById.get(dimId);
+                  if (!dim) return null;
+                  return (
+                    <div key={dimId} className="grid sm:grid-cols-[220px_1fr] gap-4 sm:gap-6 items-start">
+                      <div className="font-semibold text-base pt-0.5">{dim.name}</div>
+                      <div>
+                        <div className="h-1.5 rounded-full bg-[var(--color-border)] overflow-hidden mb-3">
+                          <div
+                            className="h-full rounded-full bg-[var(--color-accent)]"
+                            style={{ width: `${score.weight * 100}%` }}
+                          />
+                        </div>
+                        <p className="text-[15px] text-[var(--color-muted)] leading-[1.65]">{score.rationale}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          </>
+        )}
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
@@ -272,6 +333,10 @@ export default function ResultsClient() {
           </>
         )}
 
+        {archetypeCompData && (
+          <CompSection archetypeId={top.id} data={archetypeCompData} userLevel={inferredLevel} />
+        )}
+
         {topComp && comparisonOthers.length > 0 && (
           <>
             <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
@@ -281,6 +346,24 @@ export default function ResultsClient() {
                 current={{ archetypeId: top.id, label: top.name, low: topComp.low, high: topComp.high, typical: topComp.typical }}
                 others={comparisonOthers}
               />
+            </section>
+          </>
+        )}
+
+        {jobExamples.length > 0 && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+              <div className="flex items-baseline justify-between gap-4 mb-2 flex-wrap">
+                <h2 className="font-display text-2xl font-semibold">Examples of real job postings</h2>
+                <span className="font-mono text-[11px] text-[var(--color-muted-2)] whitespace-nowrap">
+                  snapshot from {archetypeJobExamples.generated}
+                </span>
+              </div>
+              <p className="text-[15px] text-[var(--color-muted)] leading-[1.6] mb-6">
+                Real postings from the research corpus behind this archetype. Click one to read the actual listing.
+              </p>
+              <JobExamplesAccordion examples={jobExamples} />
             </section>
           </>
         )}
@@ -362,6 +445,13 @@ export default function ResultsClient() {
             </Link>
           </div>
         </section>
+
+        {rateDimensions.length > 0 && (
+          <>
+            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+            <RateRole archetypeId={top.id} dimensions={rateDimensions} />
+          </>
+        )}
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 

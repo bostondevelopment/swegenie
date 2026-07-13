@@ -64,41 +64,43 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative hidden lg:block mx-auto" style={{ width: 612, height: 765 }}>
-                <div
-                  className="absolute top-1/2 left-1/2 rounded-full border border-dashed border-[rgba(245,245,242,0.12)] pointer-events-none"
-                  style={{ width: 527, height: 527, transform: "translate(-50%,-50%)", animation: "swe-spin 60s linear infinite" }}
-                />
-                <div
-                  className="absolute top-1/2 left-1/2 rounded-full border border-[rgba(245,245,242,0.07)] pointer-events-none"
-                  style={{ width: 374, height: 374, transform: "translate(-50%,-50%)", animation: "swe-spin-rev 48s linear infinite" }}
-                />
-                <div
-                  className="absolute top-1/2 left-1/2 font-display font-bold text-[var(--color-accent)] pointer-events-none"
-                  style={{ transform: "translate(-50%,-50%)", fontSize: 442, lineHeight: 0.7 }}
-                >
-                  ?
-                </div>
-                <div
-                  className="absolute"
-                  style={{ top: 86.7, left: 10.2, right: 59.5, bottom: 66.3 }}
-                >
-                  {ORBIT_SLOTS.map((item, i) => (
-                    <Link
-                      key={`${item.id}-${i}`}
-                      href={`/archetypes/${item.id}`}
-                      className="absolute font-display font-medium whitespace-nowrap no-underline"
-                      style={{
-                        top: item.top,
-                        left: item.left,
-                        transform: `rotate(${item.rotate}deg)`,
-                        opacity: item.opacity,
-                        fontSize: 20.4,
-                      }}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+              <div className="swe-orbit-wrap relative mx-auto lg:mx-0 overflow-hidden lg:overflow-visible">
+                <div className="swe-orbit-box relative" style={{ width: 612, height: 765 }}>
+                  <div
+                    className="absolute top-1/2 left-1/2 rounded-full border border-dashed border-[rgba(245,245,242,0.12)] pointer-events-none"
+                    style={{ width: 527, height: 527, transform: "translate(-50%,-50%)", animation: "swe-spin 60s linear infinite" }}
+                  />
+                  <div
+                    className="absolute top-1/2 left-1/2 rounded-full border border-[rgba(245,245,242,0.07)] pointer-events-none"
+                    style={{ width: 374, height: 374, transform: "translate(-50%,-50%)", animation: "swe-spin-rev 48s linear infinite" }}
+                  />
+                  <div
+                    className="absolute top-1/2 left-1/2 font-display font-bold text-[var(--color-accent)] pointer-events-none"
+                    style={{ transform: "translate(-50%,-50%)", fontSize: 442, lineHeight: 0.7 }}
+                  >
+                    ?
+                  </div>
+                  <div
+                    className="absolute"
+                    style={{ top: 86.7, left: 10.2, right: 59.5, bottom: 66.3 }}
+                  >
+                    {ORBIT_SLOTS.map((item, i) => (
+                      <Link
+                        key={`${item.id}-${i}`}
+                        href={`/archetypes/${item.id}`}
+                        className="absolute font-display font-medium whitespace-nowrap no-underline"
+                        style={{
+                          top: item.top,
+                          left: item.left,
+                          transform: `rotate(${item.rotate}deg)`,
+                          opacity: item.opacity,
+                          fontSize: 20.4,
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
