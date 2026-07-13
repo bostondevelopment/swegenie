@@ -195,7 +195,7 @@ export default function MethodologyPage() {
               flagged low-confidence were subsequently re-researched against real per-company,
               per-level compensation data (levels.fyi per-level breakdowns, and 12,000+ real job
               postings from the research corpus, classified by company tier and level). Every
-              citation from that pass — and an explicit "no public data exists" record for cells
+              citation from that pass — and an explicit &ldquo;no public data exists&rdquo; record for cells
               that stayed low — is archived locally in the repo under{" "}
               <code className="font-mono text-[13px]">docs/research/source-archive/</code>, so
               none of it depends on re-fetching a live URL that may since have gone stale.
@@ -236,7 +236,7 @@ export default function MethodologyPage() {
             breakdowns and the 12,000+-posting research corpus) genuinely found no public
             compensation data for that specific role/tier/level combination, not because the
             search wasn&apos;t tried. Engineering Management&apos;s L3 cells reflect a taxonomy mismatch on
-            top of that: "L3 engineering manager" isn&apos;t a real leveling tier — first-line EMs are
+            top of that: &ldquo;L3 engineering manager&rdquo; isn&apos;t a real leveling tier — first-line EMs are
             promoted senior/staff ICs, not L3 hires.
           </p>
 
