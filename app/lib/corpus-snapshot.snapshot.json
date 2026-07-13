@@ -1,0 +1,92 @@
+{
+  "consulting-engineer-professional-services": {
+    "postingCount": 202,
+    "sourceCompanyCount": 20,
+    "typical": 143000
+  },
+  "customer-support-engineer": {
+    "postingCount": 319,
+    "sourceCompanyCount": 41,
+    "typical": 112000
+  },
+  "customer-support-solutions-engineer": {
+    "postingCount": 197,
+    "sourceCompanyCount": 23,
+    "typical": 147000
+  },
+  "data-engineer": {
+    "postingCount": 525,
+    "sourceCompanyCount": 86,
+    "typical": 184050
+  },
+  "developer-relations-advocacy": {
+    "postingCount": 87,
+    "sourceCompanyCount": 19,
+    "typical": 190000
+  },
+  "embedded-iot-engineer": {
+    "postingCount": 148,
+    "sourceCompanyCount": 42,
+    "typical": 195000
+  },
+  "engineering-management": {
+    "postingCount": 803,
+    "sourceCompanyCount": 124,
+    "typical": 235000
+  },
+  "forward-deployed-engineer": {
+    "postingCount": 424,
+    "sourceCompanyCount": 26,
+    "typical": 190000
+  },
+  "ml-engineer": {
+    "postingCount": 752,
+    "sourceCompanyCount": 112,
+    "typical": 220000
+  },
+  "mobile-engineer": {
+    "postingCount": 213,
+    "sourceCompanyCount": 26,
+    "typical": 195000
+  },
+  "platform-infrastructure-engineer": {
+    "postingCount": 414,
+    "sourceCompanyCount": 74,
+    "typical": 172000
+  },
+  "product-full-stack-software-engineer": {
+    "postingCount": 6204,
+    "sourceCompanyCount": 249,
+    "typical": 195000
+  },
+  "sales-engineer-pre-sales": {
+    "postingCount": 372,
+    "sourceCompanyCount": 29,
+    "typical": 156000
+  },
+  "security-engineer": {
+    "postingCount": 586,
+    "sourceCompanyCount": 91,
+    "typical": 195000
+  },
+  "solutions-architect-consulting": {
+    "postingCount": 103,
+    "sourceCompanyCount": 18,
+    "typical": 179000
+  },
+  "solutions-architect-vendor-side": {
+    "postingCount": 57,
+    "sourceCompanyCount": 13,
+    "typical": 192000
+  },
+  "sre-production-engineer": {
+    "postingCount": 316,
+    "sourceCompanyCount": 45,
+    "typical": 193000
+  },
+  "technical-product-manager": {
+    "postingCount": 63,
+    "sourceCompanyCount": 22,
+    "typical": 183000
+  }
+}
