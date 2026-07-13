@@ -10,7 +10,6 @@ import { JobExamplesAccordion } from "@/components/JobExamplesAccordion";
 import { getCompStructure } from "@/lib/comp-structure";
 import { CompBandBar } from "@/components/CompBandBar";
 import { CompMixBar } from "@/components/CompMixBar";
-import { CompComparisonChart } from "@/components/CompComparisonChart";
 import { CompProgressionChart } from "@/components/CompProgressionChart";
 import { RateRole } from "@/components/RateRole";
 import { CompSection } from "@/components/comp";
@@ -75,16 +74,6 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
   }
 
   const comp = getCompStructure(id);
-  const comparisonOthers = archetypes
-    .filter((a) => a.id !== id)
-    .map((a) => {
-      const otherComp = getCompStructure(a.id);
-      return otherComp
-        ? { archetypeId: a.id, label: a.name, low: otherComp.low, high: otherComp.high, typical: otherComp.typical }
-        : null;
-    })
-    .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
-    .slice(0, 4);
 
   return (
     <>
@@ -182,30 +171,26 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           )}
         </section>
 
-        {comp?.levels && (
+        {(comp?.levels || archetypeCompData) && (
           <>
             <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
             <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-              <h2 className="font-display text-xl font-semibold mb-6">Comp by level</h2>
-              <CompProgressionChart
-                levels={comp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
-              />
-            </section>
-          </>
-        )}
-
-        {/* Comp by company tier + equity reality check (static comp-by-tier data). */}
-        {archetypeCompData && <CompSection archetypeId={id} data={archetypeCompData} />}
-
-        {comp && comparisonOthers.length > 0 && (
-          <>
-            <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-            <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-              <h2 className="font-display text-xl font-semibold mb-6">How this compares to other archetypes</h2>
-              <CompComparisonChart
-                current={{ archetypeId: archetype.id, label: archetype.name, low: comp.low, high: comp.high, typical: comp.typical }}
-                others={comparisonOthers}
-              />
+              <ExpandableCard title="Full compensation breakdown by level and company tier">
+                {comp?.levels && (
+                  <div className="mb-10">
+                    <CompProgressionChart
+                      levels={comp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
+                    />
+                  </div>
+                )}
+                {archetypeCompData && <CompSection archetypeId={id} data={archetypeCompData} />}
+              </ExpandableCard>
+              <Link
+                href="/archetypes/staff-cross"
+                className="mt-6 inline-block font-mono text-[13px] text-[var(--color-accent)] hover:text-[var(--color-fg)] transition-colors"
+              >
+                Compare across all archetypes &rarr;
+              </Link>
             </section>
           </>
         )}

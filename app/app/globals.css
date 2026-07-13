@@ -71,6 +71,12 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+.swe-ticker-track {
+  animation: swe-marquee 60s linear infinite;
+}
+.swe-ticker-wrap:hover .swe-ticker-track {
+  animation-play-state: paused;
+}
 @keyframes swe-spin {
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }

@@ -6,7 +6,17 @@ export { TierCompChart } from './TierCompChart';
 export { EquityTwoLane } from './EquityTwoLane';
 export { EquityCallout } from './EquityCallout';
 export { CompSection } from './CompSection';
-export { StaffCrossTable, type StaffCrossRow } from './StaffCrossTable';
+export {
+  ArchetypeCompareTable,
+  DEFAULT_MAX_SELECTED,
+  MIN_SELECTED_FOR_COMPARE,
+  type ArchetypeCompareRow,
+} from './ArchetypeCompareTable';
+export {
+  CompareSelectedArchetypes,
+  type CompareSelectedColumn,
+} from './CompareSelectedArchetypes';
+export { ArchetypeCompareStage } from './ArchetypeCompareStage';
 
 export {
   TIER_ORDER,

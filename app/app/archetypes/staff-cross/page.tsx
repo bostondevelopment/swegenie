@@ -2,29 +2,66 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { archetypeById } from "@/lib/taxonomy";
-import { StaffCrossTable, type StaffCrossRow } from "@/components/comp";
+import { archetypeById, dimensionById } from "@/lib/taxonomy";
+import { getResultsCopy } from "@/lib/results-copy";
+import { ArchetypeCompareStage, type ArchetypeCompareRow } from "@/components/comp";
 import type { CompByTierData } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
 
+// First 1-2 sentences of a longer passage, kept under maxChars — used to fit
+// "a day in the role" into a single comparison-table cell without cutting a
+// sentence off mid-thought.
+function leadingSentences(text: string, maxChars = 170): string {
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  let out = "";
+  for (const sentence of sentences) {
+    const next = out ? `${out} ${sentence}` : sentence;
+    if (out && next.length > maxChars) break;
+    out = next;
+    if (out.length >= maxChars) break;
+  }
+  return out || text.slice(0, maxChars);
+}
+
 export const metadata: Metadata = {
-  title: "Staff Engineer Compensation: Role-by-Role",
+  title: "Compare Engineering Archetype Compensation",
   description:
-    "Which engineering archetype pays the most at Staff? Total comp across every role, ranked, with a company-tier toggle.",
+    "Compare total compensation across every engineering archetype, ranked, with adjustable career level and company tier.",
 };
 
-export default function StaffCrossPage() {
+export default function CompareArchetypesPage() {
   const archetypes = compByTierData.archetypes as unknown as CompByTierData;
 
-  // Every archetype with Staff data, labelled by its taxonomy name. Initial
-  // order doesn't matter — StaffCrossTable ranks by P50 at the selected tier.
-  const rows: StaffCrossRow[] = Object.entries(archetypes)
+  // Every archetype with comp-by-tier data, labelled by its taxonomy name.
+  // Initial order doesn't matter — ArchetypeCompareTable ranks by P50 at the
+  // selected tier and level.
+  const rows: ArchetypeCompareRow[] = Object.entries(archetypes)
     .filter(([, data]) => Boolean(data["faang-mag7"]?.Staff))
     .map(([id, data]) => ({
       id,
       name: archetypeById.get(id)?.name ?? id,
       data,
     }));
+
+  // archetypeId -> short "a day in the role" summary and top-weighted
+  // dimension names, for the selected-comparison table below the ranking.
+  const daySummaryByArchetype: Record<string, string | undefined> = {};
+  const keyQualitiesByArchetype: Record<string, string[] | undefined> = {};
+  for (const row of rows) {
+    const archetype = archetypeById.get(row.id);
+    if (archetype) {
+      keyQualitiesByArchetype[row.id] = Object.entries(archetype.scores)
+        .sort((a, b) => b[1].weight - a[1].weight)
+        .slice(0, 3)
+        .map(([dimId]) => dimensionById.get(dimId)?.name)
+        .filter((name): name is string => Boolean(name));
+    }
+    try {
+      daySummaryByArchetype[row.id] = leadingSentences(getResultsCopy(row.id).aDayInThisRole);
+    } catch {
+      daySummaryByArchetype[row.id] = undefined;
+    }
+  }
 
   return (
     <>
@@ -38,13 +75,13 @@ export default function StaffCrossPage() {
             &larr; Home
           </Link>
           <h1 className="font-display text-4xl sm:text-[44px] font-bold tracking-tight mb-5">
-            Staff Engineer Compensation: Role-by-Role
+            Compare Engineering Archetype Compensation
           </h1>
           <p className="text-lg text-[var(--color-muted)] leading-[1.7] max-w-2xl">
-            At the Staff level, the archetype you land in matters as much as the company you land
-            at. This ranks every engineering archetype by total Staff compensation — base, bonus,
-            and annualized equity — so you can see which paths pay the most, and by how much.
-            Toggle the company tier to re-rank against AI labs, big tech, or startups.
+            The archetype you land in matters as much as the company you land at. This ranks every
+            engineering archetype by total compensation — base, bonus, and annualized equity — so
+            you can see which paths pay the most, and by how much. Choose a career level and a
+            company tier to re-rank.
           </p>
         </section>
 
@@ -52,8 +89,14 @@ export default function StaffCrossPage() {
           <div className="h-px bg-[var(--color-border)]" />
         </div>
 
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <StaffCrossTable rows={rows} />
+        <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+          <ArchetypeCompareStage
+            rows={rows}
+            defaultTier="high-growth-public"
+            defaultLevel="Staff"
+            daySummaryByArchetype={daySummaryByArchetype}
+            keyQualitiesByArchetype={keyQualitiesByArchetype}
+          />
           <p className="mt-10 text-[13px] text-[var(--color-muted-2)] leading-[1.6] max-w-2xl">
             Directional context only, not financial advice. Figures aren&apos;t a live feed of US
             individual-contributor total-comp submissions — see the{" "}

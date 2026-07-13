@@ -8,9 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "personas:report": "vitest run --config vitest.report.config.ts --reporter=verbose",
-    "personas:snapshot": "WRITE_SNAPSHOT=1 vitest run --config vitest.report.config.ts --reporter=verbose",
-    "results-copy:generate": "node scripts/generate-results-copy.mjs"
+    "personas:report": "vitest run --config vitest.report.config.ts --reporter=verbose lib/personas.report.ts",
+    "personas:snapshot": "WRITE_SNAPSHOT=1 vitest run --config vitest.report.config.ts --reporter=verbose lib/personas.report.ts",
+    "corpus:report": "vitest run --config vitest.report.config.ts --reporter=verbose lib/corpus-snapshot.report.ts",
+    "corpus:snapshot": "WRITE_SNAPSHOT=1 vitest run --config vitest.report.config.ts --reporter=verbose lib/corpus-snapshot.report.ts",
+    "results-copy:generate": "node scripts/generate-results-copy.mjs",
+    "lint:copy-rules": "node scripts/lint-copy-rules.mjs"
   },
   "dependencies": {
     "next": "16.2.10",

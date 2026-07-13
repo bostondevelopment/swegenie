@@ -106,8 +106,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-[var(--color-border)] bg-[var(--color-bg)]/70 overflow-hidden shrink-0">
-            <div className="flex w-max py-4 font-mono text-sm" style={{ animation: "swe-marquee 60s linear infinite" }}>
+          <div className="swe-ticker-wrap border-t border-[var(--color-border)] bg-[var(--color-bg)]/70 overflow-hidden shrink-0">
+            <div className="swe-ticker-track flex w-max py-4 font-mono text-sm">
               {tickerItems.map((a, i) => (
                 <span key={i} className="flex items-center">
                   <Link
