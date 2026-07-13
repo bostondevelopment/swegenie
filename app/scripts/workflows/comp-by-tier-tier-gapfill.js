@@ -45,17 +45,31 @@ const CELL_SCHEMA = {
   required: ['archetypeId', 'cells']
 }
 
-const GAP_ARCHETYPES = [
-  'customer-support-engineer',
-  'customer-support-solutions-engineer',
-  'embedded-iot-engineer',
-  'consulting-engineer-professional-services',
-  'developer-relations-advocacy',
-  'sales-engineer-pre-sales',
-  'solutions-architect-consulting',
-  'solutions-architect-vendor-side',
-  'engineering-management',
-]
+// Archetype list used to be a hardcoded 9-id array here -- it drifted stale (one of the
+// 9 already had all cells at confidence="medium" from a prior gapfill round, verified when
+// this was made dynamic). Computed fresh each run instead: an agent reads comp-by-tier.json
+// and returns every archetype id with >=1 confidence="low" cell right now. Run
+// synthesize-comp-data.py before this workflow so the set reflects any recent
+// reclassification (see docs/ADD_ARCHETYPE.md Stage 5) rather than a snapshot from whenever
+// this list was last hand-edited.
+const GAP_ARCHETYPES_SCHEMA = {
+  type: 'object',
+  properties: {
+    archetypeIds: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['archetypeIds'],
+}
+
+const gapArchetypesResult = await agent(
+  `Read /Users/michael/Documents/Code/careerguru/app/data/comp-by-tier.json. For every key in ` +
+  `.archetypes, check all of its tier x level cells (5 tiers x 4 levels = 20 cells). Return the ` +
+  `full list of archetype ids that have AT LEAST ONE cell with confidence == "low" right now. ` +
+  `Return via the required schema as archetypeIds -- a plain array of archetype id strings, no ` +
+  `commentary.`,
+  { phase: 'Gapfill', label: 'compute-gap-archetypes', schema: GAP_ARCHETYPES_SCHEMA }
+)
+const GAP_ARCHETYPES = (gapArchetypesResult?.archetypeIds ?? []).sort()
+log(`${GAP_ARCHETYPES.length} archetype(s) currently have a low-confidence cell: ${GAP_ARCHETYPES.join(', ') || '(none)'}`)
 
 function buildPrompt(archetypeId) {
   return `You're closing remaining low-confidence cells in a compensation-by-company-tier dataset for the archetype "${archetypeId}", for a career-guidance app. This archetype has some cells still marked confidence="low" across 5 company tiers (ai-labs, faang-mag7, high-growth-public, growth-stage-private, early-stage) x 4 levels (L3, L4, L5, Staff) = 20 cells total.

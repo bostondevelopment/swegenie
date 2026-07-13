@@ -1,4 +1,10 @@
 {
+  "consulting-engineer-professional-services": {
+    "cellsFilled": 4,
+    "cellsTotal": 20,
+    "totalUsdBasePoints": 32,
+    "unclassifiedCompanyPoints": 7
+  },
   "customer-support-engineer": {
     "cellsFilled": 6,
     "cellsTotal": 20,
@@ -11,23 +17,23 @@
     "totalUsdBasePoints": 39,
     "unclassifiedCompanyPoints": 0
   },
+  "developer-relations-advocacy": {
+    "cellsFilled": 7,
+    "cellsTotal": 20,
+    "totalUsdBasePoints": 22,
+    "unclassifiedCompanyPoints": 4
+  },
   "embedded-iot-engineer": {
     "cellsFilled": 7,
     "cellsTotal": 20,
     "totalUsdBasePoints": 72,
     "unclassifiedCompanyPoints": 3
   },
-  "consulting-engineer-professional-services": {
-    "cellsFilled": 4,
+  "engineering-management": {
+    "cellsFilled": 12,
     "cellsTotal": 20,
-    "totalUsdBasePoints": 32,
-    "unclassifiedCompanyPoints": 7
-  },
-  "developer-relations-advocacy": {
-    "cellsFilled": 7,
-    "cellsTotal": 20,
-    "totalUsdBasePoints": 22,
-    "unclassifiedCompanyPoints": 4
+    "totalUsdBasePoints": 286,
+    "unclassifiedCompanyPoints": 15
   },
   "sales-engineer-pre-sales": {
     "cellsFilled": 7,
@@ -40,17 +46,5 @@
     "cellsTotal": 20,
     "totalUsdBasePoints": 37,
     "unclassifiedCompanyPoints": 28
-  },
-  "solutions-architect-vendor-side": {
-    "cellsFilled": 5,
-    "cellsTotal": 20,
-    "totalUsdBasePoints": 14,
-    "unclassifiedCompanyPoints": 4
-  },
-  "engineering-management": {
-    "cellsFilled": 12,
-    "cellsTotal": 20,
-    "totalUsdBasePoints": 286,
-    "unclassifiedCompanyPoints": 15
   }
 }

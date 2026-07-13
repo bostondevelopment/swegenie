@@ -1,20 +1,42 @@
 """
-Classifies a wave's raw_postings.jsonl into the 18 SWE Genie archetypes using
-taxonomy/title-classification-rubric.json, appending to the cumulative classified_postings.jsonl.
+Classifies job postings into the SWE Genie archetypes using
+taxonomy/title-classification-rubric.json.
 
-Run from the repo root: python3 docs/research/job-postings-corpus/classify.py --wave 2026-07
+Two modes:
 
-Reads docs/research/job-postings-corpus/waves/<wave>/raw_postings.jsonl. Postings whose dedup_key
-(company+title+location, see WAVE_DESIGN.md) is already in seen_postings_index.jsonl are treated
-as reposts of a previously-classified role and skipped -- not re-classified, not double-counted.
-New postings are classified, appended to classified_postings.jsonl tagged with wave_id, and their
-dedup_key added to the index.
+  --wave <id>        Incremental: classify only the new postings in
+                      waves/<id>/raw_postings.jsonl, appending to
+                      classified_postings.jsonl. Postings whose dedup_key
+                      (company+title+location, see WAVE_DESIGN.md) is already
+                      in seen_postings_index.jsonl are treated as reposts of a
+                      previously-classified role and skipped -- not
+                      re-classified, not double-counted. Run from the repo
+                      root: python3 docs/research/job-postings-corpus/classify.py --wave 2026-07
+
+  --reclassify-all    Full rebuild: re-runs classify() against the CURRENT
+                      rubric for every posting in every waves/*/raw_postings.jsonl,
+                      rewriting classified_postings.jsonl and
+                      seen_postings_index.jsonl from scratch. classify() is a
+                      pure function of (title, company, rubric) -- the
+                      dedup-skip logic above lives only in --wave mode, so a
+                      rubric change (new archetype added, or an existing
+                      archetype's patterns edited) never reaches historical
+                      postings unless this mode is used. Prints a
+                      blast-radius report: per-archetype postings gained/lost
+                      vs. the previous classification, so you know exactly
+                      which archetypes need their comp data and results-copy
+                      re-reviewed (see docs/ADD_ARCHETYPE.md Stage 5). Run
+                      this after ANY rubric edit, even ones that look
+                      additive-only -- it's a pure re-derivation from data
+                      already on disk, no new harvesting required, and the
+                      report tells you plainly if nothing moved.
 
 This is the exact script used to produce wave 1's committed classified_postings.jsonl and the
 counts cited in COUNTS.md, taxonomy/archetypes.json's v1.5 notes, and each archetype's research
-brief. Re-running it against wave 2026-07's raw_postings.jsonl should classify zero new postings
-(everything already in the index) -- if it doesn't, either the rubric or this script has drifted
-from what's documented elsewhere.
+brief. Re-running --wave 2026-07 should classify zero new postings (everything already in the
+index) -- if it doesn't, either the rubric or this script has drifted from what's documented
+elsewhere. Re-running --reclassify-all with no rubric change should report zero deltas for the
+same reason.
 """
 import argparse, hashlib, json, re
 from collections import Counter
@@ -114,12 +136,71 @@ def classify(title, company):
         return 'forward-deployed-engineer'
     return 'UNCLASSIFIED'
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--wave', required=True, help='wave id, e.g. 2026-07')
-    args = parser.parse_args()
+def reclassify_all():
+    waves_dir = CORPUS_DIR / "waves"
+    wave_dirs = sorted(p for p in waves_dir.iterdir() if p.is_dir())
 
-    wave_raw_path = CORPUS_DIR / "waves" / args.wave / "raw_postings.jsonl"
+    old_by_key = {}
+    if CLASSIFIED_PATH.exists():
+        for l in open(CLASSIFIED_PATH):
+            rec = json.loads(l)
+            old_by_key[dedup_key(rec)] = rec.get('archetype')
+
+    new_results, new_index_rows = [], []
+    old_counts, new_counts = Counter(), Counter()
+    seen_keys = set()
+    total_raw = 0
+    for wd in wave_dirs:
+        raw_path = wd / "raw_postings.jsonl"
+        if not raw_path.exists():
+            continue
+        wave_id = wd.name
+        for l in open(raw_path):
+            r = json.loads(l)
+            total_raw += 1
+            key = dedup_key(r)
+            if key in seen_keys:
+                # same posting harvested again in a later wave -- keep the
+                # earliest wave's attribution, don't classify or count twice
+                continue
+            seen_keys.add(key)
+            label = classify(r.get('title', ''), r.get('company'))
+            new_results.append({**r, 'archetype': label, 'wave_id': wave_id})
+            new_index_rows.append({'dedup_key': key, 'wave_id': wave_id})
+            new_counts[label] += 1
+            if key in old_by_key:
+                old_counts[old_by_key[key]] += 1
+
+    with open(CLASSIFIED_PATH, 'w') as f:
+        for r in new_results:
+            f.write(json.dumps(r) + "\n")
+    with open(INDEX_PATH, 'w') as f:
+        for r in new_index_rows:
+            f.write(json.dumps(r) + "\n")
+
+    print(f"\nFull reclassify: {total_raw} raw postings across {len(wave_dirs)} wave(s), "
+          f"{len(new_results)} unique postings classified against the current rubric.")
+
+    all_labels = sorted(set(old_counts) | set(new_counts))
+    print(f"\nBlast-radius report (archetype: before -> after):")
+    any_delta = False
+    for label in all_labels:
+        before, after = old_counts.get(label, 0), new_counts.get(label, 0)
+        delta = after - before
+        if delta != 0:
+            any_delta = True
+        flag = "" if delta == 0 else f"  <-- {'GAINED' if delta > 0 else 'LOST'} {abs(delta)}"
+        print(f"  {label:45s} {before:6d} -> {after:6d}{flag}")
+
+    if not any_delta:
+        print("\nNo archetype's classification changed -- reclassify is idempotent against the current rubric.")
+    else:
+        print("\nRun build-by-archetype.py, then synthesize-comp-data.py, then review results-copy and job "
+              "examples for every archetype flagged above (see docs/ADD_ARCHETYPE.md Stage 5).")
+
+
+def classify_wave(wave_id):
+    wave_raw_path = CORPUS_DIR / "waves" / wave_id / "raw_postings.jsonl"
     rows = [json.loads(l) for l in open(wave_raw_path)]
 
     seen = set()
@@ -136,8 +217,8 @@ if __name__ == '__main__':
             continue
         seen.add(key)
         label = classify(r.get('title', ''), r.get('company'))
-        new_results.append({**r, 'archetype': label, 'wave_id': args.wave})
-        new_index_rows.append({'dedup_key': key, 'wave_id': args.wave})
+        new_results.append({**r, 'archetype': label, 'wave_id': wave_id})
+        new_index_rows.append({'dedup_key': key, 'wave_id': wave_id})
         counts[label] += 1
 
     with open(CLASSIFIED_PATH, 'a') as f:
@@ -147,8 +228,22 @@ if __name__ == '__main__':
         for r in new_index_rows:
             f.write(json.dumps(r) + "\n")
 
-    print(f"\nWave {args.wave}: {len(rows)} raw postings, {skipped} already seen (skipped), "
+    print(f"\nWave {wave_id}: {len(rows)} raw postings, {skipped} already seen (skipped), "
           f"{len(new_results)} newly classified and appended.")
     print(f"\nNew-this-wave per-archetype counts (sorted by count):")
     for label, n in counts.most_common():
         print(f"  {label:45s} {n:6d}")
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('--wave', help='wave id, e.g. 2026-07 -- classify only that wave\'s new postings')
+    group.add_argument('--reclassify-all', action='store_true',
+                        help='re-run classify() for every posting in every wave against the current rubric')
+    args = parser.parse_args()
+
+    if args.reclassify_all:
+        reclassify_all()
+    else:
+        classify_wave(args.wave)

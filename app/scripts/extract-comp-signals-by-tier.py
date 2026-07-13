@@ -3,8 +3,15 @@
 Same extraction logic as extract-comp-signals.py, but buckets results by
 (company tier x level) instead of just level, using data/company-tiers.json.
 
-Only processes the 9 archetypes that still have low-confidence cells in
-data/comp-by-tier.json. Output: docs/research/job-postings-corpus/
+Only processes archetypes that currently have at least one low-confidence
+cell in app/data/comp-by-tier.json -- computed dynamically each run (see
+gap_archetypes() below), not a hardcoded list. This used to be a fixed
+9-archetype list that needed hand-maintenance every time an archetype was
+added or a reclassification changed which archetypes were thin -- same
+staleness-risk class as any other hardcoded archetype-count/list in this
+repo. Run synthesize-comp-data.py first (it's what actually sets cells to
+confidence="low" for changed/new archetypes) so this script picks up the
+right set. Output: docs/research/job-postings-corpus/
 comp-extraction-by-tier/{archetypeId}.json
 
 Window output (see WAVE_DESIGN.md) — same --window-months behavior as extract-comp-signals.py.
@@ -23,18 +30,23 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 CORPUS_DIR = REPO_ROOT / "docs/research/job-postings-corpus/by-archetype"
 TIERS_FILE = REPO_ROOT / "app/data/company-tiers.json"
 OUT_DIR = REPO_ROOT / "docs/research/job-postings-corpus/comp-extraction-by-tier"
+COMP_BY_TIER_PATH = REPO_ROOT / "app/data/comp-by-tier.json"
 
-GAP_ARCHETYPES = [
-    "customer-support-engineer",
-    "customer-support-solutions-engineer",
-    "embedded-iot-engineer",
-    "consulting-engineer-professional-services",
-    "developer-relations-advocacy",
-    "sales-engineer-pre-sales",
-    "solutions-architect-consulting",
-    "solutions-architect-vendor-side",
-    "engineering-management",
-]
+
+def gap_archetypes():
+    """Archetype ids with >=1 confidence=="low" cell in comp-by-tier.json right now."""
+    comp_by_tier = json.loads(COMP_BY_TIER_PATH.read_text())
+    gaps = []
+    for archetype_id, tiers in comp_by_tier["archetypes"].items():
+        has_low = any(
+            cell is not None and cell.get("confidence") == "low"
+            for levels in tiers.values()
+            for cell in levels.values()
+        )
+        if has_low:
+            gaps.append(archetype_id)
+    return sorted(gaps)
+
 
 TIERS = ["ai-labs", "faang-mag7", "high-growth-public", "growth-stage-private", "early-stage"]
 LEVELS = ["Entry/Associate", "Mid (unspecified level)", "Senior/Staff", "Principal/Director+ (Manager/VP)"]
@@ -64,7 +76,7 @@ NOISE_MARKERS = re.compile(
 
 LEVEL_RULES = [
     ("Principal/Director+ (Manager/VP)", re.compile(
-        r"\b(vp|vice president|director|head of|principal(?! engineer)|chief)\b", re.IGNORECASE)),
+        r"\b(vp|vice president|director|head of|principal|distinguished|chief)\b", re.IGNORECASE)),
     ("Senior/Staff", re.compile(
         r"\b(senior|sr\.?|staff|lead|iii|iv|level\s*[3-5]|l[3-5]\b)\b", re.IGNORECASE)),
     ("Entry/Associate", re.compile(
@@ -167,8 +179,13 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     overview = {}
 
-    for archetype_id in GAP_ARCHETYPES:
+    gaps = gap_archetypes()
+    print(f"Archetypes with >=1 low-confidence cell right now: {len(gaps)}")
+    for archetype_id in gaps:
         fp = CORPUS_DIR / f"{archetype_id}.jsonl"
+        if not fp.exists():
+            print(f"  skip {archetype_id}: no by-archetype postings yet (run build-by-archetype.py first)")
+            continue
         all_points = []
         for line in fp.open(encoding="utf-8"):
             line = line.strip()

@@ -3565,7 +3565,7 @@
       },
       "faang-mag7": {
         "L3": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 116000,
             "p25": 126000,
@@ -3649,7 +3649,7 @@
           }
         },
         "Staff": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 209000,
             "p25": 226000,
@@ -3707,7 +3707,7 @@
           }
         },
         "L4": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 135000,
             "p25": 146000,
@@ -4595,7 +4595,7 @@
     "sales-engineer-pre-sales": {
       "ai-labs": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 130000,
             "p25": 141000,
@@ -4623,7 +4623,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 148000,
             "p25": 160000,
@@ -4679,7 +4679,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 212000,
             "p25": 229000,
@@ -5767,7 +5767,7 @@
           }
         },
         "L4": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 163000,
             "p25": 176000,
@@ -5795,7 +5795,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 194000,
             "p25": 209000,
@@ -5823,7 +5823,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 232000,
             "p25": 251000,
@@ -7195,7 +7195,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 146000,
             "p25": 158000,
@@ -7483,7 +7483,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 135000,
             "p25": 146000,
@@ -7511,7 +7511,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 161000,
             "p25": 174000,
@@ -7539,7 +7539,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 194000,
             "p25": 209000,
@@ -7653,7 +7653,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 174000,
             "p25": 188000,
@@ -7683,7 +7683,7 @@
       },
       "high-growth-public": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 94000,
             "p25": 101000,
@@ -7767,7 +7767,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 161000,
             "p25": 174000,
@@ -7797,7 +7797,7 @@
       },
       "growth-stage-private": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 90000,
             "p25": 98000,
@@ -7853,7 +7853,7 @@
           }
         },
         "L5": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 135000,
             "p25": 146000,
@@ -7939,7 +7939,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 103000,
             "p25": 112000,
@@ -8627,7 +8627,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 166000,
             "p25": 180000,
@@ -9139,7 +9139,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 178000,
             "p25": 193000,
@@ -9285,7 +9285,7 @@
       },
       "faang-mag7": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 147000,
             "p25": 159000,
@@ -9427,7 +9427,7 @@
           }
         },
         "L4": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 172000,
             "p25": 186000,
@@ -9455,7 +9455,7 @@
           }
         },
         "L5": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 206000,
             "p25": 223000,
@@ -9483,7 +9483,7 @@
           }
         },
         "Staff": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 275000,
             "p25": 298000,
@@ -9569,7 +9569,7 @@
           }
         },
         "L5": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 206000,
             "p25": 223000,
@@ -9627,7 +9627,7 @@
       },
       "early-stage": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 127000,
             "p25": 138000,
