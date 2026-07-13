@@ -17,7 +17,7 @@ import { CompSection } from "@/components/comp";
 import type { CompByTierData } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
 import { CompHeadline } from "@/components/CompHeadline";
-import { Callout } from "@/components/Callout";
+import { ExpandableCard } from "@/components/ExpandableCard";
 import { Badge } from "@/components/Badge";
 import { ActionCard } from "@/components/ActionCard";
 
@@ -99,7 +99,11 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           </h1>
           {archetype.confidence === "medium" && (
             <p className="text-xs font-mono text-[var(--color-signal-warn)] mb-5">
-              Lower-confidence sourcing (below target job-posting count) — see methodology.
+              Lower-confidence sourcing (below target job-posting count) — see{" "}
+              <Link href="/methodology" className="underline hover:text-[var(--color-fg)]">
+                methodology
+              </Link>
+              .
             </p>
           )}
           <p className="text-lg text-[var(--color-muted)] leading-[1.7] max-w-2xl whitespace-pre-line">
@@ -148,7 +152,7 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
           {comp && (
             <div className="mb-6 pt-4">
-              <CompHeadline typical={comp.typical} sourceCompanyCount={comp.sourceCompanyCount} />
+              <CompHeadline typical={comp.typical} />
               <CompBandBar low={comp.low} high={comp.high} typical={comp.typical} />
               {comp.mix && comp.mix.basePct + comp.mix.bonusPct + comp.mix.equityPct > 0 && (
                 <div className="mt-6">
@@ -173,9 +177,7 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
           </p>
           {comp?.caveat && (
             <div className="mt-6">
-              <Callout tone="caveat" title="Caveat">
-                {comp.caveat}
-              </Callout>
+              <ExpandableCard title="Data notes">{comp.caveat}</ExpandableCard>
             </div>
           )}
         </section>

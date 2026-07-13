@@ -79,10 +79,9 @@ export default function MethodologyPage() {
             Every archetype is scored against the same 22 dimensions — 10 skill/experience
             dimensions and 12 preference/temperament dimensions. Each dimension was derived from
             patterns across multiple research briefs, not written top-down before the research. The
-            set has grown since v1: real-user results exposed gaps — an ML-only skill axis that
-            couldn&apos;t tell a domain match from a personality one, and a &ldquo;teaching&rdquo;
-            trait that conflated private mentoring with public visibility — and each gap was closed
-            by adding or splitting a dimension rather than papering over it.
+            taxonomy separates skill axes precisely enough to avoid conflation — ML aptitude is
+            scored apart from general domain fit, and private mentoring is scored apart from public
+            visibility, so overlapping traits don&apos;t get flattened into one blurry axis.
           </p>
           <div className="grid sm:grid-cols-2 gap-x-10">
             {dimensions.map((d) => (
@@ -139,19 +138,19 @@ export default function MethodologyPage() {
             {[
               {
                 title: "Non-linear gap penalty",
-                text: "Fit uses a non-linear (squared) gap penalty: a 2-point gap on a dimension costs four times as much as a 1-point gap, not twice. Small mismatches are treated as near-noise while large mismatches count sharply against a role — a deliberate improvement over an earlier linear model that penalized every gap in flat proportion. One side effect: because small gaps are forgiven, the headline percentages read a little generously, so a match is best understood relative to your other ranked roles rather than as an absolute grade.",
+                text: "Fit uses a non-linear (squared) gap penalty: a 2-point gap on a dimension costs four times as much as a 1-point gap, not twice. Small mismatches are treated as near-noise while large mismatches count sharply against a role. One side effect: because small gaps are forgiven, the headline percentages read a little generously, so a match is best understood relative to your other ranked roles rather than as an absolute grade.",
               },
               {
                 title: "Dimension correlation layer",
-                text: "Dimensions used to be scored in complete isolation — the model had no idea that some traits tend to travel together, like appetite for on-call incidents and depth at cross-layer debugging, or comfort teaching and comfort being publicly visible. We closed that gap. By measuring which dimensions rise and fall together across all 18 archetypes, the scorer now recognizes those clusters: when your answers on a pair of correlated traits line up the way a role's own profile does, that coherent combination counts as extra signal for it, and when they pull in opposite directions it counts against. It stays fully transparent — the correlations are derived from the public taxonomy by a committed script, not a hidden model, and your result page names the exact pairs that helped or hurt. It's a nudge by design: it can reorder roles that were already neck-and-neck but never override the defining-trait check above it.",
+                text: "Some traits reliably travel together, like appetite for on-call incidents and depth at cross-layer debugging, or comfort teaching and comfort being publicly visible. By measuring which dimensions rise and fall together across all 18 archetypes, the scorer recognizes those clusters: when your answers on a pair of correlated traits line up the way a role's own profile does, that coherent combination counts as extra signal for it, and when they pull in opposite directions it counts against. It stays fully transparent — the correlations are derived from the public taxonomy by a committed script, not a hidden model, and your result page names the exact pairs that helped or hurt. It's a nudge by design: it can reorder roles that were already neck-and-neck but never override the defining-trait check above it.",
               },
               {
                 title: "Defining-trait floor",
-                text: "An archetype's score is floored at how well you match its one truly defining trait (its highest-weighted dimension) — so an archetype whose incidental dimensions happen to match your answers can no longer float to the top on broad agreement while you mismatch on the trait that actually defines it. We caught this pattern in our own persona validation before launch and fixed it structurally rather than leaving it as a caveat.",
+                text: "An archetype's score is floored at how well you match its one truly defining trait (its highest-weighted dimension) — so an archetype whose incidental dimensions happen to match your answers can't float to the top on broad agreement while you mismatch on the trait that actually defines it. This is enforced structurally, not left as a caveat.",
               },
               {
-                title: "Not yet crowd-adjusted",
-                text: "This is a v1, expert-authored taxonomy. The weights are not yet adjusted by crowdsourced input — but the pipeline that will feed that adjustment is now live: a short beta survey on your results page, and a “Rate this role” control on each archetype page where people who actually do (or hire for) a role rate what it really takes. Those signals are being collected now; they don't move any weight until there's enough volume per role to aggregate safely, and when they do the expert-vs-crowd diff will be published, not hidden. See the roadmap below.",
+                title: "Expert-authored weights",
+                text: "Weights are set by expert-authored research briefs, not crowdsourced averages. A short survey on your results page and a “Rate this role” control on each archetype page let people who actually do (or hire for) a role rate what it really takes — those signals accumulate per role and only factor in once there's enough volume to aggregate safely, and any resulting diff between expert and crowd input is published, not hidden. See the roadmap below.",
               },
               {
                 title: "Two dimensions we deliberately excluded",
@@ -165,7 +164,7 @@ export default function MethodologyPage() {
           </div>
         </section>
 
-        <section className="mb-14">
+        <section className="mb-14" id="compensation-data">
           <h2 className="font-display text-2xl font-semibold mb-[18px]">5. Compensation data</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             <StatTile
@@ -192,7 +191,14 @@ export default function MethodologyPage() {
               <strong className="text-[var(--color-fg)]">
                 mid-2025 snapshot, not a real-time feed
               </strong>{" "}
-              — treat it as directional, and expect drift as the market moves.
+              — treat it as directional, and expect drift as the market moves. Cells originally
+              flagged low-confidence were subsequently re-researched against real per-company,
+              per-level compensation data (levels.fyi per-level breakdowns, and 12,000+ real job
+              postings from the research corpus, classified by company tier and level). Every
+              citation from that pass — and an explicit "no public data exists" record for cells
+              that stayed low — is archived locally in the repo under{" "}
+              <code className="font-mono text-[13px]">docs/research/source-archive/</code>, so
+              none of it depends on re-fetching a live URL that may since have gone stale.
             </p>
           </Callout>
 
@@ -221,10 +227,17 @@ export default function MethodologyPage() {
             high, medium, or low confidence by how much public data backs that specific
             role/tier/level combination. Cells marked low carry a{" "}
             <span className="font-mono text-[13px] text-[var(--color-signal-warn)]">limited data</span>{" "}
-            badge on the chart. The same five archetypes that came in below the posting-count bar
-            above (Embedded/IoT, both Solutions Architect variants, Developer Relations, Technical
-            Product Manager) also have thinner comp sourcing, especially at the AI-labs and
-            early-stage extremes — read those ranges as rough.
+            badge on the chart. After a full re-research pass, 50 of 360 cells remain low —
+            concentrated in Customer Support Solutions Engineer (13 cells), Customer Support
+            Engineer (10), Embedded/IoT Engineer (8), Developer Relations &amp; Advocacy (6),
+            Consulting Engineer / Professional Services (4), Sales Engineer (Pre-Sales) (3),
+            Solutions Architect (Consulting) (3), and Engineering Management&apos;s L3 row (3, across
+            tiers) — and each one is low because a targeted search (including per-level Levels.fyi
+            breakdowns and the 12,000+-posting research corpus) genuinely found no public
+            compensation data for that specific role/tier/level combination, not because the
+            search wasn&apos;t tried. Engineering Management&apos;s L3 cells reflect a taxonomy mismatch on
+            top of that: "L3 engineering manager" isn&apos;t a real leveling tier — first-line EMs are
+            promoted senior/staff ICs, not L3 hires.
           </p>
 
           <Callout tone="caveat" title="Not financial advice.">

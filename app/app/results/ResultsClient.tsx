@@ -20,7 +20,7 @@ import { TierCompChart } from "@/components/comp";
 import type { CompByTierData, Level } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
 import { CompHeadline } from "@/components/CompHeadline";
-import { Callout } from "@/components/Callout";
+import { ExpandableCard } from "@/components/ExpandableCard";
 import { ActionCard } from "@/components/ActionCard";
 import { Badge } from "@/components/Badge";
 
@@ -81,10 +81,9 @@ export default function ResultsClient() {
       <>
         <SiteHeader />
         <main className="flex-1 mx-auto max-w-2xl px-4 sm:px-6 py-16 text-center">
-          <h1 className="font-display text-2xl font-semibold mb-4">This result is from an older version</h1>
+          <h1 className="font-display text-2xl font-semibold mb-4">This result link has expired</h1>
           <p className="text-[var(--color-muted)] mb-8">
-            The assessment&apos;s scoring model has been updated since this link was created, so it
-            can&apos;t be read anymore. Retake the assessment to get a result under the current model.
+            This link can no longer be read. Retake the assessment to get a fresh result.
           </p>
           <Link href="/assessment" className="btn-primary px-5 py-3 font-medium">
             Retake the assessment
@@ -220,10 +219,18 @@ export default function ResultsClient() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
 
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <h2 className="font-display text-xl font-semibold mb-4">Comp structure</h2>
+          <div className="flex items-baseline justify-between gap-4 mb-4">
+            <h2 className="font-display text-xl font-semibold">Comp structure</h2>
+            <Link
+              href="/methodology#compensation-data"
+              className="font-mono text-xs text-[var(--color-muted-2)] underline hover:text-[var(--color-fg)] shrink-0"
+            >
+              Sourcing &amp; methodology
+            </Link>
+          </div>
           {topComp && (
             <div className="mb-6 pt-4">
-              <CompHeadline typical={topComp.typical} sourceCompanyCount={topComp.sourceCompanyCount} />
+              <CompHeadline typical={topComp.typical} />
               <CompBandBar low={topComp.low} high={topComp.high} typical={topComp.typical} />
               {topComp.mix && (
                 <div className="mt-6">
@@ -248,7 +255,7 @@ export default function ResultsClient() {
           </p>
           {topComp?.caveat && (
             <div className="mt-6 max-w-2xl">
-              <Callout tone="caveat">{topComp.caveat}</Callout>
+              <ExpandableCard title="Data notes">{topComp.caveat}</ExpandableCard>
             </div>
           )}
         </section>

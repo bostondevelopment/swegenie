@@ -1,5 +1,12 @@
 {
   "archetypeId": "product-full-stack-software-engineer",
+  "_meta": {
+    "mode": "window",
+    "window_months": 12,
+    "waves_included": [
+      "2026-07"
+    ]
+  },
   "summary": {
     "totalPointsExtracted": 2741,
     "usdBase": {

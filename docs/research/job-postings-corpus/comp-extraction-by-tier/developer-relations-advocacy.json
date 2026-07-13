@@ -1,5 +1,12 @@
 {
   "archetypeId": "developer-relations-advocacy",
+  "_meta": {
+    "mode": "window",
+    "window_months": 12,
+    "waves_included": [
+      "2026-07"
+    ]
+  },
   "grid": {
     "ai-labs": {
       "Entry/Associate": null,

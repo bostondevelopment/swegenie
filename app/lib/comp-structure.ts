@@ -24,7 +24,7 @@ export interface CompStructure {
   confidence: "high" | "medium";
   mix: CompMix | null;
   levels: CompLevelBand[] | null;
-  caveat: string;
+  caveat?: string;
 }
 
 const data = compStructureData as CompStructure[];

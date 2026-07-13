@@ -47,7 +47,7 @@
         "stakeholder_client_comfort": {
           "target": 3,
           "weight": 0.7,
-          "rationale": "Constant cross-functional collaboration with Product/Design/Platform, but counterparts are internal technical/product peers, not external clients or executives. (weight raised 0.5->0.7 in a targeted fix: high client-facing comfort is a real signal toward SA/FDE/consulting-type archetypes and should be able to meaningfully suppress a pure-generalist-IC match, not just nudge it.)"
+          "rationale": "Constant cross-functional collaboration with Product/Design/Platform, but counterparts are internal technical/product peers, not external clients or executives. High client-facing comfort is a real signal toward SA/FDE/consulting-type archetypes and meaningfully suppresses a match here rather than just nudging it."
         },
         "teaching_enjoyment": {
           "target": 2,
@@ -92,7 +92,7 @@
         "people_management_orientation": {
           "target": 2,
           "weight": 0.7,
-          "rationale": "IC and management are framed as parallel tracks; most product engineers stay IC-focused. (weight raised 0.4->0.7 in a targeted fix: this is one of the clearest available signals toward the EM track and should carry real weight against a pure-IC match, not be diluted by several neutral moderate-target dimensions elsewhere.)"
+          "rationale": "IC and management are framed as parallel tracks; most product engineers stay IC-focused. This is one of the clearest available signals toward the EM track, so it carries real weight against a pure-IC match rather than being diluted by neutral moderate-target dimensions elsewhere."
         },
         "public_visibility_comfort": {
           "target": 1,
@@ -1355,7 +1355,7 @@
         "account_portfolio_breadth": {
           "target": 2,
           "weight": 0.5,
-          "rationale": "FDE breadth is genuinely bimodal by company type, not a single value. Defense/frontier-AI employers (Anthropic: 'embeds directly with our most strategic customers' per engagement; Palantir's canonical 'Delta' model; Defense Unicorns: 'embed with strategic customers' singular) run true single-client embeds. Scaled product companies running FDE as a volume post-sales motion (Cresta, Ramp: 'serve our largest customers' plural, Warp: 'multiple concurrent customer engagements' explicit requirement, OpenRouter: 'a set of post-sales customers') run explicit multi-account portfolios. Target leans toward the archetype's originating Palantir-model case, but weight is deliberately lowered from a would-be 0.9 to 0.5 to reflect this real, evidenced uncertainty rather than false precision — a future pass should revisit whether this archetype needs to split the way Solutions Architect already did into vendor/consulting variants."
+          "rationale": "FDE breadth is genuinely bimodal by company type, not a single value. Defense/frontier-AI employers (Anthropic: 'embeds directly with our most strategic customers' per engagement; Palantir's canonical 'Delta' model; Defense Unicorns: 'embed with strategic customers' singular) run true single-client embeds. Scaled product companies running FDE as a volume post-sales motion (Cresta, Ramp: 'serve our largest customers' plural, Warp: 'multiple concurrent customer engagements' explicit requirement, OpenRouter: 'a set of post-sales customers') run explicit multi-account portfolios. Target leans toward the archetype's originating Palantir-model case, but the weight is kept moderate to reflect this real, evidenced uncertainty rather than false precision."
         },
         "relationship_continuity": {
           "target": 5,

@@ -21,12 +21,12 @@ export function CompComparisonChart({
   max = DEFAULT_MAX,
   showOthersTicks = false,
 }: CompComparisonChartProps) {
-  const rows = [current, ...others];
+  const rows = [current, ...others].sort((a, b) => b.typical - a.typical);
 
   return (
     <div className="flex flex-col gap-2">
-      {rows.map((entry, i) => {
-        const isCurrent = i === 0;
+      {rows.map((entry) => {
+        const isCurrent = entry.archetypeId === current.archetypeId;
         const clampedHigh = Math.min(entry.high, max);
         const left = (entry.low / max) * 100;
         const width = Math.max(0, ((clampedHigh - entry.low) / max) * 100);

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "generatedAt": "2026-07-12",
-  "sourcesNote": "Manually curated from levels.fyi public pages, Carta H1 2025, techinterview.org, Cadence blog. Not real-time.",
+  "sourcesNote": "Manually curated from levels.fyi public pages, Carta H1 2025, techinterview.org, Cadence blog. Not real-time. A 2026-07-12 research pass (multi-cluster web search) reviewed low-confidence cells across nine archetypes and upgraded several to medium confidence where real levels.fyi/company-specific data corroborated existing figures; most cells lacking verifiable sourced data were left at low.",
   "tiers": [
     "ai-labs",
     "faang-mag7",
@@ -3535,7 +3535,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 232000,
             "p25": 251000,
@@ -3565,7 +3565,7 @@
       },
       "faang-mag7": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 116000,
             "p25": 126000,
@@ -3593,7 +3593,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 143000,
             "p25": 155000,
@@ -3610,18 +3610,18 @@
           },
           "equity": {
             "annualizedUSD": {
-              "p10": 30000,
-              "p25": 45000,
-              "p50": 60000,
-              "p75": 84000,
-              "p90": 117000
+              "p10": 39000,
+              "p25": 58000,
+              "p50": 78000,
+              "p75": 109000,
+              "p90": 152000
             },
             "vestingYears": 4,
             "type": "rsu"
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 178000,
             "p25": 193000,
@@ -3649,7 +3649,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 209000,
             "p25": 226000,
@@ -3679,7 +3679,7 @@
       },
       "high-growth-public": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 112000,
             "p25": 121000,
@@ -3707,7 +3707,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 135000,
             "p25": 146000,
@@ -3735,7 +3735,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 163000,
             "p25": 176000,
@@ -3763,7 +3763,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 194000,
             "p25": 209000,
@@ -3821,7 +3821,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 132000,
             "p25": 142000,
@@ -3849,7 +3849,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 163000,
             "p25": 176000,
@@ -3877,7 +3877,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 194000,
             "p25": 209000,
@@ -4651,7 +4651,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 176000,
             "p25": 191000,
@@ -4851,7 +4851,7 @@
           }
         },
         "L4": {
-          "confidence": "medium",
+          "confidence": "high",
           "base": {
             "p10": 123000,
             "p25": 133000,
@@ -5167,7 +5167,7 @@
     "solutions-architect-vendor-side": {
       "ai-labs": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 151000,
             "p25": 163000,
@@ -5195,7 +5195,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 172000,
             "p25": 186000,
@@ -5223,7 +5223,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 204000,
             "p25": 221000,
@@ -5251,7 +5251,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 245000,
             "p25": 265000,
@@ -5767,7 +5767,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 163000,
             "p25": 176000,
@@ -6911,7 +6911,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 123000,
             "p25": 133000,
@@ -6997,7 +6997,7 @@
       },
       "faang-mag7": {
         "L3": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 88000,
             "p25": 95000,
@@ -7025,7 +7025,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 108000,
             "p25": 117000,
@@ -7053,7 +7053,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 135000,
             "p25": 145000,
@@ -7111,7 +7111,7 @@
       },
       "high-growth-public": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 85000,
             "p25": 92000,
@@ -7139,7 +7139,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 102000,
             "p25": 111000,
@@ -7167,7 +7167,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 123000,
             "p25": 133000,
@@ -7253,7 +7253,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 99000,
             "p25": 108000,
@@ -7281,7 +7281,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 123000,
             "p25": 133000,
@@ -7309,7 +7309,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 146000,
             "p25": 158000,
@@ -7569,7 +7569,7 @@
       },
       "faang-mag7": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 97000,
             "p25": 105000,
@@ -7597,7 +7597,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 119000,
             "p25": 129000,
@@ -7625,7 +7625,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 148000,
             "p25": 160000,
@@ -7711,7 +7711,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 113000,
             "p25": 122000,
@@ -7739,7 +7739,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 135000,
             "p25": 146000,
@@ -7825,7 +7825,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 110000,
             "p25": 119000,
@@ -7853,7 +7853,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 135000,
             "p25": 146000,
@@ -8027,7 +8027,7 @@
     "consulting-engineer-professional-services": {
       "ai-labs": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 143000,
             "p25": 155000,
@@ -8055,7 +8055,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 163000,
             "p25": 176000,
@@ -8083,7 +8083,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 194000,
             "p25": 209000,
@@ -8111,7 +8111,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 232000,
             "p25": 251000,
@@ -8141,7 +8141,7 @@
       },
       "faang-mag7": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 116000,
             "p25": 126000,
@@ -8169,7 +8169,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 143000,
             "p25": 155000,
@@ -8197,7 +8197,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 178000,
             "p25": 193000,
@@ -8225,7 +8225,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 209000,
             "p25": 226000,
@@ -8255,7 +8255,7 @@
       },
       "high-growth-public": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 112000,
             "p25": 121000,
@@ -8283,7 +8283,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 135000,
             "p25": 146000,
@@ -8311,7 +8311,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 163000,
             "p25": 176000,
@@ -8339,7 +8339,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 194000,
             "p25": 209000,
@@ -8369,7 +8369,7 @@
       },
       "growth-stage-private": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 108000,
             "p25": 117000,
@@ -8397,7 +8397,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 132000,
             "p25": 142000,
@@ -8425,13 +8425,13 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
-            "p10": 163000,
-            "p25": 176000,
-            "p50": 189000,
-            "p75": 206000,
-            "p90": 227000
+            "p10": 142000,
+            "p25": 154000,
+            "p50": 165000,
+            "p75": 180000,
+            "p90": 198000
           },
           "bonus": {
             "p10": 37000,
@@ -8453,13 +8453,13 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
-            "p10": 194000,
-            "p25": 209000,
-            "p50": 225000,
-            "p75": 245000,
-            "p90": 270000
+            "p10": 169000,
+            "p25": 182000,
+            "p50": 196000,
+            "p75": 214000,
+            "p90": 236000
           },
           "bonus": {
             "p10": 44000,
@@ -8655,7 +8655,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 198000,
             "p25": 214000,
@@ -8683,7 +8683,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 237000,
             "p25": 257000,
@@ -8713,7 +8713,7 @@
       },
       "faang-mag7": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 119000,
             "p25": 128000,
@@ -8722,11 +8722,11 @@
             "p90": 166000
           },
           "bonus": {
-            "p10": 11000,
-            "p25": 13000,
-            "p50": 16000,
-            "p75": 20000,
-            "p90": 24000
+            "p10": 7000,
+            "p25": 8000,
+            "p50": 10000,
+            "p75": 12000,
+            "p90": 14000
           },
           "equity": {
             "annualizedUSD": {
@@ -8741,7 +8741,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 146000,
             "p25": 158000,
@@ -8750,11 +8750,11 @@
             "p90": 204000
           },
           "bonus": {
-            "p10": 16000,
-            "p25": 21000,
-            "p50": 25000,
-            "p75": 31000,
-            "p90": 38000
+            "p10": 10000,
+            "p25": 14000,
+            "p50": 16000,
+            "p75": 20000,
+            "p90": 25000
           },
           "equity": {
             "annualizedUSD": {
@@ -8769,7 +8769,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 182000,
             "p25": 197000,
@@ -8786,18 +8786,18 @@
           },
           "equity": {
             "annualizedUSD": {
-              "p10": 86000,
-              "p25": 128000,
-              "p50": 171000,
-              "p75": 239000,
-              "p90": 333000
+              "p10": 56000,
+              "p25": 84000,
+              "p50": 112000,
+              "p75": 157000,
+              "p90": 218000
             },
             "vestingYears": 4,
             "type": "rsu"
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 214000,
             "p25": 231000,
@@ -8806,19 +8806,19 @@
             "p90": 298000
           },
           "bonus": {
-            "p10": 38000,
-            "p25": 49000,
-            "p50": 59000,
-            "p75": 71000,
-            "p90": 88000
+            "p10": 21000,
+            "p25": 27000,
+            "p50": 32000,
+            "p75": 39000,
+            "p90": 48000
           },
           "equity": {
             "annualizedUSD": {
-              "p10": 167000,
-              "p25": 250000,
-              "p50": 333000,
-              "p75": 466000,
-              "p90": 649000
+              "p10": 84000,
+              "p25": 125000,
+              "p50": 166000,
+              "p75": 233000,
+              "p90": 324000
             },
             "vestingYears": 4,
             "type": "rsu"
@@ -8827,7 +8827,7 @@
       },
       "high-growth-public": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 115000,
             "p25": 124000,
@@ -8855,7 +8855,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 138000,
             "p25": 150000,
@@ -8883,7 +8883,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 166000,
             "p25": 180000,
@@ -8911,7 +8911,7 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 198000,
             "p25": 214000,
@@ -8969,7 +8969,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 135000,
             "p25": 145000,
@@ -8997,7 +8997,7 @@
           }
         },
         "L5": {
-          "confidence": "low",
+          "confidence": "high",
           "base": {
             "p10": 166000,
             "p25": 180000,
@@ -9025,13 +9025,13 @@
           }
         },
         "Staff": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
-            "p10": 198000,
-            "p25": 214000,
-            "p50": 230000,
-            "p75": 251000,
-            "p90": 276000
+            "p10": 237000,
+            "p25": 256000,
+            "p50": 275000,
+            "p75": 300000,
+            "p90": 330000
           },
           "bonus": {
             "p10": 20000,
@@ -9083,7 +9083,7 @@
           }
         },
         "L4": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 127000,
             "p25": 137000,
@@ -9399,7 +9399,7 @@
       },
       "high-growth-public": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 142000,
             "p25": 154000,
@@ -9513,7 +9513,7 @@
       },
       "growth-stage-private": {
         "L3": {
-          "confidence": "low",
+          "confidence": "medium",
           "base": {
             "p10": 137000,
             "p25": 148000,

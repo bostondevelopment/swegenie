@@ -1,16 +1,38 @@
 """
-Classifies docs/research/job-postings-corpus/raw_postings.jsonl into the 18 SWE Genie archetypes
-using taxonomy/title-classification-rubric.json, writing classified_postings.jsonl.
+Classifies a wave's raw_postings.jsonl into the 18 SWE Genie archetypes using
+taxonomy/title-classification-rubric.json, appending to the cumulative classified_postings.jsonl.
 
-Run from the repo root: python3 docs/research/job-postings-corpus/classify.py
+Run from the repo root: python3 docs/research/job-postings-corpus/classify.py --wave 2026-07
 
-This is the exact script used to produce the committed classified_postings.jsonl and the counts
-cited in COUNTS.md, taxonomy/archetypes.json's v1.5 notes, and each archetype's research brief.
-Re-running it against raw_postings.jsonl should reproduce identical output -- if it doesn't,
-either the rubric or this script has drifted from what's documented elsewhere.
+Reads docs/research/job-postings-corpus/waves/<wave>/raw_postings.jsonl. Postings whose dedup_key
+(company+title+location, see WAVE_DESIGN.md) is already in seen_postings_index.jsonl are treated
+as reposts of a previously-classified role and skipped -- not re-classified, not double-counted.
+New postings are classified, appended to classified_postings.jsonl tagged with wave_id, and their
+dedup_key added to the index.
+
+This is the exact script used to produce wave 1's committed classified_postings.jsonl and the
+counts cited in COUNTS.md, taxonomy/archetypes.json's v1.5 notes, and each archetype's research
+brief. Re-running it against wave 2026-07's raw_postings.jsonl should classify zero new postings
+(everything already in the index) -- if it doesn't, either the rubric or this script has drifted
+from what's documented elsewhere.
 """
-import json, re, sys
+import argparse, hashlib, json, re
 from collections import Counter
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+CORPUS_DIR = REPO_ROOT / "docs/research/job-postings-corpus"
+INDEX_PATH = CORPUS_DIR / "seen_postings_index.jsonl"
+CLASSIFIED_PATH = CORPUS_DIR / "classified_postings.jsonl"
+
+
+def normalize_key_field(s):
+    return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", "", (s or "")).strip().lower())
+
+
+def dedup_key(row):
+    raw = "|".join(normalize_key_field(row.get(f)) for f in ("company", "title", "location"))
+    return hashlib.sha256(raw.encode()).hexdigest()
 
 with open('taxonomy/title-classification-rubric.json') as f:
     rubric = json.load(f)
@@ -93,19 +115,40 @@ def classify(title, company):
     return 'UNCLASSIFIED'
 
 if __name__ == '__main__':
-    rows = [json.loads(l) for l in open('docs/research/job-postings-corpus/raw_postings.jsonl')]
-    results = []
-    counts = Counter()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--wave', required=True, help='wave id, e.g. 2026-07')
+    args = parser.parse_args()
+
+    wave_raw_path = CORPUS_DIR / "waves" / args.wave / "raw_postings.jsonl"
+    rows = [json.loads(l) for l in open(wave_raw_path)]
+
+    seen = set()
+    if INDEX_PATH.exists():
+        for l in open(INDEX_PATH):
+            seen.add(json.loads(l)['dedup_key'])
+
+    new_results, new_index_rows = [], []
+    counts, skipped = Counter(), 0
     for r in rows:
+        key = dedup_key(r)
+        if key in seen:
+            skipped += 1
+            continue
+        seen.add(key)
         label = classify(r.get('title', ''), r.get('company'))
-        results.append({**r, 'archetype': label})
+        new_results.append({**r, 'archetype': label, 'wave_id': args.wave})
+        new_index_rows.append({'dedup_key': key, 'wave_id': args.wave})
         counts[label] += 1
 
-    with open('docs/research/job-postings-corpus/classified_postings.jsonl', 'w') as f:
-        for r in results:
+    with open(CLASSIFIED_PATH, 'a') as f:
+        for r in new_results:
+            f.write(json.dumps(r) + "\n")
+    with open(INDEX_PATH, 'a') as f:
+        for r in new_index_rows:
             f.write(json.dumps(r) + "\n")
 
-    print(f"\nTotal postings: {len(rows)}")
-    print(f"\nPer-archetype counts (sorted by count):")
+    print(f"\nWave {args.wave}: {len(rows)} raw postings, {skipped} already seen (skipped), "
+          f"{len(new_results)} newly classified and appended.")
+    print(f"\nNew-this-wave per-archetype counts (sorted by count):")
     for label, n in counts.most_common():
         print(f"  {label:45s} {n:6d}")

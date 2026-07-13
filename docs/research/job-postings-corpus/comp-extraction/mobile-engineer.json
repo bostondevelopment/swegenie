@@ -1,5 +1,12 @@
 {
   "archetypeId": "mobile-engineer",
+  "_meta": {
+    "mode": "window",
+    "window_months": 12,
+    "waves_included": [
+      "2026-07"
+    ]
+  },
   "summary": {
     "totalPointsExtracted": 99,
     "usdBase": {
@@ -79,7 +86,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 212
+    "totalPostingsScanned": 213
   },
   "dataPoints": [
     {

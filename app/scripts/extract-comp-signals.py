@@ -7,12 +7,22 @@ Output: docs/research/job-postings-corpus/comp-extraction/{archetypeId}.json —
 archetype with every extracted data point cited (company, title, url, raw matched text) plus
 computed stats, so every number in data/comp-structure.json can be traced back to a real posting.
 
-Run: python3 app/scripts/extract-comp-signals.py   (from repo root)
+Run: python3 app/scripts/extract-comp-signals.py [--window-months N]   (from repo root)
+
+Comp figures are a "window" output (see WAVE_DESIGN.md): only postings from waves within the
+trailing --window-months (default 12) of the most recent wave are counted, so a stale wave doesn't
+drag current comp figures down. Records with no wave_id (pre-wave-tracking legacy data) are always
+included. Each output file's _meta block records which mode/window/waves produced it.
 """
+import argparse
 import json
 import re
 import statistics
 from pathlib import Path
+
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _wave_utils import load_wave_dates, window_cutoff, record_in_window
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CORPUS_DIR = REPO_ROOT / "docs/research/job-postings-corpus/by-archetype"
@@ -199,6 +209,14 @@ def summarize(points: list[dict]) -> dict:
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--window-months", type=int, default=12)
+    args = parser.parse_args()
+
+    wave_dates = load_wave_dates()
+    cutoff = window_cutoff(wave_dates, args.window_months)
+    waves_included = sorted(w for w, d in wave_dates.items() if cutoff is None or d >= cutoff)
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     overall = {}
     for fp in sorted(CORPUS_DIR.glob("*.jsonl")):
@@ -211,8 +229,10 @@ def main():
             line = line.strip()
             if not line:
                 continue
-            total_postings += 1
             rec = json.loads(line)
+            if not record_in_window(rec, wave_dates, cutoff):
+                continue
+            total_postings += 1
             all_points.extend(extract_from_posting(rec))
 
         all_points = dedup(all_points)
@@ -221,6 +241,7 @@ def main():
 
         out = {
             "archetypeId": archetype_id,
+            "_meta": {"mode": "window", "window_months": args.window_months, "waves_included": waves_included},
             "summary": summary,
             "dataPoints": all_points,
         }

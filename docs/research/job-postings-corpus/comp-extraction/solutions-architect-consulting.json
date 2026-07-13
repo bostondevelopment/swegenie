@@ -1,5 +1,12 @@
 {
   "archetypeId": "solutions-architect-consulting",
+  "_meta": {
+    "mode": "window",
+    "window_months": 12,
+    "waves_included": [
+      "2026-07"
+    ]
+  },
   "summary": {
     "totalPointsExtracted": 48,
     "usdBase": {
