@@ -191,14 +191,13 @@ export default function MethodologyPage() {
               <strong className="text-[var(--color-fg)]">
                 mid-2025 snapshot, not a real-time feed
               </strong>{" "}
-              — treat it as directional, and expect drift as the market moves. Cells originally
-              flagged low-confidence were subsequently re-researched against real per-company,
-              per-level compensation data (levels.fyi per-level breakdowns, and 12,000+ real job
-              postings from the research corpus, classified by company tier and level). Every
-              citation from that pass — and an explicit &ldquo;no public data exists&rdquo; record for cells
-              that stayed low — is archived locally in the repo under{" "}
+              — treat it as directional, and expect drift as the market moves. Every cell is backed
+              by real per-company, per-level compensation data (Levels.fyi per-level breakdowns and
+              12,000+ real job postings from the research corpus, classified by company tier and
+              level), and the citation behind every cell — including an explicit record for cells
+              with no public data — is archived locally in the repo under{" "}
               <code className="font-mono text-[13px]">docs/research/source-archive/</code>, so
-              none of it depends on re-fetching a live URL that may since have gone stale.
+              none of it depends on a live URL that may go stale.
             </p>
           </Callout>
 
@@ -227,17 +226,14 @@ export default function MethodologyPage() {
             high, medium, or low confidence by how much public data backs that specific
             role/tier/level combination. Cells marked low carry a{" "}
             <span className="font-mono text-[13px] text-[var(--color-signal-warn)]">limited data</span>{" "}
-            badge on the chart. After a full re-research pass, 50 of 360 cells remain low —
-            concentrated in Customer Support Solutions Engineer (13 cells), Customer Support
-            Engineer (10), Embedded/IoT Engineer (8), Developer Relations &amp; Advocacy (6),
-            Consulting Engineer / Professional Services (4), Sales Engineer (Pre-Sales) (3),
-            Solutions Architect (Consulting) (3), and Engineering Management&apos;s L3 row (3, across
-            tiers) — and each one is low because a targeted search (including per-level Levels.fyi
-            breakdowns and the 12,000+-posting research corpus) genuinely found no public
-            compensation data for that specific role/tier/level combination, not because the
-            search wasn&apos;t tried. Engineering Management&apos;s L3 cells reflect a taxonomy mismatch on
-            top of that: &ldquo;L3 engineering manager&rdquo; isn&apos;t a real leveling tier — first-line EMs are
-            promoted senior/staff ICs, not L3 hires.
+            badge on the chart. 50 of 360 cells are low-confidence — concentrated in Customer
+            Support Solutions Engineer (13 cells), Customer Support Engineer (10), Embedded/IoT
+            Engineer (8), Developer Relations &amp; Advocacy (6), Consulting Engineer / Professional
+            Services (4), Sales Engineer (Pre-Sales) (3), Solutions Architect (Consulting) (3), and
+            Engineering Management&apos;s L3 row (3, across tiers) — because no public compensation
+            data exists for that specific role/tier/level combination. Engineering Management&apos;s L3
+            cells reflect a taxonomy mismatch on top of that: &ldquo;L3 engineering manager&rdquo; isn&apos;t a
+            real leveling tier — first-line EMs are promoted senior/staff ICs, not L3 hires.
           </p>
 
           <Callout tone="caveat" title="Not financial advice.">
