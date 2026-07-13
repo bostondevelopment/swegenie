@@ -82,9 +82,9 @@ export function RateRole({ archetypeId, dimensions }: { archetypeId: string; dim
         <span className="font-mono text-sm text-[var(--color-muted-2)]">{open ? "–" : "+"}</span>
       </button>
       <p className="text-[15px] text-[var(--color-muted)] leading-[1.6] mt-3 max-w-2xl">
-        Do this role, or hire for it? Rate how much each trait actually matters. This is the Phase 8
-        crowdsourcing input — role-holder and hiring-manager ratings are kept separate, and no single
-        rating changes the model; it&apos;s aggregated with anti-gaming thresholds later.
+        Do this role, or hire for it? Rate how much each trait actually matters. Role-holder and
+        hiring-manager ratings are kept separate, and no single rating changes the model; ratings
+        are aggregated with anti-gaming thresholds before they factor in.
       </p>
 
       {open && (

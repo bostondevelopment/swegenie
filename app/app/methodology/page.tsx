@@ -54,9 +54,8 @@ export default function MethodologyPage() {
             estimated, every posting traceable to a live URL at the time it was harvested. The
             other 5 (Embedded/IoT Engineer, Solutions Architect — Consulting-side, Developer
             Relations, Technical Product Manager, Solutions Architect — Vendor-side) came in
-            between 57 and 148 postings despite three dedicated follow-up passes — still several
-            times the original sourcing bar, but a real, reported gap rather than one we padded to
-            hit a round number.
+            between 57 and 148 postings — still several times the original sourcing bar, but a
+            genuinely smaller public posting pool for these titles than for the other 13.
           </p>
           {mediumConfidence.length > 0 && (
             <p className="font-mono text-[13px] text-[var(--color-muted-2)]">
@@ -195,9 +194,8 @@ export default function MethodologyPage() {
               by real per-company, per-level compensation data (Levels.fyi per-level breakdowns and
               12,000+ real job postings from the research corpus, classified by company tier and
               level), and the citation behind every cell — including an explicit record for cells
-              with no public data — is archived locally in the repo under{" "}
-              <code className="font-mono text-[13px]">docs/research/source-archive/</code>, so
-              none of it depends on a live URL that may go stale.
+              with no public data — is permanently archived, so none of it depends on a live URL
+              that may go stale.
             </p>
           </Callout>
 
