@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "early-stage",
+  "level": "L5",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No corpus points, no real early-stage per-company anchor found. Generic market commentary ('senior/principal can command up to $200K+ base') is loosely consistent with the file's L5 base p50 ($176K) but is not tier-specific or level-specific enough to raise confidence. This looks like a genuinely underdocumented market segment (early-stage startups rarely name a dedicated 'senior consulting/PS engineer' role with disclosed comp) rather than a research gap I could close with more effort in this pass. Keeping low."
+}

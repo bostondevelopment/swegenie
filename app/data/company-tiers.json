@@ -1,0 +1,2074 @@
+{
+  "generatedAt": "2026-07-12",
+  "companies": {
+    "1Password": {
+      "tier": "growth-stage-private",
+      "evidence": "Private password-manager company; Series C raised at $6.8B valuation (2022), no IPO since.",
+      "asOf": "2022"
+    },
+    "1X Technologies": {
+      "tier": "growth-stage-private",
+      "evidence": "Humanoid robotics startup; raised $100M Series B at $820M valuation (Jan 2024), in talks for ~$1B round at ~$10B valuation (Sept 2025), not yet confirmed closed.",
+      "asOf": "2025-09"
+    },
+    "360Learning": {
+      "tier": "growth-stage-private",
+      "evidence": "French corporate-learning SaaS; Series D-stage private company, ~$240M total raised.",
+      "asOf": "2021"
+    },
+    "Abnormal Security": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cybersecurity (email security) company; reached ~$4B valuation on Series D/E in 2024.",
+      "asOf": "2024"
+    },
+    "ActiveCampaign": {
+      "tier": "growth-stage-private",
+      "evidence": "Private marketing-automation SaaS; raised $240M Series C at ~$3B valuation (2021).",
+      "asOf": "2021"
+    },
+    "Adyen": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded payments company (Euronext Amsterdam: ADYEN), large-cap tech-adjacent fintech, not a US mega-cap.",
+      "asOf": "2026"
+    },
+    "Aeva Technologies": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded lidar/sensing tech company (NYSE: AEVA), went public via SPAC in 2021.",
+      "asOf": "2026"
+    },
+    "Affirm": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded BNPL fintech (NASDAQ: AFRM).",
+      "asOf": "2026"
+    },
+    "Agility Robotics": {
+      "tier": "growth-stage-private",
+      "evidence": "Humanoid robotics startup; closed $400M Series C at ~$2.1B valuation (March 2025); definitive SPAC merger agreement announced June 2026 (not yet closed as of asOf).",
+      "asOf": "2025-03"
+    },
+    "Airbnb": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NASDAQ: ABNB), large-cap but not a MAG7 company.",
+      "asOf": "2026"
+    },
+    "Airbyte": {
+      "tier": "growth-stage-private",
+      "evidence": "Private open-source data-integration startup; Series B at ~$1.5B valuation (2023).",
+      "asOf": "2023"
+    },
+    "Aircall": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cloud call-center software; Series D, ~$1B valuation.",
+      "asOf": "2022"
+    },
+    "Airtable": {
+      "tier": "growth-stage-private",
+      "evidence": "Private no-code database/collaboration company; Series F at $11B valuation (2021).",
+      "asOf": "2021"
+    },
+    "Airwallex": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cross-border payments fintech; Series E at ~$5.6B valuation.",
+      "asOf": "2022"
+    },
+    "Alchemy": {
+      "tier": "growth-stage-private",
+      "evidence": "Private blockchain developer-infrastructure company; Series C1 at ~$10.2B valuation (2022).",
+      "asOf": "2022"
+    },
+    "Algolia": {
+      "tier": "growth-stage-private",
+      "evidence": "Private search-and-discovery API company; Series D at $2.25B valuation (2021).",
+      "asOf": "2021"
+    },
+    "Alloy": {
+      "tier": "growth-stage-private",
+      "evidence": "Private identity/fraud-decisioning fintech; Series C at $1.55B valuation (2022).",
+      "asOf": "2022"
+    },
+    "Amperity": {
+      "tier": "growth-stage-private",
+      "evidence": "Private customer-data-platform company; late-stage (Series F) with $1B+ valuation.",
+      "asOf": "2022"
+    },
+    "Amplitude": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded product-analytics company (NASDAQ: AMPL).",
+      "asOf": "2026"
+    },
+    "Anchorage Digital": {
+      "tier": "growth-stage-private",
+      "evidence": "Private crypto custody/bank; Series D at ~$3B valuation (2022).",
+      "asOf": "2022"
+    },
+    "Anduril Industries": {
+      "tier": "growth-stage-private",
+      "evidence": "Private defense-tech company; Series G/H rounds valued it at $14B (2024) and higher subsequently.",
+      "asOf": "2024"
+    },
+    "Anthropic": {
+      "tier": "ai-labs",
+      "evidence": "Frontier AI lab building foundation models (Claude); core business is foundation-model research.",
+      "asOf": "2026"
+    },
+    "Anysphere (Cursor)": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI coding-assistant company (Cursor); Series C at ~$9.9B valuation (2025).",
+      "asOf": "2025"
+    },
+    "Appfire": {
+      "tier": "growth-stage-private",
+      "evidence": "PE-backed (TA Associates, Silversmith) maker of Atlassian ecosystem apps; explored a stake sale valuing it at $2B+ (2024).",
+      "asOf": "2024"
+    },
+    "Appian": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded low-code platform (NASDAQ: APPN).",
+      "asOf": "2026"
+    },
+    "Applied Intuition": {
+      "tier": "growth-stage-private",
+      "evidence": "Private autonomous-vehicle simulation/software company; late-stage rounds valuing it in the tens of billions.",
+      "asOf": "2025"
+    },
+    "AppsFlyer": {
+      "tier": "growth-stage-private",
+      "evidence": "Private mobile-attribution/marketing-analytics unicorn, ~$2B valuation.",
+      "asOf": "2021"
+    },
+    "Apptronik": {
+      "tier": "growth-stage-private",
+      "evidence": "Humanoid robotics startup; Series A extension brought total Series A to $935M at $5.5B valuation (Feb 2026).",
+      "asOf": "2026-02"
+    },
+    "Ashby": {
+      "tier": "growth-stage-private",
+      "evidence": "Private recruiting-software company; Series D at ~$1.5B valuation (2024).",
+      "asOf": "2024"
+    },
+    "AssemblyAI": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI speech-recognition API company; Series D-stage funding.",
+      "asOf": "2024"
+    },
+    "Astranis": {
+      "tier": "growth-stage-private",
+      "evidence": "Private small-satellite company; Series D at ~$1.4B valuation (2023).",
+      "asOf": "2023"
+    },
+    "Astronomer": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data-orchestration (Apache Airflow commercial) company; Series D-stage, several hundred million valuation.",
+      "asOf": "2022"
+    },
+    "Attentive": {
+      "tier": "growth-stage-private",
+      "evidence": "Private SMS/marketing-personalization company; reached $7B valuation on Series F (2021), still private though valuation has since declined (~$2-3B range per secondary estimates).",
+      "asOf": "2021"
+    },
+    "Aurora Innovation": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded self-driving trucking company (NASDAQ: AUR).",
+      "asOf": "2026"
+    },
+    "Axon": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded public-safety tech company (NASDAQ: AXON).",
+      "asOf": "2026"
+    },
+    "Axonius": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cybersecurity asset-management company; Series E at $2.6B valuation (2022).",
+      "asOf": "2022"
+    },
+    "Baseten": {
+      "tier": "growth-stage-private",
+      "evidence": "Private ML-inference infrastructure company; Series C/D-stage, ~$825M valuation (2025).",
+      "asOf": "2025"
+    },
+    "Bestow": {
+      "tier": "growth-stage-private",
+      "evidence": "Private insurtech; raised $120M Series D (2025) with total funding >$300M and valuation reported to have roughly doubled from its $490M 2021 mark.",
+      "asOf": "2025-05"
+    },
+    "Betterment": {
+      "tier": "growth-stage-private",
+      "evidence": "Private robo-advisor/fintech; late-stage funding rounds valuing it at ~$1.3B.",
+      "asOf": "2021"
+    },
+    "BigID": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data-security/privacy company; Series E/F at ~$1.25B valuation.",
+      "asOf": "2022"
+    },
+    "Bitso": {
+      "tier": "growth-stage-private",
+      "evidence": "Private LatAm crypto exchange; Series C at $2.2B valuation (2021).",
+      "asOf": "2021"
+    },
+    "Bitwarden": {
+      "tier": "early-stage",
+      "evidence": "Private open-source password manager; only disclosed round is a $100M Series B (2022) with valuation undisclosed \u2014 earliest-round evidence available, below the Series C+/$500M+ threshold.",
+      "asOf": "2022-09"
+    },
+    "Blend Labs": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (BLND), mortgage/banking software company.",
+      "asOf": null
+    },
+    "Block": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (XYZ, formerly SQ), large-cap fintech but not a mega-cap top-8 tech company.",
+      "asOf": null
+    },
+    "Bloomreach": {
+      "tier": "growth-stage-private",
+      "evidence": "Private e-commerce personalization company that raised a large Series F at a valuation in the hundreds of millions to ~$2B range; well past Series C.",
+      "asOf": null
+    },
+    "Boeing": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: BA), large-cap aerospace/defense manufacturer.",
+      "asOf": null
+    },
+    "Braintrust": {
+      "tier": "early-stage",
+      "evidence": "Talent-network startup; total funding ~$48-242M with valuation around $114-150M as of Oct 2024, Series B in 2026 \u2014 still small/early relative to the growth-stage threshold.",
+      "asOf": null
+    },
+    "Braze": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (BRZE), customer engagement SaaS company.",
+      "asOf": null
+    },
+    "Brex": {
+      "tier": "growth-stage-private",
+      "evidence": "Private fintech corporate card/spend management company valued at roughly $12.3B as of 2022 funding round.",
+      "asOf": null
+    },
+    "Bringg": {
+      "tier": "growth-stage-private",
+      "evidence": "Private logistics orchestration platform that raised a large Series E (~$100M) at a valuation above $1B in 2022.",
+      "asOf": null
+    },
+    "Britive": {
+      "tier": "early-stage",
+      "evidence": "Cloud security startup that raised a $20.5M Series B in March 2023, with no disclosed valuation \u2014 consistent with early-stage scale.",
+      "asOf": null
+    },
+    "Broadcom": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (AVGO), very large semiconductor/infrastructure software company but not one of the defined 8 mega-cap names.",
+      "asOf": null
+    },
+    "Bugcrowd": {
+      "tier": "growth-stage-private",
+      "evidence": "Crowdsourced security testing company reached $1B unicorn valuation with a $102M Series E in February 2024.",
+      "asOf": null
+    },
+    "Buildkite": {
+      "tier": "growth-stage-private",
+      "evidence": "Private CI/CD platform that has raised Series C funding from major VCs (e.g., Cross-Border, Blackbird), consistent with growth stage.",
+      "asOf": null
+    },
+    "Butterfly Network": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (BFLY), handheld ultrasound medical device company.",
+      "asOf": null
+    },
+    "Carbon Robotics": {
+      "tier": "growth-stage-private",
+      "evidence": "Private agtech robotics (autonomous laser weeding) company that raised a Series D of roughly $70M in 2023.",
+      "asOf": null
+    },
+    "Carta": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cap-table/equity management company valued at roughly $7.4B in its 2021 Series G round.",
+      "asOf": null
+    },
+    "Caterpillar": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: CAT), large-cap industrial equipment manufacturer.",
+      "asOf": null
+    },
+    "Caylent": {
+      "tier": "early-stage",
+      "evidence": "AWS cloud consulting firm that has only raised a $16M Series A (2021), with no subsequent large rounds disclosed \u2014 small/early scale.",
+      "asOf": null
+    },
+    "Cerebras Systems": {
+      "tier": "high-growth-public",
+      "evidence": "AI chip company completed its IPO on NASDAQ (CBRS) in May 2026 at an implied ~$40B market value; now publicly traded, not a foundation-model lab.",
+      "asOf": null
+    },
+    "Chainguard": {
+      "tier": "growth-stage-private",
+      "evidence": "Private software supply-chain security company valued at $3.5B in its 2024 Series C round.",
+      "asOf": null
+    },
+    "ChargePoint": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (CHPT), EV charging network operator.",
+      "asOf": null
+    },
+    "Charm Industrial": {
+      "tier": "growth-stage-private",
+      "evidence": "Private carbon-removal startup raised a $100M Series B in 2023 at an estimated post-money valuation of roughly $600M.",
+      "asOf": null
+    },
+    "Checkr": {
+      "tier": "growth-stage-private",
+      "evidence": "Private background-check company valued at roughly $5B following its 2022 Series E round.",
+      "asOf": null
+    },
+    "Chime": {
+      "tier": "growth-stage-private",
+      "evidence": "Private neobank valued at roughly $25B in its 2021 round (also filed to IPO in 2025); currently still a large private/growth-stage comp comparator.",
+      "asOf": null
+    },
+    "Cigna": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: CI), large-cap health insurer.",
+      "asOf": null
+    },
+    "CircleCI": {
+      "tier": "growth-stage-private",
+      "evidence": "Private CI/CD platform valued at roughly $1.7B in its 2021 Series F round.",
+      "asOf": null
+    },
+    "Cisco": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (CSCO), large-cap networking/tech company, not one of the defined mega-cap 8.",
+      "asOf": null
+    },
+    "ClassPass": {
+      "tier": "growth-stage-private",
+      "evidence": "Private fitness-booking platform (subsidiary of Mindbody, formerly independent unicorn), consistent with growth-stage scale.",
+      "asOf": null
+    },
+    "ClickHouse": {
+      "tier": "growth-stage-private",
+      "evidence": "Private analytical database company valued at roughly $6.35B in its 2024 Series C round.",
+      "asOf": null
+    },
+    "Cloudflare": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (NET), large-cap cloud/security infrastructure company.",
+      "asOf": null
+    },
+    "Clover Health": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (CLOV), Medicare Advantage health insurance tech company.",
+      "asOf": null
+    },
+    "Clubhouse (Alpha)": {
+      "tier": "growth-stage-private",
+      "evidence": "Private social audio app; last disclosed valuation was $4B (2021), which has remained the reference figure since, per recent reporting on its status.",
+      "asOf": null
+    },
+    "Cockroach Labs": {
+      "tier": "growth-stage-private",
+      "evidence": "Private distributed database company valued at roughly $5B in its 2021 Series F round.",
+      "asOf": null
+    },
+    "Coder": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cloud development environment company raised a $90M Series C led by KKR in April 2026.",
+      "asOf": null
+    },
+    "Cognism": {
+      "tier": "growth-stage-private",
+      "evidence": "Private B2B sales intelligence company that raised an $87.5M Series C at a $436M valuation in 2022.",
+      "asOf": null
+    },
+    "Cohere": {
+      "tier": "ai-labs",
+      "evidence": "Foundation-model AI lab building large language models, explicitly named in the ai-labs tier definition.",
+      "asOf": null
+    },
+    "Coinbase": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (COIN), major cryptocurrency exchange.",
+      "asOf": null
+    },
+    "Collibra": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data governance/catalog company valued at roughly $5.25B in its 2021 Series H round.",
+      "asOf": null
+    },
+    "Column": {
+      "tier": "growth-stage-private",
+      "evidence": "Private federally-chartered bank-as-a-service fintech that closed a $60M Series C led by Spark Capital in September 2025, powering banking for Brex, Ramp, and Carta.",
+      "asOf": null
+    },
+    "Comcast": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NASDAQ: CMCSA), large-cap media/telecom conglomerate.",
+      "asOf": null
+    },
+    "Confluent": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (CFLT), data streaming platform company.",
+      "asOf": null
+    },
+    "Contentful": {
+      "tier": "growth-stage-private",
+      "evidence": "Private headless CMS company valued at roughly $3B in its 2021 Series F round.",
+      "asOf": null
+    },
+    "Contentsquare": {
+      "tier": "growth-stage-private",
+      "evidence": "Private digital experience analytics company valued at roughly $2.8B in its 2021 Series F round.",
+      "asOf": null
+    },
+    "Corelight": {
+      "tier": "growth-stage-private",
+      "evidence": "Private network detection and response security company that has raised Series E funding, consistent with growth-stage scale.",
+      "asOf": null
+    },
+    "CoreWeave": {
+      "tier": "high-growth-public",
+      "evidence": "AI cloud/GPU infrastructure company completed its IPO on NASDAQ (CRWV) in March 2025; now publicly traded.",
+      "asOf": null
+    },
+    "Cresta": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI contact-center company valued at roughly $1.6B in its 2023 Series C round.",
+      "asOf": null
+    },
+    "Cribl": {
+      "tier": "growth-stage-private",
+      "evidence": "Private observability data pipeline company valued at roughly $3.5B in its 2024 Series E round.",
+      "asOf": null
+    },
+    "Crusoe": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI cloud/data-center company valued at roughly $2.8B in its 2024 funding round.",
+      "asOf": null
+    },
+    "Cyberhaven": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $100M Series D at $1B valuation, April 2025 (unicorn).",
+      "asOf": "2025-04"
+    },
+    "Dashlane": {
+      "tier": "growth-stage-private",
+      "evidence": "Private password manager, raised Series F in 2021 valuing the company at roughly $1.7B.",
+      "asOf": "2021"
+    },
+    "Databricks": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data/AI platform valued well over $100B in most recent funding rounds.",
+      "asOf": "2025"
+    },
+    "DataCamp": {
+      "tier": "early-stage",
+      "evidence": "Total funding only ~$32.6M with latest round a Series B in 2018 ($25M led by Spectrum Equity); no later rounds disclosed.",
+      "asOf": "2018"
+    },
+    "Datadog": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ under ticker DDOG.",
+      "asOf": "2026"
+    },
+    "Decagon": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $250M Series D at $4.5B valuation in Jan 2026 (AI customer support).",
+      "asOf": "2026-01"
+    },
+    "Deepgram": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $130M Series C at $1.3B valuation, January 2026 (voice AI).",
+      "asOf": "2026-01"
+    },
+    "Definitive Healthcare": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded healthcare data company on NASDAQ (DH).",
+      "asOf": "2026"
+    },
+    "Delinea": {
+      "tier": "growth-stage-private",
+      "evidence": "Privileged access management vendor formed from Thycotic/Centrify merger, sold to Silver Lake in 2023 at ~$2.2B valuation; ~1,340 employees.",
+      "asOf": "2023"
+    },
+    "Deliveroo": {
+      "tier": "high-growth-public",
+      "evidence": "Formerly LSE-listed food delivery firm; acquired by publicly traded DoorDash (NASDAQ: DASH) in Oct 2025, now part of a public-company comp structure.",
+      "asOf": "2025-10"
+    },
+    "DEPT": {
+      "tier": "growth-stage-private",
+      "evidence": "Digital agency majority-owned by The Carlyle Group since 2019; ~4,000 employees, ~EUR100M EBITDA, considered for sale/IPO in 2024-2026.",
+      "asOf": "2024-2026"
+    },
+    "Deputy": {
+      "tier": "growth-stage-private",
+      "evidence": "Workforce management SaaS reached unicorn status with a $37M Series B round in March 2024 valuing it above $1.1B.",
+      "asOf": "2024-03"
+    },
+    "Descope": {
+      "tier": "early-stage",
+      "evidence": "Identity/CIAM startup has only raised seed-stage financing ($53M seed + $35M seed extension = $88M total); no Series A/B yet.",
+      "asOf": "2025-09"
+    },
+    "Descript": {
+      "tier": "growth-stage-private",
+      "evidence": "Private audio/video editing startup, Series C funding, valued roughly $550M.",
+      "asOf": "2021"
+    },
+    "Dexterity": {
+      "tier": "growth-stage-private",
+      "evidence": "AI robotics company raised $95M at a $1.65B post-money valuation, March 2025.",
+      "asOf": "2025-03"
+    },
+    "Dialpad": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cloud communications unicorn, last valued around $2.2B in Series F.",
+      "asOf": "2022"
+    },
+    "Discord": {
+      "tier": "growth-stage-private",
+      "evidence": "Private chat platform, most recent private valuation around $15B.",
+      "asOf": "2022"
+    },
+    "Disney": {
+      "tier": "high-growth-public",
+      "evidence": "Large publicly traded media/entertainment conglomerate (NYSE: DIS), but not in the FAANG/MAG7 list defined for this app's top tier.",
+      "asOf": "2026"
+    },
+    "Docebo": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded LMS company on NASDAQ/TSX under ticker DCBO.",
+      "asOf": "2026"
+    },
+    "Docker": {
+      "tier": "growth-stage-private",
+      "evidence": "Private containerization company, Series C unicorn valued around $2.1B in 2022.",
+      "asOf": "2022"
+    },
+    "DoorDash": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ under ticker DASH.",
+      "asOf": "2026"
+    },
+    "Dragos": {
+      "tier": "growth-stage-private",
+      "evidence": "Private industrial cybersecurity company, Series D, valued around $1.7B in 2021.",
+      "asOf": "2021"
+    },
+    "Drata": {
+      "tier": "growth-stage-private",
+      "evidence": "Private compliance-automation company, valued near $2B in latest private round (2024).",
+      "asOf": "2024"
+    },
+    "Duolingo": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded language-learning app on NASDAQ under ticker DUOL.",
+      "asOf": "2026"
+    },
+    "E2B": {
+      "tier": "early-stage",
+      "evidence": "Small early-stage AI code-sandbox startup, seed/Series A funding stage.",
+      "asOf": "2024"
+    },
+    "Eight Sleep": {
+      "tier": "growth-stage-private",
+      "evidence": "Sleep tech company raised $50M at $1.5B valuation (Series D), March 2026.",
+      "asOf": "2026-03"
+    },
+    "Elastic": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE under ticker ESTC.",
+      "asOf": "2026"
+    },
+    "Ethos Life": {
+      "tier": "growth-stage-private",
+      "evidence": "Private life-insurance insurtech, Series E+, valued around $2.7B.",
+      "asOf": "2022"
+    },
+    "Expel": {
+      "tier": "growth-stage-private",
+      "evidence": "Managed security provider raised $140.3M Series E in Nov 2021, crossing $1B valuation (unicorn).",
+      "asOf": "2021-11"
+    },
+    "Faire": {
+      "tier": "growth-stage-private",
+      "evidence": "Private wholesale marketplace, Series G, valued around $12B.",
+      "asOf": "2022"
+    },
+    "FanDuel": {
+      "tier": "high-growth-public",
+      "evidence": "Wholly-owned subsidiary of Flutter Entertainment plc, which trades on NYSE under ticker FLUT.",
+      "asOf": "2025"
+    },
+    "Fastly": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE under ticker FSLY.",
+      "asOf": "2026"
+    },
+    "Federato": {
+      "tier": "growth-stage-private",
+      "evidence": "Private insurtech AI startup, Series C funding round with valuation approaching $1B.",
+      "asOf": "2024"
+    },
+    "Fictiv": {
+      "tier": "growth-stage-private",
+      "evidence": "Private on-demand manufacturing platform, Series D, valued at several hundred million to ~$1B.",
+      "asOf": "2021"
+    },
+    "Figma": {
+      "tier": "high-growth-public",
+      "evidence": "Completed IPO on NYSE under ticker FIG, priced July 30, 2025 and began trading July 31, 2025; valued near $68B on day one.",
+      "asOf": "2025-07"
+    },
+    "Figure AI": {
+      "tier": "growth-stage-private",
+      "evidence": "Humanoid robotics startup exceeded $1B in Series C funding at a $39B post-money valuation, September 2025.",
+      "asOf": "2025-09"
+    },
+    "Findem": {
+      "tier": "growth-stage-private",
+      "evidence": "HR-tech AI company closed a $36M Series C (plus $15M growth financing) in March 2025, a significant up-round from its Series B.",
+      "asOf": "2025-03"
+    },
+    "Fireblocks": {
+      "tier": "growth-stage-private",
+      "evidence": "Private crypto custody/infrastructure company, Series E, valued around $8B.",
+      "asOf": "2022"
+    },
+    "Five9": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ under ticker FIVN.",
+      "asOf": "2026"
+    },
+    "Fivetran": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data-integration company, Series D, valued around $5.6B (2021).",
+      "asOf": "2021"
+    },
+    "Flexport": {
+      "tier": "growth-stage-private",
+      "evidence": "Private freight-forwarding/logistics platform, Series E, valued around $8B at peak.",
+      "asOf": "2022"
+    },
+    "Flo Health": {
+      "tier": "growth-stage-private",
+      "evidence": "Private femtech app reached unicorn status (~$1B valuation) via a growth round in 2024.",
+      "asOf": "2024"
+    },
+    "Formlabs": {
+      "tier": "growth-stage-private",
+      "evidence": "Private 3D printing company, Series D, valued around $2B.",
+      "asOf": "2021"
+    },
+    "Forter": {
+      "tier": "growth-stage-private",
+      "evidence": "Private fraud-prevention company, Series F, valued around $3B.",
+      "asOf": "2021"
+    },
+    "FourKites": {
+      "tier": "growth-stage-private",
+      "evidence": "Private supply-chain visibility company, Series E, valued around $2.3B.",
+      "asOf": "2022"
+    },
+    "fuboTV": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE under ticker FUBO, market cap roughly $300M-$1B range as of July 2026.",
+      "asOf": "2026-07-07"
+    },
+    "Gainsight": {
+      "tier": "growth-stage-private",
+      "evidence": "Private, customer-success SaaS platform; reached ~$1.1B valuation in its Series E and was acquired by Vista Equity Partners in 2020, now backed by Vista.",
+      "asOf": null
+    },
+    "GE Aerospace (General Electric successor entity)": {
+      "tier": "high-growth-public",
+      "evidence": "Standalone publicly traded aerospace company (NYSE: GE) after the 2024 General Electric breakup, not a mega-cap listed in the MAG7 definition.",
+      "asOf": "2024"
+    },
+    "GE Healthcare": {
+      "tier": "high-growth-public",
+      "evidence": "Standalone publicly traded medical-technology company (NASDAQ: GEHC) after 2023 spinoff from General Electric.",
+      "asOf": "2023"
+    },
+    "Gemini": {
+      "tier": "high-growth-public",
+      "evidence": "Gemini Space Station Inc. (Winklevoss-founded crypto exchange) completed its IPO in 2025/2026 and trades on Nasdaq under ticker GEMI; not a mega-cap.",
+      "asOf": null
+    },
+    "General Motors": {
+      "tier": "high-growth-public",
+      "evidence": "Large publicly traded automaker (NYSE: GM) with significant tech/EV/autonomous-driving investment; not a mega-cap tech company.",
+      "asOf": null
+    },
+    "GetYourGuide": {
+      "tier": "growth-stage-private",
+      "evidence": "Private travel-experiences booking platform valued at roughly $2B following its Series F/growth funding rounds.",
+      "asOf": null
+    },
+    "GitLab": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded DevOps platform (NASDAQ: GTLB) since its 2021 IPO.",
+      "asOf": null
+    },
+    "Greenhouse": {
+      "tier": "growth-stage-private",
+      "evidence": "Private recruiting-software company; raised large growth rounds (valued well over $1B) and was later acquired by TPG/Carlyle-backed private equity.",
+      "asOf": null
+    },
+    "Gusto": {
+      "tier": "growth-stage-private",
+      "evidence": "Private payroll/HR platform valued at approximately $9.3B as of its most recent funding round, having raised ~$930M total.",
+      "asOf": null
+    },
+    "HackerRank": {
+      "tier": "growth-stage-private",
+      "evidence": "Private technical-hiring/assessment platform that has raised roughly $115M+ across multiple rounds through Series D, an established growth-stage company.",
+      "asOf": null
+    },
+    "Hadrian": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI-driven manufacturing startup; raised a $260M Series C in 2025 and was valued at $1.6B (with later discussions at up to $7.5B) in early 2026.",
+      "asOf": null
+    },
+    "Harvey": {
+      "tier": "growth-stage-private",
+      "evidence": "Private legal-AI company that has raised large growth rounds valuing it in the multi-billion-dollar range (reported ~$3B+ valuation in 2025).",
+      "asOf": null
+    },
+    "Helion Energy": {
+      "tier": "growth-stage-private",
+      "evidence": "Private fusion-energy company; raised a $465M Series G in 2026 at a $15.5B post-money valuation.",
+      "asOf": null
+    },
+    "HelloFresh": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded meal-kit company (XETRA: HFG) with substantial US operations and comp data available for its tech/ops roles.",
+      "asOf": null
+    },
+    "Highspot": {
+      "tier": "growth-stage-private",
+      "evidence": "Private sales-enablement software company valued at approximately $3.5B in its most recent funding round.",
+      "asOf": null
+    },
+    "Hightouch": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data-activation/CDP company; raised a $150M Series D in April 2026 at a $2.75B valuation.",
+      "asOf": null
+    },
+    "Honeycomb": {
+      "tier": "growth-stage-private",
+      "evidence": "Private observability company that has raised through Series D funding, an established growth-stage startup.",
+      "asOf": null
+    },
+    "Hopper": {
+      "tier": "growth-stage-private",
+      "evidence": "Private travel-booking app valued at approximately $5B in its most recent funding rounds.",
+      "asOf": null
+    },
+    "HP": {
+      "tier": "high-growth-public",
+      "evidence": "HP Inc. is a large publicly traded PC/printing company (NYSE: HPQ), not a mega-cap (mag7) but a major public tech company.",
+      "asOf": null
+    },
+    "HPE": {
+      "tier": "high-growth-public",
+      "evidence": "Hewlett Packard Enterprise is publicly traded (NYSE: HPE), a large but non-mega-cap tech company.",
+      "asOf": null
+    },
+    "Hudl": {
+      "tier": "growth-stage-private",
+      "evidence": "Private sports-video-analysis company valued at over $3B following its 2021 growth funding round.",
+      "asOf": null
+    },
+    "Human Interest": {
+      "tier": "growth-stage-private",
+      "evidence": "Private 401(k) provider that has raised through Series D funding, valued at roughly $1.3B.",
+      "asOf": null
+    },
+    "HYPR": {
+      "tier": "growth-stage-private",
+      "evidence": "Private passwordless-authentication company; raised a Series D ($30M from Silver Lake Waterman in 2024), bringing total funding to over $130M.",
+      "asOf": null
+    },
+    "Ibotta": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded cashback/rewards company (NYSE: IBTA) since its 2024 IPO.",
+      "asOf": null
+    },
+    "Illumio": {
+      "tier": "growth-stage-private",
+      "evidence": "Private zero-trust cybersecurity company; raised a $225M Series F in 2021 at a $2.75B valuation.",
+      "asOf": null
+    },
+    "Immuta": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data-security/governance company; raised a $100M Series E in 2022 at a $1B valuation.",
+      "asOf": null
+    },
+    "Incode": {
+      "tier": "growth-stage-private",
+      "evidence": "Private identity-verification company that reached unicorn status with a ~$1.25B valuation following its Series C.",
+      "asOf": null
+    },
+    "Infisical": {
+      "tier": "early-stage",
+      "evidence": "YC-backed secrets-management startup; raised a $16M Series A in 2025 (total funding ~$19M), a small early-stage company.",
+      "asOf": null
+    },
+    "Instacart": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded grocery-delivery company (NASDAQ: CART) since its 2023 IPO.",
+      "asOf": null
+    },
+    "Instructure": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded ed-tech company (NYSE: INST), maker of Canvas LMS.",
+      "asOf": null
+    },
+    "Intel": {
+      "tier": "high-growth-public",
+      "evidence": "Large publicly traded semiconductor company (NASDAQ: INTC), not included among the defined mag7 mega-caps.",
+      "asOf": null
+    },
+    "Intercom": {
+      "tier": "growth-stage-private",
+      "evidence": "Private customer-messaging/support software company valued at roughly $1.275B+ in past funding rounds.",
+      "asOf": null
+    },
+    "Invoca": {
+      "tier": "growth-stage-private",
+      "evidence": "Private call-tracking/conversation-intelligence company that has raised over $200M through later-stage funding rounds (Series F).",
+      "asOf": null
+    },
+    "Iterable": {
+      "tier": "growth-stage-private",
+      "evidence": "Private customer-engagement/marketing platform valued at roughly $2B following its Series E.",
+      "asOf": null
+    },
+    "Ivalua": {
+      "tier": "growth-stage-private",
+      "evidence": "Private procurement/spend-management software company that reached unicorn status (over $1B valuation) after a growth investment from KKR.",
+      "asOf": null
+    },
+    "Jamf": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded Apple device-management company (NASDAQ: JAMF).",
+      "asOf": null
+    },
+    "JFrog": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded DevOps/software-supply-chain company (NASDAQ: FROG).",
+      "asOf": null
+    },
+    "JumpCloud": {
+      "tier": "growth-stage-private",
+      "evidence": "Private directory/identity-management platform valued at approximately $2.6B in its 2021 funding round.",
+      "asOf": null
+    },
+    "Justworks": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded PEO/HR platform (NASDAQ: JW) following its 2025 IPO.",
+      "asOf": null
+    },
+    "Keeper Security": {
+      "tier": "growth-stage-private",
+      "evidence": "Private password-manager/cybersecurity company with ~$90M ARR and institutional backing from Insight Partners and Summit Partners, indicating a growth-stage scale despite modest disclosed funding.",
+      "asOf": null
+    },
+    "Klaviyo": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded marketing-automation company (NYSE: KVYO) since its 2023 IPO.",
+      "asOf": null
+    },
+    "Knock": {
+      "tier": "growth-stage-private",
+      "evidence": "Private real-estate/home-trade-in fintech platform (Knock.com) that raised a $400M Series C round, placing it well above growth-stage private thresholds; note there is also a separate, now-acquired 'Knock CRM' proptech company.",
+      "asOf": null
+    },
+    "KnowBe4": {
+      "tier": "growth-stage-private",
+      "evidence": "Formerly public security-awareness-training company, taken private by Vista Equity Partners in 2023 at roughly a $4.6B valuation.",
+      "asOf": null
+    },
+    "Komodo Health": {
+      "tier": "growth-stage-private",
+      "evidence": "Private healthcare-data-analytics company valued at $3.3B following its $220M Series E in 2022.",
+      "asOf": null
+    },
+    "Kong": {
+      "tier": "growth-stage-private",
+      "evidence": "Private API-management platform valued at roughly $2B following its Series E funding round.",
+      "asOf": null
+    },
+    "Krafton": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on KRX (259960), ~$8-9B market cap South Korean gaming publisher (PUBG).",
+      "asOf": "2026-07"
+    },
+    "LangChain": {
+      "tier": "growth-stage-private",
+      "evidence": "Series B, $1.25B valuation, October 2025, led by IVP.",
+      "asOf": "2025-10"
+    },
+    "Langfuse": {
+      "tier": "early-stage",
+      "evidence": "YC-backed open-source LLM observability startup with early-stage (Seed/Series A scale) funding and small team.",
+      "asOf": "2026-07"
+    },
+    "Lattice": {
+      "tier": "growth-stage-private",
+      "evidence": "Series F in 2022 valued Lattice at $3B.",
+      "asOf": "2022"
+    },
+    "LaunchDarkly": {
+      "tier": "growth-stage-private",
+      "evidence": "Series D in 2021 valued the feature-management company at ~$3B.",
+      "asOf": "2021"
+    },
+    "LayerZero Labs": {
+      "tier": "growth-stage-private",
+      "evidence": "Series B crypto infrastructure raise valued the company at ~$3B (2024).",
+      "asOf": "2024"
+    },
+    "Leapsome": {
+      "tier": "early-stage",
+      "evidence": "Latest disclosed round is Series A (2022); reached ~$300M valuation in 2024, below growth-stage valuation threshold and no Series C+ round found.",
+      "asOf": "2024"
+    },
+    "Linear": {
+      "tier": "growth-stage-private",
+      "evidence": "Series C in 2024 valued Linear at $1.25B.",
+      "asOf": "2024"
+    },
+    "LiveKit": {
+      "tier": "early-stage",
+      "evidence": "Series B (2025) raised $45M at a $345M valuation \u2014 Series B stage and sub-$500M valuation.",
+      "asOf": "2025-04"
+    },
+    "LlamaIndex": {
+      "tier": "early-stage",
+      "evidence": "Series A (March 2025), $19M raise at ~$93M post-money valuation.",
+      "asOf": "2025-03"
+    },
+    "Loadsmart": {
+      "tier": "growth-stage-private",
+      "evidence": "Series D (Feb 2022), $200M raise at $1.3B valuation, SoftBank-led.",
+      "asOf": "2022-02"
+    },
+    "Locus Robotics": {
+      "tier": "growth-stage-private",
+      "evidence": "Series F (Nov 2022), $117M raise, valuation near $2B.",
+      "asOf": "2022-11"
+    },
+    "LogicMonitor": {
+      "tier": "growth-stage-private",
+      "evidence": "Vista Equity-controlled; $800M strategic investment (Nov 2024) valued company at ~$2.4B.",
+      "asOf": "2024-11"
+    },
+    "Lyft": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (LYFT), large-cap ride-hailing company, not mega-cap.",
+      "asOf": "2026-07"
+    },
+    "Lyra Health": {
+      "tier": "growth-stage-private",
+      "evidence": "Series G raised Lyra's valuation to ~$5.8B in 2024.",
+      "asOf": "2024"
+    },
+    "Marqeta": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (MQ), card-issuing platform, not mega-cap.",
+      "asOf": "2026-07"
+    },
+    "Mastercard": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: MA), large-cap payments company but not one of the FAANG/Mag7 set.",
+      "asOf": "2026-07"
+    },
+    "Match Group": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (MTCH), owner of Tinder/Hinge, not mega-cap.",
+      "asOf": "2026-07"
+    },
+    "Medtronic": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: MDT), large-cap medtech company, not FAANG/Mag7.",
+      "asOf": "2026-07"
+    },
+    "Melio": {
+      "tier": "growth-stage-private",
+      "evidence": "Series E (Oct 2024), $150M raise at $2B valuation.",
+      "asOf": "2024-10"
+    },
+    "Mercury": {
+      "tier": "growth-stage-private",
+      "evidence": "Series C fintech/banking startup valued at ~$1.6B+; later disclosed rounds keep valuation in unicorn range.",
+      "asOf": "2024"
+    },
+    "Merge (Merge.dev)": {
+      "tier": "early-stage",
+      "evidence": "Series B (Oct 2022), $55M raise at ~$317M post-money valuation \u2014 Series B stage and sub-$500M valuation.",
+      "asOf": "2022-10"
+    },
+    "Metabase": {
+      "tier": "early-stage",
+      "evidence": "Latest disclosed round is Series B ($30M, 2021); recent valuation estimate only ~$40.3M.",
+      "asOf": "2025"
+    },
+    "Micron": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NASDAQ: MU), large-cap memory-chip maker, not one of the Mag7.",
+      "asOf": "2026-07"
+    },
+    "Mill Industries": {
+      "tier": "growth-stage-private",
+      "evidence": "Series C round ($70M, Sept 2023) with total funding reported up to ~$232M; Series C+ round meets growth-stage threshold.",
+      "asOf": "2023-09"
+    },
+    "Mindpeak": {
+      "tier": "early-stage",
+      "evidence": "Largest round to date is a $15.3M Series A (Sept 2024); total funding only ~$18.3M.",
+      "asOf": "2024-09"
+    },
+    "Mixpanel": {
+      "tier": "growth-stage-private",
+      "evidence": "Series C (Nov 2021), $200M raise at $1.05B valuation; recent estimate ~$1.1B (2025).",
+      "asOf": "2025"
+    },
+    "Modal": {
+      "tier": "growth-stage-private",
+      "evidence": "Series B (Sept 2025), $87M raise at $1.1B valuation (unicorn); later round reported at $4.65B.",
+      "asOf": "2025-09"
+    },
+    "Modern Treasury": {
+      "tier": "growth-stage-private",
+      "evidence": "Series C, $190M raised, valuation above $2B.",
+      "asOf": "2022"
+    },
+    "Monarch Money": {
+      "tier": "growth-stage-private",
+      "evidence": "Series B (May 2025), $75M raise at $850M valuation.",
+      "asOf": "2025-05"
+    },
+    "MongoDB": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NASDAQ: MDB), large-cap database company, not FAANG/Mag7.",
+      "asOf": "2026-07"
+    },
+    "Monte Carlo Data": {
+      "tier": "growth-stage-private",
+      "evidence": "Series D (May 2022), $135M raise at $1.6B valuation.",
+      "asOf": "2022-05"
+    },
+    "Monzo": {
+      "tier": "growth-stage-private",
+      "evidence": "2024 funding rounds valued the UK challenger bank at ~$5.9B; late-stage secondary share sale ongoing pre-IPO.",
+      "asOf": "2024-10"
+    },
+    "Motional": {
+      "tier": "growth-stage-private",
+      "evidence": "Aptiv/Hyundai autonomous-driving JV; $550M Series B round (Aug 2025) valued it at $6.5B.",
+      "asOf": "2025-08"
+    },
+    "Motive": {
+      "tier": "growth-stage-private",
+      "evidence": "Fleet-management startup (formerly KeepTruckin) with a Series F valuation of ~$2.85B (2022).",
+      "asOf": "2022"
+    },
+    "N26": {
+      "tier": "growth-stage-private",
+      "evidence": "German neobank valued $6-9B across recent private rounds/secondaries; considering new Series F.",
+      "asOf": "2024"
+    },
+    "n8n": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $180M Series C at $2.5B valuation (Oct 2025), with reported valuation later reaching $5.2B (May 2026); Nvidia-backed automation/AI workflow startup.",
+      "asOf": "2025-10"
+    },
+    "Narvar": {
+      "tier": "growth-stage-private",
+      "evidence": "Series C funding (2018) with a $315M valuation reported as of 2022 \u2014 Series C+ round meets growth-stage threshold.",
+      "asOf": "2022"
+    },
+    "Natera": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NASDAQ: NTRA), genetic-testing company, not mega-cap.",
+      "asOf": "2026-07"
+    },
+    "Navan (TripActions)": {
+      "tier": "high-growth-public",
+      "evidence": "IPO'd October 2025 on NASDAQ, ~$6.2B initial valuation.",
+      "asOf": "2025-10"
+    },
+    "Neo4j": {
+      "tier": "growth-stage-private",
+      "evidence": "Series F graph-database company valued at ~$2B (2021).",
+      "asOf": "2021"
+    },
+    "Netskope": {
+      "tier": "high-growth-public",
+      "evidence": "IPO'd September 2025 on NASDAQ (NTSK), ~$8.6B market cap on first trading day.",
+      "asOf": "2025-09"
+    },
+    "Neuralink": {
+      "tier": "growth-stage-private",
+      "evidence": "Series E (June 2025), $650M raise at $9B pre-money valuation.",
+      "asOf": "2025-06"
+    },
+    "New Relic": {
+      "tier": "growth-stage-private",
+      "evidence": "Taken private by Francisco Partners and TPG in Nov 2023 for $6.5B; delisted from NYSE.",
+      "asOf": "2023-11"
+    },
+    "Nextdoor": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: KIND) neighborhood social network.",
+      "asOf": "2026-07"
+    },
+    "Nike": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded mega-cap (NYSE: NKE); not tech but included as large public company tier absent a better fit.",
+      "asOf": "2026-07"
+    },
+    "NimbleRx": {
+      "tier": "early-stage",
+      "evidence": "Modest total funding (~$74.7M across 4 rounds, largest a $28M Series A); nominal 'Series D' round was only $14.7M, and company was later acquired by Swoop (2026), consistent with a smaller-scale private company.",
+      "asOf": "2022-05"
+    },
+    "Nozomi Networks": {
+      "tier": "growth-stage-private",
+      "evidence": "Series E (March 2024), $100M raise, total funding $266M across 8 rounds.",
+      "asOf": "2024-03"
+    },
+    "Nubank": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (NU); Brazilian digital bank, large-cap fintech, not mega-cap.",
+      "asOf": null
+    },
+    "Nuro": {
+      "tier": "growth-stage-private",
+      "evidence": "Private autonomous vehicle company; last major raise valued it around $6B in 2021, Series D+.",
+      "asOf": null
+    },
+    "Nvidia": {
+      "tier": "faang-mag7",
+      "evidence": "Explicitly listed mega-cap tech company in tier definition.",
+      "asOf": null
+    },
+    "Obsidian Security": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $90M Series C in 2022 (SaaS security), total funding ~$119.5M, private venture-backed.",
+      "asOf": null
+    },
+    "Okta": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (OKTA); identity management SaaS, not mega-cap.",
+      "asOf": null
+    },
+    "OKX": {
+      "tier": "growth-stage-private",
+      "evidence": "Private crypto exchange valued at $25B after ICE strategic investment (March 2026); privately held, revenue-funded.",
+      "asOf": null
+    },
+    "Omada Health": {
+      "tier": "high-growth-public",
+      "evidence": "IPO'd on Nasdaq in June 2025 at ~$1.1B valuation ($19/share, ticker OMDA).",
+      "asOf": null
+    },
+    "One Model": {
+      "tier": "early-stage",
+      "evidence": "HR analytics startup, raised $41M Series B in 2023, total funding ~$83.8M; still sub-unicorn scale, closer to early/growth boundary but reported estimated valuation only ~$20.8M per some trackers, small team.",
+      "asOf": null
+    },
+    "OneTrust": {
+      "tier": "growth-stage-private",
+      "evidence": "Privacy/compliance software company valued at over $4.5B in prior funding rounds (Series C+/late-stage private).",
+      "asOf": null
+    },
+    "OpenAI": {
+      "tier": "ai-labs",
+      "evidence": "Explicitly named frontier foundation-model lab in tier definition.",
+      "asOf": null
+    },
+    "OpenSpace": {
+      "tier": "growth-stage-private",
+      "evidence": "Construction-tech startup raised $102M Series D in 2022 at $902M valuation.",
+      "asOf": null
+    },
+    "Orca Security": {
+      "tier": "growth-stage-private",
+      "evidence": "Cloud security company, raised Series C funding at unicorn valuation (~$1.8B) in prior rounds.",
+      "asOf": null
+    },
+    "Osaro": {
+      "tier": "early-stage",
+      "evidence": "AI robotics company, raised $30M Series C in 2021, total funding ~$86.8M but valuation only ~$100M \u2014 below growth-stage threshold.",
+      "asOf": null
+    },
+    "Oura": {
+      "tier": "growth-stage-private",
+      "evidence": "Wearable ring maker, private, valued at $2.55B in 2024 funding round.",
+      "asOf": null
+    },
+    "Outschool": {
+      "tier": "growth-stage-private",
+      "evidence": "Online learning marketplace, private, valued around $3B during 2021 boom, Series C+.",
+      "asOf": null
+    },
+    "Overstory": {
+      "tier": "early-stage",
+      "evidence": "AI wildfire/vegetation intelligence startup, closed $43M Series B in Nov 2025, total funding only $68M \u2014 early-stage scale.",
+      "asOf": null
+    },
+    "Oyster": {
+      "tier": "growth-stage-private",
+      "evidence": "Global employment/HR platform, private, valued at $1.2B (unicorn) after Series C.",
+      "asOf": null
+    },
+    "Palantir Technologies": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (PLTR); large but not among the mag7 list.",
+      "asOf": null
+    },
+    "Partiful": {
+      "tier": "early-stage",
+      "evidence": "Event-planning app, only raised $20M Series A (2022, total $27.3M raised), valued ~$140M; Series B rumor of $400M was disputed by company. Clearly early-stage scale.",
+      "asOf": null
+    },
+    "Patreon": {
+      "tier": "growth-stage-private",
+      "evidence": "Creator monetization platform, private, valued at ~$4B in 2021 Series F round.",
+      "asOf": null
+    },
+    "Payscale": {
+      "tier": "growth-stage-private",
+      "evidence": "Compensation data company, majority growth investment from Francisco Partners valuing it at $325M enterprise value; PE-backed, mature private company.",
+      "asOf": null
+    },
+    "Peloton": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (PTON); consumer fitness tech, not mega-cap.",
+      "asOf": null
+    },
+    "Pendo": {
+      "tier": "growth-stage-private",
+      "evidence": "Product analytics software, private, valued at $2.6B in 2021 Series F round.",
+      "asOf": null
+    },
+    "Perplexity AI": {
+      "tier": "growth-stage-private",
+      "evidence": "AI search company, private, valued at multi-billion dollars ($9B+ in 2025 rounds); primarily an AI product company built atop others' foundation models rather than a frontier foundation-model lab per the tier definition's explicit list.",
+      "asOf": null
+    },
+    "Pfizer": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: PFE) large-cap pharmaceutical company.",
+      "asOf": null
+    },
+    "Phantom": {
+      "tier": "growth-stage-private",
+      "evidence": "Crypto wallet company, private, valued at over $1.2B (unicorn) after Series C/late-stage rounds.",
+      "asOf": null
+    },
+    "Ping Identity": {
+      "tier": "growth-stage-private",
+      "evidence": "Was publicly traded (NYSE) but acquired by Thoma Bravo for $2.8B in Oct 2022, now privately held PE-backed company.",
+      "asOf": null
+    },
+    "Pinterest": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (PINS); large social media company, not mag7.",
+      "asOf": null
+    },
+    "Plaid": {
+      "tier": "growth-stage-private",
+      "evidence": "Fintech infrastructure company, private, valued at $6.1B in 2021 Series D round.",
+      "asOf": null
+    },
+    "PlanetScale": {
+      "tier": "growth-stage-private",
+      "evidence": "Database platform, private, valued around $1B+ (Series C+), unicorn status.",
+      "asOf": null
+    },
+    "Pleo": {
+      "tier": "growth-stage-private",
+      "evidence": "Danish fintech (spend management), private, valued at $4.7B in Series D round.",
+      "asOf": null
+    },
+    "Polymarket": {
+      "tier": "growth-stage-private",
+      "evidence": "Prediction market platform, private, valued at $1B+ in 2025 funding rounds.",
+      "asOf": null
+    },
+    "Posh": {
+      "tier": "early-stage",
+      "evidence": "AI banking chatbot company (Posh AI/Posh Technologies), raised $45M Series B in June 2024, total funding only ~$72.5M \u2014 early-stage scale.",
+      "asOf": null
+    },
+    "PostHog": {
+      "tier": "growth-stage-private",
+      "evidence": "Product analytics platform, private, YC-backed, raised Series C funding, valued over $1B.",
+      "asOf": null
+    },
+    "Postman": {
+      "tier": "growth-stage-private",
+      "evidence": "API development platform, private, valued at $5.6B in Series D round.",
+      "asOf": null
+    },
+    "Postscript": {
+      "tier": "growth-stage-private",
+      "evidence": "SMS marketing platform, private, raised Series C funding, valuation in the hundreds of millions to $1B+ range.",
+      "asOf": null
+    },
+    "PrizePicks": {
+      "tier": "growth-stage-private",
+      "evidence": "Daily fantasy sports company, private, valued at approximately $1.5B.",
+      "asOf": null
+    },
+    "Procurify": {
+      "tier": "growth-stage-private",
+      "evidence": "Spend management software, raised $50M USD Series C in Oct 2023, total funding over $70M; described as significant up round.",
+      "asOf": null
+    },
+    "project44": {
+      "tier": "growth-stage-private",
+      "evidence": "Unicorn valued at $2.7B following $80M raise (Nov 2022), total funding of $912M from TPG, Goldman Sachs and others.",
+      "asOf": "2022-11-03"
+    },
+    "Prudential": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded large-cap financial services/insurance company (NYSE: PRU).",
+      "asOf": null
+    },
+    "Qualia": {
+      "tier": "growth-stage-private",
+      "evidence": "Real estate closing software, raised $65M Series D in Dec 2020 at over $1B valuation (unicorn).",
+      "asOf": null
+    },
+    "QuickNode": {
+      "tier": "growth-stage-private",
+      "evidence": "Blockchain infrastructure company, raised $60M Series B in Jan 2023 at $800M valuation.",
+      "asOf": null
+    },
+    "Railway": {
+      "tier": "early-stage",
+      "evidence": "Developer infrastructure/hosting startup, private, raised Series B funding, still relatively small/young company.",
+      "asOf": null
+    },
+    "Ramp": {
+      "tier": "growth-stage-private",
+      "evidence": "Corporate card/spend management fintech, private, valued at approximately $16B in recent funding rounds.",
+      "asOf": null
+    },
+    "Reddit": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (RDDT) since March 2024.",
+      "asOf": null
+    },
+    "Redis": {
+      "tier": "growth-stage-private",
+      "evidence": "In-memory database company, private, valued at over $2B in prior funding rounds (Series G/late-stage).",
+      "asOf": null
+    },
+    "Redwood Materials": {
+      "tier": "growth-stage-private",
+      "evidence": "Battery recycling/materials company, private, valued at approximately $5B in Series D round.",
+      "asOf": null
+    },
+    "Relativity Space": {
+      "tier": "growth-stage-private",
+      "evidence": "3D-printed rocket company, private, valued at approximately $4.2B in Series E round.",
+      "asOf": null
+    },
+    "Remote.com": {
+      "tier": "growth-stage-private",
+      "evidence": "Global HR/payroll platform, private, valued at approximately $3B in Series C round.",
+      "asOf": null
+    },
+    "Render": {
+      "tier": "growth-stage-private",
+      "evidence": "Private; raised $100M Series C extension at $1.5B valuation (Feb 2026)",
+      "asOf": "2026-02"
+    },
+    "Rent the Runway": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on Nasdaq (RENT), not mega-cap",
+      "asOf": "2026-07"
+    },
+    "Replit": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI coding platform, valued at ~$1.16B (2023 raise), later rounds reported higher",
+      "asOf": "2023"
+    },
+    "Ripple": {
+      "tier": "growth-stage-private",
+      "evidence": "Private fintech/crypto co, raised $500M at $40B valuation (Nov 2025)",
+      "asOf": "2025-11"
+    },
+    "Riskified": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (RSKD)",
+      "asOf": "2026-07"
+    },
+    "Ro": {
+      "tier": "growth-stage-private",
+      "evidence": "Private telehealth co, valued at $7B (2022 raise, still most recent priced round), ~$1B total raised",
+      "asOf": "2022-02"
+    },
+    "Robinhood": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on Nasdaq (HOOD)",
+      "asOf": "2026-07"
+    },
+    "Roblox": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (RBLX)",
+      "asOf": "2026-07"
+    },
+    "Roboflow": {
+      "tier": "early-stage",
+      "evidence": "Private computer-vision startup, Series B ($40M raised Nov 2024), total funding only ~$63.6M, valuation undisclosed and modest",
+      "asOf": "2024-11"
+    },
+    "Roku": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on Nasdaq (ROKU)",
+      "asOf": "2026-07"
+    },
+    "Rondo Energy": {
+      "tier": "growth-stage-private",
+      "evidence": "Private thermal battery/energy storage startup, Series C funding raising several hundred million",
+      "asOf": "2024"
+    },
+    "RTX (Raytheon Technologies)": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded (NYSE: RTX) mega-cap aerospace/defense company, not on mag7 list.",
+      "asOf": null
+    },
+    "Runway": {
+      "tier": "ai-labs",
+      "evidence": "Core business is building frontier foundation models for video/image generation; private, valued at $3B (Apr 2025 Series D) rising to $5.3B (2026 Series E)",
+      "asOf": "2026"
+    },
+    "Safe (Gnosis Safe)": {
+      "tier": "growth-stage-private",
+      "evidence": "Crypto smart-contract wallet infra, raised $100M in funding (rebrand from Gnosis Safe), secures $100B+ in assets",
+      "asOf": "2022"
+    },
+    "Saildrone": {
+      "tier": "growth-stage-private",
+      "evidence": "Private ocean-drone/autonomous vessel company, Series C+ funding",
+      "asOf": "2023"
+    },
+    "Salesforce": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (CRM), large-cap but not among the eight FAANG/Mag7 companies defined for this tier",
+      "asOf": "2026-07"
+    },
+    "Salesloft": {
+      "tier": "growth-stage-private",
+      "evidence": "Private sales-engagement SaaS, later-stage venture funding (PE investment from Vista/Advent-backed rounds)",
+      "asOf": "2023"
+    },
+    "Salt Security": {
+      "tier": "growth-stage-private",
+      "evidence": "Private API security company, Series D funding at ~$1.4B valuation",
+      "asOf": "2022"
+    },
+    "Samsara": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (IOT)",
+      "asOf": "2026-07"
+    },
+    "Sanity": {
+      "tier": "growth-stage-private",
+      "evidence": "Private headless CMS, Series C funding",
+      "asOf": "2021"
+    },
+    "Sardine": {
+      "tier": "growth-stage-private",
+      "evidence": "Private fraud-prevention fintech, Series C funding raising valuation over $1B",
+      "asOf": "2023"
+    },
+    "Saronic": {
+      "tier": "growth-stage-private",
+      "evidence": "Private autonomous-boat defense startup, Series C funding valuing company multiple billions",
+      "asOf": "2024"
+    },
+    "Saviynt": {
+      "tier": "growth-stage-private",
+      "evidence": "Private identity-security company, large PE-backed funding round (TPG-led, ~$2B+ valuation)",
+      "asOf": "2024"
+    },
+    "Scale AI": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data-labeling/AI infra company, valued at $14B+ after Meta's 2024 investment",
+      "asOf": "2024"
+    },
+    "SeatGeek": {
+      "tier": "growth-stage-private",
+      "evidence": "Private ticketing marketplace, Series E funding, valuation over $1B",
+      "asOf": "2022"
+    },
+    "Secureframe": {
+      "tier": "early-stage",
+      "evidence": "Private compliance-automation startup, latest round is Series B ($56M, Feb 2022) at $294-350M valuation, no Series C found",
+      "asOf": "2022-02"
+    },
+    "Semgrep": {
+      "tier": "growth-stage-private",
+      "evidence": "Private code-security company (formerly r2c), Series C/D funding",
+      "asOf": "2023"
+    },
+    "Sentry": {
+      "tier": "growth-stage-private",
+      "evidence": "Private developer-tools company, Series F funding at ~$3B valuation",
+      "asOf": "2022"
+    },
+    "Shield AI": {
+      "tier": "growth-stage-private",
+      "evidence": "Private defense-tech (autonomous systems), Series F funding, valuation ~$5.3B",
+      "asOf": "2024"
+    },
+    "Shift Technology": {
+      "tier": "growth-stage-private",
+      "evidence": "Private insurtech (fraud/claims AI), Series E funding",
+      "asOf": "2021"
+    },
+    "Sierra": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI customer-agent startup founded by Bret Taylor, valued at ~$10B in 2025 funding rounds",
+      "asOf": "2025"
+    },
+    "Sigma Computing": {
+      "tier": "growth-stage-private",
+      "evidence": "Private BI/analytics company, Series D funding, valuation over $1.5B",
+      "asOf": "2024"
+    },
+    "SingleStore": {
+      "tier": "growth-stage-private",
+      "evidence": "Private distributed-database company, late-stage funding (Series F/G)",
+      "asOf": "2022"
+    },
+    "Skydio": {
+      "tier": "growth-stage-private",
+      "evidence": "Private drone company, Series E funding, valuation ~$2.2B",
+      "asOf": "2023"
+    },
+    "SnapLogic": {
+      "tier": "growth-stage-private",
+      "evidence": "Private integration-platform company, later-stage venture funding (Series F+)",
+      "asOf": "2019"
+    },
+    "Snowflake": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (SNOW)",
+      "asOf": "2026-07"
+    },
+    "Socket": {
+      "tier": "growth-stage-private",
+      "evidence": "Private supply-chain security startup, Series C funding at $1B valuation (2026)",
+      "asOf": "2026-05"
+    },
+    "Socure": {
+      "tier": "growth-stage-private",
+      "evidence": "Private identity-verification company, Series E/F funding, valuation ~$4.5B",
+      "asOf": "2021"
+    },
+    "SoFi": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on Nasdaq (SOFI)",
+      "asOf": "2026-07"
+    },
+    "SonarSource": {
+      "tier": "growth-stage-private",
+      "evidence": "Private code-quality/security company, PE-backed (Advent/EQT/BlackRock investments) at multi-billion valuation",
+      "asOf": "2023"
+    },
+    "SoundCloud": {
+      "tier": "growth-stage-private",
+      "evidence": "Private music platform, $850M valuation per 2024 SiriusXM minority investment reporting",
+      "asOf": "2024"
+    },
+    "Span": {
+      "tier": "growth-stage-private",
+      "evidence": "Private home-electrification/smart panel startup, Series D funding",
+      "asOf": "2023"
+    },
+    "Spotify": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (SPOT), not a mega-cap (~$100B range), music streaming tech company.",
+      "asOf": null
+    },
+    "Squarespace": {
+      "tier": "growth-stage-private",
+      "evidence": "Formerly public (NYSE:SQSP); taken private by Permira in 2024 in a deal valuing it at roughly $6.6-6.9B.",
+      "asOf": null
+    },
+    "Starburst": {
+      "tier": "growth-stage-private",
+      "evidence": "Private data-query company; Series D round valued it at ~$3.35B (2021).",
+      "asOf": null
+    },
+    "Stitch Fix": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (SFIX), small-cap e-commerce/tech company.",
+      "asOf": null
+    },
+    "Strava": {
+      "tier": "growth-stage-private",
+      "evidence": "Private fitness-social app; last reported valuation ~$1.5B.",
+      "asOf": null
+    },
+    "Stripe": {
+      "tier": "growth-stage-private",
+      "evidence": "Private payments company; internal tender offer valuations put it around $85-91.5B as of 2024-2025, far past Series C threshold.",
+      "asOf": null
+    },
+    "Sumo Logic": {
+      "tier": "growth-stage-private",
+      "evidence": "Formerly public (NASDAQ:SUMO); taken private by Francisco Partners in May 2023 for $1.7B.",
+      "asOf": null
+    },
+    "Supabase": {
+      "tier": "growth-stage-private",
+      "evidence": "Private open-source database platform; Series D/E rounds pushed valuation to roughly $2B (2024).",
+      "asOf": null
+    },
+    "Synthesia": {
+      "tier": "growth-stage-private",
+      "evidence": "Private AI video company; Series D (2024) valued it at $2.1B.",
+      "asOf": null
+    },
+    "Sysdig": {
+      "tier": "growth-stage-private",
+      "evidence": "Private cloud security company; Series F (2021) valued it at ~$1.19B.",
+      "asOf": null
+    },
+    "T-Mobile": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded mega-cap telecom on NASDAQ (TMUS), not in the specified mag7 list.",
+      "asOf": null
+    },
+    "Tanium": {
+      "tier": "growth-stage-private",
+      "evidence": "Private endpoint security company; historically valued near $9B (2021 round), remains private.",
+      "asOf": null
+    },
+    "Target": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (TGT), large-cap retailer.",
+      "asOf": null
+    },
+    "Temporal": {
+      "tier": "growth-stage-private",
+      "evidence": "Private workflow-orchestration company (Temporal Technologies); Series C (2022) valued it at ~$1.5B.",
+      "asOf": null
+    },
+    "thatgamecompany (Sky: Children of the Light)": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $160M growth investment led by TPG in March 2022 to expand Sky: Children of the Light into a metaverse experience; large late-stage private raise from a growth-equity firm.",
+      "asOf": "2022-03"
+    },
+    "Thoughtworks": {
+      "tier": "growth-stage-private",
+      "evidence": "Formerly public (NASDAQ:TWKS); taken private by Apax Funds in a $1.75B deal completed November 2024.",
+      "asOf": null
+    },
+    "Thumbtack": {
+      "tier": "growth-stage-private",
+      "evidence": "Private services marketplace; 2021 round valued it at ~$3.2B.",
+      "asOf": null
+    },
+    "Tinder": {
+      "tier": "high-growth-public",
+      "evidence": "Wholly owned brand of publicly traded Match Group (NASDAQ:MTCH), which sets comp practices for its brands.",
+      "asOf": null
+    },
+    "Tines": {
+      "tier": "growth-stage-private",
+      "evidence": "Private security-automation company; Series C (2024) valued it at ~$1.25B.",
+      "asOf": null
+    },
+    "Toast": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (TOST), restaurant tech company.",
+      "asOf": null
+    },
+    "Torq": {
+      "tier": "growth-stage-private",
+      "evidence": "Private security-automation company; Series C (2024) valued it at ~$1.75B.",
+      "asOf": null
+    },
+    "Trace3": {
+      "tier": "growth-stage-private",
+      "evidence": "Private IT consultancy/reseller acquired by Apollo Funds in 2025 for ~$1.65B, ~$1.4B annual revenue scale.",
+      "asOf": null
+    },
+    "Trainline": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on London Stock Exchange (LSE:TRN), UK rail-ticketing tech company.",
+      "asOf": null
+    },
+    "Transmit Security": {
+      "tier": "growth-stage-private",
+      "evidence": "Private identity-security company; 2021 round valued it at ~$2.2B.",
+      "asOf": null
+    },
+    "Truveta": {
+      "tier": "growth-stage-private",
+      "evidence": "Private healthcare data company; Series C (Jan 2025) brought valuation above $1B, reaching unicorn status.",
+      "asOf": null
+    },
+    "Turnkey": {
+      "tier": "early-stage",
+      "evidence": "Private crypto wallet-infrastructure startup; only reached Series B ($30M, 2025) with ~$50M total raised and undisclosed but modest valuation.",
+      "asOf": null
+    },
+    "Twilio": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (TWLO), communications-API tech company.",
+      "asOf": null
+    },
+    "Twitch": {
+      "tier": "faang-mag7",
+      "evidence": "Wholly owned subsidiary of Amazon; compensation typically follows Amazon's structure.",
+      "asOf": null
+    },
+    "UiPath": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (PATH), enterprise automation software company.",
+      "asOf": null
+    },
+    "Valtech": {
+      "tier": "growth-stage-private",
+      "evidence": "Private PE-backed digital agency; BC Partners investment valued it at ~$1.4B (2021).",
+      "asOf": null
+    },
+    "Vannevar Labs": {
+      "tier": "growth-stage-private",
+      "evidence": "Private defense-tech company; October 2024 valuation reached ~$1.5B.",
+      "asOf": null
+    },
+    "Vanta": {
+      "tier": "growth-stage-private",
+      "evidence": "Private security-compliance company; Series C (2024) valued it at ~$2.45B.",
+      "asOf": null
+    },
+    "Varda Space Industries": {
+      "tier": "growth-stage-private",
+      "evidence": "Private in-space manufacturing company; Series C/D rounds valued it at ~$1.58B.",
+      "asOf": null
+    },
+    "Vercel": {
+      "tier": "growth-stage-private",
+      "evidence": "Private web-infrastructure company; Series E and later rounds valued it in the multi-billion-dollar range (>$3B).",
+      "asOf": null
+    },
+    "Veriff": {
+      "tier": "growth-stage-private",
+      "evidence": "Private identity-verification company; Series C (2022) valued it at ~$1.5B.",
+      "asOf": null
+    },
+    "Verizon": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE (VZ), large-cap telecom.",
+      "asOf": null
+    },
+    "Verkada": {
+      "tier": "growth-stage-private",
+      "evidence": "Private physical-security company; Series F (2024) valued it at ~$4.5B.",
+      "asOf": null
+    },
+    "Via": {
+      "tier": "high-growth-public",
+      "evidence": "Via Transportation completed its US IPO, pricing at $46/share, valuing the company at ~$3.65B and listing on NYSE under VIA.",
+      "asOf": null
+    },
+    "Virta Health": {
+      "tier": "growth-stage-private",
+      "evidence": "Private digital-health company; Series E (2021) valued it at ~$2B.",
+      "asOf": null
+    },
+    "Visa": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded mega-cap on NYSE (V), payments network, not in the specified mag7 list.",
+      "asOf": null
+    },
+    "Voodoo": {
+      "tier": "growth-stage-private",
+      "evidence": "Private French mobile-gaming company; 2022 valuation reached ~$2.31B, with Tencent and GBL as investors.",
+      "asOf": null
+    },
+    "VTS": {
+      "tier": "growth-stage-private",
+      "evidence": "Private commercial real-estate software company; Series E (Sept 2022) valued it at ~$1.7B.",
+      "asOf": null
+    },
+    "Waabi": {
+      "tier": "growth-stage-private",
+      "evidence": "Private autonomous-trucking company; reached unicorn status via a $750M Series C round and Uber-backed milestone capital (2026).",
+      "asOf": null
+    },
+    "Warner Bros Discovery": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ (WBD), large media/entertainment company.",
+      "asOf": null
+    },
+    "Waymo": {
+      "tier": "growth-stage-private",
+      "evidence": "Alphabet subsidiary that raises its own external capital and valuation; latest round (Feb 2026) valued it at $126B, led by outside investors alongside Alphabet.",
+      "asOf": null
+    },
+    "Wealthfront": {
+      "tier": "growth-stage-private",
+      "evidence": "Private robo-advisor; last primary valuation ~$1.4B (2021), remains private.",
+      "asOf": null
+    },
+    "Weaviate": {
+      "tier": "growth-stage-private",
+      "evidence": "Private vector-database company; closed a Series C round (Oct 2025), satisfying the Series C+ private-company criterion.",
+      "asOf": null
+    },
+    "Whoop": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $575M Series G at $10.1B valuation (March 2026), led by Collaborative Fund.",
+      "asOf": "2026-03-31"
+    },
+    "Workato": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $200M Series E at $5.7B valuation (2021); secondary markets in 2025 suggested valuation nearer $1.7B, still well above growth-stage threshold.",
+      "asOf": "2021-11-10"
+    },
+    "WorkOS": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $100M Series C at $2B valuation, led by Meritech and Sapphire.",
+      "asOf": "2026-03"
+    },
+    "Writer": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $200M Series C at $1.9B valuation (Nov 2024); enterprise generative-AI platform building proprietary Palmyra models but not a frontier/foundation-model lab on the scale of OpenAI/Anthropic.",
+      "asOf": "2024-11-12"
+    },
+    "Yotpo": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $230M Series F at $1.4B valuation (2021), later valuation cited near $2.5B with Shopify investment.",
+      "asOf": "2021-03-18"
+    },
+    "Yugabyte": {
+      "tier": "growth-stage-private",
+      "evidence": "Closed $188M Series C at $1.3B+ valuation (Oct 2021).",
+      "asOf": "2021-10-28"
+    },
+    "Zapier": {
+      "tier": "growth-stage-private",
+      "evidence": "Private company valued at $5B (2021 post-money, some estimates up to $7B); $310M revenue in 2024, capital-efficient bootstrapped growth.",
+      "asOf": "2024"
+    },
+    "Zeta Global": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE under ticker ZETA, market cap approximately $5B.",
+      "asOf": "2026-07"
+    },
+    "Zip": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $190M Series D at $2.2B valuation (Oct 2024), led by BOND.",
+      "asOf": "2024-10-21"
+    },
+    "Zipline": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $600M+ (Series H expanded to $800M) at $7.6B valuation (Jan-Mar 2026).",
+      "asOf": "2026-01-20"
+    },
+    "ZipRecruiter": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NYSE under ticker ZIP, market cap approximately $320M as of July 2026.",
+      "asOf": "2026-07-02"
+    },
+    "Zocdoc": {
+      "tier": "growth-stage-private",
+      "evidence": "Post-money valuation of $2.62B as of Series D-2/E round in Feb 2021; has raised $1.15B total, remains private with no IPO.",
+      "asOf": "2021-02-11"
+    },
+    "ZoomInfo": {
+      "tier": "high-growth-public",
+      "evidence": "Publicly traded on NASDAQ under ticker GTM, market cap approximately $0.85B as of June 2026.",
+      "asOf": "2026-06-26"
+    },
+    "Zoox": {
+      "tier": "faang-mag7",
+      "evidence": "Acquired by Amazon in 2020 for $1.2B and continues to operate as an Amazon-owned autonomous-vehicle subsidiary, aligning its comp structure with Amazon (RSUs etc.).",
+      "asOf": "2020-06-26"
+    },
+    "Zopa": {
+      "tier": "growth-stage-private",
+      "evidence": "UK digital bank raised $87M at valuation exceeding $1B (Dec 2024), reaffirming unicorn status; considering but has not completed an IPO.",
+      "asOf": "2024-12-05"
+    },
+    "Zuora": {
+      "tier": "growth-stage-private",
+      "evidence": "Formerly public (NYSE:ZUO); taken private by Silver Lake/GIC in a $1.7B deal completed Feb 2025 and delisted.",
+      "asOf": "2025-02-14"
+    },
+    "Zwift": {
+      "tier": "growth-stage-private",
+      "evidence": "Raised $450M Series C in 2020 at valuation north of $1B, current valuation cited around $1B.",
+      "asOf": "2020-09"
+    }
+  },
+  "unclearCompanies": [
+    {
+      "company": "3M",
+      "evidence": "Public mega-cap (NYSE: MMM) but a diversified industrial/manufacturing conglomerate, not a tech/tech-adjacent company \u2014 doesn't fit the tier's intent."
+    },
+    {
+      "company": "Abbott",
+      "evidence": "Public mega-cap healthcare/medical-devices company (NYSE: ABT), not tech/tech-adjacent."
+    },
+    {
+      "company": "Agoda",
+      "evidence": "Wholly-owned subsidiary of publicly traded Booking Holdings, not a standalone comp-comparable entity."
+    },
+    {
+      "company": "Allstate",
+      "evidence": "Public mega-cap insurance company (NYSE: ALL), not tech/tech-adjacent."
+    },
+    {
+      "company": "Anaplan",
+      "evidence": "Formerly public (NYSE: PLAN); taken private by Thoma Bravo for $10.7B in 2022. Now a mature PE-owned company without typical venture-growth comp structures \u2014 an 'old large private co' case."
+    },
+    {
+      "company": "Astra",
+      "evidence": "Formerly public (NASDAQ: ASTR) small-launch space company; taken private by its founders in a $0.50/share buyout in July 2024 after a sharp decline \u2014 atypical comp comparable."
+    },
+    {
+      "company": "AT&T",
+      "evidence": "Public mega-cap telecom (NYSE: T); large but slow-growth legacy telecom, not a fit for tech-oriented comp tiers."
+    },
+    {
+      "company": "BeyondTrust",
+      "evidence": "Mature cybersecurity company owned by private-equity firms Francisco Partners (majority, since 2018) and Clearlake Capital (minority, since 2021); an 'old large private co' PE buyout without typical venture-growth comp structure."
+    },
+    {
+      "company": "Brigit",
+      "evidence": "Fintech cash-advance app being acquired by Upbound Group in a deal worth up to $460M (announced 2024/closing ~Q1 2025); no longer an independent private company with its own comp market."
+    },
+    {
+      "company": "Coupa",
+      "evidence": "Formerly public spend-management company taken private by Thoma Bravo in an $8B buyout completed February 2023; no longer public or venture-backed, so it doesn't cleanly fit the growth-stage-private VC framework."
+    },
+    {
+      "company": "Crunchyroll",
+      "evidence": "Wholly owned subsidiary of Sony (via Sony Pictures Entertainment/Crunchyroll LLC since 2021), not an independently valued startup with its own comp market."
+    },
+    {
+      "company": "Effectual",
+      "evidence": "Bootstrapped cloud-consulting firm (~200 employees, ~$40M ARR) with no disclosed VC funding rounds or valuation \u2014 insufficient evidence to place into a funding-stage tier."
+    },
+    {
+      "company": "FREE NOW",
+      "evidence": "European ride-hailing joint venture, formerly owned by BMW/Mercedes, acquired by Lyft for ~$199M in April 2025; foreign subsidiary with no independent US comp analog."
+    },
+    {
+      "company": "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
+      "evidence": "Wholly-owned government-IT-services subsidiary of General Dynamics Corp; per rules, government contractor subsidiaries are classified as unclear rather than guessed."
+    },
+    {
+      "company": "GovTech (Singapore)",
+      "evidence": "GovTech is a statutory board of the Singapore government (under the Prime Minister's Office), not a private-sector company, so there is no comparable comp-market tier."
+    },
+    {
+      "company": "Hasbro",
+      "evidence": "Publicly traded (NASDAQ: HAS) but a toy/entertainment company, not a tech or tech-adjacent business, so it doesn't fit the defined tiers well."
+    },
+    {
+      "company": "Home Chef",
+      "evidence": "Meal-kit company acquired by and operated as a subsidiary of Kroger since 2018; not an independent company with its own comp market."
+    },
+    {
+      "company": "Intellias",
+      "evidence": "Private Ukraine-based IT outsourcing/staffing company with over 3,000 employees; no disclosed VC funding rounds or valuation, and largely a foreign staffing firm without a clear US comp analog."
+    },
+    {
+      "company": "Ippon Technologies",
+      "evidence": "Private IT/software consulting firm (~500-1,000 employees) with no disclosed VC funding rounds or valuation data available."
+    },
+    {
+      "company": "JetBrains",
+      "evidence": "Large, long-established private developer-tools company that is self-funded/bootstrapped with no disclosed VC rounds or public valuation, fitting the 'old large private co' unclear case."
+    },
+    {
+      "company": "Johnson & Johnson",
+      "evidence": "Mega-cap public company (NYSE: JNJ) but a pharmaceutical/healthcare business, not tech or tech-adjacent, so it does not fit the defined comp tiers."
+    },
+    {
+      "company": "Lucid Motors",
+      "evidence": "Publicly traded (NASDAQ: LCID) EV maker \u2014 evidence and tier conflict (source flags it as not mega-cap tech, but was mistakenly tiered faang-mag7); insufficient consistent evidence to place confidently."
+    },
+    {
+      "company": "Modus Create",
+      "evidence": "Digital-services/consulting firm with a minority PE growth investment from JLL Partners; no disclosed valuation or funding stage comparable to a product startup."
+    },
+    {
+      "company": "Nordstrom",
+      "evidence": "Delisted from NYSE in May 2025 after an all-cash take-private acquisition by the Nordstrom family and Liverpool ($24.25/share); no longer a public comp or venture-style private company, so tier doesn't map cleanly."
+    },
+    {
+      "company": "R/GA",
+      "evidence": "Ad/design agency, recently sold by Interpublic Group back to management and PE firm Truelink Capital (March 2025); not a typical VC-funded tech startup, no clear comp-tier analog."
+    },
+    {
+      "company": "Reply",
+      "evidence": "Reply S.p.A. is an Italian IT consulting firm publicly traded on Borsa Italiana; no direct US comp-market analog"
+    },
+    {
+      "company": "Riot Games",
+      "evidence": "Wholly-owned subsidiary of Tencent since 2015 (100% stake); no standalone comp data as an independent company"
+    },
+    {
+      "company": "Robots & Pencils",
+      "evidence": "Small private IT consultancy (~150 employees), no disclosed funding rounds or valuation data found"
+    },
+    {
+      "company": "Rockstar Games",
+      "evidence": "Wholly-owned game studio subsidiary of publicly traded Take-Two Interactive; no standalone comp data"
+    },
+    {
+      "company": "Rover",
+      "evidence": "Formerly public (ROVR); taken private by Blackstone in a $2.3B all-cash deal (Feb 2024), now PE-owned with no independent comp benchmark"
+    },
+    {
+      "company": "Scopely",
+      "evidence": "Acquired by Savvy Games Group (Saudi PIF-backed) for $4.9B in 2023; now a subsidiary, not independently comp-benchmarked"
+    },
+    {
+      "company": "Sequoia (Sequoia One)",
+      "evidence": "Sequoia One is a PEO/HR-services offering from VC firm Sequoia Capital, not an independent operating company with its own comp market"
+    },
+    {
+      "company": "SmartBear",
+      "evidence": "Private, owned by private-equity firms Francisco Partners and Vista Equity Partners since 2017; no venture-style valuation/comp data available"
+    },
+    {
+      "company": "Solita",
+      "evidence": "Finnish private IT/digital consultancy; foreign company with no direct US comp analog"
+    },
+    {
+      "company": "VML (Wunderman Thompson)",
+      "evidence": "Merged ad agency unit fully owned by publicly traded WPP plc (LSE:WPP); no standalone US comp analog or independent valuation data."
+    },
+    {
+      "company": "VSCO",
+      "evidence": "Private photo-editing app; last raised a Series B in 2019 with a reported ~$0.6B valuation, but funding data is stale (no rounds since) making current comp tier uncertain."
+    },
+    {
+      "company": "Wolt",
+      "evidence": "Acquired by DoorDash in 2022 (~$2.8-8.1B deal); now operates as a DoorDash subsidiary in Europe/Middle East with no independent US comp benchmark."
+    },
+    {
+      "company": "Zenput",
+      "evidence": "Acquired by CrunchTime! in 2022 (undisclosed terms); now rebranded as Crunchtime Ops Execution with no independent standalone comp benchmark."
+    }
+  ]
+}

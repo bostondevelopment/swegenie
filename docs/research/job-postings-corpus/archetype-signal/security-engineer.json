@@ -1,0 +1,330 @@
+{
+  "archetype_id": "security-engineer",
+  "postings_analyzed": 586,
+  "top_requirements": [
+    {
+      "requirement": "Cloud platform fluency (AWS most common, then GCP/Azure)",
+      "approx_frequency": "389 of 586 mention AWS, 208 GCP, 174 Azure - roughly two-thirds touch at least one major cloud"
+    },
+    {
+      "requirement": "Python (scripting/tooling/automation)",
+      "approx_frequency": "352 of 586 (~60%)"
+    },
+    {
+      "requirement": "Incident response experience/ownership",
+      "approx_frequency": "240 of 586 (~41%)"
+    },
+    {
+      "requirement": "Threat modeling ability",
+      "approx_frequency": "223 of 586 (~38%)"
+    },
+    {
+      "requirement": "CI/CD pipeline security / DevSecOps integration",
+      "approx_frequency": "205 of 586 (~35%)"
+    },
+    {
+      "requirement": "Kubernetes/container security",
+      "approx_frequency": "189 of 586 (~32%)"
+    },
+    {
+      "requirement": "IAM (identity and access management) depth",
+      "approx_frequency": "162 of 586 (~28%)"
+    },
+    {
+      "requirement": "SIEM tooling (Splunk and similar)",
+      "approx_frequency": "113 of 586 (~19%), Splunk specifically named in 50"
+    },
+    {
+      "requirement": "Penetration testing / offensive security exposure",
+      "approx_frequency": "100 of 586 (~17%), overlapping with 73 bug-bounty mentions, 52 red-team, 24 Burp Suite"
+    },
+    {
+      "requirement": "Security certifications (CISSP most common, then OSCP/CISM/CEH)",
+      "approx_frequency": "CISSP in 85 (~15%), OSCP 31, CISM 21, CEH 10 - common but usually preferred, not hard-gating"
+    },
+    {
+      "requirement": "SAST/DAST tooling experience (e.g. Semgrep)",
+      "approx_frequency": "SAST-related terms in 189, DAST in 65, Semgrep named specifically in 21"
+    },
+    {
+      "requirement": "Compliance framework fluency (NIST, SOC 2, ISO 27001, PCI, FedRAMP)",
+      "approx_frequency": "NIST 175, ISO 27001 69, SOC 2 68, PCI 29, FedRAMP 22 - common as context, rarely the sole job focus"
+    },
+    {
+      "requirement": "AI/LLM security exposure (threat modeling agentic systems, prompt injection)",
+      "approx_frequency": "LLM in 123 of 586 (~21%), 'agentic' in 121, 'AI security' in 76, 'prompt injection' in 56 - now mainstream, not fringe"
+    },
+    {
+      "requirement": "Government security clearance",
+      "approx_frequency": "64 of 586 (~11%), concentrated almost entirely at defense/gov contractors (Anduril 28, Palantir 14, Boeing 8, GDIT 8)"
+    },
+    {
+      "requirement": "5+ years of relevant experience as modal bar",
+      "approx_frequency": "\"5 years\" is the single most-cited experience threshold across postings that state one, consistent with senior-leaning hiring"
+    }
+  ],
+  "top_responsibilities": [
+    "Design and review security architecture/controls for new and existing systems, often via formal design-review or threat-modeling processes gating launches.",
+    "Run vulnerability and risk assessments across applications, cloud infrastructure, and networks, then track remediation to closure rather than just reporting findings.",
+    "Own or rotate through incident response: detection, triage, containment, and postmortem writing, frequently with a formal on-call rotation (on-call named in 79 of 586 postings).",
+    "Embed with product/engineering teams as a security partner - reviewing PRs and designs, writing secure-coding guidance, and being measured on whether developers actually adopt tooling/guardrails rather than just whether the guardrails exist (\"cross-functional\" appears in 183 postings, \"embedded\" in 116).",
+    "Build and maintain detection engineering and SIEM content (correlation rules, alerting logic) for a security operations function.",
+    "Integrate security scanning (SAST/DAST/dependency scanning) directly into CI/CD pipelines and developer tooling (DevSecOps), rather than as a separate late-stage gate.",
+    "Administer and harden IAM: least-privilege access reviews, SSO/identity provider integration, secrets management, and access-certification processes.",
+    "Increasingly, threat-model and red-team AI/agentic product surfaces specifically - prompt injection, tool/MCP-server misuse, and LLM-driven pipelines - as a named, growing slice of scope rather than a hypothetical.",
+    "Maintain and evidence compliance postures (SOC 2, ISO 27001, PCI, FedRAMP, NIST) as an engineering-adjacent responsibility, translating audit requirements into concrete controls.",
+    "At senior/staff/principal levels: run or scale a security program area (e.g., detection engineering, product security) and mentor other engineers, with less individual ticket-level work."
+  ],
+  "comp_signals": [
+    {
+      "company": "Stripe",
+      "range_text": "$194,251 - $268,400 (Security Engineer)",
+      "source_url": "https://stripe.com/jobs/search?gh_jid=7923191"
+    },
+    {
+      "company": "Vercel",
+      "range_text": "$208,000 - $312,000 (Security Engineer, Detection Response)",
+      "source_url": "https://job-boards.greenhouse.io/vercel/jobs/6111332004"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "$275,000 - $330,000 (Principal Security Engineer)",
+      "source_url": "https://coreweave.com/careers/job?4656447006&board=coreweave&gh_jid=4656447006"
+    },
+    {
+      "company": "Postman",
+      "range_text": "$275,000 - $300,000 (Principal Offensive Security Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/postman/jobs/7721349003"
+    },
+    {
+      "company": "Marqeta",
+      "range_text": "$256,800 - $321,000 (top band shown, Principal Security Engineer, Product & AI)",
+      "source_url": "https://job-boards.greenhouse.io/marqeta/jobs/7868953"
+    },
+    {
+      "company": "Sentry",
+      "range_text": "$200,000 - $295,000 (Senior Security Engineer, Application & Platform Security)",
+      "source_url": "https://jobs.ashbyhq.com/sentry/3c3064ea-4d49-491e-ba93-05e66bda9ed8"
+    },
+    {
+      "company": "Gemini",
+      "range_text": "$168,000 - $240,000 (Staff Platform Security Engineer)",
+      "source_url": "https://boards.greenhouse.io/embed/job_app?for=gemini&token=7905050&gh_jid=7905050"
+    },
+    {
+      "company": "Brex",
+      "range_text": "$192,000 - $240,000 (Senior Application Security Engineer, Remote)",
+      "source_url": "https://www.brex.com/careers/8590025002?gh_jid=8590025002"
+    },
+    {
+      "company": "Palantir Technologies",
+      "range_text": "$135,000 - $200,000 (Application Security Engineer) vs. $90,000 - $150,000 for Forward Deployed Security Engineer - US Government - a notably lower band for the government-facing track",
+      "source_url": "https://jobs.lever.co/palantir/7e3ec54c-b73a-4014-8ef3-cdce8a4953c4"
+    },
+    {
+      "company": "Figure",
+      "range_text": "$120,000 - $154,440 (Application Security Engineer, non-senior-titled)",
+      "source_url": "https://job-boards.greenhouse.io/figure/jobs/8582241002"
+    }
+  ],
+  "seniority_distribution_notes": "Title-string analysis of all 586 postings: 210 explicitly \"Senior\", 105 \"Staff\", 23 \"Principal\", 12 \"Lead\" - so roughly 60% carry a senior-or-above title marker. Only 2 postings used junior/associate/entry language and none said \"intern.\" The remaining ~226 titles had no seniority marker (plain \"Security Engineer\" or a numbered level like \"II\"), which in practice skew mid-level given the \"5 years\" modal experience bar found in text. Net: this is a senior-weighted archetype with a real staff/principal ceiling at scale, and almost no true entry-level postings in this live sample - consistent with the existing brief's claim that the \"security engineer\" title itself is reached only after a multi-year SOC-analyst or engineering on-ramp, not an entry point.",
+  "notable_divergence_from_existing_brief": "Two findings worth flagging for review. (1) Comp: the brief leans on levels.fyi aggregator medians plus a single primary-source anchor (Anthropic's $320K-$485K). The live corpus actually contains ~150 postings with explicit stated dollar ranges (Lever/Greenhouse/Ashby postings routinely disclose pay bands) spanning roughly $90K (Palantir's government-facing Forward Deployed Security Engineer) up to $330K (CoreWeave Principal). This is a much richer primary-source comp dataset than the brief currently cites, and it also surfaces a pattern the brief misses entirely: postings tied to government/defense work (Palantir's \"Forward Deployed Security Engineer - US Government\" at $90K-$150K) pay meaningfully below the equivalent commercial-track roles at the same company ($135K-$200K), which the brief's \"base-heavy, general SWE parity\" framing doesn't capture. (2) AI/agentic security: the brief treats AI/frontier security as a single emerging example (Anthropic's Staff+ posting). In this sample, LLM/agentic-system security shows up as a mainstream, cross-company pattern - 123 of 586 postings (~21%) mention LLMs and 121 mention \\\"agentic\\\" systems specifically, well beyond frontier labs (fintechs, dev-tool companies, and infra companies all show it). The brief's framing of AI security as a narrow, name-one-company frontier niche likely undersells how broadly it's already baked into mainstream security-engineer scope as of mid-2026.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "223 of 586 postings explicitly reference threat modeling, and AI/agentic-system security work (121 postings) inherently means defining scope/risk for systems without established frameworks - consistent with target 4."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "On-call/incident response appears in a meaningful minority (79 of 586 explicit on-call mentions, 240 incident-response mentions broadly) but the majority of listed responsibilities (architecture, IAM, compliance, CI/CD integration) read as plannable work - moderate target 3 looks right, not higher."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "79 postings name on-call explicitly and 240 reference incident response as a responsibility; detection-and-response-titled roles (Roblox Principal Detection and Response Engineer, Vercel Security Engineer Detection Response, CoreWeave Advanced Response) are a recurring distinct sub-track, supporting a high but not universal (weight 0.7, not 1.0) target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Vulnerability assessment plus incident postmortems plus multi-layer AI/cloud/app stacks in the current sample support a high diagnostic-depth target; nothing in the sample suggests it should be lower."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Architecture-review responsibilities are common (design reviews, IAM architecture) but framed around defense/control design rather than scaling throughput/load, matching the brief's 'architecture-for-defense, not scale' framing at a moderate target."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings cluster into named sub-tracks (AppSec, cloud security, detection & response, IAM, corporate/network security) confirming a deep-in-one-lane pattern rather than broad generalism - target 3 (moderate, not maximal) is reasonable."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Remediation tracking (129 vulnerability-management mentions) and developer-adoption framing (183 cross-functional, 116 embedded mentions) support accountability for outcomes beyond just producing a report."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "183 postings mention cross-functional work and 116 mention embedded partnership with product/engineering teams, strongly corroborating the brief's 'embedded partner, not gatekeeper' framing."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Secure-coding education/consultation shows up as a responsibility pattern but is internal 1:few enablement, not a headline responsibility in most postings sampled - low-moderate target looks right."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe an external client/account-portfolio structure; work is organized around internal systems/teams, confirming target 1."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Same as above - no external relationship-continuity structure appears anywhere in the sample."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "All ~150 stated comp figures in the sample are flat base salary ranges (occasionally plus equity/bonus language typical of standard SWE comp), with no sales-linked or utilization-linked variable component observed anywhere - confirms target 1."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Python appears in 352 of 586 postings (60%) and Go in ~72-112 depending on variant, plus SAST/Semgrep rule-writing (21 postings) - strong evidence for a real coding bar, supporting target 4."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No travel or physical-site-embed language found in a scan of the sample; target 1 holds."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "223 of 586 postings (38%) explicitly reference threat modeling as a work product, plus 100 penetration-testing, 73 bug-bounty, and 52 red-team mentions - this is the strongest, most consistent signal in the whole corpus and squarely justifies the max target/weight."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No hardware/power/timing/RF constraint language found; domain is uniformly software/cloud/network even in defense-contractor postings (Anduril, Boeing) sampled - target 1 holds."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Staff/Principal-titled postings (105 + 23 = 128 of 586) commonly mention mentoring but rarely formal headcount/people-management ownership - low-moderate target is consistent with the sample."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe public speaking, content, or external-facing visibility as a responsibility (bug bounty programs are the closest analog but are process ownership, not public-facing content work) - target 1 holds."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "Given that 123 of 586 postings (21%) now reference LLMs and 121 reference agentic systems, ML/AI-system fluency is showing up far more broadly than a single named frontier-lab exception - worth reviewing whether target/weight should move up modestly for the archetype as a whole, even though most postings still don't require hands-on ML engineering (they require securing AI systems, not building them, which is a real distinction worth preserving)."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No meaningful mobile-specific security requirements surfaced in the keyword/text scan; target 1 holds."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No data-pipeline/data-engineering-specific requirements found beyond generic cloud infra; target 1 holds."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "Cloud terms are extremely pervasive in this sample - AWS 389/586 (66%), GCP 208, Azure 174, Kubernetes 189, Terraform 124 - which is a notably higher hit rate than a target-2/weight-0.2 (low-moderate) treatment implies, even accounting for the brief's rationale that adversarial_threat_modeling is the 'real' gate. Worth a reviewer double-check on whether cloud-infrastructure fluency is underweighted relative to how often postings actually require it explicitly, separate from the threat-modeling axis."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Anthropic",
+      "title": "Staff+ Application Security Engineer",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/4502508008"
+    },
+    {
+      "company": "OpenAI",
+      "title": "Security Engineer, Application Security",
+      "url": "https://jobs.ashbyhq.com/openai/0322d6d8-6588-4209-a304-83e768063a25"
+    },
+    {
+      "company": "Stripe",
+      "title": "Client Platform Security Engineer",
+      "url": "https://stripe.com/jobs/search?gh_jid=7982720"
+    },
+    {
+      "company": "Palantir Technologies",
+      "title": "Application Security Engineer",
+      "url": "https://jobs.lever.co/palantir/7e3ec54c-b73a-4014-8ef3-cdce8a4953c4"
+    },
+    {
+      "company": "Roblox",
+      "title": "Principal Detection and Response Engineer",
+      "url": "https://careers.roblox.com/jobs/7660291?gh_jid=7660291"
+    },
+    {
+      "company": "ClickHouse",
+      "title": "Cloud Security Engineer",
+      "url": "https://job-boards.greenhouse.io/clickhouse/jobs/5854400004"
+    },
+    {
+      "company": "Boeing",
+      "title": "Network Security Engineer",
+      "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Colorado-Springs-CO/Network-Security-Engineer_JR2026518572-1"
+    },
+    {
+      "company": "Astranis",
+      "title": "Product Security Engineer",
+      "url": "https://job-boards.greenhouse.io/astranis/jobs/4667335006"
+    }
+  ]
+}

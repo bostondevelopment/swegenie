@@ -1,0 +1,308 @@
+{
+  "archetype_id": "forward-deployed-engineer",
+  "postings_analyzed": 424,
+  "top_requirements": [
+    {
+      "requirement": "Production coding fluency, most commonly Python and/or TypeScript/JavaScript/Node \u2014 writing real code that ships into customer environments, not prototypes",
+      "approx_frequency": "306/424 mention Python explicitly; 230/424 mention TypeScript/JavaScript"
+    },
+    {
+      "requirement": "Multi-year professional engineering experience, most commonly framed as 3-8 years (senior-leaning: 5-6 years is the modal ask; manager/director postings ask 8+)",
+      "approx_frequency": "308/424 state an explicit years-of-experience figure; \"5\" and \"6\" are the most frequent numbers (85 and 69 occurrences), \"3\" also common (43)"
+    },
+    {
+      "requirement": "Willingness to travel and/or embed on-site with a customer",
+      "approx_frequency": "273/424 mention travel explicitly (commonly \"up to 25%\"); 291/424 use embed/on-site language"
+    },
+    {
+      "requirement": "Direct, named customer-facing ownership \u2014 described as trusted technical advisor or primary technical point of contact, not a supporting role behind an account owner",
+      "approx_frequency": "241/424 use explicit customer-facing/client-facing phrasing"
+    },
+    {
+      "requirement": "Cloud platform fluency (AWS, GCP, and/or Azure), usually named as interchangeable options rather than one required cloud",
+      "approx_frequency": "AWS 138/424, Azure 118/424, GCP 117/424 \u2014 most postings name at least one, many name two or three as acceptable"
+    },
+    {
+      "requirement": "LLM/GenAI-specific experience (RAG, agents, fine-tuning, evals) \u2014 real and growing but a minority pattern, concentrated in AI-labeled titles",
+      "approx_frequency": "178/424 mention LLM/GenAI explicitly; 89/424 have \"AI\" in the job title"
+    },
+    {
+      "requirement": "Data pipeline / distributed-data experience, often Spark-specific at data-platform companies",
+      "approx_frequency": "102/424 mention Spark; 112/424 mention data pipelines/ETL generally"
+    },
+    {
+      "requirement": "Government/federal/public-sector eligibility, sometimes including active security clearance, concentrated at Palantir, Databricks public-sector tracks, Salesforce Missionforce, and defense-tech companies (Anduril, Vannevar Labs, Applied Intuition, Shield AI, Saronic)",
+      "approx_frequency": "177/424 (42%) mention government/federal/public-sector/clearance/defense terms; 62/424 mention \"clearance\" specifically"
+    },
+    {
+      "requirement": "Comfort with undocumented/non-standard customer environments and ambiguous, evolving scope rather than a fixed spec",
+      "approx_frequency": "qualitative pattern seen across the large majority of postings read in full (Instacart, Cloudflare, Roboflow, Palantir, OpenAI, Twilio all use near-identical phrasing about ambiguity/undocumented systems/evolving objectives)"
+    },
+    {
+      "requirement": "Degree requirement is loosely enforced \u2014 explicit bachelor's-degree language is rare; most postings substitute 'or equivalent practical experience'",
+      "approx_frequency": "only 8/424 use explicit bachelor's-degree phrasing without an equivalent-experience escape hatch"
+    }
+  ],
+  "top_responsibilities": [
+    "Embed directly inside one customer's (or a small number of customers') engineering/operations team, working alongside their staff rather than handing off a design to them \u2014 the single most consistent framing across companies of every size, from Palantir and Cloudflare to Roboflow and Instacart.",
+    "Take a validated proof-of-concept or sales-closed deal from zero to a live, production deployment running on the customer's own infrastructure \u2014 explicitly described as the '0-to-1' or 'critical last mile' phase distinct from pre-sales solutioning.",
+    "Write and ship production code directly into customer codebases/infrastructure \u2014 APIs, integration pipelines, data schemas, error handling, observability, test coverage \u2014 under the same engineering rigor (code review, monitoring) as core product engineering, not as a sandboxed demo.",
+    "Serve as the primary/named technical point of contact for the account, owning technical success end-to-end rather than being one of several people the customer talks to.",
+    "Feed field-derived insight back into the core product/platform roadmap \u2014 nearly every posting in the sample includes some version of 'inform the roadmap' or 'shape product direction' as an explicit responsibility, not an incidental side effect.",
+    "Run hands-on enablement with the customer's own engineers \u2014 workshops, hackathons, pair-programming, or reference implementations \u2014 so the customer's team can operate/extend the system after the FDE's involvement narrows or ends.",
+    "Navigate the customer's security/compliance review process (InfoSec review, architecture review boards) as part of getting code into their environment, translating compliance requirements into concrete implementation decisions.",
+    "At the senior/staff/manager tier: define the technical strategy and playbook for how the FDE function scales across accounts, and manage/coach a team of FDEs, while remaining hands-on for the hardest deployments."
+  ],
+  "comp_signals": [
+    {
+      "company": "Palantir Technologies",
+      "range_text": "Base salary $135,000\u2013$200,000/yr (most FDSE reqs); $125,000\u2013$200,000 for one US Government variant; $135,000\u2013$145,000 for New Grad tracks. Explicitly stated as base only \u2014 \"Total compensation... may also include Restricted Stock units, sign-on bonus and other potential future incentives.\"",
+      "source_url": "https://jobs.lever.co/palantir/636fc05c-d348-4a06-be51-597cb9e07488"
+    },
+    {
+      "company": "Cloudflare",
+      "range_text": "$167,000\u2013$230,000 (Forward Deployed Engineer, entry req); other Cloudflare FDE reqs in the sample range up to $194,000\u2013$266,000 for Senior",
+      "source_url": "https://boards.greenhouse.io/cloudflare/jobs/7572075?gh_jid=7572075"
+    },
+    {
+      "company": "Twilio",
+      "range_text": "$171,120\u2013$213,900 up to $201,280\u2013$251,600 depending on location zone (multiple stated bands in one posting)",
+      "source_url": "https://job-boards.greenhouse.io/twilio/jobs/8039605"
+    },
+    {
+      "company": "Postman",
+      "range_text": "$220,000 to $240,000 (Senior Forward Deployed Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/postman/jobs/6672559003"
+    },
+    {
+      "company": "Amplitude",
+      "range_text": "$165,000\u2013$247,000 base band (one location); $183,000\u2013$276,000 in others (Senior Customer Forward Deployed Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/amplitude/jobs/8532156002"
+    },
+    {
+      "company": "Mastercard",
+      "range_text": "Director track: $195,000\u2013$323,000; Manager track: $161,000\u2013$266,000 (Forward-Deployed AI Engineer, AI Mobilization & Transformation)",
+      "source_url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/Purchase-New-York/Director--Forward-Deployed-AI-Engineer---AI-Mobilization---Transformation_R-282419"
+    },
+    {
+      "company": "HackerRank",
+      "range_text": "$160,000\u2013$185,000 (Forward Deployed Engineer, IC); $300,000\u2013$350,000 (Director, Forward Deployed Engineering)",
+      "source_url": "https://job-boards.greenhouse.io/hackerrank/jobs/7482137"
+    },
+    {
+      "company": "Scale AI",
+      "range_text": "$179,400\u2013$224,250 base salary (San Francisco/New York/Seattle) for Forward Deployed Engineer, GenAI",
+      "source_url": "https://job-boards.greenhouse.io/scaleai/jobs/4593571005"
+    },
+    {
+      "company": "Salesforce",
+      "range_text": "$148,500\u2013$260,100 (Missionforce Senior/Lead Forward Deployed Engineer, Public Sector)",
+      "source_url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Virginia---Herndon/Missionforce---Senior-Lead-Forward-Deployed-Engineer--Salesforce-Technical-Architect---Public-Sector_JR351344"
+    },
+    {
+      "company": "Applied Intuition",
+      "range_text": "$150,000\u2013$200,000 (Defense \u2014 Senior Forward Deployed Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/applied/8ab8b28e-b62a-4a92-88ee-773015a01a87"
+    }
+  ],
+  "seniority_distribution_notes": "The sample is dominated by mid-to-senior IC roles: 233/424 titles carry no seniority modifier (plain \"Forward Deployed Engineer/Software Engineer\" \u2014 mostly Palantir's core req, which is itself mid-level in practice) and 118/424 are explicitly \"Senior.\" A real but small leadership layer exists above that \u2014 Staff (9), Principal (7), Lead (18), Director (8), Manager (24), Head of (2), roughly 16% of postings combined \u2014 confirming the brief's staff/principal and pod-lead/practice-lead branch points are real, current hiring patterns, not just historical. A genuine junior/entry pipeline also exists but is small and concentrated almost entirely at Palantir: 16 Internship postings and 5 explicit New Grad postings (21/424, ~5%), consistent with the brief's note that Palantir (and Ramp) will hire with minimal post-college experience while most other companies want 3-8 years.",
+  "notable_divergence_from_existing_brief": "Two things the fresh sample surfaces that the existing brief understates or frames differently. (1) Government/public-sector/defense FDE work is a large, established sub-track across many companies, not an emerging one-off signaled only by a single OpenAI \"FDE, Gov\" posting as the brief frames it \u2014 177/424 postings (42%) reference government/federal/public-sector/clearance/defense terms, spanning Palantir's extensive US Government/Intel/Tactical Edge/Warp Speed lines, Databricks' Public Sector and U.S. Federal Sector FDE reqs, Salesforce's Missionforce public-sector track, and a cluster of defense-tech-native companies hiring FDEs as a core title (Anduril, Vannevar Labs, Applied Intuition, Shield AI, Saronic, Hadrian). This looks less like a nascent OpenAI-specific sub-track and more like an already-mature, parallel commercial/defense split within the archetype worth naming explicitly rather than flagging as a \"possible v2 refinement.\" (2) The brief's headline Palantir comp figures ($171K-$295K+ total comp, median $211K, from Levels.fyi) are total-comp figures, while Palantir's own live postings in this sample state base-salary-only ranges of $135K-$200K (new grad $135K-$145K) with equity/bonus called out as additive but unquantified \u2014 the two sets of numbers are consistent once reconciled (base + meaningful equity = total comp), but the brief doesn't clearly flag that its cited $171K-$295K+ figure is total comp, not base, which could read as inconsistent with a company's own posted base range if a user cross-checks. Everything else the sample surfaces \u2014 no-quota/no-commission comp structure (quota/commission language essentially absent: 1/424 and 1/424 respectively), heavy production-coding emphasis, feedback-to-roadmap responsibility, travel/embed expectations, and the SWE-lateral-hire dominant entry path \u2014 confirms the brief closely.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Postings repeatedly describe undocumented/non-standard customer systems, 'dynamic environment with evolving objectives,' and defining the technical approach as part of the job (Instacart, Cloudflare, Palantir, OpenAI all use near-identical phrasing) \u2014 consistent with a high but not maximal target."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Not a strong explicit theme in the corpus either way \u2014 postings describe project-paced work (workshops, deployment phases) rather than an inbound-queue/paging cadence, consistent with a moderate, low-weighted target."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample mention formal on-call/paging rotations; 'production monitoring' is named as a responsibility but framed as engineering rigor, not incident response \u2014 consistent with a low target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings mention troubleshooting/observability/test coverage as real but routine engineering practice, not urgent multi-layer diagnosis under an SLA clock the way an SRE/infra brief would describe \u2014 moderate target looks right."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings describe architecting solutions and integration pipelines scoped to one customer's deployment, not platforms meant to serve many consuming teams or scale multiple orders of magnitude \u2014 moderate, not high, target is well supported."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Strong support: AWS/GCP/Azure are each named in 27-33% of postings usually as interchangeable options, plus wide language breadth (Python, TypeScript, Java, C++ all appear as acceptable), plus postings spanning verticals (finance, healthcare, manufacturing, defense, retail) for the same company \u2014 consistent with high breadth-over-depth target."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Very strong, direct support: repeated 'own production rollouts,' 'own the account's technical success,' 'own end-to-end delivery outcomes' language across companies (Databricks, Cloudflare, OpenAI) \u2014 the max-target, max-weight framing holds up well."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "Strongly supported: 241/424 postings use explicit customer/client-facing phrasing, plus workshops, hackathons, live demos, and being the 'primary technical point of contact' \u2014 counterparts described are engineering/operations teams, not purely executive, consistent with a high-but-not-maximal target."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Mostly supported (pair-programming/enablement so a customer team can self-maintain is private/1:1, matching a low target), but one recurring counter-example is worth flagging: several Databricks AI-FDE postings explicitly list 'present at conferences... recognized as a thought leader internally and externally' as a responsibility, which leans more public/one-to-many than the target-2 framing assumes. Minority pattern, not majority."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Directly confirms the brief's already-documented v1.1 finding: the corpus shows genuine bimodality (Palantir/Anduril/Vannevar single strategic-client embeds vs. Databricks/Cresta/Twilio/Instacart naming multiple accounts/portfolios), so the lowered 0.5 weight to reflect real uncertainty looks appropriate rather than over- or under-confident."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 5,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "Supported across both breadth modes: 'long-term technical partner,' 'trusted technical advisor,' sustained embeds are used even by the portfolio-style companies, matching the brief's finding that continuity stays high regardless of breadth."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Very strong support: quota/commission language is essentially absent from the corpus (1/424 for each term, both false leads on manual check), while equity/RSU language appears in 170/424 \u2014 comp structure reads as core-SWE (base + equity + bonus), not sales-attainment-linked, across companies of every size sampled."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Very strong support: 'write and ship production code,' 'hands-on contributor... not just an advisor,' and explicit language/tooling requirements (Python 306/424, TypeScript/JS 230/424) recur across nearly every company read in full."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Well supported: 273/424 postings mention travel (commonly 'up to 25%'), 291/424 use embed/on-site language; several postings require 100% on-site presence (e.g., Handshake Staff FDE: '5 days/week in-office'), consistent with a high target."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Mostly not discussed in the sample; a small defense-tech-adjacent minority (Anduril Air Defense/Mission Autonomy, Vannevar Labs, Shield AI, Saronic \u2014 roughly 15/424 postings) works in domains where adversarial framing is plausible but the posting text itself doesn't foreground threat-modeling as a job skill, so the low target/low weight for the archetype overall is still reasonable."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Mostly absent from the sample, but a small edge/hardware-adjacent pattern exists worth noting: Roboflow FDE explicitly mentions configuring edge devices, and Palantir has dedicated Edge Autonomous Systems / Mixed Reality / Tactical Edge FDSE lines. Still a minority of the corpus, so the low overall target holds, but this is the dimension with the thinnest margin of support."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Supported: the large majority of titles are IC-focused (233 unlabeled + 118 Senior), while a real but minority management/director/head-of layer exists (34/424, ~8%) reflecting the pod-lead branch point the brief describes \u2014 consistent with a low-but-nonzero target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Mostly supported (customer-embedded work reads as private to the account), but the same Databricks 'present at conferences/thought leader' language noted under teaching_enjoyment is a direct counter-example worth the cross-review team's attention, even though it's a minority pattern and the dimension carries a low weight already."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "The 'real adjacency, not the modal case' framing is empirically about right: 178/424 (42%) mention LLM/GenAI and 89/424 have 'AI' in the title \u2014 substantial and clearly growing, but still a minority of the full posting set, which still includes plenty of non-AI-flavored FDSE reqs at Palantir and others."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No evidence of mobile-specific requirements anywhere in the sample; low target is well supported."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Supported: Spark appears in 102/424 (24%, concentrated at Databricks) and data pipeline/ETL language in 112/424 (26%) \u2014 a real, secondary skill pattern rather than the archetype's defining trait, consistent with the low-secondary weighting."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Supported: AWS/GCP/Azure are each named in roughly a quarter to a third of postings and Kubernetes/Docker appear in a smaller minority (36/424 and 19/424) \u2014 cloud fluency is commonly required but framed as in-service of the customer deployment, not a deep infra specialization, matching the secondary target/weight."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Palantir Technologies",
+      "title": "Forward Deployed Software Engineer - US Government",
+      "url": "https://jobs.lever.co/palantir/289ad049-7b4e-41e3-8a39-146fbeb6fb64"
+    },
+    {
+      "company": "OpenAI",
+      "title": "Manager, Forward Deployed Engineering",
+      "url": "https://openai.com/careers/forward-deployed-engineer-gov-washington-dc/"
+    },
+    {
+      "company": "Databricks",
+      "title": "Sr. Forward Deployed Engineer (FDE) - Healthcare & Life Sciences",
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8494145002"
+    },
+    {
+      "company": "Cloudflare",
+      "title": "Forward Deployed Engineer (FDE)",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7572075?gh_jid=7572075"
+    },
+    {
+      "company": "Instacart",
+      "title": "Forward Deployed Engineer",
+      "url": "https://instacart.careers/job/?gh_jid=7989203"
+    },
+    {
+      "company": "Roboflow",
+      "title": "Forward Deployed Engineer",
+      "url": "https://jobs.ashbyhq.com/roboflow/444ee288-cb72-4751-b16d-67c27749e901"
+    },
+    {
+      "company": "Anduril Industries",
+      "title": "Forward Deployed Engineer, Air Defense (FDE)",
+      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5057206007?gh_jid=5057206007"
+    },
+    {
+      "company": "Twilio",
+      "title": "Forward Deployed Engineer",
+      "url": "https://job-boards.greenhouse.io/twilio/jobs/8039605"
+    }
+  ]
+}

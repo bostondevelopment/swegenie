@@ -1,0 +1,9 @@
+{
+  "archetypeId": "engineering-management",
+  "tier": "high-growth-public",
+  "level": "L4",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus has very strong grounding for Mid (99 points, 30 companies) \u2014 not a focus cell this round since it wasn't marked low, retains existing rating."
+}

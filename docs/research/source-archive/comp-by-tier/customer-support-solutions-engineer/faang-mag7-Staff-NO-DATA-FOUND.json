@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-solutions-engineer",
+  "tier": "faang-mag7",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No Staff/Principal-level FAANG support/solutions-engineer-adjacent anchor found \u2014 Amazon TAM data on Levels.fyi tops out at L6 (per the page's own note), and no Google/Meta Staff-level Technical Solutions Engineer or Solutions Architect breakdown was locatable. Keeping low is correct; extrapolating from L5\u2192Staff step-size elsewhere in the table would be fabricated precision."
+}

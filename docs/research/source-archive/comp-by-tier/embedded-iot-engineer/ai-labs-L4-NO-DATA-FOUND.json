@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "ai-labs",
+  "level": "L4",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Same as L3 \u2014 no corpus points, no external per-level anchor at this seniority. OpenAI's only public Hardware Engineer data point is L6 (staff+), which does not map cleanly down to L4. Keep low."
+}

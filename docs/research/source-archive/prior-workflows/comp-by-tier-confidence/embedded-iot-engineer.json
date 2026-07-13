@@ -1,0 +1,97 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 15,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/anthropic/salaries/software-engineer",
+      "title": "Anthropic Software Engineer Salary | Levels.fyi",
+      "note": "Only generic SWE title data available; no embedded/hardware/firmware title listed for Anthropic or OpenAI.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://jobsbyculture.com/blog/anthropic-compensation-2026",
+      "title": "Anthropic Salary 2026 total comp breakdown (aggregator)",
+      "note": "Reports Anthropic engineer total comp $300K-$759K median ~$443K for general SWE \u2014 useful only as an upper-bound sanity check, not a direct embedded/IoT anchor.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/anthropic/salaries",
+      "title": "Anthropic Salaries | Levels.fyi",
+      "note": "Aggregate page has no hardware/embedded/firmware title breakout as of this search.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/google/salaries/hardware-engineer",
+      "title": "Google Hardware Engineer Salary | Levels.fyi",
+      "note": "L3 (Hardware Engineer II) total $204K, base $139K, equity $46K/yr, bonus $19.6K.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/meta/salaries/hardware-engineer",
+      "title": "Meta Hardware Engineer Salary | Levels.fyi",
+      "note": "IC3 total $182K, base $134K, equity $33.7K/yr, bonus $14K.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/apple/salaries/firmware-engineer",
+      "title": "Apple Firmware Engineer Salary | Levels.fyi",
+      "note": "ICT3 median total ~$228K, directionally consistent (Apple premium).",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/tesla/salaries/software-engineer/title/embedded-systems",
+      "title": "Tesla Embedded Systems Software Engineer Salary | Levels.fyi",
+      "note": "P1 median total $179K, range $125K-$201K \u2014 brackets dataset's L3 total of $163K.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/tesla/salaries/software-engineer",
+      "title": "Tesla Software Engineer Salary | Levels.fyi",
+      "note": "P3 general SWE median $264K \u2014 not embedded-specific, weak proxy only.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/tesla/salaries",
+      "title": "Tesla Salaries | Levels.fyi",
+      "note": "No Staff-level embedded systems breakout available.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/anduril-industries/salaries/software-engineer",
+      "title": "Anduril Industries Software Engineer Salary | Levels.fyi",
+      "note": "L3 total $206K vs dataset's $158K \u2014 single-company signal that dataset may be a bit low for well-funded growth-stage private, but not enough for a confidence upgrade alone.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/anduril-industries/salaries",
+      "title": "Anduril Industries Salaries | Levels.fyi",
+      "note": "No Staff-level embedded/hardware breakout found.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/embedded-engineer-salary-SRCH_KO0,17.htm",
+      "title": "Embedded Engineer Salary | Glassdoor",
+      "note": "All-company-size average $164,609 (25th $129,647 / 75th $212,076) \u2014 order-of-magnitude consistent with dataset but not startup-stage-specific.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/iot-and-embedded-systems-salary-SRCH_KO0,24.htm",
+      "title": "IoT and Embedded Systems Salary | Glassdoor",
+      "note": "Average $137,274 \u2014 broad market blend, not early-stage-specific.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/embedded-software-engineer-salary-SRCH_KO0,26.htm",
+      "title": "Embedded Software Engineer Salary | Glassdoor",
+      "note": "Average $172,613, range $140,658-$214,867 \u2014 blended across all company sizes/stages, not early-stage- or level-specific.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://mentorcruise.com/salary/iot-engineer/",
+      "title": "IoT Engineer Salary Guide | MentorCruise",
+      "note": "Reports median IoT engineer $95K, senior $135K \u2014 generic title blend, well below dataset's early-stage L5 band and not company-stage-specific; too weak/inconsistent to use as an anchor.",
+      "kind": "structured_citation"
+    }
+  ]
+}

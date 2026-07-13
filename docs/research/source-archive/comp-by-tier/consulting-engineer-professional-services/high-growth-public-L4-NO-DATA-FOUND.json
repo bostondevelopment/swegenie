@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "high-growth-public",
+  "level": "L4",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Same corpus 'Mid' bucket as L3 (16 points across Adyen/Axon/Cisco/GitLab/Samsara). File's L4 base p50 $158K sits within the corpus range ($66K-$240K) and above the corpus median, consistent with L4 being senior to the blended 'Mid' bucket. Keeping medium; not raised to high due to the same L3/L4 blending issue in the corpus level_hint."
+}

@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "early-stage",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No corpus data at all for early-stage (entire tier is null in the extraction file). New search found only blended, non-level-specific aggregator data (Wellfound: 'Embedded Engineer in Software Startups' averages ~$150K for 7-10 YOE; 'AI Startups' ~$150K) with no seed/Series A-B named-company per-level breakdown available (Wellfound's detailed page returned 403/access-blocked on fetch). This is a genuinely hard-to-source segment \u2014 seed/Series A-B startups rarely disclose structured comp bands publicly, and levels.fyi has too few submissions for a reliable per-level median at this stage. Keeping low is the honest outcome."
+}

@@ -1,0 +1,365 @@
+{
+  "archetype_id": "technical-product-manager",
+  "postings_analyzed": 63,
+  "top_requirements": [
+    {
+      "requirement": "Explicit years-of-experience bar, almost always 5+ for senior titles and 8-10+ for principal/staff titles",
+      "approx_frequency": "53 of 63 postings state a numeric years requirement; distribution clusters at 5, 7-8, and 10 years"
+    },
+    {
+      "requirement": "Roadmap ownership / prioritization framing as the core job description",
+      "approx_frequency": "44-46 of 63 postings"
+    },
+    {
+      "requirement": "Cross-functional stakeholder management (explicitly named engineering, design, data science, legal, GTM as partners)",
+      "approx_frequency": "38-42 of 63 postings"
+    },
+    {
+      "requirement": "AI/ML fluency or an AI/ML-scoped product surface named in the role itself",
+      "approx_frequency": "47 of 63 postings mention AI/ML; roughly 8-10 of those are roles explicitly scoped to an AI/ML platform or product (Scale AI, 2x Riot Games AI/ML, Reddit Ads ML Platform, 3x Agoda incl. LLM/ML Domain, Humana AI TPM, Upwork AI Frontiers)"
+    },
+    {
+      "requirement": "Data-driven / analytics or KPI-based prioritization and success measurement",
+      "approx_frequency": "40 of 63 postings"
+    },
+    {
+      "requirement": "API or API-surface fluency (design, lifecycle, or consumption)",
+      "approx_frequency": "20 of 63 postings"
+    },
+    {
+      "requirement": "System/software architecture fluency (build-vs-buy, microservices, technical trade-offs)",
+      "approx_frequency": "32 of 63 postings"
+    },
+    {
+      "requirement": "CS/engineering degree or explicit 'technical background/former engineer' preference",
+      "approx_frequency": "20-32 of 63 postings (20 name a CS/technical degree; 12 separately phrase it as 'technical background' or 'engineering background' without a degree requirement)"
+    },
+    {
+      "requirement": "Agile/Scrum process fluency",
+      "approx_frequency": "23 of 63 postings"
+    },
+    {
+      "requirement": "Security/compliance domain knowledge",
+      "approx_frequency": "29 of 63 postings mention security/compliance keywords, but manual spot-check shows roughly half of those are generic EEO/data-privacy boilerplate rather than a security-domain product surface; genuine security/compliance-scoped TPM roles (Keeper Security PAM, Visa AML/Sanctions, Torq security automation, Cisco IAM) are closer to 6-8 of 63"
+    },
+    {
+      "requirement": "SQL proficiency",
+      "approx_frequency": "10 of 63 postings"
+    },
+    {
+      "requirement": "Direct hands-on prototyping, scripting, or 'write specs and prototype solutions' language",
+      "approx_frequency": "14 of 63 postings (22%), concentrated in AI-native/robotics startups (Scale AI, Shield AI, Upwork, Vannevar Labs-adjacent, 1X Technologies, Voltus) rather than large enterprises"
+    },
+    {
+      "requirement": "Travel required or expected",
+      "approx_frequency": "12 of 63 postings, mostly compliance/enterprise-hardware/field-facing roles (Visa, Mastercard, T-Mobile, Agoda, Shield AI, Freenome)"
+    },
+    {
+      "requirement": "People management / direct reports",
+      "approx_frequency": "only 2 of 63 postings (both Braze) explicitly describe managing other PMs or having direct reports"
+    }
+  ],
+  "top_responsibilities": [
+    "Owning and defending a product roadmap for a technical surface (an API, platform, data pipeline, or internal tool), including saying no to requests that don't fit the sequencing.",
+    "Writing and reviewing technical specs / PRDs and running design reviews with engineering to decide feasibility and scope before work starts, without personally writing the implementation.",
+    "Translating ambiguous business, customer, or internal-stakeholder needs into concrete technical requirements and acceptance criteria.",
+    "Making build-vs-buy, platform-architecture, and prioritization trade-off calls in partnership with engineering leads, then living with the downstream consequences of those calls.",
+    "Running or coordinating cross-functional delivery across engineering, data science/ML, design, legal/compliance, and go-to-market or customer-success teams.",
+    "Defining and tracking adoption, reliability, and usage metrics/KPIs for the product surface and reporting on roadmap-vs-plan to leadership.",
+    "Managing the lifecycle of a technical asset end to end -- for API/platform roles, this explicitly includes versioning, deprecation timelines, and migration planning.",
+    "At principal/staff levels, operating with less day-to-day direction: setting multi-quarter strategy, mentoring more junior PMs, and representing the product area to senior technical and sometimes external stakeholders.",
+    "A meaningful minority of postings (mostly at fast-moving AI-native startups) frame the role as more hands-on than the modal enterprise TPM job -- prototyping, light scripting, or being 'in the room' with engineers building the thing, not just spec'ing it."
+  ],
+  "comp_signals": [
+    {
+      "company": "Fivetran",
+      "range_text": "Oakland Pay Range $180,884 - $226,105.50 USD",
+      "source_url": "https://job-boards.greenhouse.io/hasbro/jobs/4261353009"
+    },
+    {
+      "company": "Freenome",
+      "range_text": "US target base salary range $118,150 - $167,475",
+      "source_url": ""
+    },
+    {
+      "company": "Upwork",
+      "range_text": "Annual Base Compensation $190,500 - $384,750 USD (Principal level)",
+      "source_url": ""
+    },
+    {
+      "company": "Scopely",
+      "range_text": "CA/CO/NJ/NY/WA Annual Salary Range $169,600 - $250,000 USD (Principal level)",
+      "source_url": ""
+    },
+    {
+      "company": "Hasbro",
+      "range_text": "Base salary range $126,600 - $266,200 USD across three Principal/Sr Principal TPM postings",
+      "source_url": "https://job-boards.greenhouse.io/hasbro/jobs/4261353009"
+    },
+    {
+      "company": "1X Technologies",
+      "range_text": "Compensation range $250,000 - $300,000 (Lead TPM, Data)",
+      "source_url": "https://jobs.ashbyhq.com/1x/87a3faf1-2f78-4022-9c3d-949b476d51bf"
+    },
+    {
+      "company": "Reddit",
+      "range_text": "Base salary range $217,000 - $303,900 USD (Staff TPM, Ads ML Platform)",
+      "source_url": "https://job-boards.greenhouse.io/reddit/jobs/7954001"
+    },
+    {
+      "company": "Cisco",
+      "range_text": "US/Canada starting salary range $152,400 - $221,800, up to $255,100 in NYC metro",
+      "source_url": ""
+    },
+    {
+      "company": "Micron",
+      "range_text": "Estimated pay $141,000 - $319,000 a year (Principal TPM)",
+      "source_url": ""
+    },
+    {
+      "company": "Visa",
+      "range_text": "Estimated salary range $116,300 - $186,000 USD per year",
+      "source_url": ""
+    },
+    {
+      "company": "Mastercard",
+      "range_text": "O'Fallon, MO pay range $104,000 - $177,000 USD",
+      "source_url": ""
+    },
+    {
+      "company": "Humana",
+      "range_text": "$126,300 - $173,700 per year, eligible for bonus incentive plan",
+      "source_url": ""
+    },
+    {
+      "company": "GE Aerospace",
+      "range_text": "Base pay range $131,000 - $174,000 USD annually (two logistics TPM postings)",
+      "source_url": ""
+    },
+    {
+      "company": "Caterpillar",
+      "range_text": "Pay range $128,470 - $192,710",
+      "source_url": ""
+    },
+    {
+      "company": "T-Mobile",
+      "range_text": "Base pay range $130,900 - $236,200, plus 20% corporate bonus target",
+      "source_url": ""
+    },
+    {
+      "company": "Braze",
+      "range_text": "Base pay range $139,000 - $208,000/year, expected OTE $154,000 - $231,000/year including bonus/commission, on two Content Platforms TPM postings",
+      "source_url": "https://boards.greenhouse.io/braze/jobs/8000775?gh_jid=8000775"
+    },
+    {
+      "company": "Invoca",
+      "range_text": "Base salary range $117,000 - $175,000 plus bonus potential",
+      "source_url": ""
+    },
+    {
+      "company": "ClassDojo",
+      "range_text": "CA/WA/NY/NJ/CT $160,000 - $215,000; all other US states $136,000 - $183,000",
+      "source_url": "https://jobs.ashbyhq.com/classdojo/a68f3f53-0643-410d-a0c4-b2ea5c4acba0"
+    }
+  ],
+  "seniority_distribution_notes": "Sample skews heavily senior and above: of 63 postings, 18 are explicitly Principal/Staff-level, 23 are Senior/Lead, only 1 is a clearly mid-level \"II/III\" title, and the remaining 21 carry no seniority qualifier in the title (likely mid-to-senior in practice given the years-experience text inside them, which mostly asks for 5+ years). There is essentially no entry-level or associate TPM presence in this live-posting sample -- consistent with the existing brief's framing that TPM is predominantly a move made from several years of prior IC-engineering or PM experience, not an entry point into product management.",
+  "notable_divergence_from_existing_brief": "Two things worth flagging for review, not full rewrites. (1) AI/ML domain-scoping is far more prominent in this fresh sample than the brief's dimension weighting implies: 47 of 63 postings mention AI/ML, and roughly 8-10 are TPM roles explicitly built around an AI/ML product surface (Scale AI defense-AI, two Riot Games AI/ML postings, Reddit Ads ML Platform, three Agoda postings including an explicit \"LLM/ML Domain\" title, Humana's \"AI Technical Product Manager,\" Upwork's \"AI Frontiers\" Principal role). The taxonomy currently scores ml_engineering_fluency at target 2 / weight 0.2 for this archetype -- reasonable if \"AI TPM\" is treated as a rare specialization, but this corpus suggests \"AI-scoped TPM\" is close to becoming a mainstream sub-flavor of the title rather than an edge case, circa mid-2026 hiring. (2) The brief's flagship claim -- \"you stop writing production code, technical fluency is used to evaluate/shape, not to build\" -- holds for the clear majority of the corpus (only 3/63 postings use language like \"write code\" and none use \"not required to code\" framing either way), but 14 of 63 postings (22%), concentrated almost entirely in fast-moving AI-native or robotics startups (Scale AI, Shield AI, Upwork, Voltus, 1X Technologies), use \"hands-on builder,\" \"prototype solutions,\" or \"write specs and prototype\" language that blurs the brief's clean \"no coding\" narrative for that specific startup-TPM subset. This doesn't overturn the target=1 coding_intensity score for the archetype as a whole (still a clear minority pattern) but is worth a soft caveat if the product copy ever segments by company stage. Everything else -- comp structure (base+bonus+equity, not commission), near-absence of people management, near-absence of personal on-call burden, roadmap/prioritization as the daily core -- is strongly confirmed by this sample and matches the brief closely.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Roadmap ownership and prioritization language appear in 44-46 of 63 postings as the central framing of the job; strongly supports a high target and high weight."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Cross-functional coordination (38/63) and stakeholder management (42/63) point to a meeting-and-conversation-driven day, consistent with moderate, plannable interruption load rather than an inbound queue."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Only 2 of 63 postings mention on-call/incident language at all, and neither implies the TPM personally carries a pager; strongly supports the low target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Mostly supported -- explicit 'debugging' language is essentially absent -- but the 14/63 postings with prototyping/hands-on-builder framing (mostly AI-native startups) suggest a real subset sits a notch higher than the modal evaluative-only case."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Architecture/build-vs-buy language appears in 32 of 63 postings, consistent with a moderate, judgment-shaping (not personally-engineering) level of systems design involvement."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Requirements span APIs (20/63), SQL (10/63), cloud platforms (8/63), and AI/ML (47/63) across the sample, confirming breadth across multiple adjacent technical layers rather than single-stack depth."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "KPI/analytics-driven success framing appears in 40 of 63 postings, generally tied to roadmap-vs-plan and adoption/reliability metrics that depend on engineering execution the TPM doesn't fully control -- consistent with a moderate rather than maximal accountability target."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Stakeholder management (42/63) and cross-functional collaboration (38/63) are very common, but only 5 of 63 postings frame the role as genuinely external-customer-facing -- confirms the brief's note that the 'customer' is mostly internal engineering/business partners, not end users, which supports a high target driven by internal rather than external stakeholder intensity."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Only 8 of 63 postings mention mentoring, almost always as a minor bullet at principal/staff level aimed at junior PMs, not a teaching/training-focused responsibility -- consistent with a low target."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Only 5 of 63 postings are genuinely external-client-facing (Micron, HPE, Mastercard, T-Mobile, Five9); a low-moderate target with low weight fits a role that's product-surface-owning, not account-owning."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Similar evidence to account_portfolio_breadth -- a few postings (Scopely External Development, Five9 Implementation Partners) imply ongoing partner relationships, but this is a minority pattern, consistent with low-moderate target."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Of 25 postings with stated comp figures, all frame pay as base salary range plus bonus/equity; only Braze's two postings explicitly use 'OTE' language, and even there it reads as bonus-inclusive total comp rather than a commission structure -- confirms low variable-comp target."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 1,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "78% of the corpus (49/63) has zero coding/prototyping language, strongly supporting a low target at high weight -- but the 22% (14/63) with 'hands-on builder'/prototype language, concentrated in AI-native startups, is a real enough minority pattern to flag as a caveat rather than dismiss outright."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "12 of 63 postings (19%) mention travel, mostly in compliance/enterprise-hardware/field-facing roles -- a real but minority feature, consistent with a low target carried at low weight."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "A handful of postings (Keeper Security PAM, Visa AML/Sanctions, Torq security automation, Cisco IAM) are genuinely security/threat-domain-scoped, but this is a small minority (roughly 6-8 of 63) and even there the TPM role is roadmap/lifecycle ownership rather than personally performing threat modeling -- supports the low target given low weight."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Several postings touch hardware/physical domains (Zoox autonomy, 1X Technologies robotics, Micron DRAM, Caterpillar industrial, GE Aerospace logistics), but in every case the TPM responsibilities described stay at the software/roadmap layer, not hands-on physical engineering -- supports the low target despite domain presence."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 1,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Only 2 of 63 postings (both Braze) explicitly describe managing other PMs or having direct reports; the overwhelming majority frame TPM as an IC-track role -- strongly supports the low target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe external public speaking, conference presence, or public-facing communication as a core responsibility; consistent with a low target at minimal weight."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "47 of 63 postings mention AI/ML and roughly 8-10 are TPM roles explicitly scoped to an AI/ML product surface (Scale AI, 2x Riot Games AI/ML, Reddit Ads ML Platform, Agoda LLM/ML Domain, Humana AI TPM, Upwork AI Frontiers) -- this sample suggests AI/ML domain-scoping is now a common enough TPM sub-pattern that the current low target/weight may be understating it for 2026 hiring, though the archetype as scoped (general technical/platform PM) is still broader than just AI-platform PM."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Mobile-specific scoping appears in only 2 of 63 postings (Zoox Mobile Growth, T-Mobile T-Life App) -- confirms this is a rare rather than modal TPM specialization."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Explicit data pipeline/platform language appears in 9 of 63 postings, with several more data-domain-scoped roles (1X Technologies Data, Agoda Data Domain, 2K Data Science) -- consistent with a moderate, non-modal target."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Explicit AWS/GCP/Azure mentions appear in only 8 of 63 postings, with a few more cloud-platform-scoped roles (HPE Hybrid Cloud, Agoda Private Cloud Domain) -- consistent with a moderate, non-modal target."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Scale AI",
+      "title": "Staff Technical Product Manager",
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4683446005"
+    },
+    {
+      "company": "JetBrains",
+      "title": "Senior Technical Product Manager (IntelliJ Kotlin Plugin)",
+      "url": "https://job-boards.eu.greenhouse.io/jetbrains/jobs/4845848101"
+    },
+    {
+      "company": "Hasbro",
+      "title": "Principal Technical Product Manager",
+      "url": "https://job-boards.greenhouse.io/hasbro/jobs/4261353009"
+    },
+    {
+      "company": "Reddit",
+      "title": "Staff Technical Product Manager, Ads ML Platform",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/7954001"
+    },
+    {
+      "company": "Visa",
+      "title": "Technical Product Manager - Compliance, AML and Sanctions",
+      "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---Austin-TX/Technical-Product-Manager_REF082928W"
+    },
+    {
+      "company": "ClassDojo",
+      "title": "Senior Technical Product Manager",
+      "url": "https://jobs.ashbyhq.com/classdojo/a68f3f53-0643-410d-a0c4-b2ea5c4acba0"
+    },
+    {
+      "company": "1X Technologies",
+      "title": "Lead Technical Product Manager - Data",
+      "url": "https://jobs.ashbyhq.com/1x/87a3faf1-2f78-4022-9c3d-949b476d51bf"
+    },
+    {
+      "company": "Torq",
+      "title": "Technical Product Manager",
+      "url": "https://job-boards.greenhouse.io/torq/jobs/5806980004"
+    }
+  ]
+}

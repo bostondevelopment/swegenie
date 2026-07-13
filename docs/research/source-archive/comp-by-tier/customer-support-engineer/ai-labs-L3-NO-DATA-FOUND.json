@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-engineer",
+  "tier": "ai-labs",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No ai-lab-specific entry-level support-engineer compensation data found in the job-postings corpus (ai-labs grid is entirely null for this archetype) or via web search. Anthropic/OpenAI do not publicly disclose per-level breakdowns for support roles on Levels.fyi, and no L3-equivalent job posting with disclosed range was found. Genuinely thin market segment - keep low rather than fabricate precision."
+}

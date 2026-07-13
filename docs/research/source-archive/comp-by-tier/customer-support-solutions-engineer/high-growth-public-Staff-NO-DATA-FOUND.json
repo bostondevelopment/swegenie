@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-solutions-engineer",
+  "tier": "high-growth-public",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Corpus has no 'Principal/Director+' points for this tier, and the 'Senior/Staff' bucket used for L5 doesn't cleanly disambiguate a distinct Staff-level anchor above L5. No additional Staff-specific external data found. Current base p50 $188K is a plausible step up from the L5 corpus ceiling ($201K high end of Senior/Staff bucket) but not independently confirmed. Keeping low."
+}

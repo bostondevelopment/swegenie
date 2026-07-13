@@ -1,0 +1,25 @@
+{
+  "archetypeId": "solutions-architect-vendor-side",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 3,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/openai/salaries/solution-architect",
+      "title": "OpenAI Solution Architect Salary | Levels.fyi",
+      "note": "Median package is tagged L4, $418K TC (base $218K / stock $200K / bonus $0); no distinct L3 entry.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/openai/salaries/solution-architect/title/data-architect",
+      "title": "OpenAI Data Architect Salary | Levels.fyi",
+      "note": "$166K-$236K range \u2014 a different job title bucketed under the same OpenAI job family, useful only as a loose sanity check for junior levels.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/openai/salaries/solution-architect/locations/san-francisco-bay-area",
+      "title": "OpenAI Solution Architect Salary in San Francisco Bay Area | Levels.fyi",
+      "note": "Bay Area range $418K-$540K TC; modeled L5 TC (~$593K) runs somewhat above the top of this range.",
+      "kind": "structured_citation"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "growth-stage-private",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No corpus data (Entry/Associate bucket is null for this tier) and no external per-level anchor found for junior embedded roles at well-funded late-stage private companies \u2014 Wellfound/Glassdoor aggregator data found this round is blended across experience levels, not junior-specific. Genuinely under-sourced at this level; keeping low is honest."
+}

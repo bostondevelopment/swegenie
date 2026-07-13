@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-engineer",
+  "tier": "growth-stage-private",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Corpus has only 2 points in 'Entry/Associate': Dragos Associate Technical Support Engineer ($72,000, plausible) and Drata Associate Technical Support Engineer - Mexico ($382,500). The Drata figure is very likely a data-extraction artifact (probably a non-USD currency misread as USD, or an OTE/multi-year figure, given the Mexico location and the implausibility of a $382.5K entry-level support salary) and should not be trusted as-is. With the unreliable point excluded, only 1 usable anchor ($72K, below current p50 $95K) remains - too thin to raise confidence. Keep low."
+}

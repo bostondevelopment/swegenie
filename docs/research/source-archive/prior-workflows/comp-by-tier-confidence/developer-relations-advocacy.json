@@ -1,0 +1,85 @@
+{
+  "archetypeId": "developer-relations-advocacy",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 13,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/google/salaries/software-engineer/title/developer-advocate",
+      "title": "Google Developer Advocate Salary | Levels.fyi",
+      "note": "L3 (SWE II equiv): base $145K, stock $37.4K/yr, bonus $5.7K, total $188K \u2014 updated 7/12/2026",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/amazon/salaries/software-engineer/title/developer-advocate",
+      "title": "Amazon Developer Advocate Salary | Levels.fyi",
+      "note": "US Amazon Developer Advocate range $165K-$229K, median $190K total comp",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/openai/salaries/software-engineer",
+      "title": "OpenAI Software Engineer Salary | Levels.fyi",
+      "note": "Engineering-only data ($254K-$1.23M); no DevRel/Developer Advocate title present",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/anthropic/salaries",
+      "title": "Anthropic Salaries | Levels.fyi",
+      "note": "Company-wide range $199K-$785K+, no role-level breakdown for DevRel found",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://jobsbyculture.com/blog/openai-compensation-2026",
+      "title": "OpenAI Salary 2026 | jobsbyculture",
+      "note": "General engineering TC bands only ($249K-$1.28M), no DevRel role data",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.fokal.com/ai-seo-research/anthropic-salary/",
+      "title": "Anthropic Salary: What Employees Actually Earn in 2026 | Fokal Research",
+      "note": "Company-wide/engineering-focused; no advocacy/DevRel role breakdown",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.pin.com/blog/ai-compensation-salary-guide/",
+      "title": "AI Compensation Benchmarks 2026 | Pin",
+      "note": "Covers general AI hiring comp trends, not DevRel-specific roles",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salary/Datadog-Developer-Advocate-Salaries-E762009_D_KO8,26.htm",
+      "title": "Datadog Developer Advocate Salaries | Glassdoor",
+      "note": "Avg $132,286, total pay range $121K-$191K",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://careers.datadoghq.com/detail/7555520/",
+      "title": "Datadog job postings (via search aggregation)",
+      "note": "Postings cite $120,000-$176,000 and $136,000-$174,000 + equity bands for Developer Advocate roles",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.devrel.agency/post/survey-devrel-salaries",
+      "title": "Survey Insights: Decoding DevRel Salaries | DevRel.Agency",
+      "note": "Median total comp $200,121 across all company types/sizes, no high-growth-public-specific breakout",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/developer-relations-salary-SRCH_KO0,19.htm",
+      "title": "Developer Relations: Average Salary & Pay Trends 2026 | Glassdoor",
+      "note": "Aggregate title-level data, not segmented by company tier or seniority precisely enough to confirm Staff-level figures",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://jobrise.io/en/blog/developer-relations-careers-guide-2026/",
+      "title": "Developer Relations Careers and Salary Guide 2026 | JobRise",
+      "note": "General guide citing startup comp ranges, not L3/entry-specific for growth-stage private companies",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://jobrei.io/en/blog/developer-relations-careers-guide-2026/",
+      "title": "Developer Relations Careers and Salary Guide 2026 | JobRise",
+      "note": "'Head of DevRel/Director, $190,000-$280,000' \u2014 role-title mismatch (management vs IC Staff)",
+      "kind": "structured_citation"
+    }
+  ]
+}

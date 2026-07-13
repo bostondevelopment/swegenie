@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-engineer",
+  "tier": "early-stage",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No corpus data (early-stage grid is entirely null for this archetype) and no early-stage-specific, support-role-specific comp data found via web search - early/seed-stage startups rarely disclose per-role salary ranges publicly. A general (non-support-specific) seed-stage engineer benchmark (Kruze Consulting, entry-level engineers $75K-$105K in SF) is roughly consistent with the current base p10-p50 ($88K-$88K... i.e. p10=$88K) but is not role-specific enough to count as real grounding. Keep low - legitimate scarcity for this segment."
+}

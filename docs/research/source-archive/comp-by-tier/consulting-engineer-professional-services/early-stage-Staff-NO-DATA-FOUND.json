@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "early-stage",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Same as L5: no real per-company early-stage anchor found for a Staff-level consulting/PS engineer. This is plausibly a genuinely thin/non-existent labor-market segment at true seed/Series A-B scale (these companies rarely have a formal 'Staff' PS track, let alone disclosed comp for it) \u2014 keeping low is the honest outcome here rather than forcing a number onto weak evidence."
+}

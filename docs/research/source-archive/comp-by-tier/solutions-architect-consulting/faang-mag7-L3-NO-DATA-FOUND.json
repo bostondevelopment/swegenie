@@ -1,0 +1,9 @@
+{
+  "archetypeId": "solutions-architect-consulting",
+  "tier": "faang-mag7",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "No corpus postings for this tier/archetype (all null in the extraction file). Not independently re-verified this round beyond the L4 spot-check below; keeping existing medium confidence as previously established rather than re-deriving from scratch, since research effort this round was focused on the low-confidence ai-labs cells per instructions."
+}

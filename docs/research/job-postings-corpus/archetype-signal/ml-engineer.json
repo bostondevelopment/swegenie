@@ -1,0 +1,336 @@
+{
+  "archetype_id": "ml-engineer",
+  "postings_analyzed": 752,
+  "top_requirements": [
+    {
+      "requirement": "Python proficiency (near-universal baseline language requirement)",
+      "approx_frequency": "567 of 752 postings (75%)"
+    },
+    {
+      "requirement": "Prior professional ML/software experience (3-5+ years); explicit junior/new-grad postings are rare",
+      "approx_frequency": "true junior/new-grad/associate titles found in only ~9 of 752 postings (~1%); most of those are actually 'PhD Early Career' senior-titled roles"
+    },
+    {
+      "requirement": "LLM/generative-AI knowledge or hands-on experience (prompting, fine-tuning, RAG, or building on top of foundation models)",
+      "approx_frequency": "451 of 752 postings (60%) mention LLMs; 195/752 (26%) explicitly say generative AI/GenAI; 172/752 (23%) mention fine-tuning; 180/752 (24%) mention RAG"
+    },
+    {
+      "requirement": "Agentic-workflow / AI-agent experience or familiarity",
+      "approx_frequency": "369 of 752 postings (49%) mention agent/agentic (note: this keyword also catches generic usage, so treat as an upper bound)"
+    },
+    {
+      "requirement": "PyTorch (dominant deep-learning framework)",
+      "approx_frequency": "304 of 752 postings (40%)"
+    },
+    {
+      "requirement": "Advanced degree (Master's or PhD) named as required or preferred",
+      "approx_frequency": "Master's mentioned in 347/752 (46%); PhD mentioned in 201/752 (27%) -- PhD is usually 'preferred,' not required, and clusters in research-adjacent postings, consistent with the brief"
+    },
+    {
+      "requirement": "Cloud platform experience (AWS most common, then GCP, then Azure)",
+      "approx_frequency": "AWS 256/752 (34%), GCP 152/752 (20%), Azure 119/752 (16%)"
+    },
+    {
+      "requirement": "TensorFlow",
+      "approx_frequency": "236 of 752 postings (31%) -- still common but trails PyTorch, consistent with PyTorch's dominance in industry by 2026"
+    },
+    {
+      "requirement": "Distributed data/big-data tooling (Spark most common, then Kafka/Airflow)",
+      "approx_frequency": "Spark 161/752 (21%), Airflow 81/752 (11%), Kafka 74/752 (10%)"
+    },
+    {
+      "requirement": "Containerization/orchestration (Kubernetes, Docker) -- concentrated in ML-platform-flavored postings",
+      "approx_frequency": "Kubernetes 153/752 (20%), Docker 103/752 (14%)"
+    },
+    {
+      "requirement": "SQL",
+      "approx_frequency": "147 of 752 postings (20%)"
+    },
+    {
+      "requirement": "Deep learning theory/architecture knowledge",
+      "approx_frequency": "197 of 752 postings (26%)"
+    },
+    {
+      "requirement": "MLOps-specific skills (CI/CD for models, monitoring, deployment pipelines)",
+      "approx_frequency": "CI/CD mentioned in 175/752 (23%); explicit 'MLOps' term in 141/752 (19%), though only 8 postings actually use MLOps in the title itself"
+    },
+    {
+      "requirement": "Managed ML platforms (SageMaker, Databricks)",
+      "approx_frequency": "SageMaker 59/752 (8%), Databricks 57/752 (8%)"
+    },
+    {
+      "requirement": "A/B testing / experimentation literacy",
+      "approx_frequency": "64 of 752 postings (9%) -- less frequently spelled out explicitly than the brief's emphasis on this as a success metric would suggest, though it likely appears more often in less keyword-friendly phrasing"
+    }
+  ],
+  "top_responsibilities": [
+    "Building and maintaining data/feature pipelines that feed model training and real-time inference -- a near-universal responsibility regardless of company size or vertical.",
+    "Training, evaluating, and iterating on models against a specific business metric (fraud/risk, personalization/recommendations, churn, underwriting, health signal detection), then shipping and monitoring them in production rather than stopping at an offline benchmark.",
+    "Integrating LLMs/foundation models into product surfaces: prompting, fine-tuning, retrieval-augmented generation, and increasingly building or hardening agentic workflows -- this shows up across company types, not just AI-native startups (seen at fintechs like Affirm/Alloy/Brex, a DevSecOps company like GitLab, and consumer/health names like Oura and Whoop).",
+    "Owning end-to-end production concerns for the model layer: CI/CD, monitoring, drift detection, on-call rotation, and rollback/safety mechanisms, particularly at senior/staff level and heavily in ML-platform/infra-flavored postings (e.g., Physical Intelligence's ML Infra Engineer owns GPU/TPU compute orchestration and training-pipeline infrastructure).",
+    "Cross-functional partnership with product, data science, and (at platform-flavored companies) other ML engineers as an internal customer base -- consistent with the brief's framing of the platform variant treating other MLEs as its 'customer.'",
+    "At senior/staff/principal levels, setting technical direction and mentoring: several postings describe designing model architecture choices, driving team-level roadmap for an ML domain, and influencing cross-team ML strategy rather than just executing tickets."
+  ],
+  "comp_signals": [
+    {
+      "company": "Block",
+      "range_text": "$276,800 - $415,200 (Staff Machine Learning Engineer, Underwriting and Credit)",
+      "source_url": "http://block.xyz/careers/jobs/5198104008?gh_jid=5198104008"
+    },
+    {
+      "company": "Block",
+      "range_text": "$228,700 - $343,100 (Senior Machine Learning Engineer, Model Risk Management)",
+      "source_url": "http://block.xyz/careers/jobs/5198097008?gh_jid=5198097008"
+    },
+    {
+      "company": "Affirm",
+      "range_text": "$265,000 - $325,000 (Senior Staff Machine Learning Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/affirm/jobs/7550522003"
+    },
+    {
+      "company": "Affirm",
+      "range_text": "$128,000 - $188,000 (Machine Learning Engineer II, Fraud)",
+      "source_url": "https://job-boards.greenhouse.io/affirm/jobs/7695818003"
+    },
+    {
+      "company": "Faire",
+      "range_text": "$308,000 - $423,500 (Principal Applied AI / ML Engineer)",
+      "source_url": "https://boards.greenhouse.io/faire/jobs/8456064002?gh_jid=8456064002"
+    },
+    {
+      "company": "Gusto",
+      "range_text": "$245,000 - $272,000 and $288,000 - $321,000 (two bands, Sr. Staff AI/ML Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/gusto/jobs/7307124"
+    },
+    {
+      "company": "Sentry",
+      "range_text": "$240,000 - $300,000 (Staff Machine Learning Engineer, AI)",
+      "source_url": "https://jobs.ashbyhq.com/sentry/81f09568-da7d-4ed1-8283-614f846c9b00"
+    },
+    {
+      "company": "Whoop",
+      "range_text": "$150,000 - $210,000 (Senior Machine Learning Engineer, multiple teams)",
+      "source_url": "https://jobs.lever.co/whoop/69b264af-4223-48d3-964d-5f5ba883a95d"
+    },
+    {
+      "company": "Whoop",
+      "range_text": "$170,000 - $230,000 (Staff Machine Learning Engineer, Health)",
+      "source_url": "https://jobs.lever.co/whoop/44a1154e-9580-4ba6-8dc0-6f87684697ba"
+    },
+    {
+      "company": "Drata",
+      "range_text": "$200,700 - $271,500 / $220,800 - $298,800 (two bands, Staff AI Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/drata/9e155590-4a2d-4dda-b0da-9b1217906c95"
+    },
+    {
+      "company": "Brex",
+      "range_text": "$171,000 - $240,000 (AI Engineer, Product/Ecosystem)",
+      "source_url": "https://www.brex.com/careers/8606845002?gh_jid=8606845002"
+    },
+    {
+      "company": "Instawork",
+      "range_text": "$170,000 - $200,000 (ML Engineer, Instawork Robotics)",
+      "source_url": "https://job-boards.greenhouse.io/instawork/jobs/4686498006"
+    }
+  ],
+  "seniority_distribution_notes": "Corpus skews senior and above: title-keyword buckets show 295/752 (39%) senior, 166/752 (22%) staff, 47/752 (6%) principal/distinguished -- roughly two-thirds senior or higher. True entry-level/junior/new-grad/associate titles are vanishingly rare (well under 10 of 752, and most of the apparent matches were actually 'Senior ... PhD Early Career' roles, not junior roles). This strongly corroborates the brief's claim that MLE is not a typical fresh-grad first job and that postings routinely expect multiple years of prior experience.",
+  "notable_divergence_from_existing_brief": "Broadly confirms the brief (production-over-research center of gravity, senior-skewed seniority, comp premium over general SWE/data-engineer, PhD as exception not norm) but the fresh sample suggests the brief undersells how dominant LLM/generative-AI/agentic work has become by mid-2026: 60% of postings mention LLMs, 49% mention agents/agentic workflows, 24% mention RAG, and 23% mention fine-tuning -- this is now the majority pattern, not the 'increasingly, even at non-LLM-native companies' framing the brief uses (which reads as describing an emerging trend rather than the modal case it now appears to be). Relatedly, title vocabulary itself has shifted: 252 of 752 postings (33%) use 'AI Engineer' rather than 'Machine Learning Engineer' in the title (405/752, 54%, still use 'Machine Learning Engineer'), suggesting the archetype's real-world naming is bifurcating in a way the brief doesn't call out. Also worth flagging: 'MLOps' as an explicit title string appears in only 8 of 752 postings despite the brief's substantial MLOps-engineer discussion (via Bazeley) -- consistent with the brief's own point that MLOps/ML-platform/MLE titling is inconsistent across companies, but the postings data suggests 'MLOps Engineer' specifically is a rare standalone title versus being folded into generalist 'ML/AI Engineer' or 'Platform' titles (35/752 postings use 'Platform' in title). Comp figures pulled directly from postings (Block, Affirm, Faire, Gusto, Sentry, Whoop, Drata, Brex, Instawork, and many more -- 178 of 752 postings contain an explicit dollar range) are generally in the $150K-$420K base range depending on level, which is directionally consistent with the brief's levels.fyi-derived total-comp table but these are base-only figures (no equity), so they read lower than the blended TC figures in the brief's comp table -- worth a footnote distinguishing base-only posted ranges from blended TC estimates.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Senior-skewed corpus (61% senior+) and near-absence of junior postings supports a high target: postings for this archetype routinely expect engineers to define the ML objective/problem themselves rather than execute a handed-down spec."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Postings don't emphasize interrupt-driven work as a defining trait; on-call/monitoring language appears but is not the dominant theme outside the platform/MLOps sub-flavor, consistent with a moderate target."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "CI/CD (23%) and monitoring/production-hardening language recur but are one responsibility among several, not framed as incident-response-centric; moderate target/weight look right."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Consistent emphasis across postings on data-distribution debugging, model evaluation, and production-hardening supports a high target."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "ML-platform/infra-flavored postings (Physical Intelligence ML Infra, Netflix-style feature infra roles) show real large-scale systems design work, but this is a variant, not the modal generalist posting -- consistent with the brief's own framing that this is variant-specific rather than universal."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings span modeling, pipelines, APIs, cloud infra, and increasingly LLM/agent tooling -- breadth confirmed, moderate target is reasonable."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Postings consistently frame success around shipped models tied to a named business metric (fraud, churn, personalization, underwriting) rather than offline benchmark quality alone."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Cross-functional collaboration with product/data science named routinely; no evidence of heavy external-client-facing work in the sampled postings, so moderate target holds."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No broad pattern of teaching/evangelism responsibilities in the sampled postings outside isolated senior/staff mentoring language; low target/weight appropriate."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No account/portfolio structure appears anywhere in the sampled postings; low target/weight is well-supported."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No client-relationship-duration framing found in postings; low target/weight is well-supported."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Every explicit comp figure found in the corpus is a base-salary band (occasionally plus generic 'equity'), not commission/variable-comp structure -- consistent with a low target."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Python (75%), PyTorch (40%), and general production-engineering language dominate the corpus, confirming this is a heavily hands-on-coding role."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No travel/embed expectations found in sampled postings; low target/weight well-supported. Some hybrid-office requirements appeared (e.g., HPE, 2 days/week) but that's a location/RTO fact, not a travel/embed pattern."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Isolated trust/safety-flavored postings exist but are a minority; general corpus does not emphasize adversarial/red-team work broadly, consistent with a low-moderate target reflecting a sub-flavor rather than the norm."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "GPU/compute-budget language appears (11% mention GPU) but this is cost/scale optimization, not hard real-time/power/RF physical constraint engineering -- low target holds. A handful of robotics-adjacent postings (Instawork Robotics, Carbon Robotics, Dexterity, Agility Robotics, Apptronik appear as companies in the corpus) could push this higher for a robotics-ML sub-flavor, worth a note for reviewers."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Only 16 of 752 titles (2%) contain lead/manager/director language, confirming this is predominantly an IC archetype with management as an optional branch, not core."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No broad external-spokesperson pattern found in the sampled postings beyond isolated staff-level mentions; low target/weight well-supported."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Every posting in the corpus is, by construction, an ML/AI-titled role requiring ML/DL framework and modeling knowledge -- maximal target and weight for the archetype's defining domain gate is fully supported."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No mobile-platform-specific requirements found anywhere in the sampled postings; low target/weight well-supported."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 4,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Data pipeline work (Spark 21%, Airflow 11%, Kafka 10%, SQL 20%) is pervasive across the corpus, confirming this as a real, high-frequency adjacency."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 3,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Cloud platform mentions (AWS 34%, GCP 20%, Azure 16%, Kubernetes 20%, Docker 14%) are common but concentrated more heavily in platform/infra-flavored postings than the generalist modeling-focused postings, consistent with a moderate (not maximal) target reflecting a sub-variant emphasis."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Affirm",
+      "title": "Senior Machine Learning Engineer (Fraud)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7696276003"
+    },
+    {
+      "company": "Block",
+      "title": "Staff Machine Learning Engineer, Underwriting and Credit",
+      "url": "http://block.xyz/careers/jobs/5198104008?gh_jid=5198104008"
+    },
+    {
+      "company": "Whoop",
+      "title": "Senior Machine Learning Engineer, AI Platform",
+      "url": "https://jobs.lever.co/whoop/69b264af-4223-48d3-964d-5f5ba883a95d"
+    },
+    {
+      "company": "GitLab",
+      "title": "AI Engineer",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/"
+    },
+    {
+      "company": "Physical Intelligence",
+      "title": "ML Infra Engineer (TPU/Jax/Optimization)",
+      "url": "https://job-boards.greenhouse.io/physicalintelligence/jobs/"
+    },
+    {
+      "company": "Drata",
+      "title": "Staff AI Engineer",
+      "url": "https://jobs.ashbyhq.com/drata/9e155590-4a2d-4dda-b0da-9b1217906c95"
+    },
+    {
+      "company": "Instawork",
+      "title": "ML Engineer - Instawork Robotics",
+      "url": "https://job-boards.greenhouse.io/instawork/jobs/4686498006"
+    },
+    {
+      "company": "HPE",
+      "title": "AI and Machine Learning Engineer III",
+      "url": "https://job-boards.greenhouse.io/hpe/jobs/"
+    }
+  ]
+}

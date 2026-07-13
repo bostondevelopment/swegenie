@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "faang-mag7",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "No Staff-specific embedded/firmware breakdown found this round (Nvidia and Meta embedded-title pages are blended-level, topping out around $454K, below what a true Staff/IC5-6 embedded role at Meta typically commands). The current dataset total (base 243K + bonus 55K + equity 278K \u2248 $576K) is plausible but unconfirmed at the Staff-specific level \u2014 keeping medium rather than upgrading on unverified extrapolation."
+}

@@ -1,0 +1,338 @@
+{
+  "archetype_id": "embedded-iot-engineer",
+  "postings_analyzed": 148,
+  "top_requirements": [
+    {
+      "requirement": "C/C++ proficiency (embedded C++ most common; some bare-metal C-only)",
+      "approx_frequency": "110 of 148 explicitly say C++; effectively near-universal as the core language"
+    },
+    {
+      "requirement": "Communication protocol experience: CAN, SPI, I2C, UART (bus-level peripheral/comm protocols)",
+      "approx_frequency": "CAN 113/148, SPI 71/148, I2C 62/148, UART 48/148 \u2014 CAN's high count is partly driven by the automotive/robotics/defense-vehicle skew of this sample"
+    },
+    {
+      "requirement": "RTOS and/or embedded Linux experience",
+      "approx_frequency": "RTOS 62/148; embedded Linux 40/148 explicit; Linux mentioned generally in 78/148"
+    },
+    {
+      "requirement": "Hardware bring-up / lab instrumentation skills (oscilloscope, logic analyzer, JTAG debugging)",
+      "approx_frequency": "oscilloscope 50/148, logic analyzer 41/148, JTAG 22/148, \"bring-up\"/\"bring up\" phrasing in 76/148 combined"
+    },
+    {
+      "requirement": "Bachelor's degree in EE/CompE/CS or equivalent experience",
+      "approx_frequency": "63/148 explicitly require or prefer a Bachelor's; 41/148 additionally mention Master's as a plus/preferred"
+    },
+    {
+      "requirement": "Stated years-of-experience bar, most commonly 3-5 years for non-senior and 7-10+ for senior/staff/principal",
+      "approx_frequency": "61/148 use explicit \"years of experience\" phrasing"
+    },
+    {
+      "requirement": "Python (for tooling, test automation, scripting) alongside the core C/C++ firmware work",
+      "approx_frequency": "75 of 148 mention Python, higher than expected for a \"C/C++ only\" field \u2014 almost always framed as a secondary/tooling skill, not the primary language"
+    },
+    {
+      "requirement": "US Person / security clearance eligibility (ITAR/export-control)",
+      "approx_frequency": "28/148 mention \"U.S. Person\" status and 24/148 mention security clearance explicitly \u2014 concentrated in the defense/aerospace segment (Anduril alone accounts for the largest share; also RTX, Boeing, GE Aerospace) but notably also appears in some consumer-adjacent postings (e.g. Whoop) due to dual-use/export-control policy, not just prime contractors"
+    },
+    {
+      "requirement": "Rust as an emerging secondary/optional language",
+      "approx_frequency": "24/148 mention Rust, almost always as \"nice to have\" or for specific safety-critical/cryptographic subsystems rather than the primary language"
+    },
+    {
+      "requirement": "FPGA/VHDL/Verilog for a subset of roles (RF, sensor, ASIC-adjacent firmware)",
+      "approx_frequency": "FPGA 23/148, VHDL 5/148, Verilog 5/148 \u2014 a real but minority sub-specialization"
+    }
+  ],
+  "top_responsibilities": [
+    "Own firmware/software for a specific product line or subsystem end-to-end: design, implementation, automated + field testing, and deployment/OTA support, not just writing code to spec.",
+    "Hardware bring-up and validation on new PCB/board revisions, working closely with electrical engineers to isolate whether a failure is hardware, firmware, or a timing/interaction bug between the two.",
+    "Develop and maintain drivers and communication-protocol stacks (CAN, SPI, I2C, UART, BLE/wireless, Ethernet) that bridge sensors/actuators/motor controllers to a compute platform.",
+    "Build and maintain test infrastructure, including Hardware-in-the-Loop (HIL) and Software-in-the-Loop (SIL) rigs, automated test suites, and CI/CD pipelines for firmware \u2014 a more formalized testing discipline than the brief's existing 'testing/validation processes' line suggested, appearing as a named responsibility (not just an afterthought) in a meaningful share of postings, especially at robotics/AV/aerospace companies.",
+    "Cross-functional collaboration with electrical/hardware/RF/mechanical engineering teams to close the loop between physical constraints and firmware design decisions.",
+    "Debug and root-cause field/production failures, often framed as safety-critical (autonomous vehicles, robots, aircraft, medical devices, defense systems) rather than purely inconvenience-level bugs.",
+    "At senior/staff/principal levels: set technical direction/architecture across multiple product lines or platforms, mentor other engineers, and lead design reviews \u2014 a step up in scope but still centered on one hardware platform family, consistent with the existing brief's ladder description.",
+    "Power management and battery-life engineering as an explicit named responsibility on a meaningful subset of postings (robotics, wearables, EVs) rather than being folded generically into 'resource-constrained optimization.'"
+  ],
+  "comp_signals": [
+    {
+      "company": "Anduril Industries",
+      "range_text": "$166,000 \u2014 $220,000 (Firmware/Embedded Software Engineer, non-senior)",
+      "source_url": "https://jobs.ashbyhq.com/anduril (multiple Firmware Engineer / Embedded Software Engineer / Embedded Linux Engineer reqs; representative req: https://jobs.ashbyhq.com/anduril/firmware-engineer)"
+    },
+    {
+      "company": "Anduril Industries",
+      "range_text": "$191,000 \u2014 $253,000 (Senior Firmware/Embedded Software Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/anduril (multiple Senior Firmware/Embedded Software Engineer reqs, e.g. Senior Firmware Engineer, Wireless)"
+    },
+    {
+      "company": "Anduril Industries",
+      "range_text": "$220,000 \u2014 $292,000 (Staff Firmware Engineer / Senior Embedded Linux Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/anduril/staff-firmware-engineer"
+    },
+    {
+      "company": "1X Technologies",
+      "range_text": "$200,000 \u2013 $280,000 (Embedded Firmware Engineer - Battery)",
+      "source_url": "https://jobs.ashbyhq.com/1x/19004256-4253-41d3-baa7-1f25bbd125be"
+    },
+    {
+      "company": "1X Technologies",
+      "range_text": "$200,000 \u2013 $300,000 (Embedded Firmware Engineer - NEO)",
+      "source_url": "https://jobs.ashbyhq.com/1x/ea9614dd-94e8-4a3a-a714-645957a298d0"
+    },
+    {
+      "company": "Aurora Innovation",
+      "range_text": "$189,000-$303,000 (Staff Embedded Linux Engineer)",
+      "source_url": "https://aurora.tech/jobs/8373338002?gh_jid=8373338002"
+    },
+    {
+      "company": "Skydio",
+      "range_text": "$170,000 - $277,500 (Senior/Staff Embedded Software Engineer, Camera Systems)",
+      "source_url": "https://jobs.ashbyhq.com/skydio/71033170-d9d0-474b-b712-a11e4f11c146"
+    },
+    {
+      "company": "Applied Intuition",
+      "range_text": "$171,000 - $264,000 (Embedded Software Engineer / Senior Embedded Software Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/applied/b352b349-8300-4f41-817d-952d044fb38a"
+    },
+    {
+      "company": "Waabi",
+      "range_text": "$148,000 - $249,000 (Senior/Staff Embedded Software Engineer)",
+      "source_url": "https://jobs.lever.co/waabi/941f9a1b-c3b8-456e-a469-ddf2d7bcd46a"
+    },
+    {
+      "company": "Roku",
+      "range_text": "$197,900 - $270,000 (Software Engineer, Embedded Systems)",
+      "source_url": "https://www.weareroku.com/jobs/7680250?gh_jid=7680250"
+    },
+    {
+      "company": "Figure AI",
+      "range_text": "$160,000 - $250,000 (Firmware Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/figureai/jobs/4654891006"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "$153,000 to $242,000 (Senior Firmware Engineer)",
+      "source_url": "https://coreweave.com/careers/job?4452431006&board=coreweave&gh_jid=4452431006"
+    },
+    {
+      "company": "Boeing",
+      "range_text": "$99,450 - $134,550 (Associate Embedded Software Engineer) and $171,700 - $232,200 (Senior Embedded Software Engineer)",
+      "source_url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Associate-Embedded-Software-Engineer_JR2026500069"
+    },
+    {
+      "company": "Broadcom",
+      "range_text": "$108,000 - $172,800 (Firmware Engineer) and $109,700 - $175,500 (Senior Firmware Engineer, Fibre Channel/NVME)",
+      "source_url": "https://broadcom.wd1.myworkdayjobs.com/External_Career/job/USA-CA-Irvine-Alton-Parkway-Bldg-2/Firmware-Engineer_R025866"
+    },
+    {
+      "company": "WHOOP",
+      "range_text": "$105,000-$145,000 (Embedded Engineer)",
+      "source_url": "https://jobs.lever.co/whoop/e8171c38-fbc5-4ce2-a8e5-fe9e4934bbae"
+    },
+    {
+      "company": "Varda Space Industries",
+      "range_text": "$131,000 - $184,000 (Embedded Software Engineer) and $169,000 - $216,000 (Senior Embedded Software Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/vardaspace/jobs/7799183003"
+    }
+  ],
+  "seniority_distribution_notes": "Titles skew mid-to-senior: roughly 59 of 148 postings are unlabeled/generic \"Embedded Software Engineer\" or \"Firmware Engineer\" (typically 3-5+ years implied), 59 explicitly say Senior, 16 Staff, 5 Principal, 2 Lead, and only 7 explicitly entry/junior/associate/early-career. This confirms the existing brief's framing that self-taught/entry-level access is comparatively rare, though it also partly reflects that this corpus was sourced from company career sites, which post fewer true-entry reqs generally. No postings in the sample were director/manager-level, consistent with this being an IC-heavy archetype.",
+  "notable_divergence_from_existing_brief": "Two things diverge meaningfully from the brief's comp narrative. (1) Explicit stated comp is far more common than the brief implies (it treated Workday postings as the main source of real figures): 76 of 148 postings (51%) state an explicit dollar range, and 86 of 148 (58%) mention equity/RSUs \u2014 comp transparency here is not the exception. (2) The brief's claim that this archetype's comp is \"disproportionately concentrated at non-VC-backed industrial, medical-device, automotive, and defense companies\" where \"comp is close to 100% cash\" undersells a real and sizable segment in this sample: VC-backed hard-tech/robotics/defense-tech startups (Anduril, 1X, Figure AI, Skydio, Apptronik, Agility Robotics, Waabi, Applied Intuition, Astranis, Varda Space, Relativity Space, Redwood Materials, Motional, Aurora Innovation, CoreWeave, Neuralink) make up roughly a third of the 50 sampled companies and post embedded/firmware roles in the $150K-$300K range WITH equity explicitly called out \u2014 a comp profile much closer to mainstream big-tech/high-growth-startup SWE comp than the brief's \"close to 100% cash, industrial/defense\" framing suggests. The classic low-equity, near-100%-cash pattern does still show up clearly (Boeing, Broadcom, GE Aerospace, RTX, Caterpillar), but it's one segment among several rather than the dominant shape implied by the brief. This is a real sourcing-bias effect worth flagging: Greenhouse/Lever/Ashby-hosted boards inherently overweight VC-backed/tech-forward employers relative to legacy industrial/defense primes that more often use Workday, iCIMS, or fully custom sites \u2014 but even accounting for that bias, the brief's comp-structure claim reads as somewhat dated relative to the current hard-tech/robotics/defense-tech funding boom (Anduril, 1X, Figure, Apptronik, Skydio etc. did not exist or were much smaller when comparable claims were likely first written). Everything else \u2014 dominant C/C++, RTOS/embedded Linux split, protocol-level driver work, hardware bring-up via oscilloscope/JTAG, cross-domain (hardware vs. firmware) debugging emphasis, EE/CompE-leaning degree preference, senior-skewed seniority distribution \u2014 is strongly corroborated by this fresh sample.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Power management/battery, memory footprint, and real-time framing recur constantly; bring-up via oscilloscope/logic analyzer/JTAG appears in roughly a third of postings. Strongly supports max target/weight."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 5,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "\"Debug\" appears in 111/148 postings, and root-cause/field-failure framing (autonomous vehicles, robots, aircraft, medical/defense systems) is pervasive, consistent with the top score/weight."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "C/C++ is the dominant deliverable in effectively all postings (110/148 explicit C++, plus C-only bare-metal roles); a 4 (not 5) fits since senior+ roles also carry architecture/mentoring/cross-team scope, not pure coding."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Sample confirms breadth across RTOS/bare-metal/embedded-Linux/RF/FPGA sub-domains and frequent EE/CompE degree preference (63/148 mention Bachelor's, many specifying EE/CompE); a second-discipline (EE) fluency requirement is clearly real."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 4,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Safety-critical framing (76/148 mention \"safety\") and field-failure consequences (autonomous vehicles, aircraft, medical, defense) support a high accountability target; engineers are on the hook for real-world outcomes even where hardware is outside their direct control."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": false,
+      "note": "Explicit formal on-call/paging language is essentially absent from the sample (0/148 for \"on-call\"/\"on call\" as literal phrases), though field-diagnostic-under-pressure framing is present qualitatively. The 4/0.6 target may be somewhat overstated relative to what postings literally describe as day-to-day paging burden versus occasional high-stakes bring-up/incident response; worth a closer look in review, though this could be an artifact of postings not spelling out on-call policy explicitly rather than it not existing."
+    },
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Most postings describe well-defined product/board scope (\"own firmware for X subsystem\") rather than fully open-ended problem definition, consistent with a moderate (not high) target."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "No strong signal of frequent interruption-driven work in the sample; sustained bring-up/debugging work is the dominant description, consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Staff/Principal scope in the sample (Axon Staff AI Embedded SWE, Anduril Staff Firmware Engineer) is described as owning architecture across multiple product lines within one company/platform family, not a multi-tenant platform serving many external teams \u2014 consistent with the low-moderate target."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Cross-functional collaboration is with internal hardware/EE/RF/QA teams (47/148 mention \"cross-functional\"), not external clients; supports a low-moderate target."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": false,
+      "note": "Only 23/148 postings mention travel or manufacturing-partner language explicitly, and none frame it as a majority-time commitment; sample suggests this could be somewhat lower (2) rather than a moderate 3, though it's plausible many postings simply don't spell out travel expectations in the JD text."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "The brief's rationale (near-100%-cash, minimal equity) is only partly supported \u2014 58% of the sample mentions equity explicitly, including many roles paying well above the brief's cited industrial/defense range. Target of 1 (minimum) may be too low for the current market mix, though \"variable\" here should be read narrowly (this dimension appears to mean commission/utilization-linked pay, not equity, so a low target may still be technically correct \u2014 worth clarifying in review whether equity counts toward this dimension at all)."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No named client/account structure anywhere in the sample; work is organized around products/boards/platforms, consistent with the minimum target."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No client-relationship-duration framing anywhere in the sample; consistent with minimum target."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Mentoring appears (44/148, mostly senior+) but as internal engineer-to-engineer mentoring, not teaching/content/public-facing work; consistent with a low target given the dimension's definition centers on visibility/content, though the mentoring frequency suggests this shouldn't be read as literally zero."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Mentoring language (44/148) appears mainly at senior/staff/principal levels alongside technical-direction-setting, not people-management/headcount responsibility; consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Security-hardened firmware (secure boot, OTA, cryptographic firmware at Northrop Grumman/Medtronic per the existing brief; not heavily present in this fresh sample) is a minority sub-specialization; most testing/validation focus in this sample is safety/reliability, not adversarial/exploit-oriented, consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe public speaking, content, or visibility expectations; consistent with minimum target."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Not a requirement in the vast majority of postings; a few AI-adjacent titles exist (Axon \"Staff AI Embedded Software Engineer\", OpenAI robotics firmware) but these are edge cases, not the norm, consistent with a minimum/low-weight target."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Not mentioned in the sample; consistent with minimum target."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Not mentioned in the sample; consistent with minimum target."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Occasional device-to-cloud telemetry/connectivity mention (consistent with existing brief's Traeger/Inspiren examples) but not a core cloud-infra skill ask in this sample; consistent with minimum target given physical_constraint_engineering is the archetype's real domain-fluency gate."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Anduril Industries",
+      "title": "Senior Firmware Engineer, Wireless",
+      "url": "https://jobs.ashbyhq.com/anduril"
+    },
+    {
+      "company": "Nvidia",
+      "title": "Embedded Software Engineer",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite"
+    },
+    {
+      "company": "Boeing",
+      "title": "Senior Embedded Software Engineer",
+      "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Long-Beach-CA/Senior-Embedded-Software-Engineer_JR2026517765"
+    },
+    {
+      "company": "WHOOP",
+      "title": "Embedded Engineer",
+      "url": "https://jobs.lever.co/whoop/e8171c38-fbc5-4ce2-a8e5-fe9e4934bbae"
+    },
+    {
+      "company": "Figure AI",
+      "title": "Firmware Engineer",
+      "url": "https://job-boards.greenhouse.io/figureai/jobs/4654891006"
+    },
+    {
+      "company": "Caterpillar",
+      "title": "Embedded Software Engineer",
+      "url": "https://www.caterpillar.com/en/careers.html"
+    },
+    {
+      "company": "Roku",
+      "title": "Software Engineer, Embedded Systems",
+      "url": "https://www.weareroku.com/jobs/7680250?gh_jid=7680250"
+    },
+    {
+      "company": "Aurora Innovation",
+      "title": "Staff Embedded Linux Engineer",
+      "url": "https://aurora.tech/jobs/8373338002?gh_jid=8373338002"
+    }
+  ]
+}

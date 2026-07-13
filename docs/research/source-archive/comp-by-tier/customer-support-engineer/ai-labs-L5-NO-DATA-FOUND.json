@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-engineer",
+  "tier": "ai-labs",
+  "level": "L5",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No senior/staff-level ai-lab support-engineer data found in corpus or web search. Only one ai-labs data point exists in the entire corpus (the Anthropic L4 posting above); no L5-equivalent posting or Levels.fyi breakdown located. Keep low - legitimate data scarcity for this narrow role/tier combination."
+}

@@ -1,0 +1,37 @@
+{
+  "archetypeId": "customer-support-engineer",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 5,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/amazon/salaries/support-engineer",
+      "title": "Amazon Support Engineer Salary | Levels.fyi",
+      "note": "L4 total $123K (base $102K, stock $14.9K/yr, bonus $6.5K); L5 total $154K (base $130K, stock $14.3K, bonus $10K)",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/amazon/salaries/cloud-support-engineer",
+      "title": "Amazon Cloud Support Engineer Salary | Levels.fyi",
+      "note": "L4 total $128K (base $102K); L5 total $172K (base $121K) \u2014 corroborates base anchor",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/senior-technical-support-engineer-salary-SRCH_KO0,33.htm",
+      "title": "Senior Technical Support Engineer: Average Salary & Pay Trends | Glassdoor",
+      "note": "90th percentile ~$216,977 across all companies/industries; not MAG7-specific, weak comparator only",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://openai.com/careers/ai-support-engineer-san-francisco-san-francisco/",
+      "title": "AI Support Engineer - San Francisco | OpenAI (job posting, not directly accessible)",
+      "note": "Could not fetch directly (403); secondary search snippet cited estimated $120K-$150K base, another source cited $180K \u2014 inconsistent and unverified",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/customer-support-engineer-salary-SRCH_KO0,25.htm",
+      "title": "Customer Support Engineer: Average Salary & Pay Trends | Glassdoor",
+      "note": "Blended across all company sizes/industries: avg $126,627, 25th-75th pctile $101,684-$159,461 \u2014 directionally consistent but not tier-specific",
+      "kind": "structured_citation"
+    }
+  ]
+}

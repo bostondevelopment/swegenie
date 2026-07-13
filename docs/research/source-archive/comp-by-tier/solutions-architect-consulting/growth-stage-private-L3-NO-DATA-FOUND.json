@@ -1,0 +1,9 @@
+{
+  "archetypeId": "solutions-architect-consulting",
+  "tier": "growth-stage-private",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus extraction has no points bucketed at 'Entry/Associate' for this tier (only Mid/Senior/Principal have data). No direct L3 corpus support, but the tier's Mid-level corpus median ($154.2K, from DEPT and Valtech postings) sits above our current L3 base p50 ($126K) and close to our L4 base p50 ($153K) \u2014 see L4 note. This implies our L3 base band, while unverified directly, is plausible as the rung below the Mid corpus data. Keeping medium as previously assessed."
+}

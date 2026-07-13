@@ -1,0 +1,9 @@
+{
+  "archetypeId": "developer-relations-advocacy",
+  "tier": "early-stage",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Corpus 'Entry/Associate' bucket is null for early-stage. No named-company early-stage entry-level DevRel postings found via web search; only generic aggregate salary-site averages surfaced, which are not reliable per-tier/per-level anchors. Keeping low is appropriate \u2014 genuinely thin market data at this specific tier/level."
+}

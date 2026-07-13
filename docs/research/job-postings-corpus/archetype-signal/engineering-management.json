@@ -1,0 +1,306 @@
+{
+  "archetype_id": "engineering-management",
+  "postings_analyzed": 803,
+  "top_requirements": [
+    {
+      "requirement": "2-5 years of direct people/team management experience (leading engineers or owning delivery for a team)",
+      "approx_frequency": "~250 of 803 postings cite a specific years-of-management figure; most common bands are 2+ (69), 3+ (85) and 5+ (60) years, with a smaller senior/director cluster requiring 7-12+ years"
+    },
+    {
+      "requirement": "Prior hands-on software engineering background / \"strong technical\" credibility as a prerequisite to leading the team, not necessarily current coding output",
+      "approx_frequency": "374/803 use the phrase \"hands-on\" (mostly as required background e.g. \"hands-on experience,\" \"hands-on technical leadership\"); 163/803 use \"strong technical\""
+    },
+    {
+      "requirement": "Bachelor's degree in CS or equivalent (often \"or equivalent practical experience\")",
+      "approx_frequency": "182/803 mention \"computer science\"; 152/803 mention \"bachelor\""
+    },
+    {
+      "requirement": "Ownership of hiring/recruiting for the team as a standing duty",
+      "approx_frequency": "485/803 mention \"hiring\" somewhere in the posting"
+    },
+    {
+      "requirement": "Cross-functional stakeholder management (product, design, other eng teams, sometimes GTM)",
+      "approx_frequency": "428/803 mention \"stakeholder\"; 425/803 mention \"cross-functional\""
+    },
+    {
+      "requirement": "Coaching, mentorship, and career/performance development of reports",
+      "approx_frequency": "369/803 mention \"coach\"; 224/803 \"coaching\"; 153/803 \"career development\"; 103/803 \"performance management\""
+    },
+    {
+      "requirement": "Cloud/infra fluency (AWS most common, then GCP/Azure/Kubernetes) as a domain-context requirement, especially at infra/platform-focused EM roles",
+      "approx_frequency": "343/803 mention AWS; 132/803 Kubernetes; 128/803 CI/CD; 80/803 GCP; 72/803 Azure"
+    },
+    {
+      "requirement": "AI/ML product or platform context named in the role itself (many roles are EM for an AI feature/product team, not just AI as company buzzword)",
+      "approx_frequency": "516/803 mention \"ai\"; 149/803 mention \"llm\"; 120/803 mention \"machine learning\""
+    },
+    {
+      "requirement": "Security/compliance awareness expected of the team's delivery (SOC2, data protection, etc.), more common in fintech/health postings",
+      "approx_frequency": "373/803 mention \"security\"; 249/803 mention \"compliance\""
+    },
+    {
+      "requirement": "Architecture-level technical judgment (reviewing/steering system design, not implementing it)",
+      "approx_frequency": "464/803 mention \"architecture\""
+    }
+  ],
+  "top_responsibilities": [
+    "Own end-to-end delivery for one team (roughly 4-10 engineers at base-EM scope, occasionally 12-25+ at senior/director scope): planning, prioritization, execution, and shipping against a roadmap set jointly with product/design.",
+    "Run the full people-management loop directly: 1:1s, continuous feedback, individual growth/career plans, performance reviews, and being the primary voice in hiring, interviewing, and closing candidates for the team.",
+    "Stay technically engaged as an evaluator and steward rather than an implementer \u2014 reviewing code and architectural proposals, weighing in on technical direction/roadmap, and preserving enough hands-on credibility to be a trusted technical voice, without owning production output.",
+    "Act as the team's cross-functional interface \u2014 represent engineering in product/design planning, translate business priorities into technical execution, and manage escalations from stakeholders or on-call/incidents that land on the manager's desk.",
+    "Shape team culture, process, and (especially at senior/director-scope roles) org design \u2014 including budget/headcount input, staffing decisions, and increasingly for senior roles, managing managers rather than only ICs.",
+    "In infra/security/compliance-heavy orgs, ensure the team's delivery meets operational and regulatory bars (reliability, SOC2/compliance, incident response quality) as a team-level outcome the EM is accountable for."
+  ],
+  "comp_signals": [
+    {
+      "company": "Brex",
+      "range_text": "Engineering Manager: salary range $240,000 - $300,000; Senior Engineering Manager: $300,000 - $375,000",
+      "source_url": "https://www.brex.com/careers/8534633002?gh_jid=8534633002"
+    },
+    {
+      "company": "Mercury",
+      "range_text": "base salary $239,000 - $298,800 (US, any location)",
+      "source_url": "https://job-boards.greenhouse.io/mercury/jobs/5994222004"
+    },
+    {
+      "company": "Affirm",
+      "range_text": "base pay range (CA/WA/NY/NJ/CT) $265,000 - $325,000; all other US states $236,000 - $296,000",
+      "source_url": "https://job-boards.greenhouse.io/affirm/jobs/7705033003"
+    },
+    {
+      "company": "Gemini",
+      "range_text": "base salary range $195,000 - $300,000",
+      "source_url": "https://boards.greenhouse.io/embed/job_app?for=gemini&token=7762866&gh_jid=7762866"
+    },
+    {
+      "company": "Adyen",
+      "range_text": "Engineering Director base salary $300,000 - $367,000; Engineering Manager (Capital) $198,000 - $293,000",
+      "source_url": "https://job-boards.greenhouse.io/adyen/jobs/7943731"
+    },
+    {
+      "company": "Cloudflare",
+      "range_text": "Engineering Manager, Linux Team: annual salary $170,000 - $275,000 (one tier) / $190,000 - $303,000 (another tier)",
+      "source_url": "https://boards.greenhouse.io/cloudflare/jobs/7647474?gh_jid=7647474"
+    },
+    {
+      "company": "LangChain",
+      "range_text": "Software Engineering Manager, AI Observability & Evals Platform: annual salary range $200,000 - $250,000",
+      "source_url": "https://jobs.ashbyhq.com/langchain/e1263bfe-b638-4019-b4d5-0aacca93b2b3"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "Engineering Manager, Billing Platform: base salary $182,000 - $242,000; Operations Engineering Manager, Fleet Reliability: $143,000 - $191,000",
+      "source_url": "https://coreweave.com/careers/job?4644854006&board=coreweave&gh_jid=4644854006"
+    },
+    {
+      "company": "Postman",
+      "range_text": "Engineering Manager, Fern Docs: base salary $250,000 - $290,000; Head of Engineering: $300,000 - $350,000",
+      "source_url": "https://job-boards.greenhouse.io/postman/jobs/7790480003"
+    },
+    {
+      "company": "Fireblocks",
+      "range_text": "Director of Engineering, Dynamic Platform: base salary estimate $220,000 - $300,000",
+      "source_url": "https://www.fireblocks.com/careers/4662147006?gh_jid=4662147006"
+    }
+  ],
+  "seniority_distribution_notes": "Heavily weighted to base/first-line EM: ~70% of the 803 titles are plain \"Engineering Manager\" (no seniority modifier), ~18% \"Senior Engineering Manager,\" ~10% Director/Head of Engineering, and only ~1% VP-level. Lead/Staff/Principal-modified EM titles are rare (<1% combined). Years-of-management-experience asks cluster at 2-5 years (the dominant band), consistent with a first-line-manager-heavy sample, with a distinct smaller cluster requiring 7-12+ years that maps to the Director/Head postings. This confirms the brief's framing of EM as primarily a first-line, single-team role rather than a senior-management-dominated sample.",
+  "notable_divergence_from_existing_brief": "Largely confirms the brief (team size 4-10 matches the \"5-8 engineers\" claim; hiring, 1:1s, coaching, and cross-functional stakeholder work are all heavily and consistently represented; comp figures found here, $143K-$375K base across 68 companies with stated ranges, are directionally consistent with the brief's comp-parity argument once total comp/equity is added on top of these base figures). The one place the sample nuances the brief rather than contradicts it: postings put much heavier and more explicit emphasis on the EM's own technical background and \"hands-on\" credibility than the brief's \"day every 3-4 months\" framing might suggest to a reader \u2014 374/803 postings use \"hands-on\" and 464/803 mention \"architecture,\" almost always as a stated requirement for the manager themselves (e.g., \"hands-on technical leadership,\" \"deep hands-on experience with cloud infrastructure,\" \"strong technical background required\"). This is compatible with the brief's \"in the code, not writing code\" distinction (background/credibility vs. current implementation output) but the postings sample skews more toward technically-hands-on infra/platform/security EM roles than the brief's more general management-track framing implies \u2014 worth flagging if the taxonomy's technical_breadth_depth target (currently 2) is felt to be on the low side for this archetype. No evidence found to contradict the brief's core claims about comp parity structure, career ladder, or reversibility to IC.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings describe well-scoped team/product ownership with roadmaps set jointly with product, not \"define the problem yourself\" mandates \u2014 consistent with a mid target."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Escalations, on-call handling (65/803 \"on-call\", 147/803 \"incident\"), and cross-functional stakeholder work (428/803) recur constantly alongside planned work, consistent with a high target."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "On-call/incident language appears but almost always framed as escalation ownership or team accountability, not the manager personally paging/diagnosing \u2014 consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No postings describe the EM as the one doing hands-on debugging/diagnosis; code review and architecture discussion appear, not diagnostic work \u2014 consistent with target=1."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "464/803 mention architecture, almost always framed as reviewing/steering ('drive the architectural vision', 'review architectural proposals') rather than personally designing systems \u2014 consistent with evaluator-not-designer framing at target=2."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": false,
+      "note": "374/803 postings use \"hands-on\" and 163/803 \"strong technical\" as explicit requirements for the manager's own background/credibility, more prominent and frequent than the brief's framing suggests \u2014 this sample leans toward technically-hands-on infra/platform/security EM roles; worth a review of whether target=2 undersells how much technical depth postings actually screen for, even if it's credibility rather than day-to-day output."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Postings consistently frame the EM as accountable for team delivery outcomes (roadmap execution, reliability, security/compliance bar) rather than personal output \u2014 consistent with a high target."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "428/803 mention \"stakeholder\" and 425/803 \"cross-functional\", consistently framed as recurring coordination with product/design/other eng teams \u2014 a structured, recurring posture matching a mid target, not the fluid external-facing register-shifting of higher-target archetypes."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Coaching/mentorship language (369/803 \"coach\", 224/803 \"coaching\") is consistently framed as private 1:1 development, not public teaching/content \u2014 consistent with a low target."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No postings frame the EM's scope in terms of a portfolio of external client accounts \u2014 reports/stakeholders are internal, consistent with not-applicable low target."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Not discussed in client/account-relationship terms in any sampled posting \u2014 consistent with low target, though ongoing 1:1 report relationships exist, this dimension isn't about that per its definition."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "All comp language found (base salary/base pay ranges at 68 companies) describes base + presumed bonus/equity structure, never commission or variable-pay-dominant comp \u2014 consistent with target=1."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 1,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "No postings ask the EM to own production implementation; code review/architecture participation is the ceiling described \u2014 consistent with low target, though see technical_breadth_depth note on how much technical background is still explicitly required."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No meaningful travel requirements found across the sample; postings describe office/remote/hybrid work with no embed/travel component \u2014 consistent with target=1."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Security/compliance appear often (373/803, 249/803) but framed as team delivery bars to meet, not the EM personally doing adversarial threat modeling \u2014 consistent with target=1."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No physical/hardware-constraint engineering content found in the sample (even hardware-adjacent EM postings like CoreWeave's \"Hardware Engineering Manager\" describe managing a team, not personally doing physical-constraint engineering) \u2014 consistent with target=1."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Strongly confirmed as the defining trait: hiring (485/803), coaching (369/803), performance management (103/803), and career development (153/803) are the most consistently repeated themes across the entire corpus \u2014 supports the max target and weight."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No postings describe public speaking/content responsibilities for this role \u2014 consistent with low target."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "A non-trivial and growing slice of postings are explicitly EM-for-an-AI/ML-product-or-platform-team (516/803 mention 'ai', 149/803 'llm', 120/803 'machine learning', several roles like Affirm's 'Senior Engineering Manager, Machine Learning Platform' or Anysphere's 'Engineering Manager, ML' require the manager to have real ML domain fluency, not just manage generalist engineers) \u2014 target=1 may be understating this for the subset of postings where ML is the team's core domain, though it's plausible this varies too much by specific EM role to warrant raising the archetype-wide target."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No meaningful mobile-specific fluency requirements found in the sampled postings \u2014 consistent with target=1."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Data infra appears in some postings but not as a widespread pattern distinct from general cloud/infra fluency already captured elsewhere \u2014 consistent with a low target."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "Cloud infra fluency is explicitly and heavily required in a meaningful subset of postings (343/803 mention AWS, 132/803 Kubernetes, plus roles are frequently infra/platform-specific like 'Engineering Manager, Cloud Infrastructure', 'Engineering Manager, Internal Developer Platform') \u2014 for infra-focused EM postings specifically this reads as a real screened requirement, not just background noise; target=1 may undersell this for a meaningful subset of postings, though it's plausible this is domain-specific rather than archetype-wide and belongs to a more specific archetype split if one exists."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Anysphere (Cursor)",
+      "title": "Engineering Manager, Core Services",
+      "url": "https://jobs.ashbyhq.com/cursor/e5d8ed7a-b93d-464f-a8d1-a4fa60e808d5"
+    },
+    {
+      "company": "Brex",
+      "title": "Senior Engineering Manager, Acquisition",
+      "url": "https://www.brex.com/careers/8536942002?gh_jid=8536942002"
+    },
+    {
+      "company": "Datadog",
+      "title": "Engineering Manager I, Threat Detection",
+      "url": "https://careers.datadoghq.com/detail/7958663/?gh_jid=7958663"
+    },
+    {
+      "company": "Caylent",
+      "title": "Engineering Manager - Data",
+      "url": "https://job-boards.greenhouse.io/caylent/jobs/4415217004"
+    },
+    {
+      "company": "CoreWeave",
+      "title": "Operations Engineering Manager, Fleet Reliability",
+      "url": "https://coreweave.com/careers/job?4689787006&board=coreweave&gh_jid=4689787006"
+    },
+    {
+      "company": "Adyen",
+      "title": "Engineering Director, Developer Experience",
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7419377"
+    },
+    {
+      "company": "LangChain",
+      "title": "Software Engineering Manager, Database (SmithDB)",
+      "url": "https://jobs.ashbyhq.com/langchain/d81c35c1-7243-45e4-bfe2-7fc8746c76b9"
+    },
+    {
+      "company": "Cohere",
+      "title": "Engineering Manager, Agentic Platform (UK)",
+      "url": "https://jobs.ashbyhq.com/cohere/7a420921-b7dc-4341-a134-6fe209615e86"
+    }
+  ]
+}

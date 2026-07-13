@@ -1,0 +1,399 @@
+{
+  "archetype_id": "sre-production-engineer",
+  "postings_analyzed": 316,
+  "top_requirements": [
+    {
+      "requirement": "Automation/scripting ability (toil reduction, infra-as-code, general automation language)",
+      "approx_frequency": "290/316 (92%)"
+    },
+    {
+      "requirement": "Cloud platform experience (general \"cloud\" mention)",
+      "approx_frequency": "278/316 (88%)"
+    },
+    {
+      "requirement": "Observability/monitoring tooling (Prometheus, Grafana, Datadog, or generic \"observability/monitoring\")",
+      "approx_frequency": "273/316 (86%)"
+    },
+    {
+      "requirement": "AWS specifically named",
+      "approx_frequency": "241/316 (76%)"
+    },
+    {
+      "requirement": "Kubernetes/K8s",
+      "approx_frequency": "233/316 (74%)"
+    },
+    {
+      "requirement": "Python proficiency",
+      "approx_frequency": "232/316 (73%)"
+    },
+    {
+      "requirement": "Terraform / infrastructure-as-code",
+      "approx_frequency": "199/316 (63%)"
+    },
+    {
+      "requirement": "Explicit incident response/incident management experience",
+      "approx_frequency": "190/316 (60%)"
+    },
+    {
+      "requirement": "CI/CD pipeline experience",
+      "approx_frequency": "177/316 (56%)"
+    },
+    {
+      "requirement": "Explicit on-call participation named as a job requirement",
+      "approx_frequency": "170/316 (54%)"
+    },
+    {
+      "requirement": "Networking fundamentals (TCP/IP, DNS, load balancing, service mesh)",
+      "approx_frequency": "165/316 (52%)"
+    },
+    {
+      "requirement": "GCP specifically named",
+      "approx_frequency": "152/316 (48%)"
+    },
+    {
+      "requirement": "Distributed-systems experience explicitly named",
+      "approx_frequency": "133/316 (42%)"
+    },
+    {
+      "requirement": "Containers/Docker specifically (distinct from K8s)",
+      "approx_frequency": "109/316 (34%)"
+    },
+    {
+      "requirement": "Explicit postmortem/post-incident-review ownership",
+      "approx_frequency": "89/316 (28%)"
+    },
+    {
+      "requirement": "5+ years of experience explicitly stated",
+      "approx_frequency": "89/316 (28%)"
+    },
+    {
+      "requirement": "Explicit SLO/SLA/SLI or \"error budget\" language",
+      "approx_frequency": "65/316 (21%) \u2014 notably lower than the reliability-doctrine framing would predict; most postings describe the practice ('define reliability targets', 'own availability') without the SRE-book vocabulary"
+    },
+    {
+      "requirement": "Go/Golang specifically",
+      "approx_frequency": "42/316 (13%) \u2014 Python dominates far more than Go in this sample, despite both being cited in the existing brief"
+    },
+    {
+      "requirement": "Bachelor's degree stated as a requirement",
+      "approx_frequency": "45/316 (14%) \u2014 a minority explicitly gate on a degree; most substitute \"or equivalent experience\""
+    }
+  ],
+  "top_responsibilities": [
+    "Operate and scale a company's production platform end-to-end: build/maintain the Kubernetes, multi-cloud, and deployment infrastructure that other engineering teams' services run on, not just monitor it from outside.",
+    "Design and instrument monitoring/alerting/observability systems, then use them to drive down MTTD/MTTR and reduce alert noise over time.",
+    "Carry rotating on-call and own live-incident response: triage, mitigate, escalate, and coordinate cross-team during active outages.",
+    "Write and review postmortems / post-incident reviews, and turn recurring failure patterns into automation or architectural fixes (toil reduction).",
+    "Build and maintain CI/CD pipelines and deployment tooling (Terraform/Terragrunt, Helm, ArgoCD, similar) so releases are safe and repeatable at scale.",
+    "Partner with product/feature engineering teams on architecture and resilience patterns (retries, circuit breakers, capacity planning) for services SRE doesn't own the business logic of.",
+    "Own specific infrastructure domains (networking/service mesh, database/storage layer, security posture, cost/capacity) as a named area of ownership within a larger SRE/Platform org, especially at senior/staff levels.",
+    "A growing subset (roughly 4% of titles, but qualitatively larger in text) explicitly frame the job around reliability for AI/ML/GPU workloads \u2014 training and inference infrastructure uptime, not just conventional web services."
+  ],
+  "comp_signals": [
+    {
+      "company": "Carta",
+      "range_text": "$181,688 - $213,750 (and a second band $191,250 - $225,000 for a different level/location within the same posting)",
+      "source_url": "https://job-boards.greenhouse.io/carta/jobs/7688689003"
+    },
+    {
+      "company": "EarnIn",
+      "range_text": "$252,000-$308,000 (Staff SRE)",
+      "source_url": "https://job-boards.greenhouse.io/earnin/jobs/7944568"
+    },
+    {
+      "company": "Palantir Technologies",
+      "range_text": "$125,000 - $185,000 (SRE - US Government)",
+      "source_url": "https://jobs.lever.co/palantir/211f99dc-269e-4f25-84d3-d73dea782080"
+    },
+    {
+      "company": "Harvey",
+      "range_text": "$238,000 - $290,000 (Staff SRE)",
+      "source_url": "https://jobs.ashbyhq.com/harvey/4d661139-19ad-42af-9f6c-a68c71263e14"
+    },
+    {
+      "company": "Harvey",
+      "range_text": "$200,000 - $260,000 (Senior SRE)",
+      "source_url": "https://jobs.ashbyhq.com/harvey/c9cea360-f0b6-4a93-b7b3-0f0145b02ffe"
+    },
+    {
+      "company": "Crusoe",
+      "range_text": "$209,000 \u2013 $253,000 (Staff Production Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/crusoe/d8019cfe-995a-40c3-bce0-97f368f3d454"
+    },
+    {
+      "company": "Crusoe",
+      "range_text": "$172,000 \u2013 $209,000 (Senior Production Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/crusoe/40484963-4014-4737-a7c4-5e0862b27ac1"
+    },
+    {
+      "company": "Cresta",
+      "range_text": "$205,000\u2013$270,000 (Senior Infrastructure Engineer/SRE)",
+      "source_url": "https://job-boards.greenhouse.io/cresta/jobs/5137153008"
+    },
+    {
+      "company": "Drata",
+      "range_text": "$166,900 - $225,900 (Senior SRE)",
+      "source_url": "https://jobs.ashbyhq.com/drata/03172f80-ebbd-4a56-b7e0-5309fe9c1942"
+    },
+    {
+      "company": "AXS",
+      "range_text": "$130,000-$145,000 (SRE II)",
+      "source_url": "https://job-boards.greenhouse.io/axs/jobs/8512266002"
+    },
+    {
+      "company": "Xometry",
+      "range_text": "$165,000 - $190,000 (Staff SRE)",
+      "source_url": "https://job-boards.greenhouse.io/xometry/jobs/5085263007"
+    },
+    {
+      "company": "Hadrian",
+      "range_text": "$164,000 - $270,000 (SRE, Robotics)",
+      "source_url": "https://jobs.ashbyhq.com/hadrian-automation/44db308b-2d21-409f-8589-3ab6319b02ec"
+    },
+    {
+      "company": "Figure AI",
+      "range_text": "$175,000 - $250,000 (Staff SRE)",
+      "source_url": "https://job-boards.greenhouse.io/figureai/jobs/4614747006"
+    },
+    {
+      "company": "Waabi",
+      "range_text": "$148,000 - $249,000 (Senior/Staff SWE, Observability/SRE)",
+      "source_url": "https://jobs.lever.co/waabi/17347bcc-7c94-4817-b7dc-28acebba05e1"
+    },
+    {
+      "company": "Flickr (SmugMug)",
+      "range_text": "$132,000- $190,300 (Senior SRE)",
+      "source_url": "https://job-boards.greenhouse.io/flickr/jobs/7822735"
+    },
+    {
+      "company": "Salesforce",
+      "range_text": "$117,200 - $176,700 (SRE Systems Engineer, TS/SCI Clearance)",
+      "source_url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Virginia---Herndon/SRE-Systems-Engineer--TS-SCI-Clearance-_JR344731"
+    },
+    {
+      "company": "Mastercard",
+      "range_text": "$96,000 - $163,000 (Senior Site Reliability Engineer)",
+      "source_url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/OFallon-Missouri/Senior-BizOps-Engineer_R-275556"
+    },
+    {
+      "company": "General Motors",
+      "range_text": "$129,400 - $198,400 (Senior Backend SWE/SRE, GM Energy)",
+      "source_url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Senior-Backend-Software-Engineer-SRE---GM-Energy_JR-202608621"
+    },
+    {
+      "company": "Tines",
+      "range_text": "$210,000 - $220,000 (Senior SRE, Government Cloud)",
+      "source_url": "https://job-boards.greenhouse.io/tines/jobs/6019545004"
+    },
+    {
+      "company": "Movable Ink",
+      "range_text": "$154,000-$200,000 (Lead SRE)",
+      "source_url": "https://movableink.com/job-listing?gh_jid=7611033"
+    },
+    {
+      "company": "Roku",
+      "range_text": "$148,750 - $361,000 (very wide single band, Senior ML Engineer, DevOps/SRE)",
+      "source_url": "https://www.weareroku.com/jobs/7931566?gh_jid=7931566"
+    }
+  ],
+  "seniority_distribution_notes": "Skewed senior: title-based classification of all 316 postings shows ~50% explicitly Senior/Lead, ~25% Staff/Principal/Distinguished, and only ~22% with no seniority qualifier in the title (mostly mid-level, not junior \u2014 very few postings use \"II/III/IV\" leveling or explicit junior/entry/new-grad language, well under 5%). Combined senior-or-above titling is roughly 75% of the sample. This matches the existing brief's framing that most postings request several years of experience, though the brief's mention of dedicated new-grad SRE pipelines (citing Google) is not visible in this sample \u2014 none of the 127 companies here show an entry-level/new-grad SRE posting.",
+  "notable_divergence_from_existing_brief": "Largely confirms the brief (comp bands track SWE ladders, Python-heavy, Kubernetes/Terraform/cloud-native tooling, on-call and incident ownership central, senior-skewed hiring). Two things worth flagging for review: (1) The brief emphasizes Python AND Go roughly equally as \"commonly Python, Go\" \u2014 this sample shows a large skew toward Python (73%) over Go (13%), so the brief's dual emphasis may overstate Go's prevalence in current postings. (2) Explicit SRE-doctrine vocabulary (SLO/SLA/error budget) appears in only ~21% of postings despite being the brief's central \"success criteria\" framing \u2014 most postings describe the same underlying practice (owning availability/reliability targets) in looser language rather than formal SRE Book terminology, suggesting the brief's heavy anchoring to Google/SRE-Book vocabulary is accurate to the discipline's origins but not to how most non-Google job posts are actually worded. Also worth noting as new signal not really covered in the brief: a distinct and clearly growing sub-cluster of postings (OpenAI, Coinbase, Cerebras, Deepgram, Datadog, Life360, Cisco, Fidelity, Algolia, and others) frame the SRE/Production Engineer role specifically around AI/ML training and inference infrastructure reliability rather than general web-service reliability \u2014 a flavor of the role the current brief doesn't call out at all.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings consistently frame scope around a defined service/SLO rather than open-ended business problems; a moderate target/weight is consistent with what's described."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "54% of postings explicitly name on-call as a requirement and 60% name incident response directly \u2014 consistent with a high interrupt-tolerance target."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "On-call (54%) and incident response (60%) are among the most frequent explicit requirements in the corpus, supporting the max weight/target as the defining trait."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 5,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Postmortem/RCA ownership (28% explicit) plus the pervasive incident-response and MTTD/MTTR language across the corpus supports a high target."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Distributed-systems language (42%) and staff-level postings routinely describing multi-region/multi-cloud architecture ownership support a high but not maximal target."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings routinely span cloud, K8s, networking, databases, and CI/CD simultaneously (2-4 tool families per posting), consistent with a moderate breadth target."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 5,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Reliability/availability ownership is the throughline of nearly every posting's role summary, even though explicit 'SLO' vocabulary is less common (21%) than the framing implies \u2014 the underlying accountability pattern still holds."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Cross-team collaboration with product/dev teams appears often, but external client-facing language is rare in this sample \u2014 consistent with a moderate, internally-scoped target."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No postings emphasize teaching/external knowledge-sharing as a role function; low target is consistent with the sample."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No posting frames the job around a client/account portfolio; low target/weight holds."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No named external-relationship structure observed; consistent with a low target."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "None of the stated comp ranges in the sample mention on-call stipends or variable/incentive pay tied to incidents; all ranges read as standard base bands, supporting a low target."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Python (73%) and general automation/scripting (92%) are among the most common requirements, supporting a fairly high coding-intensity target below the max (since operational/incident work is also large)."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No travel/on-site-embed language observed in the sample; low target holds."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Reliability/availability framing dominates over adversarial/security framing in this general SRE sample (distinct security-titled SRE roles like 'Senior Security Production Engineer' at CoreWeave are the exception, not norm), consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No hardware/physical-constraint language observed generally, though a small robotics/autonomy cluster (Hadrian, Figure AI, Waabi, Zoox) exists \u2014 not enough volume to move this off a low target."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Only ~2% of titles in the sample are explicitly management-titled (Sr. Manager, Senior Manager), consistent with people-management being a minority path rather than core to the archetype."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No public-facing/speaking requirement observed in the sample; low target holds."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "A visible and likely growing sub-cluster (OpenAI, Coinbase, Cerebras, Deepgram, Datadog, Roku, Fidelity, Algolia, Life360, Cisco) explicitly frames SRE work around AI/ML/GPU infrastructure reliability. Still a small minority by title count (~4%), so a target of 1 is defensible today, but this is worth flagging as an emerging pattern that could justify a small bump in a future pass rather than being dismissed as 'not relevant.'"
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No mobile-platform-specific requirements observed; low target holds."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "Database/storage-layer requirements (Postgres, Redis, ClickHouse, Kafka, etc.) appear moderately often (databases 41%, Kafka/messaging 17%), and several roles are scoped specifically to data/storage-layer SRE (MongoDB Storage Layer Services, Fabric team, etc.) \u2014 the current low target may undercount how often data-infra fluency shows up as a stated requirement, though it's rarely the role's primary framing."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Cloud (88%), AWS (76%), Kubernetes (74%), Terraform (63%) are among the most frequent requirements in the entire corpus \u2014 strongly supports a high target/weight."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Coinbase",
+      "title": "Senior Site Reliability Engineer, Core AI Infrastructure",
+      "url": "https://www.coinbase.com/careers/positions/7847431?gh_jid=7847431"
+    },
+    {
+      "company": "OpenAI",
+      "title": "Site Reliability Engineer, Frontier Systems Infrastructure",
+      "url": "https://jobs.ashbyhq.com/openai/ad2cf782-15a4-48c7-9133-1788e3f33bbb"
+    },
+    {
+      "company": "Riot Games",
+      "title": "Software Engineer - Riot Operations Center (SRE)",
+      "url": "https://www.riotgames.com/en/work-with-us/job/7981545?gh_jid=7981545"
+    },
+    {
+      "company": "General Motors",
+      "title": "Staff Engineer, Hybrid Services & Reliability (SRE)",
+      "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sunnyvale-California-United-States-of-America/Staff-Engineer--Staff-Engineer--Hybrid-Services---Reliability--SRE-_JR-202601973-1"
+    },
+    {
+      "company": "Zoox",
+      "title": "Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "url": "https://jobs.lever.co/zoox/5ab0cc36-0d91-4acd-9cf3-c38a273293cb"
+    },
+    {
+      "company": "Grafana Labs",
+      "title": "Staff Software Engineer - Databases SRE",
+      "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/6103688004"
+    },
+    {
+      "company": "Salesforce",
+      "title": "SRE Systems Engineer (TS/SCI Clearance)",
+      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Virginia---Herndon/SRE-Systems-Engineer--TS-SCI-Clearance-_JR344731"
+    },
+    {
+      "company": "Caterpillar",
+      "title": "Senior SRE Engineer-Production Support",
+      "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers/job/Chennai-Tamil-Nadu/Senior-Software-Engineer_R0000367249-1"
+    }
+  ]
+}

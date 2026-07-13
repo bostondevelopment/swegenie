@@ -1,0 +1,9 @@
+{
+  "archetypeId": "solutions-architect-vendor-side",
+  "tier": "high-growth-public",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus extraction has no 'Entry/Associate' points for high-growth-public. Current L3 model (base p50 $138K) is a reasonable step-down from the well-supported L4 corpus median ($176K) and L5/Staff corpus anchors below. No direct evidence, so not raised to high, but internally consistent with the ladder shape -> kept medium."
+}

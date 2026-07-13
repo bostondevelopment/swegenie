@@ -1,0 +1,67 @@
+{
+  "archetypeId": "engineering-management",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 10,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/anthropic/salaries/software-engineering-manager",
+      "title": "Anthropic Software Engineering Manager Salary | levels.fyi",
+      "note": "Reports $332K-$464K total comp for Anthropic EM, but not broken out by an L3-equivalent entry rung \u2014 can't confirm or deny the specific L3 cell.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/openai/salaries/software-engineering-manager",
+      "title": "OpenAI Software Engineering Manager Salary | levels.fyi",
+      "note": "Median $1.27M for OpenAI EM; almost certainly reflects a senior EM band (post product-market-fit, large orgs), not an entry-level first-line manager, so not directly comparable to a 'L3' cell.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.platform-recruitment.com/blog/how-do-you-move-from-senior-engineer-to-engineering-manager-",
+      "title": "How to get promoted to Engineering Manager internally | Platform Recruitment",
+      "note": "Confirms first-line EMs are promoted senior/staff ICs, supporting the structural mismatch argument for an 'L3' EM rung.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/meta/salaries/software-engineering-manager/levels/m1",
+      "title": "Meta M1 Software Engineering Manager Salary | levels.fyi",
+      "note": "M1 (Meta's actual first-line/entry manager level) averages $791,563 total comp \u2014 base $271,763, stock $487,917, bonus $31,883 \u2014 dramatically higher than this dataset's faang-mag7 L3 EM total comp of ~$241k.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.dice.com/career-advice/what-software-engineering-managers-make-at-google-meta-amazon",
+      "title": "What Software Engineering Managers Make at Google, Meta, Amazon | Dice.com",
+      "note": "General confirmation that FAANG EM comp bands run high relative to generic IC-scaled numbers.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/engineering-manager-salary-SRCH_KO0,19.htm",
+      "title": "Engineering Manager: Average Salary & Pay Trends 2026 | Glassdoor",
+      "note": "Blended EM average $226,860 (p25 $182,852, p75 $286,033, p90 $349,725) across all company types/levels \u2014 a loose sanity floor, not level- or tier-specific validation.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://ravio.com/blog/startup-salaries",
+      "title": "Startup salaries in 2026: What to pay from seed to Series C | Ravio",
+      "note": "General confirmation that growth-stage cash comp trails large-tech comp, with equity offsetting; no level-specific EM breakdown found.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/t/software-engineering-manager/startup/series_a",
+      "title": "Series A Stage Startup Software Engineering Manager Salary & Equity Data | levels.fyi",
+      "note": "Page exists but returned no extractable percentile content via fetch; could not verify against this cell.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/t/software-engineer/startup/seed",
+      "title": "Seed Stage Startup Software Engineer Salary & Equity Data | levels.fyi",
+      "note": "Confirms levels.fyi tracks seed-stage comp by function/level for ICs, but no comparable granular EM-specific seed-stage data was retrievable to validate this cell.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.kore1.com/how-to-hire-engineering-manager-2026/",
+      "title": "How to Hire an Engineering Manager: 2026 Guide | KORE1",
+      "note": "General guidance that early-stage EM hires skew very senior/experienced, supporting the argument that an 'L3-equivalent' EM is atypical at this tier.",
+      "kind": "structured_citation"
+    }
+  ]
+}

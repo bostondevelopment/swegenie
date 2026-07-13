@@ -1,0 +1,328 @@
+{
+  "archetype_id": "platform-infrastructure-engineer",
+  "postings_analyzed": 414,
+  "top_requirements": [
+    {
+      "requirement": "Kubernetes / container orchestration experience",
+      "approx_frequency": "253 of 414 postings (~61%)"
+    },
+    {
+      "requirement": "AWS experience",
+      "approx_frequency": "267 of 414 (~64%)"
+    },
+    {
+      "requirement": "Observability/monitoring tooling (Prometheus, Grafana, Datadog, or general \"observability\")",
+      "approx_frequency": "274 of 414 (~66%)"
+    },
+    {
+      "requirement": "Terraform / infrastructure-as-code",
+      "approx_frequency": "237 of 414 named Terraform specifically (~57%); 171/414 (~41%) used generic \"IaC\" language"
+    },
+    {
+      "requirement": "Python proficiency",
+      "approx_frequency": "244 of 414 (~59%)"
+    },
+    {
+      "requirement": "CI/CD pipeline experience",
+      "approx_frequency": "240 of 414 (~58%)"
+    },
+    {
+      "requirement": "Go/Golang proficiency",
+      "approx_frequency": "173 of 414 (~42%)"
+    },
+    {
+      "requirement": "Docker / general containerization",
+      "approx_frequency": "188 of 414 (~45%)"
+    },
+    {
+      "requirement": "Multi-cloud exposure beyond AWS (GCP and/or Azure)",
+      "approx_frequency": "GCP 147/414 (~35%), Azure 127/414 (~31%)"
+    },
+    {
+      "requirement": "On-call / incident-response participation named explicitly",
+      "approx_frequency": "106/414 (~26%) named on-call; 98/414 (~24%) named incident response \u2014 a real minority, not universal"
+    },
+    {
+      "requirement": "AI/ML infrastructure fluency (model serving, training infra, GPU clusters, LLM platforms)",
+      "approx_frequency": "133/414 (~32%) mention AI/ML/GPU/LLM in body text; 45/414 (~11%) have AI/ML explicitly in the job title"
+    },
+    {
+      "requirement": "Cross-functional collaboration / stakeholder management named explicitly",
+      "approx_frequency": "stakeholder 95/414 (~23%), cross-functional 106/414 (~26%)"
+    },
+    {
+      "requirement": "Mentoring junior engineers (mostly senior/staff postings)",
+      "approx_frequency": "128/414 (~31%)"
+    },
+    {
+      "requirement": "Years-of-experience threshold stated numerically",
+      "approx_frequency": "325/414 (~79%) state an explicit years figure, typically 5+ for senior, 8-10+ for staff/principal"
+    },
+    {
+      "requirement": "Bachelor's degree explicitly required",
+      "approx_frequency": "only 47/414 (~11%) explicitly gate on a bachelor's degree \u2014 most postings are experience-gated, not degree-gated"
+    }
+  ],
+  "top_responsibilities": [
+    "Design, build, and operate shared cloud infrastructure (compute, networking, storage, Kubernetes clusters) that multiple product/engineering teams build on top of, rather than infra scoped to a single team.",
+    "Own and evolve CI/CD pipelines and infrastructure-as-code (Terraform/Pulumi-style) so other engineers can provision and deploy without deep infra expertise.",
+    "Improve observability/monitoring and drive down toil \u2014 instrumenting systems, tuning alerting, and reducing manual operational work.",
+    "Participate in an on-call rotation and respond to incidents affecting shared infrastructure, though this is a substantial minority pattern (~a quarter of postings) rather than the majority framing.",
+    "At senior/staff level, drive technical strategy/architecture decisions with cross-org scope, evaluate build-vs-buy and platform consolidation choices, and mentor other engineers.",
+    "A large and fast-growing subset (roughly a third of the corpus) center specifically on AI/ML infrastructure \u2014 GPU cluster management, model training/serving platforms, and inference infra \u2014 rather than general-purpose developer platforms.",
+    "Collaborate with product engineering teams on adoption of internal tooling and golden paths, though explicit \"internal customer\"/\"platform as a product\" framing is rare in the actual posting text compared to how prominently the existing brief foregrounds it.",
+    "Cost/efficiency optimization of cloud spend and shared infrastructure footprint comes up as a recurring but secondary responsibility theme."
+  ],
+  "comp_signals": [
+    {
+      "company": "Anthropic",
+      "range_text": "Senior Staff+ Infrastructure Engineer, Cluster Infrastructure \u2014 Annual Salary: $405,000 \u2013 $485,000 USD",
+      "source_url": "https://job-boards.greenhouse.io/anthropic/jobs/5255853008"
+    },
+    {
+      "company": "Faire",
+      "range_text": "Senior Staff Machine Learning Platform Engineer \u2014 California pay range $295,000 to $405,500",
+      "source_url": "https://boards.greenhouse.io/faire/jobs/8618460002?gh_jid=8618460002"
+    },
+    {
+      "company": "Hadrian",
+      "range_text": "Infrastructure Engineer, Principal \u2014 salary range $250,000 - $320,000",
+      "source_url": "https://jobs.ashbyhq.com/hadrian-automation/fad57511-8ed1-4cce-bbf1-8fdf8125e7ff"
+    },
+    {
+      "company": "World Labs",
+      "range_text": "Research Platform Engineer \u2014 Pay Range $200k-$300k base salary (SF Bay Area estimate)",
+      "source_url": "https://job-boards.greenhouse.io/worldlabs/jobs/4238069009"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "Senior Platform Engineer II, Compute Services \u2014 base salary range $165,000 to $242,000",
+      "source_url": "https://coreweave.com/careers/job?4607559006&board=coreweave&gh_jid=4607559006"
+    },
+    {
+      "company": "Palantir Technologies",
+      "range_text": "DevOps Engineer / Forward Deployed Infrastructure Engineer - US Government \u2014 estimated salary range $135,000 - $200,000/year",
+      "source_url": "https://jobs.lever.co/palantir/51ea4a3b-7764-4c87-96e4-310e19c856d5"
+    },
+    {
+      "company": "Elastic",
+      "range_text": "Platform Engineer - Kubernetes \u2014 typical starting salary range $94,300 \u2013 $149,200 USD",
+      "source_url": "https://jobs.elastic.co/jobs?gh_jid=8047349&gh_jid=8047349"
+    },
+    {
+      "company": "T-Mobile",
+      "range_text": "Platform Engineer \u2014 Base Pay Range $81,200 - $146,400",
+      "source_url": "https://tmobile.wd1.myworkdayjobs.com/External/job/Frisco-Texas/Platform-Engineer_REQ361405-1"
+    },
+    {
+      "company": "Boeing",
+      "range_text": "Advanced Information Technologist \u2013 Associate Cloud Engineer \u2014 Associate (Level 2) pay range $97,750 - $132,250",
+      "source_url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Advanced-Information-Technologist---Associate-Cloud-Engineer_JR2026494282"
+    },
+    {
+      "company": "Rockstar Games",
+      "range_text": "Associate DevOps Engineer \u2014 Base Pay Range $71,000 - $80,000 (lowest observed in the corpus)",
+      "source_url": "https://job-boards.greenhouse.io/rockstargames/jobs/7791031003"
+    }
+  ],
+  "seniority_distribution_notes": "Heavily senior-skewed: 184/414 (~44%) titles contain \"Senior,\" another 45/414 (~11%) are \"Staff,\" and 18/414 (~4%) are \"Principal\" \u2014 roughly 60% of the corpus is senior-or-above by title alone. Only 4/414 titles read as junior/entry/associate and 3/414 are internships. The remaining ~38% (159/414) carry no seniority qualifier, which in practice reads as mid-level (IC3-ish) rather than true entry-level \u2014 title text and years-of-experience gates (5+ years typical, 8-10+ for staff/principal) both confirm this skews senior. This matches the existing brief's framing that junior/entry direct-hire is possible but atypical.",
+  "notable_divergence_from_existing_brief": "Two things stand out. (1) The brief leans heavily on \"platform as a product\" / \"internal customer\" framing to justify a high stakeholder_client_comfort weight (0.9, second-highest in the scorecard) and a high ambiguity_tolerance target. In the actual posting text that specific framing is rare: literal \"internal customer\" appears in only 3/414 postings, \"platform as a product\"/\"product mindset\" phrasing in only 4/414, and even generic \"requirements gathering\" language in just 5/414. \"Stakeholder\" (95/414, ~23%) and \"cross-functional\" (106/414, ~26%) are present but describe a real-but-modest minority pattern, not a defining majority theme in the raw text \u2014 the brief's narrative is directionally right (this is genuinely more stakeholder-facing than a pure ops role) but the postings themselves undersell it rhetorically compared to how strongly the brief argues it, likely because postings favor generic engineering-requirements boilerplate over articulating the product-mindset framing that industry commentary (Team Topologies, The New Stack, etc.) uses. (2) The brief treats AI-infra-adjacent platform work as a comp premium footnote, but in this fresh 2026 sample it looks more like a structural shift: ~32% of postings (133/414) reference AI/ML/GPU/LLM infrastructure in the body and 11% (45/414) have AI/ML explicitly in the title, with several of the highest observed comp figures in the whole corpus (Anthropic $405K-$485K, Faire $295K-$405K, Hadrian $250K-$320K, World Labs $200K-$300K) attached specifically to ML/AI-platform-flavored titles rather than generic platform engineering. The existing dimension_evidence for ml_engineering_fluency (target=1, weight=0.1, rationale \\\"not relevant to this archetype's scope\\\") is worth a second look given how large and well-compensated this AI-infra subset now is \u2014 though the target is likely still directionally correct since these roles need ML-systems operational fluency (serving/training infra), not ML modeling skill itself, which is what that dimension actually measures.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Direct textual evidence is thin (explicit \"requirements gathering\" language appears in only 5/414 postings), but the corpus's strong senior/staff skew (60%+ of titles) and frequent \"drive strategy\"/\"own the roadmap\"/\"define best practices\" language in those postings is consistent with a role that expects self-directed scope definition rather than ticket-driven work. Supports the target directionally but not with strong direct quotes."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "On-call named in 106/414 (~26%) and incident response in 98/414 (~24%) \u2014 a real but clear minority. A mid-scale target (3, not 4-5) matches a role where interrupt-driven work is present but not the norm for most postings in the sample."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Same on-call/incident-response figures (~24-26% of postings) support a moderate rather than low or high target \u2014 consistent with the brief's note that Platform Engineer and SRE blend at smaller companies without on-call being the defining mandate."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "No posting-text proxy directly measures diagnostic depth, but the same ~24% incident-response subset implies real live-debugging demand for a meaningful minority of roles, consistent with a moderate (not top-end) target across the full archetype."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Strongly supported: \"architecture/architect\" language appears in 263/414 (~64%) and scalability language in 243/414 (~59%) of postings \u2014 consistent with this being the archetype's single highest-weighted, defining trait."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Postings commonly stack Kubernetes (61%), Terraform/IaC (57%/41%), and multi-cloud (AWS 64%, GCP 35%, Azure 31%) requirements simultaneously, matching the brief's \"2-3 adjacent infra layers\" framing rather than single-tool depth or extreme breadth."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "The brief's specific adoption/DevEx-metric framing (self-service, DevEx language at 13%, explicit IDP language at only 4%) is present but modest in raw posting text, which fits a moderate rather than extreme accountability target \u2014 real but not as sharply articulated as the brief's prose suggests."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": false,
+      "note": "This is the dimension with the clearest gap between brief narrative and raw posting evidence: literal internal-customer/product-mindset language is nearly absent (3/414 and 4/414 respectively), and even general stakeholder/cross-functional language sits at only ~23-26% of postings. The underlying claim (this role is more stakeholder-facing than a pure infra-code job) is plausible and matches industry commentary cited in the brief, but the postings themselves don't provide strong direct support for weighting this as the second-highest dimension in the entire scorecard \u2014 worth a closer look at whether 0.9 is calibrated to industry-commentary framing rather than actual JD text."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Mentoring language appears in 128/414 (~31%) postings, mostly senior/staff roles listing \"mentor junior engineers\" as one bullet among many \u2014 consistent with a low-modest target since it's peer mentoring, not public-facing or systematic teaching."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe a named external account/customer portfolio structure \u2014 consistent with a low target and the low weight assigned."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Same as above \u2014 no evidence of durable named external relationships in the sample; internal-team collaboration described (where present) doesn't read as a relationship-continuity axis."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "All 68 explicit comp figures found in the corpus describe base salary (plus RSU/equity in several cases, e.g. Palantir, CoreWeave, Anthropic) with no sales-style bonus/commission structure anywhere \u2014 strongly supports the target=1."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Python (59%) and Go (42%) are both very commonly required as hands-on languages, and many postings (e.g. Fivetran, ClickHouse, WorkOS) frame the role as writing production libraries/services, not just config \u2014 supports a high (not maximal) coding-intensity target."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "\"Travel\" appears in only 58/414 (~14%) postings and \"onsite/embed with customer\" language essentially never (0 direct hits) except implicitly at Palantir's Forward Deployed roles \u2014 those are a small named exception, not the pattern. Supports a low target overall."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "Naive \"security\" keyword hits are high (275/414, ~66%), though this is a broad match that includes generic access-control, secrets-management, and compliance boilerplate rather than adversarial threat-modeling specifically. Worth a manual spot-check pass before concluding the target should move, but the raw frequency is high enough that it's not simply \"not a named focus\" as the current rationale states."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Data center/hardware language appears in 169/414 (~41%, often generic \"data center\" as a cloud-region reference) but genuine physical/hardware-constraint framing (e.g. GPU cluster hardware) is narrow \u2014 only 4/414 mention GPU clusters specifically. Supports a low target with AI-infra/data-center roles as a small named exception."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Almost no management titles in the sample (1/414 Director/Head-of, 0 EM titles) \u2014 corpus is IC-centric, matching a low-modest target despite the fairly common mentoring bullet (31%) that hints at the EM lateral-move pattern described in the brief's career-ladder section."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe public speaking, content creation, or external-facing visibility expectations \u2014 consistent with a low target for an internal-facing role."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "AI/ML/GPU/LLM language appears in 133/414 (~32%) of postings and 45/414 (~11%) of titles explicitly name AI/ML, with several of the highest comp figures in the corpus attached to these roles (Anthropic, Faire, Hadrian, World Labs). The current low target/weight is likely still directionally right since these roles need ML-systems operational fluency (serving/training infra) rather than ML modeling skill (which is what this dimension measures), but the sheer volume and comp premium of this subset is large enough that a reviewer should confirm the target isn't underselling a real and growing slice of this archetype."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No mobile-platform-specific language found anywhere in the sample \u2014 fully consistent with the low target."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "SQL/database language appears in 113/414 (~27%) and Kafka specifically in 43/414 (~10%) \u2014 a real but modest adjacency, consistent with a low-modest target that acknowledges overlap without treating this as a data-engineering archetype."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Overwhelmingly supported: AWS in 64%, Kubernetes in 61%, Terraform in 57%, GCP in 35%, Azure in 31% of the full 414-posting sample \u2014 this is unambiguously the literal, hands-on core requirement across the corpus, justifying the maximal target and weight."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Anthropic",
+      "title": "Senior Staff+ Infrastructure Engineer, Cluster Infrastructure",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5255853008"
+    },
+    {
+      "company": "CoreWeave",
+      "title": "Senior Platform Engineer II, Compute Services",
+      "url": "https://coreweave.com/careers/job?4607559006&board=coreweave&gh_jid=4607559006"
+    },
+    {
+      "company": "Elastic",
+      "title": "Platform Engineer - Kubernetes",
+      "url": "https://jobs.elastic.co/jobs?gh_jid=8047349&gh_jid=8047349"
+    },
+    {
+      "company": "Palantir Technologies",
+      "title": "Forward Deployed Infrastructure Engineer - US Government",
+      "url": "https://jobs.lever.co/palantir/51ea4a3b-7764-4c87-96e4-310e19c856d5"
+    },
+    {
+      "company": "T-Mobile",
+      "title": "Platform Engineer",
+      "url": "https://tmobile.wd1.myworkdayjobs.com/External/job/Frisco-Texas/Platform-Engineer_REQ361405-1"
+    },
+    {
+      "company": "Whoop",
+      "title": "Senior Platform Engineer - Kubernetes",
+      "url": "https://jobs.lever.co/whoop/11a307c8-c1ed-47c8-b7fa-b1ec9dc5e235"
+    },
+    {
+      "company": "Partiful",
+      "title": "Platform Engineer",
+      "url": "https://jobs.ashbyhq.com/partiful/56eb4e23-fff8-4f6f-80d5-b7cf1c3f6e73"
+    },
+    {
+      "company": "Boeing",
+      "title": "Advanced Information Technologist \u2013 Associate Cloud Engineer",
+      "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Advanced-Information-Technologist---Associate-Cloud-Engineer_JR2026494282"
+    }
+  ]
+}

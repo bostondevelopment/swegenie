@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "growth-stage-private",
+  "level": "L5",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "high",
+  "rationale": "Very strong corpus support: 26 points across ~12 distinct companies (Agility Robotics, Anduril Industries, Applied Intuition, Formlabs, Locus Robotics, Motional, Oura, Relativity Space, Saildrone, Skydio, Varda Space Industries, Waabi), median $222K. Broad, well-sourced convergence \u2014 upgrading from low to high."
+}

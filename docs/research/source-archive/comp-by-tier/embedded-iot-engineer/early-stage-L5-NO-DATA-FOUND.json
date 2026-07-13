@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "early-stage",
+  "level": "L5",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No corpus data and no named-company per-level anchor found for senior embedded roles at seed/Series A-B startups specifically. General blog/aggregator claims (e.g., 'Bay Area senior embedded ~$200K base', 'hardware startup senior embedded $185K-$250K total comp') are unsourced, non-startup-stage-specific, and not verifiable against a named company \u2014 too weak to anchor confidence. Keeping low; this reflects genuine lack of public disclosure at this company stage, not a failed search."
+}

@@ -1,0 +1,9 @@
+{
+  "archetypeId": "solutions-architect-vendor-side",
+  "tier": "early-stage",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus has zero points at any level for early-stage (fully sparse tier, as expected for seed/Series A-B companies that rarely have a dedicated 'vendor-side solutions architect' req). No new research performed this round since not marked low; numbers are model-extrapolated from adjacent tiers. Kept medium; a genuinely thin market for this exact role at this tier is expected, not a bug."
+}

@@ -1,0 +1,347 @@
+{
+  "archetype_id": "sales-engineer-pre-sales",
+  "postings_analyzed": 372,
+  "top_requirements": [
+    {
+      "requirement": "Strong presentation/communication skills \u2014 explaining technical concepts to mixed technical and business audiences",
+      "approx_frequency": "342 of 372 postings (92%)"
+    },
+    {
+      "requirement": "Prior pre-sales/sales-engineering (or closely adjacent customer-facing technical) experience, usually with a years-of-experience threshold",
+      "approx_frequency": "229 of 372 postings (62%), with 287/372 (77%) citing some explicit years-of-experience bar"
+    },
+    {
+      "requirement": "Ability to speak to competitive positioning / differentiate technically against named competitors",
+      "approx_frequency": "193 of 372 (52%)"
+    },
+    {
+      "requirement": "Travel required or referenced (occasional to weekly depending on segment/deal size)",
+      "approx_frequency": "191 of 372 (51%)"
+    },
+    {
+      "requirement": "SaaS product/deployment-model familiarity",
+      "approx_frequency": "185 of 372 (50%)"
+    },
+    {
+      "requirement": "Demo delivery / demo-environment ownership named explicitly",
+      "approx_frequency": "167 of 372 (45%)"
+    },
+    {
+      "requirement": "Discovery-call skill (needs analysis, requirements gathering) named explicitly",
+      "approx_frequency": "155 of 372 (42%)"
+    },
+    {
+      "requirement": "API/REST integration fluency",
+      "approx_frequency": "149 of 372 (40%)"
+    },
+    {
+      "requirement": "POC / trial-environment ownership named explicitly",
+      "approx_frequency": "147 of 372 (40%)"
+    },
+    {
+      "requirement": "Partnership with an Account Executive / sales team named explicitly as the core working structure",
+      "approx_frequency": "108 of 372 (29%)"
+    },
+    {
+      "requirement": "\"Trusted advisor\" framing implying cross-cycle relationship, not purely transactional",
+      "approx_frequency": "101 of 372 (27%)"
+    },
+    {
+      "requirement": "Scripting/light coding fluency (JS, Python) for demo config or custom integrations",
+      "approx_frequency": "89-93 of 372 (24%)"
+    },
+    {
+      "requirement": "Cloud platform familiarity (AWS/Azure/GCP)",
+      "approx_frequency": "81 of 372 (22%)"
+    },
+    {
+      "requirement": "Commission/quota/OTE/variable-pay structure named explicitly in the posting itself (beyond just base salary)",
+      "approx_frequency": "roughly 120-150 of 372 postings reference at least one of commission/quota/OTE/variable-pay/territory language (commission 76, OTE 54, expansion 53, quota 23, variable pay 39 \u2014 overlapping counts)"
+    },
+    {
+      "requirement": "Bachelor's degree (often 'or equivalent experience') in a technical field",
+      "approx_frequency": "35-102 of 372 depending on strictness of match (35 explicit 'bachelor's degree', 102 if broadened to any technical-degree phrasing)"
+    },
+    {
+      "requirement": "RFP/RFI response-writing named explicitly",
+      "approx_frequency": "44 of 372 (12%) \u2014 present but far less universal than the research brief's day-to-day section implies"
+    }
+  ],
+  "top_responsibilities": [
+    "Own the technical side of a two-person deal team alongside an Account Executive: run discovery to understand the prospect's environment/pain points, then build and deliver a demo tailored to that specific stack rather than a fixed script.",
+    "Scope and run Proof-of-Concept engagements \u2014 define success criteria with the prospect, stand up a trial/sandbox environment, and report results back to both the prospect and internal stakeholders; this is described across the corpus as the moment the 'technical win' is earned or lost.",
+    "Represent the product technically against competitors in-deal \u2014 feature and architecture comparisons framed as helping the prospect evaluate objectively, not just defending against objections.",
+    "Cover a assigned territory, vertical, or segment (not a single account) in partnership with one or more AEs \u2014 the corpus overwhelmingly frames SEs as portfolio/territory-based, echoing the existing brief and the archetype's account_portfolio_breadth=5 target.",
+    "Maintain and evolve demo/POC environments and internal enablement materials, and stay current on product roadmap and competitive landscape.",
+    "Feed structured customer and competitive feedback back to Product/Engineering \u2014 repeatedly named as a channel unique to the SE function versus other GTM roles.",
+    "At senior/principal levels: mentor junior SEs, own the technical methodology for POCs, and occasionally do enablement/training (a smaller but recurring pattern \u2014 e.g., internal 'AI Academy'-style workshops, thought-leadership content) that leans slightly more one-to-many than the median SE's one-prospect-at-a-time demo work.",
+    "Respond to RFPs/RFIs and security/technical questionnaires when they arise, though this shows up as a named responsibility in a minority of postings rather than a universal one."
+  ],
+  "comp_signals": [
+    {
+      "company": "Ramp",
+      "range_text": "$197,000\u2013$270,000 base (NYC/SF) / $177,000\u2013$243,000 base (other US locations)",
+      "source_url": "https://jobs.ashbyhq.com/ramp/29b679a8-9990-48c1-b91e-001c566ced27"
+    },
+    {
+      "company": "Column",
+      "range_text": "$125,000\u2013$160,000 annual US base salary + equity (explicit 'pay transparency' statement)",
+      "source_url": "https://jobs.ashbyhq.com/column/32435cfe-91d7-485e-9558-dccd041ae791"
+    },
+    {
+      "company": "LangChain",
+      "range_text": "$185,000\u2013$315,000 (Sales Engineer, Bay Area)",
+      "source_url": "https://jobs.ashbyhq.com/langchain/b47dbcea-222c-427d-bf4d-9e30a6b60d4a"
+    },
+    {
+      "company": "LangChain",
+      "range_text": "$116,000\u2013$195,000 (Customer Engineer, West Coast)",
+      "source_url": "https://jobs.ashbyhq.com/langchain/b8dead31-212a-4b92-82a7-c42df16ae877"
+    },
+    {
+      "company": "Chainguard",
+      "range_text": "$250,000\u2013$275,000 (Senior Enterprise Sales Engineer, New York)",
+      "source_url": "https://job-boards.greenhouse.io/chainguard/jobs/4692090006"
+    },
+    {
+      "company": "Astronomer",
+      "range_text": "Estimated total compensation $200,000\u2013$250,000 plus equity, explicitly stated as an estimate spanning a range of seniority",
+      "source_url": "https://jobs.ashbyhq.com/astronomer/3e3be48c-ccf0-4a39-9eb2-03a896787999"
+    },
+    {
+      "company": "Yugabyte",
+      "range_text": "$200,000\u2013$250,000 (Senior Sales Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/yugabyte/jobs/4682542006"
+    },
+    {
+      "company": "Amplitude",
+      "range_text": "$168,000\u2013$252,000 (Senior Sales Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/amplitude/jobs/8582548002"
+    },
+    {
+      "company": "Bloomreach",
+      "range_text": "$190,000\u2013$240,000 (Senior Solutions Consultant II, Marketing)",
+      "source_url": "https://job-boards.greenhouse.io/bloomreach/jobs/7920861"
+    },
+    {
+      "company": "Braze",
+      "range_text": "$132,000\u2013$200,000 (Senior Solutions Consultant, Media & Entertainment) \u2014 Braze also posts multiple tiered/geo-banded ranges as low as $75,600\u2013$108,500 for Emerging Enterprise-segment Solutions Consultant roles",
+      "source_url": "https://boards.greenhouse.io/braze/jobs/7812799?gh_jid=7812799"
+    },
+    {
+      "company": "Twilio",
+      "range_text": "Principal Presales Engineer, geo-banded: $138,872\u2013$173,590 up to $154,304\u2013$192,880 depending on region; Senior Presales Engineer: $109,760\u2013$137,200 up to $121,920\u2013$152,400",
+      "source_url": "https://job-boards.greenhouse.io/twilio/jobs/7938968"
+    },
+    {
+      "company": "Mastercard",
+      "range_text": "$170,000\u2013$281,000 (Principal Sales Engineer, Workday-disclosed band)",
+      "source_url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/Atlanta-Georgia/Principal-Systems-Engineer_R-280197"
+    },
+    {
+      "company": "HP",
+      "range_text": "Multiple Workday-disclosed base bands across presales/sales-engineer titles, from $71,100\u2013$85,770 up to $147,300\u2013$210,000 depending on level/geo",
+      "source_url": "https://hp.wd5.myworkdayjobs.com/ExternalCareerSite/job/All-Cities-Colorado-United-States-of-America/Collaboration-Presales-Engineer_3164749-1"
+    }
+  ],
+  "seniority_distribution_notes": "Titles skew mid-to-senior: 149/372 (40%) explicitly say Senior/Sr., another 201/372 (54%) carry no seniority qualifier (mostly unqualified 'Sales Engineer'/'Solutions Consultant'/'Customer Engineer' titles that read as standard mid-level individual-contributor roles at the posting companies), and only a small tail is explicitly Principal/Staff (8), Lead (7), Associate/Junior (5), or Manager (2). Net: this is overwhelmingly an experienced-IC market \u2014 true entry-level/associate SE postings are rare in live postings (most companies appear to promote into or laterally hire for SE rather than post explicit junior reqs), consistent with the brief's framing that new-grad-direct-to-SE is uncommon.",
+  "notable_divergence_from_existing_brief": "Mostly confirms the brief; three refinements worth flagging. (1) Comp: the brief's OTE/base-split figures (Levels.fyi, RepVue, Everstage) are all secondary aggregator sources; this fresh pull surfaces 13 postings with real, company-disclosed BASE salary bands (Ramp, Column, LangChain, Chainguard, Twilio, Mastercard, HP, Braze, Bloomreach, Amplitude, Yugabyte, Astronomer) that the brief did not have \u2014 these should be folded in as primary evidence, and they skew notably higher at AI/infra-adjacent companies (LangChain $185K-$315K, Chainguard $250K-$275K) than the brief's median-$147K base figure suggests, though Braze/HP/Twilio show much lower bands ($75K-$155K) for lower-segment or geo-banded roles, so the spread is wide. (2) RFP/RFI writing, called out prominently in the brief's day-to-day section, is explicitly named in only 44/372 (12%) of live postings \u2014 it happens, but it reads as a less universal, more occasional responsibility than the brief implies; discovery/demo/POC are far more consistently named. (3) AI/ML: roughly a third of postings that genuinely reference AI/ML (as opposed to generic 'we use AI in hiring' boilerplate) show a growing expectation that SEs can explain AI/ML product capabilities conversationally to prospects (Anaplan, Braze, Bloomreach, Appian, Saviynt) \u2014 this doesn't argue for raising ml_engineering_fluency (they explain, they don't build), but it's a real and likely-growing skill surface the brief doesn't mention, and could be worth a sentence in a future brief refresh.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Corpus confirms discovery/POC work is a bounded engagement with a defined technical-win endpoint (POC named in 147/372, discovery in 155/372), not an open-ended mandate \u2014 consistent with a moderate-not-high target."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Postings consistently describe work organized around scheduled discovery calls, demos, and POC check-ins with deal-driven urgency, matching a plannable-but-real-interruption target of 3."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No paging/on-call/production-incident language found anywhere in the 372-posting sample; risk language is uniformly deal/reputational, confirming the floor target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Demo/POC debugging is common (demo 167/372, POC 147/372) but framed as live customer-facing troubleshooting in trial environments, not production root-causing under an SLA \u2014 supports a moderate, not high, target."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Where architecture work appears, it is POC/trial-environment design scoped to one prospect's stack, not multi-tenant platform design \u2014 consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Competitive positioning (193/372) plus broad cross-cutting requirement tags (API 149, security 193, data 115, cloud 81, networking 115) show SEs need working fluency across many technical surfaces within one vendor's product line \u2014 matches a moderate-high breadth target."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Quota/commission/OTE/variable-pay language appears in a substantial minority to plurality of postings (commission 76, OTE 54, quota 23), tied to team/territory attainment rather than sole individual output \u2014 consistent with a moderate (not maximal) accountability target."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Strongest signal in the whole corpus: presentation/communication skill is named in 342/372 postings (92%), by far the most universal requirement found \u2014 strongly validates both the high target and the near-maximal weight."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Demos are described as one-prospect-at-a-time in the large majority of postings; a smaller senior/principal-level pattern of internal enablement workshops and thought-leadership content exists but isn't the norm, supporting a low-moderate rather than high target."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 5,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Territory/segment/portfolio framing is pervasive (territory 25, portfolio 52, AE-partnership 108, zero postings framed as single-named-account coverage), strongly confirming the max target the brief already flags as its most consistent cluster."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Deal-cycle-bounded language dominates, but 'trusted advisor' (101/372), 'expansion' (53/372), and 'renewal' (14/372) mentions show a real minority of cross-cycle relationship work \u2014 consistent with a target just above the floor rather than at it."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Commission/quota/OTE/variable-pay language collectively touches roughly a third of postings, and the newly found real comp postings confirm base-only disclosure (per pay-transparency law) sitting well below stated OTE elsewhere \u2014 strongly confirms this as the defining, max-weight dimension."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 2,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Scripting/Python/JS mentioned in roughly a quarter of postings (89-93/372), framed as helpful for demo config and light integration work, not as a primary engineering deliverable \u2014 supports a low-moderate target."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Travel referenced in 191/372 (51%) postings with wide variance by segment/deal size, matching the brief's 'varies widely' framing and a mid-range target."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Security is a common keyword (193/372) but almost entirely because many vendors in the sample sell security products (Corelight, Nozomi, Chainguard, Orca, Socket) \u2014 the SE explains the security product's capability rather than performing adversarial/red-team analysis themselves, so the low target still holds despite the high keyword hit rate."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No hardware/physical-constraint content found even at industrial-adjacent employers in the sample (Caterpillar, HPE) \u2014 confirms the floor target."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Only 2 Manager and 8 Principal titles out of 372 postings; the role reads as overwhelmingly individual-contributor with light mentoring at senior levels, matching a low-moderate target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "All demo/discovery work in the sample is framed as one specific named prospect, never public/broadcast audiences \u2014 confirms the low target, distinct from the high stakeholder_client_comfort score."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "AI/ML appears often as a keyword (285/372) but on inspection is mostly either generic 'AI-powered product' marketing or 'we use AI in hiring' boilerplate; the genuine subset asks SEs to explain AI/ML concepts conversationally (Anaplan, Braze, Bloomreach, Appian, Saviynt), not to build ML systems \u2014 target correctly stays low, though this explain-not-build AI fluency is a nuance the brief doesn't currently mention."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No mobile-platform-specific requirements found in the sampled postings \u2014 confirms the floor target."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Data/analytics language appears in 115/372 (31%), concentrated in data-infra vendors (e.g., Fivetran); still a minority overall and typically framed as explaining data flows to a prospect rather than building data infrastructure \u2014 supports the low target given the low weight already assigned."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Cloud platform mentions (AWS/Azure/GCP) appear in 81/372 (22%) postings, generally as 'familiarity with' rather than deep architecture ownership \u2014 consistent with the low target given the low weight."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Datadog",
+      "title": "Enterprise Sales Engineer",
+      "url": "https://careers.datadoghq.com/detail/6703351/?gh_jid=6703351"
+    },
+    {
+      "company": "Ramp",
+      "title": "Solutions Consultant | Enterprise",
+      "url": "https://jobs.ashbyhq.com/ramp/29b679a8-9990-48c1-b91e-001c566ced27"
+    },
+    {
+      "company": "Column",
+      "title": "Customer Engineer",
+      "url": "https://jobs.ashbyhq.com/column/32435cfe-91d7-485e-9558-dccd041ae791"
+    },
+    {
+      "company": "LangChain",
+      "title": "Sales Engineer (Bay Area)",
+      "url": "https://jobs.ashbyhq.com/langchain/b47dbcea-222c-427d-bf4d-9e30a6b60d4a"
+    },
+    {
+      "company": "Twilio",
+      "title": "Principal Presales Engineer",
+      "url": "https://job-boards.greenhouse.io/twilio/jobs/7938968"
+    },
+    {
+      "company": "Chainguard",
+      "title": "Senior Enterprise Sales Engineer - New York",
+      "url": "https://job-boards.greenhouse.io/chainguard/jobs/4692090006"
+    },
+    {
+      "company": "Caterpillar",
+      "title": "Sales Engineer",
+      "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers/job/Alpharetta-Georgia/Sales-Engineer_R0000381586-1"
+    },
+    {
+      "company": "Braze",
+      "title": "Senior Solutions Consultant, Media and Entertainment",
+      "url": "https://boards.greenhouse.io/braze/jobs/7812799?gh_jid=7812799"
+    }
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "count": 53,
+  "errors": [
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Cisco",
+        "ats": "workday",
+        "slug": "cisco",
+        "title": "Solutions Engineer",
+        "department": null,
+        "location": "Ann Arbor, Michigan, US",
+        "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/Ann-Arbor-Michigan-US/Solutions-Engineer_2016707",
+        "job_id": "/job/Ann-Arbor-Michigan-US/Solutions-Engineer_2016707"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Visa",
+        "ats": "workday",
+        "slug": "visa",
+        "title": "CDD Assoc Analyst, Compliance",
+        "department": null,
+        "location": "CO - Bogota, Colombia",
+        "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/CO---Bogota-Colombia/CDD-Assoc-Analyst--Compliance_REF083143W",
+        "job_id": "/job/CO---Bogota-Colombia/CDD-Assoc-Analyst--Compliance_REF083143W"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Capital One",
+        "ats": "workday",
+        "slug": "capitalone",
+        "title": "Sr. Business Manager - Retail and Small Business Bank Orgs",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Sr-Business-Manager---Retail-and-Small-Business-Bank-Orgs_R238898-1",
+        "job_id": "/job/McLean-VA/Sr-Business-Manager---Retail-and-Small-Business-Bank-Orgs_R238898-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Fidelity",
+        "ats": "workday",
+        "slug": "fmr",
+        "title": "Senior Cloud and AI Infrastructure Engineer",
+        "department": null,
+        "location": "Merrimack, NH",
+        "url": "https://fmr.wd1.myworkdayjobs.com/FidelityCareers/job/Merrimack-NH/Senior-Cloud-and-AI-Infrastructure-Engineer_2127271",
+        "job_id": "/job/Merrimack-NH/Senior-Cloud-and-AI-Infrastructure-Engineer_2127271"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Allstate",
+        "ats": "workday",
+        "slug": "allstate",
+        "title": "Auto Damage Consultant - Good Hands Repair Network - Remote",
+        "department": null,
+        "location": "USA - TX (Remote)",
+        "url": "https://allstate.wd5.myworkdayjobs.com/allstate_careers/job/USA---TX-Remote/Auto-Damage-Consultant---Good-Hands-Repair-Network---Remote_R29707-1",
+        "job_id": "/job/USA---TX-Remote/Auto-Damage-Consultant---Good-Hands-Repair-Network---Remote_R29707-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "USAA",
+        "ats": "workday",
+        "slug": "usaa",
+        "title": "Entry - Level Auto Claims Adjuster",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://usaa.wd1.myworkdayjobs.com/USAAJOBSWD/job/Tampa-Crosstown/Entry---Level-Auto-Claims-Adjuster_R0118934",
+        "job_id": "/job/Tampa-Crosstown/Entry---Level-Auto-Claims-Adjuster_R0118934"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "USAA",
+        "ats": "workday",
+        "slug": "usaa",
+        "title": "Sr. Injury Adjuster-UM",
+        "department": null,
+        "location": "5 Locations",
+        "url": "https://usaa.wd1.myworkdayjobs.com/USAAJOBSWD/job/San-Antonio-Home-Office-I/Sr-Injury-Adjuster-UM_R0117457",
+        "job_id": "/job/San-Antonio-Home-Office-I/Sr-Injury-Adjuster-UM_R0117457"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "USAA",
+        "ats": "workday",
+        "slug": "usaa",
+        "title": "Insurance Professional \u2013 Sales and Service",
+        "department": null,
+        "location": "San Antonio Home Office I",
+        "url": "https://usaa.wd1.myworkdayjobs.com/USAAJOBSWD/job/San-Antonio-Home-Office-I/Insurance-Professional---Sales-and-Service_R0117155",
+        "job_id": "/job/San-Antonio-Home-Office-I/Insurance-Professional---Sales-and-Service_R0117155"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "USAA",
+        "ats": "workday",
+        "slug": "usaa",
+        "title": "Licensed P&C Insurance Professional - Sales and Service (Signing Bonus)",
+        "department": null,
+        "location": "San Antonio Home Office I",
+        "url": "https://usaa.wd1.myworkdayjobs.com/USAAJOBSWD/job/San-Antonio-Home-Office-I/Licensed-P-C-Insurance-Professional---Sales-and-Service--Signing-Bonus-_R0117154",
+        "job_id": "/job/San-Antonio-Home-Office-I/Licensed-P-C-Insurance-Professional---Sales-and-Service--Signing-Bonus-_R0117154"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "TJX",
+        "ats": "workday",
+        "slug": "tjx",
+        "title": "PT Merchandise Associate",
+        "department": null,
+        "location": "Selma, TX 78154",
+        "url": "https://tjx.wd1.myworkdayjobs.com/TJX_EXTERNAL/job/Selma-TX-78154/PT-Merchandise-Associate_REQ133608-1",
+        "job_id": "/job/Selma-TX-78154/PT-Merchandise-Associate_REQ133608-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "TJX",
+        "ats": "workday",
+        "slug": "tjx",
+        "title": "Loss Prevention Detective",
+        "department": null,
+        "location": "Ozone Park, NY 11417",
+        "url": "https://tjx.wd1.myworkdayjobs.com/TJX_EXTERNAL/job/Ozone-Park-NY-11417/Loss-Prevention-Detective_REQ110555",
+        "job_id": "/job/Ozone-Park-NY-11417/Loss-Prevention-Detective_REQ110555"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Walmart",
+        "ats": "workday",
+        "slug": "walmart",
+        "title": "(USA) Software Engineer III",
+        "department": null,
+        "location": "Sunnyvale, CA",
+        "url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/Sunnyvale-CA/XMLNAME--USA--Software-Engineer-III_R-2430866",
+        "job_id": "/job/Sunnyvale-CA/XMLNAME--USA--Software-Engineer-III_R-2430866"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Target",
+        "ats": "workday",
+        "slug": "target",
+        "title": "Seasonal: Guest Advocate (Cashier), General Merchandise, Fulfillment, Food & Beverage, Front of Store Attendant (Cart Attendant), Style, Inbound (Stocking) (T0864)",
+        "department": null,
+        "location": "2553 Sun Valley Dr, Delafield,WI 53018-2333",
+        "url": "https://target.wd5.myworkdayjobs.com/targetcareers/job/2553-Sun-Valley-Dr-DelafieldWI-53018-2333/Seasonal--Guest-Advocate--Cashier---General-Merchandise--Fulfillment--Food---Beverage--Front-of-Store-Attendant--Cart-Attendant---Style--Inbound--Stocking---T0864-_R0000434338-1",
+        "job_id": "/job/2553-Sun-Valley-Dr-DelafieldWI-53018-2333/Seasonal--Guest-Advocate--Cashier---General-Merchandise--Fulfillment--Food---Beverage--Front-of-Store-Attendant--Cart-Attendant---Style--Inbound--Stocking---T0864-_R0000434338-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Pfizer",
+        "ats": "workday",
+        "slug": "pfizer",
+        "title": "My Pfizer Experience: Practicante - Marketing",
+        "department": null,
+        "location": "Chile - Santiago",
+        "url": "https://pfizer.wd1.myworkdayjobs.com/PfizerCareers/job/Chile---Santiago/My-Pfizer-Experience--Practicante---Marketing_4956581",
+        "job_id": "/job/Chile---Santiago/My-Pfizer-Experience--Practicante---Marketing_4956581"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Abbott",
+        "ats": "workday",
+        "slug": "abbott",
+        "title": "Gerente de Producto Senior",
+        "department": null,
+        "location": "Mexico - Cuidad de Mexico - Cuidad de Mexico",
+        "url": "https://abbott.wd5.myworkdayjobs.com/abbottcareers/job/Mexico---Cuidad-de-Mexico---Cuidad-de-Mexico/Gerente-de-Producto-Senior_31155442",
+        "job_id": "/job/Mexico---Cuidad-de-Mexico---Cuidad-de-Mexico/Gerente-de-Producto-Senior_31155442"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Abbott",
+        "ats": "workday",
+        "slug": "abbott",
+        "title": "Cyber Incident Responder Sr Specialist",
+        "department": null,
+        "location": "Colombia - Bogota",
+        "url": "https://abbott.wd5.myworkdayjobs.com/abbottcareers/job/Colombia---Bogota/Cyber-Incident-Responder-Sr-Specialist_31155068",
+        "job_id": "/job/Colombia---Bogota/Cyber-Incident-Responder-Sr-Specialist_31155068"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Medtronic",
+        "ats": "workday",
+        "slug": "medtronic",
+        "title": "Principal Clinical Specialist, Pelvic Health - Nashville, TN",
+        "department": null,
+        "location": "Nashville, Tennessee, United States of America",
+        "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Nashville-Tennessee-United-States-of-America/Principal-Clinical-Specialist--Pelvic-Health---Nashville--TN_R70983-1",
+        "job_id": "/job/Nashville-Tennessee-United-States-of-America/Principal-Clinical-Specialist--Pelvic-Health---Nashville--TN_R70983-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Medtronic",
+        "ats": "workday",
+        "slug": "medtronic",
+        "title": "Process Engineer I",
+        "department": null,
+        "location": "Juncos, Puerto Rico, United States of America",
+        "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Juncos-Puerto-Rico-United-States-of-America/Process-Engineer-I_R71672",
+        "job_id": "/job/Juncos-Puerto-Rico-United-States-of-America/Process-Engineer-I_R71672"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Medtronic",
+        "ats": "workday",
+        "slug": "medtronic",
+        "title": "Production Planner.",
+        "department": null,
+        "location": "Villalba, Puerto Rico, United States of America",
+        "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Villalba-Puerto-Rico-United-States-of-America/Production-Planner_R70620-2",
+        "job_id": "/job/Villalba-Puerto-Rico-United-States-of-America/Production-Planner_R70620-2"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Medtronic",
+        "ats": "workday",
+        "slug": "medtronic",
+        "title": "Clinical Specialist, Pain Interventions - Cleveland / Canton, OH",
+        "department": null,
+        "location": "Cleveland, Ohio, United States of America",
+        "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Cleveland-Ohio-United-States-of-America/Clinical-Specialist--Pain-Interventions---Cleveland---Canton--OH_R71364-1",
+        "job_id": "/job/Cleveland-Ohio-United-States-of-America/Clinical-Specialist--Pain-Interventions---Cleveland---Canton--OH_R71364-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Medtronic",
+        "ats": "workday",
+        "slug": "medtronic",
+        "title": "Clinical Specialist, Deep Brain Stimulation (DBS) -Miami, FL",
+        "department": null,
+        "location": "Miami, Florida, United States of America",
+        "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Miami-Florida-United-States-of-America/Clinical-Specialist--Deep-Brain-Stimulation--DBS---Miami--FL_R71413-1",
+        "job_id": "/job/Miami-Florida-United-States-of-America/Clinical-Specialist--Deep-Brain-Stimulation--DBS---Miami--FL_R71413-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Medtronic",
+        "ats": "workday",
+        "slug": "medtronic",
+        "title": "Clinical Specialist, Pain Interventions - White Plains, NY",
+        "department": null,
+        "location": "White Plains, New York, United States of America",
+        "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/White-Plains-New-York-United-States-of-America/Clinical-Specialist--Pain-Interventions---White-Plains--NY_R71376-1",
+        "job_id": "/job/White-Plains-New-York-United-States-of-America/Clinical-Specialist--Pain-Interventions---White-Plains--NY_R71376-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Medtronic",
+        "ats": "workday",
+        "slug": "medtronic",
+        "title": "Clinical Specialist, Pain Interventions - Grand Rapids, MI",
+        "department": null,
+        "location": "Grand Rapids, Michigan, United States of America",
+        "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Grand-Rapids-Michigan-United-States-of-America/Clinical-Specialist--Pain-Interventions---Grand-Rapids--MI_R71368-1",
+        "job_id": "/job/Grand-Rapids-Michigan-United-States-of-America/Clinical-Specialist--Pain-Interventions---Grand-Rapids--MI_R71368-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Stryker",
+        "ats": "workday",
+        "slug": "stryker",
+        "title": "Director-Strategic Finance",
+        "department": null,
+        "location": "Gurugram, India",
+        "url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Gurugram-India/R-D-Director--Strategic-Finance_R560078-1",
+        "job_id": "/job/Gurugram-India/R-D-Director--Strategic-Finance_R560078-1"
+      }
+    },
+    {
+      "error": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+      "row": {
+        "company": "Abbott",
+        "ats": "workday",
+        "slug": "abbott",
+        "title": "Clinical Specialist, Coronary - Lafayette, LA",
+        "department": null,
+        "location": "United States - Louisiana - Lafayette",
+        "url": "https://abbott.wd5.myworkdayjobs.com/abbottcareers/job/United-States---Louisiana---Lafayette/Clinical-Specialist--Coronary---West-Louisiana-Shreveport_31154695-1",
+        "job_id": "/job/United-States---Louisiana---Lafayette/Clinical-Specialist--Coronary---West-Louisiana-Shreveport_31154695-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Cigna",
+        "ats": "workday",
+        "slug": "cigna",
+        "title": "Encore Home Infusion Nurse - Accredo",
+        "department": null,
+        "location": "United States Work at Home",
+        "url": "https://cigna.wd5.myworkdayjobs.com/cignacareers/job/United-States-Work-at-Home/Encore-Home-Infusion-Nurse---Accredo_26008310",
+        "job_id": "/job/United-States-Work-at-Home/Encore-Home-Infusion-Nurse---Accredo_26008310"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Humana",
+        "ats": "workday",
+        "slug": "humana",
+        "title": "Senior Content Designer",
+        "department": null,
+        "location": "Remote Nationwide",
+        "url": "https://humana.wd5.myworkdayjobs.com/Humana_External_Career_Site/job/Remote-Nationwide/Senior-Content-Designer_R-421172",
+        "job_id": "/job/Remote-Nationwide/Senior-Content-Designer_R-421172"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Humana",
+        "ats": "workday",
+        "slug": "humana",
+        "title": "Lead Product Designer",
+        "department": null,
+        "location": "Remote Nationwide",
+        "url": "https://humana.wd5.myworkdayjobs.com/Humana_External_Career_Site/job/Remote-Nationwide/Lead-Product-Designer_R-419357-1",
+        "job_id": "/job/Remote-Nationwide/Lead-Product-Designer_R-419357-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Humana",
+        "ats": "workday",
+        "slug": "humana",
+        "title": "Lead Product Designer - Benefits Servicing",
+        "department": null,
+        "location": "Remote Nationwide",
+        "url": "https://humana.wd5.myworkdayjobs.com/Humana_External_Career_Site/job/Remote-Nationwide/Lead-Product-Designer---Benefits-Servicing_R-421865",
+        "job_id": "/job/Remote-Nationwide/Lead-Product-Designer---Benefits-Servicing_R-421865"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Humana",
+        "ats": "workday",
+        "slug": "humana",
+        "title": "Lead Content Designer",
+        "department": null,
+        "location": "Remote Nationwide",
+        "url": "https://humana.wd5.myworkdayjobs.com/Humana_External_Career_Site/job/Remote-Nationwide/Lead-Content-Designer_R-420227",
+        "job_id": "/job/Remote-Nationwide/Lead-Content-Designer_R-420227"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Humana",
+        "ats": "workday",
+        "slug": "humana",
+        "title": "Lead Product Designer - Pharmacy",
+        "department": null,
+        "location": "Remote Nationwide",
+        "url": "https://humana.wd5.myworkdayjobs.com/Humana_External_Career_Site/job/Remote-Nationwide/Lead-Product-Designer---Pharmacy_R-421856",
+        "job_id": "/job/Remote-Nationwide/Lead-Product-Designer---Pharmacy_R-421856"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Anthem/Elevance Health",
+        "ats": "workday",
+        "slug": "elevancehealth",
+        "title": "Patient Enrollment Specialist - Transitions of Care",
+        "department": null,
+        "location": "5 Locations",
+        "url": "https://elevancehealth.wd1.myworkdayjobs.com/ANT/job/TN-NASHVILLE-926-MAIN-ST/Patient-Enrollment-Specialist---Transitions-of-Care_JR190417",
+        "job_id": "/job/TN-NASHVILLE-926-MAIN-ST/Patient-Enrollment-Specialist---Transitions-of-Care_JR190417"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Anthem/Elevance Health",
+        "ats": "workday",
+        "slug": "elevancehealth",
+        "title": "Business Analyst II",
+        "department": null,
+        "location": "4 Locations",
+        "url": "https://elevancehealth.wd1.myworkdayjobs.com/ANT/job/VA-NORFOLK-5800-NORTHAMPTON-BLVD/Business-Analyst-II_JR194830",
+        "job_id": "/job/VA-NORFOLK-5800-NORTHAMPTON-BLVD/Business-Analyst-II_JR194830"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Anthem/Elevance Health",
+        "ats": "workday",
+        "slug": "elevancehealth",
+        "title": "Behavioral Health Case Manager",
+        "department": null,
+        "location": "5 Locations",
+        "url": "https://elevancehealth.wd1.myworkdayjobs.com/ANT/job/GA-ATLANTA-740-W-PEACHTREE-ST-NW/Behavioral-Health-Case-Manager_JR195072",
+        "job_id": "/job/GA-ATLANTA-740-W-PEACHTREE-ST-NW/Behavioral-Health-Case-Manager_JR195072"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Anthem/Elevance Health",
+        "ats": "workday",
+        "slug": "elevancehealth",
+        "title": "Audit & Reimbursement II",
+        "department": null,
+        "location": "9 Locations",
+        "url": "https://elevancehealth.wd1.myworkdayjobs.com/ANT/job/NY-EAST-SYRACUSE-5000-BRITTONFIELD-PKWY-STE-100/Audit---Reimbursement-II_JR193750",
+        "job_id": "/job/NY-EAST-SYRACUSE-5000-BRITTONFIELD-PKWY-STE-100/Audit---Reimbursement-II_JR193750"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Boeing",
+        "ats": "workday",
+        "slug": "boeing",
+        "title": "Design and Analysis Engineer (Electronic Sys Design & Analysis) - Expert",
+        "department": null,
+        "location": "USA - North Charleston, SC",
+        "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---North-Charleston-SC/Design-and-Analysis-Engineer--Electronic-Sys-Design---Analysis----Expert_JR2026517942-1",
+        "job_id": "/job/USA---North-Charleston-SC/Design-and-Analysis-Engineer--Electronic-Sys-Design---Analysis----Expert_JR2026517942-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Boeing",
+        "ats": "workday",
+        "slug": "boeing",
+        "title": "Tooling Mechanic-Quality Inspector",
+        "department": null,
+        "location": "USA - Berkeley, MO",
+        "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Berkeley-MO/Tooling-Mechanic-Quality-Inspector_JR2026498711-1",
+        "job_id": "/job/USA---Berkeley-MO/Tooling-Mechanic-Quality-Inspector_JR2026498711-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Boeing",
+        "ats": "workday",
+        "slug": "boeing",
+        "title": "Associate Systems Engineer (FL June 23-25)",
+        "department": null,
+        "location": "3 Locations",
+        "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Associate-Systems-Engineer--FL-June-23-25-_JR2026512499-1",
+        "job_id": "/job/USA---Hazelwood-MO/Associate-Systems-Engineer--FL-June-23-25-_JR2026512499-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Boeing",
+        "ats": "workday",
+        "slug": "boeing",
+        "title": "Systems Engineer (Experienced or Lead) - (FL June 23-25)",
+        "department": null,
+        "location": "3 Locations",
+        "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Systems-Engineer--Experienced-or-Lead-----FL-June-23-25-_JR2026512498-1",
+        "job_id": "/job/USA---Hazelwood-MO/Systems-Engineer--Experienced-or-Lead-----FL-June-23-25-_JR2026512498-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Service Engineering and Operations Data Lead - GM Defense",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Milford-Michigan-United-States-of-America/Service-Engineering-and-Operations-Data-Lead---GM-Defense_JR-202610038-1",
+        "job_id": "/job/Milford-Michigan-United-States-of-America/Service-Engineering-and-Operations-Data-Lead---GM-Defense_JR-202610038-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Boeing",
+        "ats": "workday",
+        "slug": "boeing",
+        "title": "Senior Industrial Security Specialist",
+        "department": null,
+        "location": "USA - Arlington, VA",
+        "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Arlington-VA/Senior-Industrial-Security-Specialist_JR2026514363-1",
+        "job_id": "/job/USA---Arlington-VA/Senior-Industrial-Security-Specialist_JR2026514363-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Service Engineering Lead, Electrified Systems (GM Defense)",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Service-Engineering-Lead--Electrified-Systems--GM-Defense-_JR-202611907-1",
+        "job_id": "/job/Warren-Michigan-United-States-of-America/Service-Engineering-Lead--Electrified-Systems--GM-Defense-_JR-202611907-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Senior Serviceability Design Engineer - GM Defense",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Senior-Serviceability-Design-Engineer---GM-Defense_JR-202612340-1",
+        "job_id": "/job/Warren-Michigan-United-States-of-America/Senior-Serviceability-Design-Engineer---GM-Defense_JR-202612340-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Service Engineering Lead, Suburban Shield - GM Defense",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Service-Engineering-Lead--Suburban-Shield---GM-Defense_JR-202611835-1",
+        "job_id": "/job/Warren-Michigan-United-States-of-America/Service-Engineering-Lead--Suburban-Shield---GM-Defense_JR-202611835-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Serviceability Design Engineer - GM Defense",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Serviceability-Design-Engineer---GM-Defense_JR-202612338-1",
+        "job_id": "/job/Warren-Michigan-United-States-of-America/Serviceability-Design-Engineer---GM-Defense_JR-202612338-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Accounting Sr Analyst - S\u00e3o Caetano do Sul/SP",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sao-Caetano-do-Sul-Sao-Paulo-Brazil/Daily-Operations-Analyst_JR-202613602-1",
+        "job_id": "/job/Sao-Caetano-do-Sul-Sao-Paulo-Brazil/Daily-Operations-Analyst_JR-202613602-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Launch Electrical Wiring Engineer",
+        "department": null,
+        "location": "Wentzville, Missouri, United States of America",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Wentzville-Missouri-United-States-of-America/Launch-Electrical-Wiring-Engineer_JR-202609499",
+        "job_id": "/job/Wentzville-Missouri-United-States-of-America/Launch-Electrical-Wiring-Engineer_JR-202609499"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "Construction Engineering Group Manager",
+        "department": null,
+        "location": "Warren, Michigan, United States of America",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Construction-Engineering-Group-Manager_JR-202614275-1",
+        "job_id": "/job/Warren-Michigan-United-States-of-America/Construction-Engineering-Group-Manager_JR-202614275-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "General Motors",
+        "ats": "workday",
+        "slug": "generalmotors",
+        "title": "ERG Program Manager",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Detroit-Michigan-United-States-of-America/ERG-Program-Manager_JR-202612582-1",
+        "job_id": "/job/Detroit-Michigan-United-States-of-America/ERG-Program-Manager_JR-202612582-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "RTX (Raytheon Technologies)",
+        "ats": "workday",
+        "slug": "globalhr",
+        "title": "Furnace Operator (3rd Shift)(Onsite)",
+        "department": null,
+        "location": "US-TX-WICHITA FALLS-3101 ~ 3101 Hammon Rd ~ HAMMON",
+        "url": "https://globalhr.wd5.myworkdayjobs.com/REC_RTX_Ext_Gateway/job/US-TX-WICHITA-FALLS-3101--3101-Hammon-Rd--HAMMON/Furnace-Operator--3rd-Shift--Onsite-_01845162",
+        "job_id": "/job/US-TX-WICHITA-FALLS-3101--3101-Hammon-Rd--HAMMON/Furnace-Operator--3rd-Shift--Onsite-_01845162"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
+        "ats": "workday",
+        "slug": "gdit",
+        "title": "Data Analyst Senior",
+        "department": null,
+        "location": "Any Location / Remote",
+        "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Data-Analyst-Senior_RQ223788-1",
+        "job_id": "/job/Any-Location--Remote/Data-Analyst-Senior_RQ223788-1"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Disney",
+        "ats": "workday",
+        "slug": "disney",
+        "title": "Conservation & Science Tech (Seasonal)",
+        "department": null,
+        "location": "Lake Buena Vista, FL, USA",
+        "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Lake-Buena-Vista-FL-USA/Conservation---Science-Tech--Seasonal-_10152390",
+        "job_id": "/job/Lake-Buena-Vista-FL-USA/Conservation---Science-Tech--Seasonal-_10152390"
+      }
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "row": {
+        "company": "Disney",
+        "ats": "workday",
+        "slug": "disney",
+        "title": "Domestic Sales Ticket Program & Contracting Manager",
+        "department": null,
+        "location": "2 Locations",
+        "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Celebration-FL-USA/Domestic-Sales-Ticket-Program---Contracting-Manager_10151307",
+        "job_id": "/job/Celebration-FL-USA/Domestic-Sales-Ticket-Program---Contracting-Manager_10151307"
+      }
+    }
+  ]
+}

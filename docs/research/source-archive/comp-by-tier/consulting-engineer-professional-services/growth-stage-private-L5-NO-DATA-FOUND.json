@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "growth-stage-private",
+  "level": "L5",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus 'Senior/Staff' bucket has 3 points from 2 companies (Greenhouse Senior Implementation Consultant $79.3K-$95K; Pendo Senior [role] ~$145.4K-$175K). File's L5 base p50 ($189K) runs meaningfully above both real data points (corpus median $145.6K), a ~25-30% gap. Raising low\u2192medium because real per-level anchors now exist and are the right order of magnitude, but flagging a real overstatement concern rather than calling this well-confirmed."
+}

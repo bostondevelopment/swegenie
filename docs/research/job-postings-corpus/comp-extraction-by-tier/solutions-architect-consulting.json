@@ -1,0 +1,209 @@
+{
+  "archetypeId": "solutions-architect-consulting",
+  "grid": {
+    "ai-labs": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "faang-mag7": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "high-growth-public": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "growth-stage-private": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": {
+        "count": 5,
+        "companyCount": 2,
+        "low": 120000,
+        "high": 190000,
+        "median": 154200,
+        "companies": [
+          "DEPT",
+          "Valtech"
+        ],
+        "points": [
+          {
+            "low": 138000,
+            "high": 148000,
+            "raw_match": "$138,000 &mdash; $148,000",
+            "context": "is based on a range of factors that include relevant experience, expertise, physical location , and organizational impact. This is based on a 40-hour workweek and leveling. Keep in mind, we\u2019re flexible. US Remote Range $138,000 &mdash; $148,000 USD",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "DEPT",
+            "title": "Architect, Martech (Adobe) ",
+            "location": "United States",
+            "url": "https://job-boards.greenhouse.io/dept/jobs/8054423",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 138400,
+            "high": 170000,
+            "raw_match": "$138,400 &mdash; $170,000",
+            "context": "is based on a range of factors that include relevant experience, expertise, physical location , and organizational impact. This is based on a 40-hour workweek and leveling. Keep in mind, we\u2019re flexible. US Remote Range $138,400 &mdash; $170,000 USD",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "DEPT",
+            "title": "Architect, Software Engineering  (Adobe - AEM/WorkFront)",
+            "location": "United States",
+            "url": "https://job-boards.greenhouse.io/dept/jobs/8030992",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 154700,
+            "high": 190000,
+            "raw_match": "$154,700 &mdash; $190,000",
+            "context": "is based on a range of factors that include relevant experience, expertise, physical location , and organizational impact. This is based on a 40-hour workweek and leveling. Keep in mind, we\u2019re flexible. US Remote Range $154,700 &mdash; $190,000 USD",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "DEPT",
+            "title": "Architect, Software Engineering (Adobe Experience, Engineering & Platforms)",
+            "location": "United States",
+            "url": "https://job-boards.greenhouse.io/dept/jobs/8049767",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 154700,
+            "high": 190000,
+            "raw_match": "$154,700 &mdash; $190,000",
+            "context": "is based on a range of factors that include relevant experience, expertise, physical location , and organizational impact. This is based on a 40-hour workweek and leveling. Keep in mind, we\u2019re flexible. US Remote Range $154,700 &mdash; $190,000 USD",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "DEPT",
+            "title": "Architect, Software Engineering (Adobe Intelligent Activation & Growth)",
+            "location": "United States",
+            "url": "https://job-boards.greenhouse.io/dept/jobs/8049791",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 120000,
+            "high": 180000,
+            "raw_match": "$120,000 - $180,000",
+            "context": "ze that talent comes in many forms, and we value diverse perspectives and a willingness to learn. &nbsp; The benefits &nbsp; This is a Full-tiempo position based in United States .&nbsp;The offered salary range is&nbsp; $120,000 - $180,000 usd &nbsp;annually, depending on experience and location. &nbsp; Beyond a competitive compensation package, we offer: &nbsp; Flexibility, with remote and hybrid work options (country-dependent) &nbsp; Career advancement",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Valtech",
+            "title": "Liferay Technical Architect",
+            "location": "United States - Remote",
+            "url": "https://job-boards.eu.greenhouse.io/valtech/jobs/4901482101",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          }
+        ]
+      },
+      "Senior/Staff": {
+        "count": 2,
+        "companyCount": 2,
+        "low": 154700,
+        "high": 195000,
+        "median": 178675,
+        "companies": [
+          "Chainguard",
+          "DEPT"
+        ],
+        "points": [
+          {
+            "low": 195000,
+            "high": 195000,
+            "raw_match": "$195,000",
+            "context": "rk effectively with cross functional engineering teams and business partners Excellent written and verbal communication skills Ability to travel up to 15% of the time Located in the Eastern Time Zone Compensation: up to $195,000 base salary + bonus + equity If your experience is close but doesn\u2019t fulfill all requirements,&nbsp;please apply.&nbsp;Chainguard is on a mission to build the best team. To achieve our goal, we are focused on hiring Cha",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Chainguard",
+            "title": "Senior Solutions Architect - East (Professional Services)",
+            "location": "United States - Remote",
+            "url": "https://job-boards.greenhouse.io/chainguard/jobs/4678090006",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 154700,
+            "high": 170000,
+            "raw_match": "$154,700 &mdash; $170,000",
+            "context": "is based on a range of factors that include relevant experience, expertise, physical location , and organizational impact. This is based on a 40-hour workweek and leveling. Keep in mind, we\u2019re flexible. US Remote Range $154,700 &mdash; $170,000 USD",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "DEPT",
+            "title": "Senior Architect, Software Engineering (Adobe - Commerce)",
+            "location": "United States",
+            "url": "https://job-boards.greenhouse.io/dept/jobs/8051483",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          }
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 197000,
+        "high": 337000,
+        "median": 267000,
+        "companies": [
+          "Thoughtworks"
+        ],
+        "points": [
+          {
+            "low": 197000,
+            "high": 337000,
+            "raw_match": "$197,000 &mdash; $337,000",
+            "context": "ughtworks.com/en-us/careers/benefits The annual salary range posted is subject to many factors and may vary depending on experience, geographic location, job responsibilities, performance, skills and/or training. Salary $197,000 &mdash; $337,000 USD See here our AI policy.",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Thoughtworks",
+            "title": "Principal AI Architect",
+            "location": "Chicago, Illinois, USA",
+            "url": "https://www.thoughtworks.com/careers/jobs/7687014?gh_jid=7687014",
+            "level_hint": "Principal/Director+ (Manager/VP)",
+            "tier": "growth-stage-private"
+          }
+        ]
+      }
+    },
+    "early-stage": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 165000,
+        "high": 185000,
+        "median": 175000,
+        "companies": [
+          "Caylent"
+        ],
+        "points": [
+          {
+            "low": 165000,
+            "high": 185000,
+            "raw_match": "$165,000 - $185,000",
+            "context": "sp; Flexible Spending Account&nbsp; Equipment &amp; Office Stipend&nbsp; Annual stipend for Learning and Development&nbsp; Unlimited Paid Time Off&nbsp; 10 Paid Holidays &nbsp; The base salary range for this position is $165,000 - $185,000 &nbsp; per year. If you are hired at Caylent, your base salary is determined on factors such as skills, experience, geographic location, and other market conditions. While it's not typical for offers to be made at the t",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Caylent",
+            "title": "Principal Cloud Architect",
+            "location": "USA",
+            "url": "https://job-boards.greenhouse.io/caylent/jobs/5474063004",
+            "level_hint": "Principal/Director+ (Manager/VP)",
+            "tier": "early-stage"
+          }
+        ]
+      }
+    }
+  },
+  "totalUsdBasePoints": 37,
+  "unclassifiedCompanyPoints": 28
+}

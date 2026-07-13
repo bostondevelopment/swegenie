@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-solutions-engineer",
+  "tier": "growth-stage-private",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No dedicated Principal/Director+ corpus bucket; Staff-level treated distinctly from the Senior/Staff corpus bucket used for L5, so applying the same 4 points twice would double-count evidence rather than add new grounding. No additional external Staff-specific anchor found. Keeping low."
+}

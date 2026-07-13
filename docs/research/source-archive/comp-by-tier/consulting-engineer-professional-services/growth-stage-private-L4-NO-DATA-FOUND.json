@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "growth-stage-private",
+  "level": "L4",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "medium",
+  "rationale": "Same corpus 'Mid' bucket as L3 (Brex, Hudl). File's L4 base p50 ($153K) sits between the Hudl and Brex bands and close to the corpus median ($144.9K). Raising low\u2192medium."
+}

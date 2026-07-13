@@ -1,0 +1,25 @@
+{
+  "archetypeId": "customer-support-solutions-engineer",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 3,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/meta/salaries/solutions-engineer",
+      "title": "Meta Solutions Engineer Salary | Levels.fyi",
+      "note": "IC3: total $144K, base $118K, stock $15K/yr, bonus $11.5K",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/solutions-engineer-salary-SRCH_KO0,18.htm",
+      "title": "Solutions Engineer: Average Salary & Pay Trends | Glassdoor",
+      "note": "Blended avg $169,407, 25-75th pctile $138,817-$211,507; likely includes pre-sales SE roles with different comp structure (commission), caution against direct use",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/senior-solutions-engineer-salary-SRCH_KO0,25.htm",
+      "title": "Senior Solutions Engineer: Average Salary & Pay Trends | Glassdoor",
+      "note": "Avg $213,792, range $176,820-$265,408 \u2014 role-mix concern (pre-sales vs support) limits usability",
+      "kind": "structured_citation"
+    }
+  ]
+}

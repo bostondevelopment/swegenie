@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "growth-stage-private",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus 'Mid (unspecified level)' bucket has 3 real points from 2 named companies (Brex Enterprise Implementation Consultant $145.5K-$181.9K NY / $128.8K-$161K Vancouver-CAD; Hudl Implementation Consultant $63K-$106K). File's L3 base p50 ($126K) sits near the low end of this range (close to Hudl's band and below Brex), which is plausible for an entry mid-level role. Raising low\u2192medium given real named-company grounding."
+}

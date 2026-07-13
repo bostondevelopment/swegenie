@@ -1,0 +1,356 @@
+{
+  "archetype_id": "developer-relations-advocacy",
+  "postings_analyzed": 87,
+  "top_requirements": [
+    {
+      "requirement": "3-8 years relevant experience (spans software engineering, DevRel, or technical community work); more senior titles (Staff/Principal/Director) ask for 8-12+ years",
+      "approx_frequency": "66 of 87 postings state an explicit years-of-experience threshold; distribution clusters at 3 (9 postings), 5 (13 postings), and 8-12 (16 postings combined)"
+    },
+    {
+      "requirement": "Demonstrated public speaking / conference presentation experience or willingness to speak at events",
+      "approx_frequency": "49 of 87 postings"
+    },
+    {
+      "requirement": "Track record of technical writing (blog posts, tutorials, docs) or content portfolio",
+      "approx_frequency": "54 of 87 postings"
+    },
+    {
+      "requirement": "Comfort with or prior experience in open-source communities (contributing to, maintaining, or engaging with OSS projects)",
+      "approx_frequency": "83 of 87 postings mention open source in some capacity, though many are boilerplate company-description mentions rather than a strict candidate requirement \u2014 roughly half read as an explicit expectation that the candidate has OSS involvement"
+    },
+    {
+      "requirement": "Active engagement with developer communities (Discord, Stack Overflow, Reddit, forums) as a moderator/participant, not just a channel the company runs",
+      "approx_frequency": "78 of 87 postings"
+    },
+    {
+      "requirement": "Working proficiency in at least one mainstream language, most commonly JavaScript/TypeScript or Python, sufficient to build demos/sample apps",
+      "approx_frequency": "JS/TS in 28 of 87, Python in 26 of 87 (overlapping sets)"
+    },
+    {
+      "requirement": "Video production / on-camera comfort (screencasts, YouTube, recorded demos)",
+      "approx_frequency": "40 of 87 postings"
+    },
+    {
+      "requirement": "Social-media presence / willingness to post publicly (X/Twitter, LinkedIn) as part of the job",
+      "approx_frequency": "40 of 87 postings"
+    },
+    {
+      "requirement": "Willingness to travel for events/conferences",
+      "approx_frequency": "33 of 87 postings state travel explicitly (38%); a further set imply it via conference/event responsibilities without a dedicated travel clause"
+    },
+    {
+      "requirement": "AI/ML product fluency (able to explain and demo an AI/LLM-related product specifically)",
+      "approx_frequency": "75 of 87 postings reference AI/ML in the company or product description \u2014 reflects the current sample's heavy skew toward AI-infrastructure companies (Anthropic, Modal, LlamaIndex, E2B, Roboflow, AssemblyAI, Deepgram, Nvidia, Langfuse, etc.) rather than a universal DevRel requirement"
+    },
+    {
+      "requirement": "Bachelor's degree in CS or equivalent practical experience (rarely a hard requirement)",
+      "approx_frequency": "only 5 of 87 postings state a CS degree explicitly; most use \"or equivalent experience\" framing or omit degree requirements entirely"
+    }
+  ],
+  "top_responsibilities": [
+    "Producing technical content on a recurring cadence \u2014 blog posts, written tutorials, sample repos, and (increasingly) video/screencast content \u2014 tied to specific product launches or integration patterns rather than open-ended thought leadership.",
+    "Representing the company at conferences, meetups, and hackathons: giving talks, running workshops or booths, and in several postings (notably Nvidia's hackathon/bootcamp-mentor postings) directly coaching external developers through hands-on technical sessions.",
+    "Owning or heavily participating in a public community channel (Discord, forum, Stack Overflow, GitHub Discussions) \u2014 answering questions, triaging issues, and building relationships with power users and OSS contributors.",
+    "Acting as a structured feedback conduit from developers back to product/engineering \u2014 filing friction reports, joining roadmap discussions, or running beta/early-access programs so real usage informs the product.",
+    "Building and maintaining sample applications, demos, starter kits, or reference integrations that showcase the product's SDK/API in realistic use cases (smaller share of total time than content/community work in most postings, but a near-universal expectation).",
+    "For more senior/staff/principal postings: setting DevRel program strategy, owning a content/event budget, and in a subset of postings (director/head level, e.g. CoreWeave, Chainguard, Crusoe, Nvidia manager tracks) managing a small team or owning ecosystem partnerships rather than doing hands-on content personally.",
+    "A meaningful minority of postings (Nvidia's regional/vertical 'Developer Relations Manager' roles, Roblox's regional roles, Rockstar's Creator Platform roles) frame the job around growing and supporting a specific external developer/creator ecosystem tied to a platform or vertical, blending DevRel with light partnership/BD work rather than pure content production."
+  ],
+  "comp_signals": [
+    {
+      "company": "Databricks",
+      "range_text": "Zone 1 Pay Range $149,200 - $205,150 USD (Sr. Developer Advocate - Neon)",
+      "source_url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8428818002"
+    },
+    {
+      "company": "Datadog",
+      "range_text": "Estimated yearly salary $161,000 - $237,000 USD (Senior Developer Advocate - Data Observability)",
+      "source_url": "https://careers.datadoghq.com/detail/7555520/?gh_jid=7555520"
+    },
+    {
+      "company": "Datadog",
+      "range_text": "Estimated yearly salary $128,000 - $187,000 USD (Senior Developer Advocate - Modern App Development)",
+      "source_url": "https://careers.datadoghq.com/detail/7985840/?gh_jid=7985840"
+    },
+    {
+      "company": "ClickHouse",
+      "range_text": "Typical starting salary $150,000 - $190,000 USD (Developer/Community Advocate - AMER)",
+      "source_url": "https://job-boards.greenhouse.io/clickhouse/jobs/5818041004"
+    },
+    {
+      "company": "Postman",
+      "range_text": "Reasonably estimated base salary $210,000 - $230,000 plus equity (Senior Developer Advocate)",
+      "source_url": "https://job-boards.greenhouse.io/postman/jobs/7651740003"
+    },
+    {
+      "company": "JetBrains",
+      "range_text": "$144,000 - $255,000 USD per year (Developer Advocate (AIR) and C/C++ Developer Advocate postings)",
+      "source_url": "https://job-boards.eu.greenhouse.io/jetbrains/jobs/4826456101"
+    },
+    {
+      "company": "Anthropic",
+      "range_text": "Annual Salary $240,000 - $315,000 USD (Applied AI Technical Evangelist, Startup Ecosystem)",
+      "source_url": "https://job-boards.greenhouse.io/anthropic/jobs/5116927008"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "Base salary range $165,000 - $242,000 (Director, Developer Relations and Senior Developer Relations Engineer - Marimo both cite this range)",
+      "source_url": "https://coreweave.com/careers/job?4656231006&board=coreweave&gh_jid=4656231006"
+    },
+    {
+      "company": "Crusoe",
+      "range_text": "Compensation up to $280,000 - $300,000 + Bonus (Senior Director, Developer Advocacy)",
+      "source_url": "https://jobs.ashbyhq.com/crusoe/fbcab5cb-7a0a-4c73-9b64-dcfe99f2fcb1"
+    },
+    {
+      "company": "AssemblyAI",
+      "range_text": "Salary range $130,000 - $190,000 (Developer Relations Evangelist)",
+      "source_url": "https://job-boards.greenhouse.io/assemblyai/jobs/4703690005"
+    },
+    {
+      "company": "Roboflow",
+      "range_text": "Target compensation $175,000 - $195,000 base salary (Developer Advocate)",
+      "source_url": "https://jobs.ashbyhq.com/roboflow/daf0248c-c215-4c44-a2bd-e3512b38f37b"
+    },
+    {
+      "company": "Okta",
+      "range_text": "$165,000 - $220,000 USD for San Francisco Bay Area candidates (Senior Developer Advocate)",
+      "source_url": "https://www.okta.com/company/careers/opportunity/7379845?gh_jid=7379845"
+    },
+    {
+      "company": "Chainguard",
+      "range_text": "Base Salary Range $221,000 - $260,000 USD (Head of Developer Relations)",
+      "source_url": "https://job-boards.greenhouse.io/chainguard/jobs/4676268006"
+    },
+    {
+      "company": "Temporal Technologies",
+      "range_text": "Estimated pay range $260,000 - $325,000 (Principal Developer Advocate, AI)",
+      "source_url": "https://job-boards.greenhouse.io/temporaltechnologies/jobs/4947867007"
+    },
+    {
+      "company": "Temporal Technologies",
+      "range_text": "Estimated pay range $240,000 - $295,000 (Senior Manager, Enterprise Developer Advocacy)",
+      "source_url": "https://job-boards.greenhouse.io/temporaltechnologies/jobs/5184806007"
+    },
+    {
+      "company": "Temporal Technologies",
+      "range_text": "Estimated pay range $190,000 - $240,000 (Staff Developer Advocate, Enterprise)",
+      "source_url": "https://job-boards.greenhouse.io/temporaltechnologies/jobs/5137122007"
+    },
+    {
+      "company": "Neo4j",
+      "range_text": "Annual Base Salary Range $190,000 - $260,000 USD (Senior Developer Advocate)",
+      "source_url": "https://boards.greenhouse.io/neo4j/jobs/4689451006?gh_jid=4689451006"
+    },
+    {
+      "company": "Zeta Global",
+      "range_text": "Salary range $170,000 - $200,000, depending on location and experience (Lead Developer Relations Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/zetaglobal/jobs/6002943004"
+    },
+    {
+      "company": "Twilio",
+      "range_text": "$128,560-$160,700 (most US remote zones) up to $151,120+ in SF Bay Area (Developer Evangelist, tiered by location)",
+      "source_url": "https://job-boards.greenhouse.io/twilio/jobs/7579499"
+    }
+  ],
+  "seniority_distribution_notes": "Titles skew mid-to-senior: 33 of 87 postings carry no seniority modifier (plain \"Developer Advocate\"/\"Developer Relations Engineer,\" typically 2-5 years experience implied), 30 are explicitly \"Senior,\" 8 \"Staff,\" 2 \"Principal,\" 2 \"Director/Head,\" 11 \"Manager/Lead\" (mostly Nvidia's regional/vertical Developer Relations Manager track and Roblox's regional manager roles), and 1 internship (Weaviate). Years-of-experience mentions cluster at 3 and 5 years for the largest bands, with a smaller but real cluster at 8-12 years for staff/principal/director postings. There is essentially no true entry-level (0-1 year) hiring in this live sample \u2014 this is a role companies mostly build via lateral hires from engineering, technical writing, or community roles rather than fresh-grad recruiting, consistent with the brief's stated entry-path claims.",
+  "notable_divergence_from_existing_brief": "Two points worth flagging for review, both refinements rather than contradictions:\n\n(1) AI/ML product fluency is far more central in this live sample than the brief implies. 75 of 87 postings (86%) are at AI/ML-native companies or explicitly reference AI/LLM products (Anthropic, Modal, LlamaIndex, E2B, Roboflow, AssemblyAI, Deepgram, Langfuse, Nvidia's many AI-vertical DevRel-manager postings, n8n's \"AI orchestration platform\" framing). The brief's existing day-to-day and requirements sections don't mention AI/ML specialization at all. This is very plausibly a snapshot-in-time artifact of mid-2026 hiring demand (AI infra companies are simply hiring DevRel aggressively right now) rather than a permanent shift in what the archetype fundamentally is \u2014 the underlying skills (content, speaking, community, code) are unchanged \u2014 but it's worth a note that current DevRel postings disproportionately want candidates who can already speak fluently about AI/LLM concepts, which the taxonomy's ml_engineering_fluency target of 1 (weight 0.1) may understate for near-term job-market fit even if it's correctly scoped as \"not core to the archetype's definition.\"\n\n(2) The brief's comp section leans heavily on levels.fyi/InterviewPal aggregator data and explicitly flags Temporal's $170K-$215K as \"the only precise, first-party range captured.\" This posting sample now provides 19 explicit first-party stated ranges across 15 companies (Databricks, Datadog x2, ClickHouse, Postman, JetBrains, Anthropic, CoreWeave, Crusoe, AssemblyAI, Roboflow, Okta, Chainguard, Temporal x3 across two board instances, Neo4j, Zeta Global, Twilio), spanning roughly $128K to $325K base depending on level and company \u2014 broadly consistent with the brief's synthesized entry/mid/senior bands ($90K-$260K) but with a noticeably higher senior/staff/principal ceiling (several AI-infra companies post $240K-$325K for Staff/Principal/Director DevRel, above the brief's stated $170K-$260K senior/Head band). This likely reflects both general 2026 AI-sector comp inflation and this sample's skew toward well-funded AI infra companies rather than a broad-market shift, but the brief's comp ceiling for senior individual-contributor levels may be worth revisiting upward.\n\nEverything else in the brief \u2014 the four-bucket day-to-day framing (content, speaking, community, internal feedback), base+equity comp structure with no sales-style variable pay, DevRel-not-marketing identity tension, and the engineering-heavy entry path \u2014 is well corroborated by this sample.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 4,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "Job postings themselves rarely state 'no defined success metric' explicitly (that's a claim better evidenced by practitioner survey data, as the brief already does), but the sample's mix of brand-new startups (Modal, n8n, Supabase, Roboflow, E2B) with undefined DevRel programs versus mature orgs (Nvidia, Twilio, Datadog) with established metrics is indirectly consistent with a role where success criteria vary widely by employer. No posting-level contradiction found."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 2,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "78 of 87 postings mention community-channel engagement (Discord/forums/Stack Overflow), which does introduce real-time responsiveness, but the dominant framing across postings is still planned content/event production rather than reactive ticket-style work \u2014 consistent with a low-moderate (not high) target."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Zero postings in the sample mention on-call rotations, paging, or incident response duties for the DevRel role itself."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 2,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "SDK/API work appears in 21 of 87 postings and sample-app/demo/POC building in only 13 of 87 \u2014 present but clearly secondary to content and community work in the overall postings text, consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Kubernetes appears in only 3 of 87 postings; where cloud/infra terms appear (26 of 87, mostly AWS/GCP/Azure) it is almost always describing the company's product/ecosystem that developers use, not systems-design work the DevRel person personally owns."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Language/tooling mentions (JS/TS 28/87, Python 26/87, GitHub 26/87, docs 26/87) show moderate, product-scoped technical breadth rather than deep specialization or broad cross-domain systems work \u2014 consistent with a mid-range target."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 2,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Metrics/analytics language appears in 23 of 87 postings, generally framed around community/engagement metrics rather than a hard owned KPI or SLO, consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Cross-functional/product-feedback language (internal collaboration with product/engineering) appears in 45 of 87 postings (52%), confirming real but not client-account-style stakeholder engagement \u2014 supports a moderate target distinct from CSE/SE archetypes."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Content creation (writing/blog 54/87, public speaking 49/87, video 40/87) is the single most consistent theme across the entire corpus, strongly confirming this as the archetype's top-weighted, maximal-target dimension."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 1,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "No posting in the sample frames the role around a countable book of named accounts; audience is consistently framed as a community/ecosystem, confirming a minimal target."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 1,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "Community/broadcast framing (78/87 postings) with zero postings describing named, ongoing account relationships confirms this as the clear low pole vs. account-based archetypes."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "All 19 explicit comp figures found are stated as base salary/pay ranges with equity and/or discretionary bonus, never commission or quota-linked pay tied to deals. Generic 'equity and/or commission' boilerplate appears in many postings' standard EEO/comp-disclosure footer text (likely a shared ATS template clause) but no posting ties DevRel pay to sales commission or quota attainment specifically \u2014 supports the low target."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 2,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Coding-adjacent signals (Python/JS mentions, sample-app building at only 13/87) are present but consistently secondary to content/community work in postings' own emphasis and ordering, supporting a low-moderate target."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 3,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Explicit travel requirements appear in 33 of 87 postings (38%) and event/hackathon/meetup responsibilities in 63 of 87 (72%), a real but not universal or maximal pattern \u2014 consistent with a moderate target that also allows for the brief's noted remote/video-only variants (e.g., this sample's Elastic 'Video Content Creator' posting)."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "'Security' appears in 17 of 87 postings but almost entirely describes the employer's product category (Chainguard, Okta, JFrog, Infisical are security/identity/supply-chain companies) rather than threat-modeling work performed by the DevRel hire; no posting assigns adversarial security analysis as a job duty."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No posting in the sample references hardware, physical resource, or embedded-systems constraints as part of the role."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Only 11 of 87 postings (13%) carry Manager/Lead titles and 2 more Director/Head, with explicit 'manage a team/direct reports' language in just 1 of 87 \u2014 the large majority of the corpus is individual-contributor-scoped, supporting a low-moderate (not high) target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Public speaking (49/87), video (40/87), and social-media presence (40/87) are all high-frequency, explicit expectations, strongly reinforcing this as a maximal, top-weighted dimension distinct from private/internal teaching."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "AI/ML terminology appears in 75 of 87 postings (86%), reflecting this sample's heavy skew toward AI-infrastructure employers currently hiring DevRel at volume. Most of this is product-context framing (the company's product is AI-related) rather than a requirement that the DevRel hire do ML engineering work themselves, so the low weight (0.1, 'not relevant to this archetype's scope') is probably still directionally right for the archetype's timeless definition \u2014 but the target of 1 may understate near-term job-market fit given how dominant AI-native companies are among current DevRel employers. Worth a note for reviewers rather than an automatic change, since a market snapshot shouldn't necessarily override an archetype's structural definition."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Mobile platform terms (iOS/Android/Swift/Kotlin) appear in only 2 of 87 postings, confirming minimal relevance."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Data-infrastructure-specific terms (data pipeline/warehouse/ETL/data engineering) appear in only 2 of 87 postings, confirming minimal relevance despite some postings being at data-infra companies (ClickHouse, Neo4j, Databricks) \u2014 those postings still frame the DevRel role around content/community, not building data infrastructure."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Cloud platform terms (AWS/GCP/Azure) appear in 26 of 87 postings, but consistently as ecosystem/product context (helping developers use the company's cloud product) rather than the DevRel hire personally architecting cloud infrastructure \u2014 consistent with a low target despite moderate mention frequency."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Anthropic",
+      "title": "Applied AI Technical Evangelist, Startup Ecosystem",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5116927008"
+    },
+    {
+      "company": "Modal",
+      "title": "Developer Relations Engineer",
+      "url": "https://jobs.ashbyhq.com/modal/546c9eb1-aaf7-47ba-8e9d-0bcd443b3e94"
+    },
+    {
+      "company": "n8n",
+      "title": "Senior Developer Advocate, US",
+      "url": "https://jobs.ashbyhq.com/n8n/2e152f2d-165f-4a25-89f1-7a9a7ab561e6"
+    },
+    {
+      "company": "CoreWeave",
+      "title": "Director, Developer Relations",
+      "url": "https://coreweave.com/careers/job?4656231006&board=coreweave&gh_jid=4656231006"
+    },
+    {
+      "company": "Nvidia",
+      "title": "Developer Relations Manager, Local AI Ecosystem",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Developer-Relations-Manager--Local-AI-Ecosystem_JR2021035"
+    },
+    {
+      "company": "Rockstar Games",
+      "title": "Senior Developer Advocate, Creator Platform",
+      "url": "https://job-boards.greenhouse.io/rockstargames/jobs/7724315003"
+    },
+    {
+      "company": "ClickHouse",
+      "title": "Developer/Community Advocate - AMER (Remote)",
+      "url": "https://job-boards.greenhouse.io/clickhouse/jobs/5818041004"
+    },
+    {
+      "company": "Figma",
+      "title": "Developer Advocate (Tokyo, Japan)",
+      "url": "https://boards.greenhouse.io/figma/jobs/5969647004?gh_jid=5969647004"
+    }
+  ]
+}

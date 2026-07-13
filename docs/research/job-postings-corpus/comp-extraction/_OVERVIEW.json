@@ -1,0 +1,110 @@
+{
+  "consulting-engineer-professional-services": {
+    "totalPostingsScanned": 202,
+    "totalPointsExtracted": 42,
+    "usdBaseCount": 32,
+    "usdBaseCompanyCount": 13
+  },
+  "customer-support-engineer": {
+    "totalPostingsScanned": 319,
+    "totalPointsExtracted": 55,
+    "usdBaseCount": 42,
+    "usdBaseCompanyCount": 32
+  },
+  "customer-support-solutions-engineer": {
+    "totalPostingsScanned": 197,
+    "totalPointsExtracted": 60,
+    "usdBaseCount": 39,
+    "usdBaseCompanyCount": 20
+  },
+  "data-engineer": {
+    "totalPostingsScanned": 525,
+    "totalPointsExtracted": 251,
+    "usdBaseCount": 218,
+    "usdBaseCompanyCount": 86
+  },
+  "developer-relations-advocacy": {
+    "totalPostingsScanned": 87,
+    "totalPointsExtracted": 26,
+    "usdBaseCount": 22,
+    "usdBaseCompanyCount": 14
+  },
+  "embedded-iot-engineer": {
+    "totalPostingsScanned": 148,
+    "totalPointsExtracted": 77,
+    "usdBaseCount": 72,
+    "usdBaseCompanyCount": 34
+  },
+  "engineering-management": {
+    "totalPostingsScanned": 803,
+    "totalPointsExtracted": 358,
+    "usdBaseCount": 286,
+    "usdBaseCompanyCount": 111
+  },
+  "forward-deployed-engineer": {
+    "totalPostingsScanned": 424,
+    "totalPointsExtracted": 98,
+    "usdBaseCount": 87,
+    "usdBaseCompanyCount": 27
+  },
+  "ml-engineer": {
+    "totalPostingsScanned": 752,
+    "totalPointsExtracted": 408,
+    "usdBaseCount": 336,
+    "usdBaseCompanyCount": 113
+  },
+  "mobile-engineer": {
+    "totalPostingsScanned": 212,
+    "totalPointsExtracted": 99,
+    "usdBaseCount": 82,
+    "usdBaseCompanyCount": 22
+  },
+  "platform-infrastructure-engineer": {
+    "totalPostingsScanned": 414,
+    "totalPointsExtracted": 156,
+    "usdBaseCount": 136,
+    "usdBaseCompanyCount": 76
+  },
+  "product-full-stack-software-engineer": {
+    "totalPostingsScanned": 6204,
+    "totalPointsExtracted": 2741,
+    "usdBaseCount": 2243,
+    "usdBaseCompanyCount": 251
+  },
+  "sales-engineer-pre-sales": {
+    "totalPostingsScanned": 372,
+    "totalPointsExtracted": 118,
+    "usdBaseCount": 50,
+    "usdBaseCompanyCount": 28
+  },
+  "security-engineer": {
+    "totalPostingsScanned": 586,
+    "totalPointsExtracted": 316,
+    "usdBaseCount": 268,
+    "usdBaseCompanyCount": 79
+  },
+  "solutions-architect-consulting": {
+    "totalPostingsScanned": 103,
+    "totalPointsExtracted": 48,
+    "usdBaseCount": 37,
+    "usdBaseCompanyCount": 10
+  },
+  "solutions-architect-vendor-side": {
+    "totalPostingsScanned": 57,
+    "totalPointsExtracted": 17,
+    "usdBaseCount": 14,
+    "usdBaseCompanyCount": 9
+  },
+  "sre-production-engineer": {
+    "totalPostingsScanned": 316,
+    "totalPointsExtracted": 102,
+    "usdBaseCount": 85,
+    "usdBaseCompanyCount": 43
+  },
+  "technical-product-manager": {
+    "totalPostingsScanned": 63,
+    "totalPointsExtracted": 25,
+    "usdBaseCount": 20,
+    "usdBaseCompanyCount": 14
+  }
+}

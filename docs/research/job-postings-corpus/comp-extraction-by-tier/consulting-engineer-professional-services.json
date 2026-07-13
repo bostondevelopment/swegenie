@@ -1,0 +1,439 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "grid": {
+    "ai-labs": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "faang-mag7": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "high-growth-public": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": {
+        "count": 16,
+        "companyCount": 5,
+        "low": 66261,
+        "high": 240000,
+        "median": 131642,
+        "companies": [
+          "Adyen",
+          "Axon",
+          "Cisco",
+          "GitLab",
+          "Samsara"
+        ],
+        "points": [
+          {
+            "low": 144000,
+            "high": 240000,
+            "raw_match": "$144,000-$240,000",
+            "context": "ording to EEO guidelines. This role is based out of our New York office. We are an office-first company and value in-person collaboration; we do not offer remote-only roles. The annual base salary range for this role is $144,000-$240,000; to learn more about our compensation philosophy, please click here . &nbsp;",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Adyen",
+            "title": "Implementation Engineer",
+            "location": "New York",
+            "url": "https://job-boards.greenhouse.io/adyen/jobs/7532705",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 144000,
+            "high": 220000,
+            "raw_match": "$144,000-$220,000",
+            "context": "g to EEO guidelines. This role is based out of our San Francisco office. We are an office-first company and value in-person collaboration; we do not offer remote-only roles. The annual base salary range for this role is $144,000-$220,000; to learn more about our compensation philosophy, please click here . &nbsp; San Francisco&nbsp; Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Adyen",
+            "title": "Implementation Engineer",
+            "location": "San Francisco",
+            "url": "https://job-boards.greenhouse.io/adyen/jobs/7714607",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 105000,
+            "high": 185000,
+            "raw_match": "$105,000-$185,000",
+            "context": "cording to EEO guidelines. This role is based out of our Toronto office. We are an office-first company and value in-person collaboration; we do not offer remote-only roles. The annual base salary range for this role is $105,000-$185,000; to learn more about our compensation philosophy, please click here . &nbsp;",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Adyen",
+            "title": "Implementation Engineer",
+            "location": "Toronto",
+            "url": "https://job-boards.greenhouse.io/adyen/jobs/7736384",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 123840,
+            "high": 209520,
+            "raw_match": "$123,840 &mdash; $209,520",
+            "context": "t include any bonuses, equity, or benefits. See more information on our benefits and equity . Sales roles are also eligible for incentive pay targeted at up to 100% of the offered base salary. United States Salary Range $123,840 &mdash; $209,520 USD How GitLab Supports Full-Time Employees Benefits to support your health, finances, and well-being Flexible Paid Time Off&nbsp; Team Member Resource Groups Equity Compensation &amp; Employee Stock Purchase Plan Growt",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "GitLab",
+            "title": "Professional Services Technical Architect ",
+            "location": "Remote, Canada; Remote, US",
+            "url": "https://job-boards.greenhouse.io/gitlab/jobs/8616847002",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 88979,
+            "high": 134590,
+            "raw_match": "$88,979 &mdash; $134,590",
+            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $88,979 &mdash; $134,590 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our compensation program deli",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Samsara",
+            "title": "Enterprise Implementation Consultant",
+            "location": "Remote - US",
+            "url": "https://www.samsara.com/company/careers/roles/7852948?gh_jid=7852948",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 88979,
+            "high": 88979,
+            "raw_match": "$88,979",
+            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $88,979.55 &mdash; $134,590.91 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our co",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Samsara",
+            "title": "Enterprise Implementation Consultant",
+            "location": "Remote - US",
+            "url": "https://www.samsara.com/company/careers/roles/7742566?gh_jid=7742566",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 88979,
+            "high": 88979,
+            "raw_match": "$88,979",
+            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $88,979.55 &mdash; $119,636.36 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our co",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Samsara",
+            "title": "Enterprise Implementation Consultant - Public Sector",
+            "location": "Remote - US",
+            "url": "https://www.samsara.com/company/careers/roles/7826401?gh_jid=7826401",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 101420,
+            "high": 101420,
+            "raw_match": "$101,420",
+            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $101,420.45 &mdash; $153,409.09 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our co",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Samsara",
+            "title": "Enterprise Select Implementation Consultant",
+            "location": "Remote - US",
+            "url": "https://www.samsara.com/company/careers/roles/8001262?gh_jid=8001262",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 66261,
+            "high": 66261,
+            "raw_match": "$66,261",
+            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $66,261.36 &mdash; $100,227.27 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our co",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Samsara",
+            "title": "Implementation Consultant",
+            "location": "Remote - US",
+            "url": "https://www.samsara.com/company/careers/roles/7866517?gh_jid=7866517",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 100406,
+            "high": 135000,
+            "raw_match": "$100,406 &mdash; $135,000",
+            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $100,406 &mdash; $135,000 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our compensation program deli",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Samsara",
+            "title": "Strategic Implementation Consultant",
+            "location": "Remote - US",
+            "url": "https://www.samsara.com/company/careers/roles/8039126?gh_jid=8039126",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 100406,
+            "high": 151875,
+            "raw_match": "$100,406 &mdash; $151,875",
+            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $100,406 &mdash; $151,875 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our compensation program deli",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Samsara",
+            "title": "Strategic Implementation Consultant - Public Sector",
+            "location": "Remote - US",
+            "url": "https://www.samsara.com/company/careers/roles/7950044?gh_jid=7950044",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 134300,
+            "high": 134300,
+            "raw_match": "$134,300",
+            "context": "ur solutions are everywhere, our impact is everywhere. We are Cisco, and our power starts with you. Message to applicants applying to work in the U.S. and/or Canada: The starting salary range posted for this position is $134,300.00 to $195,400.00 and reflects the projected salary range for new hires in this position in U.S. and/or Canada locations, not including incentive compensation*, equity, or benefits. Individual pay is determined by the c",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Cisco",
+            "title": "2019369 Customer Delivery Consulting Engineer - Security",
+            "location": "4 Locations",
+            "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/Herndon-Virginia-US/XMLNAME-2019369-Customer-Delivery-Consulting-Engineer---Security_2019369",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 101085,
+            "high": 161736,
+            "raw_match": "$101,085 &mdash; $161,736",
+            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $101,085 &mdash; $161,736 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Axon",
+            "title": "Certinia Implementation Consultant",
+            "location": "Seattle, Washington, United States",
+            "url": "https://job-boards.greenhouse.io/axon/jobs/7776676003",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 105480,
+            "high": 168768,
+            "raw_match": "$105,480 &mdash; $168,768",
+            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $105,480 &mdash; $168,768 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Axon",
+            "title": "Certinia Implementation Consultant",
+            "location": "Boston, Massachusetts, United States",
+            "url": "https://job-boards.greenhouse.io/axon/jobs/7776679003",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 101440,
+            "high": 162305,
+            "raw_match": "$101,440 &mdash; $162,305",
+            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $101,440 &mdash; $162,305 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Axon",
+            "title": "Implementation Engineer II, Fusus",
+            "location": "Seattle, Washington, United States",
+            "url": "https://job-boards.greenhouse.io/axon/jobs/6592819003",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 105840,
+            "high": 169344,
+            "raw_match": "$105,840 &mdash; $169,344",
+            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $105,840 &mdash; $169,344 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Axon",
+            "title": "Implementation Engineer II, Fusus ",
+            "location": "Boston, Massachusetts, United States",
+            "url": "https://job-boards.greenhouse.io/axon/jobs/6592810003",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
+      "Senior/Staff": {
+        "count": 3,
+        "companyCount": 3,
+        "low": 100000,
+        "high": 288660,
+        "median": 230000,
+        "companies": [
+          "Adyen",
+          "Broadcom",
+          "GitLab"
+        ],
+        "points": [
+          {
+            "low": 184000,
+            "high": 276000,
+            "raw_match": "$184,000-$276,000",
+            "context": "conviction records. This role is based out of our San Francisco office. We are an office-first company and value in-person collaboration; we do not offer remote-only roles. The annual base salary range for this role is $184,000-$276,000; to learn more about our compensation philosophy, please click here . &nbsp;",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Adyen",
+            "title": "Senior Implementation Engineer",
+            "location": "San Francisco",
+            "url": "https://job-boards.greenhouse.io/adyen/jobs/7848094",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 171360,
+            "high": 288660,
+            "raw_match": "$171,360 &mdash; $288,660",
+            "context": "t include any bonuses, equity, or benefits. See more information on our benefits and equity . Sales roles are also eligible for incentive pay targeted at up to 100% of the offered base salary. United States Salary Range $171,360 &mdash; $288,660 USD How GitLab Supports Full-Time Employees Benefits to support your health, finances, and well-being Flexible Paid Time Off&nbsp; Team Member Resource Groups Equity Compensation &amp; Employee Stock Purchase Plan Growt",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "GitLab",
+            "title": "Senior Manager, Professional Services Technical Architect",
+            "location": "Remote, Canada; Remote, US",
+            "url": "https://job-boards.greenhouse.io/gitlab/jobs/8597809002",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 100000,
+            "high": 160000,
+            "raw_match": "$100,000 - 160,000",
+            "context": "rience; at this level postgraduate coursework may be desirable or Masters degree and 6+ years of related experience Additional Job Description: Compensation and Benefits The annual base salary range for this position is $100,000 - 160,000 This position is also eligible for a discretionary annual bonus in accordance with relevant plan documents, and equity in accordance with equity plan documents and equity award agreements. Broadcom offers a competitive",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Broadcom",
+            "title": "Sr Mainframe Technical Consultant",
+            "location": "102 Locations",
+            "url": "https://broadcom.wd1.myworkdayjobs.com/External_Career/job/USA-TX-Plano-Legacy-Drive-Suite-700/Sr-Mainframe-Technical-Consultant_R026221",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "growth-stage-private": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": {
+        "count": 3,
+        "companyCount": 2,
+        "low": 63000,
+        "high": 181930,
+        "median": 144900,
+        "companies": [
+          "Brex",
+          "Hudl"
+        ],
+        "points": [
+          {
+            "low": 145544,
+            "high": 181930,
+            "raw_match": "$145,544 - $181,930",
+            "context": "domain expertise in any of the following areas: General Ledger, Accounts Payable, Accounts Receivable, Billing, Procurement, or Corporate Card Program Management. Compensation The expected salary range for this role is $145,544 - $181,930 USD.&nbsp; However, the starting base pay will depend on a number of factors including the candidate\u2019s location, skills, experience, market demands, and internal pay parity. Depending on the position offered, equity and",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Brex",
+            "title": "Enterprise Implementation Consultant",
+            "location": "New York, New York, United States",
+            "url": "https://www.brex.com/careers/8152938002?gh_jid=8152938002",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 128800,
+            "high": 161000,
+            "raw_match": "$128,800 - $161,000",
+            "context": "domain expertise in any of the following areas: General Ledger, Accounts Payable, Accounts Receivable, Billing, Procurement, or Corporate Card Program Management. Compensation The expected salary range for this role is $128,800 - $161,000 CAN.&nbsp; However, the starting base pay will depend on a number of factors including the candidate\u2019s location, skills, experience, market demands, and internal pay parity. Depending on the position offered, equity and",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Brex",
+            "title": "Enterprise Implementation Consultant",
+            "location": "Vancouver, British Columbia, Canada",
+            "url": "https://www.brex.com/careers/8153310002?gh_jid=8153310002",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 63000,
+            "high": 106000,
+            "raw_match": "$63,000 &mdash; $106,000",
+            "context": "ting salaries will typically fall near the middle of this range. We make compensation decisions based on an individual's experience, skills and education in line with our internal pay equity practices. Base Salary Range $63,000 &mdash; $106,000 USD Inclusion at Hudl&nbsp; Hudl is an equal opportunity employer. Through our actions, behaviors and attitude, we\u2019ll create an environment where everyone, no matter their differences, feels like they belong.&nbsp; We o",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Hudl",
+            "title": "Implementation Consultant (North America - Ice Hockey)",
+            "location": "Lincoln, NE, United States",
+            "url": "https://job-boards.greenhouse.io/hudl/jobs/7646241",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          }
+        ]
+      },
+      "Senior/Staff": {
+        "count": 3,
+        "companyCount": 2,
+        "low": 79300,
+        "high": 175000,
+        "median": 145600,
+        "companies": [
+          "Greenhouse",
+          "Pendo"
+        ],
+        "points": [
+          {
+            "low": 79300,
+            "high": 95000,
+            "raw_match": "$79,300 - $95,000",
+            "context": "rized to work in the United States on a full-time basis. If you are based in California, we encourage you to read this important information for California residents linked here . The national pay range for this role is $79,300 - $95,000. Individual compensation will be commensurate with the candidate's experience and qualifications. Certain roles may be eligible for additional compensation, including stock option awards, bonuses, and merit increases. A",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Greenhouse",
+            "title": "Senior Implementation Consultant",
+            "location": "Anywhere in the United States",
+            "url": "https://job-boards.greenhouse.io/greenhouse/jobs/8038270?gh_jid=8038270",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 145400,
+            "high": 175000,
+            "raw_match": "$145,400 - $175,000",
+            "context": ". Pendo Core Values: Bias to Act, Hone Your Craft, The Team is Pendo, and Maniacal Focus. Location: San Francisco, Raleigh or remote Compensation: The expected salary range for this role to be performed in San Francisco $145,400 - $175,000, Raleigh or Remote: $132,200 - $159,0000 Benefits: Highly competitive, employer-heavy coverage including $0 premium options, strong 401(k) match, equity, and flexible time off. EEOC: We are an equal opportunity employer",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Pendo",
+            "title": "Sr. Professional Services Engineer Consultant",
+            "location": "Raleigh, NC / San Francisco, CA / New York, NY / Remote",
+            "url": "https://job-boards.greenhouse.io/pendo/jobs/8556635002",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 132200,
+            "high": 159000,
+            "raw_match": "$132,200 - $159,000",
+            "context": "our Craft, The Team is Pendo, and Maniacal Focus. Location: San Francisco, Raleigh or remote Compensation: The expected salary range for this role to be performed in San Francisco $145,400 - $175,000, Raleigh or Remote: $132,200 - $159,0000 Benefits: Highly competitive, employer-heavy coverage including $0 premium options, strong 401(k) match, equity, and flexible time off. EEOC: We are an equal opportunity employer and believe having diverse teams where",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Pendo",
+            "title": "Sr. Professional Services Engineer Consultant",
+            "location": "Raleigh, NC / San Francisco, CA / New York, NY / Remote",
+            "url": "https://job-boards.greenhouse.io/pendo/jobs/8556635002",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          }
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "early-stage": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    }
+  },
+  "totalUsdBasePoints": 32,
+  "unclassifiedCompanyPoints": 7
+}

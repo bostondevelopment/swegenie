@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "early-stage",
+  "level": "L4",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Same scarcity as L3. The one loosely relevant figure found (Wellfound: embedded engineer in software startups, 7-10 YOE average ~$150K) sits close to the dataset's L4 base p50 of $144K, which is a mildly encouraging directional signal, but it is a blended aggregator average without company names, level definitions, or a way to verify methodology \u2014 not solid enough to move off low."
+}

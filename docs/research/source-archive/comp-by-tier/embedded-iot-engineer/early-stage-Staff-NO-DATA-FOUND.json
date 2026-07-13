@@ -1,0 +1,9 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "tier": "early-stage",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Same as L5 \u2014 no corpus, no verifiable named-company per-level data for Staff-equivalent embedded roles at true early-stage (seed/Series A-B) companies. Early-stage companies of this size rarely have a formal 'Staff' embedded engineering level at all, and public disclosure of Staff-level comp at this stage is essentially nonexistent. Keeping low is the correct, honest call."
+}

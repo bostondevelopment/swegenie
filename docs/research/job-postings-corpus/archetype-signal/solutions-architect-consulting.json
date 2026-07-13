@@ -1,0 +1,327 @@
+{
+  "archetype_id": "solutions-architect-consulting",
+  "postings_analyzed": 103,
+  "top_requirements": [
+    {
+      "requirement": "Cloud platform depth (AWS most common, then Azure, then GCP) named as a core qual",
+      "approx_frequency": "AWS in 61/103, Azure in 39/103, GCP in 20/103 postings"
+    },
+    {
+      "requirement": "Cloud/platform certifications listed as required or preferred (AWS Solutions Architect, Azure Architect, CISSP, platform-specific certs like Anaplan/Adobe)",
+      "approx_frequency": "certification(s) mentioned in 65/103, 'certified' in 25/103"
+    },
+    {
+      "requirement": "Client/stakeholder-facing communication and executive presence (workshops, steering committees, C-level conversations)",
+      "approx_frequency": "'stakeholder' in 74/103, 'client' in 67/103, 'communication skills' in 27/103, 'presentation' in 24/103"
+    },
+    {
+      "requirement": "DevOps/CI-CD and Infrastructure-as-Code fluency (Terraform named most often)",
+      "approx_frequency": "DevOps in 49/103, CI/CD in 40/103, Terraform in 33/103"
+    },
+    {
+      "requirement": "Prior professional-services / consulting delivery experience",
+      "approx_frequency": "'professional services' in 43/103 (concentrated in Caylent, Anaplan, Klaviyo, Contentful, New Relic, Chainguard, Snowflake)"
+    },
+    {
+      "requirement": "Hands-on coding/scripting (Python most common, then Java, SQL)",
+      "approx_frequency": "Python in 29/103, Java in 20/103, SQL in 18/103"
+    },
+    {
+      "requirement": "Pre-sales / proposal / SOW / level-of-effort estimation experience",
+      "approx_frequency": "'proposal' in 31/103, 'pre-sales' in 28/103, 'SOW' in 13/103"
+    },
+    {
+      "requirement": "Willingness to travel to client/site locations",
+      "approx_frequency": "'travel' appears in 49/103 (ranges from 15-25% at Chainguard/Caylent to on-site/hybrid requirements at GDIT)"
+    },
+    {
+      "requirement": "Bachelor's degree or equivalent experience, plus a stated years-of-experience floor (commonly 5-10+ years, sometimes 10+ for principal/SME titles)",
+      "approx_frequency": "'degree'/'bachelor' in ~25-36/103; explicit years-of-experience language in 28/103"
+    },
+    {
+      "requirement": "Active US government security clearance (Secret/TS, US citizenship required) \u2014 concentrated entirely in the federal-SI subset of the sample",
+      "approx_frequency": "'clearance' in 21/103, effectively all from GDIT's 19 postings"
+    },
+    {
+      "requirement": "Containers/Kubernetes and multi-cloud/cloud-native architecture experience",
+      "approx_frequency": "Kubernetes in 17/103, 'cloud native' in 33/103, 'multi-cloud' in 14/103"
+    }
+  ],
+  "top_responsibilities": [
+    "Lead discovery and scoping workshops with customer/client stakeholders, translating business requirements into a technical solution design, level-of-effort estimate, and Statement of Work or proposal \u2014 this pre-sales-to-SOW handoff pattern recurs across SaaS professional-services orgs (Klaviyo, Caylent, Anaplan, Chainguard, Contentful) and consulting-style SI postings alike.",
+    "Own end-to-end delivery of an implementation engagement as the senior technical owner \u2014 driving the project to on-time/on-budget completion, coordinating with engagement/project managers, and remaining accountable through go-live (Effectual, Trace3, Anaplan, New Relic, Klaviyo).",
+    "Act as trusted technical advisor and executive-level interface \u2014 presenting architecture and strategy directly to CTOs/CIOs/VP-level stakeholders and steering committees, distinct from a purely internal engineering role (Anaplan, Thoughtworks, Effectual, Trace3).",
+    "Produce and document cloud/data/integration architecture artifacts: reference architectures, landing zones, blueprints, sequence/integration diagrams, and Infrastructure-as-Code standards (Effectual, Robots & Pencils, GDIT, DEPT, Solita, VML).",
+    "Support the pre-sales motion specifically \u2014 qualifying opportunities, scoping with prospects, authoring commercial proposals, and partnering with (not reporting to) Account Executives; several postings explicitly separate this pre-sales SA function from the delivery-side architect function within the same company (clearest example: Caylent runs distinct 'Customer Solutions Architect' [pre-sales] vs. 'Cloud/Cloud Software Architect' [delivery/build] job families).",
+    "Mentor and enable internal delivery engineers, client-side engineering teams, and (for partner-facing roles) reseller/SI partner teams \u2014 architecture reviews, technical playbooks, and knowledge-transfer sessions (Effectual, Chainguard, Robots & Pencils).",
+    "Configure/build within a specific enterprise platform's own modeling or design environment (Anaplan multi-dimensional models, Adobe AEP/AEM, Salesforce Commerce Cloud, SAP), translating business logic directly into platform-specific build artifacts rather than general-purpose software engineering (Anaplan, VML, DEPT, Reply).",
+    "(Federal-SI subset only, ~19 of 103 postings, all GDIT) Hands-on cloud migration/modernization engineering for a single government program under FedRAMP/DISA-STIG/NIST compliance \u2014 architecting and often personally implementing GovCloud environments, IaC, and security controls, with no pre-sales, RFP, or multi-client portfolio language present."
+  ],
+  "comp_signals": [
+    {
+      "company": "Chainguard",
+      "range_text": "Senior Partner Solutions Architect (East, Professional Services): \"up to $195,000 base salary + bonus + equity\"",
+      "source_url": "https://job-boards.greenhouse.io/chainguard/jobs/4692306006"
+    },
+    {
+      "company": "GDIT",
+      "range_text": "ICAM Solutions Architect SME: likely salary range $255,000 - $345,000",
+      "source_url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/ICAM-Solutions-Architect-SME_RQ223492-1"
+    },
+    {
+      "company": "GDIT",
+      "range_text": "Cloud Architect / Developer SME: likely salary range $187,179 - $230,000",
+      "source_url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/USA-DC-Washington/Cloud-Architect---Developer-SME_RQ219483-1"
+    },
+    {
+      "company": "Caylent",
+      "range_text": "Principal AI/ML Architect (USA): base salary range $165,000 - $205,000",
+      "source_url": "https://job-boards.greenhouse.io/caylent/jobs/5852301004"
+    },
+    {
+      "company": "Caylent",
+      "range_text": "Senior Customer Solution Architect (USA): base salary range $195,000 - $216,000",
+      "source_url": "https://job-boards.greenhouse.io/caylent/jobs/5979154004"
+    },
+    {
+      "company": "Trace3",
+      "range_text": "Sr. Solutions Architect | Security (Northern California): estimated pay range $180,000 - $215,000 (base only, explicitly excludes bonus/commission)",
+      "source_url": "https://job-boards.greenhouse.io/trace3/jobs/7826160"
+    },
+    {
+      "company": "Effectual",
+      "range_text": "Senior Cloud Architect: salary range $160,000 - $200,000",
+      "source_url": "https://job-boards.greenhouse.io/effectual/jobs/7767689003"
+    },
+    {
+      "company": "Valtech",
+      "range_text": "Liferay Technical Architect: offered salary range $120,000 - $180,000",
+      "source_url": "https://job-boards.eu.greenhouse.io/valtech/jobs/4901482101"
+    },
+    {
+      "company": "VML (Wunderman Thompson)",
+      "range_text": "AEP Architect: $100,000 - $230,000 USD",
+      "source_url": "https://www.vml.com/careers/job/8528512002?gh_jid=8528512002"
+    },
+    {
+      "company": "Reply",
+      "range_text": "SAP Cloud Architect: base compensation range $100,000 - $180,000",
+      "source_url": "https://jobs.lever.co/reply/33d255e6-0d03-4fc1-9c72-4a58d2d3c21b"
+    },
+    {
+      "company": "Contentful",
+      "range_text": "Associate Solution Architect, Professional Services (NY): OTE (includes base+commission) $102,000 - $138,000 \u2014 notable because this is explicitly commission-based OTE, not a flat base+modest-bonus structure",
+      "source_url": "https://job-boards.greenhouse.io/contentful/jobs/7943185"
+    },
+    {
+      "company": "Anaplan",
+      "range_text": "Principal Solution Architect, Professional Services - Finance (NYC): base salary range $171,000 - $232,000",
+      "source_url": "https://job-boards.greenhouse.io/anaplan/jobs/8481022002"
+    },
+    {
+      "company": "Anaplan",
+      "range_text": "Senior Solution Architect, Professional Services - Workforce Planning (Miami): base salary range $147,000 - $198,000",
+      "source_url": "https://job-boards.greenhouse.io/anaplan/jobs/8499190002"
+    }
+  ],
+  "seniority_distribution_notes": "Sample skews senior-to-principal: 23 titles contain \"Senior\"/\"Sr.\", 20 contain \"Principal\", only 2 contain \"Associate,\" and none contain \"Manager\" or \"Lead\" as the primary title word (management-track titles largely absent from this corpus). No junior/entry-level \"Solutions Architect\" titles appear at all \u2014 consistent with the brief's framing of SA as a mid-to-senior lateral/promotion destination rather than an entry point. However, the sample is heavily concentrated in three companies (Caylent 33, GDIT 19, Anaplan 10 \u2014 61 of 103 rows, ~59%), so this seniority skew partly reflects those three employers' hiring patterns rather than a fully independent cross-market read.",
+  "notable_divergence_from_existing_brief": "Two notable divergences. (1) The brief frames this archetype almost entirely around large SI/consultancies (Accenture, Deloitte, Slalom, Capgemini) with utilization-linked, non-commission bonus comp. This fresh sample skews toward a different population: SaaS-vendor Professional Services orgs (Anaplan, Klaviyo, Contentful, New Relic, Snowflake, Chainguard) and AWS-reseller/SI shops (Caylent), none of which are in the brief's named-company list, plus a large federal-SI block (GDIT, 19/103 postings) that the brief never discusses. GDIT postings read materially differently from the brief's \"portfolio of concurrent client engagements, RFP/pre-sales, utilization metric\" picture: no RFP, pre-sales, proposal, SOW, or utilization language appears in any GDIT posting; instead they describe hands-on cloud migration/engineering embedded on one government program under FedRAMP/clearance requirements, which is closer to a Consulting Engineer / hands-on delivery archetype than to the brief's design-and-handoff SA. This is worth flagging: the \"Solutions Architect\" title on public ATS boards pulls in a federal-contractor engineering population the brief's sourcing (built from Accenture/Deloitte-style postings) didn't capture. (2) The Contentful posting's OTE explicitly includes commission (\"OTE (includes base+commission): $102,000-$138,000\"), directly contradicting the brief's central claim (Section 3, repeated in the taxonomy's variable_comp_appetite rationale) that consulting-SA bonus is utilization/margin-linked and structurally distinct from sales commission. This is a single data point, but it is a direct company-stated commission structure, stronger evidence than the brief's own inferred utilization-bonus link \u2014 worth a closer look before treating \"not commission-driven\" as settled for this archetype. On the positive side, most other comp figures found (Chainguard, Trace3, Effectual, GDIT, Caylent, Anaplan) show base+modest-bonus with no commission language, so the brief's claim holds for the majority but not universally.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings consistently show discovery/scoping work that converges on a defined SOW or proposal deliverable (Klaviyo, Caylent, Anaplan), matching a mid-level ambiguity target rather than fully open-ended research."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Multiple concurrent engagements/workshops language appears (Anaplan, Effectual 'across programs', Trace3 'regional' scope) though no posting quantifies concurrent-engagement count directly, so this remains inferred rather than directly stated."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No paging/on-call/incident-SLA language found in the sample except one brief GDIT-adjacent mention of 'incident response' training/workshops at Effectual, which is enablement not a personal on-call duty \u2014 supports the low target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Sample shows architecture review and troubleshooting language (Effectual: 'Troubleshoot complex infrastructure challenges') but not live production on-call debugging under an SLA clock for most postings \u2014 GDIT subset is the exception (see divergence note) and may deserve a higher figure if federal-SI is folded into this archetype."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Strongly supported: blueprints, landing zones, multi-account/multi-cloud designs, reference architectures appear across Effectual, Robots & Pencils, GDIT, DEPT."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Well supported by raw frequency: AWS/Azure/GCP/Kubernetes/Terraform/multiple platform certs all appear widely, and several postings (Robots & Pencils, Effectual) explicitly span cloud+data+AI/ML in one role \u2014 consistent with a high breadth target."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 2,
+      "current_weight": 0.6,
+      "supports_current_scoring": false,
+      "note": "Mixed signal: several postings (Effectual, Klaviyo, Anaplan, New Relic) explicitly hold the SA accountable for delivery being 'on time, on budget, and in line with agreed outcomes' or 'measured by ... long-term strategic adoption' \u2014 stronger production/outcome ownership language than the brief's 'design that gets handed off' framing implies. Worth reviewing whether 2 is too low for the vendor-PS-heavy subset of this sample, even though it likely still fits the pure pre-sales SA sub-role (e.g., Caylent's Customer Solutions Architect, which explicitly says 'This is not a delivery role')."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Extremely well supported \u2014 'stakeholder' appears in 74/103 and 'client' in 67/103 postings; executive-level interface language (CTO/CIO) recurs across Anaplan, Thoughtworks, Effectual."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Mentorship/enablement language present but scoped to one client's team or internal engineers/partners (Effectual, Chainguard, Robots & Pencils), not public teaching \u2014 consistent with a modest target."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 5,
+      "current_weight": 0.8,
+      "supports_current_scoring": false,
+      "note": "Sample doesn't strongly confirm a 'wide portfolio' pattern for the SaaS-vendor-PS subset \u2014 several postings (Klaviyo, Anaplan Principal SA) instead describe owning a small number of large strategic-account engagements end-to-end ('own strategic customer engagements end-to-end'), which reads closer to deep/narrow account focus than a wide utilization-driven portfolio. The federal-SI subset (GDIT) is the opposite extreme \u2014 typically one program, one client, long-term embed. Recommend re-checking whether 5 (very wide breadth) still fits once this more vendor-PS-heavy sample is weighed against the original Accenture/Deloitte-anchored evidence."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.5,
+      "supports_current_scoring": false,
+      "note": "Some postings support low continuity (SOW-bounded engagements, Caylent's pre-sales-to-implementation handoff), but others explicitly emphasize long-term adoption and multi-year relationship ownership (Klaviyo: 'long-term adoption'; New Relic: 'long-term strategic adoption of the platform') \u2014 this sample shows more relationship-continuity language than the current low target implies, at least for the vendor-PS subset."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 2,
+      "current_weight": 0.9,
+      "supports_current_scoring": false,
+      "note": "Mostly supported (Chainguard, Trace3, Effectual, GDIT, Caylent, Anaplan all show base+modest-bonus, no-commission structures matching the brief), BUT the Contentful posting explicitly states an OTE including commission ($102K-$138K OTE, base+commission) \u2014 a direct company-stated exception. Given this is a high-weight (0.9) dimension, this single counter-example is worth flagging for review even though it doesn't overturn the majority pattern."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 2,
+      "current_weight": 0.6,
+      "supports_current_scoring": false,
+      "note": "Bimodal: pre-sales-flavored postings (Caylent Customer Solutions Architect, Klaviyo, Anaplan PS) match the low-coding target well, but several delivery-side postings in this sample (Effectual: 'Develop Infrastructure-as-Code using Terraform... Create Python automation scripts'; Robots & Pencils: hands-on multi-domain build; Caylent Cloud Software Architect: 'delegate tickets to a team of engineers') describe meaningfully more hands-on build work than 'codes mainly to prototype.' Recommend the reviewer check whether this archetype should be split or the target nudged up for the delivery-heavy sub-population this new sample surfaced."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Firm-dependent pattern confirmed: Chainguard/Caylent state 15-25% travel, while GDIT roles are largely on-site/hybrid at a single government facility \u2014 consistent with a mid-target, firm-dependent framing."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "GDIT subset (19/103 postings) shows meaningfully more security-control language than the brief anticipated \u2014 NIST-aligned controls, DISA STIGs/CIS benchmarks, FedRAMP compliance, RBAC/least-privilege design are named responsibilities, not incidental mentions. If federal-SI postings are considered in-scope for this archetype, 1 may be too low for that subset specifically, though it likely still fits the non-federal majority."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No hardware/power/timing constraint language found anywhere in the 103-posting sample \u2014 supports the low target."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Sample shows mentorship of engineers/partners as a responsibility (Effectual, Chainguard) but no formal people-management/headcount-owner titles in the corpus (0 'Manager'/'Lead' primary titles) \u2014 consistent with a low-to-modest target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No conference-speaking, blog, or public-content requirements found in the sample; all client-facing work described is account-specific and private \u2014 supports the low target."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "This sample shows more AI/ML-specific SA roles than a target of 1 implies \u2014 Snowflake's posting is titled 'Senior Solutions Architect - AI/ML', Caylent runs a distinct 'Principal AI/ML Architect' and 'Machine Learning Architect' job family (10 postings combined), and Robots & Pencils explicitly requires MLOps/LLM/feature-store experience. This looks like a real, non-trivial sub-population within the archetype that the current target treats as irrelevant; worth a closer look, though it may reflect 2026 market drift (AI-infra hiring surge) rather than the archetype's timeless core."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No mobile-platform requirements found anywhere in the sample \u2014 supports the low target."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "Data architecture (warehouses, pipelines, Snowflake/Redshift/BigQuery) is a named, recurring responsibility across several postings (Robots & Pencils, Solita's dedicated 'Data Architect' openings, VML's Snowflake & AI role, Snowflake's own SA posting) \u2014 a target of 1 (not relevant) seems understated given how often data-platform work appears as core scope, not incidental, in this sample."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "Given that AWS/Azure/GCP appear in the majority of postings and several roles (Effectual, GDIT, Caylent's Cloud Architect family) describe hands-on building of landing zones, IaC, and multi-account architectures \u2014 not just advisory-level breadth \u2014 a target of 2 (low weight, design-only) looks understated for a meaningful chunk of this sample, though it may still fit the pure pre-sales/advisory sub-role well."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Snowflake",
+      "title": "Senior Solutions Architect - AI/ML - Services Delivery",
+      "url": "https://jobs.ashbyhq.com/snowflake/db36ee47-9e2a-4016-a02c-ef4747696518"
+    },
+    {
+      "company": "Anaplan",
+      "title": "Principal Solution Architect, Professional Services - Finance",
+      "url": "https://job-boards.greenhouse.io/anaplan/jobs/8481022002"
+    },
+    {
+      "company": "Thoughtworks",
+      "title": "Principal AI Architect",
+      "url": "https://www.thoughtworks.com/careers/jobs/7687014?gh_jid=7687014"
+    },
+    {
+      "company": "Caylent",
+      "title": "Senior Customer Solution Architect",
+      "url": "https://job-boards.greenhouse.io/caylent/jobs/5979154004"
+    },
+    {
+      "company": "GDIT (General Dynamics Information Technology)",
+      "title": "Enterprise Architect - Digital Engineering",
+      "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/USA-NE-Offutt-AFB/Enterprise-Architect---Digital-Engineering_RQ218779"
+    },
+    {
+      "company": "Klaviyo",
+      "title": "Senior Solution Architect - Professional Services",
+      "url": "https://www.klaviyo.com/careers/jobs/7636622003?gh_jid=7636622003"
+    },
+    {
+      "company": "Effectual",
+      "title": "Senior Cloud Architect",
+      "url": "https://job-boards.greenhouse.io/effectual/jobs/7767689003"
+    },
+    {
+      "company": "Solita",
+      "title": "AI Architect",
+      "url": "https://www.solita.fi/positions/?gh_jid=7785572003"
+    }
+  ]
+}

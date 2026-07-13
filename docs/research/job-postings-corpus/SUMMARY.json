@@ -1,0 +1,52 @@
+{
+  "generated": "2026-07-11",
+  "total_companies": 744,
+  "total_raw_postings": 67956,
+  "classification_method": "Keyword/regex rubric (taxonomy/title-classification-rubric.json) applied programmatically, plus verified company-context overrides for known consultancy/SI firms and OpenAI-specific FDE naming. See docs/research/job-postings-corpus/ for full methodology.",
+  "per_archetype_counts": {
+    "UNCLASSIFIED": 48876,
+    "EXCLUDED": 6819,
+    "product-full-stack-software-engineer": 6208,
+    "engineering-management": 804,
+    "ml-engineer": 755,
+    "security-engineer": 586,
+    "data-engineer": 525,
+    "AMBIGUOUS": 465,
+    "forward-deployed-engineer": 424,
+    "platform-infrastructure-engineer": 416,
+    "sales-engineer-pre-sales": 372,
+    "customer-support-engineer": 319,
+    "sre-production-engineer": 316,
+    "mobile-engineer": 213,
+    "consulting-engineer-professional-services": 202,
+    "customer-support-solutions-engineer": 197,
+    "embedded-iot-engineer": 148,
+    "solutions-architect-consulting": 103,
+    "developer-relations-advocacy": 87,
+    "technical-product-manager": 63,
+    "solutions-architect-vendor-side": 57,
+    "MISSING_TITLE": 1
+  },
+  "archetypes_meeting_200_floor": [
+    "consulting-engineer-professional-services",
+    "customer-support-engineer",
+    "data-engineer",
+    "engineering-management",
+    "forward-deployed-engineer",
+    "ml-engineer",
+    "mobile-engineer",
+    "platform-infrastructure-engineer",
+    "product-full-stack-software-engineer",
+    "sales-engineer-pre-sales",
+    "security-engineer",
+    "sre-production-engineer"
+  ],
+  "archetypes_below_200_floor": [
+    "customer-support-solutions-engineer",
+    "developer-relations-advocacy",
+    "embedded-iot-engineer",
+    "solutions-architect-consulting",
+    "solutions-architect-vendor-side",
+    "technical-product-manager"
+  ]
+}

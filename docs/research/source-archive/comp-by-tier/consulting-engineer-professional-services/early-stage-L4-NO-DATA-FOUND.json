@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "early-stage",
+  "level": "L4",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Same situation as L3: no corpus points, only generic aggregate market data available, no real early-stage-company per-level anchor found despite search attempts (direct job-posting fetches for named early-stage/Series A-B companies returned 403 Forbidden). File's L4 base p50 ($144K) is in the same ballpark as the generic $135K-$170K band but this doesn't constitute real tier-specific grounding. Keeping low."
+}

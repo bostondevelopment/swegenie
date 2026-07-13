@@ -1,0 +1,9 @@
+{
+  "archetypeId": "developer-relations-advocacy",
+  "tier": "high-growth-public",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus 'Entry/Associate' bucket is null for high-growth-public. Current medium rating is not directly supported by this round's corpus extraction; leaving as-is since no new evidence surfaced to raise or lower it, and the adjacent Mid-level corpus data (Twilio) is directionally consistent with a lower L3 band."
+}

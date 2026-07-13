@@ -1,0 +1,376 @@
+{
+  "archetype_id": "mobile-engineer",
+  "postings_analyzed": 212,
+  "top_requirements": [
+    {
+      "requirement": "Cross-functional collaboration with Product/Design (and often Data Science/QA)",
+      "approx_frequency": "141 of 212 postings explicitly named working with product managers/designers"
+    },
+    {
+      "requirement": "X+ years of professional mobile experience (most commonly 3-5 for 'senior', 5-8 for staff)",
+      "approx_frequency": "131 of 212 postings stated an explicit years-of-experience bar"
+    },
+    {
+      "requirement": "REST/GraphQL API integration with backend services",
+      "approx_frequency": "123 of 212 postings"
+    },
+    {
+      "requirement": "Kotlin (Android roles)",
+      "approx_frequency": "121 of 212 postings (roughly matches the ~half of the corpus that is Android-flavored)"
+    },
+    {
+      "requirement": "Swift (iOS roles)",
+      "approx_frequency": "108 of 212 postings"
+    },
+    {
+      "requirement": "Mentoring / raising the technical bar for other engineers",
+      "approx_frequency": "105 of 212 postings, concentrated at Senior/Staff titles -- framed as an incidental senior-level duty, not a primary people-management mandate"
+    },
+    {
+      "requirement": "CI/CD pipeline familiarity (build, test, and release automation)",
+      "approx_frequency": "87 of 212 postings"
+    },
+    {
+      "requirement": "Comfort with or active use of AI coding tools day-to-day (Copilot/Cursor/'AI-assisted', explicitly as an engineering workflow expectation, not a product feature)",
+      "approx_frequency": "31 of 212 postings named this specifically; a much larger 146 of 212 mention 'AI' somewhere in the text but most of that is AI as a product feature (the app itself does something AI-related), not a coding-tool requirement"
+    },
+    {
+      "requirement": "App Store / Play Store release process fluency (submission, staged rollout, review process)",
+      "approx_frequency": "71 of 212 postings"
+    },
+    {
+      "requirement": "Architecture pattern fluency: MVVM / MVP / VIPER / Clean Architecture",
+      "approx_frequency": "66 of 212 postings"
+    },
+    {
+      "requirement": "Jetpack Compose (Android) / SwiftUI (iOS) as the modern UI toolkit, often alongside legacy UIKit/Views expectation",
+      "approx_frequency": "58 of 212 (Compose) and 57 of 212 (SwiftUI), each roughly half of their respective platform's postings, signaling the modern-toolkit transition is well underway but not fully complete -- many postings still ask for UIKit (34) or Java (61) fluency too"
+    },
+    {
+      "requirement": "React Native (cross-platform)",
+      "approx_frequency": "52 of 212 postings, concentrated in growth-stage/consumer companies rather than fintech/big tech"
+    },
+    {
+      "requirement": "Unit/UI testing discipline (XCTest, Espresso, or general 'unit test' language)",
+      "approx_frequency": "44 of 212 postings"
+    },
+    {
+      "requirement": "Security-conscious development (secure API/auth/data handling, not adversarial red-teaming)",
+      "approx_frequency": "39 of 212 postings"
+    },
+    {
+      "requirement": "Analytics / A-B testing instrumentation fluency",
+      "approx_frequency": "34 of 212 postings"
+    },
+    {
+      "requirement": "Bachelor's degree named as a general qualification",
+      "approx_frequency": "27 of 212 postings; a strict 'degree required' framing (vs. 'or equivalent experience') appeared in only 2 of 212, confirming degree requirements are usually soft"
+    },
+    {
+      "requirement": "Accessibility (a11y) awareness",
+      "approx_frequency": "24 of 212 postings (broader phrase-matching including generic 'accessible' language put this as high as 65 of 212)"
+    }
+  ],
+  "top_responsibilities": [
+    "Translate design specs/product requirements into shipped, production-quality screens and features on the native platform (Swift/SwiftUI or Kotlin/Compose) or a shared cross-platform codebase (React Native), owning the work end-to-end from implementation through release.",
+    "Partner closely and continuously with Product Managers, Designers, and (at larger companies) Data Science/QA as a standing cross-functional squad -- feasibility conversations and UX tradeoffs are a routine, not occasional, part of the week.",
+    "Own performance and resource-budget work specific to constrained devices -- app startup/cold-start time, memory footprint, battery drain, frame-rate/jank -- described across a very wide swath of postings (roughly 150 of 212 once phrased broadly) as an explicit, monitored engineering concern rather than a one-off.",
+    "Participate in code review and, at Senior/Staff level, mentor less-experienced engineers and help set team-wide coding/architecture standards -- this is the single most common 'beyond your own tickets' duty in the corpus.",
+    "Manage the platform-specific release lifecycle: App Store/Play Store submission and review, staged/phased rollouts, crash-reporting triage (fewer explicit named tools than expected -- Crashlytics/Sentry named in only 10 of 212 -- but 'crash-free' and release-quality metrics referenced far more often), and rollback/kill-switch planning since a shipped binary can't be hot-patched like a server.",
+    "At Staff+, drive cross-team technical direction: architecture/design reviews 'across team boundaries,' modularization, build-tooling and developer-productivity investment, and setting standards consumed by multiple pods rather than owning a single feature (seen explicitly at Block/Cash App, Airwallex, Airbnb, and OpenSea staff-level postings).",
+    "Instrument and act on production/business metrics tied to the shipped app -- crash-free sessions, retention, conversion/engagement, KPIs/OKRs -- appearing in a substantial minority (92 of 212) of postings, more common at consumer/growth-stage and fintech companies than at big-tech platform-team roles.",
+    "A smaller but real subset of postings (roughly 15%) frame the mobile engineer as expected to actively use AI coding tools (Copilot/Cursor/'AI-assisted' workflows) as part of the daily engineering loop, not just tolerate them -- this is a 2025-2026-era addition that older mobile-engineer job description templates would not reflect."
+  ],
+  "comp_signals": [
+    {
+      "company": "Chime",
+      "range_text": "$133,000 to $184,000 (Mobile Software Engineer, Lending)",
+      "source_url": "https://boards.greenhouse.io/chime/jobs/8535338002?gh_jid=8535338002"
+    },
+    {
+      "company": "Betterment",
+      "range_text": "$170,000 - $195,000 (Sr. Mobile Engineer)",
+      "source_url": "https://www.betterment.com/careers/current-openings/job?gh_jid=8010438&gh_jid=8010438"
+    },
+    {
+      "company": "EarnIn",
+      "range_text": "$228,000 - $279,000 (Senior Mobile Engineer, Android)",
+      "source_url": "https://job-boards.greenhouse.io/earnin/jobs/7993536"
+    },
+    {
+      "company": "EarnIn",
+      "range_text": "$199,800 - $244,200 (Senior Mobile Engineer, Android, second posting)",
+      "source_url": "https://job-boards.greenhouse.io/earnin/jobs/8038993"
+    },
+    {
+      "company": "EarnIn",
+      "range_text": "$199,000 - $244,000 (Senior Mobile Engineer, iOS)",
+      "source_url": "https://job-boards.greenhouse.io/earnin/jobs/7927859"
+    },
+    {
+      "company": "Fireblocks",
+      "range_text": "$177,000 to $230,000 (Mobile Engineer)",
+      "source_url": "https://www.fireblocks.com/careers/4626035006?gh_jid=4626035006"
+    },
+    {
+      "company": "Wealthfront",
+      "range_text": "$150,000 - $189,000 (Android Engineer / iOS Engineer); $189,000 - $228,000 (Senior iOS Engineer)",
+      "source_url": "https://jobs.lever.co/wealthfront/78d6f6d5-1f08-4d5d-87be-c4250567bfb5"
+    },
+    {
+      "company": "Oura",
+      "range_text": "Tiered by region: $142,000-$178,000 / $130,000-$163,000 / $120,000-$150,000 (iOS Engineer); $162,000-$203,000 range for Senior iOS Engineer",
+      "source_url": "https://job-boards.greenhouse.io/oura/jobs/4024449009"
+    },
+    {
+      "company": "WHOOP",
+      "range_text": "$105,000-$145,000 (Android Engineer) up to $170,000-$230,000 (Staff iOS Engineer, Connectivity) across multiple postings",
+      "source_url": "https://jobs.lever.co/whoop/c1ee90e7-697b-49c2-b805-fa2c1ee20e4f"
+    },
+    {
+      "company": "Grove Collaborative",
+      "range_text": "$175,000-$225,000 (AI-First Android/iOS Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/grovecollaborative/jobs/5237662008"
+    },
+    {
+      "company": "Twitch",
+      "range_text": "Region-banded: e.g. $168,100-$227,400 (San Francisco), up to $261,500 (New York) for Senior iOS Engineer",
+      "source_url": "https://job-boards.greenhouse.io/twitch/jobs/8592666002"
+    },
+    {
+      "company": "Applied Intuition",
+      "range_text": "$125,000 - $265,000 (Senior Android Software Engineer, Platform); $147,000 - $265,000 (Android Software Engineer, Applications)",
+      "source_url": "https://jobs.ashbyhq.com/applied/72925d40-f970-4c3e-8317-9daf6fc6be21"
+    },
+    {
+      "company": "OpenSea",
+      "range_text": "$180,000 to $270,000 (Staff iOS/Android Engineer)",
+      "source_url": "https://jobs.ashbyhq.com/opensea/66daad8a-656f-4349-bd7e-c50e80bd7fe0"
+    },
+    {
+      "company": "Life360",
+      "range_text": "$190,000 to $280,000, with a $220,000-$260,000 sub-band called out (Staff iOS Engineer, AI Native, Family AI Lab)",
+      "source_url": "https://job-boards.greenhouse.io/life360/jobs/8544284002"
+    },
+    {
+      "company": "VSCO",
+      "range_text": "$230,000 - $260,000 (Staff iOS Engineer, React Native)",
+      "source_url": "https://job-boards.greenhouse.io/vsco39/jobs/8483933002"
+    },
+    {
+      "company": "SoundCloud",
+      "range_text": "$140,000 - $165,000 (Android/iOS Engineer, Fan Monetization)",
+      "source_url": "https://job-boards.greenhouse.io/soundcloud71/jobs/8624945002"
+    },
+    {
+      "company": "Ro",
+      "range_text": "$182,300 to $220,000 (Senior iOS Engineer)",
+      "source_url": "https://jobs.lever.co/ro/c2c7705e-7910-4198-94a6-8b9b4fd57d58"
+    },
+    {
+      "company": "Via",
+      "range_text": "$160,000 - $200,000 (Senior Android Engineer / Senior iOS Engineer)",
+      "source_url": "https://job-boards.greenhouse.io/via/jobs/8585305002"
+    }
+  ],
+  "seniority_distribution_notes": "Skews senior: of 212 titles, 82 explicitly say \"Senior,\" 28 say \"Staff,\" 11 say \"Lead,\" and 3 say \"Principal\" -- roughly 60% of the corpus is Senior-or-above by title alone. Only 2 titles read as entry-level (\"Engineer I\" / roman numeral I), and 16 are the \"II\" mid-level band (mostly at WHOOP, which titles consistently by band). 70 titles carry no seniority qualifier at all (bare \"Mobile Engineer,\" \"Android Engineer,\" \"iOS Engineer\") -- reading their body text, most of these still specify multi-year experience bars (3-6 years) in the requirements section, so true green-field/junior openings are rare in this sample. This matches the existing brief's implicit assumption of a senior-leaning market but is worth flagging explicitly: the live market is not evenly distributed across the ladder, and a mobile-engineer archetype match for a junior-profile user should expect a thinner set of open reqs than a senior-profile user.",
+  "notable_divergence_from_existing_brief": "Mostly confirms the brief, with two refinements worth flagging. (1) The brief's \"18 postings\" era text undersells how senior-skewed and mentoring-heavy the market is: mentoring/bar-raising language appears in half the corpus (105/212) concentrated at Senior+, which is stronger and more explicit evidence for the brief's people_management_orientation-adjacent framing than the original small sample showed. (2) AI-tooling-as-expected-workflow is real but should not be overstated: only ~31/212 postings (about 15%) explicitly expect daily AI-coding-tool usage as a job requirement, even though \"AI\" as a keyword appears in 146/212 -- the large majority of those AI mentions are about building AI-powered app features (the product), not about the engineer's own workflow. The brief's Life360/Speechify-anchored narrative about \"AI-native\" mobile work is a real and growing pattern but is a minority signal, not yet the market center of gravity, and results copy should avoid implying it's now-typical. Everything else -- comp structure (base+equity+bonus, no distinct variable component), cross-functional Product/Design collaboration as the dominant non-coding activity, App Store/Play Store release-cycle friction, and performance-budget work as a named engineering concern -- is strongly corroborated by this larger sample.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "113 of 212 postings use ambiguity/ownership language ('fast-paced,' 'move fast,' 'autonomy,' 'limited guidance'), but this is nearly always paired with a design spec or product brief as the starting point rather than fully undefined problem space -- consistent with a mid target rather than a high one."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "No posting frames the role as inbound-queue/ticket-driven; work is described as sustained feature-building punctuated by scheduled code review and release cycles, not ad hoc interruptions. Low target holds."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Only 15 of 212 postings mention on-call/incident/pager language explicitly, and named crash-tooling (Crashlytics/Sentry) appears in just 10 -- this is real but a minority, secondary duty in the sample, matching a mid (not high) target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Performance/battery/memory/jank language is very common (150 of 212 on a broad match), consistent with debugging that regularly crosses the app-code/OS-device boundary, matching the anchor-3 description."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "65 of 212 postings reference platform/cross-team scope, but on inspection this concentrates almost entirely in Staff-level titles (28 of 212) describing architecture ownership bounded to one app or one platform's engineering org (e.g. 'across the iOS stack,' 'Android community at Cash App') rather than a platform serving many unrelated consuming teams. Low-moderate target holds."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 2,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Requirements stay concentrated within one platform layer (Swift/Kotlin/RN) even at Staff level; xAI's Rust-for-backend ask is a notable outlier, not the norm. Supports keeping the target low (specialist-leaning)."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "92 of 212 postings name production/business metrics (crash-free rate, retention, conversion, KPIs/OKRs) tied to the shipped app, a real but not universal pattern -- mid target is well-supported."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Only 14 of 212 postings use client-facing/customer-facing/enterprise-customer language; the dominant cross-functional pattern is internal Product/Design collaboration, not external stakeholder management. Low-moderate target holds."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Only 9 of 212 postings mention anything resembling public teaching/conference/open-source content; internal code-review mentoring (105 of 212) is a distinct, more common pattern already captured under people_management_orientation, not this dimension. Low target holds."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No posting in the sample frames work around a portfolio of named client/account relationships; work organizes around app/feature/platform ownership throughout. Low target holds."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Same evidence as account_portfolio_breadth -- no named-relationship framing anywhere in the sample."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "All 18 postings with explicit dollar figures describe flat base-salary bands with no commission/variable-comp language; equity/bonus mentioned generically alongside base, matching a standard SWE comp shape. Low target holds."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 5,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Building/shipping production UI and business logic is the dominant activity described in essentially every posting at every level sampled, including Staff. Max target strongly supported."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No posting in the sample mentions client-site travel or physical embedding; in-office expectations (e.g. Robinhood's 3 days/week) are about a home office, not travel. Low target holds."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "39 of 212 postings mention security, but reading context this is almost entirely secure-coding/compliance language (auth, data handling, App Store review policy) rather than adversarial red-team thinking. Low-moderate target holds."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Battery/memory/startup/frame-rate language is very common (150 of 212 broad match) and described with real budget/CI-gating framing at a subset of companies (Oura, WHOOP, wearables-adjacent firms most explicitly, given the BLE/hardware-adjacent context), supporting a real-but-soft (not hard pass/fail) resource-budget framing at target 3."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Mentoring is very common (105 of 212) but consistently framed as raising the technical bar / growing engineers alongside one's own IC work, not a primary growth-and-retention people-management mandate -- mid-low target with incidental framing holds."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No posting in the sample names public speaking, published content, or social community engagement as a job expectation. Low target holds."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "AI is frequently mentioned (146 of 212) but almost entirely as a product feature the app surfaces, not as a requirement to build/train/productionize ML systems -- ML engineering fluency proper is out of scope. Low target holds."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Trivially and universally confirmed -- native/cross-platform mobile skill (Swift 108/212, Kotlin 121/212, React Native 52/212, Flutter 20/212) is the literal subject-matter gate of every posting in the corpus."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No posting in the sample asks for data pipeline/warehouse/ETL ownership; API consumption (123 of 212) is the closest adjacent skill and is a distinct, already-captured pattern. Low target holds."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "CI/CD familiarity is common (87 of 212) but framed as using build/release pipelines for the app, not building or operating cloud infrastructure/internal developer platforms. Low target holds."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Stripe",
+      "title": "Android Engineer, Terminal",
+      "url": "https://stripe.com/jobs/search?gh_jid=7543559"
+    },
+    {
+      "company": "Robinhood",
+      "title": "Senior iOS Engineer, Crypto Trading",
+      "url": "https://job-boards.greenhouse.io/robinhood/jobs/8027506"
+    },
+    {
+      "company": "WHOOP",
+      "title": "Android Engineer",
+      "url": "https://jobs.ashbyhq.com/whoop/2910a5f6-fb5e-4fe6-bb9a-24d6995d8173"
+    },
+    {
+      "company": "Oura",
+      "title": "iOS Engineer",
+      "url": "https://job-boards.greenhouse.io/oura/jobs/4024449009"
+    },
+    {
+      "company": "Block",
+      "title": "Staff Android Software Engineer, Cash App Consumer Platform",
+      "url": "http://block.xyz/careers/jobs/4884159008?gh_jid=4884159008"
+    },
+    {
+      "company": "OpenAI",
+      "title": "iOS Engineer, Applied Foundations",
+      "url": "https://jobs.ashbyhq.com/openai/775240dd-6d36-401a-acca-128df0459610"
+    },
+    {
+      "company": "Applied Intuition",
+      "title": "Senior Android Software Engineer - Platform",
+      "url": "https://jobs.ashbyhq.com/applied/72925d40-f970-4c3e-8317-9daf6fc6be21"
+    },
+    {
+      "company": "Betterment",
+      "title": "Sr. Mobile Engineer",
+      "url": "https://www.betterment.com/careers/current-openings/job?gh_jid=8010438&gh_jid=8010438"
+    }
+  ]
+}

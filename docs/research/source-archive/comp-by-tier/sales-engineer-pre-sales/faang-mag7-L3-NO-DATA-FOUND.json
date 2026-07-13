@@ -1,0 +1,9 @@
+{
+  "archetypeId": "sales-engineer-pre-sales",
+  "tier": "faang-mag7",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Job-postings corpus extraction has zero postings bucketed to faang-mag7 for this archetype at any level (mega-caps rarely post open, title-transparent 'Sales Engineer' reqs with salary bands in the scraped corpus). Current medium confidence predates this round and wasn't flagged as low, so per scope this round focused effort on the ai-labs 'low' cells; no new research was conducted here. Leaving as-is."
+}

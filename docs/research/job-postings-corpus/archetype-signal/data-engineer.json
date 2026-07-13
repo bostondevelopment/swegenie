@@ -1,0 +1,324 @@
+{
+  "archetype_id": "data-engineer",
+  "postings_analyzed": 525,
+  "top_requirements": [
+    {
+      "requirement": "Python proficiency",
+      "approx_frequency": "426 of 525 postings (~81%)"
+    },
+    {
+      "requirement": "SQL proficiency",
+      "approx_frequency": "423 of 525 postings (~81%)"
+    },
+    {
+      "requirement": "3-5+ years relevant experience (corpus is senior-skewed)",
+      "approx_frequency": "\"5+ years\" is the single most common threshold (~187 occurrences), \"3+\" and \"4+\" close behind"
+    },
+    {
+      "requirement": "Cloud platform fluency (AWS most common, then GCP/Azure)",
+      "approx_frequency": "AWS 283/525 (~54%), GCP 171/525 (~33%), Azure 164/525 (~31%)"
+    },
+    {
+      "requirement": "Data warehouse/lakehouse design (Snowflake, Redshift, BigQuery, Databricks)",
+      "approx_frequency": "warehouse/lakehouse language 255/525 (~49%); Snowflake alone 226/525 (~43%), Databricks 180/525 (~34%)"
+    },
+    {
+      "requirement": "Apache Spark experience",
+      "approx_frequency": "253 of 525 postings (~48%)"
+    },
+    {
+      "requirement": "Orchestration tooling (Airflow named specifically, or orchestration generally)",
+      "approx_frequency": "Airflow named 214/525 (~41%); orchestration language broadly 186/525 (~35%)"
+    },
+    {
+      "requirement": "dbt / analytics-engineering transformation-layer skills",
+      "approx_frequency": "194 of 525 postings (~37%), concentrated in the ~87 postings titled \"Analytics Engineer\" plus many \"Data Engineer\" postings that also own the transform layer"
+    },
+    {
+      "requirement": "Kafka / streaming systems experience",
+      "approx_frequency": "173 of 525 postings (~33%); \"streaming\"/\"real-time\" language more broadly in 255/525 (~49%)"
+    },
+    {
+      "requirement": "AI/LLM/ML-adjacent requirement (feeding ML models, using AI coding tools, AI-assisted pipelines)",
+      "approx_frequency": "AI/ML language in 408 of 525 postings (~78%) \u2014 far more mainstream than a single-example \"emerging\" trend"
+    },
+    {
+      "requirement": "Data quality / validation ownership",
+      "approx_frequency": "273 of 525 postings (~52%)"
+    },
+    {
+      "requirement": "Cross-functional stakeholder collaboration (analysts, data scientists, PMs, engineers)",
+      "approx_frequency": "487 of 525 postings (~93%)"
+    },
+    {
+      "requirement": "Kubernetes/Docker/Terraform (infra-as-code, containerization)",
+      "approx_frequency": "Kubernetes 70/525 (~13%), Docker 54/525 (~10%), Terraform 97/525 (~18%) \u2014 present but clearly secondary to core data-stack skills"
+    },
+    {
+      "requirement": "Bachelor's/Master's degree in CS or related field named explicitly",
+      "approx_frequency": "95 of 525 postings (~18%) \u2014 a minority explicitly gate on a degree despite it appearing in generic job-description templates"
+    }
+  ],
+  "top_responsibilities": [
+    "Design, build, and maintain batch and increasingly streaming/real-time ETL/ELT pipelines that move data from product databases, third-party APIs, and event streams into a warehouse or lakehouse \u2014 the single most universal responsibility line across the corpus, appearing in some paraphrase in nearly every posting.",
+    "Own data modeling and warehouse/lakehouse schema design for query performance, cost, and downstream usability (dbt-style transformation layers especially common in Analytics Engineer-titled postings).",
+    "Build and maintain data-quality, validation, freshness, and observability/monitoring systems (schema-drift checks, anomaly detection, alerting) \u2014 treated as first-class engineering deliverables, not an afterthought, in the large majority of postings.",
+    "Partner constantly with data scientists, analysts, product managers, and other engineers to translate their data needs into pipeline and schema requirements \u2014 by far the most frequently stated collaboration pattern (present in ~93% of postings).",
+    "At senior/staff/principal levels: set technical direction and architecture for a data domain or platform (warehouse migration, streaming platform, self-serve data tooling), make build-vs-buy calls, and mentor more junior engineers \u2014 mentoring/technical-leadership language appears in nearly half the corpus, concentrated in the large senior+staff+lead+principal share of titles.",
+    "Build and maintain pipelines and feature stores that feed downstream ML/AI systems, and increasingly, use AI/LLM tooling directly as part of the engineering workflow (AI-assisted coding, agentic pipeline components) \u2014 this shows up as an explicit, common responsibility line, not a one-off.",
+    "Support data governance, access control, and compliance requirements (PII handling, regulatory data classification) \u2014 especially pronounced at financial services, healthcare, and government-contractor postings (Capital One, Mastercard, Visa, Prudential, GDIT) but present in a majority of the broader corpus in some form.",
+    "A minority of postings (services/consulting-flavored: Valtech, Reply, GDIT, 3Cloud-style) frame the role around client-facing or contractor-context delivery rather than a single product's internal data platform."
+  ],
+  "comp_signals": [
+    {
+      "company": "CoreWeave",
+      "range_text": "Senior Data Engineer: $182,000\u2013$242,000 base",
+      "source_url": "https://coreweave.com/careers/job?4689188006&board=coreweave&gh_jid=4689188006"
+    },
+    {
+      "company": "Discord",
+      "range_text": "Staff Data Engineer, Ads: $248,000\u2013$310,000",
+      "source_url": "https://job-boards.greenhouse.io/discord/jobs/8299493002"
+    },
+    {
+      "company": "Faire",
+      "range_text": "Senior Staff Data Engineer, Platform Data and Analytics: $228,000\u2013$313,500 (one req shows $268,000\u2013$368,500)",
+      "source_url": "https://boards.greenhouse.io/faire/jobs/8612419002?gh_jid=8612419002"
+    },
+    {
+      "company": "Capital One",
+      "range_text": "Senior Lead Data Engineer (Bank Tech): $229,900\u2013$262,400 (varies by location/req, other Lead-level reqs cluster $179,400\u2013$245,600)",
+      "source_url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Wilmington-DE/Senior-Lead-Data-Engineer--Bank-Tech-_R243479-2"
+    },
+    {
+      "company": "GDIT (General Dynamics IT)",
+      "range_text": "Data Engineer \u2014 TS/SCI with Polygraph: $221,000\u2013$299,000",
+      "source_url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/USA-VA-Chantilly/Data-Engineer---TS-SCI-with-Polygraph_RQ223218"
+    },
+    {
+      "company": "Disney",
+      "range_text": "Sr Data Engineer (Santa Monica): $141,900\u2013$190,300 (varies slightly by req)",
+      "source_url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Santa-Monica-CA-USA/Sr-Data-Engineer_10143797-1"
+    },
+    {
+      "company": "FanDuel",
+      "range_text": "Data Engineer: $125,000\u2013$163,800; Senior Data Engineer: $138,000\u2013$181,650",
+      "source_url": "https://www.fanduel.careers/open-positions?gh_jid=7798466"
+    },
+    {
+      "company": "Xometry",
+      "range_text": "Analytics Engineer II: $76,000\u2013$86,000 (low end of the whole corpus); Staff Data Engineer: $180,000\u2013$200,000",
+      "source_url": "https://job-boards.greenhouse.io/xometry/jobs/5179344007"
+    },
+    {
+      "company": "Ibotta",
+      "range_text": "Data Engineer: $110,000\u2013$126,000; Senior Data Engineer: $144,000\u2013$165,000",
+      "source_url": "https://jobs.ashbyhq.com/ibotta/7a9075d8-8296-41c3-affc-29d8fee1dc8d"
+    },
+    {
+      "company": "Brex",
+      "range_text": "Data Engineer (SF): $120,800\u2013$151,000",
+      "source_url": "https://www.brex.com/careers/8366850002?gh_jid=8366850002"
+    }
+  ],
+  "seniority_distribution_notes": "Corpus skews mid-to-senior: 222/525 titles explicitly \\\"Senior\\\", 103/525 \\\"Staff/Lead\\\", 18/525 \\\"Principal/Distinguished\\\", 23/525 management-track (\\\"Manager\\\"/\\\"Director\\\"), only 10/525 explicitly junior/associate/entry, and the remaining ~149 are unqualified \\\"Data Engineer\\\"/\\\"Analytics Engineer\\\" titles that are typically mid-level in practice (most require 3-5 years). This matches the existing brief's framing that the large majority of live postings hire at Senior (IC4) or above, and confirms true entry-level/associate openings are rare in the live market relative to lateral/experienced hiring \u2014 consistent with, and now backed by a much larger sample than, the brief's existing claim.",
+  "notable_divergence_from_existing_brief": "Two things stand out. (1) On-call/pager language is much rarer in raw posting text than the brief's emphasis suggests: only ~17 of 525 postings (~3%) explicitly mention on-call, pager, or rotation, and only 13 use the literal phrase \\\"on-call.\\\" The brief's oncall_incident_appetite framing (target 4, weight 0.7) leans heavily on secondary sources (Uber engineering blog, a single data.world burnout survey) rather than the postings themselves \u2014 postings describe pipeline reliability and monitoring ownership constantly (295/525) but rarely spell out formal paging/rotation duty as a hiring requirement. This doesn't necessarily mean the operational burden is overstated (JDs often omit on-call specifics deliberately), but the fresh corpus does not independently corroborate it as strongly as the brief implies; worth a reviewer's attention. (2) The brief frames \\\"AI/LLMs will replace data engineers\\\" as an emerging 2025-2026 misconception evidenced by a single Stripe posting. The fresh corpus shows AI/ML-adjacent language (feeding ML pipelines, AI-assisted coding tools, LLM/agent workflows) in 408 of 525 postings (~78%) \u2014 this is no longer an edge-case, single-example signal but a mainstream, near-ubiquitous requirement across company sizes and industries (Capital One, Nvidia, AT&T, GE Aerospace, GDIT all reference AI/GenAI explicitly in titles or text). The brief's ml_engineering_fluency dimension (target 4, weight 0.4) looks, if anything, understated relative to how pervasive this now is in live postings. Everything else \u2014 stakeholder-collaboration intensity, warehouse/pipeline core skill set, comp structure (salaried, not commission), and the senior-skewed seniority distribution \u2014 is strongly corroborated by this larger sample.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings describe translating stakeholder needs into pipeline/schema requirements but generally scope work around a defined pipeline/domain problem rather than open-ended ambiguity; moderate target is consistent."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Monitoring/alerting/observability ownership appears in 295/525 postings (~56%), consistent with frequent reactive interruption, though few postings quantify how disruptive this is."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": false,
+      "note": "Only ~17/525 postings (~3%) explicitly mention on-call/pager/rotation in the text; the high target/weight here is corroborated mainly by secondary sources cited in the brief (Uber blog, data.world survey), not strongly by this raw posting sample. Flag for reviewer \u2014 may still be correct (JDs often omit on-call specifics) but isn't independently confirmed by posting text."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Data-quality ownership (273/525) and monitoring/incident language (48/525 for \"incident\" specifically) support a real diagnostic-depth requirement, consistent with the brief's Spark/JVM debugging narrative, though few postings describe multi-layer debugging as explicitly as the brief's single practitioner anecdote does."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 4,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "\"Design/build/maintain scalable\" pipeline and warehouse/lakehouse architecture language (255/525, ~49%) is one of the most consistent phrasings across the corpus, especially at senior+ levels which dominate the sample; strongly supported."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Broad multi-tool fluency expected: Python 81%, SQL 81%, Spark 48%, cloud platforms 50%+, orchestration 35-40% \u2014 consistent with a moderate-breadth requirement across several adjacent layers rather than single-tool depth."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Data-quality/reliability ownership language is pervasive (273-295 of 525 postings); consistent with moderate-high accountability, though direct \"blamed when data is wrong\" framing (from the brief) is not something postings state explicitly \u2014 that's an inference from secondary sources, not raw JD text."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Cross-functional collaboration with analysts/scientists/PMs is the single most universal theme in the corpus (487/525, ~93%), strongly supporting at least a moderate target; a reviewer could argue for raising the weight given how dominant this theme is."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Mentoring/technical-leadership language appears in 235/525 (~45%) postings, concentrated in the large senior/staff/lead/principal share of the corpus, but this is internal mentoring, not public-facing teaching \u2014 consistent with a low-but-nonzero target."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Only a small minority of postings (Valtech, Reply, GDIT, 3Cloud-style consulting/services shops) frame the role around a client caseload; low target/weight is appropriate given how rare this is in the broader corpus."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Same minority consulting-flavored subset as account_portfolio_breadth; low target/weight consistent with the sample."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "All 110 postings with explicit stated comp figures describe base salary (plus presumed bonus/equity, not itemized) \u2014 no commission-based structures observed anywhere in the corpus; strongly supports a low target."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Hands-on pipeline-building language (build/maintain/develop ETL/ELT) is close to universal and Python/SQL requirements are near-ubiquitous (81% each); consistent with a high coding-intensity target."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "\"Travel\" language appears in only 61/525 postings (~12%), mostly boilerplate EEO/policy text rather than a role requirement; consistent with a low target."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Governance/compliance/PII language is common (governance 223/525, broader security/compliance/privacy regex 377/525) but reads as data-access governance and regulatory compliance, not adversarial threat-modeling \u2014 consistent with the brief's framing that this is compliance-flavored, not security-adversarial."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No physical/hardware-resource-constraint engineering observed in the sample (even Nvidia's supply-chain-data posting is about modeling physical supply data, not physical engineering constraints); consistent with a low target."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Manager/Director-titled postings are 23/525 (~4.4%) of the corpus \u2014 a real but clearly secondary path, consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No public speaking/content-creation expectations observed in any sampled posting; consistent with a low target."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 4,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "AI/ML-adjacent language appears in 408/525 postings (~78%), far more pervasive than the brief's single-posting (Stripe) example suggests \u2014 target 4 is well supported and the weight (0.4) may even be conservative given how mainstream this has become across the sample, though the archetype's own scope is still correctly distinguished from a dedicated ML Engineer role."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No mobile-platform-specific requirements found in the sample; consistent with a low target."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "This is definitionally the core of nearly every posting in the corpus \u2014 pipelines, warehouses, ETL/ELT, and data-quality tooling dominate the text; the max target and weight are strongly and directly supported."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 3,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Cloud platform mentions are widespread but secondary to core data-stack skills (AWS 54%, GCP 33%, Azure 31%, Kubernetes only 13%, Terraform 18%); consistent with a moderate, non-dominant target."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Stripe",
+      "title": "Staff Software Engineer, Data Engineering Solutions",
+      "url": "https://stripe.com/jobs/listing/data-engineer-data-engineering-solutions/7529428"
+    },
+    {
+      "company": "Brex",
+      "title": "Data Engineer",
+      "url": "https://www.brex.com/careers/8366850002?gh_jid=8366850002"
+    },
+    {
+      "company": "CoreWeave",
+      "title": "Senior Data Engineer",
+      "url": "https://coreweave.com/careers/job?4689188006&board=coreweave&gh_jid=4689188006"
+    },
+    {
+      "company": "GDIT (General Dynamics Information Technology)",
+      "title": "Data Engineer \u2014 TS/SCI with Polygraph",
+      "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/USA-VA-Chantilly/Data-Engineer---TS-SCI-with-Polygraph_RQ223218"
+    },
+    {
+      "company": "Nvidia",
+      "title": "Supply Chain Data Engineer",
+      "url": ""
+    },
+    {
+      "company": "FanDuel",
+      "title": "Senior Data Engineer",
+      "url": "https://www.fanduel.careers/open-positions?gh_jid=7798237"
+    },
+    {
+      "company": "Ibotta",
+      "title": "Data Engineer",
+      "url": "https://jobs.ashbyhq.com/ibotta/7a9075d8-8296-41c3-affc-29d8fee1dc8d"
+    },
+    {
+      "company": "Disney",
+      "title": "Sr Data Engineer",
+      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Santa-Monica-CA-USA/Sr-Data-Engineer_10143797-1"
+    }
+  ]
+}

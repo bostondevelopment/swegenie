@@ -1,0 +1,61 @@
+{
+  "archetypeId": "embedded-iot-engineer",
+  "workflowLabel": "comp-structure-band-gap-fill",
+  "sourceCount": 9,
+  "sources": [
+    {
+      "url": "https://job-boards.greenhouse.io/chariotdefense/jobs/5275764008",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/pronto/jobs/8584845002",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/inversionspace/jobs/4705254005",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5197513008",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/chaosindustries/jobs/5142261007",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://jobs.lever.co/espace/7a717c56-f283-4d80-8805-3862421bb319",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://jobs.lever.co/pyka/7bb26cc6-027c-4930-b1a7-fe3314b6d361",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://jobs.lever.co/pyka/8f76120b-e1e7-4363-acb0-22413f791f4c",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://jobs.lever.co/magnetforensics/f8675bbe-033a-42d6-b303-f16c1b639ca5",
+      "title": "",
+      "note": "Searched job-postings sites (Greenhouse, Lever, Ashby via Google) specifically for embedded/firmware/embedded-Linux/RTOS/avionics engineer postings with published pay ranges at companies other than Anduril, at Mid and Senior/Staff seniority. Cross-checked the existing regex-extraction corpus first (docs/research/job-postings-corpus/comp-extraction/embedded-iot-engineer.json) and found it already had non-Anduril data for Verkada (4 postings, $180K-$300K) and Carbon Robotics (1 posting, $190K-$225K) that were correctly excluded from the prior pass because those postings are is_ote:true (on-targe",
+      "kind": "url_in_freetext"
+    }
+  ]
+}

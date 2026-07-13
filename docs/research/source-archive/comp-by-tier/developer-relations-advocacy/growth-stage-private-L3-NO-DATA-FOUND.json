@@ -1,0 +1,9 @@
+{
+  "archetypeId": "developer-relations-advocacy",
+  "tier": "growth-stage-private",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Corpus 'Entry/Associate' bucket is null for growth-stage-private. Web search for junior/associate developer-advocate roles at named growth-stage-private companies returned only generic aggregate salary-site data (Glassdoor/PayScale/ZipRecruiter averages), not real per-company per-level postings suitable as anchors. Keeping low \u2014 genuinely no disclosed entry-level data found for this tier."
+}

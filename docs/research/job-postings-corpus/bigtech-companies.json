@@ -1,0 +1,98 @@
+{
+  "generated": "2026-07-11",
+  "phase": 1,
+  "verified_company_count": 15,
+  "note": "These companies do not expose a public bulk-JSON ATS API (Greenhouse/Lever/Ashby); counts are page-visible estimates only, not exact.",
+  "companies": [
+    {
+      "name": "Google",
+      "careers_url": "https://www.google.com/about/careers/applications/jobs/results",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "484 (matching 'software engineer' search)"
+    },
+    {
+      "name": "Meta",
+      "careers_url": "https://www.metacareers.com/jobs",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "45 (Software Engineering team filter, page 1 of 5)"
+    },
+    {
+      "name": "Amazon",
+      "careers_url": "https://www.amazon.jobs/en/search?base_query=software+development+engineer&loc_query=United+States",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "unknown (results paginate via 'Load more jobs' with no visible total count)"
+    },
+    {
+      "name": "Apple",
+      "careers_url": "https://jobs.apple.com/en-us/search?search=software%20engineer&sort=relevance",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "600+ (276 pages of results)"
+    },
+    {
+      "name": "Microsoft",
+      "careers_url": "https://jobs.careers.microsoft.com/global/en/search?q=software%20engineer",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "1441 total jobs (145 pages, not engineering-filtered)"
+    },
+    {
+      "name": "Netflix",
+      "careers_url": "https://explore.jobs.netflix.net/careers?Teams=Engineering",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "103 open jobs (Engineering team filter)"
+    },
+    {
+      "name": "Nvidia",
+      "careers_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/jobs",
+      "ats_platform": "workday",
+      "eng_job_count_estimate": "2000 total jobs found (unfiltered by department; site listed ~1767 in Engineering department facet)"
+    },
+    {
+      "name": "Stripe",
+      "careers_url": "https://stripe.com/jobs/search",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "unknown"
+    },
+    {
+      "name": "Airbnb",
+      "careers_url": "https://careers.airbnb.com/positions/",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "unknown"
+    },
+    {
+      "name": "Uber",
+      "careers_url": "https://jobs.uber.com/en/jobs/",
+      "ats_platform": "custom (Oracle Recruiting Cloud backend)",
+      "eng_job_count_estimate": "unknown"
+    },
+    {
+      "name": "LinkedIn",
+      "careers_url": "https://www.linkedin.com/jobs/search?keywords=software%20engineer&f_C=1337&location=United%20States",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "14"
+    },
+    {
+      "name": "Salesforce",
+      "careers_url": "https://www.salesforce.com/company/careers/jobs/",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "unknown"
+    },
+    {
+      "name": "Adobe",
+      "careers_url": "https://careers.adobe.com/us/en/search-results?keywords=engineer",
+      "ats_platform": "custom (Phenom People)",
+      "eng_job_count_estimate": "232"
+    },
+    {
+      "name": "Oracle",
+      "careers_url": "https://careers.oracle.com/en/sites/jobsearch/jobs",
+      "ats_platform": "custom (Oracle Recruiting Cloud)",
+      "eng_job_count_estimate": "unknown"
+    },
+    {
+      "name": "IBM",
+      "careers_url": "https://www.ibm.com/careers/search?q=software%20engineer",
+      "ats_platform": "custom",
+      "eng_job_count_estimate": "707"
+    }
+  ]
+}

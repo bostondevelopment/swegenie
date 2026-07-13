@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "ai-labs",
+  "level": "L4",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Same as L3: no corpus points, no low-confidence flag to resolve, no new research performed this round. Existing medium confidence rests on the prior round's Anthropic/OpenAI FDE citations already in the source archive."
+}

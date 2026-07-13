@@ -1,0 +1,13 @@
+{
+  "archetypeId": "sales-engineer-pre-sales",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 1,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/anthropic/salaries/sales-engineer",
+      "title": "Anthropic Sales Engineer Salary | Levels.fyi",
+      "note": "Median TC $215,688, range $216K-$294K, but page states data is below the 3-submission threshold for a full level breakdown as of 2026-07-12 \u2014 too thin to level-attribute.",
+      "kind": "structured_citation"
+    }
+  ]
+}

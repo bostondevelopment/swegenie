@@ -1,0 +1,9 @@
+{
+  "archetypeId": "developer-relations-advocacy",
+  "tier": "early-stage",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "No corpus points ('Principal/Director+' bucket null for early-stage). Web search surfaced only generic Head-of-Developer-Relations salary aggregates and one inaccessible startup.jobs posting (O(1) Labs, 403 on fetch, could not verify content) \u2014 no verifiable named-company early-stage Staff/Director-level DevRel anchor. Keeping low."
+}

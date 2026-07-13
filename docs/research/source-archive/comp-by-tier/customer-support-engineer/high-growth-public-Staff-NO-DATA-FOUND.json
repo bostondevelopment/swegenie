@@ -1,0 +1,9 @@
+{
+  "archetypeId": "customer-support-engineer",
+  "tier": "high-growth-public",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "low",
+  "rationale": "Only 2 corpus points in the 'Principal/Director+' bucket, both from Salesforce/CoreWeave, and both are management titles (CoreWeave 'Manager, Technical Support Engineer' $198K-$264K; Salesforce Principal/Director-level range $221.9K-$426.9K), not IC 'Staff' roles - a title/level mismatch with what this cell is meant to represent. Current model base p50=$170K is well below this thin, management-skewed sample, which is expected since Staff-IC pay should trail Director/Manager pay, but the sample is too thin and title-mismatched to treat as solid grounding. Keep low."
+}

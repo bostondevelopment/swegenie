@@ -1,0 +1,322 @@
+{
+  "archetype_id": "product-full-stack-software-engineer",
+  "postings_analyzed": 400,
+  "top_requirements": [
+    {
+      "requirement": "Cloud platform experience (AWS most common, then GCP, then Azure)",
+      "approx_frequency": "AWS ~173/400 (43%), GCP ~83/400 (21%), Azure ~51/400 (13%)"
+    },
+    {
+      "requirement": "Python as a listed language",
+      "approx_frequency": "172/400 (43%)"
+    },
+    {
+      "requirement": "React",
+      "approx_frequency": "143/400 (36%)"
+    },
+    {
+      "requirement": "TypeScript",
+      "approx_frequency": "140/400 (35%)"
+    },
+    {
+      "requirement": "SQL / relational databases (Postgres/MySQL named explicitly)",
+      "approx_frequency": "141/400 (35%)"
+    },
+    {
+      "requirement": "CI/CD pipeline experience",
+      "approx_frequency": "139/400 (35%)"
+    },
+    {
+      "requirement": "Kubernetes",
+      "approx_frequency": "124/400 (31%)"
+    },
+    {
+      "requirement": "Distributed systems experience/knowledge",
+      "approx_frequency": "115/400 (29%)"
+    },
+    {
+      "requirement": "Explicit years-of-experience bar (e.g. '5+ years')",
+      "approx_frequency": "112/400 (28%)"
+    },
+    {
+      "requirement": "Go/Golang as a backend language",
+      "approx_frequency": "roughly 80-150/400 (20-37%) depending on filtering -- raw keyword match hits 148/400 but a large share are false positives ('Go-To-Market', 'go further'); a conservative filter for real language mentions still finds ~78/400 (20%), making Go one of the most common non-JS/Python backend languages in this sample"
+    },
+    {
+      "requirement": "Bachelor's/CS degree stated as baseline",
+      "approx_frequency": "95/400 (24%)"
+    },
+    {
+      "requirement": "Docker/containerization",
+      "approx_frequency": "77/400 (19%)"
+    },
+    {
+      "requirement": "AI-assisted development / agentic tooling fluency (Copilot, Cursor, Claude Code, 'AI-SDLC', vibe coding) or building AI-agent features",
+      "approx_frequency": "combined AI-workflow + agentic-feature signal appears in roughly 100-140/400 (25-35%) postings; explicit AI/ML/LLM keyword alone hits 53/400 (13%), and 36/400 (9%) titles are explicitly AI/ML-named roles"
+    },
+    {
+      "requirement": "On-call / production-support rotation named explicitly",
+      "approx_frequency": "51/400 (13%)"
+    },
+    {
+      "requirement": "Security-conscious development practices mentioned",
+      "approx_frequency": "146/400 (36%), mostly generic 'security best practices' language rather than dedicated threat-modeling ownership"
+    }
+  ],
+  "top_responsibilities": [
+    "End-to-end feature ownership: taking a scoped piece of product work from design/PM handoff through implementation, testing, and deploy, then owning it in production -- 'ownership' framing appears in roughly 47% of postings (188/400).",
+    "Cross-functional partnership with product managers, designers, and often data/ML or other engineering teams to scope and prioritize work -- explicit cross-functional language in 33% of postings (132/400).",
+    "Code review paired with mentoring more junior engineers as a named senior/staff responsibility -- mentorship language appears in 41% of postings (166/400), code review specifically in 30% (119/400).",
+    "Contributing to technical design docs, architecture proposals, or RFC-style write-ups before/alongside implementation -- explicit design-doc/RFC language in about 11% of postings (45/400), concentrated at senior+ levels.",
+    "CI/CD pipeline and internal tooling upkeep treated as part of the engineer's own scope, not a separate team's job -- CI/CD appears in 35% of postings (139/400).",
+    "On-call or production-support rotation for the services the team owns, more common at growth-stage/scale-up companies with dedicated service ownership than at very early-stage or very large enterprise teams with dedicated SRE functions -- named in 13% of postings (51/400).",
+    "Increasingly, integrating or building with AI/agentic tooling as part of the day-to-day workflow (using AI coding assistants, or shipping LLM/agent-powered product features) rather than as a specialized side-project -- present across roughly a quarter to a third of the sample depending on how narrowly 'AI-related' is defined."
+  ],
+  "comp_signals": [
+    {
+      "company": "Whoop",
+      "range_text": "Staff Software Engineer, Machine Learning (Health) -- U.S. base salary range $170,000-$230,000",
+      "source_url": "https://jobs.lever.co/whoop/681be6ac-fddb-4305-a0cb-3c60864a5875"
+    },
+    {
+      "company": "Vercel",
+      "range_text": "Software Engineer, Deployment Infrastructure -- base pay range $180,000.00-$260,000.00",
+      "source_url": "https://job-boards.greenhouse.io/vercel/jobs/5633880004"
+    },
+    {
+      "company": "Materialize",
+      "range_text": "Senior/Staff Software Engineer (Database) -- Staff salary range $200,000-$230,000 + equity; Senior salary range $170,000-$205,000 + equity",
+      "source_url": "https://jobs.ashbyhq.com/materialize/d06800f5-a8fe-4bdc-96e3-6886c7c930c9"
+    },
+    {
+      "company": "Varda Space Industries",
+      "range_text": "Senior Mission Software Engineer -- salary range $169,000-$216,000 annually",
+      "source_url": "https://job-boards.greenhouse.io/vardaspace/jobs/7799168003"
+    },
+    {
+      "company": "Substack",
+      "range_text": "Full Stack Software Engineer - Enterprise -- cash compensation salary range $140,000-$260,000",
+      "source_url": "https://jobs.ashbyhq.com/substack/6c70c3bb-e722-4689-bc9d-cc44136358b5"
+    },
+    {
+      "company": "Resend",
+      "range_text": "Backend Engineer (Infra), Core Sending -- comp $150,000-$170,000 USD, commensurate with experience",
+      "source_url": "https://jobs.ashbyhq.com/resend/a95832a8-a2ab-4a63-8303-9989f1fc47d6"
+    },
+    {
+      "company": "Postscript",
+      "range_text": "Senior Software Engineer, Full Stack -- salary range USD $175,000-$205,000 base plus significant equity",
+      "source_url": "https://job-boards.greenhouse.io/postscript/jobs/8525612002"
+    },
+    {
+      "company": "ClassDojo",
+      "range_text": "Senior Full-Stack Engineer -- $171,500-$250,000 (CA/WA/NY/NJ/CT) or $146,000-$215,000 (all other US states)",
+      "source_url": "https://jobs.ashbyhq.com/classdojo/242896b8-65a2-499f-a9b8-546ccd388926"
+    },
+    {
+      "company": "Parsley Health",
+      "range_text": "Principal Product Engineer (Full-Stack) -- starting salary $240,000-$350,000",
+      "source_url": "https://job-boards.greenhouse.io/parsleyhealth/jobs/7742113003"
+    },
+    {
+      "company": "Fictiv",
+      "range_text": "Product Engineer (Mechanical) -- salary range $64,000-$90,000 per year; a low-end outlier, notably a mechanical/hardware-leaning 'product engineer' title rather than a pure software role, but it was in the classified corpus for this archetype",
+      "source_url": "https://job-boards.greenhouse.io/fictiv/jobs/8588243002"
+    }
+  ],
+  "seniority_distribution_notes": "The live-posting sample skews heavily senior and above: senior-titled roles are 164/400 (41%), staff 73/400 (18%), principal 16/400 (4%), and lead 11/400 (3%) -- combined, roughly two-thirds of currently open reqs classified into this archetype are senior or higher. Untitled/ambiguous-level postings (no seniority word in the title, likely mid-level) account for 125/400 (31%). Explicit junior/entry-level titles are rare: only 4/400 (1%), plus a handful of 'II'/'III' mid-level titles (7/400). This is a live-hiring snapshot, not a claim about the overall workforce distribution -- it likely reflects that growth-stage and public companies are currently hiring experienced engineers who can operate with less ramp-up, while new-grad/entry hiring runs on a different (often intern-conversion, less continuously-posted) cycle that this snapshot may undercount.",
+  "notable_divergence_from_existing_brief": "Two things worth flagging for review, one confirming and one updating the brief:\n\n1. Comp-signal abundance (update): the brief's \"Open questions\" section says it \"did not find a clean second real job posting with a numeric comp range at a non-Boston mid-size company to sit alongside WHOOP.\" This fresh 400-posting sample directly resolves that gap -- roughly 120 raw dollar-range matches and at least 25-30 distinct companies with clean, unambiguous stated salary ranges (Vercel, Materialize, Varda Space, Substack, Resend, Postscript, ClassDojo, Parsley Health, CoreWeave, Lyft, Mercury, Grafana Labs, and more), spanning seed-stage startups through large public companies (Capital One, General Motors, CVS Health, AT&T). The pattern: Lever/Ashby/Greenhouse-hosted postings, especially from companies with any CA/NY/WA/CO/IL presence, very commonly include explicit pay-transparency-law-driven ranges. This is a much richer comp evidence base than the brief currently reflects and should be pulled into the comp-structure section with multiple non-Boston, non-WHOOP anchors.\n\n2. Seniority skew (confirms + sharpens): the brief frames a full ladder from junior/new-grad through staff+ as roughly equally 'live' entry points, and spends a full section on CS-degree/bootcamp/internship entry paths. The live-posting sample strongly confirms the *existence* of that ladder in leveling language, but the *current hiring mix* is heavily senior-weighted (two-thirds senior+) with almost no explicit junior/entry titles (1%). This doesn't contradict the brief's career-ladder claims, but it's a useful caveat for any copy implying entry-level roles are as readily available right now as senior ones -- worth a light caveat rather than a rewrite, since intern-to-FTE pipelines (the brief's stated dominant entry channel) wouldn't show up as standalone live postings anyway.\n\nEverything else in the brief (feature-delivery-to-production day-to-day framing, cross-functional collaboration as a constant, code-review/mentorship scaling with seniority, base-heavy-to-equity-heavy comp progression by company stage, no variable/commission comp, AI-assisted development becoming baseline rather than a differentiator) is well supported by this sample and needs no correction.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Ambiguity/fast-paced/scrappy language appears in 34% (138/400) of postings -- present and real but far from universal, consistent with a moderate anchor-3 rather than an extreme."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Cross-functional collaboration is common (33%) but static job-description text can't directly evidence interrupt load during the day; no signal contradicts the moderate target."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "On-call named explicitly in only 13% (51/400) of postings -- arguably even softer evidence for a moderate target than the brief implies, since the sample skews toward larger/scale-up companies that often have dedicated SRE/platform on-call. Still consistent with 'common but not universal, not a defining identity.'"
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Debug-related language appears in 23% (94/400) of postings, usually as one bullet among many rather than a headline skill -- consistent with moderate, non-defining weight."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Distributed-systems language appears in 29% (115/400); staff+principal titles are 22% of the sample. Supports a moderate anchor: real architectural scope exists, concentrated at senior+, but not the platform-scale norm across the whole population."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "No single stack dominates -- React/TS/Python/Go/Java/Ruby/Kotlin/Swift all appear with no language exceeding ~43%, and frontend, backend, and full-stack titles coexist throughout the sample. Strongly supports the generalist/moderate-breadth framing."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "'Ownership' framing (of a feature/project/service) appears in 47% (188/400) of postings -- real and common, but framed around shipped work rather than a named business KPI/SLO, matching the current moderate target."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 3,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Internal cross-functional collaboration (product/design/eng) is common (33%) while explicit external-customer-facing language is rarer (~12%, 47/400) -- consistent with 'real but internal-facing by default' framing behind the current target."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Mentorship appears in 41% (166/400) of postings, but consistently framed as informal peer/junior-engineer mentoring, not designed public teaching content -- supports a real-but-secondary target of 2."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No 'named account' or portfolio-management language found anywhere in the sample -- consistent with 'not a meaningful axis' for this archetype."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Same as account_portfolio_breadth -- no evidence in postings either way; low weight appropriately reflects that this axis doesn't organize the work."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Discretionary annual bonus is mentioned in 28% (113/400) of postings, but true sales-style variable/commission comp is rare: 'commission' in 3% (14/400) and explicit 'variable comp' phrasing in under 2% (7/400) -- strongly supports the low target."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 4,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "The entire sample is hands-on IC engineering postings with explicit language/framework/stack requirements throughout -- strongly supports a high coding-intensity target as the archetype's defining axis."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Travel mentioned in only 8.5% (34/400) of postings, and where present it's usually a perk (offsite stipend) rather than a job requirement; a couple of postings (Osaro, Starburst) do require real customer-site travel, but this is the exception -- supports the low target."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "'Security' language appears in 36% (146/400) of postings but is almost always generic 'follow security best practices' rather than a named threat-modeling responsibility -- consistent with a low-moderate, non-primary target."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Hardware/firmware/embedded/robotics language appears in 16% (67/400) of postings, elevated somewhat by the sample including space/robotics/hardware companies (Varda Space, Divergent Technologies, J&J embedded roles), but still a clear minority -- supports the low target/weight, though this is the one dimension where the specific company mix in this sample nudges the raw frequency up a bit versus a pure SaaS-only sample."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Explicit people-management language (direct reports, managing engineers) appears in essentially none of the sample (1/400) -- strongly confirms this is an IC-dominated population and supports the low target with meaningful weight against a management-track match."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No public-speaking, conference, or public-content-creation expectations found anywhere in the sample -- supports the low target."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "Worth a second look: 9% (36/400) of titles are explicitly AI/ML-named roles, 13% (53/400) mention AI/ML/LLM skills directly, and a combined agentic/AI-assisted-development signal touches roughly a quarter to a third of the sample. That's a bigger footprint than a target of 1 ('not a required background... not discussed') implies for 2026 live postings -- this could be read as the archetype's AI-SDLC fluency (already flagged in the brief's misconceptions section) creeping into actual ML-adjacent skill requirements rather than staying purely a workflow-tooling expectation. Flagging for review rather than asserting a specific new target."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Mobile (iOS/Android/React Native) mentioned in only 10% (40/400) of postings -- supports a low-moderate target reflecting occasional, not core, exposure."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "SQL/relational-database usage is common (35%) but that reflects consuming a database, not building/operating data-pipeline infrastructure, which the brief correctly assigns to a separate Data Engineer archetype -- supports the current low-moderate target."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Cloud-platform mentions are frequent (AWS 43%, GCP 21%, Azure 13%) and general 'infrastructure' language appears in over half the sample (54%), but this is predominantly exposure to/use of cloud services within an application, not owning platform infrastructure itself (the brief correctly reserves that for the Platform Engineer archetype) -- broadly supports the current target, though the raw frequency is high enough that a reviewer might sanity-check whether 2 is still the right anchor versus a 2.5-3 equivalent if the taxonomy allowed it."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Whoop",
+      "title": "Staff Software Engineer, Machine Learning (Health)",
+      "url": "https://jobs.lever.co/whoop/681be6ac-fddb-4305-a0cb-3c60864a5875"
+    },
+    {
+      "company": "Vercel",
+      "title": "Software Engineer, Deployment Infrastructure",
+      "url": "https://job-boards.greenhouse.io/vercel/jobs/5633880004"
+    },
+    {
+      "company": "Resend",
+      "title": "Backend Engineer (Infra), Core Sending",
+      "url": "https://jobs.ashbyhq.com/resend/a95832a8-a2ab-4a63-8303-9989f1fc47d6"
+    },
+    {
+      "company": "Varda Space Industries",
+      "title": "Senior Mission Software Engineer",
+      "url": "https://job-boards.greenhouse.io/vardaspace/jobs/7799168003"
+    },
+    {
+      "company": "ClassDojo",
+      "title": "Senior Full-Stack Engineer",
+      "url": "https://jobs.ashbyhq.com/classdojo/242896b8-65a2-499f-a9b8-546ccd388926"
+    },
+    {
+      "company": "Parsley Health",
+      "title": "Principal Product Engineer (Full-Stack)",
+      "url": "https://job-boards.greenhouse.io/parsleyhealth/jobs/7742113003"
+    },
+    {
+      "company": "Postscript",
+      "title": "Senior Software Engineer, Full Stack",
+      "url": "https://job-boards.greenhouse.io/postscript/jobs/8525612002"
+    }
+  ]
+}

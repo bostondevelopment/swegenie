@@ -1,0 +1,288 @@
+{
+  "archetypeId": "solutions-architect-vendor-side",
+  "summary": {
+    "totalPointsExtracted": 17,
+    "usdBase": {
+      "count": 14,
+      "companyCount": 9,
+      "low": 53850,
+      "high": 301300,
+      "typical": 188000
+    },
+    "usdOte": {
+      "count": 3,
+      "companyCount": 2,
+      "low": 120000,
+      "high": 226012,
+      "typical": 167500
+    },
+    "nonUsd": {
+      "count": 0,
+      "currencies": []
+    },
+    "byLevel": {
+      "Mid (unspecified level)": {
+        "count": 9,
+        "companyCount": 6,
+        "low": 115000,
+        "high": 285800,
+        "typical": 200000,
+        "companies": [
+          "Databricks",
+          "Datadog",
+          "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
+          "Reply",
+          "Salesforce",
+          "Via"
+        ]
+      },
+      "Senior/Staff": {
+        "count": 4,
+        "companyCount": 4,
+        "low": 53850,
+        "high": 301300,
+        "typical": 157931,
+        "companies": [
+          "3M",
+          "Databricks",
+          "MongoDB",
+          "Remote.com"
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 201000,
+        "high": 295000,
+        "typical": 248000,
+        "companies": [
+          "Datadog"
+        ]
+      }
+    },
+    "totalPostingsScanned": 57
+  },
+  "dataPoints": [
+    {
+      "low": 180000,
+      "high": 247500,
+      "raw_match": "$180,000 &mdash; $247,500",
+      "context": "this position may also include eligibility for annual performance bonus, equity, and the benefits listed above. For more information regarding which range your location is in visit our page here . &nbsp; Local Pay Range $180,000 &mdash; $247,500 USD About Databricks Databricks is the data and AI company. More than 10,000 organizations worldwide \u2014 including Comcast, Cond\u00e9 Nast, Grammarly, and over 50% of the Fortune 500 \u2014 rely on the Databricks Data Intelligence",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Databricks",
+      "title": "Specialist Solutions Architect - Google Cloud Platform & Infrastructure",
+      "location": "United States",
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8589834002",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 219100,
+      "high": 301300,
+      "raw_match": "$219,100 &mdash; $301,300",
+      "context": "this position may also include eligibility for annual performance bonus, equity, and the benefits listed above. For more information regarding which range your location is in visit our page here . &nbsp; Local Pay Range $219,100 &mdash; $301,300 USD About Databricks Databricks is the data and AI company. More than 10,000 organizations worldwide \u2014 including Comcast, Cond\u00e9 Nast, Grammarly, and over 50% of the Fortune 500 \u2014 rely on the Databricks Data Intelligence",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Databricks",
+      "title": "Sr. ISV & Partner Solutions Architect",
+      "location": "United States",
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8439172002",
+      "level_hint": "Senior/Staff"
+    },
+    {
+      "low": 143000,
+      "high": 209000,
+      "raw_match": "$143,000 &mdash; $209,000",
+      "context": "al planning, and mental health benefits, a 401(k) plan and match, paid time off, fitness reimbursements, and a discounted employee stock purchase plan. The reasonably estimated yearly salary for this role at Datadog is: $143,000 &mdash; $209,000 USD About Datadog:&nbsp; Datadog is the leading observability and security platform for the AI era, providing businesses with unified visibility across the technology stack to manage complexity at scale. It brings appli",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Datadog",
+      "title": "Partner Solutions Architect (GSI) - AMER East",
+      "location": "Boston, Massachusetts, USA; New York, New York, USA",
+      "url": "https://careers.datadoghq.com/detail/8003977/?gh_jid=8003977",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 143000,
+      "high": 209000,
+      "raw_match": "$143,000 &mdash; $209,000",
+      "context": "al planning, and mental health benefits, a 401(k) plan and match, paid time off, fitness reimbursements, and a discounted employee stock purchase plan. The reasonably estimated yearly salary for this role at Datadog is: $143,000 &mdash; $209,000 USD About Datadog:&nbsp; Datadog is the leading observability and security platform for the AI era, providing businesses with unified visibility across the technology stack to manage complexity at scale. It brings appli",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Datadog",
+      "title": "Partner Solutions Architect (GSI) - AMER West",
+      "location": "Denver, Colorado, USA; San Francisco, California, USA",
+      "url": "https://careers.datadoghq.com/detail/8010455/?gh_jid=8010455",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 201000,
+      "high": 295000,
+      "raw_match": "$201,000 &mdash; $295,000",
+      "context": "al planning, and mental health benefits, a 401(k) plan and match, paid time off, fitness reimbursements, and a discounted employee stock purchase plan. The reasonably estimated yearly salary for this role at Datadog is: $201,000 &mdash; $295,000 USD About Datadog:&nbsp; Datadog is the leading observability and security platform for the AI era, providing businesses with unified visibility across the technology stack to manage complexity at scale. It brings appli",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Datadog",
+      "title": "Principal Partner Solutions Architect (Public Sector - Fed)",
+      "location": "District of Columbia, USA, Remote; Maryland, USA, Remote; Virginia, USA, Remote",
+      "url": "https://careers.datadoghq.com/detail/7943824/?gh_jid=7943824",
+      "level_hint": "Principal/Director+ (Manager/VP)"
+    },
+    {
+      "low": 104000,
+      "high": 204000,
+      "raw_match": "$104,000 &mdash; $204,000",
+      "context": ", and health benefits offerings. Please note, the base salary range listed below and the benefits in this paragraph are only applicable to U.S.-based candidates. MongoDB\u2019s base salary range for this role in the U.S. is: $104,000 &mdash; $204,000 USD",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "MongoDB",
+      "title": "Senior Partner Solutions Architect",
+      "location": "Atlanta; Austin; Dallas; Florida; Miami",
+      "url": "https://www.mongodb.com/careers/job/?gh_jid=7683484",
+      "level_hint": "Senior/Staff"
+    },
+    {
+      "low": 135000,
+      "high": 200000,
+      "raw_match": "$135,000 - $200,000",
+      "context": "ms. - Process-driven with a strong bias toward continuous improvement; you consistently look for opportunities to make systems better than you found them through systematic improvement. The salary range for this role is $135,000 - $200,000 OTE. The salary for this position is determined based on a variety of job-related factors that may include location, relevant experience, education, or particular skills and expertise. PERKS & BENEFITS At Zip, we\u2019re com",
+      "currency": "USD",
+      "is_ote": true,
+      "company": "Zip",
+      "title": "Solutions Architect - SAP",
+      "location": "Remote - US",
+      "url": "https://jobs.ashbyhq.com/zip/b4e91377-9377-4dd5-80a4-a8e4fa6f58e2",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 120000,
+      "high": 180000,
+      "raw_match": "$120,000 - $180,000",
+      "context": "ms. - Process-driven with a strong bias toward continuous improvement; you consistently look for opportunities to make systems better than you found them through systematic improvement. The salary range for this role is $120,000 - $180,000 OTE. The salary for this position is determined based on a variety of job-related factors that may include location, relevant experience, education, or particular skills and expertise. PERKS & BENEFITS At Zip, we\u2019re com",
+      "currency": "USD",
+      "is_ote": true,
+      "company": "Zip",
+      "title": "Solutions Architect - Workday Financials",
+      "location": "Remote - US",
+      "url": "https://jobs.ashbyhq.com/zip/e864cd40-313d-4ccb-a0f5-cfd8158e2cda",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 172500,
+      "high": 260100,
+      "raw_match": "$172,500 - $260,100",
+      "context": "and conviction records. At Salesforce, we believe in equitable compensation practices that reflect the dynamic nature of labor markets across various regions.&#xa;&#xa;The typical base salary range for this position is $172,500 - $260,100 annually. In select cities within the San Francisco and New York City metropolitan area, the base salary range for this role is $207,800 - $285,800 annually.&#xa;&#xa;The range represents base salary only, and does not",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Salesforce",
+      "title": "Workday Solution Architect",
+      "location": "6 Locations",
+      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Software-Engineer--ES---Finance-Platform_JR343613",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 207800,
+      "high": 285800,
+      "raw_match": "$207,800 - $285,800",
+      "context": "us regions.&#xa;&#xa;The typical base salary range for this position is $172,500 - $260,100 annually. In select cities within the San Francisco and New York City metropolitan area, the base salary range for this role is $207,800 - $285,800 annually.&#xa;&#xa;The range represents base salary only, and does not include company bonus, incentive for sales roles, equity or benefits, as applicable.",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Salesforce",
+      "title": "Workday Solution Architect",
+      "location": "6 Locations",
+      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Software-Engineer--ES---Finance-Platform_JR343613",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 145676,
+      "high": 178049,
+      "raw_match": "$145,676 - $178,049",
+      "context": "ancially. To ensure competitive pay and benefits, 3M regularly benchmarks with other companies that are comparable in size and scope. Applicable to US Applicants Only:The expected compensation range for this position is $145,676 - $178,049, which includes base pay plus variable incentive pay, if eligible. This range represents a good faith estimate for this position. The specific compensation offered to a candidate may vary based on factors including, but",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "3M",
+      "title": "Salesforce Solutions Architect / Senior Engineer",
+      "location": "2 Locations",
+      "url": "https://3m.wd1.myworkdayjobs.com/Search/job/US-Minnesota-Maplewood/Salesforce-Solutions-Architect---Senior-Engineer_R01163922",
+      "level_hint": "Senior/Staff"
+    },
+    {
+      "low": 147292,
+      "high": 199278,
+      "raw_match": "$147,292 - $199,278",
+      "context": "plore an enterprise IT career at GDIT and you\u2019ll find endless opportunities to grow alongside colleagues who share your desire to drive operations forward. #GDITFedHealthJobs The likely salary range for this position is $147,292 - $199,278. This is not, however, a guarantee of compensation or salary. Rather, salary will be set based on experience, geographic location and possibly contractual requirements and could fall outside of this range. Scheduled Wee",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
+      "title": "Cloud Solutions Architect",
+      "location": "Any Location / Remote",
+      "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Cloud-Solutions-Architect_RQ222733",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 182750,
+      "high": 247250,
+      "raw_match": "$182,750 - $247,250",
+      "context": "ORTUNITY Explore a career at GDIT and you\u2019ll find endless opportunities to grow alongside colleagues who share your sense of ownership and pride in the meaningful work we do. The likely salary range for this position is $182,750 - $247,250. This is not, however, a guarantee of compensation or salary. Rather, salary will be set based on experience, geographic location and possibly contractual requirements and could fall outside of this range. Scheduled Wee",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
+      "title": "Cloud Solutions Architect",
+      "location": "Any Location / Remote",
+      "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Cloud-Solutions-Architect_RQ222761-2",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 175000,
+      "high": 225000,
+      "raw_match": "$175,000 - $225,000",
+      "context": "AI, cloud computing, digital media and the Internet of Things. Reply services include Consulting, System Integration and Digital Services. www.reply.com The base compensation range for this full-time position is between $175,000 - $225,000 plus benefits. Compensation decisions are supported through market data, where regional variances may exist based on cost of labor. We also take into consideration prior experience, relevant skills, education and/or tra",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Reply",
+      "title": "SAP Solution Architect",
+      "location": "Chicago, Illinois",
+      "url": "https://jobs.lever.co/reply/97080a11-ea93-40b4-bb4c-5c2ac57d829f",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 115000,
+      "high": 140000,
+      "raw_match": "$115,000-$140,000",
+      "context": "priorities. Compensation and Benefits:&nbsp; Final salary will be determined by the candidate\u2019s experience, knowledge, and skills. Salary reflected does not include equity or variable pay, where applicable Salary Range: $115,000-$140,000 We are proud to offer a generous and comprehensive benefits package, including free medical plans and 401K matching. We\u2019re Via, and we build technology that changes the way the world moves. We pioneered the TransitTech",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Via",
+      "title": "Workday Solutions Architect",
+      "location": "New York, NY",
+      "url": "https://job-boards.greenhouse.io/via/jobs/8186241002",
+      "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 150675,
+      "high": 226012,
+      "raw_match": "$150,675 &mdash; $226,012",
+      "context": "s, including location, job-related skills, work experience, and relevant education and/or training. This role may also be eligible for discretionary bonuses, equity, and/or commissions, as well as benefits. Salary Range $150,675 &mdash; $226,012.50 USD Where we Work We are embracing an office-first culture, encouraging three days a week in office for most roles, with meaningful opportunities to collaborate and celebrate in person. Each role may have specific re",
+      "currency": "USD",
+      "is_ote": true,
+      "company": "OneTrust",
+      "title": "Senior Salesforce Solution Architect",
+      "location": "New York, New York",
+      "url": "https://job-boards.greenhouse.io/onetrust/jobs/7959371",
+      "level_hint": "Senior/Staff"
+    },
+    {
+      "low": 53850,
+      "high": 136300,
+      "raw_match": "$53,850 &mdash; $136,300",
+      "context": "ss. Therefore, all compensation changes associated with an internal move will be reviewed by the Total Rewards &amp; People Enablement team on a case by case basis. The annual salary range for this full-time position is $53,850 &mdash; $136,300 USD Benefits Our full benefits &amp; perks are explained in our handbook at&nbsp; remote.com/r/benefits . As a global company, each country works differently, but some benefits/perks are for all Remoters: work from anyw",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Remote.com",
+      "title": "Senior Partner Solutions Architect",
+      "location": "Remote-AMER",
+      "url": "https://job-boards.greenhouse.io/remotecom/jobs/7702818003",
+      "level_hint": "Senior/Staff"
+    }
+  ]
+}

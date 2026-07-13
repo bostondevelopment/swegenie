@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "high-growth-public",
+  "level": "L5",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "medium",
+  "rationale": "Corpus 'Senior/Staff' bucket has 3 real points from 3 named companies (Adyen Senior Implementation Engineer $184K-$276K; GitLab Senior Manager, PS Technical Architect $171K-$289K; Broadcom Sr Mainframe Technical Consultant $100K-$160K). File's L5 base p50 ($189K) sits comfortably inside this range and close to the Adyen/GitLab lower bounds. Raising low\u2192medium on the strength of this direct corpus evidence."
+}

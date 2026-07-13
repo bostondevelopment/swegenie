@@ -1,0 +1,67 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 10,
+  "sources": [
+    {
+      "url": "https://www.fokal.com/ai-seo-research/anthropic-salary/",
+      "title": "Anthropic Salary: What Employees Actually Earn in 2026 | Fokal Research",
+      "note": "Reports Anthropic Applied AI Engineer (closest FDE-track analog) base ranging $220K (L3) to $340K (Staff), TC $300K-$1.2M, equity 60-70% of TC \u2014 useful shape reference but titles/leveling don't map 1:1 to a generic consulting-engineer archetype.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://fde.academy/blog/openai-forward-deployed-engineer",
+      "title": "OpenAI Forward Deployed Engineer Guide 2026 | fde.academy",
+      "note": "OpenAI FDE base ~$160K-$280K mid-level, TC $350K-$550K mid/senior, staff TC >$600K \u2014 confirms AI labs pay a large premium over faang-mag7 for this function, consistent with file's tier ordering.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/senior-solutions-engineer-salary-SRCH_KO0,25.htm",
+      "title": "Senior Solutions Engineer: Average Salary & Pay Trends 2026 | Glassdoor",
+      "note": "Industry-wide (not FAANG-specific) average Senior Solutions Engineer salary ~$213,792; too broad and level-ambiguous to validate a specific L3 FAANG figure.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.core-mba.pro/tool-hub/faang-engineer-salary",
+      "title": "FAANG Software Engineer Salary 2026 by Company | core-mba.pro",
+      "note": "Provides only core SWE bands, not PS/consulting-engineer-specific data; cited as evidence of the gap, not as direct support for the file's numbers.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.apexinterviewer.com/resources/faang-salaries-2026",
+      "title": "FAANG Software Engineer Salaries 2026 | Apex Interviewer",
+      "note": "Again only core SWE data (senior/E5 TC $300K-$700K depending on company); not a validated proxy for a PS/consulting title.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.glassdoor.com/Salaries/professional-services-salesforce-salary-SRCH_KO0,21_KE22,32.htm",
+      "title": "Salary: Salesforce Professional Services 2026 | Glassdoor",
+      "note": "Salesforce PS average $167,631/yr, 90th pct $288,937 \u2014 matches file's L3 base p50 $131K + bonus p50 $39K = $170K cash total reasonably closely.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/databricks/salaries",
+      "title": "Databricks Salaries | Levels.fyi",
+      "note": "Returned only general/SWE salary aggregation, not PS-specific, and Databricks is a large late-stage/public-adjacent company, not a clean growth-stage-private proxy.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.recruitingfromscratch.com/blog/solutions-engineer-salary-in-2026-real-data-from-1-9-million-job-postings",
+      "title": "Solutions Engineer Salary in 2026: Real Data from 1.9 Million Job Postings | Recruiting From Scratch",
+      "note": "Median Solutions Engineer salary $170K across all company stages combined \u2014 consistent in magnitude with file's L4 base+bonus (~$199K) but not tier-specific enough to raise confidence.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/t/software-engineer/startup/series_a",
+      "title": "Series A Stage Startup Software Engineer Salary & Equity Data | Levels.fyi",
+      "note": "Reports Series A base near $135K for a comparable IC role (SWE, used as nearest proxy since no PS-specific startup data exists) \u2014 file's $117K L3 base is somewhat lower, plausible if positioned at 25th-40th percentile as commonly recommended for early-stage cash-conservative offers.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/t/software-engineer/startup/seed",
+      "title": "Seed Stage Startup Software Engineer Salary & Equity Data | Levels.fyi",
+      "note": "Provides seed-stage SWE comp as a rough sanity-check baseline only; not role-matched.",
+      "kind": "structured_citation"
+    }
+  ]
+}

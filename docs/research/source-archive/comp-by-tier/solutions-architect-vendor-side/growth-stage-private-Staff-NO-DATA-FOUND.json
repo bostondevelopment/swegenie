@@ -1,0 +1,9 @@
+{
+  "archetypeId": "solutions-architect-vendor-side",
+  "tier": "growth-stage-private",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "No corpus 'Principal/Director+' points for growth-stage-private. Current Staff base p50 ($238K) is a reasonable extrapolation above the L5 corpus anchors (Databricks $219K-$301K senior band). No direct evidence this round -> kept medium."
+}

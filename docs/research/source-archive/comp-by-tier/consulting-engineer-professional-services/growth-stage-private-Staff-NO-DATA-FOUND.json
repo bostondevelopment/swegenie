@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "growth-stage-private",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "medium",
+  "rationale": "Same corpus 'Senior/Staff' bucket as L5 (Greenhouse $79.3K-$95K, Pendo ~$145K-$175K). File's Staff base p50 ($225K) is well above the top of this real range (Pendo's high end $175K), a larger gap than at L5. Raising low\u2192medium only because real anchors exist at all in this tier for senior-level roles, but the gap here is the largest in the growth-stage-private column and should be treated as a genuine overstatement flag, not resolved uncertainty."
+}

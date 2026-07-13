@@ -1,0 +1,319 @@
+{
+  "archetype_id": "solutions-architect-vendor-side",
+  "postings_analyzed": 57,
+  "top_requirements": [
+    {
+      "requirement": "5-10+ years of customer- or partner-facing technical experience (pre-sales, SA, SE, TAM); almost no postings target entry-level candidates",
+      "approx_frequency": "~50 of 57 explicitly state a years-of-experience floor, nearly all 5+ and most 8-10+"
+    },
+    {
+      "requirement": "Hands-on public cloud platform experience (AWS most common, then Azure, then GCP), often with a named vendor certification (AWS Certified Solutions Architect, Azure Solutions Architect Expert, etc.)",
+      "approx_frequency": "AWS in 35/57, Azure in 25/57, GCP in 18/57; 'certification' appears in 33/57"
+    },
+    {
+      "requirement": "Executive/cross-level stakeholder communication and presentation skill ('server room to boardroom', C-suite/CTO engagement)",
+      "approx_frequency": "explicit 'stakeholder' language in 20/57; virtually all 57 describe engaging both engineers and executives in prose even when the word isn't used"
+    },
+    {
+      "requirement": "Coding/scripting fluency as a supporting skill (Python, SQL, Java/C#, JS), not a production-engineering bar",
+      "approx_frequency": "Python in 23/57, SQL in 12/57 - concentrated in the data-platform vendors (Databricks, MongoDB, ClickHouse)"
+    },
+    {
+      "requirement": "Platform-specific deep expertise in one ecosystem (SAP S/4HANA, Workday HCM/Financials, or Salesforce Sales/Service/Revenue Cloud) for the enterprise-implementation-architect cluster",
+      "approx_frequency": "~14 of 57 postings (Zip x7, 3M, Anaplan, Via, OneTrust, Valtech, Reply x2, Salesforce-internal)"
+    },
+    {
+      "requirement": "Willingness to travel to partner/customer sites",
+      "approx_frequency": "explicit travel language in 18/57 (e.g., GDIT: 4x/year onsite at VA facilities; Databricks Sr ISV: partner events, summits, conferences)"
+    },
+    {
+      "requirement": "Bachelor's degree in CS/Engineering/related field or equivalent work experience",
+      "approx_frequency": "18/57 state this explicitly, usually as 'or equivalent experience' rather than a hard gate"
+    },
+    {
+      "requirement": "Track record producing reusable technical collateral (reference architectures, TCO analyses, migration plans, playbooks)",
+      "approx_frequency": "TCO/architecture-deliverable language in 23/57"
+    }
+  ],
+  "top_responsibilities": [
+    "Enable and certify a partner ecosystem (GSIs, ISVs, cloud providers) so partner teams can independently sell, deploy, and troubleshoot the vendor's product - the dominant day-to-day pattern for the ~33 'Partner Solutions Architect' postings in this sample (Stripe, Databricks, Datadog, MongoDB, ClickHouse, Supabase, Anthropic, Saviynt, Airtable, Remote.com).",
+    "Co-sell and deal-support work: embedding on specific technically-stalled opportunities, providing hands-on architecture guidance mid-cycle, and acting as an escalation point when a partner or customer deployment gets stuck.",
+    "Build and maintain reusable technical assets - reference architectures, solution playbooks, demos, integration guides, blog posts - designed to scale across many deals/partners rather than being produced fresh per account.",
+    "Run senior relationship management with partner/customer leadership: quarterly business reviews, joint technical strategy sessions, and executive briefings on roadmap and value.",
+    "Serve as a structured feedback channel from partners/customers back into Product and Engineering on gaps, feature requests, and deployment patterns.",
+    "Represent the company externally at partner events, industry conferences, developer meetups, and (for several postings) create public content - talks, blog posts, video - aimed at partner or developer-community enablement.",
+    "For the enterprise-platform-implementation cluster (~14 postings: Zip, 3M, Anaplan, Via, OneTrust, Valtech, Reply, Salesforce-internal): own end-to-end solution architecture for one platform (SAP/Workday/Salesforce) inside a single enterprise - translating business requirements into governed technical designs, defining integration/extension standards, and leading design-review governance rather than running a pre-sales deal cycle at all."
+  ],
+  "comp_signals": [
+    {
+      "company": "Databricks",
+      "range_text": "Local Pay Range $180,000 - $247,500 USD (Specialist Solutions Architect - GCP & Infrastructure)",
+      "source_url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8589834002"
+    },
+    {
+      "company": "Databricks",
+      "range_text": "Local Pay Range $219,100 - $301,300 USD (Sr. ISV & Partner Solutions Architect)",
+      "source_url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8439172002"
+    },
+    {
+      "company": "Datadog",
+      "range_text": "Estimated yearly salary $143,000 - $209,000 USD (Partner Solutions Architect, GSI - AMER East)",
+      "source_url": "https://careers.datadoghq.com/detail/8003977/?gh_jid=8003977"
+    },
+    {
+      "company": "Datadog",
+      "range_text": "Estimated yearly salary $201,000 - $295,000 USD (Principal Partner Solutions Architect, Public Sector - Fed)",
+      "source_url": "https://careers.datadoghq.com/detail/7943824/?gh_jid=7943824"
+    },
+    {
+      "company": "MongoDB",
+      "range_text": "Base salary range $104,000 - $204,000 USD (Senior Partner Solutions Architect, Atlanta/Austin/Dallas/Florida/Miami)",
+      "source_url": "https://www.mongodb.com/careers/job/?gh_jid=7683484"
+    },
+    {
+      "company": "Zip",
+      "range_text": "$135,000 - $200,000 OTE (Solutions Architect - SAP, Remote US)",
+      "source_url": "https://jobs.ashbyhq.com/zip/b4e91377-9377-4dd5-80a4-a8e4fa6f58e2"
+    },
+    {
+      "company": "Zip",
+      "range_text": "$120,000 - $180,000 OTE (Solutions Architect - Workday Financials, Remote US)",
+      "source_url": "https://jobs.ashbyhq.com/zip/e864cd40-313d-4ccb-a0f5-cfd8158e2cda"
+    },
+    {
+      "company": "Salesforce",
+      "range_text": "Typical base salary $172,500 - $260,100 annually (Workday Solution Architect, 6 locations incl. SF/NYC premium)",
+      "source_url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Software-Engineer--ES---Finance-Platform_JR343613"
+    },
+    {
+      "company": "3M",
+      "range_text": "$145,676 - $178,049 (base plus variable incentive pay, if eligible) (Salesforce Solutions Architect / Senior Engineer)",
+      "source_url": "https://3m.wd1.myworkdayjobs.com/Search/job/US-Minnesota-Maplewood/Salesforce-Solutions-Architect---Senior-Engineer_R01163922"
+    },
+    {
+      "company": "GDIT",
+      "range_text": "Likely salary range $147,292 - $199,278 (Cloud Solutions Architect)",
+      "source_url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Cloud-Solutions-Architect_RQ222733"
+    },
+    {
+      "company": "GDIT",
+      "range_text": "Likely salary range $182,750 - $247,250 (Cloud Solutions Architect, second req)",
+      "source_url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Cloud-Solutions-Architect_RQ222761-2"
+    },
+    {
+      "company": "Reply",
+      "range_text": "Base compensation $175,000 - $225,000 plus benefits (SAP Solution Architect, Chicago)",
+      "source_url": "https://jobs.lever.co/reply/97080a11-ea93-40b4-bb4c-5c2ac57d829f"
+    },
+    {
+      "company": "Via",
+      "range_text": "Salary range $115,000 - $140,000 (excludes equity/variable pay) (Workday Solutions Architect)",
+      "source_url": "https://job-boards.greenhouse.io/via/jobs/8186241002"
+    },
+    {
+      "company": "OneTrust",
+      "range_text": "Salary range $150,675 - $226,012.50 USD (Senior Salesforce Solution Architect)",
+      "source_url": "https://job-boards.greenhouse.io/onetrust/jobs/7959371"
+    }
+  ],
+  "seniority_distribution_notes": "Overwhelmingly senior-plus. Nearly every posting states a years-of-experience floor of 5+ and most are 8-10+ (Stripe consistently 10+, Datadog 10-15+, GDIT 8-15+); only two postings (Saviynt's combined \"Associate/Principal\" listing) even mention an associate-level rung, and no posting in the sample is a true entry-level/Associate SA req on its own. Titles skew \"Senior\"/\"Staff\"/\"Principal\" (11 Senior, 2 Principal, 1 Staff of 57) with the remaining 43 formally unmarked but requiring senior-level years-of-experience in the body text - i.e. \"unmarked\" does not mean junior here. This suggests the brief's ladder entry rung (\"Associate Solutions Architect\") is real as an internal promotion path but is not what's currently being externally recruited for on public job boards.",
+  "notable_divergence_from_existing_brief": "Two structural divergences worth flagging for review. (1) Title/scope mix: ~33 of 57 postings (58%) are \"Partner Solutions Architect\" roles whose primary counterpart is a channel partner (GSI/ISV/cloud provider), not a direct end-customer prospect - enabling, co-selling with, and evangelizing to partner technical teams rather than running discovery/POC engagements directly with a buying prospect the way the brief's GitLab-handbook-centered narrative describes. A second, smaller cluster (~14 postings: Zip x7, 3M, Anaplan, Via, OneTrust, Valtech, Reply x2, Salesforce-internal) is \"Solutions Architect\" + platform name (SAP/Workday/Salesforce) at companies that are either implementing that platform internally as enterprise IT (Anaplan, Via, Salesforce-internal, 3M) or are systems-integrator/consultancy shops delivering it for clients (Reply, Valtech) or a federal IT contractor (GDIT) - none of these are \"vendor advocating its own product to a prospect,\" which is the brief's core definition of this archetype. This is a real classification-boundary risk: the sourcing rubric appears to pull in \"Solutions Architect\" + well-known enterprise-platform-name postings regardless of whether the employer is the platform vendor, a customer of the platform, or a consulting/SI firm implementing it for others - several of these arguably belong in the consulting-side-SA archetype or a separate enterprise-IT-architect bucket instead. (2) Comp-structure emphasis: the brief and current dimension scores lean heavily on sales-KPI/quota-linked variable comp as a defining trait (variable_comp_appetite target 4, weight 0.9, citing GitLab's handbook and Glean/Temporal OTE figures). In this live sample, explicit quota/commission language is nearly absent from posting text - 0/57 postings use the word \"quota,\" only Zip's two postings state an explicit \"OTE\" figure, and every other \"bonus\" mention in the corpus reads as standard corporate bonus/equity boilerplate rather than sales-attainment-linked variable pay. The comp figures actually stated (see comp_signals) mostly read like base-salary-anchored roles (GDIT, 3M, Via, OneTrust, Reply, Salesforce-internal) rather than OTE-first sales comp. This doesn't necessarily mean the brief is wrong about the archetype's ideal-typical vendor-SA structure (its sourcing draws on different, more classic examples like Glean/Temporal/GitLab), but it does mean the *currently live, externally-posted* titles matching this archetype's keyword pattern skew toward roles where quota-linked variable pay isn't a headline feature - worth a closer look at whether the dimension target should soften or whether the sourcing/classification needs tightening to better isolate the classic quota-bearing vendor pre-sales SA from the partner-enablement and enterprise-platform-implementation flavors that dominate this sample.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Postings describe defining partner/enablement programs and joint GTM strategy from loosely scoped starting points, but much of the day-to-day (enablement content, reference architectures, POC playbooks) follows fairly established patterns - consistent with a moderate rather than extreme rating."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 3,
+      "current_weight": 0.4,
+      "supports_current_scoring": true,
+      "note": "Multiple postings describe being an 'escalation point for complex technical issues' and unblocking stalled deals ad hoc, alongside scheduled workshops/QBRs - a plannable-but-frequently-interrupted cadence matches target 3."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No posting in the sample mentions paging, on-call rotations, or incident SLAs; risk framing throughout is deal/relationship-based, not operational uptime. Strongly supports a low target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "'Troubleshoot complex integration scenarios,' 'support troubleshooting' appear repeatedly (Supabase, Databricks, Datadog) but scoped to partner/customer environment issues, not deep systems-internals debugging - consistent with a bounded, moderate rating."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": false,
+      "note": "Partial divergence: several postings describe architecture reused across many partner-built deployments or 'hundreds of future implementations' (Zip: integration templates powering scalable, repeatable customer implementations across the whole SAP/Workday ecosystem) rather than a single customer's environment - scale may trend higher than target 3 for a meaningful subset, worth review."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Confirmed strongly: single-vendor/single-platform deep expertise (AWS/Azure/GCP cert, Salesforce/SAP/Workday specialization) applied across many different customer or partner contexts is the modal pattern across the whole sample."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Postings use accountability language ('accountable for the outcome of these initiatives' - Datadog) but the explicit comp-to-outcome linkage the brief cites is thin in the actual text (see variable_comp_appetite note) - the ownership/accountability framing itself is well-supported even though its comp mechanism is less visible than expected."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Overwhelmingly confirmed - 'trusted advisor,' C-suite/CTO/CISO engagement, and cross-level workshop language appear in nearly every posting regardless of sub-flavor (partner-facing or platform-implementation)."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": false,
+      "note": "Possible underweight for the partner/channel sub-flavor: several postings explicitly call for leading workshops, seminars, meetups, hackathons, blog posts, and video content aimed at partner/developer-community enablement (Supabase, Databricks Sr ISV, ClickHouse) - a stronger public-teaching component than target 2 implies for this segment, though the enterprise-platform-implementation cluster shows little of this."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 4,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Confirmed - Micron 'assigned cloud and enterprise accounts,' Datadog 'portfolio of high-value federal and public sector partners,' and territory/segment-based partner coverage (Datadog GSI AMER East/West, EMEA regions) are the norm across the Partner SA cluster."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 2,
+      "current_weight": 0.6,
+      "supports_current_scoring": false,
+      "note": "Mixed evidence: the pre-sale-bounded framing holds for some postings, but several Partner SA roles describe sustained, ongoing embedded relationships with partner technical teams ('embed with partner technical teams,' continuous enablement and escalation ownership - Databricks Sr ISV, Anthropic) that read as longer-continuity account ownership rather than deal-bounded handoff to CS. Worth a closer look, though not a strong or uniform divergence."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": false,
+      "note": "Meaningful divergence: 0/57 postings use the word 'quota,' only 2/57 (Zip) state an explicit OTE figure, and other 'bonus' mentions read as standard corporate boilerplate, not sales-attainment-linked variable pay. The live-posting comp text skews toward flat/base-anchored ranges (GDIT, 3M, Via, OneTrust, Reply, Salesforce-internal) more than the aggressive-attainment framing borrowed from GitLab's handbook - the underlying claim may still hold for the classic pre-sales vendor SA the brief is centered on, but this sample doesn't strongly corroborate it as currently posted."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 2,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Coding/scripting fluency (Python, SQL, Java/C#) is a named requirement in a meaningful minority (concentrated in data-platform vendors: MongoDB, Databricks, ClickHouse) but consistently framed as 'working knowledge' supporting POC/demo work, not a production-engineering bar - consistent with a moderate-low target."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Explicit travel requirements appear in about a third of postings (GDIT: 4x/year onsite; Micron/Databricks Sr ISV: global partner events, summits, conferences) - regular but not majority-of-weeks, consistent with target 3."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Essentially absent from the sample outside compliance/governance mentions (Datadog federal: FedRAMP, zero-trust; GDIT: security authorization evidence) which are governance/compliance framing rather than adversarial threat modeling - supports a low target."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Absent across the sample except Micron (memory/storage system-level hardware constraints), which is the single outlier confirming this is rare rather than modal - supports a low target."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Sample is overwhelmingly IC-scoped; only one posting (Databricks 'Sr. Manager, Partner Solutions Architect') is explicitly a management-track req, consistent with a low-to-moderate target reflecting an available-but-not-default management branch."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "Possible underweight: several postings explicitly require external public-facing work - blog posts, conference talks (e.g. AWS re:Invent), video content, and representing the company at industry events (Supabase, ClickHouse, Databricks Sr ISV, Anthropic) - a real public-visibility component for the partner/channel sub-flavor that a target of 1 likely undercounts, though it's absent from the enterprise-platform-implementation cluster."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Only appears meaningfully at AI-specific vendors (Anthropic's Applied AI PSA, Databricks Sr ISV's GenAI/agentic-framework language) - a minority pattern, matching the brief's own caveat that an AI-solutions variant would score higher but isn't the modal case."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Not mentioned in any of the 57 postings - strongly supports a low target."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Elevated for specific data-platform vendors (Databricks: Spark/MLflow/Delta Lake; MongoDB; ClickHouse: OLAP/analytics) but those are a minority of the 21 companies in the corpus, which spans payments, observability, CRM, ERP/HCM, and identity too - low average target still holds across the full breadth of the sample."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 2,
+      "current_weight": 0.2,
+      "supports_current_scoring": false,
+      "note": "Possible underweight: AWS appears as a named requirement/context in 35/57 postings, Azure in 25/57, GCP in 18/57 - a large share of this archetype's live postings are literally partner-facing roles built around one specific cloud platform's ecosystem (e.g. 'Partner Solutions Architect - AWS' at Stripe/Supabase, 'AWS Cloud Partner Solutions Architect' at Databricks). A target of 2 may understate how central named-cloud-platform fluency is to a large fraction of this archetype's current postings."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Stripe",
+      "title": "Partner Solutions Architect - AWS",
+      "url": "https://stripe.com/jobs/search?gh_jid=7607761"
+    },
+    {
+      "company": "Anthropic",
+      "title": "Partner Solutions Architect, Applied AI",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5222908008"
+    },
+    {
+      "company": "Supabase",
+      "title": "Partner Solutions Architect - AWS",
+      "url": "https://jobs.ashbyhq.com/supabase/85606cff-df9a-462e-a6b9-5c7d0892eaa8"
+    },
+    {
+      "company": "Zip",
+      "title": "Solutions Architect - SAP",
+      "url": "https://jobs.ashbyhq.com/zip/b4e91377-9377-4dd5-80a4-a8e4fa6f58e2"
+    },
+    {
+      "company": "GDIT (General Dynamics Information Technology)",
+      "title": "Cloud Solutions Architect",
+      "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Cloud-Solutions-Architect_RQ222733"
+    },
+    {
+      "company": "3M",
+      "title": "Salesforce Solutions Architect / Senior Engineer",
+      "url": "https://3m.wd1.myworkdayjobs.com/Search/job/US-Minnesota-Maplewood/Salesforce-Solutions-Architect---Senior-Engineer_R01163922"
+    },
+    {
+      "company": "MongoDB",
+      "title": "Senior Partner Solutions Architect",
+      "url": "https://www.mongodb.com/careers/job/?gh_jid=7683484"
+    },
+    {
+      "company": "OneTrust",
+      "title": "Senior Salesforce Solution Architect",
+      "url": "https://job-boards.greenhouse.io/onetrust/jobs/7959371"
+    }
+  ]
+}

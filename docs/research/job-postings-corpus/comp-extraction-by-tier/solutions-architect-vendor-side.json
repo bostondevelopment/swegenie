@@ -1,0 +1,235 @@
+{
+  "archetypeId": "solutions-architect-vendor-side",
+  "grid": {
+    "ai-labs": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "faang-mag7": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "high-growth-public": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": {
+        "count": 5,
+        "companyCount": 3,
+        "low": 115000,
+        "high": 285800,
+        "median": 176000,
+        "companies": [
+          "Datadog",
+          "Salesforce",
+          "Via"
+        ],
+        "points": [
+          {
+            "low": 143000,
+            "high": 209000,
+            "raw_match": "$143,000 &mdash; $209,000",
+            "context": "al planning, and mental health benefits, a 401(k) plan and match, paid time off, fitness reimbursements, and a discounted employee stock purchase plan. The reasonably estimated yearly salary for this role at Datadog is: $143,000 &mdash; $209,000 USD About Datadog:&nbsp; Datadog is the leading observability and security platform for the AI era, providing businesses with unified visibility across the technology stack to manage complexity at scale. It brings appli",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Datadog",
+            "title": "Partner Solutions Architect (GSI) - AMER East",
+            "location": "Boston, Massachusetts, USA; New York, New York, USA",
+            "url": "https://careers.datadoghq.com/detail/8003977/?gh_jid=8003977",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 143000,
+            "high": 209000,
+            "raw_match": "$143,000 &mdash; $209,000",
+            "context": "al planning, and mental health benefits, a 401(k) plan and match, paid time off, fitness reimbursements, and a discounted employee stock purchase plan. The reasonably estimated yearly salary for this role at Datadog is: $143,000 &mdash; $209,000 USD About Datadog:&nbsp; Datadog is the leading observability and security platform for the AI era, providing businesses with unified visibility across the technology stack to manage complexity at scale. It brings appli",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Datadog",
+            "title": "Partner Solutions Architect (GSI) - AMER West",
+            "location": "Denver, Colorado, USA; San Francisco, California, USA",
+            "url": "https://careers.datadoghq.com/detail/8010455/?gh_jid=8010455",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 172500,
+            "high": 260100,
+            "raw_match": "$172,500 - $260,100",
+            "context": "and conviction records. At Salesforce, we believe in equitable compensation practices that reflect the dynamic nature of labor markets across various regions.&#xa;&#xa;The typical base salary range for this position is $172,500 - $260,100 annually. In select cities within the San Francisco and New York City metropolitan area, the base salary range for this role is $207,800 - $285,800 annually.&#xa;&#xa;The range represents base salary only, and does not",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Salesforce",
+            "title": "Workday Solution Architect",
+            "location": "6 Locations",
+            "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Software-Engineer--ES---Finance-Platform_JR343613",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 207800,
+            "high": 285800,
+            "raw_match": "$207,800 - $285,800",
+            "context": "us regions.&#xa;&#xa;The typical base salary range for this position is $172,500 - $260,100 annually. In select cities within the San Francisco and New York City metropolitan area, the base salary range for this role is $207,800 - $285,800 annually.&#xa;&#xa;The range represents base salary only, and does not include company bonus, incentive for sales roles, equity or benefits, as applicable.",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Salesforce",
+            "title": "Workday Solution Architect",
+            "location": "6 Locations",
+            "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Software-Engineer--ES---Finance-Platform_JR343613",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 115000,
+            "high": 140000,
+            "raw_match": "$115,000-$140,000",
+            "context": "priorities. Compensation and Benefits:&nbsp; Final salary will be determined by the candidate\u2019s experience, knowledge, and skills. Salary reflected does not include equity or variable pay, where applicable Salary Range: $115,000-$140,000 We are proud to offer a generous and comprehensive benefits package, including free medical plans and 401K matching. We\u2019re Via, and we build technology that changes the way the world moves. We pioneered the TransitTech",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Via",
+            "title": "Workday Solutions Architect",
+            "location": "New York, NY",
+            "url": "https://job-boards.greenhouse.io/via/jobs/8186241002",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
+      "Senior/Staff": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 104000,
+        "high": 204000,
+        "median": 154000,
+        "companies": [
+          "MongoDB"
+        ],
+        "points": [
+          {
+            "low": 104000,
+            "high": 204000,
+            "raw_match": "$104,000 &mdash; $204,000",
+            "context": ", and health benefits offerings. Please note, the base salary range listed below and the benefits in this paragraph are only applicable to U.S.-based candidates. MongoDB\u2019s base salary range for this role in the U.S. is: $104,000 &mdash; $204,000 USD",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "MongoDB",
+            "title": "Senior Partner Solutions Architect",
+            "location": "Atlanta; Austin; Dallas; Florida; Miami",
+            "url": "https://www.mongodb.com/careers/job/?gh_jid=7683484",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 201000,
+        "high": 295000,
+        "median": 248000,
+        "companies": [
+          "Datadog"
+        ],
+        "points": [
+          {
+            "low": 201000,
+            "high": 295000,
+            "raw_match": "$201,000 &mdash; $295,000",
+            "context": "al planning, and mental health benefits, a 401(k) plan and match, paid time off, fitness reimbursements, and a discounted employee stock purchase plan. The reasonably estimated yearly salary for this role at Datadog is: $201,000 &mdash; $295,000 USD About Datadog:&nbsp; Datadog is the leading observability and security platform for the AI era, providing businesses with unified visibility across the technology stack to manage complexity at scale. It brings appli",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Datadog",
+            "title": "Principal Partner Solutions Architect (Public Sector - Fed)",
+            "location": "District of Columbia, USA, Remote; Maryland, USA, Remote; Virginia, USA, Remote",
+            "url": "https://careers.datadoghq.com/detail/7943824/?gh_jid=7943824",
+            "level_hint": "Principal/Director+ (Manager/VP)",
+            "tier": "high-growth-public"
+          }
+        ]
+      }
+    },
+    "growth-stage-private": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 180000,
+        "high": 247500,
+        "median": 213750,
+        "companies": [
+          "Databricks"
+        ],
+        "points": [
+          {
+            "low": 180000,
+            "high": 247500,
+            "raw_match": "$180,000 &mdash; $247,500",
+            "context": "this position may also include eligibility for annual performance bonus, equity, and the benefits listed above. For more information regarding which range your location is in visit our page here . &nbsp; Local Pay Range $180,000 &mdash; $247,500 USD About Databricks Databricks is the data and AI company. More than 10,000 organizations worldwide \u2014 including Comcast, Cond\u00e9 Nast, Grammarly, and over 50% of the Fortune 500 \u2014 rely on the Databricks Data Intelligence",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Databricks",
+            "title": "Specialist Solutions Architect - Google Cloud Platform & Infrastructure",
+            "location": "United States",
+            "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8589834002",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "growth-stage-private"
+          }
+        ]
+      },
+      "Senior/Staff": {
+        "count": 2,
+        "companyCount": 2,
+        "low": 53850,
+        "high": 301300,
+        "median": 177638,
+        "companies": [
+          "Databricks",
+          "Remote.com"
+        ],
+        "points": [
+          {
+            "low": 219100,
+            "high": 301300,
+            "raw_match": "$219,100 &mdash; $301,300",
+            "context": "this position may also include eligibility for annual performance bonus, equity, and the benefits listed above. For more information regarding which range your location is in visit our page here . &nbsp; Local Pay Range $219,100 &mdash; $301,300 USD About Databricks Databricks is the data and AI company. More than 10,000 organizations worldwide \u2014 including Comcast, Cond\u00e9 Nast, Grammarly, and over 50% of the Fortune 500 \u2014 rely on the Databricks Data Intelligence",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Databricks",
+            "title": "Sr. ISV & Partner Solutions Architect",
+            "location": "United States",
+            "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8439172002",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 53850,
+            "high": 136300,
+            "raw_match": "$53,850 &mdash; $136,300",
+            "context": "ss. Therefore, all compensation changes associated with an internal move will be reviewed by the Total Rewards &amp; People Enablement team on a case by case basis. The annual salary range for this full-time position is $53,850 &mdash; $136,300 USD Benefits Our full benefits &amp; perks are explained in our handbook at&nbsp; remote.com/r/benefits . As a global company, each country works differently, but some benefits/perks are for all Remoters: work from anyw",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Remote.com",
+            "title": "Senior Partner Solutions Architect",
+            "location": "Remote-AMER",
+            "url": "https://job-boards.greenhouse.io/remotecom/jobs/7702818003",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          }
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "early-stage": {
+      "Entry/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    }
+  },
+  "totalUsdBasePoints": 14,
+  "unclassifiedCompanyPoints": 4
+}

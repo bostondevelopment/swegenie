@@ -1,0 +1,19 @@
+{
+  "archetypeId": "technical-product-manager",
+  "workflowLabel": "comp-structure-band-gap-fill",
+  "sourceCount": 2,
+  "sources": [
+    {
+      "url": "https://job-boards.greenhouse.io/wheelhouse/jobs/4704758005",
+      "title": "",
+      "note": "Checked the corpus file first (docs/research/job-postings-corpus/comp-extraction/technical-product-manager.json): it was already fully incorporated into the first-pass comp-structure.json entry (its Mid points map to Cisco/Caterpillar, its Principal points to Hasbro/Scopely/Upwork), so there was no missed-but-present data to recover from the existing corpus alone. New real data found via targeted web search (job postings/mirrors, not crowdsourced averages): (1) Wheelhouse, plain-titled 'Technical Product Manager' (mid-to-senior, 5+ yrs PM experience required), base $136,000-$152,000, remote-fi",
+      "kind": "url_in_freetext"
+    },
+    {
+      "url": "https://www.builtinnyc.com/job/senior-director-technical-product-manager/8750670",
+      "title": "",
+      "note": "Checked the corpus file first (docs/research/job-postings-corpus/comp-extraction/technical-product-manager.json): it was already fully incorporated into the first-pass comp-structure.json entry (its Mid points map to Cisco/Caterpillar, its Principal points to Hasbro/Scopely/Upwork), so there was no missed-but-present data to recover from the existing corpus alone. New real data found via targeted web search (job postings/mirrors, not crowdsourced averages): (1) Wheelhouse, plain-titled 'Technical Product Manager' (mid-to-senior, 5+ yrs PM experience required), base $136,000-$152,000, remote-fi",
+      "kind": "url_in_freetext"
+    }
+  ]
+}

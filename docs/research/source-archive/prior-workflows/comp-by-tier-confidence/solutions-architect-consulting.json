@@ -1,0 +1,19 @@
+{
+  "archetypeId": "solutions-architect-consulting",
+  "workflowLabel": "comp-by-tier-confidence",
+  "sourceCount": 2,
+  "sources": [
+    {
+      "url": "https://www.levels.fyi/companies/mistral-ai/salaries",
+      "title": "Mistral AI Salaries | Levels.fyi",
+      "note": "Highest reported Solution Architect package at Mistral is $326,625 TC (common-range average, no level breakdown) \u2014 a data point for the generic SA title only, not a consulting variant.",
+      "kind": "structured_citation"
+    },
+    {
+      "url": "https://www.levels.fyi/companies/openai/salaries/solution-architect",
+      "title": "OpenAI Solution Architect Salary | Levels.fyi",
+      "note": "Same $418K L4 median used for vendor-side; no consulting-specific SA data exists to justify this archetype's lower numbers independently.",
+      "kind": "structured_citation"
+    }
+  ]
+}

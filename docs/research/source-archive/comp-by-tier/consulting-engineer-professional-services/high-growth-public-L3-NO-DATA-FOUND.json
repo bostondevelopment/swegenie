@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "high-growth-public",
+  "level": "L3",
+  "result": "no-public-data-found",
+  "currentConfidence": "medium",
+  "recommendedConfidence": "medium",
+  "rationale": "Already medium and well-supported by corpus 'Mid (unspecified level)' bucket (16 points, 5 companies: Adyen, Axon, Cisco, GitLab, Samsara; range $66K-$240K, median $131.6K). File's L3 base p50 $131K matches the corpus median almost exactly. No new research needed; keeping medium (not raising to high because the corpus bucket blends L3/L4 without a clean split)."
+}

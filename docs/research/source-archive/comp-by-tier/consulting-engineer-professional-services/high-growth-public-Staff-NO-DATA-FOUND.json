@@ -1,0 +1,9 @@
+{
+  "archetypeId": "consulting-engineer-professional-services",
+  "tier": "high-growth-public",
+  "level": "Staff",
+  "result": "no-public-data-found",
+  "currentConfidence": "low",
+  "recommendedConfidence": "medium",
+  "rationale": "Uses the same corpus 'Senior/Staff' bucket as L5 (3 points: Adyen $184K-$276K, GitLab Sr Mgr PS Tech Architect $171K-$289K, Broadcom $100K-$160K) \u2014 the GitLab and Adyen upper bounds ($276K-$289K) plausibly represent the Staff end of this blended bucket. File's Staff base p50 ($225K) falls within the range. Raising low\u2192medium, but flagging that L5 and Staff share the exact same 3 underlying corpus points (the bucket doesn't cleanly separate the two levels), so this is weaker support than a level-clean anchor."
+}

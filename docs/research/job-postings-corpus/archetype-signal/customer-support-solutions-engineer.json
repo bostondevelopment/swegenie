@@ -1,0 +1,310 @@
+{
+  "archetype_id": "customer-support-solutions-engineer",
+  "postings_analyzed": 197,
+  "top_requirements": [
+    {
+      "requirement": "Comfort with cloud/networking fundamentals (AWS/Azure/GCP, DNS, TCP/IP, SSO/SAML)",
+      "approx_frequency": "~100-105 of 197 mention AWS (85) and/or cloud generally (103); SSO/SAML in ~55-65"
+    },
+    {
+      "requirement": "API/REST fluency (reading docs, debugging integrations, sometimes scripting against APIs)",
+      "approx_frequency": "130 of 197 mention API; 90 mention REST specifically"
+    },
+    {
+      "requirement": "Stakeholder/executive communication and presentation skills",
+      "approx_frequency": "129 of 197 mention 'stakeholder'; 82 explicitly call out communication skills; 29 mention presentation skills"
+    },
+    {
+      "requirement": "Prior customer-facing technical role experience (TAM, CSE, support engineer, SE, or consulting), typically ~5 years",
+      "approx_frequency": "70 of 197 state a years-of-experience bar; '5' (years) is the single most common figure, appearing in 33 postings"
+    },
+    {
+      "requirement": "SQL / scripting language proficiency (Python most common, some Java/JavaScript)",
+      "approx_frequency": "SQL in 57; Python in 52; Java in 55; JavaScript in 42; general 'scripting' in 34"
+    },
+    {
+      "requirement": "Security/identity domain knowledge (SSO, SAML, OAuth, IAM) \u2014 concentrated in security-vertical companies",
+      "approx_frequency": "security mentioned in 102 of 197 (many generic 'data security' boilerplate); SAML in 19, OAuth in 14 \u2014 concentrated among Okta/Saviynt/Ping Identity/Obsidian/Transmit Security postings"
+    },
+    {
+      "requirement": "Willingness to travel to customer sites / onsite presence (not universal, but a real and non-trivial subset)",
+      "approx_frequency": "89 of 197 postings' text contains 'travel'; ~74 of those are outside Axon (e.g., Datadog TAM 'up to 30% travel,' Airwallex 'willing to travel within Europe') \u2014 plus Axon's 22 postings are largely onsite/embedded/traveling roles by design"
+    },
+    {
+      "requirement": "Bachelor's degree in CS/Engineering or equivalent experience",
+      "approx_frequency": "37 of 197 explicitly reference a Bachelor's requirement (often 'or equivalent experience')"
+    },
+    {
+      "requirement": "Monitoring/observability and incident/root-cause debugging skills",
+      "approx_frequency": "incident in 53; root cause in 22; monitoring in 28; Datadog specifically named in 16 (often as a tool the candidate should know, not just the company)"
+    },
+    {
+      "requirement": "Kubernetes/Docker/containers familiarity",
+      "approx_frequency": "Kubernetes in 22 of 197; Docker in 15 \u2014 concentrated in infra/dev-tools companies (ClickHouse, Datadog, JetBrains, Fastly)"
+    },
+    {
+      "requirement": "ITIL or formal support-process/certification background",
+      "approx_frequency": "ITIL in 18; general 'certification' mentioned in 47 (often as 'preferred' rather than required, sometimes security certs like CISSP)"
+    }
+  ],
+  "top_responsibilities": [
+    "Serve as the customer's primary/named technical point of contact and trusted advisor across the post-sale lifecycle, not just at renewal time \u2014 the single most common framing across the corpus ('point of contact' ~48 postings, 'trusted advisor' ~42).",
+    "Own onboarding and implementation project management for new accounts: scoping technical requirements, coordinating internal teams, and driving the customer to first production use (85 of 197 mention onboarding explicitly).",
+    "Drive product adoption and usage growth within an assigned book/portfolio of accounts, often through proactive health checks, best-practice guidance, and periodic account reviews (adoption appears in 131 of 197 \u2014 the single most common responsibility phrase found; best-practice guidance in 97).",
+    "Manage technical escalations for owned accounts \u2014 triaging, coordinating with engineering/product on root cause, and communicating status back to the customer (escalation in 91; root cause in 22; 'engineering team' collaboration in 77).",
+    "Act as the voice of the customer internally: aggregating feature requests and product feedback into structured input for product/engineering roadmap conversations (product feedback and feature-request mentions across dozens of postings, though less universal than adoption/escalation).",
+    "Support renewal and expansion motions indirectly \u2014 flagging technical health/risk signals to CSM/AM/Sales partners rather than owning the commercial number directly in most postings, though a meaningful minority (see comp_signals/OTE note) tie TAM comp partly to renewal/expansion outcomes.",
+    "Run and/or coordinate proof-of-concept, upgrade, and deployment work for existing accounts (deployment in 57; upgrade in 38; integration in 118 \u2014 the most frequently mentioned technical activity after adoption).",
+    "Build and maintain internal documentation, runbooks, and enablement/training materials that scale account knowledge beyond the individual TAM/CSE (runbook and 'best practice' documentation recurring themes, though less dominant than the core account-relationship responsibilities)."
+  ],
+  "comp_signals": [
+    {
+      "company": "Affirm",
+      "range_text": "CAN base pay range per year: $133,000 - $183,000 (Senior Technical Account Manager)",
+      "source_url": "https://job-boards.greenhouse.io/affirm/jobs/7773968003"
+    },
+    {
+      "company": "Cloudflare",
+      "range_text": "Estimated annual salary $126,000-$158,000 (Seattle) / $114,000-$143,000 (Denver) for Senior Technical Account Manager",
+      "source_url": "https://boards.greenhouse.io/cloudflare/jobs/8030327?gh_jid=8030327"
+    },
+    {
+      "company": "Postman",
+      "range_text": "Base salary estimated $150,000-$200,000 for Customer Success Engineer/DevOps",
+      "source_url": "https://job-boards.greenhouse.io/postman/jobs/7501796003"
+    },
+    {
+      "company": "Vercel",
+      "range_text": "San Francisco base pay range $163,000-$204,000 for Senior Technical Account Manager",
+      "source_url": "https://job-boards.greenhouse.io/vercel/jobs/6112845004"
+    },
+    {
+      "company": "Harvey",
+      "range_text": "Compensation range $119,000-$161,000 USD for Technical Account Manager; a separate Weekend-coverage TAM posting lists $92,000-$138,000 USD",
+      "source_url": "https://jobs.ashbyhq.com/harvey/7af582ea-39f0-4e4c-ad4d-74f9740686bf"
+    },
+    {
+      "company": "Semgrep",
+      "range_text": "Salary range $145,000-$210,000 for Senior Technical Account Manager",
+      "source_url": "https://jobs.ashbyhq.com/semgrep/329d1aa9-86ee-40ce-9c2b-35b64c0b3ce2"
+    },
+    {
+      "company": "Descope",
+      "range_text": "Base salary range $110,000-$160,000 for Customer Success Engineer",
+      "source_url": "https://job-boards.greenhouse.io/descope/jobs/4305471009"
+    },
+    {
+      "company": "HP",
+      "range_text": "Pay range $116,150-$182,400 USD annually for Customer Success Engineer, Industry Solutions",
+      "source_url": "https://hp.wd5.myworkdayjobs.com/ExternalCareerSite/job/Spring-Texas-United-States-of-America/Customer-Success-Engineer--Industry-Solutions_3164216-2"
+    },
+    {
+      "company": "Hightouch",
+      "range_text": "Customer Success Engineer: $85,000-$110,000/yr base; separately, Technical Account Manager (Enterprise) On-Target Earnings $200,000-$250,000 with Base Salary $160,000-$200,000, i.e. a meaningful commission component on the TAM track specifically",
+      "source_url": "https://job-boards.greenhouse.io/hightouch/jobs/5699984004"
+    },
+    {
+      "company": "Cisco (ThousandEyes Federal)",
+      "range_text": "Starting salary $128,100-$168,200 (base range); NYC metro band $158,200-$241,700 for Technical Account Manager | ThousandEyes Federal",
+      "source_url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/Austin-Texas-US/Technical-Account-Manager---FedRAMP_2011762"
+    },
+    {
+      "company": "Ibotta",
+      "range_text": "Base compensation range $135,000-$156,000 for Technical Account Manager (TAM)",
+      "source_url": "https://jobs.ashbyhq.com/ibotta/01330747-fff5-4cec-991b-de54f426abce"
+    }
+  ],
+  "seniority_distribution_notes": "Corpus skews mid-level, not entry-level and not staff/principal-heavy. Only 2 of 197 titles carry a junior/associate/entry marker, versus 34 with \"Senior/Sr.\" and 7 with \"Staff/Principal\" \u2014 the large remainder (~150+) carry no seniority modifier at all (plain \"Technical Account Manager\" or \"Customer Success Engineer\"), which in practice reads as a mid-level individual-contributor bar: 70 of 197 postings state an explicit years-of-experience requirement, and \"5\" (years, typically \"5+\") is by far the most common figure (33 postings), followed by 3, 4, and 8 years in smaller numbers. This confirms the existing brief's implicit framing (no true entry-level on-ramp) but sharpens it \u2014 the modal bar is closer to \"5+ years of relevant customer-facing/technical experience\" than a broad junior-through-staff spread, and staff/principal is a real but small (~3.5%) minority of postings.",
+  "notable_divergence_from_existing_brief": "Two real divergences worth flagging for review, plus one confirmation.\n\n(1) TITLE MIX: the brief frames \"Customer Success Engineer\" as the anchor title with \"Technical Account Manager (TAM, boundary case)\" as secondary, and the user-facing results-copy never once uses the word \"Technical Account Manager.\" But in this live 197-posting sample, TAM-titled postings outnumber CSE/Customer-Solutions-Engineer-titled postings roughly 4.5-to-1 (155 vs. 34). The brief's own \"posting corpus scale\" section already hinted at this (6 of its 8 representative companies were TAM-titled) but the narrative sections (day-to-day, misconceptions, results-copy) still center CSE language. Worth a copy check: someone searching \"Technical Account Manager\" job titles should recognize themselves in this archetype's page, and right now the page never says that phrase.\n\n(2) VARIABLE COMP: the brief and results-copy both state comp is \"base-heavy... not sales-style commission\" and this is baked into variable_comp_appetite = target 1 (very low), weight 0.5. The posting sample shows this holds for most postings, but not universally \u2014 19 of 197 (~10%) explicitly mention commission and 17 (~9%) state an OTE (on-target-earnings) structure, concentrated in TAM-titled roles at companies like Hightouch (TAM Enterprise: OTE $200K-$250K vs. base $160K-$200K \u2014 a real, non-trivial variable component), Veriff (\"base salary + commission\"), Transmit Security (\"OTE salary range\"), and Plaid/Trace3/Braze/Obsidian Security postings that mention commission language. This is a minority pattern, not the norm, so it doesn't overturn target=1, but a weight of 0.5 with zero acknowledgment of the commission-bearing minority may slightly overstate how uniformly non-variable this archetype's comp is \u2014 especially for the TAM-titled slice of the role, which per finding (1) is actually the majority title.\n\n(3) TRAVEL/ONSITE (confirms a gap already flagged rather than contradicts): travel_embed_willingness is scored low (target 2, weight 0.3) with rationale \"some periodic in-person engagement without sustained physical embedding.\" The sample shows a real subset that goes well beyond \"periodic\" \u2014 Axon alone (22 of 197 postings, ~11% of the corpus) hires TAMs that are explicitly \"Embedded... Onsite\" or \"Traveling,\" physically stationed at customer sites (police departments, sheriff's offices, 911 dispatch centers) as a structural feature of the public-safety vertical, and even outside Axon, Datadog's TAM posting requires \"up to 30% travel via auto, train or air\" and \"traveling to and from client sites,\" with Airwallex requiring travel \"within Europe as required.\" This doesn't necessarily mean the target should move (the QBR-cadence, non-embedded framing likely still describes the median SaaS TAM/CSE), but the weight of 0.3 may undersell how much this varies by vertical \u2014 a reviewer may want to note that public-safety/hardware-adjacent and enterprise-field TAM roles are a real, sizable sub-pattern with much higher travel/embed demands than the archetype's central tendency.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Postings consistently describe qualitative success framing (trusted-advisor language, 'voice of the customer,' account health) without crisp numeric targets in the job text itself; consistent with a high-ambiguity target."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 2,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Corpus shows scheduled-cadence language (onboarding, adoption, account reviews) as primary, though escalation handling (91 of 197 postings) is a real interrupt-driven component layered on top \u2014 target of 2 (low-but-not-zero) is reasonable, not purely deep-work."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 2,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Explicit on-call language appears in only 11 of 197 postings; escalation ownership is common but formal paging/on-call rotations are rare in the text, consistent with a low-but-nonzero target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Root-cause (22), incident (53), and debugging-adjacent language appear regularly but less centrally than relationship/adoption language \u2014 consistent with moderate (not deep specialist) diagnostic depth."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe platform/systems architecture ownership; role is implementation/integration support at the account level, consistent with a low target."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Heavy emphasis on one vendor's product/API/cloud stack (API in 130, cloud in 103) applied repeatedly across accounts rather than broad multi-domain depth \u2014 consistent with a moderate target."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Adoption/health-metric ownership is common, but the OTE/commission minority found in this sample (Hightouch, Veriff, Transmit Security) suggests some TAM roles tie compensation more directly to account outcomes than the brief implies \u2014 still consistent with a mid target of 3, arguably a light upward pressure worth noting rather than acting on unilaterally."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 4,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "Stakeholder language appears in 129 of 197 postings and communication/presentation skills are near-universal requirements \u2014 strongly supports a high target."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 4,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "Enablement/best-practice/training language (97 mention 'best practice') is consistently present, though usually secondary to the relationship/escalation-management responsibilities in framing \u2014 supports a high but not maximal target."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 4,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Sample corroborates the brief's own v1.1 correction: postings consistently describe a book/portfolio of many concurrent named accounts (Hightouch, Braze, ClickHouse, Okta all reference multi-account ownership), not a single deep relationship."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 5,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "'Trusted advisor,' 'primary point of contact,' and renewal-cycle language throughout the corpus support indefinite, ongoing per-account accountability at the highest end of this dimension."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Majority-consistent (most postings show base+modest-bonus, no quota language in 191 of 197), but see notable_divergence: ~10% of postings (concentrated in TAM-titled roles) show real OTE/commission structures \u2014 target of 1 may be slightly too extreme for the TAM-titled majority of the archetype's real-world title mix; worth a second look rather than an automatic change."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": false,
+      "note": "See notable_divergence: Axon (11% of corpus) plus explicit travel requirements at Datadog and Airwallex suggest a low-weight target of 2 may undersell a real, sizable sub-population of onsite/embedded/traveling TAM roles, particularly in public-safety, hardware-adjacent, and enterprise-field verticals \u2014 evidence does not cleanly support the low weight as currently set."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No postings in the sample describe threat-modeling or adversarial security work as a core responsibility, even at security-vertical companies (Okta, Saviynt, Ping Identity) \u2014 those postings focus on identity-product enablement/support, not offensive/defensive security analysis."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "No hardware/physical-constraint engineering content found, even in Axon's postings (which involve physical travel/embedding but not hardware-constraint engineering work itself)."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 1,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "No postings in the IC-titled sample describe direct-report management; management appears only as an implied senior/staff branch, consistent with a low IC-track target."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Enablement/workshop language throughout is consistently framed as account-specific (1:1 or 1:few with a named customer's team), not public-facing content or conference-style visibility \u2014 consistent with a low target."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No meaningful ML-engineering requirement pattern found across the sample (occasional 'AI' product-name mentions, e.g. Stripe's 'AI User Segment' TAM, reflect product domain, not ML engineering skill requirements)."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No mobile-platform-specific requirement pattern found in the sample."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "Some data-infra product-domain exposure at companies like ClickHouse/Snowflake, but not framed as a core cross-archetype requirement pattern; low weight (0.1) appropriately treats this as company-specific rather than archetype-defining."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "Cloud terminology (AWS/Azure/GCP/cloud) appears extremely frequently (103-105 of 197 postings) \u2014 likely reflecting genuine expected fluency with customers' cloud environments for troubleshooting/integration work, not just incidental language. A target of 1 (essentially irrelevant) with weight 0.1 looks low relative to how often cloud fluency is named as a requirement, though much of this may be surface-level familiarity rather than deep infra-engineering skill, so this is flagged for review rather than a confident correction."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "Stripe",
+      "title": "Technical Account Manager",
+      "url": "https://stripe.com/jobs/search?gh_jid=6613516"
+    },
+    {
+      "company": "Datadog",
+      "title": "Technical Account Manager",
+      "url": "https://careers.datadoghq.com/detail/8018694/?gh_jid=8018694"
+    },
+    {
+      "company": "Cloudflare",
+      "title": "Senior Technical Account Manager",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/8027731?gh_jid=8027731"
+    },
+    {
+      "company": "JetBrains",
+      "title": "Backend Customer Success Engineer (Kotlin Ecosystem)",
+      "url": "https://job-boards.eu.greenhouse.io/jetbrains/jobs/4845999101"
+    },
+    {
+      "company": "Harvey",
+      "title": "Technical Account Manager, Weekend Coverage, EMEA",
+      "url": "https://jobs.ashbyhq.com/harvey/78c71402-02bf-4533-99c6-10c1bad10b02"
+    },
+    {
+      "company": "Ping Identity",
+      "title": "Senior Technical Account Manager",
+      "url": "https://job-boards.greenhouse.io/pingidentity/jobs/8593150002"
+    },
+    {
+      "company": "Hightouch",
+      "title": "Customer Success Engineer",
+      "url": "https://job-boards.greenhouse.io/hightouch/jobs/5699984004"
+    },
+    {
+      "company": "Axon",
+      "title": "Embedded Technical Account Manager - El Paso 911 District HQ",
+      "url": "https://job-boards.greenhouse.io/axon/jobs/7791817003"
+    }
+  ]
+}

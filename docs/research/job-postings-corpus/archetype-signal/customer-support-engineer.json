@@ -1,0 +1,392 @@
+{
+  "archetype_id": "customer-support-engineer",
+  "postings_analyzed": 319,
+  "top_requirements": [
+    {
+      "requirement": "General troubleshooting/problem-solving ability (explicit \"troubleshoot\" language)",
+      "approx_frequency": "243 of 319 postings"
+    },
+    {
+      "requirement": "Escalation handling / escalation-management experience",
+      "approx_frequency": "162 of 319"
+    },
+    {
+      "requirement": "Cloud platform exposure (generic \"cloud\" language)",
+      "approx_frequency": "159 of 319"
+    },
+    {
+      "requirement": "Networking fundamentals (DNS, TCP/IP, load balancers, VPNs, etc.)",
+      "approx_frequency": "146 of 319"
+    },
+    {
+      "requirement": "Strong written/verbal communication skills named explicitly",
+      "approx_frequency": "126 of 319"
+    },
+    {
+      "requirement": "Explicit years-of-experience floor (commonly 2-5 years)",
+      "approx_frequency": "123 of 319"
+    },
+    {
+      "requirement": "Python scripting proficiency",
+      "approx_frequency": "121 of 319"
+    },
+    {
+      "requirement": "API/webhook debugging experience",
+      "approx_frequency": "107 of 319"
+    },
+    {
+      "requirement": "Linux/Unix administration familiarity",
+      "approx_frequency": "104 of 319"
+    },
+    {
+      "requirement": "Prior SaaS/technical-support background specifically (not generic customer service)",
+      "approx_frequency": "101 of 319"
+    },
+    {
+      "requirement": "SQL query-writing ability",
+      "approx_frequency": "91 of 319"
+    },
+    {
+      "requirement": "CS-degree or equivalent mentioned",
+      "approx_frequency": "88 of 319 mention \"computer science\"; 41 explicitly say \"Bachelor's\""
+    },
+    {
+      "requirement": "Named cloud vendor experience (AWS specifically, often AWS/Azure/GCP interchangeably)",
+      "approx_frequency": "73 of 319, frequently paired with CI/CD, distributed-systems, or JVM language"
+    },
+    {
+      "requirement": "On-call/rotation participation",
+      "approx_frequency": "75 of 319 mention on-call; 63 mention rotation; 71 mention weekend coverage"
+    },
+    {
+      "requirement": "Jira/ticketing-tool familiarity",
+      "approx_frequency": "56 of 319 (Jira); 37 generic \"ticketing system\"; 26 Zendesk; 30 Salesforce"
+    },
+    {
+      "requirement": "Kubernetes/container knowledge",
+      "approx_frequency": "42 of 319"
+    },
+    {
+      "requirement": "Explicit SLA ownership language",
+      "approx_frequency": "42 of 319"
+    },
+    {
+      "requirement": "Some willingness to travel (usually minor/occasional)",
+      "approx_frequency": "44 of 319"
+    }
+  ],
+  "top_responsibilities": [
+    "Triaging and resolving inbound tickets/cases across multiple channels (ticketing system, live chat, email, community forums like GitHub/Discord), typically against tiered severity and SLA targets.",
+    "Reproducing customer-reported bugs and diagnosing root cause using logs, traces, SQL queries, and API tools before looping in engineering.",
+    "Serving as the escalation point for complex or high-severity issues, coordinating with Engineering/Product to drive fixes and communicating status back to the customer.",
+    "Authoring and improving internal documentation, runbooks, and knowledge-base articles so recurring issues can be self-served or resolved faster next time (documentation/KB language appeared in ~45 of 319 postings).",
+    "Feeding recurring issue/contact-reason patterns back to Product and Engineering to influence roadmap and reduce future ticket volume, rather than treating each ticket as isolated.",
+    "Building or improving internal tooling and automation to speed up diagnosis and reduce repetitive manual work \u2014 a theme that intensified toward 'support engineering as an engineering discipline' framing at several companies.",
+    "Onboarding/product education for new or existing customers alongside pure break-fix work, especially at earlier-stage or PLG companies (Supabase, Sentry-style postings).",
+    "Participating in on-call/weekend rotation for the most senior or highest-severity tier, mirrored at the top end by dedicated escalation/'Staff Support Engineer' roles that own the escalation model organization-wide rather than individual tickets.",
+    "At AI-product companies specifically (OpenAI's several 'AI Support Engineer' reqs, Sentry's framing), a newer responsibility pattern: treating support volume as training signal to build automated/agentic resolution paths, with humans reserved for the most complex cases \u2014 support engineers are being asked to help build the automation that handles lower-tier volume, not just staff the queue."
+  ],
+  "comp_signals": [
+    {
+      "company": "CoreWeave",
+      "range_text": "Manager, Technical Support Engineer: $198,000\u2013$264,000",
+      "source_url": "https://coreweave.com/careers/job?4696038006&board=coreweave&gh_jid=4696038006"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "Technical Support Engineer III (Cloud): $122,000\u2013$163,000",
+      "source_url": "https://coreweave.com/careers/job?4568136006&board=coreweave&gh_jid=4568136006"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "Technical Support Engineer II (Cloud): $100,000\u2013$160,000",
+      "source_url": "https://coreweave.com/careers/job?4649049006&board=coreweave&gh_jid=4649049006"
+    },
+    {
+      "company": "CoreWeave",
+      "range_text": "Technical Support Engineer II (Bare Metal): $83,000\u2013$145,000",
+      "source_url": "https://coreweave.com/careers/job?4560350006&board=coreweave&gh_jid=4560350006"
+    },
+    {
+      "company": "LangChain",
+      "range_text": "Senior Technical Support Engineer: $130,000\u2013$195,000",
+      "source_url": "https://jobs.ashbyhq.com/langchain/8aa63e71-b431-49d7-ab4a-bf4b3630d8e6"
+    },
+    {
+      "company": "Crusoe",
+      "range_text": "Staff Cloud Support Engineer: $156,000\u2013$190,000",
+      "source_url": "https://jobs.ashbyhq.com/crusoe/9f84d6cc-6efe-4fd3-aa22-80a5003cd924"
+    },
+    {
+      "company": "Immuta",
+      "range_text": "Support Engineer (APJ): $175,000\u2013$205,000 and $192,500\u2013$225,500 bands cited in same posting (likely dual currency/level bands)",
+      "source_url": "https://jobs.lever.co/immuta/d56a5011-8fbd-4b13-96a7-17b59ce134b1"
+    },
+    {
+      "company": "Salesforce",
+      "range_text": "VP, Technical Support Engineering \u2013 Agentforce and Data 360: $221,900\u2013$390,300 (second band $266,800\u2013$426,900)",
+      "source_url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Indiana---Indianapolis/VP--Technical-Support-Engineering---Agentforce-and-Data-360_JR348133"
+    },
+    {
+      "company": "PlanetScale",
+      "range_text": "Enterprise Support Engineer: $120,000\u2013$200,000",
+      "source_url": "https://job-boards.greenhouse.io/planetscale/jobs/4009926009"
+    },
+    {
+      "company": "Semgrep",
+      "range_text": "Senior Technical Support Engineer: $133,000\u2013$167,000",
+      "source_url": "https://jobs.ashbyhq.com/semgrep/be222089-a1b0-4cc4-a15c-17575a477318"
+    },
+    {
+      "company": "Carta",
+      "range_text": "Senior IT Support Engineer: $136,000\u2013$160,000",
+      "source_url": "https://job-boards.greenhouse.io/carta/jobs/7784260003"
+    },
+    {
+      "company": "Sentry",
+      "range_text": "Senior Technical Support Engineer: $125,000\u2013$150,000; Technical Support Engineer: $100,000\u2013$125,000",
+      "source_url": "https://jobs.ashbyhq.com/sentry/0580bfa2-ee00-41c9-94b8-df3d3b4e7fcc"
+    },
+    {
+      "company": "Palantir Technologies",
+      "range_text": "Support Engineer: $87,000\u2013$115,000",
+      "source_url": "https://jobs.lever.co/palantir/838bce97-415d-4cdc-95ea-904005feb131"
+    },
+    {
+      "company": "Broadcom",
+      "range_text": "Staff Technical Support Engineer \u2013 Mainframe: $88,300\u2013$141,300",
+      "source_url": "https://broadcom.wd1.myworkdayjobs.com/External_Career/job/USA-IL-Lisle-Warrenville-Road/Staff-Technical-Support-Engineer---Mainframe_R025730",
+      "company_url_note": null
+    },
+    {
+      "company": "Redis",
+      "range_text": "Technical Support Engineer: $91,455\u2013$137,273",
+      "source_url": "https://jobs.ashbyhq.com/redis/89c3a3dd-27dd-4e30-9bfd-65268fe7b880"
+    },
+    {
+      "company": "Intercom",
+      "range_text": "Technical Support Engineer: $81,000\u2013$98,000",
+      "source_url": "https://job-boards.greenhouse.io/intercom/jobs/7122157"
+    },
+    {
+      "company": "Adyen",
+      "range_text": "Product Support Engineer: $80,000\u2013$105,000",
+      "source_url": "https://job-boards.greenhouse.io/adyen/jobs/7347356"
+    },
+    {
+      "company": "Fictiv",
+      "range_text": "Customer Support Engineer \u2014 Mechanical & Industrial Products: $65,000\u2013$80,000",
+      "source_url": "https://job-boards.greenhouse.io/fictiv/jobs/8545767002"
+    },
+    {
+      "company": "HYPR",
+      "range_text": "Senior Customer Support Engineer: $75,000\u2013$90,000",
+      "source_url": "https://www.hypr.com/open-positions?gh_jid=8616168002"
+    },
+    {
+      "company": "Greenhouse",
+      "range_text": "Senior Support Engineer: $87,700\u2013$127,100",
+      "source_url": "https://job-boards.greenhouse.io/greenhouse/jobs/7993560?gh_jid=7993560"
+    }
+  ],
+  "seniority_distribution_notes": "The sample skews mid-to-senior: 50 of 319 titles explicitly say \"Senior,\" another ~15 use tier notation like \"Engineer II\"/\"III,\" and 11+2+9 are Staff/Principal/Lead. There is also a real, non-trivial slice of people-management reqs baked into this archetype's title-matched corpus \u2014 19 \"Manager,\" 3 \"VP,\" and 1 \"Director\" title (e.g., Datadog \"Director, Technical Support Engineering,\" Salesforce \"VP, Technical Support Engineering,\" CoreWeave \"Manager, Technical Support Engineer\") \u2014 roughly 7% of postings are leadership/management reqs, not IC tickets-in-queue roles, even though this archetype's dimension profile (people_management_orientation target=1) assumes management is a minor lateral exit rather than a common entry req. True entry-level signals are thin: explicit \"Junior\"/\"Entry\" appear zero times in titles, and only 2 postings use \"Engineer I\" notation; most junior-leaning roles are just labeled plain \"Support Engineer\" or \"Associate\" (10 postings) rather than tiered numerically. The majority (171 of 319) carry no seniority qualifier in the title at all, consistent with \"Support Engineer\"/\"Technical Support Engineer\" functioning as a broad, level-agnostic default title that companies then internally level.",
+  "notable_divergence_from_existing_brief": "Two things the fresh sample surfaces that the existing brief doesn't emphasize enough. (1) Cloud/infra fluency is far more load-bearing than the brief's comp-only framing suggests: \"cloud\" language appears in 159/319 postings, AWS specifically in 73/319 (often as \"AWS, Azure, or GCP\" alongside CI/CD, Kubernetes, or distributed-systems debugging \u2014 e.g., Databricks' Designated Support Engineer reqs), and Kubernetes appears in 42/319. The taxonomy's cloud_infrastructure_fluency dimension is currently scored target=1/weight=0.1 (\"Not relevant to this archetype's scope\") for this archetype, which likely undersells how often infra-support flavors of this role (CoreWeave, Crusoe, Databricks, Snowflake) genuinely require hands-on cloud-platform troubleshooting \u2014 worth a reviewer look, though the \"reactive ticket queue\" core identity still holds. (2) An AI-native support pattern not present in the existing brief: OpenAI runs 7 distinct \"AI Support Engineer\" reqs across regions/shifts, and Sentry's posting explicitly frames the job as building \"automated resolution paths\" and acting as \"Orchestrators\" of agentic support systems, with humans reserved for the hardest cases. This extends (rather than contradicts) the brief's misconception #3 (\"AI will eliminate the role\") \u2014 the fresh evidence shows companies actively hiring support engineers to build/operate the automation, not just be automated around, which is a more specific and currently-live framing than the brief's general \"shift in mix\" language. Everything else \u2014 SLA/CSAT/escalation language, base+modest-bonus comp structure, low account continuity, senior-skewed titling, Python/SQL/API technical bar \u2014 is well corroborated by this larger sample and matches the brief closely.",
+  "dimension_evidence": [
+    {
+      "dimension_id": "ambiguity_tolerance",
+      "current_target": 2,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "Explicit SLA (42/319) and structured ticket/case language dominate; tickets are framed as discrete, scoped problems rather than open-ended mandates, consistent with a low target."
+    },
+    {
+      "dimension_id": "interrupt_tolerance",
+      "current_target": 5,
+      "current_weight": 1,
+      "supports_current_scoring": true,
+      "note": "Ticket/case-queue framing (multi-channel: chat, email, forums) is near-universal across the sample; this is the structurally defining trait, strongly supporting a max target/weight."
+    },
+    {
+      "dimension_id": "oncall_incident_appetite",
+      "current_target": 4,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "On-call (75/319), rotation (63/319), and weekend coverage (71/319) are common but not universal \u2014 present in roughly a quarter of postings, consistent with a high-but-not-maximal target."
+    },
+    {
+      "dimension_id": "debugging_diagnostic_depth",
+      "current_target": 4,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Troubleshooting language is near-ubiquitous (243/319) and frequently paired with SQL (91), API/webhook debugging (107), and log/trace analysis \u2014 strongly supports a high target."
+    },
+    {
+      "dimension_id": "systems_design_scale",
+      "current_target": 2,
+      "current_weight": 0.3,
+      "supports_current_scoring": true,
+      "note": "Tooling/script-building is mentioned as a byproduct of support work, not platform design for many consuming teams; low target holds, though Staff-level reqs (CircleCI, Databricks) edge toward higher design scope."
+    },
+    {
+      "dimension_id": "technical_breadth_depth",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Postings commonly require ranging across networking (146), cloud (159), APIs (107), and language-specific debugging (Python 121, Java 43, JS 41) \u2014 moderate multi-layer breadth, consistent with target=3."
+    },
+    {
+      "dimension_id": "outcome_accountability",
+      "current_target": 3,
+      "current_weight": 0.7,
+      "supports_current_scoring": true,
+      "note": "SLA (42) ownership is named but bounded to ticket/queue scope rather than a sustained account outcome; moderate target is reasonable, though explicit CSAT mentions are surprisingly rare (9/319), suggesting the brief may overstate how uniformly CSAT is a named, tracked metric across real postings vs. FRT/SLA."
+    },
+    {
+      "dimension_id": "stakeholder_client_comfort",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Communication skills are explicitly named in 126/319 and customer-facing language in 81/319, but counterparts are case-by-case technical practitioners, not sustained relationships \u2014 moderate target holds."
+    },
+    {
+      "dimension_id": "teaching_enjoyment",
+      "current_target": 2,
+      "current_weight": 0.5,
+      "supports_current_scoring": true,
+      "note": "Documentation/KB-authoring appears in 45/319 postings, generally framed as a secondary output of ticket resolution rather than a primary evaluated deliverable \u2014 consistent with a low-moderate target."
+    },
+    {
+      "dimension_id": "account_portfolio_breadth",
+      "current_target": 5,
+      "current_weight": 0.8,
+      "supports_current_scoring": true,
+      "note": "Anonymous high-volume queue language dominates; only 1/319 postings (LogicMonitor) mentions anything resembling a defined account book, strongly supporting the max-breadth target."
+    },
+    {
+      "dimension_id": "relationship_continuity",
+      "current_target": 1,
+      "current_weight": 0.9,
+      "supports_current_scoring": true,
+      "note": "Named-account/book-of-business/dedicated-account language is essentially absent (1/319 hits), strongly confirming the low-continuity anchor-case scoring."
+    },
+    {
+      "dimension_id": "variable_comp_appetite",
+      "current_target": 1,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "None of the 33 postings with explicit comp figures mention commission; bonus/equity is the standard variable structure, confirming low target. No repeat of the PagerDuty commission anomaly noted in the brief."
+    },
+    {
+      "dimension_id": "coding_intensity",
+      "current_target": 3,
+      "current_weight": 0.6,
+      "supports_current_scoring": true,
+      "note": "Python (121), SQL (91), Java (43), JS (41), Kubernetes (42), Docker (21) appear substantially \u2014 real hands-on technical bar, but framed as diagnostic/scripting rather than product feature development, consistent with a moderate (not high) target."
+    },
+    {
+      "dimension_id": "travel_embed_willingness",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Travel language appears in 44/319 (~14%) postings, almost always as minor/occasional boilerplate rather than a core job requirement; remote-eligible language (102/319) is far more common, supporting the low target."
+    },
+    {
+      "dimension_id": "adversarial_threat_modeling",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Security/vulnerability language appears in only 29/319 postings and mostly refers to security-product support (e.g., handling customer questions about a security product) rather than the support engineer doing adversarial threat modeling themselves \u2014 low target holds."
+    },
+    {
+      "dimension_id": "physical_constraint_engineering",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "The vast majority of postings are pure SaaS/software support. A small hardware-adjacent cluster exists (Verkada's 9 physical-security/IoT-device postings) but is a clear minority, not representative enough to move the target."
+    },
+    {
+      "dimension_id": "people_management_orientation",
+      "current_target": 1,
+      "current_weight": 0.3,
+      "supports_current_scoring": false,
+      "note": "23 of 319 postings (Manager x19, VP x3, Director x1) are dedicated management reqs baked into this title-matched corpus, higher than the brief's framing of management as merely 'one lateral exit path' suggests. Worth a reviewer look at whether management-titled reqs should be filtered out of the archetype's IC-scoring evidence base, since they pull the observed corpus toward more management content than the target=1 IC-anchored score assumes \u2014 though the underlying target for the archetype's *typical IC* day-to-day is still well supported."
+    },
+    {
+      "dimension_id": "public_visibility_comfort",
+      "current_target": 1,
+      "current_weight": 0.2,
+      "supports_current_scoring": true,
+      "note": "Support channels described are ticket/chat/forum-based (GitHub, Discord, internal systems), 1:1 or small-group technical exchanges, not public-content creation \u2014 low target holds."
+    },
+    {
+      "dimension_id": "ml_engineering_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "ML/AI terminology appears mainly in company-context boilerplate (Databricks 'AI ecosystems,' OpenAI product domain) rather than as a requirement that the support engineer build or train models themselves; low target still reasonable."
+    },
+    {
+      "dimension_id": "mobile_platform_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": true,
+      "note": "No meaningful mobile-specific requirement pattern surfaced in the sample; low target holds."
+    },
+    {
+      "dimension_id": "data_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "SQL appears in 91/319 postings and several data-platform-specific support roles (Databricks, Snowflake, Redis, Immuta) require real data-infrastructure fluency (Spark/JVM tuning, data pipeline debugging) as a core requirement, not an edge case. This is a low-weight dimension (0.1) so the practical scoring impact is small, but the target=1 'not relevant' framing undersells the data-heavy sub-cluster within this archetype worth a reviewer note."
+    },
+    {
+      "dimension_id": "cloud_infrastructure_fluency",
+      "current_target": 1,
+      "current_weight": 0.1,
+      "supports_current_scoring": false,
+      "note": "Cloud language appears in 159/319 postings and AWS specifically in 73/319, often paired with CI/CD and Kubernetes requirements (CoreWeave, Crusoe, Databricks, Snowflake support roles). Given the low weight (0.1) the overall scoring impact is limited, but 'not relevant to this archetype's scope' is a stronger claim than the evidence supports \u2014 a meaningful infra-support sub-cluster exists within this archetype."
+    }
+  ],
+  "representative_companies_currently_hiring": [
+    {
+      "company": "OpenAI",
+      "title": "Senior Support Engineer - Dublin",
+      "url": "https://jobs.ashbyhq.com/openai/988016e1-de50-42be-925a-438b97291c5d"
+    },
+    {
+      "company": "Datadog",
+      "title": "Director, Technical Support Engineering",
+      "url": "https://careers.datadoghq.com/detail/7707345/?gh_jid=7707345"
+    },
+    {
+      "company": "Supabase",
+      "title": "Support Engineer (AMER)",
+      "url": "https://jobs.ashbyhq.com/supabase/e4e3ccb7-7b7d-42a2-be0f-26cbb5ae4abd"
+    },
+    {
+      "company": "CoreWeave",
+      "title": "Technical Support Engineer II (Cloud)",
+      "url": "https://coreweave.com/careers/job?4649049006&board=coreweave&gh_jid=4649049006"
+    },
+    {
+      "company": "Salesforce",
+      "title": "GovCloud Nightforce Support Engineer (US Citizen Only)",
+      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Washington---Seattle/GVC-Cloud-Nightforce-Support-Engineer--US-Citizen-Only-_JR350799"
+    },
+    {
+      "company": "Boeing",
+      "title": "Experienced Support Engineering Data Specialist",
+      "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Daytona-Beach-FL/Experienced-Support-Engineering-Data-Specialist_JR2026518336-1"
+    },
+    {
+      "company": "CircleCI",
+      "title": "Staff Support Engineer",
+      "url": "http://www.circleci.com/careers/jobs/8563206002/?gh_jid=8563206002"
+    },
+    {
+      "company": "Redis",
+      "title": "Technical Support Engineer",
+      "url": "https://jobs.ashbyhq.com/redis/89c3a3dd-27dd-4e30-9bfd-65268fe7b880"
+    }
+  ]
+}
