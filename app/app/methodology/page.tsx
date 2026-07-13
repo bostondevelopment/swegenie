@@ -186,16 +186,15 @@ export default function MethodologyPage() {
             <p className="text-[17px] leading-[1.7]">
               Manually curated from Levels.fyi public role pages, the Carta H1 2025 State of
               Startup Compensation report, techinterview.org, and the Cadence engineering-comp
-              blog. It is a{" "}
+              blog, cross-checked against salary figures pulled from a 67,000+ job-posting corpus
+              for the archetypes where postings were plentiful enough to yield a usable sample.
+              This is{" "}
               <strong className="text-[var(--color-fg)]">
-                mid-2025 snapshot, not a real-time feed
+                not a live feed
               </strong>{" "}
-              — treat it as directional, and expect drift as the market moves. Every cell is backed
-              by real per-company, per-level compensation data (Levels.fyi per-level breakdowns and
-              12,000+ real job postings from the research corpus, classified by company tier and
-              level), and the citation behind every cell — including an explicit record for cells
-              with no public data — is permanently archived, so none of it depends on a live URL
-              that may go stale.
+              — treat it as directional, and expect drift as the market moves. Every cell carries a
+              citation — including an explicit record for cells with no public data — and it&apos;s
+              permanently archived, so none of it depends on a live URL that may go stale.
             </p>
           </Callout>
 

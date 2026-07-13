@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "generatedAt": "2026-07-12",
-  "sourcesNote": "Manually curated from levels.fyi public pages, Carta H1 2025, techinterview.org, Cadence blog. Not real-time. A 2026-07-12 research pass (multi-cluster web search) reviewed low-confidence cells across nine archetypes and upgraded several to medium confidence where real levels.fyi/company-specific data corroborated existing figures; most cells lacking verifiable sourced data were left at low.",
+  "sourcesNote": "Manually curated from levels.fyi public pages, Carta H1 2025, techinterview.org, and the Cadence blog, cross-checked against job-posting salary data where a usable sample exists. Not a live feed. Confidence is medium where levels.fyi or company-specific data corroborates the figure, and low elsewhere.",
   "tiers": [
     "ai-labs",
     "faang-mag7",

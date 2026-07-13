@@ -55,7 +55,7 @@ export default function StaffCrossPage() {
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <StaffCrossTable rows={rows} />
           <p className="mt-10 text-[13px] text-[var(--color-muted-2)] leading-[1.6] max-w-2xl">
-            Directional context only, not financial advice. Figures are a mid-2025 snapshot of US
+            Directional context only, not financial advice. Figures aren&apos;t a live feed of US
             individual-contributor total-comp submissions — see the{" "}
             <Link href="/methodology" className="underline hover:text-[var(--color-fg)]">
               methodology
