@@ -186,7 +186,7 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
                 {archetypeCompData && <CompSection archetypeId={id} data={archetypeCompData} />}
               </ExpandableCard>
               <Link
-                href="/archetypes/staff-cross"
+                href="/archetypes/compare"
                 className="mt-6 inline-block font-mono text-[13px] text-[var(--color-accent)] hover:text-[var(--color-fg)] transition-colors"
               >
                 Compare across all archetypes &rarr;

@@ -10,7 +10,7 @@ export function SiteHeader() {
         </Link>
         <nav className="flex items-center gap-3 sm:gap-7 text-[15px] text-[var(--color-muted)]">
           <Link
-            href="/archetypes/staff-cross"
+            href="/archetypes/compare"
             className="hidden sm:inline hover:text-[var(--color-fg)] transition-colors"
           >
             Side by Side
