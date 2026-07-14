@@ -10,7 +10,6 @@ conversation — it states the problem, the exact files involved, and what "done
 |---|---|---|
 | [staff-bucket-leveling-split](staff-bucket-leveling-split/README.md) | Medium — schema + research + UI | No — editorial call, needs human sign-off first |
 | [thin-comp-cells-early-stage](thin-comp-cells-early-stage/README.md) | Small, recurring | No — legitimately thin markets, not a bug |
-| [staff-cross-slug-rename](staff-cross-slug-rename/README.md) | Small | No — cosmetic |
 | [copy-rules-debt-cleanup](copy-rules-debt-cleanup/README.md) | Medium — spans ~9 files | No — pre-existing, not introduced by this branch |
 
 None of these are scheduled or cron'd. Pick them up manually, one at a time, whenever there's
