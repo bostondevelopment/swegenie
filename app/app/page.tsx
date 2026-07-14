@@ -41,7 +41,7 @@ export default function Home() {
         <section className="relative overflow-hidden flex flex-col lg:min-h-[calc(100vh-4rem)]">
           <div className="flex-1 flex items-center">
             <div className="mx-auto max-w-6xl w-full px-4 sm:px-6 py-8 grid lg:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="text-center sm:text-left">
                 <p className="font-mono text-[13px] tracking-[0.22em] text-[var(--color-accent)] mb-6">
                   FIND YOUR LANE
                 </p>
@@ -56,13 +56,13 @@ export default function Home() {
                   </span>
                   ?
                 </h1>
-                <p className="text-lg leading-relaxed text-[var(--color-muted)] max-w-md mb-9">
+                <p className="text-lg leading-relaxed text-[var(--color-muted)] max-w-md mx-auto sm:mx-0 mb-9">
                   Opportunities for software engineers have expanded beyond the classic job
                   titles.
                   <br />
                   Discover which ones fit you best — ranked, and explained.
                 </p>
-                <div className="flex flex-wrap items-center gap-4">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
                   <Link href="/assessment" className="btn-primary px-7 py-4 text-[17px] font-semibold">
                     Take the assessment →
                   </Link>
@@ -109,6 +109,45 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:hidden border-t border-[var(--color-border)] px-4 py-6">
+            <div
+              className="relative overflow-hidden rounded-[20px] border border-[var(--color-accent)]/30 px-6 py-7"
+              style={{ background: "linear-gradient(155deg, rgb(163 230 53 / 0.1), var(--color-surface) 55%)" }}
+            >
+              <div
+                className="pointer-events-none absolute rounded-full"
+                style={{
+                  top: "-40%",
+                  right: "-15%",
+                  width: 260,
+                  height: 260,
+                  background: "oklch(0.88 0.19 128 / 0.18)",
+                  filter: "blur(40px)",
+                }}
+              />
+              <div className="relative flex flex-col gap-[18px]">
+                <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wide text-[var(--color-accent)]">
+                  <span className="inline-block h-[7px] w-[7px] rounded-full bg-[var(--color-accent)]" />
+                  Side by side
+                </div>
+                <div>
+                  <div className="mb-1.5 text-[22px] font-extrabold leading-tight tracking-tight">
+                    See how archetypes stack up against each other
+                  </div>
+                  <p className="text-[14.5px] leading-relaxed text-[var(--color-muted)]">
+                    Pick up to 5 and line them up on comp, mix, and day-to-day — side by side.
+                  </p>
+                </div>
+                <Link
+                  href="/archetypes/compare"
+                  className="btn-primary flex w-full items-center justify-center px-5 py-4 text-base font-bold"
+                >
+                  Compare side by side →
+                </Link>
               </div>
             </div>
           </div>
