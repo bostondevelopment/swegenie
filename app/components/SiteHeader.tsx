@@ -13,13 +13,7 @@ export function SiteHeader() {
             href="/archetypes/staff-cross"
             className="hidden sm:inline hover:text-[var(--color-fg)] transition-colors"
           >
-            Compare archetypes
-          </Link>
-          <Link
-            href="/methodology"
-            className="hidden sm:inline hover:text-[var(--color-fg)] transition-colors"
-          >
-            Methodology
+            Side by Side
           </Link>
           <Link
             href="/assessment"

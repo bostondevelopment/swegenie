@@ -447,6 +447,12 @@ export default function ResultsClient() {
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <BetaSurvey topArchetype={top.id} />
         </section>
+
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 pb-12 text-center">
+          <Link href="/methodology" className="text-sm text-[var(--color-muted)] underline hover:text-[var(--color-fg)]">
+            Read the methodology →
+          </Link>
+        </div>
       </main>
       <SiteFooter />
     </>

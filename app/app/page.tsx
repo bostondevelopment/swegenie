@@ -12,20 +12,20 @@ import { archetypes } from "@/lib/taxonomy";
 const ORBIT_SLOTS: { name: string; id: string; top: number; left: number; rotate: number; opacity: number }[] = [
   { name: "Sales Engineer", id: "sales-engineer-pre-sales", top: 8.5, left: 8.5, rotate: -14, opacity: 0.55 },
   { name: "ML Engineer", id: "ml-engineer", top: 5.1, left: 221.0, rotate: 8, opacity: 0.45 },
-  { name: "Customer Support", id: "customer-support-engineer", top: 34.0, left: 357.0, rotate: -8, opacity: 0.4 },
+  { name: "Customer Support", id: "customer-support-engineer", top: 10.0, left: 410.0, rotate: -8, opacity: 0.4 },
   { name: "SRE", id: "sre-production-engineer", top: 110.5, left: 470.9, rotate: 12, opacity: 0.5 },
   { name: "Data Engineer", id: "data-engineer", top: 144.5, left: 8.5, rotate: -8, opacity: 0.5 },
   { name: "DevRel", id: "developer-relations-advocacy", top: 179.35, left: 482.8, rotate: -10, opacity: 0.45 },
   { name: "Forward Deployed", id: "forward-deployed-engineer", top: 369.75, left: 362.1, rotate: -8, opacity: 0.32 },
   { name: "Security Engineer", id: "security-engineer", top: 510.0, left: 392.7, rotate: 8, opacity: 0.45 },
-  { name: "Mobile Engineer", id: "mobile-engineer", top: 280.5, left: 8.5, rotate: 10, opacity: 0.5 },
+  { name: "Mobile Engineer", id: "mobile-engineer", top: 216.8, left: -14.9, rotate: -2, opacity: 0.5 },
   { name: "Embedded", id: "embedded-iot-engineer", top: 428.4, left: 453.9, rotate: -8, opacity: 0.42 },
-  { name: "Customer Success", id: "customer-support-solutions-engineer", top: 497.25, left: 8.5, rotate: 8, opacity: 0.42 },
-  { name: "Platform Engineer", id: "platform-infrastructure-engineer", top: 408.0, left: 8.5, rotate: -12, opacity: 0.48 },
-  { name: "Full-Stack", id: "product-full-stack-software-engineer", top: 494.7, left: 238.0, rotate: 0, opacity: 0.45 },
+  { name: "Customer Success", id: "customer-support-solutions-engineer", top: 476.9, left: 71.7, rotate: 8, opacity: 0.42 },
+  { name: "Platform Engineer", id: "platform-infrastructure-engineer", top: 398.0, left: 8.5, rotate: -12, opacity: 0.48 },
+  { name: "Full-Stack", id: "product-full-stack-software-engineer", top: 320.8, left: 42.7, rotate: 0, opacity: 0.45 },
   { name: "Technical PM", id: "technical-product-manager", top: 271.15, left: 439.45, rotate: 12, opacity: 0.4 },
   { name: "Solutions Architect (vendor)", id: "solutions-architect-vendor-side", top: 80, left: 130, rotate: 6, opacity: 0.28 },
-  { name: "Professional Services Engineer", id: "consulting-engineer-professional-services", top: 547.35, left: 140, rotate: -6, opacity: 0.42 },
+  { name: "Professional Services Engineer", id: "consulting-engineer-professional-services", top: 552.1, left: 36.5, rotate: -6, opacity: 0.42 },
   { name: "Solutions Architect (consulting)", id: "solutions-architect-consulting", top: 620, left: 8.5, rotate: -8, opacity: 0.4 },
   { name: "Engineering Management", id: "engineering-management", top: 600, left: 355, rotate: 8, opacity: 0.4 },
 ];
@@ -50,7 +50,11 @@ export default function Home() {
                   <br />
                   But which role is
                   <br />
-                  right <span className="text-[var(--color-accent)]">for you</span>?
+                  right{" "}
+                  <span className="inline-block rounded-lg px-2 py-1 leading-none ring-2 ring-[var(--color-accent)] text-[var(--color-accent)]">
+                    for you
+                  </span>
+                  ?
                 </h1>
                 <p className="text-lg leading-relaxed text-[var(--color-muted)] max-w-md mb-9">
                   Opportunities for software engineers have expanded beyond the classic job
@@ -63,7 +67,7 @@ export default function Home() {
                     Take the assessment →
                   </Link>
                   <span className="font-mono text-[13px] text-[var(--color-muted-2)]">
-                    8 min &middot; no signup
+                    no signup
                   </span>
                 </div>
               </div>
@@ -92,12 +96,11 @@ export default function Home() {
                       <Link
                         key={`${item.id}-${i}`}
                         href={`/archetypes/${item.id}`}
-                        className="absolute font-display font-medium whitespace-nowrap no-underline"
+                        className="absolute font-display font-medium whitespace-nowrap no-underline rounded px-1 ring-2 ring-[var(--color-accent)] text-[var(--color-accent)]"
                         style={{
                           top: item.top,
                           left: item.left,
                           transform: `rotate(${item.rotate}deg)`,
-                          opacity: item.opacity,
                           fontSize: 20.4,
                         }}
                       >

@@ -24,9 +24,9 @@ function leadingSentences(text: string, maxChars = 170): string {
 }
 
 export const metadata: Metadata = {
-  title: "Compare Engineering Archetype Compensation",
+  title: "Compare Engineering Archetypes Side by Side",
   description:
-    "Compare total compensation across every engineering archetype, ranked, with adjustable career level and company tier.",
+    "Compare engineering role archetypes side by side — compensation, day-to-day work, and what each one actually rewards — with adjustable career level and company tier.",
 };
 
 export default function CompareArchetypesPage() {
@@ -75,13 +75,13 @@ export default function CompareArchetypesPage() {
             &larr; Home
           </Link>
           <h1 className="font-display text-4xl sm:text-[44px] font-bold tracking-tight mb-5">
-            Compare Engineering Archetype Compensation
+            Compare Engineering Archetypes Side by Side
           </h1>
           <p className="text-lg text-[var(--color-muted)] leading-[1.7] max-w-2xl">
-            The archetype you land in matters as much as the company you land at. This ranks every
-            engineering archetype by total compensation — base, bonus, and annualized equity — so
-            you can see which paths pay the most, and by how much. Choose a career level and a
-            company tier to re-rank.
+            The archetype you land in matters as much as the company you land at. Rank every
+            engineering archetype by total compensation — base, bonus, and annualized equity —
+            then pick a few to line up side by side: pay, day-to-day work, and the qualities each
+            one actually rewards. Choose a career level and a company tier to re-rank.
           </p>
         </section>
 
