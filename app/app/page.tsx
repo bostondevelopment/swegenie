@@ -16,16 +16,18 @@ const ORBIT_SLOTS: { name: string; id: string; top: number; left: number; rotate
   { name: "SRE", id: "sre-production-engineer", top: 110.5, left: 470.9, rotate: 12, opacity: 0.5 },
   { name: "Data Engineer", id: "data-engineer", top: 144.5, left: 8.5, rotate: -8, opacity: 0.5 },
   { name: "DevRel", id: "developer-relations-advocacy", top: 179.35, left: 482.8, rotate: -10, opacity: 0.45 },
-  { name: "Forward Deployed", id: "forward-deployed-engineer", top: 280.5, left: 8.5, rotate: 10, opacity: 0.5 },
+  { name: "Forward Deployed", id: "forward-deployed-engineer", top: 369.75, left: 362.1, rotate: -8, opacity: 0.32 },
   { name: "Security Engineer", id: "security-engineer", top: 510.0, left: 392.7, rotate: 8, opacity: 0.45 },
-  { name: "Mobile Engineer", id: "mobile-engineer", top: 408.0, left: 8.5, rotate: -12, opacity: 0.48 },
+  { name: "Mobile Engineer", id: "mobile-engineer", top: 280.5, left: 8.5, rotate: 10, opacity: 0.5 },
   { name: "Embedded", id: "embedded-iot-engineer", top: 428.4, left: 453.9, rotate: -8, opacity: 0.42 },
-  { name: "Customer Success", id: "customer-support-solutions-engineer", top: 527.0, left: 8.5, rotate: 8, opacity: 0.42 },
-  { name: "Production Engineer", id: "sre-production-engineer", top: 571.2, left: 215.9, rotate: -6, opacity: 0.42 },
-  { name: "Full-Stack", id: "product-full-stack-software-engineer", top: 494.7, left: 238.0, rotate: 10, opacity: 0.45 },
+  { name: "Customer Success", id: "customer-support-solutions-engineer", top: 497.25, left: 8.5, rotate: 8, opacity: 0.42 },
+  { name: "Platform Engineer", id: "platform-infrastructure-engineer", top: 408.0, left: 8.5, rotate: -12, opacity: 0.48 },
+  { name: "Full-Stack", id: "product-full-stack-software-engineer", top: 494.7, left: 238.0, rotate: 0, opacity: 0.45 },
   { name: "Technical PM", id: "technical-product-manager", top: 271.15, left: 439.45, rotate: 12, opacity: 0.4 },
-  { name: "Solutions Architect", id: "solutions-architect-vendor-side", top: 71.4, left: 174.25, rotate: 6, opacity: 0.28 },
-  { name: "Developer Advocate", id: "developer-relations-advocacy", top: 369.75, left: 362.1, rotate: -8, opacity: 0.32 },
+  { name: "Solutions Architect (vendor)", id: "solutions-architect-vendor-side", top: 80, left: 130, rotate: 6, opacity: 0.28 },
+  { name: "Professional Services Engineer", id: "consulting-engineer-professional-services", top: 547.35, left: 140, rotate: -6, opacity: 0.42 },
+  { name: "Solutions Architect (consulting)", id: "solutions-architect-consulting", top: 620, left: 8.5, rotate: -8, opacity: 0.4 },
+  { name: "Engineering Management", id: "engineering-management", top: 600, left: 355, rotate: 8, opacity: 0.4 },
 ];
 
 export default function Home() {
@@ -41,18 +43,20 @@ export default function Home() {
             <div className="mx-auto max-w-6xl w-full px-4 sm:px-6 py-8 grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="font-mono text-[13px] tracking-[0.22em] text-[var(--color-accent)] mb-6">
-                  STOP GUESSING YOUR LANE
+                  FIND YOUR LANE
                 </p>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.05] tracking-tight mb-6">
                   You can code.
                   <br />
-                  But which job is
+                  But which role is
                   <br />
-                  actually <span className="text-[var(--color-accent)]">you</span>?
+                  right <span className="text-[var(--color-accent)]">for you</span>?
                 </h1>
                 <p className="text-lg leading-relaxed text-[var(--color-muted)] max-w-md mb-9">
-                  The industry fractured &ldquo;software engineer&rdquo; into 18 careers. Answer
-                  honestly for 8 minutes and see which ones fit — ranked, and explained.
+                  Opportunities for software engineers have expanded beyond the classic job
+                  titles.
+                  <br />
+                  Discover which ones fit you best — ranked, and explained.
                 </p>
                 <div className="flex flex-wrap items-center gap-4">
                   <Link href="/assessment" className="btn-primary px-7 py-4 text-[17px] font-semibold">
