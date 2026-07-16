@@ -38,12 +38,9 @@ jobs:
 
       - run: npm run lint
 
+      # Custom domain (see app/public/CNAME) serves from /, not a
+      # /<repo-name>/ subpath, so NEXT_BASE_PATH is left unset.
       - run: npx next build
-        env:
-          # GitHub Pages serves a project site from /<repo-name>/, not /.
-          # See next.config.ts's comment for why this is an env var rather
-          # than hardcoded.
-          NEXT_BASE_PATH: /${{ github.event.repository.name }}
 
       - uses: actions/configure-pages@v5
 

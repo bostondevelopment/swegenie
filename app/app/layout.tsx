@@ -15,7 +15,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://swegenie.example"),
+  metadataBase: new URL("https://www.swe-genie.com"),
   title: {
     default: "SWE Genie — find your engineering role archetype",
     template: "%s — SWE Genie",
