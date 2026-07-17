@@ -1,7 +1,25 @@
+'use client';
+
 import type { CSSProperties, ReactNode } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
+import { track } from '@/lib/analytics';
 import type { ArchetypeCompData, CompCell, Level, Tier } from './comp.types';
 import { formatUSD, guaranteedComp, totalComp } from './comp.utils';
+
+export interface CompareSelectedJobExampleSection {
+  heading: string;
+  paragraph?: string;
+  bullets?: string[];
+}
+
+export interface CompareSelectedJobExample {
+  company: string;
+  title: string;
+  location: string | null;
+  url: string;
+  sections: CompareSelectedJobExampleSection[];
+}
 
 export interface CompareSelectedColumn {
   id: string;
@@ -12,6 +30,8 @@ export interface CompareSelectedColumn {
   daySummary?: string;
   /** Top 2-3 dimensions this archetype rewards most, by display name. */
   keyQualities?: string[];
+  /** A couple of real postings for this archetype, if available. */
+  jobExamples?: CompareSelectedJobExample[];
 }
 
 interface CompareSelectedArchetypesProps {
@@ -67,6 +87,7 @@ export function CompareSelectedArchetypes({ columns, tier, level }: CompareSelec
   const maxValue = Math.max(...sorted.map((c) => totalComp(c.data[tier][level]).p90), 1);
   const hasQualities = sorted.some((col) => col.keyQualities?.length);
   const hasDaySummary = sorted.some((col) => col.daySummary);
+  const hasJobExamples = sorted.some((col) => col.jobExamples?.length);
 
   return (
     <div className="overflow-x-auto rounded-[20px] border border-[var(--color-border)] bg-[var(--color-surface)]">
@@ -183,7 +204,7 @@ export function CompareSelectedArchetypes({ columns, tier, level }: CompareSelec
         </CompareRow>
 
         {/* Mix — guaranteed vs equity share of the same total */}
-        <CompareRow label="Mix" last={!hasQualities && !hasDaySummary} columnCount={sorted.length}>
+        <CompareRow label="Mix" last={!hasQualities && !hasDaySummary && !hasJobExamples} columnCount={sorted.length}>
           {sorted.map((col) => {
             const { guarPct, equityPct } = guaranteedVsEquityMix(col.data[tier][level]);
             return (
@@ -214,7 +235,7 @@ export function CompareSelectedArchetypes({ columns, tier, level }: CompareSelec
 
         {/* What it rewards */}
         {hasQualities && (
-          <CompareRow label="What it rewards" last={!hasDaySummary} columnCount={sorted.length}>
+          <CompareRow label="What it rewards" last={!hasDaySummary && !hasJobExamples} columnCount={sorted.length}>
             {sorted.map((col) => (
               <div
                 key={col.id}
@@ -236,7 +257,7 @@ export function CompareSelectedArchetypes({ columns, tier, level }: CompareSelec
 
         {/* A day in the role */}
         {hasDaySummary && (
-          <CompareRow label="A day in the role" last columnCount={sorted.length}>
+          <CompareRow label="A day in the role" last={!hasJobExamples} columnCount={sorted.length}>
             {sorted.map((col) => (
               <div
                 key={col.id}
@@ -249,7 +270,98 @@ export function CompareSelectedArchetypes({ columns, tier, level }: CompareSelec
             ))}
           </CompareRow>
         )}
+
+        {/* Example postings */}
+        {hasJobExamples && (
+          <CompareRow label="Example postings" last columnCount={sorted.length}>
+            {sorted.map((col) => (
+              <div
+                key={col.id}
+                className="flex flex-col gap-2 border-l border-[var(--color-border)] px-3 sm:px-[18px] py-4 sm:py-5"
+                style={DATA_CELL_STYLE}
+              >
+                {(col.jobExamples ?? []).slice(0, 2).map((job, i) => (
+                  <CompactJobPosting key={i} columnId={col.id} index={i} job={job} />
+                ))}
+              </div>
+            ))}
+          </CompareRow>
+        )}
       </div>
+    </div>
+  );
+}
+
+// Narrower cousin of JobExamplesAccordion: same expand-to-read-the-actual-
+// posting behavior, sized to fit a comparison-table data column instead of a
+// full-width page section.
+function CompactJobPosting({
+  columnId,
+  index,
+  job,
+}: {
+  columnId: string;
+  index: number;
+  job: CompareSelectedJobExample;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="rounded-[12px] border border-[var(--color-border)] overflow-hidden">
+      <button
+        onClick={() => {
+          if (!isOpen) track('job_examples_open', { company: job.company, index, source: 'compare' });
+          setIsOpen(!isOpen);
+        }}
+        aria-expanded={isOpen}
+        aria-controls={`job-posting-${columnId}-${index}`}
+        className="w-full flex items-start justify-between gap-2 px-3 py-2.5 text-left"
+      >
+        <div className="min-w-0">
+          <div className="font-mono text-[10px] sm:text-[11px] text-[var(--color-muted-2)] mb-0.5">{job.company}</div>
+          <div className="text-[12.5px] sm:text-[13px] leading-snug text-[var(--color-fg)]">{job.title}</div>
+        </div>
+        <span
+          className={`shrink-0 mt-0.5 text-[var(--color-muted-2)] transition-transform duration-150 ${isOpen ? 'rotate-45' : ''}`}
+          aria-hidden="true"
+        >
+          +
+        </span>
+      </button>
+      {isOpen && (
+        <div id={`job-posting-${columnId}-${index}`} className="px-3 pb-3 pt-1 border-t border-[var(--color-border)]">
+          <div className="max-h-[280px] overflow-y-auto mt-3 flex flex-col gap-3.5">
+            {job.sections.map((s, si) => (
+              <div key={si}>
+                <div className="font-mono text-[10px] uppercase tracking-wide text-[var(--color-muted-2)] mb-1.5">
+                  {s.heading}
+                </div>
+                {s.paragraph && (
+                  <p className="text-[12.5px] text-[var(--color-muted)] leading-[1.6]">{s.paragraph}</p>
+                )}
+                {s.bullets && (
+                  <ul className="flex flex-col gap-1">
+                    {s.bullets.map((b, bi) => (
+                      <li key={bi} className="text-[12.5px] text-[var(--color-muted)] leading-[1.55] flex gap-2">
+                        <span className="text-[var(--color-accent)] shrink-0">&mdash;</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+          <a
+            href={job.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[11px] text-[var(--color-accent)] hover:opacity-80 mt-3.5 inline-block"
+          >
+            View original posting ↗ (snapshot — may no longer be live)
+          </a>
+        </div>
+      )}
     </div>
   );
 }

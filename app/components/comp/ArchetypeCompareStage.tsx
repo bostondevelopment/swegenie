@@ -8,7 +8,7 @@ import {
   MIN_SELECTED_FOR_COMPARE,
   type ArchetypeCompareRow,
 } from './ArchetypeCompareTable';
-import { CompareSelectedArchetypes } from './CompareSelectedArchetypes';
+import { CompareSelectedArchetypes, type CompareSelectedJobExample } from './CompareSelectedArchetypes';
 
 interface ArchetypeCompareStageProps {
   rows: ArchetypeCompareRow[];
@@ -18,6 +18,8 @@ interface ArchetypeCompareStageProps {
   daySummaryByArchetype?: Record<string, string | undefined>;
   /** archetypeId -> top dimension names this archetype rewards, for the selected-comparison table. */
   keyQualitiesByArchetype?: Record<string, string[] | undefined>;
+  /** archetypeId -> a couple of real postings, for the selected-comparison table. */
+  jobExamplesByArchetype?: Record<string, CompareSelectedJobExample[] | undefined>;
 }
 
 // Owns the tier/level/selection state that the ranked table and the "compare
@@ -29,6 +31,7 @@ export function ArchetypeCompareStage({
   defaultLevel = 'Staff',
   daySummaryByArchetype = {},
   keyQualitiesByArchetype = {},
+  jobExamplesByArchetype = {},
 }: ArchetypeCompareStageProps) {
   const [tier, setTier] = useState<Tier>(defaultTier);
   const [level, setLevel] = useState<Level>(defaultLevel);
@@ -48,8 +51,9 @@ export function ArchetypeCompareStage({
           href: r.href,
           daySummary: daySummaryByArchetype[r.id],
           keyQualities: keyQualitiesByArchetype[r.id],
+          jobExamples: jobExamplesByArchetype[r.id],
         })),
-    [selectedIds, rowsById, daySummaryByArchetype, keyQualitiesByArchetype],
+    [selectedIds, rowsById, daySummaryByArchetype, keyQualitiesByArchetype, jobExamplesByArchetype],
   );
 
   return (
@@ -74,8 +78,8 @@ export function ArchetypeCompareStage({
             </span>
           </div>
           <p className="mb-3 max-w-2xl text-[15px] leading-[1.7] text-[var(--color-muted)]">
-            Comp, mix, and role fit for each archetype you picked above, at the same level and
-            tier, lined up for a direct comparison.
+            Pay, what each role rewards, a day in the work, and real postings for the archetypes
+            you picked above — at the same level and tier, lined up for a direct comparison.
           </p>
           <CompareSelectedArchetypes columns={selectedColumns} tier={tier} level={level} />
         </div>

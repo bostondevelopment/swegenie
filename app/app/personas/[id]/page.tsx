@@ -49,6 +49,7 @@ const SECTION_TITLES: Record<Question["section"], string> = {
 
 export default async function PersonaDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  if (process.env.NODE_ENV === "production") notFound();
   const persona = personaById.get(id);
   if (!persona) notFound();
 

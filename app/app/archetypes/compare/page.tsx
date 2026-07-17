@@ -5,8 +5,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { archetypeById, dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy } from "@/lib/results-copy";
 import { ArchetypeCompareStage, type ArchetypeCompareRow } from "@/components/comp";
-import type { CompByTierData } from "@/components/comp";
+import type { CompByTierData, CompareSelectedJobExample } from "@/components/comp";
 import compByTierData from "@/data/comp-by-tier.json";
+import archetypeJobExamples from "@/data/archetype-job-examples.json";
 
 // First 1-2 sentences of a longer passage, kept under maxChars — used to fit
 // "a day in the role" into a single comparison-table cell without cutting a
@@ -26,7 +27,7 @@ function leadingSentences(text: string, maxChars = 170): string {
 export const metadata: Metadata = {
   title: "Compare Engineering Archetypes Side by Side",
   description:
-    "Compare engineering role archetypes side by side — compensation, day-to-day work, and what each one actually rewards — with adjustable career level and company tier.",
+    "Compare engineering role archetypes side by side — pay, day-to-day work, what each one rewards, and real job postings — with adjustable career level and company tier.",
 };
 
 export default function CompareArchetypesPage() {
@@ -47,7 +48,10 @@ export default function CompareArchetypesPage() {
   // dimension names, for the selected-comparison table below the ranking.
   const daySummaryByArchetype: Record<string, string | undefined> = {};
   const keyQualitiesByArchetype: Record<string, string[] | undefined> = {};
+  const jobExamplesByArchetype: Record<string, CompareSelectedJobExample[] | undefined> = {};
+  const jobExamplesById = archetypeJobExamples.examples as Record<string, CompareSelectedJobExample[]>;
   for (const row of rows) {
+    jobExamplesByArchetype[row.id] = jobExamplesById[row.id];
     const archetype = archetypeById.get(row.id);
     if (archetype) {
       keyQualitiesByArchetype[row.id] = Object.entries(archetype.scores)
@@ -78,10 +82,10 @@ export default function CompareArchetypesPage() {
             Compare Engineering Archetypes Side by Side
           </h1>
           <p className="text-lg text-[var(--color-muted)] leading-[1.7] max-w-2xl">
-            The archetype you land in matters as much as the company you land at. Rank every
-            engineering archetype by total compensation — base, bonus, and annualized equity —
-            then pick a few to line up side by side: pay, day-to-day work, and the qualities each
-            one actually rewards. Choose a career level and a company tier to re-rank.
+            The archetype you land in matters as much as the company you land at. Pick a few
+            engineering archetypes and line them up side by side: pay, the day-to-day work, the
+            qualities each one actually rewards, and real postings from companies hiring for it.
+            Choose a career level and a company tier to see how the picture shifts.
           </p>
         </section>
 
@@ -96,6 +100,7 @@ export default function CompareArchetypesPage() {
             defaultLevel="Staff"
             daySummaryByArchetype={daySummaryByArchetype}
             keyQualitiesByArchetype={keyQualitiesByArchetype}
+            jobExamplesByArchetype={jobExamplesByArchetype}
           />
           <p className="mt-10 text-[13px] text-[var(--color-muted-2)] leading-[1.6] max-w-2xl">
             Directional context only, not financial advice. Figures aren&apos;t a live feed of US

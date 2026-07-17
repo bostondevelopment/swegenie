@@ -15,6 +15,7 @@ export {
 export {
   CompareSelectedArchetypes,
   type CompareSelectedColumn,
+  type CompareSelectedJobExample,
 } from './CompareSelectedArchetypes';
 export { ArchetypeCompareStage } from './ArchetypeCompareStage';
 

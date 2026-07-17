@@ -382,8 +382,9 @@ export default function ResultsClient() {
         <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <h2 className="font-display text-2xl font-semibold mb-2">Full ranking</h2>
           <p className="text-[15px] text-[var(--color-muted)] leading-[1.6] mb-8 max-w-2xl">
-            Every archetype you matched, compared on one aligned scale. Choose a level and company
-            tier to re-rank by pay; each row also shows how well it fit your answers.
+            Every archetype you matched, compared on one aligned scale — how well it fit your
+            answers alongside what it pays. Choose a level and company tier to see how the
+            ranking shifts.
           </p>
           {compareRows.length > 0 ? (
             <ArchetypeCompareTable

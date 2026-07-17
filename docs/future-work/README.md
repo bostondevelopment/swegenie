@@ -13,6 +13,7 @@ problem, the exact files involved, and what "done" looks like.
 | [thin-comp-cells-early-stage](thin-comp-cells-early-stage/README.md) | Small, recurring | No — legitimately thin markets, not a bug |
 | [copy-rules-debt-cleanup](copy-rules-debt-cleanup/README.md) | Medium — spans ~9 files | No — pre-existing, not introduced by this branch |
 | [management-orthogonal-modifier](management-orthogonal-modifier/README.md) | Large — new content + comp sourcing + methodology decision per archetype family | No — deferred in favor of removing `engineering-management` as a standalone archetype now |
+| [geography](geography/README.md) | Research only so far, no plan | No — exploratory; user asked for research before any scoping (2026-07-17) |
 
 None of these are scheduled or cron'd. Pick them up manually, one at a time, whenever there's
 room for them — same as the rest of this repo's data-refresh work

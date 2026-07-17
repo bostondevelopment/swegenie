@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PersonaCard } from "@/components/PersonaCard";
@@ -23,6 +24,8 @@ export const metadata: Metadata = {
  * the footer.
  */
 export default function PersonasPage() {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const rows = personas.map((persona) => {
     const profile = aggregateAnswersToProfile(persona.answers);
     const ranked = rankArchetypes(profile);

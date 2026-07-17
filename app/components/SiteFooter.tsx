@@ -14,9 +14,11 @@ export function SiteFooter() {
           <Link href="/privacy" className="hover:text-[var(--color-fg)] transition-colors">
             Privacy
           </Link>
-          <Link href="/personas" className="hover:text-[var(--color-fg)] transition-colors">
-            QA: personas
-          </Link>
+          {process.env.NODE_ENV !== "production" && (
+            <Link href="/personas" className="hover:text-[var(--color-fg)] transition-colors">
+              QA: personas
+            </Link>
+          )}
         </div>
       </div>
     </footer>
