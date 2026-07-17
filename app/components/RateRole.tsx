@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics";
 
 /**
  * Phase 8 contributor-signal scaffold: a collapsible "Rate this role" widget on
@@ -43,6 +44,7 @@ export function RateRole({ archetypeId, dimensions }: { archetypeId: string; dim
 
   async function handleSubmit() {
     if (status === "submitting") return;
+    track("rate_role_submit", { archetype_id: archetypeId, role });
     setStatus("submitting");
     const sessionId = newSessionId();
     const yearsNum = years.trim() === "" ? null : Number(years);

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { FitBar } from "@/components/FitBar";
+import { PersonaCard } from "@/components/PersonaCard";
 import { personas } from "@/lib/personas";
 import { aggregateAnswersToProfile } from "@/lib/assessment-flow";
 import { rankArchetypes, fitPercent } from "@/lib/scoring";
@@ -54,30 +53,17 @@ export default function PersonasPage() {
 
         <div className="grid sm:grid-cols-2 gap-5">
           {rows.map(({ persona, rank, total, percent, href, targetName }) => (
-            <Link
+            <PersonaCard
               key={persona.id}
+              personaId={persona.id}
               href={href}
-              className="card p-[26px] hover:border-[var(--color-accent)]/40 transition-colors flex flex-col gap-0"
-            >
-              <div className="font-mono text-xs text-[var(--color-muted-2)] mb-2">
-                target: {targetName}
-              </div>
-              <h2 className="font-display text-xl font-semibold leading-snug mb-3">{persona.personaName}</h2>
-              <p className="text-[15px] text-[var(--color-muted)] leading-[1.65] mb-[18px]">{persona.narrative}</p>
-              <div className="flex items-center gap-3.5">
-                <span className="font-mono text-xs text-[var(--color-muted-2)] whitespace-nowrap">
-                  ranked #{rank} of {total}
-                </span>
-                <div className="flex-1">
-                  <FitBar percent={percent} size="sm" />
-                </div>
-                {rank > 3 && (
-                  <span className="font-mono text-xs text-[var(--color-accent)] whitespace-nowrap">
-                    out of top 3
-                  </span>
-                )}
-              </div>
-            </Link>
+              targetName={targetName}
+              personaName={persona.personaName}
+              narrative={persona.narrative}
+              rank={rank}
+              total={total}
+              percent={percent}
+            />
           ))}
         </div>
       </main>

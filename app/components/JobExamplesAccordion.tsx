@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics";
 
 type Section = {
   heading: string;
@@ -26,7 +27,10 @@ export function JobExamplesAccordion({ examples }: { examples: JobExample[] }) {
         return (
           <div key={i} className="card overflow-hidden">
             <button
-              onClick={() => setOpenIndex(isOpen ? null : i)}
+              onClick={() => {
+                if (!isOpen) track("job_examples_open", { company: ex.company, index: i });
+                setOpenIndex(isOpen ? null : i);
+              }}
               aria-expanded={isOpen}
               className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
             >

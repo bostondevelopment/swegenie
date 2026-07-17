@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics";
 
 /**
  * Phase 6 beta survey shown at the bottom of the results page. Three fixed
@@ -72,6 +73,12 @@ export function BetaSurvey({ topArchetype }: { topArchetype?: string }) {
 
   async function handleSubmit() {
     if (!canSubmit) return;
+    track("beta_survey_submit", {
+      role_in_top3: roleInTop3 ?? "",
+      why_specific: whySpecific ?? "",
+      would_share: wouldShare ?? "",
+      top_archetype: topArchetype ?? "",
+    });
     setStatus("submitting");
     try {
       // Trailing slash matches next.config's `trailingSlash: true`, avoiding a

@@ -57,6 +57,16 @@ export default function AssessmentPage() {
 
   const step = state ? FLOW[state.currentStep] : undefined;
 
+  useEffect(() => {
+    if (!state || !step) return;
+    track("assessment_step", {
+      step_index: state.currentStep,
+      step_id: step.kind === "question" ? step.question.id : step.field.id,
+      step_kind: step.kind,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- fire once per currentStep, not on every state change
+  }, [state?.currentStep]);
+
   const goBack = useCallback(() => {
     setState((prev) => (prev ? { ...prev, currentStep: Math.max(0, prev.currentStep - 1) } : prev));
   }, []);
@@ -151,6 +161,10 @@ export default function AssessmentPage() {
             value={state.intake[step.field.id]}
             onChange={(v) => setIntake(step.field.id, v)}
             onAdvance={advanceIntake}
+            onSkip={() => {
+              track("assessment_skip", { question_id: step.field.id, step_index: state.currentStep });
+              advanceIntake();
+            }}
           />
         ) : (
           <QuestionStep
@@ -171,7 +185,10 @@ export default function AssessmentPage() {
           </button>
           {step.kind === "question" && (
             <button
-              onClick={() => setAnswer(step.question.id, null)}
+              onClick={() => {
+                track("assessment_skip", { question_id: step.question.id, step_index: state.currentStep });
+                setAnswer(step.question.id, null);
+              }}
               className="font-mono text-[13px] text-[var(--color-muted-2)] hover:text-[var(--color-fg)] transition-colors"
             >
               Skip / unsure
@@ -188,11 +205,13 @@ function IntakeStep({
   value,
   onChange,
   onAdvance,
+  onSkip,
 }: {
   field: import("@/lib/taxonomy").StackIntakeField;
   value: string | number | string[] | undefined;
   onChange: (v: string | number | string[]) => void;
   onAdvance: () => void;
+  onSkip: () => void;
 }) {
   const selected = Array.isArray(value) ? value : [];
 
@@ -249,7 +268,7 @@ function IntakeStep({
         </button>
         {field.optional && (
           <button
-            onClick={onAdvance}
+            onClick={onSkip}
             className="font-mono text-[13px] text-[var(--color-muted-2)] hover:text-[var(--color-fg)] transition-colors"
           >
             Skip

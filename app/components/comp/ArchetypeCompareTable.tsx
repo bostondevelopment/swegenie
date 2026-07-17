@@ -3,6 +3,7 @@
 import { useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { FitBar } from '@/components/FitBar';
+import { track } from '@/lib/analytics';
 import type { ArchetypeCompData, Level, Tier } from './comp.types';
 import { LEVELS, TIER_LABELS, TIER_ORDER, formatUSD, totalComp } from './comp.utils';
 import { CompRangeBar } from './CompRangeBar';
@@ -69,11 +70,13 @@ export function ArchetypeCompareTable({
   function setTier(next: Tier) {
     if (tierProp === undefined) setInternalTier(next);
     onTierChange?.(next);
+    track('compare_tier_change', { tier: next });
   }
 
   function setLevel(next: Level) {
     if (levelProp === undefined) setInternalLevel(next);
     onLevelChange?.(next);
+    track('compare_level_change', { level: next });
   }
 
   function toggleSelected(id: string) {
@@ -86,6 +89,11 @@ export function ArchetypeCompareTable({
     if (next === selectedIds) return;
     if (selectedIdsProp === undefined) setInternalSelectedIds(next);
     onSelectionChange?.(next);
+    track('compare_toggle_archetype', {
+      archetype_id: id,
+      action: isSelected ? 'remove' : 'add',
+      selected_count: next.length,
+    });
   }
 
   const sorted = useMemo(
