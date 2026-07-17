@@ -62,9 +62,11 @@ export default function PrivacyPage() {
               Analytics
             </h2>
             <p>
-              We track four anonymous funnel events — landed on the site, started the assessment,
-              completed it, shared a result — with no cookies, no device fingerprinting, and no
-              identifier connecting an event to a person or a specific set of answers.
+              We use Google Analytics to see how many people visit the site and how many complete
+              the assessment. It sets cookies and records standard visit data (like pages viewed
+              and general location), but nothing ties that data to your specific answers or
+              results — we track that a session landed, started, completed, or shared, not what
+              you answered.
             </p>
           </div>
 
