@@ -35,11 +35,11 @@ export default function MethodologyPage() {
         <div className="h-px bg-[var(--color-border)] mb-12" />
 
         <section className="mb-14">
-          <h2 className="font-display text-2xl font-semibold mb-[18px]">1. Where the 18 archetypes came from</h2>
+          <h2 className="font-display text-2xl font-semibold mb-[18px]">1. Where the 17 archetypes came from</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             <StatTile label="Companies verified" value="744" />
             <StatTile label="Postings classified" value="67,956" />
-            <StatTile label="Archetypes with 200+ postings" value="13 of 18" />
+            <StatTile label="Archetypes with 200+ postings" value="13 of 17" />
             <StatTile label="Top-coverage role" value="6,208" sub="postings · 542 companies" />
           </div>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
@@ -50,7 +50,7 @@ export default function MethodologyPage() {
           </p>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
             A 2026-07-11 sourcing pass then verified those companies directly against their public
-            job-board APIs and classified those postings into the 18 archetypes — not scraped or
+            job-board APIs and classified those postings into the 17 archetypes — not scraped or
             estimated, every posting traceable to a live URL at the time it was harvested. The
             other 5 (Embedded/IoT Engineer, Solutions Architect — Consulting-side, Developer
             Relations, Technical Product Manager, Solutions Architect — Vendor-side) came in
@@ -112,7 +112,7 @@ export default function MethodologyPage() {
               role.
             </ActionCard>
             <ActionCard n={4} title="Correlated-pair tie-breaker">
-              Some traits reliably travel together across the 18 roles — depth at cross-layer
+              Some traits reliably travel together across the 17 roles — depth at cross-layer
               debugging with appetite for on-call incidents, comfort teaching with comfort being
               publicly visible. Those pairs are measured directly from the taxonomy (a committed
               script, not a hidden model), and when your answers on a correlated pair line up the
@@ -141,7 +141,7 @@ export default function MethodologyPage() {
               },
               {
                 title: "Dimension correlation layer",
-                text: "Some traits reliably travel together, like appetite for on-call incidents and depth at cross-layer debugging, or comfort teaching and comfort being publicly visible. By measuring which dimensions rise and fall together across all 18 archetypes, the scorer recognizes those clusters: when your answers on a pair of correlated traits line up the way a role's own profile does, that coherent combination counts as extra signal for it, and when they pull in opposite directions it counts against. It stays fully transparent — the correlations are derived from the public taxonomy by a committed script, not a hidden model, and your result page names the exact pairs that helped or hurt. It's a nudge by design: it can reorder roles that were already neck-and-neck but never override the defining-trait check above it.",
+                text: "Some traits reliably travel together, like appetite for on-call incidents and depth at cross-layer debugging, or comfort teaching and comfort being publicly visible. By measuring which dimensions rise and fall together across all 17 archetypes, the scorer recognizes those clusters: when your answers on a pair of correlated traits line up the way a role's own profile does, that coherent combination counts as extra signal for it, and when they pull in opposite directions it counts against. It stays fully transparent — the correlations are derived from the public taxonomy by a committed script, not a hidden model, and your result page names the exact pairs that helped or hurt. It's a nudge by design: it can reorder roles that were already neck-and-neck but never override the defining-trait check above it.",
               },
               {
                 title: "Defining-trait floor",
@@ -178,7 +178,7 @@ export default function MethodologyPage() {
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
             The comp-by-tier charts on each archetype page (and the Staff cross-role ranking) are a
             separate, hand-curated dataset from the salary ranges in the research briefs. They cover
-            all 18 archetypes and break total compensation into base, bonus, and annualized equity
+            all 17 archetypes and break total compensation into base, bonus, and annualized equity
             across five company tiers at four career levels.
           </p>
 
@@ -223,14 +223,11 @@ export default function MethodologyPage() {
             high, medium, or low confidence by how much public data backs that specific
             role/tier/level combination. Cells marked low carry a{" "}
             <span className="font-mono text-[13px] text-[var(--color-signal-warn)]">limited data</span>{" "}
-            badge on the chart. 50 of 360 cells are low-confidence — concentrated in Customer
-            Support Solutions Engineer (13 cells), Customer Support Engineer (10), Embedded/IoT
-            Engineer (8), Developer Relations &amp; Advocacy (6), Consulting Engineer / Professional
-            Services (4), Sales Engineer (Pre-Sales) (3), Solutions Architect (Consulting) (3), and
-            Engineering Management&apos;s L3 row (3, across tiers) — because no public compensation
-            data exists for that specific role/tier/level combination. Engineering Management&apos;s L3
-            cells reflect a taxonomy mismatch on top of that: &ldquo;L3 engineering manager&rdquo; isn&apos;t a
-            real leveling tier — first-line EMs are promoted senior/staff ICs, not L3 hires.
+            badge on the chart. 31 of 340 cells are low-confidence — concentrated in Customer
+            Support Engineer (9 cells), Embedded/IoT Engineer (8), Customer Success / Customer
+            Solutions Engineer (5), Consulting Engineer / Professional Services (4), Developer
+            Relations &amp; Advocacy (4), and Solutions Architect (Consulting) (1) — because no
+            public compensation data exists for that specific role/tier/level combination.
           </p>
 
           <Callout tone="caveat" title="Not financial advice.">

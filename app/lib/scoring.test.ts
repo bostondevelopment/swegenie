@@ -86,16 +86,6 @@ const personas: Array<{
     expectedTop: "customer-support-engineer",
   },
   {
-    name: "Loves Developing People, Willing to Give Up Coding Entirely",
-    profile: {
-      ambiguity_tolerance: 3, interrupt_tolerance: 4, oncall_incident_appetite: 2, debugging_diagnostic_depth: 1,
-      systems_design_scale: 2, technical_breadth_depth: 2, outcome_accountability: 4, stakeholder_client_comfort: 3,
-      teaching_enjoyment: 2, public_visibility_comfort: 1, account_portfolio_breadth: 2, relationship_continuity: 2, variable_comp_appetite: 1, coding_intensity: 1,
-      travel_embed_willingness: 1, adversarial_threat_modeling: 1, physical_constraint_engineering: 1, ml_engineering_fluency: 2, mobile_platform_fluency: 1, data_infrastructure_fluency: 2, cloud_infrastructure_fluency: 2, people_management_orientation: 5,
-    },
-    expectedTop: "engineering-management",
-  },
-  {
     name: "Embeds Deeply With One Client, Codes Constantly, No Sales Quota",
     profile: {
       ambiguity_tolerance: 4, interrupt_tolerance: 3, oncall_incident_appetite: 2, debugging_diagnostic_depth: 3,

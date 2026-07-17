@@ -26,8 +26,7 @@ const ORBIT_SLOTS: { name: string; id: string; top: number; left: number; rotate
   { name: "Technical PM", id: "technical-product-manager", top: 271.15, left: 439.45, rotate: 12, opacity: 0.4 },
   { name: "Solutions Architect (vendor)", id: "solutions-architect-vendor-side", top: 80, left: 130, rotate: 6, opacity: 0.28 },
   { name: "Professional Services Engineer", id: "consulting-engineer-professional-services", top: 552.1, left: 36.5, rotate: -6, opacity: 0.42 },
-  { name: "Solutions Architect (consulting)", id: "solutions-architect-consulting", top: 620, left: 8.5, rotate: -8, opacity: 0.4 },
-  { name: "Engineering Management", id: "engineering-management", top: 600, left: 355, rotate: 8, opacity: 0.4 },
+  { name: "Solutions Architect (consulting)", id: "solutions-architect-consulting", top: 620, left: 133, rotate: -8, opacity: 0.4 },
 ];
 
 export default function Home() {

@@ -6,7 +6,7 @@ import {
 } from "./degenerate-personas";
 import { aggregateAnswersToProfile } from "./assessment-flow";
 import { rankArchetypes } from "./scoring";
-import { archetypes, archetypeById } from "./taxonomy";
+import { archetypes } from "./taxonomy";
 
 /**
  * Regression tests for three degenerate (not-a-real-person) inputs, added
@@ -74,14 +74,6 @@ describe("degenerate inputs: all-negative (1/5 on everything)", () => {
     // the best that survives is a moderate-target generalist (e.g. TPM), still a
     // decidedly weak sub-0.5 match.
     expect(ranked[0].fitScore).toBeLessThan(0.5);
-  });
-
-  it("Engineering Management is hard-capped near the floor by people_management_orientation (wants 5, got 1)", () => {
-    const em = archetypeById.get("engineering-management")!;
-    const result = ranked.find((r) => r.id === "engineering-management")!;
-    const topWeight = Math.max(...Object.values(em.scores).map((s) => s.weight));
-    expect(em.scores.people_management_orientation.weight).toBe(topWeight);
-    expect(result.fitScore).toBeLessThan(0.15);
   });
 
   it("every archetype whose top-weight dimension has an extreme-high target gets capped near the floor", () => {

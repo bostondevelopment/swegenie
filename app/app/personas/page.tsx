@@ -32,6 +32,7 @@ export default function PersonasPage() {
     return {
       persona,
       rank,
+      total: ranked.length,
       percent: fitPercent(result.fitScore),
       href: `/personas/${persona.id}`,
       targetName: archetypeById.get(persona.targetArchetypeId)?.name ?? persona.targetArchetypeId,
@@ -52,7 +53,7 @@ export default function PersonasPage() {
         </p>
 
         <div className="grid sm:grid-cols-2 gap-5">
-          {rows.map(({ persona, rank, percent, href, targetName }) => (
+          {rows.map(({ persona, rank, total, percent, href, targetName }) => (
             <Link
               key={persona.id}
               href={href}
@@ -65,7 +66,7 @@ export default function PersonasPage() {
               <p className="text-[15px] text-[var(--color-muted)] leading-[1.65] mb-[18px]">{persona.narrative}</p>
               <div className="flex items-center gap-3.5">
                 <span className="font-mono text-xs text-[var(--color-muted-2)] whitespace-nowrap">
-                  ranked #{rank} of 18
+                  ranked #{rank} of {total}
                 </span>
                 <div className="flex-1">
                   <FitBar percent={percent} size="sm" />

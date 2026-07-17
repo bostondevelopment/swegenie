@@ -101,7 +101,7 @@ export default function AssessmentPage() {
   if (!state || !step || state.done) {
     return (
       <div className="flex-1 flex items-center justify-center text-[var(--color-muted)] font-mono text-sm">
-        {state?.done ? "Scoring your profile against 18 role archetypes…" : "Loading…"}
+        {state?.done ? "Scoring your profile against 17 role archetypes…" : "Loading…"}
       </div>
     );
   }

@@ -50,7 +50,7 @@ export function ShareBar({ topArchetypeName, fitPercent }: { topArchetypeName: s
         Email me this result
       </a>
       <span className="font-mono text-xs text-[var(--color-muted-2)]">
-        Nothing&apos;s gated — full methodology and all 18 archetypes are public.
+        Nothing&apos;s gated — full methodology and all 17 archetypes are public.
       </span>
     </div>
   );

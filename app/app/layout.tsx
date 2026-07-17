@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s — SWE Genie",
   },
   description:
-    "A 6-minute assessment that ranks 18 engineering role archetypes against how you actually work, with an explainable, sourced fit score for each.",
+    "A 6-minute assessment that ranks 17 engineering role archetypes against how you actually work, with an explainable, sourced fit score for each.",
 };
 
 export default function RootLayout({

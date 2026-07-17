@@ -64,7 +64,7 @@ export interface StackIntakeField {
 }
 
 /**
- * A pair of dimensions whose `target` vectors across the 18 archetypes are
+ * A pair of dimensions whose `target` vectors across the 17 archetypes are
  * meaningfully correlated (|Pearson r| > 0.7), computed by
  * scripts/compute-dimension-correlations.js. `direction` is "positive" (the two
  * traits co-occur — both high or both low across archetypes) or "negative" (they

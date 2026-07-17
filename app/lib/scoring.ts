@@ -97,7 +97,7 @@ function correlationDelta(r: number): number {
  * The base model (Steps 1-2) scores every dimension independently, so it can't
  * see that some traits co-occur in practice — the "no inter-dimension
  * correlation modeling" limitation. This closes that gap transparently: using
- * the empirically-derived correlated pairs (|r| > 0.7 across the 18 archetype
+ * the empirically-derived correlated pairs (|r| > 0.7 across the 17 archetype
  * profiles; see taxonomy/dimension-correlations.json), we reward a user whose
  * answers on a correlated pair line up the way the archetype's own cluster does,
  * and penalize answers that pull in opposite directions.
@@ -277,7 +277,7 @@ export function scoreArchetype(
   };
 }
 
-/** Ranks all 18 archetypes for a given user profile, per scoring.md Step 3. */
+/** Ranks all 17 archetypes for a given user profile, per scoring.md Step 3. */
 export function rankArchetypes(profile: UserProfile): ArchetypeResult[] {
   return archetypes
     .map((a) => scoreArchetype(profile, a))

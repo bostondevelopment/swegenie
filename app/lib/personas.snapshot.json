@@ -45,10 +45,6 @@
         "score": 0.481
       },
       {
-        "id": "engineering-management",
-        "score": 0.476
-      },
-      {
         "id": "platform-infrastructure-engineer",
         "score": 0.085
       },
@@ -128,10 +124,6 @@
         "score": 0.48
       },
       {
-        "id": "engineering-management",
-        "score": 0.472
-      },
-      {
         "id": "ml-engineer",
         "score": 0.083
       },
@@ -172,7 +164,7 @@
       },
       {
         "id": "customer-support-engineer",
-        "score": 0.928
+        "score": 0.935
       },
       {
         "id": "forward-deployed-engineer",
@@ -192,7 +184,7 @@
       },
       {
         "id": "security-engineer",
-        "score": 0.594
+        "score": 0.595
       },
       {
         "id": "consulting-engineer-professional-services",
@@ -207,16 +199,12 @@
         "score": 0.473
       },
       {
-        "id": "engineering-management",
-        "score": 0.472
-      },
-      {
         "id": "data-engineer",
         "score": 0.087
       },
       {
         "id": "embedded-iot-engineer",
-        "score": 0.085
+        "score": 0.086
       },
       {
         "id": "ml-engineer",
@@ -251,11 +239,11 @@
       },
       {
         "id": "sre-production-engineer",
-        "score": 0.94
+        "score": 0.941
       },
       {
         "id": "customer-support-engineer",
-        "score": 0.938
+        "score": 0.939
       },
       {
         "id": "technical-product-manager",
@@ -294,12 +282,8 @@
         "score": 0.476
       },
       {
-        "id": "engineering-management",
-        "score": 0.473
-      },
-      {
         "id": "embedded-iot-engineer",
-        "score": 0.083
+        "score": 0.084
       },
       {
         "id": "mobile-engineer",
@@ -373,10 +357,6 @@
         "score": 0.479
       },
       {
-        "id": "engineering-management",
-        "score": 0.473
-      },
-      {
         "id": "embedded-iot-engineer",
         "score": 0.08
       },
@@ -444,10 +424,6 @@
         "score": 0.473
       },
       {
-        "id": "engineering-management",
-        "score": 0.467
-      },
-      {
         "id": "ml-engineer",
         "score": 0.078
       },
@@ -488,7 +464,7 @@
       },
       {
         "id": "sre-production-engineer",
-        "score": 0.916
+        "score": 0.924
       },
       {
         "id": "forward-deployed-engineer",
@@ -504,11 +480,11 @@
       },
       {
         "id": "security-engineer",
-        "score": 0.59
+        "score": 0.591
       },
       {
         "id": "customer-support-engineer",
-        "score": 0.478
+        "score": 0.479
       },
       {
         "id": "consulting-engineer-professional-services",
@@ -519,12 +495,8 @@
         "score": 0.473
       },
       {
-        "id": "engineering-management",
-        "score": 0.468
-      },
-      {
         "id": "data-engineer",
-        "score": 0.081
+        "score": 0.082
       },
       {
         "id": "mobile-engineer",
@@ -567,7 +539,7 @@
       },
       {
         "id": "sre-production-engineer",
-        "score": 0.938
+        "score": 0.939
       },
       {
         "id": "technical-product-manager",
@@ -583,7 +555,7 @@
       },
       {
         "id": "customer-support-engineer",
-        "score": 0.763
+        "score": 0.764
       },
       {
         "id": "consulting-engineer-professional-services",
@@ -594,16 +566,12 @@
         "score": 0.476
       },
       {
-        "id": "engineering-management",
-        "score": 0.472
-      },
-      {
         "id": "data-engineer",
         "score": 0.085
       },
       {
         "id": "embedded-iot-engineer",
-        "score": 0.084
+        "score": 0.085
       },
       {
         "id": "platform-infrastructure-engineer",
@@ -667,10 +635,6 @@
       {
         "id": "customer-support-solutions-engineer",
         "score": 0.48
-      },
-      {
-        "id": "engineering-management",
-        "score": 0.476
       },
       {
         "id": "platform-infrastructure-engineer",
@@ -748,10 +712,6 @@
         "score": 0.482
       },
       {
-        "id": "engineering-management",
-        "score": 0.479
-      },
-      {
         "id": "forward-deployed-engineer",
         "score": 0.474
       },
@@ -825,10 +785,6 @@
       {
         "id": "customer-support-solutions-engineer",
         "score": 0.482
-      },
-      {
-        "id": "engineering-management",
-        "score": 0.477
       },
       {
         "id": "forward-deployed-engineer",
@@ -910,10 +866,6 @@
         "score": 0.476
       },
       {
-        "id": "engineering-management",
-        "score": 0.467
-      },
-      {
         "id": "platform-infrastructure-engineer",
         "score": 0.081
       },
@@ -962,7 +914,7 @@
       },
       {
         "id": "sre-production-engineer",
-        "score": 0.902
+        "score": 0.91
       },
       {
         "id": "solutions-architect-consulting",
@@ -990,7 +942,7 @@
       },
       {
         "id": "data-engineer",
-        "score": 0.083
+        "score": 0.084
       },
       {
         "id": "sales-engineer-pre-sales",
@@ -998,15 +950,11 @@
       },
       {
         "id": "embedded-iot-engineer",
-        "score": 0.081
+        "score": 0.082
       },
       {
         "id": "customer-support-solutions-engineer",
         "score": 0.079
-      },
-      {
-        "id": "engineering-management",
-        "score": 0.077
       },
       {
         "id": "ml-engineer",
@@ -1070,10 +1018,6 @@
       {
         "id": "sales-engineer-pre-sales",
         "score": 0.083
-      },
-      {
-        "id": "engineering-management",
-        "score": 0.078
       },
       {
         "id": "security-engineer",
@@ -1147,10 +1091,6 @@
         "score": 0.479
       },
       {
-        "id": "engineering-management",
-        "score": 0.477
-      },
-      {
         "id": "sre-production-engineer",
         "score": 0.474
       },
@@ -1210,10 +1150,6 @@
         "score": 0.476
       },
       {
-        "id": "engineering-management",
-        "score": 0.475
-      },
-      {
         "id": "consulting-engineer-professional-services",
         "score": 0.475
       },
@@ -1263,85 +1199,6 @@
       }
     ]
   },
-  "engineering-management": {
-    "personaName": "The People Manager",
-    "targetRank": 1,
-    "targetScore": 1,
-    "rankedList": [
-      {
-        "id": "engineering-management",
-        "score": 1
-      },
-      {
-        "id": "technical-product-manager",
-        "score": 0.919
-      },
-      {
-        "id": "customer-support-engineer",
-        "score": 0.824
-      },
-      {
-        "id": "solutions-architect-consulting",
-        "score": 0.759
-      },
-      {
-        "id": "product-full-stack-software-engineer",
-        "score": 0.48
-      },
-      {
-        "id": "solutions-architect-vendor-side",
-        "score": 0.479
-      },
-      {
-        "id": "consulting-engineer-professional-services",
-        "score": 0.478
-      },
-      {
-        "id": "customer-support-solutions-engineer",
-        "score": 0.476
-      },
-      {
-        "id": "sre-production-engineer",
-        "score": 0.464
-      },
-      {
-        "id": "sales-engineer-pre-sales",
-        "score": 0.078
-      },
-      {
-        "id": "forward-deployed-engineer",
-        "score": 0.076
-      },
-      {
-        "id": "developer-relations-advocacy",
-        "score": 0.075
-      },
-      {
-        "id": "security-engineer",
-        "score": 0.074
-      },
-      {
-        "id": "platform-infrastructure-engineer",
-        "score": 0.073
-      },
-      {
-        "id": "ml-engineer",
-        "score": 0.071
-      },
-      {
-        "id": "data-engineer",
-        "score": 0.07
-      },
-      {
-        "id": "mobile-engineer",
-        "score": 0.067
-      },
-      {
-        "id": "embedded-iot-engineer",
-        "score": 0.062
-      }
-    ]
-  },
   "technical-product-manager": {
     "personaName": "The Technical PM",
     "targetRank": 1,
@@ -1374,10 +1231,6 @@
       {
         "id": "customer-support-solutions-engineer",
         "score": 0.481
-      },
-      {
-        "id": "engineering-management",
-        "score": 0.083
       },
       {
         "id": "sales-engineer-pre-sales",

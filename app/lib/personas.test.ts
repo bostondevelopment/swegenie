@@ -5,7 +5,7 @@ import { rankArchetypes } from "./scoring";
 import { archetypeById } from "./taxonomy";
 
 /**
- * One persona per archetype (18 total, see personas.ts), run through the
+ * One persona per archetype (17 total, see personas.ts), run through the
  * REAL answer-aggregation pipeline (aggregateAnswersToProfile -> rankArchetypes)
  * rather than hand-crafted dimension values. This is deliberately a
  * different, complementary layer of coverage from scoring.test.ts's 10
@@ -22,7 +22,7 @@ import { archetypeById } from "./taxonomy";
  *
  * When you change archetypes.json weights/targets, questions.json, or
  * scoring.ts, run `npm run personas:report` first to see the full
- * before/after impact across all 18 personas (rank + score deltas) before
+ * before/after impact across all 17 personas (rank + score deltas) before
  * relying on this file's pass/fail signal alone.
  */
 describe("persona suite: each archetype's own persona ranks in its top 3", () => {

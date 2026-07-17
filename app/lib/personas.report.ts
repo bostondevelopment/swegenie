@@ -6,7 +6,7 @@ import { aggregateAnswersToProfile } from "./assessment-flow";
 import { rankArchetypes } from "./scoring";
 
 /**
- * Human-readable impact report: recomputes all 18 personas against the
+ * Human-readable impact report: recomputes all 17 personas against the
  * REAL production scoring pipeline (same modules personas.test.ts uses,
  * so there is no duplicated/drifting logic here) and diffs the result
  * against the committed baseline snapshot (personas.snapshot.json).

@@ -1,5 +1,5 @@
 /**
- * One persona per archetype (18 total), authored by reverse-mapping each
+ * One persona per archetype (17 total), authored by reverse-mapping each
  * archetype's own target profile (taxonomy/archetypes.json) onto real
  * question-level answers (taxonomy/questions.json) -- not hand-picked
  * dimension values. This exercises the *actual* aggregateAnswersToProfile
@@ -142,13 +142,6 @@ export const personas: Persona[] = [
     targetArchetypeId: "developer-relations-advocacy",
     narrative: "Genuinely wants the public stage — conference talks, content, community — not just 1:1 explaining; no sales quota, high ambiguity tolerance, low structured account ownership.",
     answers: {"q_ambiguity_1":3,"q_ambiguity_2":5,"q_interrupt_1":1,"q_interrupt_2":3,"q_oncall_1":1,"q_oncall_2":1,"q_debugging_1":1,"q_debugging_2":3,"q_systems_design_1":1,"q_systems_design_2":1,"q_breadth_1":3,"q_breadth_2":3,"q_outcome_1":1,"q_outcome_2":3,"q_stakeholder_1":3,"q_stakeholder_2":3,"q_teaching_1":5,"q_teaching_2":5,"q_public_visibility_1":5,"q_account_breadth_1":1,"q_account_breadth_2":1,"q_continuity_1":1,"q_continuity_2":1,"q_variable_comp_1":1,"q_variable_comp_2":1,"q_coding_1":1,"q_coding_2":3,"q_travel_2":3,"q_travel_1":3,"q_adversarial_1":1,"q_adversarial_2":1,"q_adversarial_3":1,"q_physical_2":1,"q_physical_1":1,"q_ml_fluency_1":1,"q_mobile_fluency_1":1,"q_data_fluency_1":1,"q_cloud_fluency_1":1,"q_people_mgmt_1":1,"q_people_mgmt_2":3},
-  },
-  {
-    id: "engineering-management",
-    personaName: "The People Manager",
-    targetArchetypeId: "engineering-management",
-    narrative: "Wants to be judged entirely on team retention, morale, and growth rather than personal technical output; willing to give up hands-on coding almost entirely.",
-    answers: {"q_ambiguity_1":3,"q_ambiguity_2":3,"q_interrupt_1":3,"q_interrupt_2":5,"q_oncall_1":1,"q_oncall_2":3,"q_debugging_1":1,"q_debugging_2":1,"q_systems_design_1":1,"q_systems_design_2":3,"q_breadth_1":2,"q_breadth_2":2,"q_outcome_1":3,"q_outcome_2":5,"q_stakeholder_1":3,"q_stakeholder_2":3,"q_teaching_1":1,"q_teaching_2":3,"q_public_visibility_1":1,"q_account_breadth_1":1,"q_account_breadth_2":3,"q_continuity_1":1,"q_continuity_2":3,"q_variable_comp_1":1,"q_variable_comp_2":1,"q_coding_1":1,"q_coding_2":1,"q_travel_2":1,"q_travel_1":1,"q_adversarial_1":1,"q_adversarial_2":1,"q_adversarial_3":1,"q_physical_2":1,"q_physical_1":1,"q_ml_fluency_1":1,"q_mobile_fluency_1":1,"q_data_fluency_1":1,"q_cloud_fluency_1":1,"q_people_mgmt_1":5,"q_people_mgmt_2":5},
   },
   {
     id: "technical-product-manager",

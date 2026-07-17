@@ -91,7 +91,7 @@
         "people_management_orientation": {
           "target": 2,
           "weight": 0.7,
-          "rationale": "IC and management are framed as parallel tracks; most product engineers stay IC-focused. This is one of the clearest available signals toward the EM track, so it carries real weight against a pure-IC match rather than being diluted by neutral moderate-target dimensions elsewhere."
+          "rationale": "IC and management are parallel tracks; most product engineers stay IC-focused. This is one of the clearest available signals of a management lean, so it carries real weight against a pure-IC match rather than being diluted by neutral moderate-target dimensions elsewhere."
         },
         "public_visibility_comfort": {
           "target": 1,
@@ -209,7 +209,7 @@
         "people_management_orientation": {
           "target": 2,
           "weight": 0.3,
-          "rationale": "Platform Engineer to EM(Platform/Infra) is a common move given stakeholder-management muscle, but the archetype itself is IC-centered."
+          "rationale": "Moving from Platform Engineer into a management role is common given the stakeholder-management muscle this archetype already builds, but the archetype itself is IC-centered."
         },
         "public_visibility_comfort": {
           "target": 1,
@@ -563,7 +563,7 @@
         "people_management_orientation": {
           "target": 2,
           "weight": 0.3,
-          "rationale": "Career ladder includes a separate EM(ML) branch, a standard optional parallel track, not defining for the IC archetype."
+          "rationale": "Career ladder includes a separate ML management branch, a standard optional parallel track, not defining for the IC archetype."
         },
         "public_visibility_comfort": {
           "target": 1,
@@ -1891,124 +1891,6 @@
           "target": 1,
           "weight": 0.1,
           "rationale": "Not relevant to this archetype's scope."
-        }
-      }
-    },
-    {
-      "id": "engineering-management",
-      "name": "Engineering Management (Track)",
-      "confidence": "high",
-      "defining_dimension": ["people_management_orientation"],
-      "scores": {
-        "ambiguity_tolerance": {
-          "target": 3,
-          "weight": 0.5,
-          "rationale": "Mixes structured cadences with genuinely undefined problems (team morale, conflict) that have no crisp metric, but is framed around known responsibilities rather than 'define the problem yourself' mandates."
-        },
-        "interrupt_tolerance": {
-          "target": 4,
-          "weight": 0.7,
-          "rationale": "Explicitly moves 'between strategic planning and tactical firefighting within the same hour' (escalations, on-call handling as manager)."
-        },
-        "oncall_incident_appetite": {
-          "target": 2,
-          "weight": 0.3,
-          "rationale": "Handles escalations from on-call, but this is secondhand exposure as manager/escalation point, not personally paging or doing live diagnosis."
-        },
-        "debugging_diagnostic_depth": {
-          "target": 1,
-          "weight": 0.2,
-          "rationale": "'In the code, not writing code' with hands-on coding cadence as low as a day every 3-4 months — diagnostic depth is not a job requirement."
-        },
-        "systems_design_scale": {
-          "target": 2,
-          "weight": 0.3,
-          "rationale": "Reviews architectural proposals and stays connected via architectural discussion, but is evaluator, not designer."
-        },
-        "technical_breadth_depth": {
-          "target": 2,
-          "weight": 0.3,
-          "rationale": "Stays connected via code review and occasional pairing, useful for credibility but not a central evaluated competency."
-        },
-        "outcome_accountability": {
-          "target": 4,
-          "weight": 0.7,
-          "rationale": "Explicit team-level KPIs (velocity, MTTR, defect density, retention) owned even without personally producing the code."
-        },
-        "stakeholder_client_comfort": {
-          "target": 3,
-          "weight": 0.5,
-          "rationale": "Coordinates with product/design and cross-team representation, a structured-but-recurring posture, not fluid executive-to-engineer register-shifting."
-        },
-        "teaching_enjoyment": {
-          "target": 2,
-          "weight": 0.2,
-          "rationale": "No discussion of public teaching/content; growth-plan coaching is private 1:1 mentorship."
-        },
-        "account_portfolio_breadth": {
-          "target": 2,
-          "weight": 0.2,
-          "rationale": "Not discussed; EM's 'accounts' are internal reports and stakeholders, not a portfolio of client relationships."
-        },
-        "relationship_continuity": {
-          "target": 2,
-          "weight": 0.2,
-          "rationale": "Not discussed; EM's relationships with reports are ongoing but this isn't a client/account relationship in the sense this dimension measures."
-        },
-        "variable_comp_appetite": {
-          "target": 1,
-          "weight": 0.3,
-          "rationale": "Comp is 'base + bonus + equity, same shape as senior IC comp — not commission/variable-based.'"
-        },
-        "coding_intensity": {
-          "target": 1,
-          "weight": 0.9,
-          "rationale": "Headline claim: 'in the code, not writing code,' hands-on cadence roughly a day every 3-4 months, never in the critical path."
-        },
-        "travel_embed_willingness": {
-          "target": 1,
-          "weight": 0.2,
-          "rationale": "Not discussed; an internal, office/remote-based role with no travel component mentioned."
-        },
-        "adversarial_threat_modeling": {
-          "target": 1,
-          "weight": 0.2,
-          "rationale": "No mention of threat modeling or adversarial thinking anywhere in the brief."
-        },
-        "physical_constraint_engineering": {
-          "target": 1,
-          "weight": 0.2,
-          "rationale": "Not discussed anywhere; EM's technical exposure is architectural/code-review level."
-        },
-        "people_management_orientation": {
-          "target": 5,
-          "weight": 1,
-          "rationale": "The defining trait of the entire archetype: 1:1s, growth plans, hiring, and retention/morale are the actual basis of the EM's own performance review."
-        },
-        "public_visibility_comfort": {
-          "target": 1,
-          "weight": 0.1,
-          "rationale": "No public content or speaking expectation described; growth-plan coaching is private 1:1 mentorship."
-        },
-        "ml_engineering_fluency": {
-          "target": 1,
-          "weight": 0.1,
-          "rationale": "Not relevant to this archetype's scope."
-        },
-        "mobile_platform_fluency": {
-          "target": 1,
-          "weight": 0.1,
-          "rationale": "Not relevant to this archetype's scope."
-        },
-        "data_infrastructure_fluency": {
-          "target": 1,
-          "weight": 0.1,
-          "rationale": "Not relevant to this archetype's scope."
-        },
-        "cloud_infrastructure_fluency": {
-          "target": 1,
-          "weight": 0.1,
-          "rationale": "Not relevant to this archetype's scope; EM's technical exposure is architectural/code-review level, not hands-on infra."
         }
       }
     },
