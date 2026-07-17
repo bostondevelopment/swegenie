@@ -72,7 +72,14 @@ export default function PrivacyPage() {
             <h2 className="font-display text-lg font-semibold text-[var(--color-fg)] mb-2.5">
               Questions
             </h2>
-            <p>This is a research project, not a company with a support line yet — check the methodology page for how the product works, or the project&apos;s repository for how it&apos;s built.</p>
+            <p>
+              Email{" "}
+              <a href="mailto:kazaam@swe-genie.com" className="text-[var(--color-fg)] underline">
+                kazaam@swe-genie.com
+              </a>{" "}
+              with questions, or see the methodology page for how the product works and the
+              project&apos;s repository for how it&apos;s built.
+            </p>
           </div>
         </div>
       </main>

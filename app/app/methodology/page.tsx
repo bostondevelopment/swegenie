@@ -245,12 +245,19 @@ export default function MethodologyPage() {
 
         <section>
           <h2 className="font-display text-2xl font-semibold mb-[18px]">6. What&apos;s next</h2>
-          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7]">
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
             A future version layers in verified practitioners and hiring managers rating what
             their role actually demands day-to-day, with expert-seeded weights adjusted by that
             crowd input — but only once there&apos;s enough traffic per archetype to make that
             signal reliable, and always with the diff between expert and crowd published, not
             hidden.
+          </p>
+          <p className="text-[17px] text-[var(--color-muted)] leading-[1.7]">
+            Questions or feedback:{" "}
+            <a href="mailto:kazaam@swe-genie.com" className="text-[var(--color-fg)] underline">
+              kazaam@swe-genie.com
+            </a>
+            .
           </p>
         </section>
       </main>
