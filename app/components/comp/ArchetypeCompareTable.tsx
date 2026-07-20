@@ -126,38 +126,51 @@ export function ArchetypeCompareTable({
 
   return (
     <div className="flex flex-col gap-8">
-      {/* Level selector */}
-      <div
-        role="tablist"
-        aria-label="Career level"
-        className="flex gap-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] p-1 self-start"
-      >
-        {LEVELS.map((lvl, i) => {
-          const selected = lvl === level;
-          return (
-            <button
-              key={lvl}
-              ref={(el) => {
-                tabRefs.current[i] = el;
-              }}
-              role="tab"
-              aria-selected={selected}
-              tabIndex={selected ? 0 : -1}
-              onClick={() => setLevel(lvl)}
-              onKeyDown={(e) => onTabKeyDown(e, i)}
-              className={`rounded-full px-3.5 py-1.5 text-[13px] font-medium transition-colors ${
-                selected
-                  ? 'bg-[var(--color-accent)] text-[var(--color-accent-ink)]'
-                  : 'text-[var(--color-muted)] hover:text-[var(--color-fg)]'
-              }`}
-            >
-              <span className="flex flex-col items-center leading-tight">
-                <span>{LEVEL_TITLE_LABELS[lvl]}</span>
-                <span className="text-[10px] font-normal opacity-70">{lvl !== LEVEL_TITLE_LABELS[lvl] ? `${lvl} · ` : ''}{LEVEL_YOE_LABELS[lvl]}</span>
-              </span>
-            </button>
-          );
-        })}
+      {/* Level selector — horizontally scrollable pill strip on mobile, unchanged on desktop.
+          The scroll container clips overflow to the widget itself instead of the page;
+          a right-edge fade hints there's more to scroll. Sub-label hidden below sm to
+          keep pills compact without needing a second row. */}
+      <div className="relative self-start max-w-full">
+        <div
+          role="tablist"
+          aria-label="Career level"
+          className="flex gap-1 overflow-x-auto rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {LEVELS.map((lvl, i) => {
+            const selected = lvl === level;
+            return (
+              <button
+                key={lvl}
+                ref={(el) => {
+                  tabRefs.current[i] = el;
+                }}
+                role="tab"
+                aria-selected={selected}
+                tabIndex={selected ? 0 : -1}
+                onClick={() => setLevel(lvl)}
+                onKeyDown={(e) => onTabKeyDown(e, i)}
+                className={`shrink-0 rounded-full px-3 py-1.5 sm:px-3.5 text-[12px] sm:text-[13px] font-medium transition-colors ${
+                  selected
+                    ? 'bg-[var(--color-accent)] text-[var(--color-accent-ink)]'
+                    : 'text-[var(--color-muted)] hover:text-[var(--color-fg)]'
+                }`}
+              >
+                <span className="flex flex-col items-center leading-tight">
+                  <span>{LEVEL_TITLE_LABELS[lvl]}</span>
+                  <span className="hidden sm:inline text-[10px] font-normal opacity-70">
+                    {lvl !== LEVEL_TITLE_LABELS[lvl] ? `${lvl} · ` : ''}
+                    {LEVEL_YOE_LABELS[lvl]}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+        {/* Scroll hint — only relevant when the strip can overflow, i.e. below sm */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 w-8 rounded-r-full bg-gradient-to-l from-[var(--color-surface)] to-transparent sm:hidden"
+        />
       </div>
 
       {/* Tier toggle */}
