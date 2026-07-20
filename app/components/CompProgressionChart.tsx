@@ -8,9 +8,10 @@ interface LevelBand {
 interface CompProgressionChartProps {
   levels: LevelBand[] | null;
   max?: number;
+  confidence?: 'low' | 'medium' | 'high';
 }
 
-export function CompProgressionChart({ levels, max = 400000 }: CompProgressionChartProps) {
+export function CompProgressionChart({ levels, max = 400000, confidence }: CompProgressionChartProps) {
   if (!levels || levels.length === 0) return null;
 
   return (
@@ -60,6 +61,11 @@ export function CompProgressionChart({ levels, max = 400000 }: CompProgressionCh
         </div>
         <span className="w-24 shrink-0" aria-hidden="true" />
       </div>
+      {confidence === 'low' && (
+        <span className="self-start rounded-full border border-[var(--color-signal-warn)]/40 px-1.5 py-0.5 text-[10px] font-mono uppercase tracking-wide text-[var(--color-signal-warn)]">
+          limited data
+        </span>
+      )}
     </div>
   );
 }

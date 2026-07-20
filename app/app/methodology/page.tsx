@@ -173,8 +173,8 @@ export default function MethodologyPage() {
             />
             <StatTile
               label="Career levels"
-              value="6"
-              sub="L1 · L2 · L3 · L4 · L5 · Staff"
+              value="7"
+              sub="L1 · L2 · L3 · L4 · L5 · Staff · Principal"
             />
             <StatTile label="Percentile bands" value="5" sub="P10 / P25 / P50 / P75 / P90" />
             <StatTile label="Confidence tiers" value="3" sub="high · medium · low" />
@@ -229,11 +229,11 @@ export default function MethodologyPage() {
             high, medium, or low confidence by how much public data backs that specific
             role/tier/level combination. Cells marked low carry a{" "}
             <span className="font-mono text-[13px] text-[var(--color-signal-warn)]">limited data</span>{" "}
-            badge on the chart. 103 of 510 cells are low-confidence, concentrated in Customer
-            Support Solutions Engineer (13 cells), Embedded/IoT Engineer (12), Developer Relations
-            &amp; Advocacy (10), Security Engineer (9), Solutions Architect (Consulting) (9), and
-            Consulting Engineer / Professional Services (9), because no public compensation data
-            exists for that specific role/tier/level combination.
+            badge on the chart. 143 of 595 cells are low-confidence, concentrated in Customer
+            Support Solutions Engineer (17 cells), Embedded/IoT Engineer (16), Solutions Architect
+            — Consulting-side (15), Customer Support Engineer (13), Consulting Engineer /
+            Professional Services (13), and Solutions Architect — Vendor-side (12), because no
+            public compensation data exists for that specific role/tier/level combination.
           </p>
 
           <Callout tone="caveat" title="Not financial advice.">

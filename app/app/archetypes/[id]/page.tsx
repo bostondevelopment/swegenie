@@ -180,6 +180,7 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
                   <div className="mb-10">
                     <CompProgressionChart
                       levels={comp.levels.map((lvl) => ({ level: levelDisplayLabel(lvl.label), low: lvl.low, high: lvl.high }))}
+                      confidence={comp.confidence}
                     />
                   </div>
                 )}

@@ -21,7 +21,7 @@ export interface CompStructure {
   high: number;
   typical: number;
   sourceCompanyCount: number;
-  confidence: "high" | "medium";
+  confidence: "high" | "medium" | "low";
   mix: CompMix | null;
   levels: CompLevelBand[] | null;
   caveat?: string;

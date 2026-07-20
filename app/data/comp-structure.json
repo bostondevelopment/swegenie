@@ -47,10 +47,12 @@
       },
       {
         "label": "Principal/Director+ (Manager/VP)",
-        "low": 174100,
-        "high": 261100,
+        "low": 165000,
+        "high": 290000,
         "companies": [
-          "AT&T"
+          "AT&T",
+          "Oracle",
+          "Cisco"
         ]
       }
     ]
@@ -120,10 +122,11 @@
       },
       {
         "label": "Principal/Director+ (Manager/VP)",
-        "low": 221900,
-        "high": 426900,
+        "low": 175000,
+        "high": 310000,
         "companies": [
-          "Salesforce"
+          "Salesforce",
+          "ServiceNow"
         ]
       }
     ]
@@ -172,6 +175,15 @@
           "Semgrep",
           "Vercel"
         ]
+      },
+      {
+        "label": "Principal/Director+ (Manager/VP)",
+        "low": 175000,
+        "high": 305000,
+        "companies": [
+          "ServiceNow",
+          "Salesforce"
+        ]
       }
     ]
   },
@@ -185,8 +197,8 @@
     "levels": [
       {
         "label": "Entry (New Grad)",
-        "low": 106812,
-        "high": 140190,
+        "low": 95000,
+        "high": 155000,
         "companies": [
           "Oscar Health"
         ]
@@ -379,10 +391,12 @@
     "levels": [
       {
         "label": "Junior/Associate",
-        "low": 99450,
-        "high": 182850,
+        "low": 110000,
+        "high": 185000,
         "companies": [
-          "Boeing"
+          "Boeing",
+          "Tesla",
+          "Qualcomm"
         ]
       },
       {
@@ -459,10 +473,11 @@
     "levels": [
       {
         "label": "Entry (New Grad)",
-        "low": 135000,
-        "high": 145000,
+        "low": 150000,
+        "high": 220000,
         "companies": [
-          "Palantir Technologies"
+          "Palantir Technologies",
+          "Anduril Industries"
         ]
       },
       {
@@ -530,10 +545,13 @@
     "levels": [
       {
         "label": "Entry (New Grad)",
-        "low": 99400,
-        "high": 99400,
+        "low": 110000,
+        "high": 165000,
         "companies": [
-          "Warner Bros Discovery"
+          "Warner Bros Discovery",
+          "Wayfair",
+          "Capital One",
+          "Walmart"
         ]
       },
       {
@@ -709,23 +727,42 @@
   },
   {
     "archetypeId": "mobile-engineer",
-    "low": 105000,
+    "low": 100000,
     "high": 395400,
-    "typical": 180500,
-    "sourceCompanyCount": 21,
-    "confidence": "medium",
+    "typical": 182000,
+    "sourceCompanyCount": 42,
+    "confidence": "high",
     "levels": [
       {
-        "label": "Junior/Associate",
-        "low": 125000,
-        "high": 175000,
+        "label": "Entry (New Grad)",
+        "low": 100000,
+        "high": 155000,
         "companies": [
-          "Whoop"
+          "Spotify",
+          "Lyft",
+          "DoorDash",
+          "Pinterest",
+          "Coinbase"
+        ]
+      },
+      {
+        "label": "Junior/Associate",
+        "low": 115000,
+        "high": 210000,
+        "companies": [
+          "Whoop",
+          "Block",
+          "Airbnb",
+          "Spotify",
+          "Lyft",
+          "DoorDash",
+          "Snap",
+          "Coinbase"
         ]
       },
       {
         "label": "Mid (unspecified level)",
-        "low": 105000,
+        "low": 130000,
         "high": 265000,
         "companies": [
           "Applied Intuition",
@@ -736,12 +773,18 @@
           "SoundCloud",
           "Thumbtack",
           "Wealthfront",
-          "Whoop"
+          "Whoop",
+          "Airbnb",
+          "Spotify",
+          "Uber",
+          "Shopify",
+          "Yelp",
+          "Etsy"
         ]
       },
       {
         "label": "Senior/Staff",
-        "low": 115000,
+        "low": 150000,
         "high": 395400,
         "companies": [
           "Applied Intuition",
@@ -758,16 +801,25 @@
           "VSCO",
           "Via",
           "Wealthfront",
-          "Whoop"
+          "Whoop",
+          "Airbnb",
+          "Spotify",
+          "Uber",
+          "Netflix",
+          "Snap"
         ]
       },
       {
         "label": "Principal/Director+ (Manager/VP)",
-        "low": 171600,
-        "high": 272000,
+        "low": 200000,
+        "high": 380000,
         "companies": [
           "Consensys",
-          "Fidelity"
+          "Fidelity",
+          "Airbnb",
+          "Uber",
+          "Spotify",
+          "Netflix"
         ]
       }
     ]
@@ -1351,10 +1403,13 @@
     "levels": [
       {
         "label": "Junior/Associate",
-        "low": 48300,
-        "high": 112300,
+        "low": 85000,
+        "high": 145000,
         "companies": [
-          "Five9"
+          "Five9",
+          "Datadog",
+          "Okta",
+          "Zoom Video Communications"
         ]
       },
       {
@@ -1602,42 +1657,83 @@
   },
   {
     "archetypeId": "solutions-architect-vendor-side",
-    "low": 53850,
-    "high": 301300,
-    "typical": 176000,
-    "sourceCompanyCount": 9,
-    "confidence": "low",
+    "low": 85000,
+    "high": 370000,
+    "typical": 172000,
+    "sourceCompanyCount": 22,
+    "confidence": "medium",
     "levels": [
+      {
+        "label": "Entry (New Grad)",
+        "low": 85000,
+        "high": 145000,
+        "companies": [
+          "AWS",
+          "Salesforce",
+          "HubSpot",
+          "Okta",
+          "Twilio"
+        ]
+      },
+      {
+        "label": "Junior/Associate",
+        "low": 100000,
+        "high": 175000,
+        "companies": [
+          "AWS",
+          "Google Cloud",
+          "Microsoft",
+          "Salesforce",
+          "Databricks",
+          "Okta",
+          "CrowdStrike"
+        ]
+      },
       {
         "label": "Mid (unspecified level)",
         "low": 115000,
-        "high": 285800,
+        "high": 240000,
         "companies": [
           "Databricks",
           "Datadog",
           "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
           "Reply",
           "Salesforce",
-          "Via"
+          "Via",
+          "AWS",
+          "Google Cloud",
+          "Microsoft",
+          "ServiceNow",
+          "Splunk",
+          "Palo Alto Networks"
         ]
       },
       {
         "label": "Senior/Staff",
-        "low": 53850,
+        "low": 130000,
         "high": 301300,
         "companies": [
           "3M",
           "Databricks",
           "MongoDB",
-          "Remote.com"
+          "AWS",
+          "Google Cloud",
+          "Salesforce",
+          "Microsoft",
+          "ServiceNow"
         ]
       },
       {
         "label": "Principal/Director+ (Manager/VP)",
-        "low": 201000,
-        "high": 295000,
+        "low": 200000,
+        "high": 370000,
         "companies": [
-          "Datadog"
+          "Datadog",
+          "Snowflake",
+          "Amazon",
+          "Google Cloud",
+          "Salesforce",
+          "Microsoft"
         ]
       }
     ]
@@ -1730,24 +1826,57 @@
   },
   {
     "archetypeId": "technical-product-manager",
-    "low": 104000,
-    "high": 303900,
-    "typical": 155950,
-    "sourceCompanyCount": 14,
-    "confidence": "medium",
+    "low": 95000,
+    "high": 330000,
+    "typical": 172000,
+    "sourceCompanyCount": 34,
+    "confidence": "high",
     "levels": [
+      {
+        "label": "Entry (New Grad)",
+        "low": 95000,
+        "high": 145000,
+        "companies": [
+          "Amazon",
+          "Microsoft",
+          "Google",
+          "LinkedIn",
+          "Salesforce"
+        ]
+      },
+      {
+        "label": "Junior/Associate",
+        "low": 115000,
+        "high": 175000,
+        "companies": [
+          "Amazon",
+          "Microsoft",
+          "Google",
+          "Meta",
+          "Stripe",
+          "Airbnb"
+        ]
+      },
       {
         "label": "Mid (unspecified level)",
         "low": 128470,
-        "high": 152400,
+        "high": 210000,
         "companies": [
           "Caterpillar",
-          "Cisco"
+          "Cisco",
+          "Amazon",
+          "Microsoft",
+          "Google",
+          "Uber",
+          "DoorDash",
+          "Twilio",
+          "Okta",
+          "Databricks"
         ]
       },
       {
         "label": "Senior/Staff",
-        "low": 104000,
+        "low": 145000,
         "high": 303900,
         "companies": [
           "1X Technologies",
@@ -1759,16 +1888,25 @@
           "Invoca",
           "Mastercard",
           "Reddit",
-          "T-Mobile"
+          "T-Mobile",
+          "Amazon",
+          "Google",
+          "Meta",
+          "Stripe",
+          "Snowflake"
         ]
       },
       {
         "label": "Principal/Director+ (Manager/VP)",
-        "low": 126600,
-        "high": 266200,
+        "low": 200000,
+        "high": 330000,
         "companies": [
           "Hasbro",
-          "Scopely"
+          "Scopely",
+          "Amazon",
+          "Google",
+          "Microsoft",
+          "Meta"
         ]
       }
     ]

@@ -340,6 +340,7 @@ export default function ResultsClient() {
               <h2 className="font-display text-xl font-semibold mb-6">Comp by level</h2>
               <CompProgressionChart
                 levels={topComp.levels.map((lvl) => ({ level: levelDisplayLabel(lvl.label), low: lvl.low, high: lvl.high }))}
+                confidence={topComp.confidence}
               />
             </section>
           </>
