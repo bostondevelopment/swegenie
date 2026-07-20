@@ -32,6 +32,16 @@ export const LEVEL_YOE_LABELS: Record<Level, string> = {
   Principal: '15+ yrs',
 };
 
+export const LEVEL_TITLE_LABELS: Record<Level, string> = {
+  L1: 'Entry',
+  L2: 'Junior',
+  L3: 'Mid-level',
+  L4: 'Senior',
+  L5: 'Lead',
+  Staff: 'Staff',
+  Principal: 'Principal',
+};
+
 // Startup tiers carry illiquid equity and get the wide, fade-to-transparent
 // equity gradient plus a scenario callout slot.
 export const STARTUP_TIERS: readonly Tier[] = ['growth-stage-private', 'early-stage'] as const;

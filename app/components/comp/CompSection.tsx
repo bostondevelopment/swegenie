@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { ArchetypeCompData, Level, Tier } from './comp.types';
-import { LEVEL_YOE_LABELS, LEVELS, TIER_LABELS, TIER_ORDER } from './comp.utils';
+import { LEVEL_TITLE_LABELS, LEVEL_YOE_LABELS, LEVELS, TIER_LABELS, TIER_ORDER } from './comp.utils';
 import { TierCompChart } from './TierCompChart';
 import { EquityTwoLane } from './EquityTwoLane';
 
@@ -98,8 +98,8 @@ export function CompSection({ archetypeId, data, userLevel }: CompSectionProps) 
                   }`}
                 >
                   <span className="flex flex-col items-center leading-tight">
-                    <span>{lvl}</span>
-                    <span className="text-[10px] font-normal opacity-70">{LEVEL_YOE_LABELS[lvl]}</span>
+                    <span>{LEVEL_TITLE_LABELS[lvl]}</span>
+                    <span className="text-[10px] font-normal opacity-70">{lvl !== LEVEL_TITLE_LABELS[lvl] ? `${lvl} · ` : ''}{LEVEL_YOE_LABELS[lvl]}</span>
                   </span>
                 </button>
               );

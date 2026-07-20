@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react';
 import type { ArchetypeCompData, Level, Tier } from './comp.types';
-import { LEVEL_YOE_LABELS, LEVELS, TIER_LABELS, TIER_ORDER, formatUSD, totalComp } from './comp.utils';
+import { LEVEL_TITLE_LABELS, LEVEL_YOE_LABELS, LEVELS, TIER_LABELS, TIER_ORDER, formatUSD, totalComp } from './comp.utils';
 import { CompRangeBar } from './CompRangeBar';
 
 interface TierCompChartProps {
@@ -69,8 +69,8 @@ export function TierCompChart({ archetypeId, data, defaultLevel, userLevel }: Ti
               }`}
             >
               <span className="flex flex-col items-center leading-tight">
-                <span>{lvl}</span>
-                <span className="text-[10px] font-normal opacity-70">{LEVEL_YOE_LABELS[lvl]}</span>
+                <span>{LEVEL_TITLE_LABELS[lvl]}</span>
+                <span className="text-[10px] font-normal opacity-70">{lvl !== LEVEL_TITLE_LABELS[lvl] ? `${lvl} · ` : ''}{LEVEL_YOE_LABELS[lvl]}</span>
               </span>
             </button>
           );
