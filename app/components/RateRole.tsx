@@ -9,7 +9,7 @@ const ROLE_OPTIONS = [
   { value: "hiring-manager", label: "I hire for it" },
 ] as const;
 
-export function RateRole({ archetypeId, dimensions: _ }: { archetypeId: string; dimensions: { id: string; name: string }[] }) {
+export function RateRole({ archetypeId }: { archetypeId: string; dimensions: { id: string; name: string }[] }) {
   const [open, setOpen] = useState(false);
   const [role, setRole] = useState<string>("role-holder");
   const [state, handleSubmit] = useForm("mbdnywqe");
@@ -89,7 +89,7 @@ export function RateRole({ archetypeId, dimensions: _ }: { archetypeId: string; 
             <div>
               <label htmlFor="rate-email" className="block text-[15px] font-medium mb-2.5">
                 Email{" "}
-                <span className="text-[var(--color-muted-2)] font-normal">(optional — if you'd like a response)</span>
+                <span className="text-[var(--color-muted-2)] font-normal">(optional — if you&apos;d like a response)</span>
               </label>
               <input
                 id="rate-email"
