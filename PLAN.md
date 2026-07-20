@@ -395,10 +395,10 @@ before the full v2 build begins:
 - Collection endpoint: `app/app/api/contribute/route.ts` validates each signal against the taxonomy
   and appends to `data/contributor-signals.jsonl`. Same runtime caveat as the beta pipeline (Node
   server only; dropped from static export).
-- Contributor UI: a "Rate this role" collapsible on each archetype page
-  (`app/components/RateRole.tsx`) with sliders for the archetype's top-3 dimensions, a role-holder /
-  hiring-manager selector, and optional years-in-role; posts one signal per dimension, linked by a
-  per-session id.
+- Contributor UI: a "Rate this role" section on each archetype page (`app/components/RateRole.tsx`)
+  with a role-holder / hiring-manager selector, open-text feedback field, and optional email;
+  submits via Formspree (replaced the original `/api/contribute` POST approach, which was
+  incompatible with static GitHub Pages hosting).
 - **Explicitly NOT built** (correctly gated behind the Phase 8 traffic threshold): verification,
   aggregation, and any mutation of the expert taxonomy. Signals are raw capture only.
 

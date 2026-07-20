@@ -1,7 +1,6 @@
-# SWE Genie (see `docs/adr/004-name.md`)
+# SWE Genie — app
 
-The Next.js app for CareerGuru/SWE Genie's assessment product. See the repo root `PLAN.md` and
-`docs/HANDOFF.md` for full project context.
+The Next.js app for [www.swe-genie.com](https://www.swe-genie.com). See the repo root `PLAN.md` for full project context.
 
 ## Development
 
@@ -42,8 +41,8 @@ npm run build
   correctly instrumented at every call site but only logged server-side, since no analytics
   service credentials were available to this build. Wiring a real provider is a one-line change
   inside `track()`.
-- **Email capture** is a `mailto:` link, not a stored email — no backend/ESP integration exists in
-  v1 (see ADR-002/003: no database, no login).
+- **Email capture / feedback** uses Formspree (`@formspree/react`) on the "Rate this role" widget
+  — no backend or stored email (see ADR-002/003: no database, no login).
 - **No formal Lighthouse audit** has been run against a deployed instance; manual QA (build, lint,
   unit tests, browser walkthrough across desktop/mobile/dark-mode) is documented in the Phase 5
   commit, but performance/accessibility scores are unverified numbers, not confirmed ≥90.

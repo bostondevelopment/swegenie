@@ -1,19 +1,16 @@
-# CareerGuru (working name)
+# SWE Genie
 
-A website that helps software engineers discover which engineering role archetypes best fit
-their skills, temperament, and incentives — sales engineer, solutions architect,
-forward-deployed engineer, customer engineer, DevRel, and the classic IC tracks — via an
-assessment that produces a ranked, explainable list of role matches.
+A 6-minute assessment that ranks 17 engineering role archetypes against how you actually work — sales engineer, solutions architect, forward-deployed engineer, DevRel, platform/infra, SRE, ML engineer, and more — with an explainable, sourced fit score for each.
 
-**Status:** Phase 0 (foundation). See [PLAN.md](PLAN.md) for the full roadmap and current status.
+Live at **[www.swe-genie.com](https://www.swe-genie.com)**.
 
 ## Layout
 
 ```
 /docs          — research, taxonomy spec, branding, UX specs, ADRs
-/taxonomy      — versioned taxonomy data (JSON) + scoring rubric
+/taxonomy      — versioned taxonomy data (JSON) + scoring rubric (note: app/data/ is the live source — see app/README.md)
 /app           — the web application (Next.js + TypeScript + Tailwind)
-/PLAN.md       — master plan, single source of truth for project status
+/PLAN.md       — master plan and current project status
 ```
 
 ## Development
@@ -21,13 +18,16 @@ assessment that produces a ranked, explainable list of role matches.
 ```bash
 cd app
 npm install
-npm run dev     # local dev server
-npm run build   # production build
-npm run lint    # eslint
+npm run dev     # http://localhost:3000
+npm run test    # scoring engine unit tests (vitest)
+npm run build   # production build (static export)
+npm run lint
 ```
+
+## Deployment
+
+Deployed to GitHub Pages via `.github/workflows/deploy.yml` — push to `main` triggers a build, test, and publish. See [docs/deploy.md](docs/deploy.md) for details.
 
 ## Key decisions
 
-Recorded as ADRs in [docs/adr/](docs/adr/). Highlights: taxonomy lives in versioned JSON and is
-the contract between research and app (schema changes require a version bump + ADR); v1 requires
-no login; scoring is a transparent rubric, not a black box.
+Recorded as ADRs in [docs/adr/](docs/adr/). Highlights: no login in v1; scoring is a transparent rubric (not a black box); taxonomy lives in versioned JSON; static GitHub Pages hosting (no server-side code).
