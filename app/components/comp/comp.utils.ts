@@ -28,8 +28,8 @@ export const LEVEL_YOE_LABELS: Record<Level, string> = {
   L3: '3–6 yrs',
   L4: '6–10 yrs',
   L5: '10–14 yrs',
-  Staff: '14–20 yrs',
-  Principal: '20+ yrs',
+  Staff: '8–15 yrs',
+  Principal: '12+ yrs',
 };
 
 // Startup tiers carry illiquid equity and get the wide, fade-to-transparent

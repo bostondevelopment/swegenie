@@ -36,7 +36,7 @@ const compByTier = compByTierData.archetypes as unknown as CompByTierData;
  * by the assessment: `/results?a=…&s=…`). `years_experience` is the only YOE
  * signal we collect — the dimension answers in `a=` are preference scores, not
  * seniority. Falls back to L4 when the param is missing, malformed, or has no
- * usable years value. Bands: L1 0–1yr, L2 1–3yr, L3 3–6yr, L4 6–10yr, L5 10–14yr, Staff 14–20yr, Principal 20+yr.
+ * usable years value. Bands: L1 0–1yr, L2 1–3yr, L3 3–6yr, L4 6–10yr, L5 10–14yr, Staff 14–20yr, Principal 20+yr. (Display labels differ — see LEVEL_YOE_LABELS.)
  */
 function inferLevel(stackRaw: string | null): Level {
   if (!stackRaw) return "L4";
