@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   },
   description:
     "A 6-minute assessment that ranks 17 engineering role archetypes against how you actually work, with an explainable, sourced fit score for each.",
+  openGraph: {
+    siteName: "SWE Genie",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SWE Genie — find your engineering role archetype" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({

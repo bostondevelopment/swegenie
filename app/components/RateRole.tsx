@@ -1,190 +1,118 @@
 "use client";
 
 import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { track } from "@/lib/analytics";
-
-/**
- * Phase 8 contributor-signal scaffold: a collapsible "Rate this role" widget on
- * an archetype page. A verified role-holder or hiring manager rates how much each
- * of the archetype's top dimensions actually matters, on the same 1-5 scale the
- * expert taxonomy uses. On submit each dimension is POSTed to /api/contribute as
- * a separate contributor signal (schema: taxonomy/contributor-signals-schema.json),
- * linked by a per-session id.
- *
- * Like the beta survey, /api/contribute only exists when the app is served by a
- * Node server (next dev, or a server build); on the static export the fetch fails
- * and the widget shows a graceful notice.
- */
-
-type Dim = { id: string; name: string };
 
 const ROLE_OPTIONS = [
   { value: "role-holder", label: "I do this role" },
   { value: "hiring-manager", label: "I hire for it" },
 ] as const;
 
-function newSessionId(): string {
-  // crypto.randomUUID is available in every browser this app targets; the
-  // try/catch keeps a non-crypto fallback so a submit can never throw here.
-  try {
-    return crypto.randomUUID();
-  } catch {
-    return `sess-${Date.now()}-${Math.floor(Math.random() * 1e9)}`;
-  }
-}
-
-export function RateRole({ archetypeId, dimensions }: { archetypeId: string; dimensions: Dim[] }) {
+export function RateRole({ archetypeId, dimensions: _ }: { archetypeId: string; dimensions: { id: string; name: string }[] }) {
   const [open, setOpen] = useState(false);
   const [role, setRole] = useState<string>("role-holder");
-  const [values, setValues] = useState<Record<string, number>>(() =>
-    Object.fromEntries(dimensions.map((d) => [d.id, 3])),
-  );
-  const [years, setYears] = useState("");
-  const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
+  const [state, handleSubmit] = useForm("mbdnywqe");
 
-  async function handleSubmit() {
-    if (status === "submitting") return;
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     track("rate_role_submit", { archetype_id: archetypeId, role });
-    setStatus("submitting");
-    const sessionId = newSessionId();
-    const yearsNum = years.trim() === "" ? null : Number(years);
-    try {
-      const results = await Promise.all(
-        dimensions.map((d) =>
-          // Trailing slash matches next.config's `trailingSlash: true`.
-          fetch("/api/contribute/", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              archetype_id: archetypeId,
-              dimension_id: d.id,
-              contributor_role: role,
-              signal_value: values[d.id],
-              years_in_role: yearsNum !== null && Number.isFinite(yearsNum) ? yearsNum : null,
-              session_id: sessionId,
-            }),
-          }).then((r) => r.ok),
-        ),
-      );
-      setStatus(results.every(Boolean) ? "done" : "error");
-    } catch {
-      setStatus("error");
-    }
+    handleSubmit(e);
   }
 
   return (
     <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 text-left"
-      >
-        <span className="font-display text-2xl font-semibold">Rate this role</span>
-        <span className="font-mono text-sm text-[var(--color-muted-2)]">{open ? "–" : "+"}</span>
-      </button>
+      <h2 className="font-display text-2xl font-semibold">Rate this role</h2>
       <p className="text-[15px] text-[var(--color-muted)] leading-[1.6] mt-3 max-w-2xl">
-        Do this role, or hire for it? Rate how much each trait actually matters. Role-holder and
-        hiring-manager ratings are kept separate, and no single rating changes the model; ratings
-        are aggregated with anti-gaming thresholds before they factor in.
+        Do this role, or hire for it? Share what rings true or off — your perspective helps validate
+        the data behind this profile.
       </p>
+      {!open && (
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="mt-5 btn-primary px-5 py-2.5 text-sm font-medium"
+        >
+          Share feedback
+        </button>
+      )}
 
-      {open && (
-        <div className="mt-7">
-          {status === "done" ? (
-            <div className="rounded-lg border border-[var(--color-border)] p-6">
-              <p className="text-[15px] text-[var(--color-muted)]">
-                Thanks — your ratings were recorded as contributor signals.
-              </p>
-            </div>
-          ) : (
-            <div className="rounded-lg border border-[var(--color-border)] p-6 sm:p-8 flex flex-col gap-7">
-              <div>
-                <p className="text-[15px] font-medium mb-2.5">Your relationship to this role</p>
-                <div className="flex flex-wrap gap-2">
-                  {ROLE_OPTIONS.map((o) => (
-                    <button
-                      key={o.value}
-                      type="button"
-                      onClick={() => setRole(o.value)}
-                      aria-pressed={role === o.value}
-                      className={`px-4 py-2 text-sm rounded-md border transition-colors ${
-                        role === o.value
-                          ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-fg)]"
-                          : "border-[var(--color-border)] text-[var(--color-muted)] hover:text-[var(--color-fg)]"
-                      }`}
-                    >
-                      {o.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
+      {open && <div className="mt-7">
+        {state.succeeded ? (
+          <div className="rounded-lg border border-[var(--color-border)] p-6">
+            <p className="text-[15px] text-[var(--color-muted)]">
+              Thanks — your feedback helps make these profiles more accurate.
+            </p>
+          </div>
+        ) : (
+          <form
+            onSubmit={onSubmit}
+            className="rounded-lg border border-[var(--color-border)] p-6 sm:p-8 flex flex-col gap-7"
+          >
+            <input type="hidden" name="archetype" value={archetypeId} />
+            <input type="hidden" name="role" value={role} />
 
-              <div className="flex flex-col gap-6">
-                {dimensions.map((d) => (
-                  <div key={d.id}>
-                    <div className="flex items-baseline justify-between gap-4 mb-2">
-                      <label htmlFor={`rate-${d.id}`} className="text-[15px] font-medium">
-                        {d.name}
-                      </label>
-                      <span className="font-mono text-sm text-[var(--color-muted-2)]">
-                        {values[d.id]} / 5
-                      </span>
-                    </div>
-                    <input
-                      id={`rate-${d.id}`}
-                      type="range"
-                      min={1}
-                      max={5}
-                      step={1}
-                      value={values[d.id]}
-                      onChange={(e) =>
-                        setValues((v) => ({ ...v, [d.id]: Number(e.target.value) }))
-                      }
-                      className="w-full accent-[var(--color-accent)]"
-                    />
-                    <div className="flex justify-between font-mono text-[11px] text-[var(--color-muted-2)] mt-1">
-                      <span>barely relevant</span>
-                      <span>defining</span>
-                    </div>
-                  </div>
+            <div>
+              <p className="text-[15px] font-medium mb-2.5">Your relationship to this role</p>
+              <div className="flex flex-wrap gap-2">
+                {ROLE_OPTIONS.map((o) => (
+                  <button
+                    key={o.value}
+                    type="button"
+                    onClick={() => setRole(o.value)}
+                    aria-pressed={role === o.value}
+                    className={`px-4 py-2 text-sm rounded-md border transition-colors ${
+                      role === o.value
+                        ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-fg)]"
+                        : "border-[var(--color-border)] text-[var(--color-muted)] hover:text-[var(--color-fg)]"
+                    }`}
+                  >
+                    {o.label}
+                  </button>
                 ))}
               </div>
-
-              <div>
-                <label htmlFor="rate-years" className="block text-[15px] font-medium mb-2.5">
-                  Years in this kind of role{" "}
-                  <span className="text-[var(--color-muted-2)] font-normal">(optional)</span>
-                </label>
-                <input
-                  id="rate-years"
-                  type="number"
-                  min={0}
-                  value={years}
-                  onChange={(e) => setYears(e.target.value)}
-                  className="w-28 rounded-md border border-[var(--color-border)] bg-transparent px-3 py-2 text-[15px] text-[var(--color-fg)] focus:outline-none focus:border-[var(--color-accent)]"
-                />
-              </div>
-
-              <div className="flex flex-wrap items-center gap-4">
-                <button
-                  type="button"
-                  onClick={handleSubmit}
-                  disabled={status === "submitting"}
-                  className="btn-primary px-5 py-2.5 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed"
-                >
-                  {status === "submitting" ? "Sending…" : "Submit ratings"}
-                </button>
-                {status === "error" && (
-                  <span className="text-[13px] text-[var(--color-signal-warn)]">
-                    Couldn&apos;t send — try again in a moment.
-                  </span>
-                )}
-              </div>
             </div>
-          )}
-        </div>
-      )}
+
+            <div>
+              <label htmlFor="rate-message" className="block text-[15px] font-medium mb-2.5">
+                What rings true or off about this profile?
+              </label>
+              <textarea
+                id="rate-message"
+                name="message"
+                rows={4}
+                placeholder="e.g. the systems thinking weight feels too high for most IC roles at this level…"
+                className="w-full rounded-md border border-[var(--color-border)] bg-transparent px-3 py-2.5 text-[15px] text-[var(--color-fg)] placeholder:text-[var(--color-muted-2)] focus:outline-none focus:border-[var(--color-accent)] resize-none"
+              />
+              <ValidationError field="message" errors={state.errors} className="text-[13px] text-[var(--color-signal-warn)] mt-1" />
+            </div>
+
+            <div>
+              <label htmlFor="rate-email" className="block text-[15px] font-medium mb-2.5">
+                Email{" "}
+                <span className="text-[var(--color-muted-2)] font-normal">(optional — if you'd like a response)</span>
+              </label>
+              <input
+                id="rate-email"
+                type="email"
+                name="email"
+                className="w-full max-w-sm rounded-md border border-[var(--color-border)] bg-transparent px-3 py-2 text-[15px] text-[var(--color-fg)] focus:outline-none focus:border-[var(--color-accent)]"
+              />
+              <ValidationError field="email" errors={state.errors} className="text-[13px] text-[var(--color-signal-warn)] mt-1" />
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <button
+                type="submit"
+                disabled={state.submitting}
+                className="btn-primary px-5 py-2.5 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {state.submitting ? "Sending…" : "Send feedback"}
+              </button>
+              <ValidationError errors={state.errors} className="text-[13px] text-[var(--color-signal-warn)]" />
+            </div>
+          </form>
+        )}
+      </div>}
     </section>
   );
 }
