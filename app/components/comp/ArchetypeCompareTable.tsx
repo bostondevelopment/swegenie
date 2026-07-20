@@ -38,6 +38,8 @@ interface ArchetypeCompareTableProps {
   onSelectionChange?: (ids: string[]) => void;
   /** Upper bound on simultaneous selection. Defaults to 5. */
   maxSelected?: number;
+  /** Primary sort axis. 'salary' (default) ranks by total comp; 'fit' ranks by fitPercent. */
+  sortBy?: 'salary' | 'fit';
 }
 
 // Ranks every archetype's total comp at a chosen company tier and level, highest
@@ -57,6 +59,7 @@ export function ArchetypeCompareTable({
   selectedIds: selectedIdsProp,
   onSelectionChange,
   maxSelected = DEFAULT_MAX_SELECTED,
+  sortBy = 'salary',
 }: ArchetypeCompareTableProps) {
   const [internalTier, setInternalTier] = useState<Tier>(defaultTier);
   const [internalLevel, setInternalLevel] = useState<Level>(defaultLevel);
@@ -98,10 +101,12 @@ export function ArchetypeCompareTable({
 
   const sorted = useMemo(
     () =>
-      [...rows].sort(
-        (a, b) => totalComp(b.data[tier][level]).p50 - totalComp(a.data[tier][level]).p50,
+      [...rows].sort((a, b) =>
+        sortBy === 'fit'
+          ? (b.fitPercent ?? 0) - (a.fitPercent ?? 0)
+          : totalComp(b.data[tier][level]).p50 - totalComp(a.data[tier][level]).p50,
       ),
-    [rows, tier, level],
+    [rows, tier, level, sortBy],
   );
 
   const maxValue = useMemo(

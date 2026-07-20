@@ -177,8 +177,7 @@ export function RateRole({ archetypeId, dimensions }: { archetypeId: string; dim
                 </button>
                 {status === "error" && (
                   <span className="text-[13px] text-[var(--color-signal-warn)]">
-                    Couldn&apos;t reach the server — the contribute endpoint only runs on the hosted
-                    build, not this static demo.
+                    Couldn&apos;t send — try again in a moment.
                   </span>
                 )}
               </div>

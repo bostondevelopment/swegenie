@@ -49,12 +49,10 @@ export default function MethodologyPage() {
             asserted from stereotype alone.
           </p>
           <p className="text-[17px] text-[var(--color-muted)] leading-[1.7] mb-3.5">
-            A 2026-07-11 sourcing pass then verified those companies directly against their public
-            job-board APIs and classified those postings into the 17 archetypes — not scraped or
-            estimated, every posting traceable to a live URL at the time it was harvested. The
-            other 5 (Embedded/IoT Engineer, Solutions Architect — Consulting-side, Developer
+            Each posting is traceable to a verified source — not scraped or estimated. The other 5
+            archetypes (Embedded/IoT Engineer, Solutions Architect — Consulting-side, Developer
             Relations, Technical Product Manager, Solutions Architect — Vendor-side) came in
-            between 57 and 148 postings — still several times the original sourcing bar, but a
+            between 57 and 148 postings — still several times the minimum sourcing bar, but a
             genuinely smaller public posting pool for these titles than for the other 13.
           </p>
           {mediumConfidence.length > 0 && (
@@ -183,7 +181,7 @@ export default function MethodologyPage() {
             The comp-by-tier charts on each archetype page (and the Staff cross-role ranking) are a
             separate, hand-curated dataset from the salary ranges in the research briefs. They cover
             all 17 archetypes and break total compensation into base, bonus, and annualized equity
-            across five company tiers at six career levels. Levels are grouped by years of
+            across five company tiers at seven career levels. Levels are grouped by years of
             experience, not by any single company&apos;s title system — years in the field
             determines the level shown, not a job title.
           </p>

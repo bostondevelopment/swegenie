@@ -281,7 +281,7 @@ export default function ResultsClient() {
           <>
             <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
             <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-              <h2 className="font-display text-xl font-semibold mb-4">Growth areas — if this wasn&apos;t a perfect fit</h2>
+              <h2 className="font-display text-xl font-semibold mb-4">Growth areas</h2>
               <p className="text-[15px] text-[var(--color-muted)] leading-[1.75] whitespace-pre-line max-w-2xl">
                 {growthText}
               </p>
@@ -395,6 +395,7 @@ export default function ResultsClient() {
               rows={compareRows}
               defaultTier="high-growth-public"
               defaultLevel={inferredLevel}
+              sortBy="fit"
             />
           ) : (
             <div className="flex flex-col">

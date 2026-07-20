@@ -160,11 +160,6 @@ export default function AssessmentPage() {
             field={step.field}
             value={state.intake[step.field.id]}
             onChange={(v) => setIntake(step.field.id, v)}
-            onAdvance={advanceIntake}
-            onSkip={() => {
-              track("assessment_skip", { question_id: step.field.id, step_index: state.currentStep });
-              advanceIntake();
-            }}
           />
         ) : (
           <QuestionStep
@@ -175,7 +170,7 @@ export default function AssessmentPage() {
           />
         )}
 
-        <div className="mt-auto pt-10 flex justify-between items-center">
+        <div className="mt-auto pt-10 flex items-center justify-between gap-3">
           <button
             onClick={goBack}
             disabled={state.currentStep === 0}
@@ -183,7 +178,27 @@ export default function AssessmentPage() {
           >
             Back
           </button>
-          {step.kind === "question" && (
+          {step.kind === "intake" ? (
+            <div className="flex items-center gap-4">
+              {step.field.optional && (
+                <button
+                  onClick={() => {
+                    track("assessment_skip", { question_id: step.field.id, step_index: state.currentStep });
+                    advanceIntake();
+                  }}
+                  className="font-mono text-[13px] text-[var(--color-muted-2)] hover:text-[var(--color-fg)] transition-colors"
+                >
+                  Skip
+                </button>
+              )}
+              <button
+                onClick={advanceIntake}
+                className="btn-primary px-6 py-3.5 text-[15px] font-semibold"
+              >
+                Continue
+              </button>
+            </div>
+          ) : (
             <button
               onClick={() => {
                 track("assessment_skip", { question_id: step.question.id, step_index: state.currentStep });
@@ -204,14 +219,10 @@ function IntakeStep({
   field,
   value,
   onChange,
-  onAdvance,
-  onSkip,
 }: {
   field: import("@/lib/taxonomy").StackIntakeField;
   value: string | number | string[] | undefined;
   onChange: (v: string | number | string[]) => void;
-  onAdvance: () => void;
-  onSkip: () => void;
 }) {
   const selected = Array.isArray(value) ? value : [];
 
@@ -262,19 +273,6 @@ function IntakeStep({
         />
       )}
 
-      <div className="flex items-center gap-4">
-        <button onClick={onAdvance} className="btn-primary px-[30px] py-4 text-[17px] font-semibold">
-          Continue
-        </button>
-        {field.optional && (
-          <button
-            onClick={onSkip}
-            className="font-mono text-[13px] text-[var(--color-muted-2)] hover:text-[var(--color-fg)] transition-colors"
-          >
-            Skip
-          </button>
-        )}
-      </div>
     </div>
   );
 }

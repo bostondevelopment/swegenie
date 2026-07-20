@@ -104,7 +104,7 @@ export function BetaSurvey({ topArchetype }: { topArchetype?: string }) {
     return (
       <div className="rounded-lg border border-[var(--color-border)] p-6">
         <p className="text-[15px] text-[var(--color-muted)]">
-          Thanks — your feedback was recorded. It goes straight into the calibration backlog.
+          Thanks — feedback received.
         </p>
       </div>
     );
@@ -112,10 +112,9 @@ export function BetaSurvey({ topArchetype }: { topArchetype?: string }) {
 
   return (
     <div className="rounded-lg border border-[var(--color-border)] p-6 sm:p-8">
-      <h2 className="font-display text-xl font-semibold mb-1.5">Help calibrate this — 20 seconds</h2>
+      <h2 className="font-display text-xl font-semibold mb-1.5">How did this land? — 20 seconds</h2>
       <p className="text-[14px] text-[var(--color-muted)] leading-[1.6] mb-7">
-        We&apos;re in beta and tuning the model against real answers. Three quick questions, no
-        account, nothing tied to your identity.
+        Three quick questions, no account, nothing tied to your identity.
       </p>
 
       <div className="flex flex-col gap-6">
@@ -158,8 +157,7 @@ export function BetaSurvey({ topArchetype }: { topArchetype?: string }) {
         </button>
         {status === "error" && (
           <span className="text-[13px] text-[var(--color-signal-warn)]">
-            Couldn&apos;t reach the server — the feedback endpoint only runs on the hosted beta build,
-            not this static demo.
+            Couldn&apos;t send — try again in a moment.
           </span>
         )}
       </div>
