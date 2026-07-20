@@ -55,8 +55,12 @@ NOISE_MARKERS = re.compile(
 LEVEL_RULES = [
     ("Principal/Director+ (Manager/VP)", re.compile(
         r"\b(vp|vice president|director|head of|principal(?! engineer)|distinguished|chief)\b", re.IGNORECASE)),
-    ("Senior/Staff", re.compile(
-        r"\b(senior|sr\.?|staff|lead|iii|iv|level\s*[3-5]|l[3-5]\b)\b", re.IGNORECASE)),
+    # Staff Engineer/Senior Staff must be checked before the Senior bucket so that
+    # "Staff Engineer" and "Senior Staff Engineer" route here, not to Senior (L4).
+    ("Staff Engineer/Senior Staff", re.compile(
+        r"\bstaff\b", re.IGNORECASE)),
+    ("Senior", re.compile(
+        r"\b(senior|sr\.?|lead|iii|iv|level\s*[3-5]|l[3-5]\b)\b", re.IGNORECASE)),
     # New-grad/entry rung (0-1 YOE): "associate" only counts here when paired with
     # new-grad/university/campus/rotational language, so a standalone "Associate Engineer"
     # title falls through to the Junior/Associate bucket below instead.
@@ -71,7 +75,7 @@ LEVEL_RULES = [
 # Display/output order (low to high seniority) for summarize()'s by_level breakdown — NOT the
 # same as LEVEL_RULES' match-priority order above. Keep in sync with classify_level()'s label
 # strings and with extract-comp-signals-by-tier.py's LEVELS constant.
-LEVELS = ["Entry (New Grad)", "Junior/Associate", "Mid (unspecified level)", "Senior/Staff", "Principal/Director+ (Manager/VP)"]
+LEVELS = ["Entry (New Grad)", "Junior/Associate", "Mid (unspecified level)", "Senior", "Staff Engineer/Senior Staff", "Principal/Director+ (Manager/VP)"]
 
 
 def classify_level(title: str) -> str:

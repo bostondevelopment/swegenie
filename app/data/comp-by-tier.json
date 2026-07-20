@@ -15,7 +15,8 @@
     "L3",
     "L4",
     "L5",
-    "Staff"
+    "Staff",
+    "Principal"
   ],
   "archetypes": {
     "product-full-stack-software-engineer": {
@@ -187,6 +188,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "medium",
+          "base": {
+            "p10": 245000,
+            "p25": 288000,
+            "p50": 330000,
+            "p75": 378000,
+            "p90": 425000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -353,6 +366,34 @@
               "p50": 37000,
               "p75": 52000,
               "p90": 72000
+            },
+            "vestingYears": 4,
+            "type": "rsu"
+          }
+        },
+        "Principal": {
+          "confidence": "high",
+          "base": {
+            "p10": 235000,
+            "p25": 268000,
+            "p50": 302000,
+            "p75": 338000,
+            "p90": 368000
+          },
+          "bonus": {
+            "p10": 30000,
+            "p25": 50000,
+            "p50": 70000,
+            "p75": 95000,
+            "p90": 125000
+          },
+          "equity": {
+            "annualizedUSD": {
+              "p10": 220000,
+              "p25": 330000,
+              "p50": 450000,
+              "p75": 680000,
+              "p90": 900000
             },
             "vestingYears": 4,
             "type": "rsu"
@@ -527,6 +568,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 294000,
+            "p25": 318000,
+            "p50": 342000,
+            "p75": 373000,
+            "p90": 410000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -697,6 +750,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 254000,
+            "p25": 275000,
+            "p50": 295000,
+            "p75": 322000,
+            "p90": 354000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -861,6 +926,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 221000,
+            "p25": 238000,
+            "p50": 256000,
+            "p75": 279000,
+            "p90": 308000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -998,6 +1075,18 @@
             "p50": 171450,
             "p75": 288475,
             "p90": 405500
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 245000,
+            "p25": 288000,
+            "p50": 330000,
+            "p75": 378000,
+            "p90": 425000
           },
           "bonus": null,
           "equity": null
@@ -1139,6 +1228,34 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 235000,
+            "p25": 268000,
+            "p50": 302000,
+            "p75": 338000,
+            "p90": 368000
+          },
+          "bonus": {
+            "p10": 30000,
+            "p25": 50000,
+            "p50": 70000,
+            "p75": 95000,
+            "p90": 125000
+          },
+          "equity": {
+            "annualizedUSD": {
+              "p10": 220000,
+              "p25": 330000,
+              "p50": 450000,
+              "p75": 680000,
+              "p90": 900000
+            },
+            "vestingYears": 4,
+            "type": "rsu"
+          }
         }
       },
       "high-growth-public": {
@@ -1274,6 +1391,18 @@
             "p50": 133000,
             "p75": 143000,
             "p90": 158000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 262000,
+            "p25": 284000,
+            "p50": 305000,
+            "p75": 333000,
+            "p90": 366000
           },
           "bonus": null,
           "equity": null
@@ -1415,6 +1544,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 254000,
+            "p25": 275000,
+            "p50": 295000,
+            "p75": 322000,
+            "p90": 354000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -1550,6 +1691,18 @@
             "p50": 115000,
             "p75": 125000,
             "p90": 138000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 221000,
+            "p25": 238000,
+            "p50": 256000,
+            "p75": 279000,
+            "p90": 308000
           },
           "bonus": null,
           "equity": null
@@ -1725,6 +1878,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 245000,
+            "p25": 288000,
+            "p50": 330000,
+            "p75": 378000,
+            "p90": 425000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -1863,6 +2028,34 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 235000,
+            "p25": 268000,
+            "p50": 302000,
+            "p75": 338000,
+            "p90": 368000
+          },
+          "bonus": {
+            "p10": 30000,
+            "p25": 50000,
+            "p50": 70000,
+            "p75": 95000,
+            "p90": 125000
+          },
+          "equity": {
+            "annualizedUSD": {
+              "p10": 220000,
+              "p25": 330000,
+              "p50": 450000,
+              "p75": 680000,
+              "p90": 900000
+            },
+            "vestingYears": 4,
+            "type": "rsu"
+          }
         }
       },
       "high-growth-public": {
@@ -2033,6 +2226,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 262000,
+            "p25": 284000,
+            "p50": 305000,
+            "p75": 333000,
+            "p90": 366000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -2203,6 +2408,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 254000,
+            "p25": 275000,
+            "p50": 295000,
+            "p75": 322000,
+            "p90": 354000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -2367,6 +2584,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 221000,
+            "p25": 238000,
+            "p50": 256000,
+            "p75": 279000,
+            "p90": 308000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -2504,6 +2733,18 @@
             "p50": 187250,
             "p75": 277875,
             "p90": 368500
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 230000,
+            "p25": 270000,
+            "p50": 310000,
+            "p75": 355000,
+            "p90": 400000
           },
           "bonus": null,
           "equity": null
@@ -2661,6 +2902,24 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 218000,
+            "p25": 249000,
+            "p50": 281000,
+            "p75": 314000,
+            "p90": 342000
+          },
+          "bonus": {
+            "p10": 25000,
+            "p25": 45000,
+            "p50": 60000,
+            "p75": 85000,
+            "p90": 110000
+          },
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -2799,6 +3058,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 255000,
+            "p25": 276000,
+            "p50": 296000,
+            "p75": 322000,
+            "p90": 355000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -2934,6 +3205,18 @@
             "p50": 118000,
             "p75": 135000,
             "p90": 154000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 247000,
+            "p25": 267000,
+            "p50": 287000,
+            "p75": 312000,
+            "p90": 343000
           },
           "bonus": null,
           "equity": null
@@ -3091,6 +3374,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 214000,
+            "p25": 231000,
+            "p50": 249000,
+            "p75": 271000,
+            "p90": 299000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -3263,6 +3558,24 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "medium",
+          "base": {
+            "p10": 365000,
+            "p25": 400000,
+            "p50": 435000,
+            "p75": 478000,
+            "p90": 530000
+          },
+          "bonus": {
+            "p10": 40000,
+            "p25": 55000,
+            "p50": 72000,
+            "p75": 92000,
+            "p90": 122000
+          },
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -3429,6 +3742,34 @@
               "p50": 33000,
               "p75": 47000,
               "p90": 65000
+            },
+            "vestingYears": 4,
+            "type": "rsu"
+          }
+        },
+        "Principal": {
+          "confidence": "high",
+          "base": {
+            "p10": 215000,
+            "p25": 265000,
+            "p50": 325000,
+            "p75": 370000,
+            "p90": 420000
+          },
+          "bonus": {
+            "p10": 38000,
+            "p25": 55000,
+            "p50": 72000,
+            "p75": 96000,
+            "p90": 132000
+          },
+          "equity": {
+            "annualizedUSD": {
+              "p10": 200000,
+              "p25": 360000,
+              "p50": 560000,
+              "p75": 870000,
+              "p90": 1260000
             },
             "vestingYears": 4,
             "type": "rsu"
@@ -3603,6 +3944,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 289000,
+            "p25": 312000,
+            "p50": 336000,
+            "p75": 366000,
+            "p90": 403000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -3773,6 +4126,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 280000,
+            "p25": 302000,
+            "p50": 324000,
+            "p75": 354000,
+            "p90": 389000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -3943,6 +4308,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 243000,
+            "p25": 262000,
+            "p50": 283000,
+            "p75": 308000,
+            "p90": 339000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -4099,6 +4476,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 338000,
+            "p25": 366000,
+            "p50": 393000,
+            "p75": 428000,
+            "p90": 471000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -4234,6 +4623,18 @@
             "p50": 132000,
             "p75": 145000,
             "p90": 159000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "medium",
+          "base": {
+            "p10": 195000,
+            "p25": 238000,
+            "p50": 278000,
+            "p75": 318000,
+            "p90": 362000
           },
           "bonus": null,
           "equity": null
@@ -4375,6 +4776,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 255000,
+            "p25": 276000,
+            "p50": 296000,
+            "p75": 322000,
+            "p90": 355000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -4510,6 +4923,18 @@
             "p50": 119000,
             "p75": 131000,
             "p90": 145000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 247000,
+            "p25": 267000,
+            "p50": 287000,
+            "p75": 312000,
+            "p90": 343000
           },
           "bonus": null,
           "equity": null
@@ -4667,6 +5092,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 214000,
+            "p25": 231000,
+            "p50": 249000,
+            "p75": 271000,
+            "p90": 299000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -4804,6 +5241,18 @@
             "p50": 198500,
             "p75": 250750,
             "p90": 303000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 313000,
+            "p25": 339000,
+            "p50": 364000,
+            "p75": 397000,
+            "p90": 437000
           },
           "bonus": null,
           "equity": null
@@ -4977,6 +5426,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 272000,
+            "p25": 294000,
+            "p50": 316000,
+            "p75": 344000,
+            "p90": 380000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -5112,6 +5573,18 @@
             "p50": 120000,
             "p75": 132000,
             "p90": 145000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 237000,
+            "p25": 255000,
+            "p50": 274000,
+            "p75": 299000,
+            "p90": 329000
           },
           "bonus": null,
           "equity": null
@@ -5253,6 +5726,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 229000,
+            "p25": 247000,
+            "p50": 266000,
+            "p75": 289000,
+            "p90": 319000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -5388,6 +5873,18 @@
             "p50": 96000,
             "p75": 109000,
             "p90": 124000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 198000,
+            "p25": 214000,
+            "p50": 231000,
+            "p75": 252000,
+            "p90": 277000
           },
           "bonus": null,
           "equity": null
@@ -5563,6 +6060,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 377000,
+            "p25": 406000,
+            "p50": 437000,
+            "p75": 477000,
+            "p90": 525000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -5698,6 +6207,18 @@
             "p50": 130000,
             "p75": 143000,
             "p90": 157000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 326000,
+            "p25": 352000,
+            "p50": 380000,
+            "p75": 413000,
+            "p90": 455000
           },
           "bonus": null,
           "equity": null
@@ -5839,6 +6360,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 283000,
+            "p25": 306000,
+            "p50": 329000,
+            "p75": 359000,
+            "p90": 395000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -5974,6 +6507,18 @@
             "p50": 158000,
             "p75": 175000,
             "p90": 193000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 274000,
+            "p25": 296000,
+            "p50": 319000,
+            "p75": 347000,
+            "p90": 382000
           },
           "bonus": null,
           "equity": null
@@ -6147,6 +6692,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 238000,
+            "p25": 258000,
+            "p50": 277000,
+            "p75": 302000,
+            "p90": 333000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -6319,6 +6876,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 329000,
+            "p25": 355000,
+            "p50": 382000,
+            "p75": 416000,
+            "p90": 458000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -6489,6 +7058,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "high",
+          "base": {
+            "p10": 155000,
+            "p25": 170000,
+            "p50": 185000,
+            "p75": 208000,
+            "p90": 228000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -6659,6 +7240,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 215000,
+            "p25": 233000,
+            "p50": 250000,
+            "p75": 272000,
+            "p90": 300000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -6829,6 +7422,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 208000,
+            "p25": 225000,
+            "p50": 242000,
+            "p75": 263000,
+            "p90": 290000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -6999,6 +7604,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 181000,
+            "p25": 196000,
+            "p50": 211000,
+            "p75": 229000,
+            "p90": 252000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -7171,6 +7788,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 240000,
+            "p25": 268000,
+            "p50": 295000,
+            "p75": 328000,
+            "p90": 368000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -7309,6 +7938,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "high",
+          "base": {
+            "p10": 175000,
+            "p25": 193000,
+            "p50": 207000,
+            "p75": 232000,
+            "p90": 252000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -7444,6 +8085,18 @@
             "p50": 115000,
             "p75": 128000,
             "p90": 144000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 249000,
+            "p25": 270000,
+            "p50": 290000,
+            "p75": 316000,
+            "p90": 348000
           },
           "bonus": null,
           "equity": null
@@ -7617,6 +8270,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 241000,
+            "p25": 261000,
+            "p50": 281000,
+            "p75": 306000,
+            "p90": 336000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -7787,6 +8452,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 210000,
+            "p25": 227000,
+            "p50": 244000,
+            "p75": 266000,
+            "p90": 293000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -7959,6 +8636,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 313000,
+            "p25": 339000,
+            "p50": 364000,
+            "p75": 397000,
+            "p90": 437000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -8129,6 +8818,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 155000,
+            "p25": 177000,
+            "p50": 200000,
+            "p75": 228000,
+            "p90": 255000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -8299,6 +9000,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 206000,
+            "p25": 222000,
+            "p50": 239000,
+            "p75": 260000,
+            "p90": 287000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -8469,6 +9182,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 229000,
+            "p25": 247000,
+            "p50": 266000,
+            "p75": 289000,
+            "p90": 319000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -8639,6 +9364,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 198000,
+            "p25": 214000,
+            "p50": 231000,
+            "p75": 252000,
+            "p90": 277000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -8776,6 +9513,18 @@
             "p50": 185375,
             "p75": 267688,
             "p90": 350000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "high",
+          "base": {
+            "p10": 255000,
+            "p25": 285000,
+            "p50": 315000,
+            "p75": 350000,
+            "p90": 385000
           },
           "bonus": null,
           "equity": null
@@ -8949,6 +9698,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 182000,
+            "p25": 202000,
+            "p50": 228000,
+            "p75": 268000,
+            "p90": 308000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -9119,6 +9880,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 267000,
+            "p25": 289000,
+            "p50": 311000,
+            "p75": 339000,
+            "p90": 373000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -9289,6 +10062,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 192000,
+            "p25": 222000,
+            "p50": 255000,
+            "p75": 298000,
+            "p90": 338000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -9459,6 +10244,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 225000,
+            "p25": 243000,
+            "p50": 262000,
+            "p75": 285000,
+            "p90": 314000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -9596,6 +10393,18 @@
             "p50": 113500,
             "p75": 270200,
             "p90": 426900
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 236000,
+            "p25": 257000,
+            "p50": 275000,
+            "p75": 300000,
+            "p90": 331000
           },
           "bonus": null,
           "equity": null
@@ -9769,6 +10578,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 205000,
+            "p25": 222000,
+            "p50": 239000,
+            "p75": 260000,
+            "p90": 286000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -9923,6 +10744,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 178000,
+            "p25": 193000,
+            "p50": 207000,
+            "p75": 226000,
+            "p90": 249000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -10074,6 +10907,18 @@
             "p50": 81000,
             "p75": 91000,
             "p90": 101000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 172000,
+            "p25": 186000,
+            "p50": 201000,
+            "p75": 218000,
+            "p90": 241000
           },
           "bonus": null,
           "equity": null
@@ -10247,6 +11092,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 150000,
+            "p25": 162000,
+            "p50": 174000,
+            "p75": 190000,
+            "p90": 210000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -10384,6 +11241,18 @@
             "p50": 147500,
             "p75": 184250,
             "p90": 221000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 262000,
+            "p25": 282000,
+            "p50": 304000,
+            "p75": 331000,
+            "p90": 364000
           },
           "bonus": null,
           "equity": null
@@ -10525,6 +11394,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 226000,
+            "p25": 244000,
+            "p50": 264000,
+            "p75": 287000,
+            "p90": 316000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -10660,6 +11541,18 @@
             "p50": 87000,
             "p75": 97000,
             "p90": 109000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 172000,
+            "p25": 198000,
+            "p50": 225000,
+            "p75": 270000,
+            "p90": 318000
           },
           "bonus": null,
           "equity": null
@@ -10801,6 +11694,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 190000,
+            "p25": 205000,
+            "p50": 222000,
+            "p75": 241000,
+            "p90": 266000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -10936,6 +11841,18 @@
             "p50": 77000,
             "p75": 87000,
             "p90": 98000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 165000,
+            "p25": 179000,
+            "p50": 193000,
+            "p75": 210000,
+            "p90": 231000
           },
           "bonus": null,
           "equity": null
@@ -11076,6 +11993,18 @@
             "p50": 137124,
             "p75": 212892,
             "p90": 288660
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 313000,
+            "p25": 339000,
+            "p50": 364000,
+            "p75": 397000,
+            "p90": 437000
           },
           "bonus": null,
           "equity": null
@@ -11249,6 +12178,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 150000,
+            "p25": 170000,
+            "p50": 193000,
+            "p75": 224000,
+            "p90": 252000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -11384,6 +12325,18 @@
             "p50": 109000,
             "p75": 120000,
             "p90": 132000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 237000,
+            "p25": 255000,
+            "p50": 274000,
+            "p75": 299000,
+            "p90": 329000
           },
           "bonus": null,
           "equity": null
@@ -11525,6 +12478,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 199000,
+            "p25": 215000,
+            "p50": 231000,
+            "p75": 253000,
+            "p90": 278000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -11660,6 +12625,18 @@
             "p50": 85000,
             "p75": 97000,
             "p90": 110000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 179000,
+            "p25": 193000,
+            "p50": 207000,
+            "p75": 227000,
+            "p90": 250000
           },
           "bonus": null,
           "equity": null
@@ -11835,6 +12812,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 371000,
+            "p25": 402000,
+            "p50": 432000,
+            "p75": 471000,
+            "p90": 518000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "faang-mag7": {
@@ -12005,6 +12994,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 160000,
+            "p25": 186000,
+            "p50": 218000,
+            "p75": 263000,
+            "p90": 308000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -12175,6 +13176,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 242000,
+            "p25": 261000,
+            "p50": 281000,
+            "p75": 306000,
+            "p90": 337000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -12345,6 +13358,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 280000,
+            "p25": 302000,
+            "p50": 324000,
+            "p75": 354000,
+            "p90": 389000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "early-stage": {
@@ -12515,6 +13540,18 @@
             "vestingYears": 4,
             "type": "options"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 203000,
+            "p25": 220000,
+            "p50": 236000,
+            "p75": 258000,
+            "p90": 283000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     },
@@ -12668,6 +13705,18 @@
             "p50": 155950,
             "p75": 229925,
             "p90": 303900
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 210000,
+            "p25": 238000,
+            "p50": 262000,
+            "p75": 308000,
+            "p90": 355000
           },
           "bonus": null,
           "equity": null
@@ -12841,6 +13890,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "high",
+          "base": {
+            "p10": 180000,
+            "p25": 205000,
+            "p50": 228000,
+            "p75": 258000,
+            "p90": 288000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "high-growth-public": {
@@ -12979,6 +14040,18 @@
           },
           "bonus": null,
           "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 262000,
+            "p25": 284000,
+            "p50": 305000,
+            "p75": 333000,
+            "p90": 366000
+          },
+          "bonus": null,
+          "equity": null
         }
       },
       "growth-stage-private": {
@@ -13114,6 +14187,18 @@
             "p50": 112000,
             "p75": 128000,
             "p90": 145000
+          },
+          "bonus": null,
+          "equity": null
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 254000,
+            "p25": 275000,
+            "p50": 295000,
+            "p75": 322000,
+            "p90": 354000
           },
           "bonus": null,
           "equity": null
@@ -13287,6 +14372,18 @@
             "vestingYears": 4,
             "type": "rsu"
           }
+        },
+        "Principal": {
+          "confidence": "low",
+          "base": {
+            "p10": 221000,
+            "p25": 238000,
+            "p50": 256000,
+            "p75": 279000,
+            "p90": 308000
+          },
+          "bonus": null,
+          "equity": null
         }
       }
     }

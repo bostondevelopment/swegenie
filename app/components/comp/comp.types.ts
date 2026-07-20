@@ -10,7 +10,7 @@ export type Tier =
   | 'growth-stage-private'
   | 'early-stage';
 
-export type Level = 'L1' | 'L2' | 'L3' | 'L4' | 'L5' | 'Staff';
+export type Level = 'L1' | 'L2' | 'L3' | 'L4' | 'L5' | 'Staff' | 'Principal';
 
 export type Confidence = 'high' | 'medium' | 'low';
 

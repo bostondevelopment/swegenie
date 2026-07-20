@@ -57,46 +57,40 @@ COMP_BY_TIER_PATH = DATA_DIR / "comp-by-tier.json"
 ARCHETYPES_PATH = DATA_DIR / "archetypes.json"
 
 TIERS = ["ai-labs", "faang-mag7", "high-growth-public", "growth-stage-private", "early-stage"]
-LEVELS = ["L1", "L2", "L3", "L4", "L5", "Staff"]
+LEVELS = ["L1", "L2", "L3", "L4", "L5", "Staff", "Principal"]
 
 # Buckets extract-comp-signals.py and extract-comp-signals-by-tier.py both use for
-# byLevel/level_hint. The title-regex layer only distinguishes 5 seniority buckets, one fewer
-# than the 6 tier levels, so exactly one tier level can never get direct extraction signal no
-# matter how the other 5 are assigned -- "Senior/Staff" alone can't tell L4/senior-IC apart from
-# L5/staff-track (that's the same conflation tracked separately in
-# docs/future-work/staff-bucket-leveling-split/README.md; not re-solved here).
+# byLevel/level_hint. The title-regex layer distinguishes 6 seniority buckets, one fewer
+# than the 7 tier levels, so exactly one tier level can never get direct extraction signal no
+# matter how the other 6 are assigned.
 #
-# Given that, L1/L2/L3/L4/Staff are assigned to the extraction bucket whose real-world
-# composition best matches each level's YOE band (per docs/future-work/entry-level-l1-l2-tiers/
-# TAXONOMY-PROPOSAL.md Sec 5), leaving L5 (10-14yr, "staff-track") as the one with no direct
-# bucket -- deliberately, not arbitrarily:
+# Given that, L1/L2/L3/L4/Staff/Principal are assigned to the extraction bucket whose
+# real-world composition best matches each level's YOE band, leaving L5 (10-14yr,
+# "staff-track") as the one with no direct bucket -- deliberately, not arbitrarily:
 #   - "Mid (unspecified level)" fires when a title has NO seniority keyword at all. Companies
 #     overwhelmingly add "Senior" once someone is senior-track, so an unqualified title reads
 #     much closer to L3 (3-6yr, "fully independent, not yet senior") than L4 (6-10yr, "senior
 #     IC") -- mapping it to L4 would mislabel a large population of mid-level postings as
-#     senior. L3 is also the level TAXONOMY-PROPOSAL.md actually anchored with evidence, so
-#     it's the level most worth keeping populated.
-#   - "Senior/Staff" is dominated by volume by the "Senior" keyword, not "Staff" -- industry
-#     data (levels.fyi's standard leveling guide) puts Senior at roughly 5-10yr and ~30% of
-#     engineers, vs. Staff at a much rarer <3% of engineers spanning a wider 5-15yr+ range. L4
-#     (6-10yr) is the closer single-level fit for what this bucket actually contains than L5
-#     (10-14yr) is.
-#   - "Principal/Director+ (Manager/VP)" stays mapped to Staff (14+): Principal Engineer is
-#     15+yr and Director is typically 8-10yr plus management tenure per the same levels.fyi
-#     leveling guide, so the bucket skews toward Staff's upper range even though Director alone
-#     understates it -- the VP/Director/Principal/Distinguished conflation at the top is the
-#     pre-existing, separately-tracked staff-bucket-leveling-split problem, not something to
-#     fix by picking a different target level here.
-# L5 ends up the blind level as a result -- it's also the level TAXONOMY-PROPOSAL.md explicitly
-# flagged as an unresearched placeholder, so landing the gap there (not on L3) is the better
-# trade. Real L5 signal still arrives via Phase 2/3's corpus tier-bucketing and gapfill research,
-# same as any other cell. If this mapping is wrong, fix it here in one place.
+#     senior.
+#   - "Senior" is dominated by volume by the "Senior" keyword. Industry data (levels.fyi's
+#     standard leveling guide) puts Senior at roughly 5-10yr and ~30% of engineers. L4
+#     (6-10yr) is the closer single-level fit for what this bucket actually contains.
+#   - "Staff Engineer/Senior Staff" captures explicit Staff Engineer, Staff SWE, and Senior
+#     Staff titles -- roles that sit above Senior but below Principal at most major companies.
+#     Maps to Staff (14-20yr).
+#   - "Principal/Director+ (Manager/VP)" captures Principal Engineer, Distinguished Engineer,
+#     VP, Director, and similar top-of-ladder or management titles. Maps to Principal (20+yr).
+# L5 ends up the blind level as a result -- it's also the level whose market data is thinnest
+# (staff-track ICs in this 10-14yr band often carry "Staff" or "Senior Staff" titles that now
+# route to the Staff bucket, not L5). Real L5 signal still arrives via gapfill research.
+# If this mapping is wrong, fix it here in one place.
 EXTRACTION_LEVEL_TO_TIER_LEVEL = {
     "Entry (New Grad)": "L1",
     "Junior/Associate": "L2",
     "Mid (unspecified level)": "L3",
-    "Senior/Staff": "L4",
-    "Principal/Director+ (Manager/VP)": "Staff",
+    "Senior": "L4",
+    "Staff Engineer/Senior Staff": "Staff",
+    "Principal/Director+ (Manager/VP)": "Principal",
 }
 
 # Calibrated against the current comp-structure.json: existing "high" entries start at

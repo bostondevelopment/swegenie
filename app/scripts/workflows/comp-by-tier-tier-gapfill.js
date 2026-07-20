@@ -10,7 +10,7 @@ export const meta = {
 }
 
 const TIERS = ['ai-labs', 'faang-mag7', 'high-growth-public', 'growth-stage-private', 'early-stage']
-const LEVELS = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff']
+const LEVELS = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff', 'Principal']
 
 // These archetype+tier combinations have had 2 full research rounds already confirm no
 // real entry-level market exists. A third round of web research would just burn tokens
@@ -198,7 +198,7 @@ function buildResearchPrompt(archetypeId, lowCells) {
   const cellList = lowCells.map(c =>
     `  - ${c.tier} / ${c.level}  (current base p50: $${(c.baseP50 || 0).toLocaleString()}, ` +
     `p10: $${(c.baseP10 || 0).toLocaleString()}, p90: $${(c.baseP90 || 0).toLocaleString()})` +
-    (c.level === 'L1' || c.level === 'L2' ? ' ← PLACEHOLDER, replace from scratch' : ' ← re-verify only')
+    (c.level === 'L1' || c.level === 'L2' || c.level === 'Principal' ? ' ← PLACEHOLDER, replace from scratch' : ' ← re-verify only')
   ).join('\n')
 
   const tiersSeen = [...new Set(lowCells.map(c => c.tier))]
@@ -223,7 +223,7 @@ function buildResearchPrompt(archetypeId, lowCells) {
   `SOURCE 1 — H-1B LCA data (always attempt this first, even before Levels.fyi):\n` +
   `${H1B_SOURCES}\n` +
   `Search for the job title most similar to "${archetypeId}" + the representative companies for the tier.\n` +
-  `H-1B wage levels roughly map: Level I ≈ L1/L2 (entry), Level II ≈ L3 (mid), Level III ≈ L4/L5 (senior), Level IV ≈ Staff.\n` +
+  `H-1B wage levels roughly map: Level I ≈ L1/L2 (entry), Level II ≈ L3 (mid), Level III ≈ L4/L5 (senior), Level IV ≈ Staff/Principal.\n` +
   `Use WebFetch on h1bdata.info search results — the page returns a table with exact dollar amounts.\n\n` +
 
   `SOURCE 2 — Salary-transparent job postings (California, New York, Colorado, Washington require salary ranges):\n` +
@@ -253,9 +253,14 @@ function buildResearchPrompt(archetypeId, lowCells) {
   `Representative companies by tier for "${archetypeId}":\n${companyContext}\n\n` +
 
   `TWO TYPES OF LOW CELLS — treat differently:\n` +
-  `- L1/L2 cells: current numbers are a FLAT PLACEHOLDER (the whole-career band repeated identically for every level ` +
-  `and tier — the p90 may show $300K+ for a new grad cell, which is nonsensical). ` +
+  `- L1/L2/Principal cells: current numbers are a FLAT PLACEHOLDER. ` +
   `Replace with real per-level, per-tier numbers from your research. The placeholder is meaningless; anchor=0.\n` +
+  `  For Principal specifically: this level captures Principal Engineer, Distinguished Engineer, and equivalent ` +
+  `top-of-IC-ladder titles at companies that distinguish Staff from Principal in their leveling systems ` +
+  `(e.g. Google L7/L8, Meta E7/E8, Anthropic Principal MTS). Do NOT interpolate between Staff and a ` +
+  `hypothetical ceiling — find real data points for Principal/Distinguished titles specifically. ` +
+  `If you can only find data for the Staff/Principal range combined, that is still "low" confidence ` +
+  `for the Principal cell — interpolation between adjacent anchors does not count as a direct observation.\n` +
   `- L3/L4/L5/Staff cells: real numbers from prior research, only confidence was reset. ` +
   `Verify the existing number holds; only override if you find clear contrary evidence.\n\n` +
 
@@ -313,7 +318,7 @@ const synthesisResult = await agent(
   `with actual p10/p25/p50/p75/p90 values, replace the current cell numbers with those suggested values. ` +
   `This is especially important for L1/L2 cells whose current numbers are flat placeholders. ` +
   `Enforce p10<p25<p50<p75<p90 ordering within each component. ` +
-  `Cross-check that L1<L2<L3 in magnitude within each tier — flag if this ordering is violated after applying changes.\n\n` +
+  `Cross-check that L1<L2<L3 and Staff<Principal in magnitude within each tier — flag if either ordering is violated after applying changes.\n\n` +
 
   `4. ARCHIVE SOURCES: for every new source cited (url not already present as a file under ` +
   `/Users/michael/Documents/Code/careerguru/docs/research/source-archive/comp-by-tier/), write ` +

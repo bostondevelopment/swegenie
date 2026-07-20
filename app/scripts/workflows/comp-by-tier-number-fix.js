@@ -8,7 +8,7 @@ export const meta = {
 }
 
 const TIERS = ['ai-labs', 'faang-mag7', 'high-growth-public', 'growth-stage-private', 'early-stage']
-const LEVELS = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff']
+const LEVELS = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff', 'Principal']
 
 // Tier-specific representative companies (same as main gapfill)
 const TIER_COMPANIES = {

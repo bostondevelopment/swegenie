@@ -60,6 +60,7 @@ const SPECS: Record<Tier, Record<Level, CellSpec>> = {
     L4: { base: 220000, bonus: 40000, equity: 220000, type: 'rsu', vestingYears: 4, confidence: 'high' },
     L5: { base: 250000, bonus: 50000, equity: 400000, type: 'rsu', vestingYears: 4, confidence: 'high' },
     Staff: { base: 285000, bonus: 65000, equity: 650000, type: 'rsu', vestingYears: 4, confidence: 'medium' },
+    Principal: { base: 370000, bonus: 90000, equity: 1200000, type: 'rsu', vestingYears: 4, confidence: 'low' },
   },
   'faang-mag7': {
     L1: { base: 130000, bonus: 14000, equity: 40000, type: 'rsu', vestingYears: 4, confidence: 'low' },
@@ -68,6 +69,7 @@ const SPECS: Record<Tier, Record<Level, CellSpec>> = {
     L4: { base: 195000, bonus: 33000, equity: 140000, type: 'rsu', vestingYears: 4, confidence: 'high' },
     L5: { base: 230000, bonus: 46000, equity: 260000, type: 'rsu', vestingYears: 4, confidence: 'high' },
     Staff: { base: 265000, bonus: 60000, equity: 450000, type: 'rsu', vestingYears: 4, confidence: 'high' },
+    Principal: { base: 330000, bonus: 80000, equity: 800000, type: 'rsu', vestingYears: 4, confidence: 'low' },
   },
   'high-growth-public': {
     L1: { base: 120000, bonus: 8000, equity: 25000, type: 'rsu', vestingYears: 4, confidence: 'low' },
@@ -76,6 +78,7 @@ const SPECS: Record<Tier, Record<Level, CellSpec>> = {
     L4: { base: 180000, bonus: 22000, equity: 95000, type: 'rsu', vestingYears: 4, confidence: 'high' },
     L5: { base: 210000, bonus: 32000, equity: 160000, type: 'rsu', vestingYears: 4, confidence: 'medium' },
     Staff: { base: 245000, bonus: 45000, equity: 280000, type: 'rsu', vestingYears: 4, confidence: 'medium' },
+    Principal: { base: 290000, bonus: 58000, equity: 420000, type: 'rsu', vestingYears: 4, confidence: 'low' },
   },
   'growth-stage-private': {
     L1: { base: 110000, bonus: 4000, equity: 20000, type: 'rsu', vestingYears: 4, confidence: 'low' },
@@ -84,6 +87,7 @@ const SPECS: Record<Tier, Record<Level, CellSpec>> = {
     L4: { base: 170000, bonus: 13000, equity: 80000, type: 'rsu', vestingYears: 4, confidence: 'medium' },
     L5: { base: 200000, bonus: 18000, equity: 140000, type: 'rsu', vestingYears: 4, confidence: 'low' },
     Staff: { base: 235000, bonus: 28000, equity: 240000, type: 'rsu', vestingYears: 4, confidence: 'low' },
+    Principal: { base: 270000, bonus: 38000, equity: 360000, type: 'rsu', vestingYears: 4, confidence: 'low' },
   },
   'early-stage': {
     L1: { base: 100000, bonus: 2000, equity: 15000, type: 'options', vestingYears: 4, confidence: 'low' },
@@ -92,12 +96,13 @@ const SPECS: Record<Tier, Record<Level, CellSpec>> = {
     L4: { base: 160000, bonus: 8000, equity: 60000, type: 'options', vestingYears: 4, confidence: 'low' },
     L5: { base: 190000, bonus: 12000, equity: 110000, type: 'options', vestingYears: 4, confidence: 'low' },
     Staff: { base: 220000, bonus: 18000, equity: 180000, type: 'options', vestingYears: 4, confidence: 'low' },
+    Principal: { base: 250000, bonus: 24000, equity: 280000, type: 'options', vestingYears: 4, confidence: 'low' },
   },
 };
 
 function buildArchetype(specs: Record<Tier, Record<Level, CellSpec>>): ArchetypeCompData {
   const tiers = Object.keys(specs) as Tier[];
-  const levels: Level[] = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff'];
+  const levels: Level[] = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff', 'Principal'];
   return tiers.reduce((acc, tier) => {
     acc[tier] = levels.reduce(
       (byLevel, level) => {

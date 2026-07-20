@@ -20,7 +20,7 @@ export const TIER_LABELS: Record<Tier, string> = {
   'early-stage': 'Early-stage',
 };
 
-export const LEVELS: readonly Level[] = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff'] as const;
+export const LEVELS: readonly Level[] = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff', 'Principal'] as const;
 
 export const LEVEL_YOE_LABELS: Record<Level, string> = {
   L1: '0–1 yr',
@@ -28,7 +28,8 @@ export const LEVEL_YOE_LABELS: Record<Level, string> = {
   L3: '3–6 yrs',
   L4: '6–10 yrs',
   L5: '10–14 yrs',
-  Staff: '14+ yrs',
+  Staff: '14–20 yrs',
+  Principal: '20+ yrs',
 };
 
 // Startup tiers carry illiquid equity and get the wide, fade-to-transparent
