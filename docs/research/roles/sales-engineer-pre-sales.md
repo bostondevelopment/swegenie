@@ -2,7 +2,7 @@
 
 ## Posting corpus scale (follow-up sourcing pass, 2026-07-11)
 
-Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **372 real, currently-live job postings across 105 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
+Beyond the hand-curated postings cited throughout this brief, a large-scale automated sourcing pass classified **369 real, currently-live job postings across 105 companies** into this archetype — harvested directly from public Greenhouse/Lever/Ashby/Workday job-board APIs (not scraped HTML, not estimated) and classified by a keyword/regex rubric with company-context overrides for known naming collisions, precision-checked by hand-sampling each archetype's matches. This comfortably clears the ≥15-posting v1 sourcing target and the ≥200-posting stretch goal set for this pass.
 
 Representative sample of companies with live postings matched to this archetype (of 105 total):
 

@@ -1,0 +1,8 @@
+{
+  "archetypeId": "data-engineer",
+  "tier": "early-stage",
+  "level": "L1",
+  "title": "data-engineer.json early-stage corpus (job-postings-corpus/comp-extraction-by-tier)",
+  "url": "",
+  "note": "Entry/New Grad and Junior/Associate buckets both null for early-stage tier; confirms absence of direct posting data. Interpolation from ES L2 p50=$105k and L3 p50=$126k used as primary methodology."
+}

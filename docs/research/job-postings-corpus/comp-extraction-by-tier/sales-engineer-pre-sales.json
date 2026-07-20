@@ -9,19 +9,22 @@
   },
   "grid": {
     "ai-labs": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "faang-mag7": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "high-growth-public": {
-      "Entry/Associate": {
+      "Entry (New Grad)": null,
+      "Junior/Associate": {
         "count": 1,
         "companyCount": 1,
         "low": 48300,
@@ -42,7 +45,7 @@
             "title": "Associate Solution Consultant",
             "location": "United States (Remote)",
             "url": "https://www.five9.com/about/careers/job-detail?gh_jid=6008215004",
-            "level_hint": "Entry/Associate",
+            "level_hint": "Junior/Associate",
             "tier": "high-growth-public"
           }
         ]
@@ -504,7 +507,8 @@
       }
     },
     "growth-stage-private": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": {
         "count": 7,
         "companyCount": 6,
@@ -795,7 +799,8 @@
       "Principal/Director+ (Manager/VP)": null
     },
     "early-stage": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": {
         "count": 2,
         "companyCount": 2,

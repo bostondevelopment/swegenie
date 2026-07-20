@@ -1,5 +1,16 @@
 # Phase 6: Using the job-posting corpus to improve questions, results, and archetype content
 
+**Naming note:** this "Phase 6" is unrelated to `PLAN.md`'s Phase 6 (pre-launch beta validation,
+still open as of 2026-07-17) — this doc's five internal phases are a self-contained corpus-
+enrichment project completed 2026-07-12, before `PLAN.md`'s Phase 6 started. If you searched docs
+for "Phase 6" looking for launch/beta status, you want `PLAN.md` instead.
+
+**Archetype-count note (2026-07-17):** every "18 archetypes" reference throughout this document
+is accurate *as of the 2026-07-12 run this document audits* — left as-is deliberately, since this
+is an as-executed record, not a living spec. The live taxonomy has been 17 archetypes since
+Engineering Management was removed on 2026-07-16 (commit `b907fcf`); don't treat any count in this
+document as current.
+
 **Status: ✅ ALL 5 PHASES COMPLETE (2026-07-12).** Executed end-to-end in one continuous run, no
 human checkpoint between phases. Final verification gate passes (typecheck/lint/73 tests/build all
 green). Full outcome, evidence, and human-decision items are in

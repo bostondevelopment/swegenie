@@ -1,6 +1,14 @@
 # ADR-002: Tech stack
 
-**Status:** Accepted
+**Status:** Accepted 2026-07-08; **hosting decision superseded 2026-07-17.** The user chose free
+static GitHub Pages hosting instead of Vercel, which dropped two features this ADR assumed
+(request-time OG image generation and the server-side analytics endpoint). See `docs/deploy.md`
+for the full account of what changed and why — that doc is the current source of truth for
+hosting/deployment; everything else below (framework, scoring engine, client-side state, no
+database) is unaffected and still accurate. `/taxonomy/*.json` as "the research↔app contract"
+(Consequences, below) is also stale — see `PLAN.md`'s repo-layout note; `app/data/*.json` is the
+live contract now.
+
 **Date:** 2026-07-08
 
 ## Context

@@ -1,5 +1,14 @@
 # Phase 1 Deliverable: Validated v1 Archetype List
 
+**Superseded in part (2026-07-17):** this is a frozen Phase 1 snapshot (2026-07-09/11, under the
+product's working name "CareerGuru," pre-rebrand to SWE Genie). It correctly documents 18
+archetypes and the sourcing/cross-review process behind them — that history is accurate and worth
+keeping as-is. What's changed since: **Engineering Management was removed as a standalone
+archetype on 2026-07-16** (commit `b907fcf`; see
+`docs/future-work/management-orthogonal-modifier/README.md` for the rationale), so the live
+taxonomy now has **17** archetypes, not the 18 recorded below. Treat this document as the
+historical record of how the archetype list was built, not as a live count.
+
 This is the cross-reviewed, validated set of engineering role archetypes for CareerGuru v1, per
 `PLAN.md`'s Phase 1 deliverable spec. It records the final archetype list, per-archetype in/out
 rationale and confidence, the deliberate splits made during research, and the archetypes

@@ -8,77 +8,107 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 2741,
+    "totalPointsExtracted": 2672,
     "usdBase": {
-      "count": 2243,
-      "companyCount": 251,
+      "count": 2176,
+      "companyCount": 250,
       "low": 36400,
       "high": 486100,
-      "typical": 194625
+      "typical": 195500
     },
     "usdOte": {
-      "count": 343,
+      "count": 342,
       "companyCount": 35,
       "low": 73000,
       "high": 625000,
-      "typical": 218500
+      "typical": 219094
     },
     "nonUsd": {
-      "count": 155,
+      "count": 154,
       "currencies": [
         "AUD",
         "CAD"
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
-        "count": 43,
-        "companyCount": 17,
+      "Entry (New Grad)": {
+        "count": 19,
+        "companyCount": 12,
         "low": 75100,
         "high": 211318,
-        "typical": 125000,
+        "typical": 135250,
         "companies": [
           "AppLovin",
           "Aurora Innovation",
-          "Boeing",
           "Disney",
-          "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
           "Hadrian",
           "Jamf",
-          "Morgan Stanley",
           "Nuro",
           "Palantir Technologies",
           "Pinterest",
           "SeatGeek",
           "SimpliSafe",
           "Twitch",
-          "WHOOP",
-          "Waymark",
           "Whoop"
         ]
       },
+      "Junior/Associate": {
+        "count": 84,
+        "companyCount": 31,
+        "low": 69000,
+        "high": 254667,
+        "typical": 144692,
+        "companies": [
+          "Abnormal Security",
+          "Adyen",
+          "Affirm",
+          "Agility Robotics",
+          "Allstate",
+          "AppLovin",
+          "Attentive",
+          "Aurora Innovation",
+          "Boeing",
+          "Brex",
+          "CoreWeave",
+          "Crunchyroll",
+          "Crusoe",
+          "Disney",
+          "Divergent Technologies",
+          "Duolingo",
+          "Fivetran",
+          "Flexport",
+          "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
+          "Home Depot",
+          "Iterable",
+          "Mastercard",
+          "Morgan Stanley",
+          "Pinterest",
+          "PrizePicks",
+          "Samsara",
+          "SimpliSafe",
+          "Warner Bros Discovery",
+          "Waymark",
+          "Whoop",
+          "Xometry"
+        ]
+      },
       "Mid (unspecified level)": {
-        "count": 625,
-        "companyCount": 124,
+        "count": 533,
+        "companyCount": 106,
         "low": 36400,
         "high": 484663,
-        "typical": 170000,
+        "typical": 173500,
         "companies": [
           "1X Technologies",
           "2K",
           "3M",
           "AXS",
-          "Abnormal Security",
-          "Adyen",
-          "Affirm",
-          "Agility Robotics",
           "Airbnb",
           "Airtable",
           "Alchemy",
           "Allstate",
           "Anduril Industries",
           "Anthem/Elevance Health",
-          "AppLovin",
           "Applied Intuition",
           "Astranis",
           "Astronomer",
@@ -87,7 +117,6 @@
           "Barstool Sports",
           "Block",
           "Boeing",
-          "Brex",
           "Brigit",
           "Broadcom",
           "Caterpillar",
@@ -101,7 +130,6 @@
           "Column",
           "Comcast",
           "CoreWeave",
-          "Crunchyroll",
           "Crusoe",
           "DEPT",
           "Databricks",
@@ -110,15 +138,12 @@
           "Divergent Technologies",
           "DoorDash",
           "Drata",
-          "Duolingo",
           "EarnIn",
           "Epic Games",
           "Faire",
           "FanDuel",
           "Fictiv",
           "Figure AI",
-          "Fivetran",
-          "Flexport",
           "Formation Bio",
           "Formic",
           "Formlabs",
@@ -129,7 +154,6 @@
           "Home Depot",
           "HomeLight",
           "Intel",
-          "Iterable",
           "Johnson & Johnson",
           "Justworks",
           "Kodiak Robotics",
@@ -148,9 +172,7 @@
           "Nuro",
           "Palantir Technologies",
           "Phantom",
-          "Pinterest",
           "PlanetScale",
-          "PrizePicks",
           "Reddit",
           "Redwood Materials",
           "Reply",
@@ -160,9 +182,7 @@
           "Roboflow",
           "Rockstar Games",
           "Salesforce",
-          "Samsara",
           "Scale AI",
-          "SimpliSafe",
           "Skydio",
           "SoFi",
           "Spotify",
@@ -176,26 +196,23 @@
           "Twitch",
           "Varda Space Industries",
           "Vercel",
-          "WHOOP",
           "Waabi",
           "Warner Bros Discovery",
           "Wealthfront",
-          "Whoop",
           "Wing (Alphabet)",
           "World Labs",
           "Xaira Therapeutics",
-          "Xometry",
           "Zip",
           "ZipRecruiter",
           "fuboTV"
         ]
       },
       "Senior/Staff": {
-        "count": 1455,
-        "companyCount": 207,
+        "count": 1423,
+        "companyCount": 205,
         "low": 53300,
         "high": 486100,
-        "typical": 205300,
+        "typical": 207300,
         "companies": [
           "2K",
           "3M",
@@ -305,7 +322,6 @@
           "Justworks",
           "Kodiak Robotics",
           "LaunchDarkly",
-          "Lithic",
           "Lucid Motors",
           "Lyft",
           "Mastercard",
@@ -388,7 +404,6 @@
           "Vannevar Labs",
           "Varda Space Industries",
           "Virta Health",
-          "WHOOP",
           "Waabi",
           "Walmart",
           "Warner Bros Discovery",
@@ -407,11 +422,11 @@
         ]
       },
       "Principal/Director+ (Manager/VP)": {
-        "count": 120,
+        "count": 117,
         "companyCount": 44,
         "low": 89000,
         "high": 408900,
-        "typical": 247375,
+        "typical": 247700,
         "companies": [
           "Airbnb",
           "Anduril Industries",
@@ -460,7 +475,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 6204
+    "totalPostingsScanned": 5820
   },
   "dataPoints": [
     {
@@ -669,7 +684,7 @@
       "title": "Software Engineer II, Backend",
       "location": "Vancouver, British Columbia, Canada",
       "url": "https://www.brex.com/careers/8603327002?gh_jid=8603327002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 240000,
@@ -1254,7 +1269,7 @@
       "title": "Software Engineer II, Backend (Capital Orchestration)",
       "location": "Remote US",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7749755003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 133000,
@@ -1267,7 +1282,7 @@
       "title": "Software Engineer II, Backend (PMI Integrations)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7590373003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123000,
@@ -1280,7 +1295,7 @@
       "title": "Software Engineer II, Backend (Reliability Platform)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7764836003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 133000,
@@ -1293,7 +1308,7 @@
       "title": "Software Engineer II, Backend (Test Infra)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7727322003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 128000,
@@ -1306,7 +1321,7 @@
       "title": "Software Engineer II, Full-Stack (Card Acquisition)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7618869003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 128000,
@@ -1319,7 +1334,7 @@
       "title": "Software Engineer II, Full-Stack (Marketplace Performance)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7678887003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 183000,
@@ -1332,7 +1347,7 @@
       "title": "Software Engineer II (Money Movement & Card Ledger)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7779962003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 181000,
@@ -1452,19 +1467,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 213512,
-      "high": 245000,
-      "raw_match": "$213,512 - $245,000",
-      "context": "cation, business needs, or market demands. The expected base pay range for this role is based on the location where the work will be performed and is aligned to the corresponding compensation zone.&nbsp; Base Pay Range: $213,512 - $245,000 per year To Apply: Apply by clicking APPLY NOW. Indicate job code AIMLMPI5 in your application. Click here to learn more about our Total Rewards, which vary by region and entity. If our mission energizes you and you\u2019re",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Robinhood",
-      "title": "Senior Software Engineer",
-      "location": "Menlo Park, CA",
-      "url": "https://boards.greenhouse.io/robinhood/jobs/7975563?t=gh_src=&gh_jid=7975563",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 196000,
       "high": 230000,
       "raw_match": "$196,000 &mdash; $230,000",
@@ -1553,58 +1555,6 @@
       "title": "Software Engineer",
       "location": "Menlo Park, CA",
       "url": "https://boards.greenhouse.io/robinhood/jobs/7975526?t=gh_src=&gh_jid=7975526",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 135699,
-      "high": 150000,
-      "raw_match": "$135,699 - $150,000",
-      "context": "cation, business needs, or market demands. The expected base pay range for this role is based on the location where the work will be performed and is aligned to the corresponding compensation zone.&nbsp; Base Pay Range: $135,699 - $150,000 per year To Apply: Apply by clicking APPLY NOW. Indicate job code SWEFMPI3 in your application. Click here to learn more about our Total Rewards, which vary by region and entity. If our mission energizes you and you\u2019re",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Robinhood",
-      "title": "Software Engineer",
-      "location": "Menlo Park, CA",
-      "url": "https://boards.greenhouse.io/robinhood/jobs/7975529?t=gh_src=&gh_jid=7975529",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 161637,
-      "high": 178000,
-      "raw_match": "$161,637 - $178,000",
-      "context": "cation, business needs, or market demands. The expected base pay range for this role is based on the location where the work will be performed and is aligned to the corresponding compensation zone.&nbsp; Base Pay Range: $161,637 - $178,000 per year To Apply: Apply by clicking APPLY NOW. Indicate job code SWEQ4AMPI4 in your application. Click here to learn more about our Total Rewards, which vary by region and entity. If our mission energizes you and you\u2019r",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Robinhood",
-      "title": "Software Engineer",
-      "location": "Menlo Park, CA",
-      "url": "https://boards.greenhouse.io/robinhood/jobs/7975549?t=gh_src=&gh_jid=7975549",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 161637,
-      "high": 200000,
-      "raw_match": "$161,637 - $200,000",
-      "context": "cation, business needs, or market demands. The expected base pay range for this role is based on the location where the work will be performed and is aligned to the corresponding compensation zone.&nbsp; Base Pay Range: $161,637 - $200,000 per year To Apply: Apply by clicking APPLY NOW. Indicate job code AIML4BMPI4 in your application. Click here to learn more about our Total Rewards, which vary by region and entity. If our mission energizes you and you\u2019r",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Robinhood",
-      "title": "Software Engineer",
-      "location": "Menlo Park, CA",
-      "url": "https://boards.greenhouse.io/robinhood/jobs/7975558?t=gh_src=&gh_jid=7975558",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 113277,
-      "high": 155000,
-      "raw_match": "$113,277 - $155,000",
-      "context": "cation, business needs, or market demands. The expected base pay range for this role is based on the location where the work will be performed and is aligned to the corresponding compensation zone.&nbsp; Base Pay Range: $113,277 - $155,000 per year To Apply: Apply by clicking APPLY NOW. Indicate job code SWEQ4BMPI4 in your application. Click here to learn more about our Total Rewards, which vary by region and entity. If our mission energizes you and you\u2019r",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Robinhood",
-      "title": "Software Engineer",
-      "location": "Menlo Park, CA",
-      "url": "https://boards.greenhouse.io/robinhood/jobs/7975550?t=gh_src=&gh_jid=7975550",
       "level_hint": "Mid (unspecified level)"
     },
     {
@@ -1827,19 +1777,6 @@
       "location": "Toronto, Canada",
       "url": "https://boards.greenhouse.io/robinhood/jobs/8049662?t=gh_src=&gh_jid=8049662",
       "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 186065,
-      "high": 218900,
-      "raw_match": "$186,065 &mdash; $218,900",
-      "context": "varies by location (see range below). Total compensation may also include equity and bonus eligibility, and benefits (medical, dental, vision, 401(k)).&nbsp; &nbsp; Annual base salary range (excluding equity and bonus): $186,065 &mdash; $218,900 USD Application Limit: Candidates may submit a maximum of 3 applications within a 6-month period. Equal Opportunity Employer: Coinbase is an Equal Opportunity Employer. All qualified applicants will receive consideratio",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Coinbase",
-      "title": "Senior Software Engineer",
-      "location": "Remote - USA",
-      "url": "https://www.coinbase.com/careers/positions/8021647?gh_jid=8021647",
-      "level_hint": "Senior/Staff"
     },
     {
       "low": 186065,
@@ -2775,7 +2712,7 @@
       "title": " Software Engineer II, Autonomous Freight Systems",
       "location": "San Francisco, California, United States",
       "url": "https://job-boards.greenhouse.io/flexport/jobs/7839346",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 196875,
@@ -3256,7 +3193,7 @@
       "title": "Software Engineer II (Java) - Pricing",
       "location": "Chicago",
       "url": "https://job-boards.greenhouse.io/adyen/jobs/6761898",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 230000,
@@ -3909,19 +3846,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 192000,
-      "high": 260000,
-      "raw_match": "$192,000 &mdash; $260,000",
-      "context": "this position may also include eligibility for annual performance bonus, equity, and the benefits listed above. For more information regarding which range your location is in visit our page here . &nbsp; Local Pay Range $192,000 &mdash; $260,000 USD About Databricks Databricks is the data and AI company. More than 10,000 organizations worldwide \u2014 including Comcast, Cond\u00e9 Nast, Grammarly, and over 50% of the Fortune 500 \u2014 rely on the Databricks Data Intelligence",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Databricks",
-      "title": "Staff Backend Software Engineer- (AI Platform)",
-      "location": "San Francisco, California",
-      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8367021002",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 181000,
       "high": 261000,
       "raw_match": "$181,000 &mdash; $261,000",
@@ -4010,19 +3934,6 @@
       "title": "Staff Software Engineer - AI Research Infrastructure",
       "location": "New York City, New York; San Francisco, California",
       "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8532682002",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 199000,
-      "high": 270000,
-      "raw_match": "$199,000 &mdash; $270,000",
-      "context": "this position may also include eligibility for annual performance bonus, equity, and the benefits listed above. For more information regarding which range your location is in visit our page here . &nbsp; Local Pay Range $199,000 &mdash; $270,000 USD About Databricks Databricks is the data and AI company. More than 10,000 organizations worldwide \u2014 including Comcast, Cond\u00e9 Nast, Grammarly, and over 50% of the Fortune 500 \u2014 rely on the Databricks Data Intelligence",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Databricks",
-      "title": "Staff Software Engineer - AI Research Infrastructure",
-      "location": "New York City, New York; San Francisco, California",
-      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8552484002",
       "level_hint": "Senior/Staff"
     },
     {
@@ -6090,7 +6001,7 @@
       "title": "Software Engineer II",
       "location": "Oakland, California, United States, AMER",
       "url": "https://www.fivetran.com/careers/job?gh_jid=7778979003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 167548,
@@ -7390,7 +7301,7 @@
       "title": "Software Engineer, New Grad",
       "location": "New York, NY",
       "url": "https://jobs.lever.co/palantir/94984771-0704-446c-88c6-91ce748f6d92",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 145000,
@@ -7403,7 +7314,7 @@
       "title": "Software Engineer, New Grad - Defense",
       "location": "New York, NY",
       "url": "https://jobs.lever.co/palantir/0a838e66-1ab0-4fc4-b4d3-4671c0352278",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 145000,
@@ -7416,7 +7327,7 @@
       "title": "Software Engineer, New Grad - Infrastructure",
       "location": "New York, NY",
       "url": "https://jobs.lever.co/palantir/4abf26b4-795c-420a-bf22-1ab98db268b4",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 145000,
@@ -7429,7 +7340,7 @@
       "title": "Software Engineer, New Grad - Production Infrastructure",
       "location": "Washington, D.C.",
       "url": "https://jobs.lever.co/palantir/15844944-fb69-4b57-9531-e988650b20c6",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 135000,
@@ -7754,7 +7665,7 @@
       "title": "Software Engineer II, Developer Experience",
       "location": "Livingston, NJ / New York, NY / Sunnyvale, CA / Bellevue, WA",
       "url": "https://coreweave.com/careers/job?4678606006&board=coreweave&gh_jid=4678606006",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 92000,
@@ -8225,19 +8136,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 231000,
-      "high": 340000,
-      "raw_match": "$231,000 - $340,000",
-      "context": "productive - Excellent collaboration and communication skills, with the ability to work across teams and incorporate feedback. - Experience integrating AI agents into a developer ecosystem is a strong plus. COMPENSATION $231,000 - $340,000 DEPENDING ON YOUR LOCATION, AN APPLICANT PRIVACY NOTICE MAY APPLY TO YOU. YOU CAN FIND ALL OF OUR APPLICANT PRIVACY NOTICES [HERE https://www.notion.so/harveyai/Harvey-Candidate-Privacy-Policies-319ac3fcdd7a803bb807d509",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Harvey",
-      "title": "Staff Software Engineer, Developer Experience",
-      "location": "San Francisco",
-      "url": "https://jobs.ashbyhq.com/harvey/9cc08902-8916-47a8-a849-eec2c67ab3bd",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 193400,
       "high": 290000,
       "raw_match": "$193,400 - $290,000",
@@ -8469,7 +8367,7 @@
       "title": "Software Engineer II, Managed Platform Services",
       "location": "San Francisco, CA - US",
       "url": "https://jobs.ashbyhq.com/crusoe/d4287b1b-c78b-44fb-bd2b-d2cca26cdc2a",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 185000,
@@ -8521,7 +8419,7 @@
       "title": "Software Engineer II, Storage",
       "location": "San Francisco, CA - US",
       "url": "https://jobs.ashbyhq.com/crusoe/00fb8ce3-aaee-41c3-8016-18829f6b80ff",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 215000,
@@ -8716,7 +8614,7 @@
       "title": "Software Engineer I",
       "location": "Mountain View, California",
       "url": "https://aurora.tech/jobs/8159549002?gh_jid=8159549002",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 139000,
@@ -8729,7 +8627,7 @@
       "title": "Software Engineer II, Calibration",
       "location": "Mountain View, California",
       "url": "https://aurora.tech/jobs/8349377002?gh_jid=8349377002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 126000,
@@ -8742,7 +8640,7 @@
       "title": "Software Engineer II, Pipeline Automation & Acceleration",
       "location": "Pittsburgh, Pennsylvania",
       "url": "https://aurora.tech/jobs/8591934002?gh_jid=8591934002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 139000,
@@ -8755,7 +8653,7 @@
       "title": "Software Engineer II,  Vehicle Platform Integrations ",
       "location": "Mountain View, California",
       "url": "https://aurora.tech/jobs/8620384002?gh_jid=8620384002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 146000,
@@ -9301,7 +9199,7 @@
       "title": "Software Engineer, AI Platform - New Grad",
       "location": "Mountain View, California (HQ)",
       "url": "https://nuro.ai/careersitem?gh_jid=7351066",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 160360,
@@ -9418,7 +9316,7 @@
       "title": "Software Engineer, Performance - New Grad",
       "location": "Mountain View, California (HQ)",
       "url": "https://nuro.ai/careersitem?gh_jid=7978432",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 152000,
@@ -9805,19 +9703,6 @@
       "currency": "CAD",
       "is_ote": false,
       "company": "Okta",
-      "title": "Senior Software Engineer- Okta Identity Governance ",
-      "location": "Toronto, Ontario, Canada",
-      "url": "https://www.okta.com/company/careers/opportunity/8021689?gh_jid=8021689",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 136000,
-      "high": 187000,
-      "raw_match": "$136,000 &mdash; $187,000",
-      "context": "pplicable plans and policies. To learn more about our Total Rewards program, please visit:&nbsp; https://rewards.okta.com/can . The annual base salary range for this position for candidates located in Canada is between: $136,000 &mdash; $187,000 CAD The Okta Experience Supporting Your Well-Being &nbsp; Driving Social Impact&nbsp; Developing Talent and Fostering Connection + Community We are intentional about connection. Our global community, spanning over 20 of",
-      "currency": "CAD",
-      "is_ote": false,
-      "company": "Okta",
       "title": "Senior Software Engineer, Organizations (Auth0)",
       "location": "Toronto, Ontario, Canada",
       "url": "https://www.okta.com/company/careers/opportunity/8029109?gh_jid=8029109",
@@ -9860,7 +9745,7 @@
       "title": "Software Engineer II, Core Identity (Auth0)  ",
       "location": "Toronto, Ontario, Canada",
       "url": "https://www.okta.com/company/careers/opportunity/8001096?gh_jid=8001096",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 140000,
@@ -10419,7 +10304,7 @@
       "title": "Software Engineer II - Full Stack",
       "location": "Remote - USA",
       "url": "https://abnormal.ai/careers/jobs/7786309003?gh_jid=7786309003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 149200,
@@ -10432,7 +10317,7 @@
       "title": "Software Engineer II - Inline Mailflow",
       "location": "Remote - USA",
       "url": "https://abnormal.ai/careers/jobs/7749085003?gh_jid=7749085003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 213512,
@@ -11355,7 +11240,7 @@
       "title": "Junior Software Engineer",
       "location": "US - Remote",
       "url": "https://job-boards.greenhouse.io/waymark/jobs/4711827005",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 98000,
@@ -11368,7 +11253,7 @@
       "title": "Junior Software Engineer",
       "location": "US - Remote",
       "url": "https://job-boards.greenhouse.io/waymark/jobs/4711827005",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 94000,
@@ -11381,7 +11266,7 @@
       "title": "Junior Software Engineer",
       "location": "US - Remote",
       "url": "https://job-boards.greenhouse.io/waymark/jobs/4711827005",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 85000,
@@ -11394,7 +11279,7 @@
       "title": "Junior Software Engineer",
       "location": "US - Remote",
       "url": "https://job-boards.greenhouse.io/waymark/jobs/4711827005",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 82000,
@@ -11407,7 +11292,7 @@
       "title": "Junior Software Engineer",
       "location": "US - Remote",
       "url": "https://job-boards.greenhouse.io/waymark/jobs/4711827005",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 219800,
@@ -11680,7 +11565,7 @@
       "title": "Software Engineer I (Backend)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/3b94218d-3a5a-4dd1-91c7-5f18655c93a8",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 105000,
@@ -11693,7 +11578,7 @@
       "title": "Software Engineer I (Quality)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/b7f75849-b5c0-49fe-8d24-50cbb39d284d",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 125000,
@@ -11706,7 +11591,7 @@
       "title": "Software Engineer II (Backend, AI Experiences & AI Platform)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/ff5f7b71-0c76-4237-8e5c-b3df88004c11",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11719,7 +11604,7 @@
       "title": "Software Engineer II (Backend, Business Systems)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/ce1d5c5e-3fda-4884-8135-d98dce39877b",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11732,7 +11617,7 @@
       "title": "Software Engineer II (Backend, Enterprise)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/5bb99b67-fac6-416e-b992-2a37ca2c7ee8",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11745,7 +11630,7 @@
       "title": "Software Engineer II (Backend, Hardware Accelerate)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/3bc68bdd-3a23-42cc-b334-26338431ab0a",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11758,7 +11643,7 @@
       "title": "Software Engineer II (Backend, Healthcare)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/79aed6aa-56b2-4d6d-9db7-570bb38706e0",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11771,7 +11656,7 @@
       "title": "Software Engineer II (Backend, Platform)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/c329012d-5cf3-4d7a-9816-ba624ef0a311",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11784,7 +11669,7 @@
       "title": "Software Engineer II (Frontend, AI Platform)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/8fbf5c6e-e5b3-4672-bcec-0d67ded8e932",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11797,7 +11682,7 @@
       "title": "Software Engineer II (Full Stack, Platform)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/65566b33-ab41-4b48-a138-ff5c57d1d514",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -11810,7 +11695,7 @@
       "title": "Software Engineer II (Fullstack, Business Systems)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/b0750248-a45f-48c9-aff0-68414abe5d3f",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 170000,
@@ -14472,19 +14357,6 @@
       "currency": "USD",
       "is_ote": false,
       "company": "Roblox",
-      "title": "Senior Software Engineer, Service Mesh",
-      "location": "San Mateo, CA, United States",
-      "url": "https://careers.roblox.com/jobs/8047819?gh_jid=8047819",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 243290,
-      "high": 295250,
-      "raw_match": "$243,290 &mdash; $295,250",
-      "context": "s expected range. This pay range is subject to change and may be modified in the future. All full-time employees are also eligible for equity compensation and for benefits as described on this page . Annual Salary Range $243,290 &mdash; $295,250 USD Roles that are based in an office are onsite Tuesday, Wednesday, and Thursday, with optional presence on Monday and Friday (unless otherwise noted). Roblox provides equal employment opportunities to all employees an",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Roblox",
       "title": "Senior Software Engineer - Storage Cache",
       "location": "San Mateo, CA, United States",
       "url": "https://careers.roblox.com/jobs/7862605?gh_jid=7862605",
@@ -14618,7 +14490,7 @@
       "title": "Software Engineer - New Grad",
       "location": "New York, New York",
       "url": "https://seatgeek.com/jobs/7858968?gh_jid=7858968",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 323000,
@@ -14722,7 +14594,7 @@
       "title": "Backend Engineer II",
       "location": "Palo Alto, CA",
       "url": "https://boards.greenhouse.io/applovin/jobs/4375888006?gh_jid=4375888006",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 124000,
@@ -14735,7 +14607,7 @@
       "title": "Backend Engineer, New Grad ",
       "location": "Palo Alto, CA",
       "url": "https://boards.greenhouse.io/applovin/jobs/4451556006?gh_jid=4451556006",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 103321,
@@ -14969,7 +14841,7 @@
       "title": "Software Engineer II (React Native)",
       "location": "Remote",
       "url": "http://prizepicks.com/position?gh_jid=7786028003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 195000,
@@ -15086,7 +14958,7 @@
       "title": "Software Engineer I, Commerce Engineering",
       "location": "San Francisco, CA",
       "url": "https://job-boards.greenhouse.io/twitch/jobs/8457711002",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 127100,
@@ -15099,7 +14971,7 @@
       "title": "Software Engineer I, Commerce Engineering",
       "location": "San Francisco, CA",
       "url": "https://job-boards.greenhouse.io/twitch/jobs/8457711002",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 110500,
@@ -15177,7 +15049,7 @@
       "title": "Software Engineer II, Frontend - Service Monetization",
       "location": "Los Angeles, California, United States",
       "url": "https://boards.greenhouse.io/crunchyroll/jobs/7980329?gh_jid=7980329",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 169000,
@@ -16035,19 +15907,6 @@
       "title": "Robotics Software Engineer, Maneuver Dominance",
       "location": "Costa Mesa, California, United States",
       "url": "https://boards.greenhouse.io/andurilindustries/jobs/5113527007?gh_jid=5113527007",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 166000,
-      "high": 220000,
-      "raw_match": "$166,000 &mdash; $220,000",
-      "context": "nd algorithm development with an understanding of behavior trees Developing software/hardware for flight systems and safety critical functionality Distributed communication networks and message standards US Salary Range $166,000 &mdash; $220,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Anduril Industries",
-      "title": "Robotics Software Engineer, Maneuver Dominance ",
-      "location": "Costa Mesa, California, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5047469007?gh_jid=5047469007",
       "level_hint": "Mid (unspecified level)"
     },
     {
@@ -17021,21 +16880,8 @@
       "is_ote": false,
       "company": "Anduril Industries",
       "title": "Senior Software Engineer, Robotics",
-      "location": "Irvine, California, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5009095007?gh_jid=5009095007",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 220000,
-      "high": 292000,
-      "raw_match": "$220,000 &mdash; $292,000",
-      "context": "ght dynamics as applied to UAV systems Experience with simulation environments for robotics testing and development Track record of contributions to open-source robotics projects or relevant publications US Salary Range $220,000 &mdash; $292,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Anduril Industries",
-      "title": "Senior Software Engineer, Robotics ",
       "location": "Costa Mesa, California, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/4932882007?gh_jid=4932882007",
+      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5009085007?gh_jid=5009085007",
       "level_hint": "Senior/Staff"
     },
     {
@@ -17221,19 +17067,6 @@
       "level_hint": "Mid (unspecified level)"
     },
     {
-      "low": 129000,
-      "high": 171000,
-      "raw_match": "$129,000 &mdash; $171,000",
-      "context": "g., AWS, Azure, GCP) and containerization technologies (e.g., Docker, Kubernetes). NixOS experience Experience working in a regulated industry or with systems requiring high reliability and traceability. US Salary Range $129,000 &mdash; $171,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Anduril Industries",
-      "title": "Software Engineer ",
-      "location": "Costa Mesa, California, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5133682007?gh_jid=5133682007",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 166000,
       "high": 220000,
       "raw_match": "$166,000 &mdash; $220,000",
@@ -17364,19 +17197,6 @@
       "level_hint": "Mid (unspecified level)"
     },
     {
-      "low": 146000,
-      "high": 194000,
-      "raw_match": "$146,000 &mdash; $194,000",
-      "context": "ovide academic transcripts, feel free to redact non-technical information (e.g., student ID, dates, non-technical coursework, etc.). Unofficial transcripts obtained online acceptable for this assessment. US Salary Range $146,000 &mdash; $194,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Anduril Industries",
-      "title": "Software Engineer, Battlespace Awareness ",
-      "location": "Waltham, Massachusetts, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5178108007?gh_jid=5178108007",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 165000,
       "high": 218000,
       "raw_match": "$165,000 &mdash; $218,000",
@@ -17387,19 +17207,6 @@
       "title": "Software Engineer, Battlespace Awareness ",
       "location": "Broomfield, Colorado, United States",
       "url": "https://boards.greenhouse.io/andurilindustries/jobs/5178090007?gh_jid=5178090007",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 126000,
-      "high": 167000,
-      "raw_match": "$126,000 &mdash; $167,000",
-      "context": "ovide academic transcripts, feel free to redact non-technical information (e.g., student ID, dates, non-technical coursework, etc.). Unofficial transcripts obtained online acceptable for this assessment. US Salary Range $126,000 &mdash; $167,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Anduril Industries",
-      "title": "Software Engineer, Battlespace Awareness ",
-      "location": "Broomfield, Colorado, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5178105007?gh_jid=5178105007",
       "level_hint": "Mid (unspecified level)"
     },
     {
@@ -17653,13 +17460,13 @@
       "low": 191000,
       "high": 253000,
       "raw_match": "$191,000 &mdash; $253,000",
-      "context": "and related system performance metrics. Understanding of systems software (kernel, device drivers, system calls) and optimizing for limited resources Experience with sensor characterization and analysis US Salary Range $191,000 &mdash; $253,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
+      "context": "ccessful candidates will be matched to a specific team at a subsequent stage of the recruitment process. The roles considered for this job post may require travel. The extent of travel will vary by role. US Salary Range $191,000 &mdash; $253,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
       "currency": "USD",
       "is_ote": false,
       "company": "Anduril Industries",
       "title": "Software Engineer, Robotics",
-      "location": "Irvine, California, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5102393007?gh_jid=5102393007",
+      "location": "Costa Mesa, California, United States",
+      "url": "https://boards.greenhouse.io/andurilindustries/jobs/4959625007?gh_jid=4959625007",
       "level_hint": "Mid (unspecified level)"
     },
     {
@@ -17881,19 +17688,6 @@
       "title": "Staff Software Engineer",
       "location": "Atlanta, Georgia, United States",
       "url": "https://boards.greenhouse.io/andurilindustries/jobs/5149052007?gh_jid=5149052007",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 166000,
-      "high": 220000,
-      "raw_match": "$166,000 &mdash; $220,000",
-      "context": "g., AWS, Azure, GCP) and containerization technologies (e.g., Docker, Kubernetes). NixOS experience Experience working in a regulated industry or with systems requiring high reliability and traceability. US Salary Range $166,000 &mdash; $220,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Anduril Industries",
-      "title": "Staff Software Engineer ",
-      "location": "Seattle, Washington, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5133683007?gh_jid=5133683007",
       "level_hint": "Senior/Staff"
     },
     {
@@ -18310,7 +18104,7 @@
       "title": "Software Engineer II, AI Platform",
       "location": "Remote - CA",
       "url": "https://www.samsara.com/company/careers/roles/7619925?gh_jid=7619925",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 154700,
@@ -19367,19 +19161,6 @@
     },
     {
       "low": 100000,
-      "high": 160000,
-      "raw_match": "$100,000 to $160,000",
-      "context": "l and scope of the position. Please reference the job posting subtitle for where this position will be located. For pay transparency purposes, the base salary range for this full-time position in the location listed is: $100,000 to $160,000 USD annually. Don\u2019t meet every single requirement? If you\u2019re excited about this role but your past experience doesn\u2019t align perfectly with every qualification in the job description, we encourage you to apply anyway. Yo",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Applied Intuition",
-      "title": "C++ Software Engineer \u2013 Autonomous Systems",
-      "location": "Ann Arbor",
-      "url": "https://jobs.ashbyhq.com/applied/23498829-6e3f-4d18-8617-9164f0e0470f",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 100000,
       "high": 200000,
       "raw_match": "$100,000 - $200,000",
       "context": "and scope of the position. Please reference the job posting\u2019s subtitle for where this position will be located. For pay transparency purposes, the base salary range for this full-time position in the location listed is: $100,000 - $200,000 USD annually. Don\u2019t meet every single requirement? If you\u2019re excited about this role but your past experience doesn\u2019t align perfectly with every qualification in the job description, we encourage you to apply anyway. Yo",
@@ -19457,19 +19238,6 @@
       "level_hint": "Mid (unspecified level)"
     },
     {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 to $175,000",
-      "context": "l and scope of the position. Please reference the job posting subtitle for where this position will be located. For pay transparency purposes, the base salary range for this full-time position in the location listed is: $125,000 to $175,000 USD annually. Don\u2019t meet every single requirement? If you\u2019re excited about this role but your past experience doesn\u2019t align perfectly with every qualification in the job description, we encourage you to apply anyway. Yo",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Applied Intuition",
-      "title": "Robotic Software Engineer (Drone Stack)",
-      "location": "Washington, D.C.",
-      "url": "https://jobs.ashbyhq.com/applied/32fdfd22-9bb9-4031-b211-87fa7b2157d4",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 149365,
       "high": 163974,
       "raw_match": "$149,365 - $163,974",
@@ -19494,19 +19262,6 @@
       "location": "Sunnyvale",
       "url": "https://jobs.ashbyhq.com/applied/ee6b42c8-6569-449d-8e69-4cc3c07fea74",
       "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 210800,
-      "high": 258805,
-      "raw_match": "$210,800 - $258,805",
-      "context": "At least 2 years of experience in a software engineering role for an automotive technology company - At least 2 years of experience using C++, Python, Linux/Windows, Git, and MATLAB The salary range for this position is $210,800 - $258,805 per year USD annually. #LI-DNP Don\u2019t meet every single requirement? If you\u2019re excited about this role but your past experience doesn\u2019t align perfectly with every qualification in the job description, we encourage you to",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Applied Intuition",
-      "title": "Senior Software Engineer",
-      "location": "Sunnyvale",
-      "url": "https://jobs.ashbyhq.com/applied/912ca678-a23b-46d5-9f99-8e226782907e",
-      "level_hint": "Senior/Staff"
     },
     {
       "low": 153000,
@@ -19717,19 +19472,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 119000,
-      "high": 155000,
-      "raw_match": "$119,000- $155,000",
-      "context": "Kubernetes) Need strong execution, and communication skills Excellent debugging skills&nbsp; Understands and prioritizes unit and integration testing&nbsp; The estimated base salary range for new hires into this role is $119,000- $155,000 annually + bonus depending on factors such as job-related skills, relevant experience, and location. We also offer a competitive benefits package, including 401(k) match, medical, dental and vision insurance; life and d",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Xometry",
-      "title": "Senior Software Engineer ",
-      "location": "North Bethesda, MD",
-      "url": "https://job-boards.greenhouse.io/xometry/jobs/5081688007",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 78000,
       "high": 140000,
       "raw_match": "$78,000- $140,000",
@@ -19740,7 +19482,7 @@
       "title": "Software Engineer II",
       "location": "Waltham, MA",
       "url": "https://job-boards.greenhouse.io/xometry/jobs/5061488007",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 78000,
@@ -19751,22 +19493,9 @@
       "is_ote": false,
       "company": "Xometry",
       "title": "Software Engineer II",
-      "location": "Waltham, MA",
-      "url": "https://job-boards.greenhouse.io/xometry/jobs/5013100007",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 78000,
-      "high": 120000,
-      "raw_match": "$78,000- $120,000",
-      "context": "xcellent communication and collaboration abilities, comfortable engaging with both technical and non-technical stakeholders, from junior ICs to executives. The estimated base salary range for new hires into this role is $78,000- $120,000 annually. We also offer a competitive benefits package, including 401(k) match, medical, dental and vision insurance; life and disability insurance; generous paid time off including vacation, sick leave, floating and fi",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Xometry",
-      "title": "Software Engineer II",
-      "location": "Waltham, MA",
-      "url": "https://job-boards.greenhouse.io/xometry/jobs/5064293007",
-      "level_hint": "Mid (unspecified level)"
+      "location": "Gaithersburg, MD",
+      "url": "https://job-boards.greenhouse.io/xometry/jobs/5013101007",
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 140000,
@@ -19792,32 +19521,6 @@
       "title": "Staff Software Engineer",
       "location": "North Bethesda, MD",
       "url": "https://job-boards.greenhouse.io/xometry/jobs/5139095007",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 140000,
-      "high": 230000,
-      "raw_match": "$140,000- $230,000",
-      "context": "akeholders and contributors Experience in the manufacturing, supply chain, or similar industries is a plus Must be a US Citizen or Green Card holder (ITAR) The estimated base salary range for new hires into this role is $140,000- $230,000 annually + annual bonus depending on factors such as job-related skills, relevant experience, and location. We also offer a competitive benefits package, including 401(k) match, medical, dental and vision insurance; lif",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Xometry",
-      "title": "Staff Software Engineer",
-      "location": "North Bethesda, MD",
-      "url": "https://job-boards.greenhouse.io/xometry/jobs/5115282007",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 160000,
-      "high": 180000,
-      "raw_match": "$160,000 \u2013 $180,000",
-      "context": "akeholders and contributors Experience in the manufacturing, supply chain, or similar industries is a plus Must be a US Citizen or Green Card holder (ITAR) The estimated base salary range for new hires into this role is $160,000 \u2013 $180,000&nbsp;annually + annual bonus depending on factors such as job-related skills, relevant experience, and location. We also offer a competitive benefits package, including 401(k) match, medical, dental and vision insurance",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Xometry",
-      "title": "Staff Software Engineer",
-      "location": "Waltham, MA",
-      "url": "https://job-boards.greenhouse.io/xometry/jobs/5115281007",
       "level_hint": "Senior/Staff"
     },
     {
@@ -19948,7 +19651,7 @@
       "title": "Fullstack Software Engineer, New Grad ",
       "location": "Los Angeles, CA",
       "url": "https://jobs.ashbyhq.com/hadrian-automation/41472a42-c3c3-40bd-a784-8a3fbab47be3",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 120000,
@@ -20845,7 +20548,7 @@
       "title": "Full Stack Software Engineer II",
       "location": "Torrance, California, United States",
       "url": "https://job-boards.greenhouse.io/divergent/jobs/5237979008",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 141380,
@@ -20858,7 +20561,7 @@
       "title": "Full Stack Software Engineer II",
       "location": "Torrance, California, United States",
       "url": "https://job-boards.greenhouse.io/divergent/jobs/5237979008",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 122430,
@@ -20871,7 +20574,7 @@
       "title": "Full Stack Software Engineer II",
       "location": "Torrance, California, United States",
       "url": "https://job-boards.greenhouse.io/divergent/jobs/5237979008",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 163270,
@@ -21131,7 +20834,7 @@
       "title": "Robotics Software Engineer II",
       "location": "Hybrid- Pittsburgh, PA or Salem, OR",
       "url": "https://www.agilityrobotics.com/about/job-post?gh_jid=6008698004",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -21755,7 +21458,7 @@
       "title": "Software Engineer I, Backend",
       "location": "Seattle, WA, US; San Francisco, CA, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=6816337",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 145524,
@@ -21768,7 +21471,7 @@
       "title": "Software Engineer II",
       "location": "Palo Alto, CA, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7958766",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123696,
@@ -21781,7 +21484,7 @@
       "title": "Software Engineer II, Backend",
       "location": "San Francisco, CA, US; Seattle, WA, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=4813946",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 139378,
@@ -21794,7 +21497,7 @@
       "title": "Software Engineer II, Backend",
       "location": "Toronto, ON, CA",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=5132899",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123696,
@@ -21807,7 +21510,7 @@
       "title": "Software Engineer II, Backend, tvScientific",
       "location": "San Francisco, CA, US; Remote, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7782552",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123696,
@@ -21820,7 +21523,7 @@
       "title": "Software Engineer II, Big Data, tvScientific",
       "location": "San Francisco, CA, US; Remote, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7782546",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 139378,
@@ -21833,7 +21536,7 @@
       "title": "Software Engineer II, Web",
       "location": "Toronto, ON, CA",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8024883",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 155584,
@@ -22457,7 +22160,7 @@
       "title": "Software Engineer II (Full-Stack)",
       "location": "San Francisco, CA, United States",
       "url": "https://ripple.com/careers/all-jobs/job/7951564?gh_jid=7951564",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 196000,
@@ -23978,7 +23681,7 @@
       "title": "Software Engineer I",
       "location": "Austin, TX; Eau Claire, WI; Minneapolis, MN",
       "url": "https://www.jamf.com/about/careers/jobs/?gh_jid=6017936004&gh_jid=6017936004",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 183000,
@@ -24056,7 +23759,7 @@
       "title": "Full Stack Engineer II",
       "location": "Canada Remote",
       "url": "https://jobs.ashbyhq.com/procurify/c75c2494-8c92-4081-8243-2cb6a87cd0ef",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 137000,
@@ -24774,19 +24477,6 @@
       "level_hint": "Mid (unspecified level)"
     },
     {
-      "low": 137000,
-      "high": 137000,
-      "raw_match": "$137,000",
-      "context": "ur solutions are everywhere, our impact is everywhere. We are Cisco, and our power starts with you. Message to applicants applying to work in the U.S. and/or Canada: The starting salary range posted for this position is $137,000.00 to $200,500.00 and reflects the projected salary range for new hires in this position in U.S. and/or Canada locations, not including incentive compensation*, equity, or benefits. Individual pay is determined by the c",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Cisco",
-      "title": "Software Engineer",
-      "location": "RTP, North Carolina, US",
-      "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/RTP-North-Carolina-US/Software-Engineer_2007035",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 165000,
       "high": 165000,
       "raw_match": "$165,000",
@@ -24954,19 +24644,6 @@
       "location": "7 Locations",
       "url": "https://broadcom.wd1.myworkdayjobs.com/External_Career/job/USA-CA---Promontory-B/Principal-Kubernetes-Software-Engineer_R025637",
       "level_hint": "Principal/Director+ (Manager/VP)"
-    },
-    {
-      "low": 172800,
-      "high": 172800,
-      "raw_match": "$172,800",
-      "context": "xperience in software development or a related field. Legal authorization to work in the U.S. is required Additional Job Description: Compensation and Benefits The annual base salary range for this position is $108,00 - $172,800 This position is also eligible for a discretionary annual bonus in accordance with relevant plan documents, and equity in accordance with equity plan documents and equity award agreements. Broadcom offers a competitive",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Broadcom",
-      "title": "R&D Software Engineer",
-      "location": "3 Locations",
-      "url": "https://broadcom.wd1.myworkdayjobs.com/External_Career/job/USA-IL-Lisle-Warrenville-Road/R-D-Software-Engineer_R025496",
-      "level_hint": "Mid (unspecified level)"
     },
     {
       "low": 108000,
@@ -25369,7 +25046,7 @@
       "title": "Software Engineer II - Backend/Platform Agentic AI",
       "location": "Arlington, Virginia",
       "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/Arlington-Virginia/Software-Engineer-II---Backend-Platform-Agentic-AI_R-279643-1",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 92000,
@@ -25382,7 +25059,7 @@
       "title": "Software Engineer II",
       "location": "O'Fallon, Missouri",
       "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/OFallon-Missouri/Software-Engineer-II_R-281530",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 132000,
@@ -26373,19 +26050,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 215200,
-      "high": 245600,
-      "raw_match": "$215,200 - $245,600",
-      "context": "cations, and refers to the amount Capital One is willing to pay at the time of this posting. Salaries for part-time roles will be prorated based upon the agreed upon number of hours to be regularly worked. New York, NY: $215,200 - $245,600 for Lead Software Engineer Plano, TX: $179,400 - $204,700 for Lead Software Engineer Candidates hired to work in other locations will be subject to the pay range associated with that location, and the actual annualized",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Capital One",
-      "title": "Lead Software Engineer, Full Stack",
-      "location": "2 Locations",
-      "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Plano-TX/Lead-Software-Engineer--Full-Stack_R245755-3",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 229900,
       "high": 262400,
       "raw_match": "$229,900 - $262,400",
@@ -26552,7 +26216,7 @@
       "title": "Associate, Software Engineer",
       "location": "Alpharetta, Georgia, United States of America",
       "url": "https://ms.wd5.myworkdayjobs.com/External/job/Alpharetta-Georgia-United-States-of-America/Associate--Software-Engineer_JR033706",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 135160,
@@ -26565,33 +26229,7 @@
       "title": "Associate, Software Engineer",
       "location": "New York, New York, United States of America",
       "url": "https://ms.wd5.myworkdayjobs.com/External/job/New-York-New-York-United-States-of-America/Associate--Software-Engineer_JR025652",
-      "level_hint": "Entry/Associate"
-    },
-    {
-      "low": 214000,
-      "high": 214000,
-      "raw_match": "$214,000",
-      "context": "grit in their work. To learn more about our offices across the globe, please copy and paste https://www.morganstanley.com/about-us/global-offices\u200b into your browser. Expected base pay rates for the role will be between $214,000 and $214,000 per year at the commencement of employment. However, base pay if hired will be determined on an individualized basis and is only part of the total compensation package, which, depending on the position, may",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Morgan Stanley",
-      "title": "Vice President, Software Engineer",
-      "location": "New York, New York, United States of America",
-      "url": "https://ms.wd5.myworkdayjobs.com/External/job/New-York-New-York-United-States-of-America/Vice-President--Software-Engineer_JR014955",
-      "level_hint": "Principal/Director+ (Manager/VP)"
-    },
-    {
-      "low": 146250,
-      "high": 146250,
-      "raw_match": "$146,250",
-      "context": "grit in their work. To learn more about our offices across the globe, please copy and paste https://www.morganstanley.com/about-us/global-offices\u200b into your browser. Expected base pay rates for the role will be between $146,250 and $146,250 per year at the commencement of employment. However, base pay if hired will be determined on an individualized basis and is only part of the total compensation package, which, depending on the position, may",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Morgan Stanley",
-      "title": "Associate, Software Engineer",
-      "location": "Alpharetta, Georgia, United States of America",
-      "url": "https://ms.wd5.myworkdayjobs.com/External/job/Alpharetta-Georgia-United-States-of-America/Associate--Software-Engineer_JR031380",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 152200,
@@ -26760,7 +26398,7 @@
       "title": "Software Engineer Consultant II",
       "location": "USA - IL (Remote)",
       "url": "https://allstate.wd5.myworkdayjobs.com/allstate_careers/job/USA---IL-Remote/Software-Engineer-Consultant-II_R32514-1",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 90700,
@@ -26968,7 +26606,7 @@
       "title": "Software Engineer II - Marketing Technology (Remote)",
       "location": "GEORGIA - VIRTUAL - GA01",
       "url": "https://homedepot.wd5.myworkdayjobs.com/CareerDepot/job/GEORGIA---VIRTUAL---GA01/Software-Engineer-II---Orange-Apron-Media--Remote-_Req184687",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 140000,
@@ -27046,7 +26684,7 @@
       "title": "Software Engineer II (Remote)",
       "location": "GEORGIA - VIRTUAL - GA01",
       "url": "https://homedepot.wd5.myworkdayjobs.com/CareerDepot/job/GEORGIA---VIRTUAL---GA01/Software-Engineer-II--Remote-_Req183899-1",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 80000,
@@ -27202,7 +26840,7 @@
       "title": "Software Engineer II \u2013 PH \u2013 Fridley/Rice Creek, MN (Onsite)",
       "location": "Fridley, Minnesota, United States of America",
       "url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Fridley-Minnesota-United-States-of-America/Software-Engineer-II---PH---Fridley-Rice-Creek--MN--Onsite-_R70203-1",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 124800,
@@ -27501,7 +27139,7 @@
       "title": "Spacecraft Software Engineer (Associate or Mid-Level)- Millennium Space Systems",
       "location": "USA - El Segundo, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---El-Segundo-CA/Spacecraft-Software-Engineer--Associate-or-Mid-Level---Millennium-Space-Systems_JR2026512895",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 135150,
@@ -27514,7 +27152,7 @@
       "title": "Spacecraft Software Engineer (Associate or Mid-Level)- Millennium Space Systems",
       "location": "USA - El Segundo, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---El-Segundo-CA/Spacecraft-Software-Engineer--Associate-or-Mid-Level---Millennium-Space-Systems_JR2026512895",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 135150,
@@ -27605,7 +27243,7 @@
       "title": "Associate Real Time Software Engineer, Phantom Works",
       "location": "3 Locations",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Associate-Real-Time-Software-Engineer--Phantom-Works_JR2026518308-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 135150,
@@ -27631,7 +27269,7 @@
       "title": "ESS Mission Planning Associate/Experienced Software Engineer",
       "location": "USA - Seal Beach, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Seal-Beach-CA/ESS-Mission-Planning-Associate-Experienced-Software-Engineer_JR2026512722",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 143100,
@@ -27644,7 +27282,7 @@
       "title": "ESS Mission Planning Associate/Experienced Software Engineer",
       "location": "USA - Seal Beach, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Seal-Beach-CA/ESS-Mission-Planning-Associate-Experienced-Software-Engineer_JR2026512722",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 160650,
@@ -27670,7 +27308,7 @@
       "title": "DevSecOps Software Engineer (Associate/Experienced)",
       "location": "USA - El Segundo, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---El-Segundo-CA/DevSecOps-Software-Engineer--Associate-Experienced-_JR2026513231-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 119850,
@@ -27683,7 +27321,7 @@
       "title": "DevSecOps Software Engineer (Associate/Experienced)",
       "location": "USA - El Segundo, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---El-Segundo-CA/DevSecOps-Software-Engineer--Associate-Experienced-_JR2026513231-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 126650,
@@ -27748,7 +27386,7 @@
       "title": "Modernization Software Engineer (Associate or Mid-Level)",
       "location": "USA - Colorado Springs, CO",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Colorado-Springs-CO/Modernization-Software-Engineer--Associate-or-Mid-Level-_JR2026515908-2",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 126650,
@@ -27761,33 +27399,7 @@
       "title": "Modernization Software Engineer (Associate or Mid-Level)",
       "location": "USA - Colorado Springs, CO",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Colorado-Springs-CO/Modernization-Software-Engineer--Associate-or-Mid-Level-_JR2026515908-2",
-      "level_hint": "Entry/Associate"
-    },
-    {
-      "low": 91800,
-      "high": 124200,
-      "raw_match": "$91,800 - $124,200",
-      "context": "hire, and the applicability of collective bargaining agreements. Pay is based upon candidate experience and qualifications, as well as market and business considerations. Summary Pay Range for Associate level (Level 2): $91,800 - $124,200 Summary Pay Range for Mid-level (Level 3): USD $112,200 - $151,800 The Boeing 401(k) helps you save for your future, with contributions from Boeing that can help you grow your retirement savings. Our best-in-class retir",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Boeing",
-      "title": "Modernization Software Engineer (Associate or Mid-Level)",
-      "location": "USA - Colorado Springs, CO",
-      "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Colorado-Springs-CO/Modernization-Software-Engineer--Associate-or-Mid-Level-_JR2026515910-1",
-      "level_hint": "Entry/Associate"
-    },
-    {
-      "low": 112200,
-      "high": 151800,
-      "raw_match": "$112,200 - $151,800",
-      "context": "ay is based upon candidate experience and qualifications, as well as market and business considerations. Summary Pay Range for Associate level (Level 2): $91,800 - $124,200 Summary Pay Range for Mid-level (Level 3): USD $112,200 - $151,800 The Boeing 401(k) helps you save for your future, with contributions from Boeing that can help you grow your retirement savings. Our best-in-class retirement benefit features: 1. Best in class 401(k) plan: we'll match y",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Boeing",
-      "title": "Modernization Software Engineer (Associate or Mid-Level)",
-      "location": "USA - Colorado Springs, CO",
-      "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Colorado-Springs-CO/Modernization-Software-Engineer--Associate-or-Mid-Level-_JR2026515910-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 105000,
@@ -27995,7 +27607,7 @@
       "title": "Software Engineer \u2013 Simulation (Associate or Experienced)",
       "location": "USA - Oklahoma City, OK",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Oklahoma-City-OK/Software-Engineer---Simulation--Associate-or-Experienced-_JR2026509211-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 118150,
@@ -28008,7 +27620,7 @@
       "title": "Software Engineer \u2013 Simulation (Associate or Experienced)",
       "location": "USA - Oklahoma City, OK",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Oklahoma-City-OK/Software-Engineer---Simulation--Associate-or-Experienced-_JR2026509211-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 129400,
@@ -28203,32 +27815,6 @@
       "title": "Senior Software Engineer, Autonomy Evaluation",
       "location": "Sunnyvale, California, United States of America",
       "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sunnyvale-California-United-States-of-America/Senior-Software-Engineer--Autonomy-Evaluation_JR-202610982",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 189791,
-      "high": 189791,
-      "raw_match": "$189,791",
-      "context": ") using Python programming; Mathematical Modeling; Data Science/Machine learning and applications; Building Test Automation Framework; and Systems Testing. Compensation: \u2022 The expected base compensation for this role is $189,791.26 to $234,100.00 Annually. \u2022 Actual base compensation within the identified range will vary based on factors relevant to the position. \u2022 Bonus Potential: An incentive pay program offers payouts based on company perform",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "General Motors",
-      "title": "Senior Software Engineer",
-      "location": "San Francisco, California, United States of America",
-      "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/San-Francisco-California-United-States-of-America/Senior-Software-Engineer_JR-202613786",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 202239,
-      "high": 202239,
-      "raw_match": "$202,239",
-      "context": "with: Docker & Kubernetes; Postgres and database design; Postgis; Asynchronous messaging; Redis; Bash scripting; Typescript; Cloud technologies; and Linux. Compensation: \u2022 The expected base compensation for this role is $202,239.00 to $206,200.00 Annually. \u2022 Actual base compensation within the identified range will vary based on factors relevant to the position. \u2022 Bonus Potential: An incentive pay program offers payouts based on company perform",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "General Motors",
-      "title": "Senior Software Engineer",
-      "location": "San Francisco, California, United States of America",
-      "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/San-Francisco-California-United-States-of-America/Senior-Software-Engineer_JR-202613776",
       "level_hint": "Senior/Staff"
     },
     {
@@ -28671,7 +28257,7 @@
       "title": "Software Engineer-Junior",
       "location": "International",
       "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/International/Software-Engineer-Junior_RQ220310-2",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 161500,
@@ -28934,19 +28520,6 @@
       "level_hint": "Mid (unspecified level)"
     },
     {
-      "low": 162037,
-      "high": 219227,
-      "raw_match": "$162,037 - $219,227",
-      "context": "s Cutting-edge technology you can learn from Rest and recharge with paid vacation and holidays #OpportunityOwned #GDITCareers #WeAreGDIT #JET #GDITEnhanced2026 #VA_2026Alumni The likely salary range for this position is $162,037 - $219,227. This is not, however, a guarantee of compensation or salary. Rather, salary will be set based on experience, geographic location and possibly contractual requirements and could fall outside of this range. Scheduled Wee",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
-      "title": "Software Engineer - TS/SCI with Polygraph",
-      "location": "USA VA Chantilly",
-      "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/USA-VA-Chantilly/Software-Engineer---TS-SCI-with-Polygraph_RQ222971-1",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 186542,
       "high": 252379,
       "raw_match": "$186,542 - $252,379",
@@ -29126,7 +28699,7 @@
       "title": "Software Developer II",
       "location": "Kanata 307 Legget Dr.",
       "url": "https://warnerbros.wd5.myworkdayjobs.com/global/job/Kanata-307-Legget-Dr/Software-Developer-II_R000105084",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 109700,
@@ -29194,19 +28767,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 100000,
-      "high": 100000,
-      "raw_match": "$100,000",
-      "context": "not limited to external market data, internal equity, location, skill set, experience, and/or performance. Base pay is just one component of Warner Bros. Discovery\u2019s total compensation package for employees. Pay Range: $100,000.00 - $134,500.00 salary per year. Other rewards may include annual bonuses, short- and long-term incentives, and program-specific awards. In addition, Warner Bros. Discovery provides a variety of benefits to employees,",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Warner Bros Discovery",
-      "title": "Senior Software Developer",
-      "location": "Kanata 307 Legget Dr.",
-      "url": "https://warnerbros.wd5.myworkdayjobs.com/global/job/Kanata-307-Legget-Dr/Senior-Software-Developer_R000105661",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 105000,
       "high": 105000,
       "raw_match": "$105,000",
@@ -29233,19 +28793,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 105492,
-      "high": 105492,
-      "raw_match": "$105,492",
-      "context": "not limited to external market data, internal equity, location, skill set, experience, and/or performance. Base pay is just one component of Warner Bros. Discovery\u2019s total compensation package for employees. Pay Range: $105,492.00 - $195,913.00 salary per year. Other rewards may include annual bonuses, short- and long-term incentives, and program-specific awards. In addition, Warner Bros. Discovery provides a variety of benefits to employees,",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Warner Bros Discovery",
-      "title": "Senior Software Engineer (Roku)",
-      "location": null,
-      "url": "https://warnerbros.wd5.myworkdayjobs.com/global/job/Senior-Software-Engineer--Roku-_R000105086",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 105000,
       "high": 105000,
       "raw_match": "$105,000",
@@ -29269,7 +28816,7 @@
       "title": "Software Developer in Test II",
       "location": "Kanata 307 Legget Dr.",
       "url": "https://warnerbros.wd5.myworkdayjobs.com/global/job/Kanata-307-Legget-Dr/Software-Developer-in-Test-II_R000105228",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 140100,
@@ -29373,7 +28920,7 @@
       "title": "Software Engineer II",
       "location": "3 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Bristol-CT-USA/Software-Engineer-II_10148069",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 155700,
@@ -29438,7 +28985,7 @@
       "title": "Product Software Engineer II",
       "location": "3 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Bristol-CT-USA/Product-Software-Engineer-II_10152986",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 120300,
@@ -29451,7 +28998,7 @@
       "title": "Product Software Engineer II",
       "location": "3 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Bristol-CT-USA/Product-Software-Engineer-II_10152986",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 97500,
@@ -29464,7 +29011,7 @@
       "title": "Product Software Engineer I",
       "location": "Bristol, CT, USA",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Bristol-CT-USA/Product-Software-Engineer-I_10155293",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 141900,
@@ -29594,7 +29141,7 @@
       "title": "Product Software Engineer II",
       "location": "Bristol, CT, USA",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Bristol-CT-USA/Product-Software-Engineer-II_10155142",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 148300,
@@ -29620,7 +29167,7 @@
       "title": "Product Software Engineer II",
       "location": "2 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Product-Software-Engineer-II_10154688-2",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 141900,
@@ -29675,19 +29222,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 141900,
-      "high": 190300,
-      "raw_match": "$141,900 to $190,300",
-      "context": "Proven ability to quickly ramp up on new domains, technologies, and evolving industry standards. #DISNEYTECH The hiring range for this position in Seattle, WA is $148,700 to $199,400 per year and in Santa Monica, CA is $141,900 to $190,300 per year.The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Senior Software Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Seattle-WA-USA/Senior-Software-Engineer_10149873-2",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 148700,
       "high": 199400,
       "raw_match": "$148,700 - $199,400",
@@ -29698,19 +29232,6 @@
       "title": "Sr Product Software Engineer(JavaScript/Typescript)",
       "location": "2 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Sr-Product-Software-Engineer-JavaScript-Typescript-_10154370",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 141900,
-      "high": 190300,
-      "raw_match": "$141,900 - $190,300",
-      "context": "rience with unit testing and related patterns. Experience with JavaScript client- and server-side development. Experience with DevOps, gulp scripts, Jenkins and AWS. The hiring range for this position in Glendale, CA is $141,900 - $190,300 and NYC $148,700 - $199,400. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among oth",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Sr Product Software Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Sr-Product-Software-Engineer_10154568",
       "level_hint": "Senior/Staff"
     },
     {
@@ -29841,7 +29362,7 @@
       "title": "Product Software Engineer II - Frontend",
       "location": "2 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Santa-Monica-CA-USA/Product-Software-Engineer-II---Frontend_10153779-2",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 117500,
@@ -29854,7 +29375,7 @@
       "title": "Product Software Engineer II - Frontend",
       "location": "2 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Santa-Monica-CA-USA/Product-Software-Engineer-II---Frontend_10153779-2",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123000,
@@ -29867,7 +29388,7 @@
       "title": "Software Engineer II - Infrastructure",
       "location": "3 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Software-Engineer-II---Infrastructure_10142532",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 117500,
@@ -29880,7 +29401,7 @@
       "title": "Software Engineer II - Infrastructure",
       "location": "3 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Software-Engineer-II---Infrastructure_10142532",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 148300,
@@ -30065,45 +29586,6 @@
       "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
-      "low": 114900,
-      "high": 154100,
-      "raw_match": "$114,900 - $154,100",
-      "context": "pipelines. Experience working with vendor teams to deliver high quality results Strong curiosity about how Disney delivers the Magic and a desire to be a part of it The hiring range for this position in Glendale, CA is $114,900 - $154,100 per year, in San Francisco, CA is $125,800 - $168,700 per year, in Seattle, WA is $120,300 - $161,300 per year. The base pay actually offered will take into account internal equity and also may vary depending on the can",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Software Engineer II",
-      "location": "3 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Software-Engineer-II_10143792",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125800,
-      "high": 168700,
-      "raw_match": "$125,800 - $168,700",
-      "context": "liver high quality results Strong curiosity about how Disney delivers the Magic and a desire to be a part of it The hiring range for this position in Glendale, CA is $114,900 - $154,100 per year, in San Francisco, CA is $125,800 - $168,700 per year, in Seattle, WA is $120,300 - $161,300 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, ski",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Software Engineer II",
-      "location": "3 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Software-Engineer-II_10143792",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 120300,
-      "high": 161300,
-      "raw_match": "$120,300 - $161,300",
-      "context": "t how Disney delivers the Magic and a desire to be a part of it The hiring range for this position in Glendale, CA is $114,900 - $154,100 per year, in San Francisco, CA is $125,800 - $168,700 per year, in Seattle, WA is $120,300 - $161,300 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Software Engineer II",
-      "location": "3 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Software-Engineer-II_10143792",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 304900,
       "high": 408900,
       "raw_match": "$304,900 to $408,900",
@@ -30286,32 +29768,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 117500,
-      "high": 157500,
-      "raw_match": "$117,500 to $157,500",
-      "context": "nd fine-tuning foundation models (GPT-4, Claude). Experience implementing production-grade systems at scale within a fast-paced, distributed environment. #DISNEYTECH The hiring range for this position in Glendale, CA is $117,500 to $157,500 per year and in New York, NY and Seattle, WA is $123,000 to $165,000 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-r",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Software Engineer II",
-      "location": "3 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Software-Engineer-II_10148553",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 123000,
-      "high": 165000,
-      "raw_match": "$123,000 to $165,000",
-      "context": "ting production-grade systems at scale within a fast-paced, distributed environment. #DISNEYTECH The hiring range for this position in Glendale, CA is $117,500 to $157,500 per year and in New York, NY and Seattle, WA is $123,000 to $165,000 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Software Engineer II",
-      "location": "3 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Software-Engineer-II_10148553",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 120300,
       "high": 161300,
       "raw_match": "$120,300 - $161,300",
@@ -30322,7 +29778,7 @@
       "title": "Software Engineer II - Ad Platform, Salesforce CRM Analytics",
       "location": "2 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Software-Engineer-II---Ad-Platform--Salesforce-CRM-Analytics_10151595-2",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 141900,
@@ -30426,7 +29882,7 @@
       "title": "Software Engineer II - Ad Platform, Integrating Engineering",
       "location": "New York, NY, USA",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Software-Engineer-II---Ad-Platform--Integrating-Engineering_10151597",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 148300,
@@ -30442,58 +29898,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 155400,
-      "high": 208400,
-      "raw_match": "$155,400 - $208,400",
-      "context": "an equal opportunity employer - Women/Cultural minority/Veteran/Disability/Sexual Orientation/Gender Identity. Our goal is to create an inclusive workplace for all. The hiring range for this position in San Francisco is $155,400 - $208,400 per year and in Seattle is $145,400 - $195,000 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skil",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Sr Software Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/San-Francisco-CA-USA/Sr-Software-Engineer_10149629",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 145400,
-      "high": 195000,
-      "raw_match": "$145,400 - $195,000",
-      "context": "minority/Veteran/Disability/Sexual Orientation/Gender Identity. Our goal is to create an inclusive workplace for all. The hiring range for this position in San Francisco is $155,400 - $208,400 per year and in Seattle is $145,400 - $195,000 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Sr Software Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/San-Francisco-CA-USA/Sr-Software-Engineer_10149629",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 197400,
-      "high": 264700,
-      "raw_match": "$197,400 to $264,700",
-      "context": "and platforms. This includes product engineering, media engineering, quality assurance, engineering behind personalization, commerce, lifecycle, and identity. #Disneytech The hiring range for this position in NY, NY is $197,400 to $264,700 per year and in Santa Monica, CA is $188,400 to $252,600 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowl",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Principal Software Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Principal-Software-Engineer_10145230",
-      "level_hint": "Principal/Director+ (Manager/VP)"
-    },
-    {
-      "low": 188400,
-      "high": 252600,
-      "raw_match": "$188,400 to $252,600",
-      "context": "engineering, quality assurance, engineering behind personalization, commerce, lifecycle, and identity. #Disneytech The hiring range for this position in NY, NY is $197,400 to $264,700 per year and in Santa Monica, CA is $188,400 to $252,600 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Principal Software Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Principal-Software-Engineer_10145230",
-      "level_hint": "Principal/Director+ (Manager/VP)"
-    },
-    {
       "low": 123000,
       "high": 165000,
       "raw_match": "$123,000 - $165,000",
@@ -30505,6 +29909,19 @@
       "location": "New York, NY, USA",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/New-York-NY-USA/Software-Engineer-II---Data-Ingestion---Data-Store_10141160-1",
       "level_hint": "Mid (unspecified level)"
+    },
+    {
+      "low": 117500,
+      "high": 157500,
+      "raw_match": "$117,500 - $157,500",
+      "context": "h cloud-based technologies such as AWS EC2, Lambda, SQS, and S3. Required Education BS Computer Science or related technical discipline or its equivalent #DisneyTech The hiring range for this position in Glendale, CA is $117,500 - $157,500. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus and/or l",
+      "currency": "USD",
+      "is_ote": false,
+      "company": "Disney",
+      "title": "Software Engineer II",
+      "location": "Glendale, CA, USA",
+      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Software-Engineer-II_10150836",
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 128000,
@@ -30533,19 +29950,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 128000,
-      "high": 204000,
-      "raw_match": "$128,000- 204,000",
-      "context": "ava bridging. Interest in building solutions that support our engaged Zwift Community of cyclists, runners, and fitness enthusiasts. For All US Based Full-Time Positions: The base salary for this position ranges between $128,000- 204,000. The base salary will be based on a number of factors including the role offered, the individual's job-related knowledge, skills, qualifications, and geographic location. In addition to base salary, Zwift is proud to of",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Zwift",
-      "title": "Senior Software Engineer 2, Game Systems",
-      "location": "Remote - eligible US locations",
-      "url": "https://zwift.com/careers?gh_jid=8536515002",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 173500,
       "high": 213100,
       "raw_match": "$173,500 &mdash; $213,100",
@@ -30569,7 +29973,7 @@
       "title": "Software Engineer II, Backend",
       "location": "New York, NY",
       "url": "https://careers.duolingo.com/jobs/8628275002?gh_jid=8628275002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 160000,
@@ -31752,7 +31156,7 @@
       "title": "Software Engineer II ",
       "location": "Colorado Springs, Colorado",
       "url": "https://job-boards.greenhouse.io/trace3/jobs/7558411",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 175000,
@@ -32363,7 +31767,7 @@
       "title": "Software Engineer I - Device Control ",
       "location": "Boston, MA",
       "url": "https://job-boards.greenhouse.io/simplisafe/jobs/8049515",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 93800,
@@ -32376,7 +31780,7 @@
       "title": "Software Engineer II \u2013 Video Platform",
       "location": "Boston, MA",
       "url": "https://job-boards.greenhouse.io/simplisafe/jobs/7663400",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 75100,
@@ -32389,7 +31793,7 @@
       "title": "Software Engineer I - Video Platform",
       "location": "Boston, MA",
       "url": "https://job-boards.greenhouse.io/simplisafe/jobs/8049510",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 146600,
@@ -32766,7 +32170,7 @@
       "title": "Software Engineer II",
       "location": "Atlanta, Georgia; Austin, Texas; Boston, Massachusetts; Chicago, Illinois; Hybrid - Denver; Hybrid - New York; Hybrid - San Francisco",
       "url": "https://job-boards.greenhouse.io/iterable/jobs/7783095",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 244000,
@@ -32854,19 +32258,6 @@
       "currency": "USD",
       "is_ote": true,
       "company": "Klaviyo",
-      "title": "Senior Software Engineer, Customer Agent",
-      "location": "Boston, MA",
-      "url": "https://www.klaviyo.com/careers/jobs/7780009003?gh_jid=7780009003",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 148000,
-      "high": 222000,
-      "raw_match": "$148,000 &mdash; $222,000",
-      "context": "are, and wellbeing benefits based on eligibility.&nbsp; Your recruiter can provide more details about the specific salary/OTE range for your preferred location during the hiring process. Base Pay Range For US Locations: $148,000 &mdash; $222,000 USD This role may require up to 10% travel for purposes such as new hire onboarding, client or partner work if applicable, team meetings, and industry events. Travel is coordinated in advance. Get to Know Klaviyo We\u2019re",
-      "currency": "USD",
-      "is_ote": true,
-      "company": "Klaviyo",
       "title": "Senior Software Engineer - Developer Infrastructure",
       "location": "Boston, MA",
       "url": "https://www.klaviyo.com/careers/jobs/7711217003?gh_jid=7711217003",
@@ -32935,7 +32326,7 @@
       "title": "Software Engineer II - Amplify Demos",
       "location": "Boston, MA",
       "url": "https://www.klaviyo.com/careers/jobs/7694223003?gh_jid=7694223003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 116000,
@@ -32948,7 +32339,7 @@
       "title": "Software Engineer II - Growth",
       "location": "Boston, MA",
       "url": "https://www.klaviyo.com/careers/jobs/7659484003?gh_jid=7659484003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 116000,
@@ -32961,7 +32352,7 @@
       "title": "Software Engineer II - Identity & Access Management",
       "location": "Boston, MA",
       "url": "https://www.klaviyo.com/careers/jobs/7660502003?gh_jid=7660502003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 148000,
@@ -33065,7 +32456,7 @@
       "title": "Software Engineer II, Customer Lifecycle Engineering",
       "location": "United States",
       "url": "https://job-boards.greenhouse.io/attentive/jobs/4251552009",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 180000,
@@ -33668,19 +33059,6 @@
     {
       "low": 160000,
       "high": 200000,
-      "raw_match": "$160,000 \u2013 $200,000",
-      "context": "perience Infrastructure-as-code experience (Terraform, Pulumi) Experience at a company processing high transaction volumes where correctness and reliability are non-negotiable The annual US salary range for this role is $160,000 \u2013 $200,000 plus equity. This salary range is inclusive of several career levels at Lithic and will be narrowed during the interview process based on the candidate's experience and qualifications. This is a remote position. However",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Lithic",
-      "title": "Senior Software Engineer, Data Platform",
-      "location": "Remote ",
-      "url": "https://job-boards.greenhouse.io/lithic/jobs/5833301004",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 160000,
-      "high": 200000,
       "raw_match": "$160,000 - $200,000",
       "context": "ence building distributed systems : You have the technical judgment required to design and scale high-stakes infrastructure where reliability and correctness are foundational. The annual US salary range for this role is $160,000 - $200,000 plus equity. This salary range may be inclusive of several career levels at Lithic and will be narrowed during the interview process based on the candidate\u2019s experience and qualifications. This is a remote position. How",
       "currency": "USD",
@@ -34027,7 +33405,7 @@
       "title": "Associate Application Engineer",
       "location": "McLean, Virginia",
       "url": "https://job-boards.greenhouse.io/appian/jobs/7951022",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 200000,
@@ -34040,7 +33418,7 @@
       "title": "Distinguished Software Engineer",
       "location": "McLean, Virginia",
       "url": "https://job-boards.greenhouse.io/appian/jobs/7560309",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
       "low": 150000,
@@ -34287,45 +33665,6 @@
       "title": "Software Engineer L3",
       "location": "Remote - US",
       "url": "https://job-boards.greenhouse.io/twilio/jobs/8009057",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 141520,
-      "high": 176900,
-      "raw_match": "$141,520 - 176,900",
-      "context": "for this role is not restricted to the locations listed above. The estimated pay ranges for this role are as follows: Based in Colorado, Hawaii, Illinois, Maryland, Massachusetts, Minnesota, Vermont or Washington D.C. : $141,520 - 176,900. Based in New York, New Jersey, Washington State, or California (outside of the San Francisco Bay area): $149,840 - 187,300. Based in the San Francisco Bay area, California: $166,400 - 208,000. This role may be eligible",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Twilio",
-      "title": "Software Engineer (L3)",
-      "location": "Remote - US",
-      "url": "https://job-boards.greenhouse.io/twilio/jobs/7926883",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 149840,
-      "high": 187300,
-      "raw_match": "$149,840 - 187,300",
-      "context": "in Colorado, Hawaii, Illinois, Maryland, Massachusetts, Minnesota, Vermont or Washington D.C. : $141,520 - 176,900. Based in New York, New Jersey, Washington State, or California (outside of the San Francisco Bay area): $149,840 - 187,300. Based in the San Francisco Bay area, California: $166,400 - 208,000. This role may be eligible to participate in Twilio\u2019s equity plan and corporate bonus plan. All roles are generally eligible for the following benefit",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Twilio",
-      "title": "Software Engineer (L3)",
-      "location": "Remote - US",
-      "url": "https://job-boards.greenhouse.io/twilio/jobs/7926883",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 166400,
-      "high": 208000,
-      "raw_match": "$166,400 - 208,000",
-      "context": "rmont or Washington D.C. : $141,520 - 176,900. Based in New York, New Jersey, Washington State, or California (outside of the San Francisco Bay area): $149,840 - 187,300. Based in the San Francisco Bay area, California: $166,400 - 208,000. This role may be eligible to participate in Twilio\u2019s equity plan and corporate bonus plan. All roles are generally eligible for the following benefits: health care insurance, 401(k) retirement account, paid sick time,",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Twilio",
-      "title": "Software Engineer (L3)",
-      "location": "Remote - US",
-      "url": "https://job-boards.greenhouse.io/twilio/jobs/7926883",
       "level_hint": "Senior/Staff"
     },
     {
@@ -35119,7 +34458,7 @@
       "title": "Software Engineer I, Canada and Emerging Markets (Fullstack)",
       "location": "Toronto, Canada",
       "url": "https://careers.toasttab.com/jobs?gh_jid=8046879",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 175000,
@@ -35523,227 +34862,6 @@
       "location": "San Francisco, CA \u2022 New York, NY \u2022 United States",
       "url": "https://boards.greenhouse.io/figma/jobs/6102379004?gh_jid=6102379004",
       "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000- $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000- $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Backend, Hardware Accelerate)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/03a9d3ab-8482-4f29-9660-483e7511c460",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 105000,
-      "high": 145000,
-      "raw_match": "$105,000 - 145,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $105,000 - 145,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer I (Backend)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/0623a9e9-d7bb-4ee5-8100-51c68df81133",
-      "level_hint": "Entry/Associate"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Software Engineer (Backend, Business Systems)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/0ea28cc0-86e6-42c1-bf3d-11224bef988c",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 105000,
-      "high": 145000,
-      "raw_match": "$105,000 - 145,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $105,000 - 145,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer I (Quality)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/1c4d08ad-744d-47fb-b8f2-2adb7c242119",
-      "level_hint": "Entry/Associate"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 - $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Backend, Business Systems)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/1f132c91-c960-4d5d-9c9a-fc6d85fe0ed2",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 - $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Fullstack, Business Systems)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/29931bc1-508f-4b41-ad6a-aab97e4d8958",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 - $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Backend, Healthcare)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/35982efd-6732-4bd2-befa-de083c023c01",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 170000,
-      "high": 230000,
-      "raw_match": "$170,000-$230,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $170,000-$230,000 Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to th",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Staff Software Engineer, Machine Learning (Health)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/5eb0f384-8ac5-436d-b22c-b10ae55b6034",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Software Engineer (Backend, Core & Ecosystem)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/6dcf5664-da9c-4c47-a651-80b4b1a011cd",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Software Engineer (Quality)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/89b760db-85eb-48f5-b176-a02b331958c0",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 - $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Backend, Platform)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/8cd2eba0-68f0-4998-bcb0-609b765df9ad",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 - $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Full Stack, Platform)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/9da0e8f1-9337-4544-af84-4978ca219624",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000- $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000- $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Backend, AI Experiences & AI Platform)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/a7a80da5-5fa5-44fb-8a7c-2ea141cabda8",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Software Engineer (Fullstack, AI Platform)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/b4438111-572f-48d1-b6d2-aa42abfe20bb",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 - $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Frontend, AI Platform)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/b9dc032d-3fd9-4da4-ba2d-175d17bfaf80",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 215000,
-      "raw_match": "$125,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineer II (Backend, Enterprise)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/cdf31e5e-d62a-4a20-9e11-2675ce645d5d",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Software Engineer (Frontend, Growth)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/fe9d39c9-7c6f-489b-9b37-937f9f860545",
-      "level_hint": "Senior/Staff"
     },
     {
       "low": 140000,

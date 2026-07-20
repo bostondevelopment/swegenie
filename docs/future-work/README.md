@@ -18,3 +18,9 @@ problem, the exact files involved, and what "done" looks like.
 None of these are scheduled or cron'd. Pick them up manually, one at a time, whenever there's
 room for them — same as the rest of this repo's data-refresh work
 (see [`docs/ADD_ARCHETYPE.md`](../ADD_ARCHETYPE.md) Stage 4f for the pattern).
+
+## Completed
+
+| Item | Shipped | Notes |
+|---|---|---|
+| [entry-level-l1-l2-tiers](archive/entry-level-l1-l2-tiers/README.md) | 2026-07-19 | Added `L1`/`L2` tiers end-to-end (taxonomy, extraction, ~340-cell gapfill research, UI). See [`archive/entry-level-l1-l2-tiers/LESSONS-LEARNED.md`](archive/entry-level-l1-l2-tiers/LESSONS-LEARNED.md) before starting [staff-bucket-leveling-split](staff-bucket-leveling-split/README.md) — same class of problem at the other end of the ladder, and several mistakes are avoidable the second time. |

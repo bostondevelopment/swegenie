@@ -10,7 +10,7 @@ export type Tier =
   | 'growth-stage-private'
   | 'early-stage';
 
-export type Level = 'L3' | 'L4' | 'L5' | 'Staff';
+export type Level = 'L1' | 'L2' | 'L3' | 'L4' | 'L5' | 'Staff';
 
 export type Confidence = 'high' | 'medium' | 'low';
 
@@ -33,8 +33,8 @@ export interface EquityBand {
 export interface CompCell {
   confidence: Confidence;
   base: PercentileBand;
-  bonus: PercentileBand;
-  equity: EquityBand;
+  bonus: PercentileBand | null;
+  equity: EquityBand | null;
 }
 
 export type TierData = Record<Level, CompCell>;

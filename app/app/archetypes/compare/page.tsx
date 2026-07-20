@@ -97,7 +97,7 @@ export default function CompareArchetypesPage() {
           <ArchetypeCompareStage
             rows={rows}
             defaultTier="high-growth-public"
-            defaultLevel="Staff"
+            defaultLevel="L3"
             daySummaryByArchetype={daySummaryByArchetype}
             keyQualitiesByArchetype={keyQualitiesByArchetype}
             jobExamplesByArchetype={jobExamplesByArchetype}

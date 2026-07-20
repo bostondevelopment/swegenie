@@ -1,87 +1,87 @@
 {
   "consulting-engineer-professional-services": {
-    "postingCount": 202,
-    "sourceCompanyCount": 20,
-    "typical": 143000
+    "postingCount": 230,
+    "sourceCompanyCount": 13,
+    "typical": 137124
   },
   "customer-support-engineer": {
-    "postingCount": 319,
-    "sourceCompanyCount": 41,
-    "typical": 112000
+    "postingCount": 305,
+    "sourceCompanyCount": 32,
+    "typical": 113500
   },
   "customer-support-solutions-engineer": {
-    "postingCount": 197,
-    "sourceCompanyCount": 23,
-    "typical": 147000
+    "postingCount": 192,
+    "sourceCompanyCount": 20,
+    "typical": 147500
   },
   "data-engineer": {
-    "postingCount": 525,
-    "sourceCompanyCount": 86,
-    "typical": 184050
+    "postingCount": 495,
+    "sourceCompanyCount": 85,
+    "typical": 187250
   },
   "developer-relations-advocacy": {
-    "postingCount": 87,
-    "sourceCompanyCount": 19,
-    "typical": 190000
+    "postingCount": 85,
+    "sourceCompanyCount": 14,
+    "typical": 187500
   },
   "embedded-iot-engineer": {
-    "postingCount": 148,
-    "sourceCompanyCount": 42,
-    "typical": 195000
+    "postingCount": 140,
+    "sourceCompanyCount": 33,
+    "typical": 198500
   },
   "forward-deployed-engineer": {
-    "postingCount": 424,
-    "sourceCompanyCount": 26,
-    "typical": 190000
+    "postingCount": 413,
+    "sourceCompanyCount": 27,
+    "typical": 185375
   },
   "ml-engineer": {
-    "postingCount": 752,
+    "postingCount": 722,
     "sourceCompanyCount": 112,
-    "typical": 220000
+    "typical": 218940
   },
   "mobile-engineer": {
-    "postingCount": 213,
-    "sourceCompanyCount": 26,
-    "typical": 195000
+    "postingCount": 202,
+    "sourceCompanyCount": 21,
+    "typical": 180500
   },
   "platform-infrastructure-engineer": {
-    "postingCount": 414,
-    "sourceCompanyCount": 74,
-    "typical": 172000
+    "postingCount": 400,
+    "sourceCompanyCount": 75,
+    "typical": 171450
   },
   "product-full-stack-software-engineer": {
-    "postingCount": 6204,
-    "sourceCompanyCount": 249,
-    "typical": 195000
+    "postingCount": 5820,
+    "sourceCompanyCount": 250,
+    "typical": 195500
   },
   "sales-engineer-pre-sales": {
     "postingCount": 372,
-    "sourceCompanyCount": 29,
-    "typical": 156000
+    "sourceCompanyCount": 28,
+    "typical": 158750
   },
   "security-engineer": {
-    "postingCount": 586,
-    "sourceCompanyCount": 91,
-    "typical": 195000
+    "postingCount": 574,
+    "sourceCompanyCount": 79,
+    "typical": 197075
   },
   "solutions-architect-consulting": {
     "postingCount": 103,
-    "sourceCompanyCount": 18,
-    "typical": 179000
+    "sourceCompanyCount": 10,
+    "typical": 177066
   },
   "solutions-architect-vendor-side": {
-    "postingCount": 57,
-    "sourceCompanyCount": 13,
-    "typical": 192000
+    "postingCount": 56,
+    "sourceCompanyCount": 9,
+    "typical": 176000
   },
   "sre-production-engineer": {
-    "postingCount": 316,
-    "sourceCompanyCount": 45,
+    "postingCount": 303,
+    "sourceCompanyCount": 42,
     "typical": 193000
   },
   "technical-product-manager": {
-    "postingCount": 63,
-    "sourceCompanyCount": 22,
-    "typical": 183000
+    "postingCount": 61,
+    "sourceCompanyCount": 14,
+    "typical": 155950
   }
 }

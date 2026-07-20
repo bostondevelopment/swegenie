@@ -9,25 +9,53 @@
   },
   "grid": {
     "ai-labs": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "faang-mag7": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "high-growth-public": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 83000,
+        "high": 145000,
+        "median": 114000,
+        "companies": [
+          "CoreWeave"
+        ],
+        "points": [
+          {
+            "low": 83000,
+            "high": 145000,
+            "raw_match": "$83,000 to $145,000",
+            "context": "within the organization are constantly expanding. You will be surrounded by some of the best talent in the industry, who will want to learn from you, too. Come join us!&nbsp;&nbsp; The base salary range for this role is $83,000 to $145,000. The starting salary will be determined based on job-related knowledge, skills, experience, and market location. We strive for both market alignment and internal equity when determining compensation. In addition to base",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "CoreWeave",
+            "title": "Technical Support Engineer II (Bare Metal)",
+            "location": "Livingston, NJ / New York, NY / San Francisco, CA / Sunnyvale, CA / Bellevue, WA",
+            "url": "https://coreweave.com/careers/job?4560350006&board=coreweave&gh_jid=4560350006",
+            "level_hint": "Junior/Associate",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
       "Mid (unspecified level)": {
-        "count": 17,
+        "count": 16,
         "companyCount": 11,
         "low": 54000,
         "high": 264000,
-        "median": 100000,
+        "median": 98765,
         "companies": [
           "Adyen",
           "Axon",
@@ -137,20 +165,6 @@
             "title": "Manager, Technical Support Engineer",
             "location": "Livingston, NJ / New York, NY / Sunnyvale, CA / San Francisco, CA / Bellevue, WA",
             "url": "https://coreweave.com/careers/job?4696038006&board=coreweave&gh_jid=4696038006",
-            "level_hint": "Mid (unspecified level)",
-            "tier": "high-growth-public"
-          },
-          {
-            "low": 83000,
-            "high": 145000,
-            "raw_match": "$83,000 to $145,000",
-            "context": "within the organization are constantly expanding. You will be surrounded by some of the best talent in the industry, who will want to learn from you, too. Come join us!&nbsp;&nbsp; The base salary range for this role is $83,000 to $145,000. The starting salary will be determined based on job-related knowledge, skills, experience, and market location. We strive for both market alignment and internal equity when determining compensation. In addition to base",
-            "currency": "USD",
-            "is_ote": false,
-            "company": "CoreWeave",
-            "title": "Technical Support Engineer II (Bare Metal)",
-            "location": "Livingston, NJ / New York, NY / San Francisco, CA / Sunnyvale, CA / Bellevue, WA",
-            "url": "https://coreweave.com/careers/job?4560350006&board=coreweave&gh_jid=4560350006",
             "level_hint": "Mid (unspecified level)",
             "tier": "high-growth-public"
           },
@@ -440,15 +454,17 @@
       }
     },
     "growth-stage-private": {
-      "Entry/Associate": {
-        "count": 2,
-        "companyCount": 2,
+      "Entry (New Grad)": null,
+      "Junior/Associate": {
+        "count": 3,
+        "companyCount": 3,
         "low": 72000,
         "high": 382500,
-        "median": 227250,
+        "median": 115000,
         "companies": [
           "Dragos",
-          "Drata"
+          "Drata",
+          "Federato"
         ],
         "points": [
           {
@@ -462,7 +478,7 @@
             "title": "Associate Technical Support Engineer - Mexico",
             "location": "Remote - Mexico",
             "url": "https://jobs.ashbyhq.com/drata/7d505347-c5fb-4351-b57d-75a9ea654fcf",
-            "level_hint": "Entry/Associate",
+            "level_hint": "Junior/Associate",
             "tier": "growth-stage-private"
           },
           {
@@ -476,22 +492,35 @@
             "title": "Associate Technical Support Engineer",
             "location": "United States",
             "url": "https://job-boards.greenhouse.io/dragos/jobs/5285559008",
-            "level_hint": "Entry/Associate",
+            "level_hint": "Junior/Associate",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 100000,
+            "high": 130000,
+            "raw_match": "$100,000 - $130,000",
+            "context": "sues. Familiarity with Python or JavaScript for basic scripting, data checks, and assisting in reproducing issues. Not required to be advanced, but must be comfortable learning and applying scripting concepts as needed. $100,000 - $130,000 a year Final offer amounts are determined by multiple factors including candidate location, experience and expertise and may vary from the amounts listed above. Total compensation package does include stock options, ben",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Federato",
+            "title": " Technical Support Engineer II",
+            "location": "Remote",
+            "url": "https://job-boards.greenhouse.io/federato/jobs/5271051008",
+            "level_hint": "Junior/Associate",
             "tier": "growth-stage-private"
           }
         ]
       },
       "Mid (unspecified level)": {
-        "count": 9,
-        "companyCount": 9,
+        "count": 8,
+        "companyCount": 8,
         "low": 69615,
         "high": 200000,
-        "median": 105000,
+        "median": 101250,
         "companies": [
           "Anduril Industries",
           "Cresta",
           "Expel",
-          "Federato",
           "Intercom",
           "LogicMonitor",
           "New Relic",
@@ -580,20 +609,6 @@
             "title": "Technical Support Engineer",
             "location": "Chicago, Illinois",
             "url": "https://job-boards.greenhouse.io/intercom/jobs/7122157",
-            "level_hint": "Mid (unspecified level)",
-            "tier": "growth-stage-private"
-          },
-          {
-            "low": 100000,
-            "high": 130000,
-            "raw_match": "$100,000 - $130,000",
-            "context": "sues. Familiarity with Python or JavaScript for basic scripting, data checks, and assisting in reproducing issues. Not required to be advanced, but must be comfortable learning and applying scripting concepts as needed. $100,000 - $130,000 a year Final offer amounts are determined by multiple factors including candidate location, experience and expertise and may vary from the amounts listed above. Total compensation package does include stock options, ben",
-            "currency": "USD",
-            "is_ote": false,
-            "company": "Federato",
-            "title": " Technical Support Engineer II",
-            "location": "Remote",
-            "url": "https://job-boards.greenhouse.io/federato/jobs/5271051008",
             "level_hint": "Mid (unspecified level)",
             "tier": "growth-stage-private"
           },
@@ -715,7 +730,8 @@
       "Principal/Director+ (Manager/VP)": null
     },
     "early-stage": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null

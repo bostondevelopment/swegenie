@@ -1,39 +1,47 @@
 # Management as an orthogonal modifier, not a standalone archetype
 
-## Problem
+**Status update (2026-07-17): the immediate-inconsistency fix described below as "decided" has
+since shipped.** `engineering-management` was removed as a standalone archetype in commit
+`b907fcf` (2026-07-16) — `data/archetypes.json` now has 17 entries, all IC lanes, with no
+management peer. The "orthogonal modifier" idea that follows is **still open, unbuilt work** —
+nothing in this doc's "What 'done' looks like" section has been started. The "Problem" section
+below is kept in its original present tense as the historical rationale for *why* EM was removed;
+read "today" in it as "as of 2026-07-16, before the fix."
 
-Today `data/archetypes.json` has 18 entries: 17 individual-contributor (IC) career lanes
-(Product/Full-Stack, SRE, Platform, Sales Engineer, Forward Deployed Engineer, etc.) plus one
-`engineering-management` entry that behaves like an 18th peer archetype in scoring, results,
-comp tables, and the compare page.
+## Problem (as of 2026-07-16, before the fix shipped)
+
+At the time this was written, `data/archetypes.json` had 18 entries: 17 individual-contributor
+(IC) career lanes (Product/Full-Stack, SRE, Platform, Sales Engineer, Forward Deployed Engineer,
+etc.) plus one `engineering-management` entry that behaved like an 18th peer archetype in
+scoring, results, comp tables, and the compare page.
 
 `engineering-management`'s content (`content/results-copy/engineering-management.md`,
-`data/comp-structure.json`, `data/comp-by-tier.json`, `data/archetype-job-examples.json`) is
+`data/comp-structure.json`, `data/comp-by-tier.json`, `data/archetype-job-examples.json`) was
 specifically **first-line software/product engineering management** — one team of 4–10
-engineers, PR/architecture review rather than shipping, hiring, 1:1s. It says nothing about
+engineers, PR/architecture review rather than shipping, hiring, 1:1s. It said nothing about
 managing an SRE team's on-call load, a Sales Engineering team's deal support, a Support
 Engineering team's queue metrics, a DevRel team, etc. Every one of the other 17 IC lanes has
-its own real, functionally distinct management path that isn't modeled anywhere in the app.
+its own real, functionally distinct management path that wasn't modeled anywhere in the app.
 
-Sitting as a peer to all 17 IC archetypes, `engineering-management` visually implies it's *the*
-one management track available — which misrepresents the other 16 tracks' own management
+Sitting as a peer to all 17 IC archetypes, `engineering-management` visually implied it was *the*
+one management track available — which misrepresented the other 16 tracks' own management
 ladders. See conversation on 2026-07-16 for the original critique (a friend flagged this) and
 full discussion.
 
-The decided fix for the immediate inconsistency is to **remove `engineering-management` as a
-standalone archetype** (tracked separately, not in this doc — this app is scoped to "which IC
-lane fits you"). This doc is the deferred, more ambitious alternative that was considered and
-explicitly not pursued now: model "do you want to manage people" as an **orthogonal modifier**
-layered on top of whichever IC archetype the user matches, using the existing
+The decided fix for the immediate inconsistency was to **remove `engineering-management` as a
+standalone archetype** (this app is scoped to "which IC lane fits you") — done, see the status
+update above. This doc is the deferred, more ambitious alternative that was considered and
+explicitly not pursued at the time: model "do you want to manage people" as an **orthogonal
+modifier** layered on top of whichever IC archetype the user matches, using the existing
 `people_management_orientation` dimension (`data/dimensions.json`), rather than as a competing
 archetype. E.g. a Platform/Infra match with high management orientation surfaces "this track
 also leads to Platform Engineering Management" as a callout; same for SRE, Sales Engineering,
 Support Engineering, etc.
 
-This is genuinely more correct than either the current state or a flat removal, but "if done
-right" hides a large amount of net-new content and design work, not a refactor of what exists.
-A research pass (2026-07-16) mapped the full blast radius; that map is captured below so this
-can be picked up cold later.
+This is genuinely more correct than either the pre-fix state or the flat removal that actually
+shipped, but "if done right" hides a large amount of net-new content and design work, not a
+refactor of what exists. A research pass (2026-07-16) mapped the full blast radius; that map is
+captured below so this can be picked up cold later.
 
 ## Why this isn't mechanical
 

@@ -1,75 +1,75 @@
 {
   "consulting-engineer-professional-services": {
-    "totalPostingsScanned": 202,
-    "totalPointsExtracted": 42,
-    "usdBaseCount": 32,
+    "totalPostingsScanned": 230,
+    "totalPointsExtracted": 41,
+    "usdBaseCount": 31,
     "usdBaseCompanyCount": 13
   },
   "customer-support-engineer": {
-    "totalPostingsScanned": 319,
+    "totalPostingsScanned": 305,
     "totalPointsExtracted": 55,
     "usdBaseCount": 42,
     "usdBaseCompanyCount": 32
   },
   "customer-support-solutions-engineer": {
-    "totalPostingsScanned": 197,
+    "totalPostingsScanned": 192,
     "totalPointsExtracted": 60,
     "usdBaseCount": 39,
     "usdBaseCompanyCount": 20
   },
   "data-engineer": {
-    "totalPostingsScanned": 525,
-    "totalPointsExtracted": 251,
-    "usdBaseCount": 218,
-    "usdBaseCompanyCount": 86
+    "totalPostingsScanned": 495,
+    "totalPointsExtracted": 244,
+    "usdBaseCount": 211,
+    "usdBaseCompanyCount": 85
   },
   "developer-relations-advocacy": {
-    "totalPostingsScanned": 87,
+    "totalPostingsScanned": 85,
     "totalPointsExtracted": 26,
     "usdBaseCount": 22,
     "usdBaseCompanyCount": 14
   },
   "embedded-iot-engineer": {
-    "totalPostingsScanned": 148,
-    "totalPointsExtracted": 77,
-    "usdBaseCount": 72,
-    "usdBaseCompanyCount": 34
+    "totalPostingsScanned": 140,
+    "totalPointsExtracted": 76,
+    "usdBaseCount": 71,
+    "usdBaseCompanyCount": 33
   },
   "engineering-management": {
-    "totalPostingsScanned": 803,
-    "totalPointsExtracted": 358,
-    "usdBaseCount": 286,
-    "usdBaseCompanyCount": 111
+    "totalPostingsScanned": 791,
+    "totalPointsExtracted": 356,
+    "usdBaseCount": 284,
+    "usdBaseCompanyCount": 110
   },
   "forward-deployed-engineer": {
-    "totalPostingsScanned": 424,
-    "totalPointsExtracted": 98,
-    "usdBaseCount": 87,
+    "totalPostingsScanned": 413,
+    "totalPointsExtracted": 97,
+    "usdBaseCount": 86,
     "usdBaseCompanyCount": 27
   },
   "ml-engineer": {
-    "totalPostingsScanned": 752,
-    "totalPointsExtracted": 408,
-    "usdBaseCount": 336,
-    "usdBaseCompanyCount": 113
+    "totalPostingsScanned": 722,
+    "totalPointsExtracted": 401,
+    "usdBaseCount": 330,
+    "usdBaseCompanyCount": 112
   },
   "mobile-engineer": {
-    "totalPostingsScanned": 213,
-    "totalPointsExtracted": 99,
-    "usdBaseCount": 82,
-    "usdBaseCompanyCount": 22
+    "totalPostingsScanned": 202,
+    "totalPointsExtracted": 90,
+    "usdBaseCount": 73,
+    "usdBaseCompanyCount": 21
   },
   "platform-infrastructure-engineer": {
-    "totalPostingsScanned": 414,
-    "totalPointsExtracted": 156,
-    "usdBaseCount": 136,
-    "usdBaseCompanyCount": 76
+    "totalPostingsScanned": 400,
+    "totalPointsExtracted": 151,
+    "usdBaseCount": 131,
+    "usdBaseCompanyCount": 75
   },
   "product-full-stack-software-engineer": {
-    "totalPostingsScanned": 6204,
-    "totalPointsExtracted": 2741,
-    "usdBaseCount": 2243,
-    "usdBaseCompanyCount": 251
+    "totalPostingsScanned": 5820,
+    "totalPointsExtracted": 2672,
+    "usdBaseCount": 2176,
+    "usdBaseCompanyCount": 250
   },
   "sales-engineer-pre-sales": {
     "totalPostingsScanned": 372,
@@ -78,9 +78,9 @@
     "usdBaseCompanyCount": 28
   },
   "security-engineer": {
-    "totalPostingsScanned": 586,
-    "totalPointsExtracted": 316,
-    "usdBaseCount": 268,
+    "totalPostingsScanned": 574,
+    "totalPointsExtracted": 315,
+    "usdBaseCount": 267,
     "usdBaseCompanyCount": 79
   },
   "solutions-architect-consulting": {
@@ -90,19 +90,19 @@
     "usdBaseCompanyCount": 10
   },
   "solutions-architect-vendor-side": {
-    "totalPostingsScanned": 57,
-    "totalPointsExtracted": 17,
-    "usdBaseCount": 14,
+    "totalPostingsScanned": 56,
+    "totalPointsExtracted": 16,
+    "usdBaseCount": 13,
     "usdBaseCompanyCount": 9
   },
   "sre-production-engineer": {
-    "totalPostingsScanned": 316,
-    "totalPointsExtracted": 102,
-    "usdBaseCount": 85,
-    "usdBaseCompanyCount": 43
+    "totalPostingsScanned": 303,
+    "totalPointsExtracted": 101,
+    "usdBaseCount": 84,
+    "usdBaseCompanyCount": 42
   },
   "technical-product-manager": {
-    "totalPostingsScanned": 63,
+    "totalPostingsScanned": 61,
     "totalPointsExtracted": 25,
     "usdBaseCount": 20,
     "usdBaseCompanyCount": 14

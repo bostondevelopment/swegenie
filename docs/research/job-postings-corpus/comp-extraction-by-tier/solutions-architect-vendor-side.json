@@ -9,19 +9,22 @@
   },
   "grid": {
     "ai-labs": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "faang-mag7": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "high-growth-public": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": {
         "count": 5,
         "companyCount": 3,
@@ -160,7 +163,8 @@
       }
     },
     "growth-stage-private": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": {
         "count": 1,
         "companyCount": 1,
@@ -231,12 +235,13 @@
       "Principal/Director+ (Manager/VP)": null
     },
     "early-stage": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     }
   },
-  "totalUsdBasePoints": 14,
-  "unclassifiedCompanyPoints": 4
+  "totalUsdBasePoints": 13,
+  "unclassifiedCompanyPoints": 3
 }

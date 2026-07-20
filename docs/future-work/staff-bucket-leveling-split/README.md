@@ -1,22 +1,40 @@
 # The "Staff" bucket collapses 2-3 real seniority levels
 
+**Before starting this, read
+[`../archive/entry-level-l1-l2-tiers/LESSONS-LEARNED.md`](../archive/entry-level-l1-l2-tiers/LESSONS-LEARNED.md).**
+That project (shipped 2026-07-19) split a title-regex bucket at the *bottom* of the ladder —
+the exact same class of problem this doc describes at the *top* — and hit a specific, avoidable
+set of mistakes (confidence mislabeling, an underestimated gapfill scope, a missed UI consumer)
+that this doc's own plan should account for from the start rather than rediscovering.
+
 ## Problem
 
-`app/data/comp-by-tier.json` uses 4 levels per archetype/tier: `L3`, `L4`, `L5`, `Staff`. The
-mapping from real job-title seniority to these 4 buckets lives in
-`app/scripts/synthesize-comp-data.py` (`EXTRACTION_LEVEL_TO_TIER_LEVEL`):
+**Updated 2026-07-19** — `app/data/comp-by-tier.json` now uses 6 levels per archetype/tier:
+`L1`, `L2`, `L3`, `L4`, `L5`, `Staff` (the bottom two were added by the entry-level-l1-l2-tiers
+project referenced above; this doc originally described a 4-level `L3`-`Staff` scheme). The
+mapping from real job-title seniority to these 6 buckets lives in
+`app/scripts/synthesize-comp-data.py` (`EXTRACTION_LEVEL_TO_TIER_LEVEL`), currently:
 
 ```python
 EXTRACTION_LEVEL_TO_TIER_LEVEL = {
-    "Entry/Associate": "L3",
-    "Mid (unspecified level)": "L4",
-    "Senior/Staff": "L5",
+    "Entry (New Grad)": "L1",
+    "Junior/Associate": "L2",
+    "Mid (unspecified level)": "L3",
+    "Senior/Staff": "L4",
     "Principal/Director+ (Manager/VP)": "Staff",
 }
 ```
 
-The code's own comment admits this is "inferred from ascending seniority order... not from any
-existing mapping table (none exists in the repo)."
+Same structural problem as before, worth naming explicitly this time: there are 5 title-regex
+buckets and 6 tier levels, so one level always goes without direct extraction signal — currently
+`L5` (10-14yr, "staff-track"), a deliberate choice made when `L1`/`L2` were added (see the
+lessons-learned doc, item 1). **Splitting `Staff` adds a 7th level without adding a 6th
+extraction bucket**, so this same "which level goes blind" decision has to be made again — decide
+it explicitly as part of Stage 0 below, don't let it fall out of the code by accident.
+
+The code's own comment (updated alongside the `L1`/`L2` mapping) now explains this bucket/level
+mismatch directly, not just "inferred from ascending seniority order" — read it in full in
+`synthesize-comp-data.py` before starting.
 
 A research pass (2026-07-13) checked this against levels.fyi's per-company level ladders and
 found the top bucket is a real miscalibration, not just a naming quirk. At `faang-mag7` and
@@ -54,12 +72,19 @@ Start by drafting a recommendation, not a code change:
    elsewhere in this pipeline.
 2. If a split is approved, the touch points are: `app/data/comp-by-tier.json`'s `levels` array
    and every archetype's per-tier cell object; `EXTRACTION_LEVEL_TO_TIER_LEVEL` in
-   `synthesize-comp-data.py`; `LEVEL_RULES` in `extract-comp-signals-by-tier.py` (need a new
-   regex bucket to distinguish Staff from Principal/Distinguished titles); the `CELL_SCHEMA`
-   level enum in `app/scripts/workflows/comp-by-tier-tier-gapfill.js`; and every UI component
-   that renders the 4-level grid (`app/components/comp/ArchetypeCompareTable.tsx`,
-   `ArchetypeCompareStage.tsx`, and whatever renders `TierCompChart` — grep for `"Staff"` and
-   the `levels` array to find all of them).
+   `synthesize-comp-data.py`; `LEVEL_RULES` in *both* `extract-comp-signals-by-tier.py` and
+   `extract-comp-signals.py` (need a new regex bucket to distinguish Staff from
+   Principal/Distinguished titles — keep the two files in sync, they've drifted from each other
+   before); the `CELL_SCHEMA` level enum in `app/scripts/workflows/comp-by-tier-tier-gapfill.js`;
+   `EXPECTED_LEVELS` in `scripts/validate-comp-data.ts` (already reads `comp.levels` dynamically
+   as of the L1/L2 project, so this one should self-heal — verify it still does); and every UI
+   component that renders the level grid — critically **`app/components/comp/comp.utils.ts`'s
+   `LEVELS` constant**, not just the `Level` type union in `comp.types.ts` (the L1/L2 project
+   shipped a type-only update once and nothing rendered until `comp.utils.ts` was found and
+   fixed too — grep for `LEVELS` and `LEVEL_YOE_LABELS` across `app/components/comp/` to find
+   every consumer, then also `grep -rln` the whole `app/` tree for anything reading
+   `comp-structure.json`'s `levels[].label` field directly — `CompProgressionChart.tsx` renders
+   that field with zero relation to the `comp/` component set and was missed once already).
 3. New cells need real research, not synthetic interpolation — re-run
    `Workflow({ scriptPath: "app/scripts/workflows/comp-by-tier-tier-gapfill.js" })` (or a
    variant of it) after the schema change, since it already knows how to find real per-tier

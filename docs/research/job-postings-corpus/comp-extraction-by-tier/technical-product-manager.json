@@ -1,0 +1,242 @@
+{
+  "archetypeId": "technical-product-manager",
+  "_meta": {
+    "mode": "window",
+    "window_months": 12,
+    "waves_included": [
+      "2026-07"
+    ]
+  },
+  "grid": {
+    "ai-labs": {
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "faang-mag7": {
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "high-growth-public": {
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
+      "Mid (unspecified level)": {
+        "count": 3,
+        "companyCount": 2,
+        "low": 128470,
+        "high": 152400,
+        "median": 152400,
+        "companies": [
+          "Caterpillar",
+          "Cisco"
+        ],
+        "points": [
+          {
+            "low": 152400,
+            "high": 152400,
+            "raw_match": "$152,400",
+            "context": "ur solutions are everywhere, our impact is everywhere. We are Cisco, and our power starts with you. Message to applicants applying to work in the U.S. and/or Canada: The starting salary range posted for this position is $152,400.00 to $221,800.00 and reflects the projected salary range for new hires in this position in U.S. and/or Canada locations, not including incentive compensation*, equity, or benefits. Individual pay is determined by the c",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Cisco",
+            "title": "Technical Product Manager, Cisco IQ Platform (IAM)",
+            "location": "San Jose, California, US",
+            "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/San-Jose-California-US/Technical-Product-Manager--Cisco-IQ-Platform_2018294-1",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 152400,
+            "high": 152400,
+            "raw_match": "$152,400",
+            "context": "ur solutions are everywhere, our impact is everywhere. We are Cisco, and our power starts with you. Message to applicants applying to work in the U.S. and/or Canada: The starting salary range posted for this position is $152,400.00 to $221,800.00 and reflects the projected salary range for new hires in this position in U.S. and/or Canada locations, not including incentive compensation*, equity, or benefits. Individual pay is determined by the c",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Cisco",
+            "title": "Technical Product Manager, Cisco IQ Platform",
+            "location": "San Jose, California, US",
+            "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/San-Jose-California-US/Technical-Product-Manager--Cisco-IQ-Platform_2018299-1",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 128470,
+            "high": 128470,
+            "raw_match": "$128,470",
+            "context": "position requires the candidate to work full-time at the Mossville, IL office. Domestic relocation assistance is available for this position. Visa sponsorship is NOT available with this position. #LI Summary Pay Range: $128,470.00 - $192,710.00 Compensation and benefits offered may vary depending on multiple individualized factors, job level, market location, job-related knowledge, skills, individual performance and experience. Please note tha",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Caterpillar",
+            "title": "Technical Product Manager (Local Service)",
+            "location": "Mossville, Illinois",
+            "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers/job/Mossville-Illinois/Technical-Product-Manager--Local-Service-_R0000381114",
+            "level_hint": "Mid (unspecified level)",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
+      "Senior/Staff": {
+        "count": 5,
+        "companyCount": 4,
+        "low": 104000,
+        "high": 303900,
+        "median": 140500,
+        "companies": [
+          "GE Aerospace (General Electric successor entity)",
+          "Mastercard",
+          "Reddit",
+          "T-Mobile"
+        ],
+        "points": [
+          {
+            "low": 217000,
+            "high": 303900,
+            "raw_match": "$217,000 &mdash; $303,900",
+            "context": "nal offer amounts are determined by multiple factors including, skills, depth of work experience and relevant licenses/credentials, and may vary from the amounts listed below. The base salary range for this position is: $217,000 &mdash; $303,900 USD In select roles and locations, the interviews will be recorded, transcribed and summarized by artificial intelligence (AI). You will have the opportunity to opt out of recording, transcription and summarization prio",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Reddit",
+            "title": "Staff Technical Product Manager, Ads ML Platform ",
+            "location": "Remote - United States",
+            "url": "https://job-boards.greenhouse.io/reddit/jobs/7954001",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 104000,
+            "high": 177000,
+            "raw_match": "$104,000 - $177,000",
+            "context": "ion reimbursement; and many more. Mastercard benefits for interns generally include: 56 hours of Paid Sick and Safe Time; jury duty leave; and on-site fitness facilities in some locations. Pay Ranges O'Fallon, Missouri: $104,000 - $177,000 USD",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Mastercard",
+            "title": "Senior Product Manager, Technical",
+            "location": "O'Fallon, Missouri",
+            "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/OFallon-Missouri/Senior-Product-Manager--Technical_R-280832",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 131000,
+            "high": 131000,
+            "raw_match": "$131,000",
+            "context": "t of change weighs against the benefits and advises accordingly. Proactively learns new solutions and processes to address seemingly unanswerable problems. Additional Information: The base pay range for this position is $131,000.00 - 174,000.00 USD annually. The specific pay offered may be influenced by a variety of factors, including the candidate\u2019s experience, education, and skill set. This position is also eligible for an annual discretionar",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "GE Aerospace (General Electric successor entity)",
+            "title": "Sr Staff Technical Product Manager - Inbound Logistics",
+            "location": "Remote",
+            "url": "https://geaerospace.wd5.myworkdayjobs.com/GE_ExternalSite/job/Remote/Sr-Staff-Technical-Product-Manager---Inbound-Logistics_R5033682-2",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 131000,
+            "high": 131000,
+            "raw_match": "$131,000",
+            "context": "t of change weighs against the benefits and advises accordingly. Proactively learns new solutions and processes to address seemingly unanswerable problems. Additional Information: The base pay range for this position is $131,000.00 - 174,000.00 USD annually. The specific pay offered may be influenced by a variety of factors, including the candidate\u2019s experience, education, and skill set. This position is also eligible for an annual discretionar",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "GE Aerospace (General Electric successor entity)",
+            "title": "Sr Staff Technical Product Manager - Outbound Logistics",
+            "location": "Remote",
+            "url": "https://geaerospace.wd5.myworkdayjobs.com/GE_ExternalSite/job/Remote/Sr-Staff-Technical-Product-Manager---Outbound-Logistics_R5033686-2",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 130900,
+            "high": 236200,
+            "raw_match": "$130,900 - $236,200",
+            "context": "the United States Travel : Travel Required (Yes/No): Yes, may require up to 10% travel based on business needs. DOT Regulated : DOT Regulated Position (Yes/No): No Safety Sensitive Position (Yes/No): No Base Pay Range: $130,900 - $236,200 Corporate Bonus Target: 20% The pay range above is the general base pay range for a successful candidate in the role. The successful candidate\u2019s actual pay will be based on various factors, such as work location, qualif",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "T-Mobile",
+            "title": "Senior Technical Product Manager \u2013 T-Life App Development Team",
+            "location": "2 Locations",
+            "url": "https://tmobile.wd1.myworkdayjobs.com/External/job/Bellevue-Washington/Senior-Technical-Product-Manager---T-Life-App-Development-Team_REQ354957-1",
+            "level_hint": "Senior/Staff",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "growth-stage-private": {
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": {
+        "count": 3,
+        "companyCount": 3,
+        "low": 117000,
+        "high": 300000,
+        "median": 203494,
+        "companies": [
+          "1X Technologies",
+          "Fivetran",
+          "Invoca"
+        ],
+        "points": [
+          {
+            "low": 180884,
+            "high": 226105,
+            "raw_match": "$180,884 &mdash; $226,105",
+            "context": "demands. The compensation range is subject to change and may be modified in the future. Your recruiter can share more about the specific compensation range for your location during the hiring process. Oakland Pay Range $180,884 &mdash; $226,105.50 USD &nbsp; Perks and Benefits 100% employer-paid medical insurance * Generous paid time-off policy (PTO), plus paid sick time, inclusive parental leave policy, holidays, and volunteer days off RSU stock grants* Profe",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Fivetran",
+            "title": "Staff Technical Product Manager, Quote to Order",
+            "location": "Oakland, California, United States, AMER",
+            "url": "https://www.fivetran.com/careers/job?gh_jid=7758876003",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 250000,
+            "high": 300000,
+            "raw_match": "$250,000 - $300,000",
+            "context": "ck - because it is. They say what they mean, finish what they start, and hold themselves to a standard before anyone has to ask. We push each other to be better, and we do it with honesty and respect. COMPENSATION RANGE $250,000 - $300,000 BENEFITS - Comprehensive medical, dental, and vision coverage - Generous paid time off, company holidays, and parental leave - 401(k) plan with company match (100% on the first 3% of contributions, 50% on the next 2%) -",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "1X Technologies",
+            "title": "Lead Technical Product Manager - Data ",
+            "location": "San Carlos, CA",
+            "url": "https://jobs.ashbyhq.com/1x/87a3faf1-2f78-4022-9c3d-949b476d51bf",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          },
+          {
+            "low": 117000,
+            "high": 175000,
+            "raw_match": "$117,000-$175,000",
+            "context": "to our long-term team members, we offer a bonus after 7 years of service. Wellness Subsidy \u2013 We provide a subsidy that can be applied toward gym memberships, fitness classes, and more. Position Base Range - Salary Range $117,000-$175,000 / plus bonus potential Diversity, Equity &amp; Inclusion Invoca is committed to building an inclusive culture that values diverse perspectives and experiences. We are proud to be an equal opportunity employer #LI-Remote",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Invoca",
+            "title": "Senior Platform Technical Product Manager",
+            "location": "Remote - US (see posting for locations)",
+            "url": "https://www.invoca.com/company/job-listings/?gh_jid=8467841002",
+            "level_hint": "Senior/Staff",
+            "tier": "growth-stage-private"
+          }
+        ]
+      },
+      "Principal/Director+ (Manager/VP)": null
+    },
+    "early-stage": {
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
+      "Mid (unspecified level)": null,
+      "Senior/Staff": null,
+      "Principal/Director+ (Manager/VP)": null
+    }
+  },
+  "totalUsdBasePoints": 20,
+  "unclassifiedCompanyPoints": 9
+}

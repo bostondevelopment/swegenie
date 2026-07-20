@@ -1,4 +1,4 @@
-import type { CompByTierData, CompCell, Level, Tier } from './comp.types';
+import type { CompByTierData, CompCell, EquityType, Level, Tier } from './comp.types';
 import { formatUSD, guaranteedComp, isStartupTier } from './comp.utils';
 import { calcRequiredExit, type EquityCalloutInput } from '@/lib/equityCalc';
 import rawCompData from '@/data/comp-by-tier.json';
@@ -36,16 +36,16 @@ const DILUTION_ASSUMPTION = 0.25;
 function faangComparator(archetypeId: string | undefined, level: Level): number {
   if (archetypeId) {
     const cell = ARCHETYPES[archetypeId]?.['faang-mag7']?.[level];
-    if (cell) return cell.equity.annualizedUSD.p50;
+    if (cell?.equity) return cell.equity.annualizedUSD.p50;
   }
   const values = Object.values(ARCHETYPES)
-    .map((a) => a['faang-mag7']?.[level]?.equity.annualizedUSD.p50)
+    .map((a) => a['faang-mag7']?.[level]?.equity?.annualizedUSD.p50)
     .filter((v): v is number => typeof v === 'number');
   if (values.length === 0) return 0;
   return values.reduce((sum, v) => sum + v, 0) / values.length;
 }
 
-const EQUITY_TYPE_LABELS: Record<CompCell['equity']['type'], string> = {
+const EQUITY_TYPE_LABELS: Record<EquityType, string> = {
   rsu: 'RSU',
   options: 'options',
   'profit-interest': 'profit interest',
@@ -59,8 +59,26 @@ const EQUITY_TYPE_LABELS: Record<CompCell['equity']['type'], string> = {
 // Both lanes share a scale so their P50 widths are directly comparable.
 export function EquityTwoLane({ tier, level, data, archetypeId }: EquityTwoLaneProps) {
   const guaranteed = guaranteedComp(data);
-  const equity = data.equity.annualizedUSD;
   const startup = isStartupTier(tier);
+
+  if (!data.equity) {
+    return (
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-1.5">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-[13px] text-[var(--color-muted)]">Guaranteed (Base + Bonus)</span>
+            <span className="font-mono text-[13px] tabular-nums text-[var(--color-fg)]">{formatUSD(guaranteed.p50)}</span>
+          </div>
+          <div className="h-2.5 w-full overflow-hidden rounded-full bg-[var(--color-border)]">
+            <div className="h-full rounded-full bg-[var(--color-accent)]/80" style={{ width: '100%' }} />
+          </div>
+        </div>
+        <p className="font-mono text-[11px] text-[var(--color-muted-2)]">Equity data not yet available at this level.</p>
+      </div>
+    );
+  }
+
+  const equity = data.equity.annualizedUSD;
 
   // Startup tiers get a scenario callout: reconstruct a representative grant for
   // the tier and compare its exit-value math against the FAANG RSU comparator.

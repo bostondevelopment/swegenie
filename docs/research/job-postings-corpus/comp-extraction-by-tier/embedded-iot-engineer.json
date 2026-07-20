@@ -9,19 +9,22 @@
   },
   "grid": {
     "ai-labs": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "faang-mag7": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "high-growth-public": {
-      "Entry/Associate": {
+      "Entry (New Grad)": null,
+      "Junior/Associate": {
         "count": 3,
         "companyCount": 1,
         "low": 99450,
@@ -42,7 +45,7 @@
             "title": "Associate Embedded Software Engineer",
             "location": "3 Locations",
             "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Associate-Embedded-Software-Engineer_JR2026500069",
-            "level_hint": "Entry/Associate",
+            "level_hint": "Junior/Associate",
             "tier": "high-growth-public"
           },
           {
@@ -56,7 +59,7 @@
             "title": "Embedded Software Engineer (Associate or Experienced)",
             "location": "USA - Long Beach, CA",
             "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Long-Beach-CA/Embedded-Software-Engineer--Associate-or-Experienced-_JR2026517692-1",
-            "level_hint": "Entry/Associate",
+            "level_hint": "Junior/Associate",
             "tier": "high-growth-public"
           },
           {
@@ -70,7 +73,7 @@
             "title": "Embedded Software Engineer (Associate or Experienced)",
             "location": "USA - Long Beach, CA",
             "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Long-Beach-CA/Embedded-Software-Engineer--Associate-or-Experienced-_JR2026517692-1",
-            "level_hint": "Entry/Associate",
+            "level_hint": "Junior/Associate",
             "tier": "high-growth-public"
           }
         ]
@@ -419,10 +422,11 @@
       }
     },
     "growth-stage-private": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": {
-        "count": 18,
-        "companyCount": 12,
+        "count": 17,
+        "companyCount": 11,
         "low": 105000,
         "high": 300000,
         "median": 193000,
@@ -436,7 +440,6 @@
           "Neuralink",
           "Redwood Materials",
           "Varda Space Industries",
-          "WHOOP",
           "Waabi",
           "Whoop"
         ],
@@ -676,20 +679,6 @@
             "title": "Firmware Engineer, Robotics and Surgery Engineering",
             "location": "Austin, Texas, United States; South San Francisco, California, United States",
             "url": "https://boards.greenhouse.io/neuralink/jobs/6021322003?gh_jid=6021322003",
-            "level_hint": "Mid (unspecified level)",
-            "tier": "growth-stage-private"
-          },
-          {
-            "low": 105000,
-            "high": 145000,
-            "raw_match": "$105,000-$145,000",
-            "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $105,000-$145,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-            "currency": "USD",
-            "is_ote": false,
-            "company": "WHOOP",
-            "title": "Embedded Engineer",
-            "location": "Boston, MA",
-            "url": "https://jobs.ashbyhq.com/whoop/577f6cd2-23cb-4da5-9f57-b9b28bc7b062",
             "level_hint": "Mid (unspecified level)",
             "tier": "growth-stage-private"
           }
@@ -1110,12 +1099,13 @@
       }
     },
     "early-stage": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     }
   },
-  "totalUsdBasePoints": 72,
+  "totalUsdBasePoints": 71,
   "unclassifiedCompanyPoints": 3
 }

@@ -28,7 +28,7 @@ interface ArchetypeCompareStageProps {
 export function ArchetypeCompareStage({
   rows,
   defaultTier = 'faang-mag7',
-  defaultLevel = 'Staff',
+  defaultLevel = 'L3',
   daySummaryByArchetype = {},
   keyQualitiesByArchetype = {},
   jobExamplesByArchetype = {},

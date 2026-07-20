@@ -8,16 +8,16 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 408,
+    "totalPointsExtracted": 401,
     "usdBase": {
-      "count": 336,
-      "companyCount": 113,
+      "count": 330,
+      "companyCount": 112,
       "low": 50000,
       "high": 550515,
-      "typical": 218470
+      "typical": 218940
     },
     "usdOte": {
-      "count": 54,
+      "count": 53,
       "companyCount": 14,
       "low": 124500,
       "high": 368000,
@@ -30,7 +30,7 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
+      "Entry (New Grad)": {
         "count": 1,
         "companyCount": 1,
         "low": 99400,
@@ -40,18 +40,29 @@
           "Warner Bros Discovery"
         ]
       },
-      "Mid (unspecified level)": {
-        "count": 71,
-        "companyCount": 48,
-        "low": 97000,
-        "high": 457970,
-        "typical": 185000,
+      "Junior/Associate": {
+        "count": 8,
+        "companyCount": 4,
+        "low": 112000,
+        "high": 285982,
+        "typical": 180500,
         "companies": [
           "Affirm",
+          "May Mobility",
+          "Pinterest",
+          "Warner Bros Discovery"
+        ]
+      },
+      "Mid (unspecified level)": {
+        "count": 60,
+        "companyCount": 43,
+        "low": 97000,
+        "high": 400000,
+        "typical": 184442,
+        "companies": [
           "Airbnb",
           "Alloy",
           "Anduril Industries",
-          "Anthem/Elevance Health",
           "AppLovin",
           "Applied Intuition",
           "Brex",
@@ -74,7 +85,6 @@
           "Instawork",
           "Intel",
           "Komodo Health",
-          "May Mobility",
           "Morgan Stanley",
           "Motional",
           "Netskope",
@@ -87,19 +97,17 @@
           "Reddit",
           "Redis",
           "Robinhood",
-          "Roblox",
           "Salesforce",
           "Samsara",
           "Spotify",
           "Stitch Fix",
           "Tanium",
-          "Truveta",
-          "Warner Bros Discovery"
+          "Truveta"
         ]
       },
       "Senior/Staff": {
-        "count": 247,
-        "companyCount": 79,
+        "count": 238,
+        "companyCount": 78,
         "low": 50000,
         "high": 510000,
         "typical": 223489,
@@ -177,7 +185,6 @@
           "Toast",
           "Twilio",
           "Via",
-          "WHOOP",
           "Warner Bros Discovery",
           "Whoop",
           "Workato",
@@ -186,14 +193,16 @@
         ]
       },
       "Principal/Director+ (Manager/VP)": {
-        "count": 17,
-        "companyCount": 14,
+        "count": 23,
+        "companyCount": 16,
         "low": 177000,
         "high": 550515,
-        "typical": 296300,
+        "typical": 320145,
         "companies": [
           "Airbnb",
+          "Anthem/Elevance Health",
           "Axon",
+          "Capital One",
           "Crunchyroll",
           "DoorDash",
           "Everlaw",
@@ -209,7 +218,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 752
+    "totalPostingsScanned": 722
   },
   "dataPoints": [
     {
@@ -275,7 +284,7 @@
       "title": "Machine Learning Engineer II (Fraud)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7695818003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 165000,
@@ -288,7 +297,7 @@
       "title": "Machine Learning Engineer II (Servicing ML)",
       "location": "Remote US",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7719651003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 146000,
@@ -301,7 +310,7 @@
       "title": "Machine Learning Engineer II (Servicing ML)",
       "location": "Remote US",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7719651003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123000,
@@ -314,7 +323,7 @@
       "title": "Machine Learning Engineer II (Servicing ML)",
       "location": "Remote Canada",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7719653003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 153000,
@@ -1848,7 +1857,7 @@
       "title": "Distinguished Machine Learning Engineer - Safety",
       "location": "San Mateo, CA, United States",
       "url": "https://careers.roblox.com/jobs/7931911?gh_jid=7931911",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
       "low": 295250,
@@ -1991,19 +2000,6 @@
       "title": "Senior Machine Learning Engineer",
       "location": "San Jose, California",
       "url": "https://www.weareroku.com/jobs/8016414?gh_jid=8016414",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 229500,
-      "high": 360000,
-      "raw_match": "$229,500 - $360,000",
-      "context": "ensuring seamless deployment, monitoring, and optimization of algorithms and operational workflows that deliver unique experiences at scale. For California Only - The estimated annual salary for this position is between $229,500 - $360,000 annually. Compensation packages are based on factors unique to each candidate, including but not limited to skill set, certifications, and specific geographical location. This role is eligible for health insurance, equi",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Roku",
-      "title": "Senior Machine Learning Engineer",
-      "location": "San Jose, California",
-      "url": "https://www.weareroku.com/jobs/7974763?gh_jid=7974763",
       "level_hint": "Senior/Staff"
     },
     {
@@ -2706,7 +2702,7 @@
       "title": "Machine Learning Engineer II, Computer Vision Applied Science ",
       "location": "San Francisco, CA, US; Remote, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7697137",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 170840,
@@ -2719,7 +2715,7 @@
       "title": "Machine Learning Engineer II, Core Engineering ",
       "location": "Toronto, ON, CA",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7473497",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 163418,
@@ -3057,7 +3053,7 @@
       "title": "Machine Learning Engineer, New Grad - Quora (Remote)",
       "location": "Remote - Multiple Locations",
       "url": "https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 137852,
@@ -3070,7 +3066,7 @@
       "title": "Machine Learning Engineer, New Grad - Quora (Remote)",
       "location": "Remote - Multiple Locations",
       "url": "https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 128661,
@@ -3083,7 +3079,7 @@
       "title": "Machine Learning Engineer, New Grad - Quora (Remote)",
       "location": "Remote - Multiple Locations",
       "url": "https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 250444,
@@ -3226,7 +3222,7 @@
       "title": "Machine Learning Engineer Perception LLM/VLM (PhD, New Grad)",
       "location": "Mountain View, CA USA;  San Francisco, CA USA;",
       "url": "https://careers.withwaymo.com/jobs?gh_jid=7488508",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 175000,
@@ -3265,19 +3261,6 @@
       "title": "Machine Learning Engineer, Simulation Realism",
       "location": "Mountain View, CA, USA",
       "url": "https://careers.withwaymo.com/jobs?gh_jid=6499165",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 213000,
-      "high": 263000,
-      "raw_match": "$213,000 &mdash; $263,000",
-      "context": "nbsp; Waymo employees are also eligible to participate in Waymo\u2019s discretionary annual bonus program, equity incentive plan, and generous Company benefits program, subject to eligibility requirements.&nbsp; Salary Range $213,000 &mdash; $263,000 USD",
-      "currency": "USD",
-      "is_ote": true,
-      "company": "Waymo",
-      "title": "Machine Learning Engineer, Simulation Realism ",
-      "location": "Mountain View, CA, USA",
-      "url": "https://careers.withwaymo.com/jobs?gh_jid=6688617",
       "level_hint": "Mid (unspecified level)"
     },
     {
@@ -4006,7 +3989,7 @@
       "title": "Sr. Distinguished AI Engineer (Remote Eligible)",
       "location": "6 Locations",
       "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/San-Francisco--CA/Sr-Distinguished-AI-Engineer--Remote-Eligible-_R245912-1",
-      "level_hint": "Senior/Staff"
+      "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
       "low": 314800,
@@ -4019,7 +4002,7 @@
       "title": "Sr. Distinguished AI Engineer (Remote Eligible)",
       "location": "6 Locations",
       "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/San-Francisco--CA/Sr-Distinguished-AI-Engineer--Remote-Eligible-_R245912-1",
-      "level_hint": "Senior/Staff"
+      "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
       "low": 343400,
@@ -4032,7 +4015,7 @@
       "title": "Sr. Distinguished AI Engineer (Remote Eligible)",
       "location": "6 Locations",
       "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/San-Francisco--CA/Sr-Distinguished-AI-Engineer--Remote-Eligible-_R245912-1",
-      "level_hint": "Senior/Staff"
+      "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
       "low": 229900,
@@ -4227,7 +4210,7 @@
       "title": "Distinguished AI Engineer",
       "location": "13 Locations",
       "url": "https://elevancehealth.wd1.myworkdayjobs.com/ANT/job/VA-RICHMOND-2015-STAPLES-MILL-RD/Distinguished-AI-Engineer_JR195474-1",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
       "low": 277728,
@@ -4240,7 +4223,7 @@
       "title": "Distinguished AI Engineer",
       "location": "CA-WALNUT CREEK, 2121 N CALIFORNIA BLVD, 7TH FL",
       "url": "https://elevancehealth.wd1.myworkdayjobs.com/ANT/job/CA-WALNUT-CREEK-2121-N-CALIFORNIA-BLVD-7TH-FL/Distinguished-AI-Engineer_JR195741",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Principal/Director+ (Manager/VP)"
     },
     {
       "low": 155420,
@@ -4487,7 +4470,7 @@
       "title": "Machine Learning Engineer I",
       "location": "NY New York 30 Hudson Yards",
       "url": "https://warnerbros.wd5.myworkdayjobs.com/global/job/NY-New-York-30-Hudson-Yards/Machine-Learning-Engineer-I_R000100421",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 112000,
@@ -4500,7 +4483,7 @@
       "title": "Machine Learning Engineer II, CNN Digital Products and Services",
       "location": "3 Locations",
       "url": "https://warnerbros.wd5.myworkdayjobs.com/global/job/NY-New-York-30-Hudson-Yards/Machine-Learning-Engineer-II--CNN-Digital-Products-and-Services_R000105236",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 171600,
@@ -5257,71 +5240,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 150000,
-      "high": 210000,
-      "raw_match": "$150,000-$210,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000-$210,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Machine Learning Engineer, Health",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/02d8b2aa-35a4-41cb-b8e1-ba70721d9547",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 210000,
-      "raw_match": "$150,000-$210,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000-$210,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Machine Learning Engineer, Insights",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/18ca780c-5b08-44a2-81c7-476badf3874b",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 170000,
-      "high": 230000,
-      "raw_match": "$170,000-$230,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $170,000-$230,000 Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to th",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Staff Machine Learning Engineer (Health)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/1e44a413-235f-4aba-967e-a277a92b7b20",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 210000,
-      "raw_match": "$150,000 - $210,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $210,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Machine Learning Engineer, AI Platform",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/2f0f7250-a2ca-4062-b8e5-57f3e3b8e955",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 210000,
-      "raw_match": "$150,000-$210,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000-$210,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Machine Learning Engineer, Core Algorithms",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/5502fb12-e948-4f62-8db6-b725fb3dc8e5",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 105000,
       "high": 130000,
       "raw_match": "$105,000 - $130,000",
@@ -5488,7 +5406,7 @@
       "title": "Machine Learning Engineer II - Autonomous Driving Performance Evaluation",
       "location": "Anywhere, USA",
       "url": "https://job-boards.greenhouse.io/maymobility/jobs/8187068002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 160000,
@@ -5501,7 +5419,7 @@
       "title": "Machine Learning Engineer II - Autonomous Driving Training Infrastructure",
       "location": "Remote, USA",
       "url": "https://job-boards.greenhouse.io/maymobility/jobs/8580411002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 210000,

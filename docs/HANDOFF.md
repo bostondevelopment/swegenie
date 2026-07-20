@@ -1,4 +1,15 @@
-# Handoff — read this first
+# Handoff — historical record (2026-07-09), not current status
+
+**⚠ Archived 2026-07-17.** This was a same-night operational handoff for one overnight session,
+written mid-Phase-2/3/5, and it ends with "stop, do not start Phase 6." That instruction is long
+since overtaken: Phase 5 finished, the site has been live at `www.swe-genie.com` for a while, and
+many post-launch waves (comp-by-tier system, dark-theme redesign, Engineering Management
+archetype removal, corpus enrichment, this same documentation-accuracy pass) have shipped since.
+**Do not treat anything below as current phase status or as live instructions** — for that, read
+`PLAN.md`'s checkboxes and `docs/marketing/launch-day-checklist.md` instead. The **operational
+guardrails** section below (no-sub-agent-spawning, use Sonnet explicitly, write incrementally,
+verify against disk not agent self-reports) is still generally good advice and is the one part of
+this file worth reading for its own sake, not just as history.
 
 **Written:** 2026-07-09, ~02:00, by the Sonnet session that ran the scheduled overnight restart.
 

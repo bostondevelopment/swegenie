@@ -1,0 +1,8 @@
+{
+  "archetypeId": "ml-engineer",
+  "tier": "high-growth-public",
+  "level": "L2",
+  "title": "Corpus: Affirm MLE II, Pinterest MLE II, WBD MLE II job postings (high-growth-public Junior/Associate bucket)",
+  "url": "https://warnerbros.wd5.myworkdayjobs.com/global/job/NY-New-York-30-Hudson-Yards/Machine-Learning-Engineer-I_R000100421",
+  "note": "Corpus comp-extraction-by-tier/ml-engineer.json Junior/Associate bucket: 6 data points, 3 companies. Affirm MLE II ranges $123K-$225K across 4 postings; Pinterest MLE II $138.9K-$286K; WBD MLE II $112K. Corpus median $167K adjusted to $135K for realistic single-location p50."
+}

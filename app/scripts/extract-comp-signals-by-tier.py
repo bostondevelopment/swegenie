@@ -49,7 +49,7 @@ def gap_archetypes():
 
 
 TIERS = ["ai-labs", "faang-mag7", "high-growth-public", "growth-stage-private", "early-stage"]
-LEVELS = ["Entry/Associate", "Mid (unspecified level)", "Senior/Staff", "Principal/Director+ (Manager/VP)"]
+LEVELS = ["Entry (New Grad)", "Junior/Associate", "Mid (unspecified level)", "Senior/Staff", "Principal/Director+ (Manager/VP)"]
 
 DASH = r"(?:-|–|—|&mdash;|&ndash;|to)"
 NUM = r"\$?\s?(\d{2,3}(?:,\d{3})+)"
@@ -76,11 +76,18 @@ NOISE_MARKERS = re.compile(
 
 LEVEL_RULES = [
     ("Principal/Director+ (Manager/VP)", re.compile(
-        r"\b(vp|vice president|director|head of|principal|distinguished|chief)\b", re.IGNORECASE)),
+        r"\b(vp|vice president|director|head of|principal(?! engineer)|distinguished|chief)\b", re.IGNORECASE)),
     ("Senior/Staff", re.compile(
         r"\b(senior|sr\.?|staff|lead|iii|iv|level\s*[3-5]|l[3-5]\b)\b", re.IGNORECASE)),
-    ("Entry/Associate", re.compile(
-        r"\b(junior|jr\.?|associate|entry[- ]level|new grad|i\b)\b", re.IGNORECASE)),
+    # New-grad/entry rung (0-1 YOE): "associate" only counts here when paired with
+    # new-grad/university/campus/rotational language, so a standalone "Associate Engineer"
+    # title falls through to the Junior/Associate bucket below instead.
+    ("Entry (New Grad)", re.compile(
+        r"\b(new grad|university grad|entry[- ]level)\b|\bi\b(?!\w)"
+        r"|\bassociate\b(?=.*\b(?:new grad|university|campus|rotational)\b)",
+        re.IGNORECASE)),
+    ("Junior/Associate", re.compile(
+        r"\b(junior|jr\.?|associate)\b|\bii\b(?!\w)", re.IGNORECASE)),
 ]
 
 
@@ -231,11 +238,12 @@ def main():
                "unclassifiedCompanyPoints": unclassified_count}
         (OUT_DIR / f"{archetype_id}.json").write_text(json.dumps(out, indent=2))
 
+        cells_total = len(TIERS) * len(LEVELS)
         filled = sum(1 for tier in TIERS for level in LEVELS if grid[tier][level])
-        overview[archetype_id] = {"cellsFilled": filled, "cellsTotal": 20,
+        overview[archetype_id] = {"cellsFilled": filled, "cellsTotal": cells_total,
                                    "totalUsdBasePoints": len(usd_base),
                                    "unclassifiedCompanyPoints": unclassified_count}
-        print(f"{archetype_id:45s} cells_filled={filled:2d}/20  usd_base_pts={len(usd_base):4d}  "
+        print(f"{archetype_id:45s} cells_filled={filled:2d}/{cells_total}  usd_base_pts={len(usd_base):4d}  "
               f"unclassified_company_pts={unclassified_count:4d}")
 
     (OUT_DIR / "_OVERVIEW.json").write_text(json.dumps(overview, indent=2))

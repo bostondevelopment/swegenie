@@ -31,23 +31,25 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
-        "count": 2,
-        "companyCount": 2,
+      "Junior/Associate": {
+        "count": 4,
+        "companyCount": 4,
         "low": 72000,
         "high": 382500,
-        "typical": 227250,
+        "typical": 114500,
         "companies": [
+          "CoreWeave",
           "Dragos",
-          "Drata"
+          "Drata",
+          "Federato"
         ]
       },
       "Mid (unspecified level)": {
-        "count": 26,
-        "companyCount": 20,
+        "count": 24,
+        "companyCount": 19,
         "low": 54000,
         "high": 264000,
-        "typical": 100000,
+        "typical": 98765,
         "companies": [
           "Adyen",
           "Anduril Industries",
@@ -58,7 +60,6 @@
           "Cresta",
           "Datadog",
           "Expel",
-          "Federato",
           "HelloFresh",
           "Intercom",
           "LogicMonitor",
@@ -102,7 +103,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 319
+    "totalPostingsScanned": 305
   },
   "dataPoints": [
     {
@@ -259,7 +260,7 @@
       "title": "Technical Support Engineer II (Bare Metal)",
       "location": "Livingston, NJ / New York, NY / San Francisco, CA / Sunnyvale, CA / Bellevue, WA",
       "url": "https://coreweave.com/careers/job?4560350006&board=coreweave&gh_jid=4560350006",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 122000,
@@ -324,7 +325,7 @@
       "title": "Associate Technical Support Engineer - Mexico",
       "location": "Remote - Mexico",
       "url": "https://jobs.ashbyhq.com/drata/7d505347-c5fb-4351-b57d-75a9ea654fcf",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 69700,
@@ -337,7 +338,7 @@
       "title": "Associate Technical Support Engineer - AUS",
       "location": "Remote - APAC",
       "url": "https://jobs.ashbyhq.com/drata/cd344653-5f55-4bdc-ba1a-921f026ad162",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 133000,
@@ -402,7 +403,7 @@
       "title": "Associate Technical Support Engineer",
       "location": "United States",
       "url": "https://job-boards.greenhouse.io/dragos/jobs/5285559008",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 80500,
@@ -766,7 +767,7 @@
       "title": " Technical Support Engineer II",
       "location": "Remote",
       "url": "https://job-boards.greenhouse.io/federato/jobs/5271051008",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 50000,

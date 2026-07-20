@@ -171,7 +171,11 @@ export default function MethodologyPage() {
               value="5"
               sub="AI labs · FAANG/Mag7 · high-growth public · growth-stage private · early-stage"
             />
-            <StatTile label="Career levels" value="4" sub="L3 · L4 · L5 · Staff" />
+            <StatTile
+              label="Career levels"
+              value="6"
+              sub="L1 · L2 · L3 · L4 · L5 · Staff"
+            />
             <StatTile label="Percentile bands" value="5" sub="P10 / P25 / P50 / P75 / P90" />
             <StatTile label="Confidence tiers" value="3" sub="high · medium · low" />
           </div>
@@ -179,7 +183,9 @@ export default function MethodologyPage() {
             The comp-by-tier charts on each archetype page (and the Staff cross-role ranking) are a
             separate, hand-curated dataset from the salary ranges in the research briefs. They cover
             all 17 archetypes and break total compensation into base, bonus, and annualized equity
-            across five company tiers at four career levels.
+            across five company tiers at six career levels. Levels are grouped by years of
+            experience, not by any single company&apos;s title system — years in the field
+            determines the level shown, not a job title.
           </p>
 
           <Callout tone="caveat" title="Sources.">
@@ -223,11 +229,11 @@ export default function MethodologyPage() {
             high, medium, or low confidence by how much public data backs that specific
             role/tier/level combination. Cells marked low carry a{" "}
             <span className="font-mono text-[13px] text-[var(--color-signal-warn)]">limited data</span>{" "}
-            badge on the chart. 31 of 340 cells are low-confidence — concentrated in Customer
-            Support Engineer (9 cells), Embedded/IoT Engineer (8), Customer Success / Customer
-            Solutions Engineer (5), Consulting Engineer / Professional Services (4), Developer
-            Relations &amp; Advocacy (4), and Solutions Architect (Consulting) (1) — because no
-            public compensation data exists for that specific role/tier/level combination.
+            badge on the chart. 103 of 510 cells are low-confidence, concentrated in Customer
+            Support Solutions Engineer (13 cells), Embedded/IoT Engineer (12), Developer Relations
+            &amp; Advocacy (10), Security Engineer (9), Solutions Architect (Consulting) (9), and
+            Consulting Engineer / Professional Services (9), because no public compensation data
+            exists for that specific role/tier/level combination.
           </p>
 
           <Callout tone="caveat" title="Not financial advice.">

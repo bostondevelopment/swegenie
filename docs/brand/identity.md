@@ -1,156 +1,143 @@
 # Identity: Visual system + Copy system
 
-**Status:** Draft — Phase 4. Assumes the product name resolves per ADR-004 (currently DRAFT,
-pending human confirmation). Everything below is name-agnostic where possible — described in
-terms of a generic wordmark — so it doesn't need rework if the name changes.
+**Status:** Part 1 (Visual identity) rewritten 2026-07-17 to document the system **as actually
+implemented and shipped** at swe-genie.com, verified against the live site's computed styles —
+not the Phase 4 speculative spec. Where the original draft and the shipped product disagree, the
+shipped product wins and the difference is called out explicitly below, because a designer or
+agent picking this up should build to match the real app, not a plan that was superseded before
+anyone circled back to update this doc. Part 2 (Copy system) was spot-checked against live copy
+and still holds — not rewritten.
 
-This doc is downstream of `docs/brand/positioning.md`. If anything here conflicts with
-positioning's tone rules, positioning wins.
+The product name is confirmed: **SWE Genie**, at `swe-genie.com` (see ADR-004). This doc is
+downstream of `docs/brand/positioning.md`. If anything here conflicts with positioning's tone
+rules, positioning wins.
 
 ---
 
-## Part 1: Visual identity
+## Part 1: Visual identity (as shipped — verified against the live site 2026-07-17)
 
 ### Design thesis
 
-The product is a research instrument wearing a fast, well-made web app. The visual system should
-read like **a well-designed internal engineering tool or a data-viz-literate publication**
-(think: a levels.fyi chart, a Stripe docs page, an Observable notebook) — not a consumer quiz app,
-not a career-coaching SaaS. Precision over polish-for-its-own-sake. Every decorative choice should
-be justifiable as "this makes the data clearer" or "this makes the result more shareable," not
-"this looks fun."
+The product reads darker, punchier, and more playful than the original Phase 4 spec called for —
+closer to a well-made dev-tool marketing site (Vercel, Raycast, Linear) than the "Stripe docs /
+Observable notebook" register the original draft aimed for. It's still unmistakably
+credibility-first — dry copy, a real methodology page, sourced numbers everywhere — but the visual
+system leans into one confident, high-contrast accent color and bold geometry rather than the
+muted, borders-not-color restraint originally specced. That's a legitimate, coherent direction; it
+just isn't the one originally drafted, so this section documents what's actually there.
 
-**The shareable result card is the primary marketing surface.** Landing-page design matters, but
-the artifact that actually acquires users is the OG image/result card that gets posted to X,
-LinkedIn, or Slack. Design that first, then make the rest of the app consistent with it — not the
-other way around.
+**The shareable result card is still the primary marketing surface** — that thesis holds and
+hasn't changed.
 
-### Logo / wordmark direction
+### Logo / wordmark
 
-No image assets in this phase — direction only, for a designer or future agent to execute.
-
-- **Wordmark-first, no mascot, no icon-as-mascot.** A illustrated character or cute icon would
-  immediately read as the HR-flavored failure mode ADR-001 flagged. If a mark is needed at all
-  (favicon, avatar), it should be an abstract geometric glyph, not a face or character.
-- **Glyph concept (if one is used): a small multi-axis diagram, not a badge.** The taxonomy is
-  fundamentally a multi-dimensional fit space (trait dimensions × archetypes, per PLAN.md Phase
-  2). A minimal radar/spoke glyph, a small scatter of connected nodes, or a simplified
-  polygon-fit shape (like a tiny radar chart silhouette) is on-thesis: it *is* what the product
-  does, reduced to a mark. Avoid anything that reads as a compass/map-pin cliché (overused in
-  "find your path" career products — exactly the register to avoid).
-- **Typeset wordmark carries most of the identity weight.** Set in the monospace or
-  monospace-adjacent typeface (see Typography below) at a deliberately technical weight —
-  the name should look at home next to a version number or a git SHA. A subtle detail like
-  rendering part of the name in a fixed-width cut, or a single well-placed underscore/slash
-  motif (echoing CLI/file-path conventions), reinforces "built by and for engineers" without
-  being cute about it.
-- **No gradients-as-default, no soft drop shadows, no rounded-blob shapes.** These read as
-  generic SaaS/consumer-app conventions circa 2018-2023 and work against the "credible research
-  tool" read. Flat color, sharp or lightly-rounded (2-4px radius) rectangles, real borders.
+No dedicated glyph/icon mark has shipped — the identity currently rests entirely on the typeset
+wordmark "SWE Genie" plus a small accent-colored dot, both set in Space Grotesk (see Typography).
+There's no radar/spoke glyph, and the homepage's central visual is a large, literal accent-colored
+question mark ("?") rather than an abstract multi-axis diagram — a bolder, more illustrative
+choice than the original "no mascot, no icon-as-mascot, abstract geometric glyph only" guidance
+called for. It still avoids a face/character/mascot, so it doesn't cross into the HR-flavored
+failure mode ADR-001 flagged, but a future agent shouldn't assume a radar-glyph favicon exists
+anywhere in the codebase — it doesn't.
 
 ### Color palette
 
-Two-mode system (light + dark), built around one confident accent rather than a rainbow of
-archetype colors (archetype-specific color-coding can be a v2 nice-to-have, not a v1
-requirement — it adds a design-system burden the "Done when" bar in PLAN.md Phase 4 doesn't
-need).
+**Dark-only, not two-mode.** There is no light theme and no theme toggle in the shipped app — the
+original "two-mode system, dark treated as co-primary" plan didn't ship as two modes; it shipped
+as one, dark by default regardless of OS preference. If a light mode is wanted later, it needs to
+be built from scratch against these tokens, not adapted from an existing light variant (none
+exists).
 
-**Core palette:**
+**Actual tokens, read directly from the site's CSS custom properties:**
 
-| Token | Hex | Use |
+| Token | Hex / value | Use |
 |---|---|---|
-| `ink-950` | `#0B0E14` | Dark-mode background base; near-black with a cool, slightly blue-black cast (not pure `#000`) |
-| `ink-050` | `#F7F8FA` | Light-mode background base; near-white, not stark `#FFFFFF` (reduces glare, reads more "paper/terminal" than "app") |
-| `slate-700` | `#3A4150` | Primary body text on light backgrounds |
-| `slate-300` | `#C4CAD4` | Secondary/muted text, dark mode |
-| `slate-500` | `#6B7280` | Secondary/muted text, light mode; borders |
-| `accent-600` | `#2F6FED` | Primary accent — links, primary CTA, active states. A confident, slightly-desaturated blue (data-viz blue, not "startup gradient" blue) |
-| `accent-400` | `#5B90F5` | Accent on dark backgrounds / hover states |
-| `signal-green` | `#1E9E6B` | Positive/high-fit signal (e.g., strong match score) — desaturated, not neon |
-| `signal-amber` | `#B9770E` | Near-miss / growth-area signal — desaturated ochre, not caution-tape yellow |
-| `signal-red` | reserved, unused in v1 | Explicitly do not use red for "low fit" — this isn't a pass/fail test, and red reads as an error state. Low-fit archetypes should be deprioritized by omission/ordering, not color-coded as failure. |
+| `--color-bg` | `#0A0A0C` | Page background — near-black, warm-neutral (not the blue-black `ink-950` originally specced) |
+| `--color-surface` | `#16161A` | Card/section surface, one step up from bg |
+| `--color-fg` | `#F5F5F2` | Primary text — warm off-white, not pure white |
+| `--color-muted` | `#F5F5F2` at ~68% opacity | Secondary text |
+| `--color-muted-2` | `#F5F5F2` at ~50% opacity | Tertiary/faint text |
+| `--color-border` | `#F5F5F2` at ~8% opacity | Hairline borders |
+| `--color-accent` | `#B3EE55` | Primary accent — buttons, links, active states, hero glyph. A saturated chartreuse/lime green — **not** the desaturated blue (`#2F6FED`) originally specced. This is the single biggest divergence from the Phase 4 plan and the one most worth a deliberate decision either way, since it reads closer to "startup-punchy" than the original "data-viz blue, credible-research" brief called for. |
+| `--color-accent-ink` | `#0A0A0C` | Text color rendered on top of accent-filled surfaces (buttons) |
+| `--color-signal-good` | `#56D57B` | Positive/high-fit signal — a distinct, slightly cooler green from the accent, so the two don't collide |
+| `--color-signal-warn` | `#FAAB3F` | Near-miss/growth-area signal — orange-amber |
+| signal-red | still unused | The original "don't color-code low fit as failure" rule held — no red token exists in the shipped palette either. |
 
-**Archetype accent (optional, v1-lite):** if archetypes need any visual differentiation (e.g., on
-the result card), use a single consistent accent hue per archetype drawn from a fixed
-12-16-color qualitative palette (e.g., Observable's `d3.schemeTableau10` extended, or a similarly
-desaturated qualitative set) rather than inventing bespoke colors per role. Keep saturation and
-lightness consistent across the set so no archetype visually "wins" by having a louder color.
-
-**Rationale:** the palette should look correct sitting next to a terminal, a Grafana dashboard,
-or a GitHub dark-mode PR — the audience's daily visual environment — not next to a consumer
-lifestyle app.
+There is no archetype-specific qualitative color set in production — archetypes are
+differentiated by name/rank/score, not by hue, which is actually simpler than the "optional
+v1-lite" 12–16-color plan the original draft floated. Treat that plan as not-built and not
+currently needed.
 
 ### Typography
 
-Real, Google Fonts-available families only (confirm current availability at fonts.google.com
-before implementation — font libraries do shift):
+**Two typefaces shipped, not three** — there is no Inter anywhere in the app; body copy uses the
+same display face as headings.
 
-- **Display / wordmark / large headings:** **Space Grotesk** — geometric, slightly technical,
-  distinct without being novelty. Alternative if unavailable or too trendy by launch:
-  **IBM Plex Sans**.
-- **Body copy:** **Inter** — the highest-legibility, most neutral choice for long-form
-  methodology-page reading; avoids drawing attention to itself, which is correct for a
-  credibility-first reading experience.
-- **Monospace (data, scores, dimension labels, code-adjacent UI like the result-card
-  "fit: 87%" readout, archetype IDs, version tags):** **JetBrains Mono** or **IBM Plex Mono** —
-  either works; pick one and use it deliberately anywhere a number or technical label appears.
-  This is a major tone lever: numbers set in monospace read as *measured*, the same numbers set
-  in the body sans read as *marketing copy*.
+- **Space Grotesk** — used for *everything* except uppercase micro-labels: h1/h2 headings, body
+  paragraphs, button labels, and — notably — the numeric stat figures on the methodology page
+  (`67,956`, `744`, etc., set at weight 600). The original plan's "numbers in monospace read as
+  measured, numbers in body sans read as marketing copy" distinction did not carry through to
+  implementation — stat figures are Space Grotesk, not monospace, in the shipped site.
+- **IBM Plex Mono** — used narrowly, for short uppercase micro-copy only: section eyebrows like
+  "FIND YOUR LANE," small kickers, and similar label-scale text (13px, ~3px letter-spacing in the
+  observed instance). It is **not** JetBrains Mono (the original doc's either/or pick), and it is
+  **not** applied to data/scores/numbers the way the original spec intended — its actual role in
+  the shipped app is closer to "uppercase eyebrow typeface" than "the numbers-and-data typeface."
 
-**Pairing rule:** headings in Space Grotesk, body in Inter, anything quantitative or
-identifier-like in the monospace. A results page should visibly mix all three — that mixture
-*is* the "research instrument, not a quiz" signal.
+**Practical pairing rule as shipped:** Space Grotesk for essentially all reading content
+(headings, body, numbers, buttons); IBM Plex Mono reserved for short all-caps kickers only. A
+future agent extending the UI should follow this real pattern rather than the original
+three-way split, unless a deliberate decision is made to reintroduce a numbers-in-mono treatment
+(which would be a legitimate, easy way to recover some of the original "measured, not marketing"
+signal if it's ever felt to be missing).
 
-### Light + dark component direction
+### Component direction (as shipped)
 
-- **Dark mode is not an afterthought — treat it as co-primary.** This audience (HN/Reddit/dev
-  Twitter) browses dark-mode-default at a high rate, and a shared result card should look
-  intentional in both, since it'll be screenshotted into both light and dark timelines/threads.
-- **Borders over shadows.** Use 1px borders (`slate-500` at low opacity) to separate cards and
-  sections rather than soft box-shadows. Shadows read as consumer-app "elevation"; borders read
-  as technical-document "sectioning."
-- **Data-forward components:** fit scores rendered as horizontal bar meters or small radar/spoke
-  charts (echoing the logo glyph), not gauges/speedometers or badge-and-star ratings — the latter
-  read as gamification, which positioning.md explicitly rules out.
-- **Buttons:** rectangular or minimally rounded (4px), solid `accent-600` fill for primary,
-  outlined for secondary. No pill-shaped buttons — pill buttons are the single most
-  consumer-app-coded shape in current web design and work against the register here.
-- **Motion:** minimal, fast (150-200ms), no bouncy/spring easing. Springy easing reads as
-  playful/consumer; linear or ease-out reads as tool-like.
+- **Buttons are fully pill-shaped** (`border-radius: 999px`), solid accent-lime fill with
+  near-black text for primary actions. This directly contradicts the original "no pill-shaped
+  buttons, rectangular or 4px radius only" rule — pill buttons are the shipped reality across the
+  primary CTA ("Take the assessment"). Worth a conscious call: keep the pill (it's now the
+  established, live brand mark) or file a redesign — but don't silently assume rectangular buttons
+  exist anywhere in production.
+- **Archetype word-cloud tags are rotated "sticker" chips** — small accent-bordered pills/tags
+  (4px corner radius) tilted a few degrees off-axis, scattered around the homepage hero. This
+  reads closer to a playful, sticker-sheet motif than the original "precision over polish, avoid
+  anything that reads as fun" thesis anticipated — it's restrained (no illustrations, no color
+  variety, no characters) but is a genuine tonal departure worth knowing about before adding more
+  UI in this style.
+- **Borders over shadows still holds** — hairline borders (`--color-border`, ~8% opacity) separate
+  sections; no soft box-shadows observed. This part of the original plan did ship as specced.
+  Data is generally shown as text/numbers rather than radar or spoke charts — no chart component
+  matching the original "small radar/spoke chart" idea was found on the pages checked
+  (homepage, methodology).
+- **Motion:** not audited in this pass; no obvious spring/bounce easing observed casually, but
+  this wasn't measured the way color/type/shape were — treat as unverified rather than confirmed.
 
 ### The shareable result card (primary marketing surface)
 
-Per PLAN.md Phase 5, the result page's OG image is the growth loop. Design constraints:
+**This has not shipped at all.** Confirmed by grepping the app source: there is no OG-image route,
+no `ImageResponse`, no `og:image`/`twitter:image` generation anywhere in `/app`. The live
+`ShareBar` component (`app/components/ShareBar.tsx`) only copies a plain result-page URL to the
+clipboard — there is no generated image artifact today. So the growth-loop mechanic this whole
+section describes as "the primary marketing surface" doesn't exist yet in production; treat
+everything below as a design brief for unbuilt work, not a description of anything live:
 
-**What makes it shareable (credibly, to this audience):**
-1. **It looks like a finding, not a badge.** Structure it like a small data card: archetype name
-   set prominently in Space Grotesk, a fit score in monospace, and 2-3 top contributing
-   dimensions shown as small labeled bars/spokes — not a shield/crest/certificate motif (those
-   read as Buzzfeed/LinkedIn-certificate cringe to this audience).
-2. **It shows its work in miniature.** Even at OG-image size, include a tiny "top signals: systems
-   design, ambiguity tolerance, low client-facing pull" style annotation — the explainability that
-   differentiates this from a horoscope is exactly what should survive compression into a shared
-   image. A card that just says "You are: Solutions Architect 87%" with no supporting signal is a
-   worse, more horoscope-shaped version of the product.
-3. **Dry, specific caption line, not a hype line.** E.g., "Ranked #1 of 16 engineering role
-   archetypes for [name/anonymous]" beats "I found my dream career!" — follows the voice
-   checklist in positioning.md directly (would this survive being read aloud in an HN thread).
-4. **Consistent card geometry regardless of archetype**, so the artifact itself becomes
-   recognizable as "oh, that's a [product] result card" the second or third time someone sees one
-   in a feed — brand recognition through repeated structure, not repeated logo placement.
-5. **Legible at OG-image scale (1200x630) and as a thumbnail.** Monospace score + bold archetype
-   name must both be readable shrunk to a Slack link-preview size; test the design at that size,
-   not just full-screen.
-6. **A small methodology credibility mark** (e.g., "based on N practitioner interviews" or the
-   taxonomy version tag, `v1.0`, in monospace, bottom corner) — reinforces "research artifact worth
-   showing off," per positioning.md's framing of the share card as "a lab notebook artifact," not
-   a gamified badge.
-7. **Include the domain/URL small and unobtrusive**, not as a giant watermark — confidence, not
-   desperation for traffic.
+1. It should look like a finding, not a badge — archetype name prominent, fit score legible, 2–3
+   top contributing dimensions shown as small annotations, not a shield/crest/certificate motif.
+2. It should show its work in miniature (e.g., "top signals: systems design, ambiguity tolerance,
+   low client-facing pull") rather than a bare label + score.
+3. Caption should be dry and specific ("Ranked #1 of 17 engineering role archetypes"), not hypey —
+   note the count is **17**, not the original draft's placeholder 16 or 18.
+4. Consistent card geometry across archetypes so it's recognizable as "a SWE Genie result card" on
+   sight.
+5. Legible at OG-image scale (1200×630) and as a link-preview thumbnail.
+6. A small methodology credibility mark (taxonomy version, source count) in a corner.
+7. Domain shown small and unobtrusive, not as a watermark.
 
-**What to explicitly avoid on the card:** confetti/celebration motifs, percentile framing that
-implies competition ("beat 92% of engineers!"), zodiac/horoscope-style archetype icon
-illustrations, streak/gamification badges, exclamation points.
+**What to still explicitly avoid:** confetti/celebration motifs, competitive percentile framing,
+horoscope-style icon illustrations, streak/gamification badges, exclamation points — consistent
+with positioning.md and unaffected by anything else that's changed above.
 
 ---
 

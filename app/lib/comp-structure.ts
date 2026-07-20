@@ -38,3 +38,18 @@ export function getCompStructure(archetypeId: string): CompStructure | undefined
 export function getAllCompStructures(): CompStructure[] {
   return data;
 }
+
+// comp-structure.json's level bands are labeled by the title-classification pipeline's internal
+// bucket names (e.g. "Mid (unspecified level)") -- readable in research output, not in product
+// copy. Map to display labels wherever a CompLevelBand's label reaches the UI.
+const LEVEL_DISPLAY_LABELS: Record<string, string> = {
+  "Entry (New Grad)": "New Grad",
+  "Junior/Associate": "Junior",
+  "Mid (unspecified level)": "Mid-Level",
+  "Senior/Staff": "Senior",
+  "Principal/Director+ (Manager/VP)": "Principal+",
+};
+
+export function levelDisplayLabel(label: string): string {
+  return LEVEL_DISPLAY_LABELS[label] ?? label;
+}

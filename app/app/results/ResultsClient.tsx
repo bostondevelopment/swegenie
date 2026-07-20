@@ -11,7 +11,7 @@ import { decodeProfile } from "@/lib/encode";
 import { rankArchetypes, fitPercent } from "@/lib/scoring";
 import { archetypeById, dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy, fillWhyMatched, fillGrowthArea } from "@/lib/results-copy";
-import { getCompStructure } from "@/lib/comp-structure";
+import { getCompStructure, levelDisplayLabel } from "@/lib/comp-structure";
 import { CompBandBar } from "@/components/CompBandBar";
 import { CompMixBar } from "@/components/CompMixBar";
 import { CompComparisonChart } from "@/components/CompComparisonChart";
@@ -36,7 +36,7 @@ const compByTier = compByTierData.archetypes as unknown as CompByTierData;
  * by the assessment: `/results?a=…&s=…`). `years_experience` is the only YOE
  * signal we collect — the dimension answers in `a=` are preference scores, not
  * seniority. Falls back to L4 when the param is missing, malformed, or has no
- * usable years value. Bands: L3 0–2yr, L4 3–6yr, L5 7–12yr, Staff 12+yr.
+ * usable years value. Bands: L1 0–1yr, L2 1–3yr, L3 3–6yr, L4 6–10yr, L5 10–14yr, Staff 14+yr.
  */
 function inferLevel(stackRaw: string | null): Level {
   if (!stackRaw) return "L4";
@@ -44,9 +44,11 @@ function inferLevel(stackRaw: string | null): Level {
     const intake = JSON.parse(stackRaw) as { years_experience?: unknown };
     const yoe = Number(intake.years_experience);
     if (!Number.isFinite(yoe)) return "L4";
-    if (yoe < 3) return "L3";
-    if (yoe < 7) return "L4";
-    if (yoe <= 12) return "L5";
+    if (yoe < 1) return "L1";
+    if (yoe < 3) return "L2";
+    if (yoe < 6) return "L3";
+    if (yoe < 10) return "L4";
+    if (yoe < 14) return "L5";
     return "Staff";
   } catch {
     return "L4";
@@ -336,7 +338,7 @@ export default function ResultsClient() {
             <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
               <h2 className="font-display text-xl font-semibold mb-6">Comp by level</h2>
               <CompProgressionChart
-                levels={topComp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
+                levels={topComp.levels.map((lvl) => ({ level: levelDisplayLabel(lvl.label), low: lvl.low, high: lvl.high }))}
               />
             </section>
           </>

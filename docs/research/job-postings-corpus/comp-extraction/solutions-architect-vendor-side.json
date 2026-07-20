@@ -8,13 +8,13 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 17,
+    "totalPointsExtracted": 16,
     "usdBase": {
-      "count": 14,
+      "count": 13,
       "companyCount": 9,
       "low": 53850,
       "high": 301300,
-      "typical": 188000
+      "typical": 176000
     },
     "usdOte": {
       "count": 3,
@@ -29,11 +29,11 @@
     },
     "byLevel": {
       "Mid (unspecified level)": {
-        "count": 9,
+        "count": 8,
         "companyCount": 6,
         "low": 115000,
         "high": 285800,
-        "typical": 200000,
+        "typical": 188000,
         "companies": [
           "Databricks",
           "Datadog",
@@ -67,7 +67,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 57
+    "totalPostingsScanned": 56
   },
   "dataPoints": [
     {
@@ -224,19 +224,6 @@
       "title": "Cloud Solutions Architect",
       "location": "Any Location / Remote",
       "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Cloud-Solutions-Architect_RQ222733",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 182750,
-      "high": 247250,
-      "raw_match": "$182,750 - $247,250",
-      "context": "ORTUNITY Explore a career at GDIT and you\u2019ll find endless opportunities to grow alongside colleagues who share your sense of ownership and pride in the meaningful work we do. The likely salary range for this position is $182,750 - $247,250. This is not, however, a guarantee of compensation or salary. Rather, salary will be set based on experience, geographic location and possibly contractual requirements and could fall outside of this range. Scheduled Wee",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
-      "title": "Cloud Solutions Architect",
-      "location": "Any Location / Remote",
-      "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/Cloud-Solutions-Architect_RQ222761-2",
       "level_hint": "Mid (unspecified level)"
     },
     {

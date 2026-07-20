@@ -3,7 +3,10 @@
 ## Idea
 
 Right now the app's comp data varies by **archetype × company tier × level**
-(`app/data/comp-by-tier.json`: 18 archetypes × 5 tiers × 4 levels). It does not vary by
+(`app/data/comp-by-tier.json`: 17 archetypes × 5 tiers × 4 levels — 340 cells; this was 18
+archetypes/360 cells before Engineering Management was removed as a standalone archetype on
+2026-07-16, see [management-orthogonal-modifier](../management-orthogonal-modifier/README.md)).
+It does not vary by
 **where the person is** — a ZIP code, city, or metro area. The idea under research: let a user
 enter a location and adjust the pay/benefits figures we show to reflect that market, while still
 accounting for remote roles where location may matter less (or not at all).
@@ -26,7 +29,7 @@ what would we need. See [research.md](research.md) for the findings.
 - The bigger problem isn't presence of a location string — it's that a lot of postings quote **one
   salary range across multiple locations** (common under CA/CO/NY/WA pay-transparency laws), so
   even where we have a location string, the number attached to it usually isn't location-resolved.
-- The existing tier×level grid is already thin in 32/360 cells (see
+- The existing tier×level grid is already thin in 31/340 cells (32/360 before the EM removal; see
   [thin-comp-cells-early-stage](../thin-comp-cells-early-stage/README.md)) for lack of anchors —
   adding a geography axis multiplies the grid and would make sparsity meaningfully worse without a
   different data strategy (e.g., leaning on public COLA/BLS indices rather than trying to source

@@ -1,4 +1,7 @@
-# CareerGuru — Master Plan
+# SWE Genie — Master Plan
+
+*(Written under the working name "CareerGuru" through Phase 4; renamed to SWE Genie per ADR-004.
+Title updated 2026-07-17, no other content in this doc rewritten for the rename.)*
 
 **Product:** A website that helps software engineers discover which engineering role archetypes
 (SWE, sales engineer, solutions architect, forward-deployed engineer, customer/support engineering,
@@ -14,9 +17,15 @@ them. The taxonomy is the product; the assessment is the delivery vehicle.
 rubric-based matcher (no black-box ML). v2 layers on crowdsourced refinement from
 LinkedIn-verified role-holders and hiring managers. The data model supports both from day one.
 
-**⚠ If you are an agent picking this up: read [`docs/HANDOFF.md`](docs/HANDOFF.md) first.** It
-has the current phase status, explicit authorization to run through Phase 5 unattended, open
-items to resolve without asking, and operational guardrails from a prior session's mistakes.
+**⚠ If you are an agent picking this up:** [`docs/HANDOFF.md`](docs/HANDOFF.md) is a **historical**
+overnight-session handoff written 2026-07-09, mid-Phase-2/3/5 — it ends with "stop, do not start
+Phase 6," which was true then, not now. The repo is 60+ commits past that point: Phase 5 shipped,
+the site is live at `www.swe-genie.com`, and multiple post-launch waves (comp-by-tier system,
+dark-theme redesign, Engineering Management archetype removal, corpus enrichment) have landed
+since. Read HANDOFF.md only for its operational guardrails (no-sub-agent-spawning, use Sonnet
+explicitly, write incrementally) — not for current phase status. For current state, check this
+file's checkboxes below plus `git log` and `docs/marketing/launch-day-checklist.md` (most recently
+verified against the live app).
 
 ---
 
@@ -27,7 +36,7 @@ Each phase below is a work package with: **Goal**, **Tasks**, **Deliverables**, 
 parallelized across agents. An agent picking up a task should read this file plus the deliverables
 of prior phases (all committed to this repo). Update the status checkboxes as work completes.
 
-**Repo layout (target):**
+**Repo layout (target, as originally planned):**
 
 ```
 /docs          — research, taxonomy spec, branding, UX specs, decisions (ADRs)
@@ -35,6 +44,14 @@ of prior phases (all committed to this repo). Update the status checkboxes as wo
 /app           — the web application
 /PLAN.md       — this file (keep status current)
 ```
+
+**What actually shipped (as of 2026-07-17):** `/taxonomy` stopped being the live data source
+partway through Phase 5 — the app reads from `app/data/*.json` instead (see
+`app/lib/taxonomy.ts`), and `/taxonomy`'s JSON files were never kept in sync after that (they
+still show 18 archetypes including a since-removed "Engineering Management" entry; the live app
+has 17). `taxonomy/scoring.md` is the one exception — it was kept current. Treat `app/data/` as
+the actual source of truth for archetypes/dimensions/questions; `/taxonomy`'s JSON is a stale
+Phase 1/2 snapshot, not a synced copy, despite what `app/README.md` may still say.
 
 ---
 
@@ -148,6 +165,16 @@ archetype scores on them.
       deferred to Phase 6's already-scheduled beta (which asks the same top-3 question at larger
       scale), not skipped.
 
+**Note (2026-07-17):** the dimension count above (16) and archetype count (18) are the Phase 2
+snapshot values, not current. Dimensions grew from 16 to 22 across two later splits
+(`docs/research/dimensions-v1.1-relationship-split.md`,
+`docs/research/dimensions-v1.2-teaching-split-and-domain-fluency.md`); archetypes dropped from 18
+to 17 when Engineering Management was removed as a standalone archetype (commit `b907fcf`,
+2026-07-16). `/taxonomy/archetypes.json` itself was partially updated (it's tagged `v1.5`,
+2026-07-11, and each entry does carry 22 dimension scores) but was never updated for the EM
+removal, so it still lists 18 archetypes — one more reason to treat `app/data/` as the live
+source rather than `/taxonomy/`, per the repo-layout note above.
+
 **Deliverables:** taxonomy JSON files, scoring spec, validation report
 (`/docs/research/validation-v1.md`).
 
@@ -239,9 +266,11 @@ trademark clearance) — not something an agent can complete autonomously.
 **Tasks:**
 - [x] App scaffold per ADR-002; taxonomy/questions loaded from the versioned JSON (taxonomy
       changes must not require code changes).
-      → Next.js App Router + TypeScript + Tailwind v4, per ADR-002. `app/data/*.json` are synced
-      copies of `/taxonomy/*.json` (see `app/README.md`'s sync note); all pages/lib read the JSON
-      generically (no hardcoded per-archetype logic).
+      → Next.js App Router + TypeScript + Tailwind v4, per ADR-002. `app/data/*.json` started as
+      synced copies of `/taxonomy/*.json`; that direction inverted over time — `app/data/` is now
+      the live, actively-maintained source (see the repo-layout note near the top of this file)
+      and `app/README.md`'s sync note is stale. All pages/lib read the JSON generically (no
+      hardcoded per-archetype logic).
 - [x] Scoring engine as a pure, unit-tested module implementing `/taxonomy/scoring.md`; tests
       encode the Phase 2 synthetic personas as fixtures.
       → `app/lib/scoring.ts` + `app/lib/scoring.test.ts` (16 tests, all passing); 9/10 personas
@@ -258,9 +287,16 @@ trademark clearance) — not something an agent can complete autonomously.
       dimensions), growth areas, full archetype detail pages, and a **shareable result card**
       (unique URL + OG image) — this is the growth mechanism, treat it as a core feature.
       → `app/app/results/page.tsx` (answers URL-encoded, no DB, per ADR-002/003),
-      `app/app/archetypes/[id]/page.tsx` (18 statically-generated pages), `app/app/api/og/route.tsx`
-      (dynamic OG card matching `docs/brand/identity.md`'s shareable-card spec — verified rendering
-      correctly in-browser after fixing a Satori multi-child-node bug).
+      `app/app/archetypes/[id]/page.tsx` (17 statically-generated pages as of the 2026-07-16
+      Engineering Management removal, 18 at the time this line was originally written).
+      **`app/app/api/og/route.tsx` (the dynamic OG card described here) no longer exists** — it
+      was removed when hosting moved from Vercel to static GitHub Pages, which can't run
+      server-side image generation (see `docs/deploy.md`). Sharing a result today is a plain
+      "copy link" button (`app/components/ShareBar.tsx`) with no generated image — the
+      **"shareable result card" growth mechanic described in `docs/brand/identity.md` never
+      shipped and isn't currently live**, despite this checkbox implying it was done. Rebuilding
+      it would need either restoring Vercel (or another server-capable host) or a build-time/
+      client-side image generation approach compatible with static export.
 - [x] Methodology page: how the taxonomy was built, sources, how scoring works, limitations.
       This is the trust anchor — publish the reasoning.
       → `app/app/methodology/page.tsx`, including the dilution-by-low-weight-agreement finding
@@ -283,11 +319,12 @@ trademark clearance) — not something an agent can complete autonomously.
 **Done when:** a stranger can complete the flow on a phone in <8 min and share a result URL;
 E2E tests green; Lighthouse ≥90 on performance/accessibility.
 → Golden path (landing → assessment → results → share) verified working manually, including on a
-mobile viewport; unit test suite green. **Not verified**: no production deployment exists yet (no
-hosting/domain credentials available to this session — same category of human-only blocker as
-ADR-004), so "on the production domain" and a real Lighthouse ≥90 score are both unconfirmed. This
-is the one honest gap in this phase's "Done when" bar — flagging clearly rather than claiming a
-number that was never actually measured.
+mobile viewport; unit test suite green. **Update (2026-07-17): now deployed and confirmed live**
+at `https://www.swe-genie.com` via GitHub Pages (see `docs/deploy.md`, `.github/workflows/deploy.yml`,
+repo-root `CNAME`) — the deployment blocker noted below is resolved. Homepage, assessment,
+methodology, and results pages were spot-checked working today. **Still not verified:** a real
+Lighthouse ≥90 score has never been measured against the production deployment — that part of the
+"Done when" bar remains an honest open gap, not a claimed-but-unmeasured number.
 
 ---
 
@@ -419,8 +456,9 @@ Options to evaluate against real usage data — deliberately not committed now:
 - One phase = one epic; tasks within a phase are the agent-sized units.
 - Research agents (Phases 1–2) must cite sources inline; uncited trait claims get rejected in
   cross-review.
-- Build agents (Phase 5) treat `/taxonomy/*.json` as the contract — schema changes require a
-  taxonomy version bump and an ADR.
+- Build agents treat **`app/data/*.json`** as the contract (not `/taxonomy/*.json` — that
+  directory stopped being kept in sync partway through Phase 5, see the repo-layout note near the
+  top of this file). Schema changes require a taxonomy version bump and an ADR.
 - Every phase ends with its "Done when" criteria checked by a *different* agent than the one
   that did the work.
 - Keep this file's checkboxes current; it is the single source of truth for project status.

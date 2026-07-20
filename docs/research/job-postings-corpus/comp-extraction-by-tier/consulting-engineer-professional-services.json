@@ -9,25 +9,67 @@
   },
   "grid": {
     "ai-labs": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "faang-mag7": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     },
     "high-growth-public": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": {
+        "count": 2,
+        "companyCount": 1,
+        "low": 101440,
+        "high": 169344,
+        "median": 134732,
+        "companies": [
+          "Axon"
+        ],
+        "points": [
+          {
+            "low": 101440,
+            "high": 162305,
+            "raw_match": "$101,440 &mdash; $162,305",
+            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $101,440 &mdash; $162,305 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Axon",
+            "title": "Implementation Engineer II, Fusus",
+            "location": "Seattle, Washington, United States",
+            "url": "https://job-boards.greenhouse.io/axon/jobs/6592819003",
+            "level_hint": "Junior/Associate",
+            "tier": "high-growth-public"
+          },
+          {
+            "low": 105840,
+            "high": 169344,
+            "raw_match": "$105,840 &mdash; $169,344",
+            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $105,840 &mdash; $169,344 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
+            "currency": "USD",
+            "is_ote": false,
+            "company": "Axon",
+            "title": "Implementation Engineer II, Fusus ",
+            "location": "Boston, Massachusetts, United States",
+            "url": "https://job-boards.greenhouse.io/axon/jobs/6592810003",
+            "level_hint": "Junior/Associate",
+            "tier": "high-growth-public"
+          }
+        ]
+      },
       "Mid (unspecified level)": {
-        "count": 16,
+        "count": 13,
         "companyCount": 5,
         "low": 66261,
         "high": 240000,
-        "median": 131642,
+        "median": 131410,
         "companies": [
           "Adyen",
           "Axon",
@@ -103,20 +145,6 @@
             "title": "Enterprise Implementation Consultant",
             "location": "Remote - US",
             "url": "https://www.samsara.com/company/careers/roles/7852948?gh_jid=7852948",
-            "level_hint": "Mid (unspecified level)",
-            "tier": "high-growth-public"
-          },
-          {
-            "low": 88979,
-            "high": 88979,
-            "raw_match": "$88,979",
-            "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $88,979.55 &mdash; $134,590.91 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our co",
-            "currency": "USD",
-            "is_ote": false,
-            "company": "Samsara",
-            "title": "Enterprise Implementation Consultant",
-            "location": "Remote - US",
-            "url": "https://www.samsara.com/company/careers/roles/7742566?gh_jid=7742566",
             "level_hint": "Mid (unspecified level)",
             "tier": "high-growth-public"
           },
@@ -231,34 +259,6 @@
             "url": "https://job-boards.greenhouse.io/axon/jobs/7776679003",
             "level_hint": "Mid (unspecified level)",
             "tier": "high-growth-public"
-          },
-          {
-            "low": 101440,
-            "high": 162305,
-            "raw_match": "$101,440 &mdash; $162,305",
-            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $101,440 &mdash; $162,305 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
-            "currency": "USD",
-            "is_ote": false,
-            "company": "Axon",
-            "title": "Implementation Engineer II, Fusus",
-            "location": "Seattle, Washington, United States",
-            "url": "https://job-boards.greenhouse.io/axon/jobs/6592819003",
-            "level_hint": "Mid (unspecified level)",
-            "tier": "high-growth-public"
-          },
-          {
-            "low": 105840,
-            "high": 169344,
-            "raw_match": "$105,840 &mdash; $169,344",
-            "context": "to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit https://www.axon.com/careers . Base Pay Range $105,840 &mdash; $169,344 USD Don\u2019t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse te",
-            "currency": "USD",
-            "is_ote": false,
-            "company": "Axon",
-            "title": "Implementation Engineer II, Fusus ",
-            "location": "Boston, Massachusetts, United States",
-            "url": "https://job-boards.greenhouse.io/axon/jobs/6592810003",
-            "level_hint": "Mid (unspecified level)",
-            "tier": "high-growth-public"
           }
         ]
       },
@@ -321,7 +321,8 @@
       "Principal/Director+ (Manager/VP)": null
     },
     "growth-stage-private": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": {
         "count": 3,
         "companyCount": 2,
@@ -435,12 +436,13 @@
       "Principal/Director+ (Manager/VP)": null
     },
     "early-stage": {
-      "Entry/Associate": null,
+      "Entry (New Grad)": null,
+      "Junior/Associate": null,
       "Mid (unspecified level)": null,
       "Senior/Staff": null,
       "Principal/Director+ (Manager/VP)": null
     }
   },
-  "totalUsdBasePoints": 32,
+  "totalUsdBasePoints": 31,
   "unclassifiedCompanyPoints": 7
 }

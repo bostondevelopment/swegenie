@@ -20,7 +20,16 @@ export const TIER_LABELS: Record<Tier, string> = {
   'early-stage': 'Early-stage',
 };
 
-export const LEVELS: readonly Level[] = ['L3', 'L4', 'L5', 'Staff'] as const;
+export const LEVELS: readonly Level[] = ['L1', 'L2', 'L3', 'L4', 'L5', 'Staff'] as const;
+
+export const LEVEL_YOE_LABELS: Record<Level, string> = {
+  L1: '0–1 yr',
+  L2: '1–3 yrs',
+  L3: '3–6 yrs',
+  L4: '6–10 yrs',
+  L5: '10–14 yrs',
+  Staff: '14+ yrs',
+};
 
 // Startup tiers carry illiquid equity and get the wide, fade-to-transparent
 // equity gradient plus a scenario callout slot.
@@ -47,14 +56,16 @@ export function sumBands(...bands: PercentileBand[]): PercentileBand {
   );
 }
 
+const ZERO_BAND: PercentileBand = { p10: 0, p25: 0, p50: 0, p75: 0, p90: 0 };
+
 // Total-compensation band for a single cell.
 export function totalComp(cell: CompCell): PercentileBand {
-  return sumBands(cell.base, cell.bonus, cell.equity.annualizedUSD);
+  return sumBands(cell.base, cell.bonus ?? ZERO_BAND, cell.equity?.annualizedUSD ?? ZERO_BAND);
 }
 
 // Guaranteed (base + bonus) band — the "certain" money.
 export function guaranteedComp(cell: CompCell): PercentileBand {
-  return sumBands(cell.base, cell.bonus);
+  return sumBands(cell.base, cell.bonus ?? ZERO_BAND);
 }
 
 // `$230k`, `$1.2M`. Compact, matches the existing font-mono comp labels.

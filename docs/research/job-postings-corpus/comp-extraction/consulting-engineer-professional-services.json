@@ -8,13 +8,13 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 42,
+    "totalPointsExtracted": 41,
     "usdBase": {
-      "count": 32,
+      "count": 31,
       "companyCount": 13,
       "low": 63000,
       "high": 288660,
-      "typical": 135712
+      "typical": 137124
     },
     "usdOte": {
       "count": 9,
@@ -30,22 +30,23 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
-        "count": 1,
-        "companyCount": 1,
+      "Junior/Associate": {
+        "count": 3,
+        "companyCount": 2,
         "low": 80200,
-        "high": 80200,
-        "typical": 80200,
+        "high": 169344,
+        "typical": 131872,
         "companies": [
+          "Axon",
           "Reply"
         ]
       },
       "Mid (unspecified level)": {
-        "count": 23,
+        "count": 20,
         "companyCount": 9,
         "low": 63000,
         "high": 240000,
-        "typical": 131872,
+        "typical": 132855,
         "companies": [
           "Adyen",
           "Axon",
@@ -84,7 +85,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 202
+    "totalPostingsScanned": 230
   },
   "dataPoints": [
     {
@@ -254,19 +255,6 @@
       "title": "Enterprise Implementation Consultant",
       "location": "Remote - US",
       "url": "https://www.samsara.com/company/careers/roles/7852948?gh_jid=7852948",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 88979,
-      "high": 88979,
-      "raw_match": "$88,979",
-      "context": "Please note that base pay offered may vary depending on factors including your city of residence, job-related knowledge, skills, and experience. Learn more about our total rewards and benefits below. Annual Base Salary $88,979.55 &mdash; $134,590.91 USD Total Rewards At Samsara, we build for the people who keep the global economy moving. We want owners, not passengers, which is why our rewards are designed to fuel high-impact builders. Our co",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Samsara",
-      "title": "Enterprise Implementation Consultant",
-      "location": "Remote - US",
-      "url": "https://www.samsara.com/company/careers/roles/7742566?gh_jid=7742566",
       "level_hint": "Mid (unspecified level)"
     },
     {
@@ -514,7 +502,7 @@
       "title": "Implementation Engineer II, Fusus",
       "location": "Seattle, Washington, United States",
       "url": "https://job-boards.greenhouse.io/axon/jobs/6592819003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 105840,
@@ -527,7 +515,7 @@
       "title": "Implementation Engineer II, Fusus ",
       "location": "Boston, Massachusetts, United States",
       "url": "https://job-boards.greenhouse.io/axon/jobs/6592810003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 150000,
@@ -553,7 +541,7 @@
       "title": "Associate Consultant - Ecosystem",
       "location": "Seattle, Washington",
       "url": "https://jobs.lever.co/reply/261476ed-d39f-4caf-b7e1-d3215110aa7b",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 110000,

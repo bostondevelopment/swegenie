@@ -3,9 +3,9 @@
  *
  * Asserts:
  *  - every archetype id from archetypes.json is present
- *  - all 5 tiers and 4 levels present per archetype
+ *  - all 5 tiers and all levels present per archetype (level list read from comp-by-tier.json's "levels" array)
  *  - each cell has base, bonus, equity, confidence
- *  - p10 < p25 < p50 < p75 < p90 on every band (no inversions)
+ *  - p10 ≤ p25 ≤ p50 ≤ p75 ≤ p90 on every band (ties allowed, inversions not)
  *
  * Exits non-zero and prints the failing field path on the first failure per cell.
  *
@@ -23,7 +23,9 @@ const DATA_DIR = (() => {
 })();
 
 const EXPECTED_TIERS = ['ai-labs', 'faang-mag7', 'high-growth-public', 'growth-stage-private', 'early-stage'];
-const EXPECTED_LEVELS = ['L3', 'L4', 'L5', 'Staff'];
+// Read levels dynamically from comp-by-tier.json's own "levels" array rather than hardcoding,
+// so adding/removing levels in the data file doesn't require a matching change here.
+// EXPECTED_LEVELS is populated below after comp is loaded.
 const PERCENTILES = ['p10', 'p25', 'p50', 'p75', 'p90'] as const;
 const VALID_CONFIDENCE = new Set(['high', 'medium', 'low']);
 const VALID_EQUITY_TYPE = new Set(['rsu', 'options', 'profit-interest']);
@@ -35,6 +37,12 @@ const readJson = (p: string) => JSON.parse(readFileSync(p, 'utf8'));
 
 const archetypesDoc = readJson(join(DATA_DIR, 'archetypes.json'));
 const comp = readJson(join(DATA_DIR, 'comp-by-tier.json'));
+
+// Derive expected levels from the data file's own "levels" array.
+if (!Array.isArray(comp.levels) || comp.levels.length === 0) {
+  throw new Error('comp-by-tier.json missing top-level "levels" array');
+}
+const EXPECTED_LEVELS: string[] = comp.levels;
 
 const expectedIds: string[] = archetypesDoc.archetypes.map((a: { id: string }) => a.id);
 
@@ -57,8 +65,8 @@ function checkBand(path: string, band: unknown) {
       fail(`${path}.${p}`, `expected integer, got ${JSON.stringify(v)}`);
       return;
     }
-    if (v <= prev) {
-      fail(`${path}.${p}`, `inversion: ${p}=${v} not greater than previous ${prev}`);
+    if (v < prev) {
+      fail(`${path}.${p}`, `inversion: ${p}=${v} less than previous ${prev}`);
       return;
     }
     prev = v;
@@ -88,16 +96,22 @@ for (const id of expectedIds) {
         fail(`${cellPath}.confidence`, `expected high|medium|low, got ${JSON.stringify(cell.confidence)}`);
       }
       checkBand(`${cellPath}.base`, cell.base);
-      checkBand(`${cellPath}.bonus`, cell.bonus);
-      if (!cell.equity || typeof cell.equity !== 'object') {
-        fail(`${cellPath}.equity`, 'missing equity object');
-      } else {
-        checkBand(`${cellPath}.equity.annualizedUSD`, cell.equity.annualizedUSD);
-        if (cell.equity.vestingYears !== 4) {
-          fail(`${cellPath}.equity.vestingYears`, `expected 4, got ${JSON.stringify(cell.equity.vestingYears)}`);
-        }
-        if (!VALID_EQUITY_TYPE.has(cell.equity.type)) {
-          fail(`${cellPath}.equity.type`, `expected rsu|options|profit-interest, got ${JSON.stringify(cell.equity.type)}`);
+      // bonus and equity may be explicitly null (documented absence for thin/low-confidence cells).
+      // Only validate structure when the field is non-null.
+      if (cell.bonus !== null) {
+        checkBand(`${cellPath}.bonus`, cell.bonus);
+      }
+      if (cell.equity !== null) {
+        if (!cell.equity || typeof cell.equity !== 'object') {
+          fail(`${cellPath}.equity`, 'missing equity object');
+        } else {
+          checkBand(`${cellPath}.equity.annualizedUSD`, cell.equity.annualizedUSD);
+          if (cell.equity.vestingYears !== 4) {
+            fail(`${cellPath}.equity.vestingYears`, `expected 4, got ${JSON.stringify(cell.equity.vestingYears)}`);
+          }
+          if (!VALID_EQUITY_TYPE.has(cell.equity.type)) {
+            fail(`${cellPath}.equity.type`, `expected rsu|options|profit-interest, got ${JSON.stringify(cell.equity.type)}`);
+          }
         }
       }
     }

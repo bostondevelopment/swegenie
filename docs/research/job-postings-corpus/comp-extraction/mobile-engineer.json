@@ -8,13 +8,13 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 99,
+    "totalPointsExtracted": 90,
     "usdBase": {
-      "count": 82,
-      "companyCount": 22,
+      "count": 73,
+      "companyCount": 21,
       "low": 105000,
       "high": 395400,
-      "typical": 180000
+      "typical": 180500
     },
     "usdOte": {
       "count": 11,
@@ -30,12 +30,22 @@
       ]
     },
     "byLevel": {
+      "Junior/Associate": {
+        "count": 5,
+        "companyCount": 1,
+        "low": 125000,
+        "high": 175000,
+        "typical": 150000,
+        "companies": [
+          "Whoop"
+        ]
+      },
       "Mid (unspecified level)": {
-        "count": 33,
-        "companyCount": 10,
+        "count": 22,
+        "companyCount": 9,
         "low": 105000,
         "high": 265000,
-        "typical": 150000,
+        "typical": 159500,
         "companies": [
           "Applied Intuition",
           "Cisco",
@@ -44,17 +54,16 @@
           "Robinhood",
           "SoundCloud",
           "Thumbtack",
-          "WHOOP",
           "Wealthfront",
           "Whoop"
         ]
       },
       "Senior/Staff": {
-        "count": 47,
-        "companyCount": 16,
+        "count": 44,
+        "companyCount": 15,
         "low": 115000,
         "high": 395400,
-        "typical": 195000,
+        "typical": 196375,
         "companies": [
           "Applied Intuition",
           "Block",
@@ -69,7 +78,6 @@
           "Twitch",
           "VSCO",
           "Via",
-          "WHOOP",
           "Wealthfront",
           "Whoop"
         ]
@@ -86,7 +94,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 213
+    "totalPostingsScanned": 202
   },
   "dataPoints": [
     {
@@ -542,7 +550,7 @@
       "title": "Android Engineer II (Client Platform)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/9c412c23-5fb2-40f9-93d9-0b3e2626f14b",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -555,7 +563,7 @@
       "title": "Android Engineer II (Hardware Accelerate)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/24c606ac-d62a-48a4-9e94-65d3cde1a77a",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -568,7 +576,7 @@
       "title": "iOS Engineer II (AI Experiences)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/ac5d06b2-ff4a-416c-8e60-bcbbfed730fd",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -581,7 +589,7 @@
       "title": "iOS Engineer II (Growth)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/1d1624b4-3df7-46cf-96c9-9d8f48e46497",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 125000,
@@ -594,7 +602,7 @@
       "title": "iOS Engineer II (Healthcare)",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/b6f23280-9155-466f-9970-d915b9aadeaa",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 150000,
@@ -1218,7 +1226,7 @@
       "title": "Software Engineer II (Mobile Developer - Android/Kotlin) - Mobile App Growth",
       "location": "Boston, MA",
       "url": "https://www.klaviyo.com/careers/jobs/7792539003?gh_jid=7792539003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 115000,
@@ -1258,123 +1266,6 @@
       "location": "New York, New York",
       "url": "https://job-boards.greenhouse.io/via/jobs/7789696002",
       "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 105000,
-      "high": 145000,
-      "raw_match": "$105,000-$145,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $105,000-$145,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Android Engineer",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/2910a5f6-fb5e-4fe6-bb9a-24d6995d8173",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 150000,
-      "high": 210000,
-      "raw_match": "$150,000-$210,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000-$210,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior iOS Engineer (Healthcare)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/45dafa9c-82cf-49a3-951f-fde5f5c8678e",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000-$215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000-$215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior iOS Engineer (Core)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/5b653a47-3ac1-4209-9cef-9838409bb8ed",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000-$175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000-$175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Android Engineer II (Hardware Accelerate)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/5cbd207e-5b83-41c3-b838-576bb14d20a7",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000-$175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000-$175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Android Engineer II (Client Platform)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/6e4a2193-a5f9-43e2-8ce0-95ed984e6896",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000-$175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000-$175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "iOS Engineer II (Growth)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/830fad88-fa14-43d2-9c9e-79012d52d557",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 170000,
-      "high": 230000,
-      "raw_match": "$170,000-$230,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $170,000-$230,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Staff iOS Engineer (Connectivity)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/9d2e1771-9429-4df4-a6c7-b407f88c381f",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000-$175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000-$175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "iOS Engineer II (AI Experiences)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/a666b129-e43b-4146-b30c-3d77a3d33f01",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000-$175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000-$175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "iOS Engineer II (Healthcare)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/f2d4f3d8-5e63-443d-aa93-552b8d17ba7e",
-      "level_hint": "Mid (unspecified level)"
     }
   ]
 }

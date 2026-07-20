@@ -1,0 +1,8 @@
+{
+  "archetypeId": "sre-production-engineer",
+  "tier": "ai-labs",
+  "level": "L1",
+  "title": "OpenAI Salaries | Levels.fyi",
+  "url": "https://www.levels.fyi/companies/openai/salaries/",
+  "note": "SWE total comp: L2 $249K, L3 $338K. Used to calibrate ai-labs junior-to-mid level ratios; SRE extrapolated from SWE with a modest discount. No SRE-specific level data is published for OpenAI."
+}

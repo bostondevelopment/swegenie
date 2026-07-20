@@ -198,7 +198,7 @@ export function CompareSelectedArchetypes({ columns, tier, level }: CompareSelec
               className="border-l border-[var(--color-border)] px-4 sm:px-[22px] py-3 sm:py-4 font-mono text-[13px] sm:text-[15px] tabular-nums"
               style={DATA_CELL_STYLE}
             >
-              {formatUSD(col.data[tier][level].equity.annualizedUSD.p50)}
+              {col.data[tier][level].equity ? formatUSD(col.data[tier][level].equity!.annualizedUSD.p50) : '—'}
             </div>
           ))}
         </CompareRow>
@@ -368,7 +368,7 @@ function CompactJobPosting({
 
 function guaranteedVsEquityMix(cell: CompCell): { guarPct: number; equityPct: number } {
   const guaranteed = guaranteedComp(cell).p50;
-  const equity = cell.equity.annualizedUSD.p50;
+  const equity = cell.equity?.annualizedUSD.p50 ?? 0;
   const sum = guaranteed + equity || 1;
   const guarPct = Math.round((guaranteed / sum) * 100);
   return { guarPct, equityPct: 100 - guarPct };

@@ -8,10 +8,10 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 156,
+    "totalPointsExtracted": 151,
     "usdBase": {
-      "count": 136,
-      "companyCount": 76,
+      "count": 131,
+      "companyCount": 75,
       "low": 71000,
       "high": 405500,
       "typical": 171450
@@ -31,26 +31,27 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
-        "count": 3,
-        "companyCount": 3,
+      "Junior/Associate": {
+        "count": 5,
+        "companyCount": 5,
         "low": 71000,
-        "high": 132250,
-        "typical": 98000,
+        "high": 214500,
+        "typical": 115000,
         "companies": [
+          "Abnormal Security",
           "Boeing",
           "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
+          "Relativity Space",
           "Rockstar Games"
         ]
       },
       "Mid (unspecified level)": {
-        "count": 41,
-        "companyCount": 30,
+        "count": 37,
+        "companyCount": 28,
         "low": 81200,
         "high": 400000,
         "typical": 155000,
         "companies": [
-          "Abnormal Security",
           "Airbnb",
           "Allstate",
           "Anduril Industries",
@@ -70,7 +71,6 @@
           "Nextdoor",
           "Palantir Technologies",
           "Partiful",
-          "Relativity Space",
           "Reply",
           "Roboflow",
           "Salesforce",
@@ -83,11 +83,11 @@
         ]
       },
       "Senior/Staff": {
-        "count": 83,
-        "companyCount": 50,
+        "count": 80,
+        "companyCount": 49,
         "low": 79400,
         "high": 405500,
-        "typical": 175050,
+        "typical": 175025,
         "companies": [
           "1Password",
           "AT&T",
@@ -133,7 +133,6 @@
           "Stryker",
           "Twilio",
           "Valtech",
-          "WHOOP",
           "Waabi",
           "Waymark",
           "Whoop",
@@ -157,7 +156,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 414
+    "totalPostingsScanned": 400
   },
   "dataPoints": [
     {
@@ -574,7 +573,7 @@
       "title": "Software Engineer II - Cloud Infrastructure Engineer",
       "location": "Remote - USA",
       "url": "https://abnormal.ai/careers/jobs/7782567003?gh_jid=7782567003",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 130000,
@@ -1042,7 +1041,7 @@
       "title": "Associate DevOps Engineer",
       "location": "Manhattan, New York, United States",
       "url": "https://job-boards.greenhouse.io/rockstargames/jobs/7791031003",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 131400,
@@ -1094,7 +1093,7 @@
       "title": "Infrastructure Engineer II",
       "location": "Cape Canaveral, Florida",
       "url": "https://boards.greenhouse.io/relativity/jobs/8608644002?gh_jid=8608644002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 122000,
@@ -1409,19 +1408,6 @@
       "level_hint": "Mid (unspecified level)"
     },
     {
-      "low": 147050,
-      "high": 230850,
-      "raw_match": "$147,050 to $230,850",
-      "context": "intended to be an exhaustive list of all duties, skills, responsibilities, knowledge, etc. These may be subject to change and additional functions may be assigned as needed by management. The pay range for this role is $147,050 to $230,850 USD annually with additional opportunities for pay in the form of bonus and/or equity (applies to United States of America candidates only). Pay varies by work location, job-related knowledge, skills, and experience. Be",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "HP",
-      "title": "Public Cloud Engineer",
-      "location": "2 Locations",
-      "url": "https://hp.wd5.myworkdayjobs.com/ExternalCareerSite/job/Tlaquepaque-Jalisco-Mexico/Public-Cloud-Engineer_3165121-1",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 105050,
       "high": 161800,
       "raw_match": "$105,050 to $161,800",
@@ -1562,7 +1548,7 @@
       "title": "Advanced Information Technologist \u2013 Associate Cloud Engineer",
       "location": "USA - Hazelwood, MO",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Hazelwood-MO/Advanced-Information-Technologist---Associate-Cloud-Engineer_JR2026494282",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 140250,
@@ -1679,7 +1665,7 @@
       "title": "Jr DevOps Engineer",
       "location": "2 Locations",
       "url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/USA-VA-Springfield/Jr-DevOps-Engineer_RQ223735-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 158855,
@@ -1955,19 +1941,6 @@
       "level_hint": "Mid (unspecified level)"
     },
     {
-      "low": 120000,
-      "high": 140000,
-      "raw_match": "$120,000 - $140,000",
-      "context": "paradigms of AI, cloud computing, digital media and the Internet of Things. Reply services include Consulting, System Integration and Digital Services. The base compensation range for this full-time position is between $120,000 - $140,000 plus benefits. Compensation decisions are supported through market data, where regional variances may exist based on cost of labor. We also take into consideration prior experience, relevant skills, education and/or tra",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Reply",
-      "title": "DevOps Engineer",
-      "location": "Seattle, Washington",
-      "url": "https://jobs.lever.co/reply/ee98566c-94d3-4ffb-855b-bcea77f9b5ed",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
       "low": 190000,
       "high": 240000,
       "raw_match": "$190,000-$240,000",
@@ -2072,32 +2045,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Platform Engineer -  Kubernetes",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/4f13bbd1-4315-48d7-9bb0-003f7466ee00",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Platform Engineer (Kubernetes, Application Infrastructure)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/a78d74bf-35c7-4a66-8ec8-b1b7c35ce840",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 116475,
       "high": 174712,
       "raw_match": "$116,475 &mdash; $174,712",
@@ -2134,19 +2081,6 @@
       "title": "Senior DevOps Engineer",
       "location": "United States (Remote)",
       "url": "https://www.five9.com/about/careers/job-detail?gh_jid=5632588004",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 90000,
-      "high": 250300,
-      "raw_match": "$90,000 &mdash; $250,300",
-      "context": "All compensation and benefits are subject to the requirements and restrictions set forth in the applicable plan documents and any written agreements between the parties. The US base salary range for this role is below. $90,000 &mdash; $250,300 USD Five9 embraces diversity and is committed to building a team that represents a variety of backgrounds, perspectives, and skills. The more inclusive we are, the better we are. Five9 is an equal opportunity employer.",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Five9",
-      "title": "Senior DevOps Engineer",
-      "location": "United States (Remote)",
-      "url": "https://www.five9.com/about/careers/job-detail?gh_jid=5831990004",
       "level_hint": "Senior/Staff"
     },
     {

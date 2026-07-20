@@ -1,6 +1,8 @@
 # Positioning
 
-**Status:** Draft — Phase 4. Product name pending human confirmation (see ADR-004).
+**Status:** Draft — Phase 4. Product name confirmed as **SWE Genie** (2026-07-11, see ADR-004);
+everything below still describes the intended positioning and hasn't been re-verified word-for-word
+against the live site's copy.
 
 ## One-liner
 

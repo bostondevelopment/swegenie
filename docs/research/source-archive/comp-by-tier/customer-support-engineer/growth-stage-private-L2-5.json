@@ -1,0 +1,8 @@
+{
+  "archetypeId": "customer-support-engineer",
+  "tier": "growth-stage-private",
+  "level": "L2",
+  "title": "Drata Associate Technical Support Engineer - Mexico",
+  "url": "https://jobs.ashbyhq.com/drata/7d505347-c5fb-4351-b57d-75a9ea654fcf",
+  "note": "DATA-QUALITY BUG: extraction tagged this posting's pay as USD $382,500, but the raw context text explicitly states 'MX$382,500 - MX$500,000' (Mexican pesos, ~$19K-$25K USD equivalent). Excluded from grounding evidence; flagging for a corpus-extraction-layer fix, not just this synthesis."
+}

@@ -1,12 +1,12 @@
 {
   "wave_id": "2026-07",
   "harvested_at": "2026-07-11",
-  "company_count": 744,
-  "posting_count": 67956,
+  "company_count": 745,
+  "posting_count": 68076,
   "ats_breakdown": {
     "greenhouse": 417,
     "ashby": 189,
-    "lever": 88,
+    "lever": 89,
     "workday": 50
   }
 }

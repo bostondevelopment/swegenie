@@ -95,26 +95,26 @@ audience. Good fallback, not the lead.
 Stackshift (saturated), Archfit (dual collision), Rolelens (likely taken), Archetype.dev (direct
 collision).
 
-## What still needs human sign-off before this is final
+## Domain — resolved 2026-07-17
 
-1. **Real domain availability check** (WHOIS, not search-engine guessing) for `swegenie.com`,
-   `.dev`, `.io`, and `.ai` — pick based on availability + price, `.com` preferred if free/cheap.
-2. **Handle checks**: GitHub org, X/Twitter, LinkedIn company page for "swegenie" (or close
-   variants if taken).
-3. **Trademark sanity screen** — at minimum a USPTO TESS search in software/career-services
-   classes.
-4. **Purchase/registration** — not to be done by an agent; needs a human with payment
-   credentials and legal authority to commit the org to a brand name.
-5. **Fallback plan** — if `swegenie.*` fails diligence, that's a decision for the human to make
-   (variant spelling, different TLD, or a fresh name entirely) — don't default silently back to
-   Roleprint or the ADR-001 placeholder without a new decision record.
+1. **Domain is registered and live:** `www.swe-genie.com` (note the hyphen — not the unhyphenated
+   `swegenie.com` this ADR originally evaluated) is the real, purchased, DNS-resolving domain,
+   confirmed via the repo-root `CNAME` file and the GitHub Pages deploy workflow
+   (`.github/workflows/deploy.yml`). `app/app/layout.tsx`'s `metadataBase` uses
+   `https://www.swe-genie.com` directly — the `swegenie.example` placeholder mentioned below no
+   longer exists anywhere in the codebase.
+2. **Handle checks (GitHub org, X/Twitter, LinkedIn) and a formal trademark screen were never
+   independently re-verified by an agent** — whether the human did this diligence outside the
+   repo is unknown from the repo alone. Not blocking anything currently live, but worth confirming
+   directly with the human if it matters (e.g., before any paid marketing spend or trademark-
+   sensitive move).
+3. **Purchase/registration is done** — the domain is live and serving traffic, so this line item
+   from the original draft is complete regardless of what diligence preceded it.
 
 ## Consequences
 
-- The **name** "SWE Genie" is confirmed and safe to use everywhere in app code, copy, and docs
-  (done as of the 2026-07-11 rebrand sweep — see the commit that introduced this update) —
-  unlike the original Roleprint draft, this one didn't need to wait, since it came from the human
-  directly rather than an autonomous recommendation needing confirmation.
-- The **domain/handles/trademark** are not confirmed — `metadataBase`, ADR references, etc. use a
-  placeholder (`swegenie.example`) until a human completes the checks in the section above and
-  this ADR is updated with the real registered domain.
+- The **name** "SWE Genie" is confirmed and used everywhere in app code, copy, and docs (done as
+  of the 2026-07-11 rebrand sweep).
+- The **domain** is confirmed and live: `www.swe-genie.com`. `metadataBase` and every other
+  reference in the codebase use the real domain, not a placeholder — the "still needs a real
+  domain" caveat that used to live in this section is resolved.

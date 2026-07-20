@@ -1,5 +1,13 @@
 # Trait Dimensions — Synthesis (Phase 2)
 
+**Superseded in part (2026-07-17):** this is a frozen Phase 2 snapshot. The 16-dimension set
+documented below was the actual v1.0 output at the time and this document's merge/drop rationale
+is still the accurate history — but the live dimension count has since grown to **22** (10
+skill, 12 preference) across two later splits documented in
+`docs/research/dimensions-v1.1-relationship-split.md` and
+`docs/research/dimensions-v1.2-teaching-split-and-domain-fluency.md`. `app/data/dimensions.json`
+is the current live set; treat the "Final list (16)" below as historical, not current.
+
 **Status:** Final v1.0 dimension set, synthesized from five parallel cluster drafts.
 **Input drafts:** `dimensions-draft-swe-infra.md`, `dimensions-draft-mobile-embedded-security.md`,
 `dimensions-draft-sales-sa-fde.md`, `dimensions-draft-support-cs-devrel.md`,

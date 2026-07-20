@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react';
 import type { ArchetypeCompData, Level, Tier } from './comp.types';
-import { LEVELS, TIER_LABELS, TIER_ORDER, formatUSD, totalComp } from './comp.utils';
+import { LEVEL_YOE_LABELS, LEVELS, TIER_LABELS, TIER_ORDER, formatUSD, totalComp } from './comp.utils';
 import { CompRangeBar } from './CompRangeBar';
 
 interface TierCompChartProps {
@@ -16,7 +16,7 @@ interface TierCompChartProps {
 // Five stacked total-comp range bars (one per tier) with a level selector and a
 // tier-focus filter. Pure SVG/CSS — no external charting library.
 export function TierCompChart({ archetypeId, data, defaultLevel, userLevel }: TierCompChartProps) {
-  const [level, setLevel] = useState<Level>(userLevel ?? defaultLevel ?? 'L4');
+  const [level, setLevel] = useState<Level>(userLevel ?? defaultLevel ?? 'L3');
   const [focusedTier, setFocusedTier] = useState<Tier | null>(null);
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
@@ -68,7 +68,10 @@ export function TierCompChart({ archetypeId, data, defaultLevel, userLevel }: Ti
                   : 'text-[var(--color-muted)] hover:text-[var(--color-fg)]'
               }`}
             >
-              {lvl}
+              <span className="flex flex-col items-center leading-tight">
+                <span>{lvl}</span>
+                <span className="text-[10px] font-normal opacity-70">{LEVEL_YOE_LABELS[lvl]}</span>
+              </span>
             </button>
           );
         })}

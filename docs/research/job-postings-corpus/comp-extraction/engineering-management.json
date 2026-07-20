@@ -8,13 +8,13 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 358,
+    "totalPointsExtracted": 356,
     "usdBase": {
-      "count": 286,
-      "companyCount": 111,
+      "count": 284,
+      "companyCount": 110,
       "low": 117000,
       "high": 457970,
-      "typical": 235125
+      "typical": 235750
     },
     "usdOte": {
       "count": 56,
@@ -31,7 +31,7 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
+      "Entry (New Grad)": {
         "count": 2,
         "companyCount": 2,
         "low": 183040,
@@ -42,9 +42,19 @@
           "Pinterest"
         ]
       },
+      "Junior/Associate": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 154700,
+        "high": 260000,
+        "typical": 207350,
+        "companies": [
+          "Samsara"
+        ]
+      },
       "Mid (unspecified level)": {
-        "count": 179,
-        "companyCount": 78,
+        "count": 177,
+        "companyCount": 76,
         "low": 117000,
         "high": 430000,
         "typical": 212000,
@@ -107,7 +117,6 @@
           "Roblox",
           "Roku",
           "Runway",
-          "Samsara",
           "Scale AI",
           "SeatGeek",
           "Sentry",
@@ -120,7 +129,6 @@
           "Vercel",
           "Via",
           "Virta Health",
-          "WHOOP",
           "Wealthfront",
           "Whoop",
           "Zenput",
@@ -130,11 +138,11 @@
         ]
       },
       "Senior/Staff": {
-        "count": 71,
-        "companyCount": 38,
+        "count": 70,
+        "companyCount": 37,
         "low": 125000,
         "high": 451600,
-        "typical": 252700,
+        "typical": 253000,
         "companies": [
           "Affirm",
           "Aurora Innovation",
@@ -171,7 +179,6 @@
           "Semgrep",
           "Skydio",
           "VSCO",
-          "WHOOP",
           "Whoop",
           "Zwift"
         ]
@@ -211,7 +218,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 803
+    "totalPostingsScanned": 791
   },
   "dataPoints": [
     {
@@ -823,7 +830,7 @@
       "title": "Engineering Manager I, Threat Detection",
       "location": "New York, New York, USA",
       "url": "https://careers.datadoghq.com/detail/7958663/?gh_jid=7958663",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 137000,
@@ -2721,7 +2728,7 @@
       "title": "Engineering Manager II",
       "location": "Remote - CA",
       "url": "https://www.samsara.com/company/careers/roles/7801077?gh_jid=7801077",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 200000,
@@ -3241,7 +3248,7 @@
       "title": "Engineering Manager I, Innovative Ad Formats",
       "location": "San Francisco, CA, US; Palo Alto, CA, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7684573",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 208592,
@@ -4801,32 +4808,6 @@
       "title": "Engineering Manager, Remix",
       "location": "New York",
       "url": "https://job-boards.greenhouse.io/via/jobs/8587325002",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 170000,
-      "high": 230000,
-      "raw_match": "$170,000 - $230,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $170,000 - $230,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Software Engineering Manager, Product Security",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/7c32b3ec-5f4a-4c32-97bb-9f07117cde76",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Software Engineering Manager (Client Platform)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/c33100f1-b972-4a95-80a9-d1d03f48419d",
       "level_hint": "Mid (unspecified level)"
     },
     {

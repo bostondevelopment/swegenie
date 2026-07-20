@@ -12,3 +12,4 @@ docs/research/job-postings-corpus/seen_postings_index.jsonl
 
 __pycache__/
 *.pyc
+.DS_Store

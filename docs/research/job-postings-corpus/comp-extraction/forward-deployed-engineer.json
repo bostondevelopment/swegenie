@@ -8,13 +8,13 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 98,
+    "totalPointsExtracted": 97,
     "usdBase": {
-      "count": 87,
+      "count": 86,
       "companyCount": 27,
       "low": 53300,
       "high": 350000,
-      "typical": 185500
+      "typical": 185375
     },
     "usdOte": {
       "count": 9,
@@ -30,7 +30,7 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
+      "Entry (New Grad)": {
         "count": 3,
         "companyCount": 1,
         "low": 135000,
@@ -66,11 +66,11 @@
         ]
       },
       "Senior/Staff": {
-        "count": 41,
+        "count": 40,
         "companyCount": 13,
         "low": 53300,
         "high": 306000,
-        "typical": 216000,
+        "typical": 213000,
         "companies": [
           "Applied Intuition",
           "Cloudflare",
@@ -100,7 +100,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 424
+    "totalPostingsScanned": 413
   },
   "dataPoints": [
     {
@@ -546,19 +546,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 185000,
-      "high": 254000,
-      "raw_match": "$185,000 - $254,000",
-      "context": "n-source contributions, technical blogging, or speaking engagements at industry conferences. Compensation Compensation may be adjusted depending on work location. For Seattle Area based hires: Estimated annual salary of $185,000 - $254,000 Equity This role is eligible to participate in Cloudflare\u2019s equity plan. Benefits Cloudflare offers a complete package of benefits and programs to support you and your family.&nbsp; Our benefits programs can help you pa",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Cloudflare",
-      "title": "Senior Forward Deployed Engineer",
-      "location": "Hybrid",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7731685?gh_jid=7731685",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 179400,
       "high": 224250,
       "raw_match": "$179,400 &mdash; $224,250",
@@ -816,7 +803,7 @@
       "title": "Forward Deployed Software Engineer, New Grad - Commercial",
       "location": "New York, NY",
       "url": "https://jobs.lever.co/palantir/2e6b0ac8-83e9-4be5-a3aa-cf319f751728",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 135000,
@@ -829,7 +816,7 @@
       "title": "Forward Deployed Software Engineer, New Grad - Intel, US Government",
       "location": "Washington, D.C.",
       "url": "https://jobs.lever.co/palantir/fbca0358-083a-4222-bdbb-3bd729b48382",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 135000,
@@ -842,7 +829,7 @@
       "title": "Forward Deployed Software Engineer, New Grad - US Government",
       "location": "Washington, D.C.",
       "url": "https://jobs.lever.co/palantir/cbe90327-3e6e-451c-a54c-1d3cbcef5aeb",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 185000,

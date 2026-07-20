@@ -57,16 +57,45 @@ COMP_BY_TIER_PATH = DATA_DIR / "comp-by-tier.json"
 ARCHETYPES_PATH = DATA_DIR / "archetypes.json"
 
 TIERS = ["ai-labs", "faang-mag7", "high-growth-public", "growth-stage-private", "early-stage"]
-LEVELS = ["L3", "L4", "L5", "Staff"]
+LEVELS = ["L1", "L2", "L3", "L4", "L5", "Staff"]
 
-# Same 4 buckets extract-comp-signals.py and extract-comp-signals-by-tier.py both use for
-# byLevel/level_hint. Ordinal mapping onto the L3/L4/L5/Staff scheme comp-by-tier.json uses --
-# inferred from ascending seniority order (both are 4-bucket schemes), not from any existing
-# mapping table (none exists in the repo). If this mapping is wrong, fix it here in one place.
+# Buckets extract-comp-signals.py and extract-comp-signals-by-tier.py both use for
+# byLevel/level_hint. The title-regex layer only distinguishes 5 seniority buckets, one fewer
+# than the 6 tier levels, so exactly one tier level can never get direct extraction signal no
+# matter how the other 5 are assigned -- "Senior/Staff" alone can't tell L4/senior-IC apart from
+# L5/staff-track (that's the same conflation tracked separately in
+# docs/future-work/staff-bucket-leveling-split/README.md; not re-solved here).
+#
+# Given that, L1/L2/L3/L4/Staff are assigned to the extraction bucket whose real-world
+# composition best matches each level's YOE band (per docs/future-work/entry-level-l1-l2-tiers/
+# TAXONOMY-PROPOSAL.md Sec 5), leaving L5 (10-14yr, "staff-track") as the one with no direct
+# bucket -- deliberately, not arbitrarily:
+#   - "Mid (unspecified level)" fires when a title has NO seniority keyword at all. Companies
+#     overwhelmingly add "Senior" once someone is senior-track, so an unqualified title reads
+#     much closer to L3 (3-6yr, "fully independent, not yet senior") than L4 (6-10yr, "senior
+#     IC") -- mapping it to L4 would mislabel a large population of mid-level postings as
+#     senior. L3 is also the level TAXONOMY-PROPOSAL.md actually anchored with evidence, so
+#     it's the level most worth keeping populated.
+#   - "Senior/Staff" is dominated by volume by the "Senior" keyword, not "Staff" -- industry
+#     data (levels.fyi's standard leveling guide) puts Senior at roughly 5-10yr and ~30% of
+#     engineers, vs. Staff at a much rarer <3% of engineers spanning a wider 5-15yr+ range. L4
+#     (6-10yr) is the closer single-level fit for what this bucket actually contains than L5
+#     (10-14yr) is.
+#   - "Principal/Director+ (Manager/VP)" stays mapped to Staff (14+): Principal Engineer is
+#     15+yr and Director is typically 8-10yr plus management tenure per the same levels.fyi
+#     leveling guide, so the bucket skews toward Staff's upper range even though Director alone
+#     understates it -- the VP/Director/Principal/Distinguished conflation at the top is the
+#     pre-existing, separately-tracked staff-bucket-leveling-split problem, not something to
+#     fix by picking a different target level here.
+# L5 ends up the blind level as a result -- it's also the level TAXONOMY-PROPOSAL.md explicitly
+# flagged as an unresearched placeholder, so landing the gap there (not on L3) is the better
+# trade. Real L5 signal still arrives via Phase 2/3's corpus tier-bucketing and gapfill research,
+# same as any other cell. If this mapping is wrong, fix it here in one place.
 EXTRACTION_LEVEL_TO_TIER_LEVEL = {
-    "Entry/Associate": "L3",
-    "Mid (unspecified level)": "L4",
-    "Senior/Staff": "L5",
+    "Entry (New Grad)": "L1",
+    "Junior/Associate": "L2",
+    "Mid (unspecified level)": "L3",
+    "Senior/Staff": "L4",
     "Principal/Director+ (Manager/VP)": "Staff",
 }
 
@@ -83,12 +112,20 @@ def confidence_for_company_count(count):
 
 
 def synthesize_comp_structure():
+    live_archetype_ids = {a["id"] for a in json.loads(ARCHETYPES_PATH.read_text())["archetypes"]}
     entries = []
     for fp in sorted(EXTRACTION_DIR.glob("*.json")):
         if fp.name == "_OVERVIEW.json":
             continue
         data = json.loads(fp.read_text())
         archetype_id = data["archetypeId"]
+        if archetype_id not in live_archetype_ids:
+            # classify.py's rubric can carry corpus-only classification buckets (e.g. a
+            # retired standalone archetype kept for research signal) that never made it into
+            # -- or were deliberately dropped from -- app/data/archetypes.json; comp-structure.json
+            # only ever reflects the live app taxonomy.
+            print(f"  skip {archetype_id}: not in app/data/archetypes.json (corpus-only bucket)")
+            continue
         usd_base = data["summary"]["usdBase"]
         if not usd_base.get("count"):
             print(f"  skip {archetype_id}: no usdBase points extracted")
@@ -131,16 +168,44 @@ def flat_percentile_band(low, median, high):
     return {"p10": low, "p25": p25, "p50": median, "p75": p75, "p90": high}
 
 
-def seed_new_archetype_grid(comp_structure_entry):
+def flat_cell(comp_structure_entry):
     band = flat_percentile_band(
         comp_structure_entry["low"], comp_structure_entry["typical"], comp_structure_entry["high"]
     )
-    cell = {"confidence": "low", "base": band, "bonus": None, "equity": None}
-    return {tier: {level: dict(cell, base=dict(band)) for level in LEVELS} for tier in TIERS}
+    return {"confidence": "low", "base": band, "bonus": None, "equity": None}
+
+
+def seed_new_archetype_grid(comp_structure_entry):
+    return {tier: {level: flat_cell(comp_structure_entry) for level in LEVELS} for tier in TIERS}
+
+
+def add_missing_level_cells(comp_by_tier, comp_structure_by_id):
+    # Handles the case where LEVELS has grown (e.g. L1/L2 added) since an archetype's grid was
+    # last written: existing archetypes keep whatever tier x level cells they already have, and
+    # only the newly-missing levels get a flat low-confidence placeholder, same construction as
+    # seed_new_archetype_grid uses for a brand-new archetype -- gapfill.js replaces these with
+    # researched numbers same as any other "low" cell.
+    added = []
+    for archetype_id, entry in comp_by_tier["archetypes"].items():
+        cs_entry = comp_structure_by_id.get(archetype_id)
+        cells_added = 0
+        for tier in TIERS:
+            tier_cells = entry.setdefault(tier, {})
+            for level in LEVELS:
+                if level in tier_cells:
+                    continue
+                if cs_entry is None:
+                    continue  # no extraction data to seed from -- leave level absent
+                tier_cells[level] = flat_cell(cs_entry)
+                cells_added += 1
+        if cells_added:
+            added.append((archetype_id, cells_added))
+    return added
 
 
 def synthesize_comp_by_tier(changed_archetypes, comp_structure_entries):
     comp_by_tier = json.loads(COMP_BY_TIER_PATH.read_text())
+    comp_by_tier["levels"] = LEVELS
     archetype_ids = [a["id"] for a in json.loads(ARCHETYPES_PATH.read_text())["archetypes"]]
     comp_structure_by_id = {e["archetypeId"]: e for e in comp_structure_entries}
 
@@ -167,6 +232,8 @@ def synthesize_comp_by_tier(changed_archetypes, comp_structure_entries):
         comp_by_tier["archetypes"][archetype_id] = seed_new_archetype_grid(cs_entry)
         seeded.append(archetype_id)
 
+    level_cells_added = add_missing_level_cells(comp_by_tier, comp_structure_by_id)
+
     COMP_BY_TIER_PATH.write_text(json.dumps(comp_by_tier, indent=2) + "\n")
 
     print(f"\nWrote {COMP_BY_TIER_PATH.relative_to(REPO_ROOT)}.")
@@ -175,10 +242,14 @@ def synthesize_comp_by_tier(changed_archetypes, comp_structure_entries):
         for archetype_id, n in downgraded:
             print(f"  {archetype_id:45s} {n} cells")
     if seeded:
-        print("Seeded fresh 20-cell low-confidence grid for brand-new archetypes:")
+        print(f"Seeded fresh {len(TIERS) * len(LEVELS)}-cell low-confidence grid for brand-new archetypes:")
         for archetype_id in seeded:
             print(f"  {archetype_id}")
-    if not downgraded and not seeded:
+    if level_cells_added:
+        print("Seeded low-confidence placeholder cells for levels missing from existing archetypes:")
+        for archetype_id, n in level_cells_added:
+            print(f"  {archetype_id:45s} {n} cells")
+    if not downgraded and not seeded and not level_cells_added:
         print("No changed or new archetypes to apply -- comp-by-tier.json structure unchanged.")
 
 

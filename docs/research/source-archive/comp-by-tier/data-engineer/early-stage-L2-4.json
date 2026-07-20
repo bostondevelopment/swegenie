@@ -1,0 +1,8 @@
+{
+  "archetypeId": "data-engineer",
+  "tier": "early-stage",
+  "level": "L2",
+  "title": "TechCrunch (citing Kruze Consulting) - seed-stage engineer pay bands",
+  "url": "https://techcrunch.com/2024/12/25/132k-149k-heres-what-seed-stage-founders-pay-early-employees-based-on-data/",
+  "note": "Used only as interpolation boundary between entry ($75k-$105k) and midlevel ($90k-$145k) bands; no distinct L2 anchor."
+}

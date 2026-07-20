@@ -1,8 +1,8 @@
 {
   "generated": "2026-07-11",
   "phase": "1+topup+workday+gapfill1+gapfill2+gapfill3",
-  "verified_company_count": 744,
-  "total_live_jobs_unfiltered": 131838,
+  "verified_company_count": 745,
+  "total_live_jobs_unfiltered": 131958,
   "note": "live_job_count is the raw total job count from each ATS board API at verification time, unfiltered by department -- engineering-relevant subset will be smaller. Companies verified via a real HTTP request per Phase 1 of the job-posting-corpus plan.",
   "companies": [
     {
@@ -8218,6 +8218,18 @@
       "live_job_count": 14,
       "sectors": [
         "gapfill3-embedded-mobile-support-final"
+      ],
+      "source": "ats-api"
+    },
+    {
+      "name": "AHEAD",
+      "ats": "lever",
+      "slug": "thinkahead",
+      "api_url": "https://api.lever.co/v0/postings/thinkahead?mode=json",
+      "live_job_count": 120,
+      "sectors": [
+        "it-consulting",
+        "managed-services"
       ],
       "source": "ats-api"
     }

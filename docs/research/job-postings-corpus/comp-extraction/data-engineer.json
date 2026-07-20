@@ -8,13 +8,13 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 251,
+    "totalPointsExtracted": 244,
     "usdBase": {
-      "count": 218,
-      "companyCount": 86,
+      "count": 211,
+      "companyCount": 85,
       "low": 76000,
       "high": 368500,
-      "typical": 184050
+      "typical": 187250
     },
     "usdOte": {
       "count": 26,
@@ -30,23 +30,36 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
-        "count": 3,
-        "companyCount": 2,
-        "low": 98600,
-        "high": 162150,
+      "Entry (New Grad)": {
+        "count": 1,
+        "companyCount": 1,
+        "low": 106812,
+        "high": 140190,
         "typical": 123501,
         "companies": [
-          "Boeing",
           "Oscar Health"
         ]
       },
-      "Mid (unspecified level)": {
-        "count": 46,
-        "companyCount": 29,
+      "Junior/Associate": {
+        "count": 8,
+        "companyCount": 5,
         "low": 76000,
+        "high": 235000,
+        "typical": 136025,
+        "companies": [
+          "Boeing",
+          "Disney",
+          "DoorDash",
+          "Whoop",
+          "Xometry"
+        ]
+      },
+      "Mid (unspecified level)": {
+        "count": 39,
+        "companyCount": 26,
+        "low": 95000,
         "high": 299000,
-        "typical": 165852,
+        "typical": 170000,
         "companies": [
           "Alchemy",
           "Anduril Industries",
@@ -73,18 +86,15 @@
           "Salesforce",
           "Valtech",
           "Varda Space Industries",
-          "WHOOP",
-          "Whoop",
-          "Xometry",
           "fuboTV"
         ]
       },
       "Senior/Staff": {
-        "count": 152,
-        "companyCount": 62,
+        "count": 146,
+        "companyCount": 61,
         "low": 82700,
         "high": 368500,
-        "typical": 191475,
+        "typical": 192050,
         "companies": [
           "1Password",
           "2K",
@@ -144,7 +154,6 @@
           "Talkspace",
           "Twilio",
           "Valtech",
-          "WHOOP",
           "Warner Bros Discovery",
           "Whoop",
           "Zocdoc"
@@ -170,7 +179,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 525
+    "totalPostingsScanned": 495
   },
   "dataPoints": [
     {
@@ -821,7 +830,7 @@
       "title": "Analytics Engineer II",
       "location": "Boston, MA",
       "url": "https://jobs.lever.co/whoop/5a009cd4-8422-4866-bc12-fef14eadef67",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 150000,
@@ -1497,7 +1506,7 @@
       "title": "Analytics Engineer II",
       "location": "Waltham, MA",
       "url": "https://job-boards.greenhouse.io/xometry/jobs/5179344007",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 120000,
@@ -2576,7 +2585,7 @@
       "title": "Reliability Data Analytics Engineer (Associate or Experienced)",
       "location": "USA - Seal Beach, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Seal-Beach-CA/Reliability-Data-Analytics-Engineer--Associate-or-Experienced-_JR2026516772-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 119850,
@@ -2589,7 +2598,7 @@
       "title": "Reliability Data Analytics Engineer (Associate or Experienced)",
       "location": "USA - Seal Beach, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Seal-Beach-CA/Reliability-Data-Analytics-Engineer--Associate-or-Experienced-_JR2026516772-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 133000,
@@ -2810,7 +2819,7 @@
       "title": "Data Engineer II",
       "location": "3 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Seattle-WA-USA/Data-Engineer-II_10153088-1",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 106900,
@@ -2823,7 +2832,7 @@
       "title": "Data Engineer II",
       "location": "3 Locations",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Seattle-WA-USA/Data-Engineer-II_10153088-1",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 135200,
@@ -2865,45 +2874,6 @@
       "level_hint": "Senior/Staff"
     },
     {
-      "low": 138900,
-      "high": 186200,
-      "raw_match": "$138,900 - $186,200",
-      "context": "quired Education Bachelor or above in computer science or a related quantitative field; or equivalent practical experience demonstrating advanced technical expertise The hiring range for this position in Glendale, CA is $138,900 - $186,200 per year, in San Francisco, CA is $$152,100 - $203,900 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowled",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Sr Data Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Sr-Data-Engineer_10143797-1",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 152100,
-      "high": 203900,
-      "raw_match": "$152,100 - $203,900",
-      "context": "or a related quantitative field; or equivalent practical experience demonstrating advanced technical expertise The hiring range for this position in Glendale, CA is $138,900 - $186,200 per year, in San Francisco, CA is $$152,100 - $203,900 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Sr Data Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Sr-Data-Engineer_10143797-1",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 155400,
-      "high": 208400,
-      "raw_match": "$155,400 - $208,400",
-      "context": "cience, Information Systems or related field, or equivalent work experience. Master\u2019s Degree a plus # Disneytech The hiring range for this position in Santa Monica, CA is $141,900 - $190,300 and fro San Francisco, CA is $155,400 - $208,400 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Sr Data Engineer",
-      "location": "2 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Santa-Monica-CA-USA/Sr-Data-Engineer_10153288",
-      "level_hint": "Senior/Staff"
-    },
-    {
       "low": 170500,
       "high": 228600,
       "raw_match": "$170,500 to $228,600",
@@ -2914,19 +2884,6 @@
       "title": "Staff Data Engineer (Audio/ML)",
       "location": "Nicasio, CA, USA",
       "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Nicasio-CA-USA/Staff-Data-Engineer_10129825",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 145400,
-      "high": 195000,
-      "raw_match": "$145,400 - $195,000",
-      "context": "ctical experience demonstrating advanced technical expertise The hiring range for this position in Glendale, CA is $138,900 - $186,200 per year, in San Francisco, CA is $152,100 - $203,900 per year and in Seattle, WA is $145,400 - $195,000 per year. The base pay actually offered will take into account internal equity and also may vary depending on the candidate\u2019s geographic region, job-related knowledge, skills, and experience among other factors. A bonus",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Disney",
-      "title": "Sr Data Engineer",
-      "location": "3 Locations",
-      "url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Glendale-CA-USA/Sr-Data-Engineer_10147781",
       "level_hint": "Senior/Staff"
     },
     {
@@ -3265,7 +3222,7 @@
       "title": "Software Engineer II, Data Engineering",
       "location": "San Francisco, CA; Sunnyvale, CA",
       "url": "https://job-boards.greenhouse.io/doordashusa/jobs/6458514",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 159800,
@@ -3278,7 +3235,7 @@
       "title": "Software Engineer II, Data Engineering",
       "location": "San Francisco, CA; Sunnyvale, CA",
       "url": "https://job-boards.greenhouse.io/doordashusa/jobs/6458514",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 130600,
@@ -3317,7 +3274,7 @@
       "title": "Analytics Engineer I",
       "location": "New York, New York, United States",
       "url": "http://www.hioscar.com/careers/7872595?gh_jid=7872595",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Entry (New Grad)"
     },
     {
       "low": 163944,
@@ -3356,45 +3313,6 @@
       "title": "Data Platform Engineer",
       "location": "San Francisco, CA \u2022 New York, NY \u2022 United States",
       "url": "https://boards.greenhouse.io/figma/jobs/5840332004?gh_jid=5840332004",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000-$215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000-$215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Data Platform Engineer",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/00aad80c-4670-4e0b-86bc-ec9595603fd8",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 150000,
-      "high": 215000,
-      "raw_match": "$150,000 - $215,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $150,000 - $215,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Senior Analytics Engineer (Finance)",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/151da6e4-eb2b-4cd5-a0bb-96c943ce8ca6",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 125000,
-      "high": 175000,
-      "raw_match": "$125,000 - $175,000",
-      "context": "the long-term success of the company and allows every member of our corporate team to own part of WHOOP and share in the company\u2019s long-term growth and success. The U.S. base salary range for this full-time position is $125,000 - $175,000. Salary ranges are determined by role, level, and location. Within each range, individual pay is based on factors such as job-related skills, experience, performance, and relevant education or training. In addition to t",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "WHOOP",
-      "title": "Analytics Engineer II",
-      "location": "Boston, MA",
-      "url": "https://jobs.ashbyhq.com/whoop/4a08ae7c-a883-4664-b55c-a8e93909308c",
       "level_hint": "Mid (unspecified level)"
     },
     {

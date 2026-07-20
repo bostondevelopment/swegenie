@@ -1,12 +1,16 @@
 # Adding a new archetype
 
-A repeatable runbook for adding archetype N+1 to the taxonomy. All 18 existing
+A repeatable runbook for adding archetype N+1 to the taxonomy. **Counts below reflect the
+17-archetype taxonomy as of 2026-07-17** (down from 18 after Engineering Management was removed
+as a standalone archetype on 2026-07-16, commit `b907fcf` — that same commit is a good worked
+example of most of these steps run in reverse). All 17 existing
 archetypes are scored **independently** by `rankArchetypes()` in
 [`app/lib/scoring.ts`](../app/lib/scoring.ts) — adding one never requires
 rebalancing the others' weights. The risk isn't math, it's coverage: ten
 files need a new entry (including `taxonomy/title-classification-rubric.json`,
 which silently drops postings for any archetype it has no entry for — see
-Stage 4), six copy locations state the total count, and — until Stage 4
+Stage 4), five copy locations state the total count as a literal (down from six — the homepage no
+longer hardcodes the count, see Stage 7), and — until Stage 4
 below was built — nothing ever reclassified historical postings or
 regenerated the app's comp data after a rubric change, so a split archetype's
 donor (e.g. Full-Stack, if Frontend/UI were carved out of it) would silently
@@ -58,14 +62,14 @@ matching the existing shape:
     "<every dimension id in dimensions.json>": {
       "target": 1-5,
       "weight": 0-1,
-      "rationale": "one sentence, evidence-grounded, matches the voice of the other 18 entries"
+      "rationale": "one sentence, evidence-grounded, matches the voice of the other 17 entries"
     }
   }
 }
 ```
 
 Draft it AI-assisted (have an agent draft targets/weights/rationale calibrated
-against the existing 18 for scale consistency), but a human must approve it —
+against the existing 17 for scale consistency), but a human must approve it —
 this file directly determines what every future quiz-taker gets matched to.
 
 Every dimension in `app/data/dimensions.json` must get a score; the
@@ -83,7 +87,7 @@ cd app
 npm run personas:report
 ```
 
-This recomputes all 18 (soon 19) personas in
+This recomputes all 17 (soon 18) personas in
 [`lib/personas.ts`](../app/lib/personas.ts) against the real scoring
 pipeline and diffs against the committed baseline
 (`lib/personas.snapshot.json`), flagging any persona that dropped out of its
@@ -189,7 +193,7 @@ python3 scripts/synthesize-comp-data.py --changed-archetypes <comma-separated id
 ```
 
 Fully regenerates `app/data/comp-structure.json` from the fresh extraction
-(deterministic, all 18+ archetypes, every run). For `app/data/comp-by-tier.json`:
+(deterministic, all 17+ archetypes, every run). For `app/data/comp-by-tier.json`:
 downgrades every cell of each `--changed-archetypes` id to `confidence: "low"`
 (numbers untouched — deciding new numbers is Stage 4f's job, not this
 script's), and seeds a fresh 20-cell `confidence: "low"` grid for any
@@ -271,25 +275,33 @@ rather than shipping it — same as the rules file already says.
 
 ## Stage 7 — Hardcoded count sweep
 
-Six places state the archetype count in prose (not computed from data —
-grepping bare `18` also matches unrelated Tailwind `mb-[18px]` classes, so
-check these exact locations, don't blind-grep):
+**Re-verified 2026-07-17 against the live 17-archetype codebase — the list below replaces an
+earlier version that quoted "18" strings which no longer exist anywhere in the repo (they were
+already updated to "17" by commit `b907fcf`). If you're reading a cached/older copy of this
+runbook, don't trust it — re-grep for the current strings before editing.**
 
-- `app/app/page.tsx:54` — "fractured ... into 18 careers"
-- `app/app/assessment/page.tsx:104` — "against 18 role archetypes"
-- `app/app/methodology/page.tsx:38` — "Where the 18 archetypes came from"
-- `app/app/methodology/page.tsx:42` — `<StatTile value="13 of 18" />`
+`app/app/page.tsx` **no longer hardcodes a count at all** — the homepage hero copy was rewritten
+(commit `7c565ef`) and the old "fractured ... into N careers" line is gone; the word-cloud and
+footer ticker render archetype names directly from `app/data/archetypes.json`, so they can't go
+stale. That drops this sweep from six locations to five:
+
+- `app/app/assessment/page.tsx:114` — "Scoring your profile against 17 role archetypes…"
+- `app/app/methodology/page.tsx:38` — "Where the 17 archetypes came from" (note: this line also
+  contains an unrelated Tailwind `mb-[18px]` class right next to it — don't blind-grep for `18`,
+  edit the count in the visible text only)
+- `app/app/methodology/page.tsx:42` — `<StatTile label="Archetypes with 200+ postings" value="13 of 17" />`
   (postings-coverage stat — also update the numerator if the new archetype
   starts under/over the 200-posting threshold this stat tracks)
-- `app/app/methodology/page.tsx:53` — "classified those postings into the 18 archetypes"
-- `app/app/methodology/page.tsx:144` — "across all 18 archetypes"
-- `app/app/methodology/page.tsx:181` — "all 18 archetypes and break total compensation"
-- `app/components/ShareBar.tsx:53` — "all 18 archetypes are public"
+- `app/app/methodology/page.tsx:53` — "classified those postings into the 17 archetypes"
+- `app/app/methodology/page.tsx:144` — "across all 17 archetypes"
+- `app/app/methodology/page.tsx:181` — "all 17 archetypes and break total compensation"
+- `app/components/ShareBar.tsx:53` — "all 17 archetypes are public"
 
-Update each to 19. Longer term, replace these literals with
+Update each to 18. Longer term, replace these literals with
 `archetypes.length` computed from `lib/taxonomy.ts` so this class of miss
 can't recur — worth doing opportunistically next time one of these files is
-touched, not blocking for this runbook.
+touched, not blocking for this runbook. Re-verify line numbers before editing regardless of what's
+written here — they will drift as these files change.
 
 ## Stage 8 — Full validation gate
 

@@ -84,7 +84,8 @@ headline/ad copy differs.
   pitch the fragmentation essay as a guest post or link inclusion.
 - **LinkedIn**, used carefully: a short post from a real person (founder or beta user) sharing
   *their own* result card with a specific, non-hypey caption — not a company-page broadcast ad.
-  This segment is heavily LinkedIn-native in a way the primary segment isn't.
+  This segment is heavily LinkedIn-native in a way the primary segment isn't. Full post copy,
+  first-comment link, and tactical notes are in `launch-day-checklist.md` Group 11.
 
 ### Early-mid & mid career (2–15 YOE) — primary per positioning.md, so this is where launch *starts*
 - **Show HN** with the fragmentation essay as the post, tool linked from it, per the existing

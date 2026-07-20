@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FitBar } from '@/components/FitBar';
 import { track } from '@/lib/analytics';
 import type { ArchetypeCompData, Level, Tier } from './comp.types';
-import { LEVELS, TIER_LABELS, TIER_ORDER, formatUSD, totalComp } from './comp.utils';
+import { LEVEL_YOE_LABELS, LEVELS, TIER_LABELS, TIER_ORDER, formatUSD, totalComp } from './comp.utils';
 import { CompRangeBar } from './CompRangeBar';
 
 export interface ArchetypeCompareRow {
@@ -48,7 +48,7 @@ interface ArchetypeCompareTableProps {
 export function ArchetypeCompareTable({
   rows,
   defaultTier = 'faang-mag7',
-  defaultLevel = 'Staff',
+  defaultLevel = 'L3',
   tier: tierProp,
   level: levelProp,
   onTierChange,
@@ -146,7 +146,10 @@ export function ArchetypeCompareTable({
                   : 'text-[var(--color-muted)] hover:text-[var(--color-fg)]'
               }`}
             >
-              {lvl}
+              <span className="flex flex-col items-center leading-tight">
+                <span>{lvl}</span>
+                <span className="text-[10px] font-normal opacity-70">{LEVEL_YOE_LABELS[lvl]}</span>
+              </span>
             </button>
           );
         })}
@@ -272,7 +275,7 @@ export function ArchetypeCompareTable({
       </div>
 
       <p className="font-mono text-[11px] text-[var(--color-muted-2)]">
-        {level} · {TIER_LABELS[tier]} · total comp (base + bonus + annualized equity) · P25–P75
+        {level} ({LEVEL_YOE_LABELS[level]}) · {TIER_LABELS[tier]} · total comp (base + bonus + annualized equity) · P25–P75
         band, P50 median · axis to {formatUSD(maxValue)}
       </p>
     </div>

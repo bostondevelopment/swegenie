@@ -1,8 +1,16 @@
 # 32 comp-by-tier cells are still low-confidence, on purpose
 
-## Problem
+**Status update (2026-07-17):** the counts below are from the 2026-07-13 gapfill pass, before
+`engineering-management` was removed as a standalone archetype (commit `b907fcf`, 2026-07-16).
+`app/data/comp-by-tier.json` now has 17 archetypes (340 cells, not 360), and the
+`engineering-management: ai-labs L3` row in the low-confidence list below no longer exists —
+that archetype (and its one low-confidence cell) was removed along with everything else, not
+fixed. The other 31 low-confidence cells listed are still accurate and still open.
 
-`app/data/comp-by-tier.json` has 360 total cells (18 archetypes × 5 tiers × 4 levels). A gapfill
+## Problem (2026-07-13, before the EM removal)
+
+`app/data/comp-by-tier.json` had 360 total cells (18 archetypes × 5 tiers × 4 levels) at the time
+of this pass. A gapfill
 research pass (2026-07-13) closed 18 of the 50 cells that were low-confidence before it ran (9
 moved to `medium`, 9 to `high`) using `Workflow({ scriptPath:
 "app/scripts/workflows/comp-by-tier-tier-gapfill.js" })`. **32 cells remain `confidence: "low"`**,

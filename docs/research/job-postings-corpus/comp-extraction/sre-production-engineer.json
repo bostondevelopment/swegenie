@@ -8,10 +8,10 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 102,
+    "totalPointsExtracted": 101,
     "usdBase": {
-      "count": 85,
-      "companyCount": 43,
+      "count": 84,
+      "companyCount": 42,
       "low": 53300,
       "high": 361000,
       "typical": 193000
@@ -31,14 +31,24 @@
       ]
     },
     "byLevel": {
+      "Junior/Associate": {
+        "count": 2,
+        "companyCount": 2,
+        "low": 114297,
+        "high": 235319,
+        "typical": 156154,
+        "companies": [
+          "AXS",
+          "Pinterest"
+        ]
+      },
       "Mid (unspecified level)": {
-        "count": 18,
-        "companyCount": 13,
+        "count": 16,
+        "companyCount": 11,
         "low": 109400,
         "high": 270000,
         "typical": 168500,
         "companies": [
-          "AXS",
           "Anduril Industries",
           "Cisco",
           "Disney",
@@ -49,16 +59,15 @@
           "Obsidian Security",
           "Palantir Technologies",
           "Peloton",
-          "Pinterest",
           "Salesforce"
         ]
       },
       "Senior/Staff": {
-        "count": 63,
-        "companyCount": 33,
+        "count": 62,
+        "companyCount": 32,
         "low": 53300,
         "high": 361000,
-        "typical": 198500,
+        "typical": 200491,
         "companies": [
           "Alloy",
           "Anduril Industries",
@@ -80,7 +89,6 @@
           "General Motors",
           "GitLab",
           "Harvey",
-          "Mastercard",
           "MongoDB",
           "Obsidian Security",
           "Okta",
@@ -108,7 +116,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 316
+    "totalPostingsScanned": 303
   },
   "dataPoints": [
     {
@@ -811,7 +819,7 @@
       "title": "Site Reliability Engineer II  ",
       "location": "Los Angeles, CA",
       "url": "https://job-boards.greenhouse.io/axs/jobs/8512266002",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 166000,
@@ -1019,7 +1027,7 @@
       "title": "Site Reliability Engineer II, tvScientific",
       "location": "San Francisco, CA, US; Remote, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7782538",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 139764,
@@ -1188,19 +1196,6 @@
       "title": "Senior Site Reliability Engineer",
       "location": "US - Austin, TX",
       "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---Austin-TX/Senior-Site-Reliability-Engineer_REF082265W",
-      "level_hint": "Senior/Staff"
-    },
-    {
-      "low": 96000,
-      "high": 163000,
-      "raw_match": "$96,000 - $163,000",
-      "context": "ion reimbursement; and many more. Mastercard benefits for interns generally include: 56 hours of Paid Sick and Safe Time; jury duty leave; and on-site fitness facilities in some locations. Pay Ranges O'Fallon, Missouri: $96,000 - $163,000 USD",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Mastercard",
-      "title": "Senior Site Reliability Engineer",
-      "location": "O'Fallon, Missouri",
-      "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/OFallon-Missouri/Senior-BizOps-Engineer_R-275556",
       "level_hint": "Senior/Staff"
     },
     {

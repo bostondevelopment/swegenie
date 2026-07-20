@@ -7,7 +7,7 @@ import { archetypes, archetypeById, dimensionById } from "@/lib/taxonomy";
 import { getResultsCopy } from "@/lib/results-copy";
 import archetypeJobExamples from "@/data/archetype-job-examples.json";
 import { JobExamplesAccordion } from "@/components/JobExamplesAccordion";
-import { getCompStructure } from "@/lib/comp-structure";
+import { getCompStructure, levelDisplayLabel } from "@/lib/comp-structure";
 import { CompBandBar } from "@/components/CompBandBar";
 import { CompMixBar } from "@/components/CompMixBar";
 import { CompProgressionChart } from "@/components/CompProgressionChart";
@@ -179,7 +179,7 @@ export default async function ArchetypePage({ params }: { params: Promise<{ id: 
                 {comp?.levels && (
                   <div className="mb-10">
                     <CompProgressionChart
-                      levels={comp.levels.map((lvl) => ({ level: lvl.label, low: lvl.low, high: lvl.high }))}
+                      levels={comp.levels.map((lvl) => ({ level: levelDisplayLabel(lvl.label), low: lvl.low, high: lvl.high }))}
                     />
                   </div>
                 )}

@@ -8,13 +8,13 @@
     ]
   },
   "summary": {
-    "totalPointsExtracted": 316,
+    "totalPointsExtracted": 315,
     "usdBase": {
-      "count": 268,
+      "count": 267,
       "companyCount": 79,
       "low": 81000,
       "high": 478600,
-      "typical": 197162
+      "typical": 197075
     },
     "usdOte": {
       "count": 37,
@@ -30,22 +30,24 @@
       ]
     },
     "byLevel": {
-      "Entry/Associate": {
-        "count": 1,
-        "companyCount": 1,
+      "Junior/Associate": {
+        "count": 4,
+        "companyCount": 3,
         "low": 108000,
-        "high": 147200,
-        "typical": 127600,
+        "high": 254667,
+        "typical": 182091,
         "companies": [
-          "Boeing"
+          "Boeing",
+          "Human Interest",
+          "Pinterest"
         ]
       },
       "Mid (unspecified level)": {
-        "count": 78,
-        "companyCount": 34,
+        "count": 74,
+        "companyCount": 32,
         "low": 90700,
         "high": 350000,
-        "typical": 172500,
+        "typical": 170500,
         "companies": [
           "1X Technologies",
           "Airtable",
@@ -67,12 +69,10 @@
           "Figure AI",
           "GDIT (General Dynamics Information Technology, subsidiary of General Dynamics)",
           "Harvey",
-          "Human Interest",
           "Ibotta",
           "LaunchDarkly",
           "Merge (Merge.dev)",
           "Palantir Technologies",
-          "Pinterest",
           "Resend",
           "Robinhood",
           "Roboflow",
@@ -172,7 +172,7 @@
         ]
       }
     },
-    "totalPostingsScanned": 586
+    "totalPostingsScanned": 574
   },
   "dataPoints": [
     {
@@ -2608,19 +2608,6 @@
     },
     {
       "low": 146000,
-      "high": 253000,
-      "raw_match": "$146,000 &mdash; $253,000",
-      "context": "ion in No Magic CAMEO Experience with security testing on DoD systems Experience with various operating systems including embedded Linux Leader by example Active U.S. Top Secret security clearance &nbsp; US Salary Range $146,000 &mdash; $253,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
-      "currency": "USD",
-      "is_ote": false,
-      "company": "Anduril Industries",
-      "title": "Systems Security Engineer, Anti-Tamper",
-      "location": "Costa Mesa, California, United States",
-      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5044386007?gh_jid=5044386007",
-      "level_hint": "Mid (unspecified level)"
-    },
-    {
-      "low": 146000,
       "high": 194000,
       "raw_match": "$146,000 &mdash; $194,000",
       "context": "(e.g. penetration testing, red teaming, vulnerability assessments) Experience working with unmanned aircraft Group 3 class and above Experience working with government or national security space systems US Salary Range $146,000 &mdash; $194,000 USD The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/o",
@@ -2929,7 +2916,7 @@
       "title": "Security Engineer II",
       "location": "United States, Remote",
       "url": "https://job-boards.greenhouse.io/humaninterest/jobs/7565471",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123696,
@@ -2942,7 +2929,7 @@
       "title": "Security Software Engineer II, Corporate Security",
       "location": "San Francisco, CA, US; Remote, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7732971",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 123696,
@@ -2955,7 +2942,7 @@
       "title": "Security Software Engineer II, Detection and Response",
       "location": "San Francisco, CA, US; Remote, US",
       "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8015490",
-      "level_hint": "Mid (unspecified level)"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 155584,
@@ -3566,7 +3553,7 @@
       "title": "Product Security Engineer, Associate",
       "location": "USA - Mountain View, CA",
       "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Mountain-View-CA/Product-Security-Engineer--Associate_JR2026516899-1",
-      "level_hint": "Entry/Associate"
+      "level_hint": "Junior/Associate"
     },
     {
       "low": 162350,
