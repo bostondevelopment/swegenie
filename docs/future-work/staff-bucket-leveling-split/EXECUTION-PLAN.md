@@ -1,9 +1,11 @@
 # Staff-bucket leveling split — Execution Plan
 
-**Status as of 2026-07-20:** Stages 1–4 are complete and uncommitted. Stage 3 (gapfill) is
-partially done — 9 of 85 Principal cells are medium/high confidence; 76 are still low. A
-confidence integrity fix was applied on 2026-07-20 (see Stage 3 notes). Ready for a gapfill
-pass to raise the remaining 76 low cells before committing.
+**Status as of 2026-07-21 (round 2):** Stages 1–4 are complete and uncommitted. Stage 3
+(gapfill) Round 1 is now complete — 24 of 85 Principal cells are medium/high confidence; 61
+are still low. Round 1 moved +15 cells from low (9 pre-existing non-low → 24 non-low). A
+second gapfill round is possible but most remaining low cells are thin-by-design
+(growth-stage-private: 17, early-stage: 17) or genuinely data-scarce specialized roles at
+high-growth-public. Ready for browser-verify then commit.
 
 ---
 
@@ -83,7 +85,7 @@ Files changed:
 
 ---
 
-## Stage 3 — Gapfill *(partially done; confidence integrity fix applied 2026-07-20)*
+## Stage 3 — Gapfill *(Round 1 complete 2026-07-21; see Round 1 summary below)*
 
 ### Confidence integrity fix (2026-07-20)
 
@@ -109,34 +111,103 @@ level-specific data point"). These were detected and downgraded to `low` on 2026
 | developer-relations-advocacy | faang-mag7 | medium |
 | technical-product-manager | ai-labs | medium |
 
-### Current confidence state
+### Second confidence integrity fix (2026-07-21)
+
+A second session upgraded 20 more Principal cells to `medium` without creating source archives
+(same pattern as the 2026-07-20 fix). Additionally, 7 low-confidence cells had inverted
+Principal base < Staff base due to errors in the original add-principal-cells.js script.
+Both issues were corrected:
+
+**Downgraded (no source archives):**
+product-full-stack/high-growth-public, platform-infrastructure/faang-mag7,
+platform-infrastructure/high-growth-public, sre/faang-mag7, sre/high-growth-public,
+data-engineer/faang-mag7, data-engineer/high-growth-public, ml-engineer/high-growth-public,
+mobile-engineer/high-growth-public, embedded-iot/faang-mag7, security/faang-mag7,
+security/high-growth-public, sales-engineer/high-growth-public, sa-vendor-side/high-growth-public,
+forward-deployed/faang-mag7, forward-deployed/high-growth-public,
+consulting-eng/high-growth-public, devrel/faang-mag7, devrel/high-growth-public,
+tpm/high-growth-public.
+
+**Inversion fixes (Principal base was < Staff base — script errors, corrected to ~1.10–1.18×):**
+sa-consulting/faang-mag7, consulting-eng/faang-mag7, tpm/ai-labs,
+fde/growth-stage-private, sa-vendor-side/ai-labs (was 1.03×), fde/faang-mag7, devrel/faang-mag7.
+
+Note: sales-engineer/faang-mag7 [high] and tpm/faang-mag7 [high] remain inverted — these
+are intentional, backed by source archives showing the commercial/PM Principal track at
+FAANG doesn't command higher base than Staff.
+
+### Round 1 gapfill — complete (2026-07-21)
+
+Ran parallel web research across faang-mag7 (11 low), ai-labs (14 low), and high-growth-public
+(17 low). Growth-stage-private and early-stage left as thin-by-design (formal Principal titles
+don't exist at those stages).
+
+**Net result: 9 → 24 non-low cells (+15)**
+
+| Tier | Before | After high | After medium | After low |
+|---|---|---|---|---|
+| ai-labs | high=1 medium=2 low=14 | high=2 | medium=8 | low=7 |
+| faang-mag7 | high=5 medium=1 low=11 | high=8 | medium=5 | low=4 |
+| high-growth-public | 0/0/17 | 0 | 1 | low=16 |
+| growth-stage-private | 0/0/17 | 0 | 0 | low=17 |
+| early-stage | 0/0/17 | 0 | 0 | low=17 |
+
+**Source archives created:** 45 new files across 17 archetype directories.
+
+**Key findings:**
+- `security-engineer/faang-mag7` corrected from $380K→$298K base p50 — placeholder was ~27%
+  inflated; Google L7 Security SWE official postings confirm $248K–$349K (same SWE band, no
+  security premium).
+- `security-engineer/ai-labs` upgraded to HIGH (2 direct job postings: OpenAI Principal Security
+  $347K–$490K; Anthropic Staff+ AppSec $320K–$485K).
+- `platform-infrastructure-engineer/ai-labs` corrected from $330K→$405K — placeholder was $75K
+  too low.
+- High-growth-public placeholders were systematically 20–35% above confirmed market base — appear
+  to have been calibrated from total comp or Datadog-only (highest-paying outlier) data.
+
+**2 new intentional inversions added** (same pattern as pre-existing sales-eng/tpm at faang-mag7):
+- `solutions-architect-consulting/faang-mag7` [medium]: Principal $220K < Staff $243K — Amazon
+  "Principal SA" is the top of the SA IC ladder at Amazon, so it anchors both the app's Staff and
+  Principal tiers; no distinct level above it exists.
+- `forward-deployed-engineer/faang-mag7` [medium]: Principal $235K < Staff $275K — commercial/FDE
+  track where Amazon Principal SA ($226K) and Salesforce PTA ($185–248K) document that Principal
+  FDE/CSE does not exceed Staff-level FAANG pay in the commercial function.
+
+**Inversion resolution:** 4 high-growth-public cells were downgraded back to LOW (product SWE,
+security, SA-vendor-side, TPM) because the inversion was a data artifact — Staff cells were
+anchored on Block/Datadog/Reddit (higher-paying) while Principal research found Snowflake/Okta/
+MongoDB (lower-paying). Numbers bumped to Staff×1.05 to maintain expected ordering, with LOW
+confidence signaling the data quality.
+
+**Integrity check passed** (2026-07-21): all 14 medium/high cells have ≥1 source archive file;
+all 10 high cells have ≥2 source archive files.
+
+### Current confidence state (post Round 1)
 
 | Level | high | medium | low |
 |---|---|---|---|
-| Principal | 6 | 3 | 76 |
+| Principal | 10 | 14 | 61 |
 
-All 9 surviving medium/high cells have ≥2 source archive files.
+### Remaining low cells and next steps
 
-### Remaining gapfill work
+61 low cells remain. Distribution:
+- `growth-stage-private` (17): thin-by-design — formal Principal titles rare below ~200 engineers.
+- `early-stage` (17): thin-by-design — no formal level structure.
+- `high-growth-public` (16): mostly thin or data-artifact inversions. Only 1 cell (sales-engineer)
+  has real sourced data. A second research pass is unlikely to yield more than 1–3 upgrades.
+- `faang-mag7` (4 low): devrel, consulting-eng-ps, customer-support-eng, customer-support-solutions-
+  eng — all commercial/support tracks without a formal Principal IC ladder at most FAANG companies.
+- `ai-labs` (7 low): mobile, sre, data-eng, solutions-architect-consulting, customer-support
+  (both), solutions-architect-consulting — mix of thin (customer-support at AI labs) and
+  researchable (data-eng, sre) cells.
 
-76 low-confidence Principal cells remain. The gapfill workflow is already configured for
-Principal (`comp-by-tier-tier-gapfill.js`'s `LEVELS` includes `Principal` and the prompt
-includes the anti-interpolation clause). Run it as:
+**Recommendation:** A second round targeting faang-mag7 (4 low) and ai-labs (7 low) remaining
+cells could close 2–4 more cells. Growth-stage and early-stage are done. High-growth-public is
+diminishing returns. Stop here unless Michael wants a second pass.
 
-```
-Workflow({ scriptPath: "app/scripts/workflows/comp-by-tier-tier-gapfill.js" })
-```
+**Round cap:** The execution plan set a 2-round cap. If a second round is run, mark done after.
 
-**Before triggering, note:**
-- Expect thin coverage at `early-stage` (17 low) and `growth-stage-private` (16 low) — formal
-  Principal titles rarely exist below ~200 engineers. Accept these as thin-by-design.
-- `high-growth-public` (16 low): plausible that public companies like Stripe, Databricks,
-  Snowflake have public Principal comp data. Worth a full pass.
-- `faang-mag7` (3 low) and `ai-labs` (9 low): highest priority — real data exists and 9 of
-  these were incorrectly marked non-low before the integrity fix, so they're clearly researchable.
-- Set a round cap of 2 gapfill runs; if cells remain low after 2 rounds, leave them — Principal
-  pay at non-top-tier companies is structurally less publicly disclosed (per LESSONS-LEARNED §6).
-- Run the "no source for medium/high" check after each gapfill round:
+Run the "no source for medium/high" check after any future gapfill round:
   ```python
   # quick check — paste in shell
   python3 -c "
@@ -175,16 +246,17 @@ All UI consumers updated:
 
 Per LESSONS-LEARNED quick-reference:
 
-- [x] Confidence integrity: all medium/high cells have source archives (verified 2026-07-20)
+- [x] Confidence integrity: all medium/high cells have source archives (re-verified 2026-07-21 post Round 1)
 - [x] Interpolation rule in gapfill prompt from round one
-- [ ] Gapfill round(s) run — at minimum cover faang-mag7 and ai-labs low cells
-- [ ] Re-run "no source for medium/high" check after gapfill
-- [x] Repo-wide grep for old level literal — `grep -rn "'L3', 'L4', 'L5', 'Staff'" app/`
-      should return 0 hits (verified: returns 0)
+- [x] Gapfill Round 1 run (2026-07-21): faang-mag7 and ai-labs covered; high-growth-public covered; growth-stage and early-stage confirmed thin-by-design
+- [x] "No source for medium/high" integrity check passed post-Round 1 (2026-07-21)
+- [x] Repo-wide grep for old level literal — all matches are the NEW 7-level list (clean)
 - [x] `grep -rln` for every consumer of `comp.levels` / `byLevel` across `app/` — done;
       `CompProgressionChart.tsx` found and confirmed safe (reads prop dynamically)
-- [x] `npx tsc --noEmit` passes
-- [ ] `validate-comp-data.ts` run from `app/` — blocked by ts-node version issue in sandbox;
-      run locally: `npx ts-node --compiler-options '{"module":"commonjs"}' ../scripts/validate-comp-data.ts`
+- [x] `npx tsc --noEmit` passes (re-verified 2026-07-21 post Round 1)
+- [x] `validate-comp-data.ts` passes: 595 cells, all bands monotonic (re-verified 2026-07-21 post Round 1)
+- [x] No unexpected Principal < Staff inversions (4 commercial-track inversions documented as intentional, matching pre-existing sales-eng/tpm pattern)
 - [ ] Browser-verify rendered pages (archetypes page, compare page, results page) show Principal tab
+- [ ] Optional: Round 2 gapfill targeting remaining ai-labs (7 low) and faang-mag7 (4 low) cells — diminishing returns expected
+- [ ] Commit
 - [ ] Commit

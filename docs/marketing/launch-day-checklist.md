@@ -91,24 +91,26 @@ Confirmed live against `news.ycombinator.com/showhn.html` and the HN guidelines 
   language, no exclamation points, no "best/revolutionary." You must be the creator and be
   present to reply to comments (this is an explicit rule, not a suggestion).
 - **Step 2 — post with this title:**
-  > `Show HN: Score your fit across 17 engineering roles from 68k job postings`
+  > `Show HN: "Software engineer" covers a dozen different jobs — I built a free tool to map which one fits you`
   >
-  > Two alternates if the above doesn't feel right on the day: `Show HN: Find which of 17
-  > engineering roles actually fits you` or `Show HN: A free assessment matching engineers to 17
-  > real roles`. Avoid framing the title around "mapping job postings into archetypes" — that
-  > describes a data-labeling operation, not what it does for the reader. Lead with the reader's
-  > benefit (scoring *their* fit), not the mechanism that produced the taxonomy.
+  > Two alternates if the above doesn't feel right on the day: `Show HN: I built a free assessment
+  > to show engineers which of 17 roles they'd actually fit` or `Show HN: Most engineers describe
+  > themselves by stack. I built a tool that scores deeper fit across 17 roles`. Lead with the
+  > insight or the reader's problem, not the mechanism (job postings count, archetype count).
 - **Step 3 — post a first comment immediately after submitting** (standard, expected practice —
   don't wait hours):
-  > Most engineers describe themselves by stack — "I'm a backend engineer," "I do React" —
-  > because that's the only vocabulary the industry hands you. It doesn't tell you whether you'd
-  > actually be happier as an SRE, a sales engineer, a solutions architect, DevRel, or one of a
-  > dozen other lanes. Built a tool that scores your skills and temperament against 17 of those
-  > role archetypes across 22 trait dimensions (client-facing comfort, ambiguity tolerance,
-  > on-call appetite, etc.), so you get a ranked, explained fit instead of a personality-quiz
-  > label. The taxonomy behind it is sourced from 68k real job postings across 744 companies, not
-  > stereotype — methodology page shows every source: swe-genie.com/methodology. No login, no
-  > signup. Would genuinely like this picked apart if the scoring has holes.
+  > "Software engineer" is one job title covering a dozen genuinely different jobs. Sales engineers,
+  > SREs, solutions architects, forward-deployed engineers, developer advocates — different
+  > incentives, different days, different people you talk to. Most engineers never see that
+  > landscape until they've accidentally ended up in (or out of) one of those roles.
+  >
+  > I built SWE Genie to make the map explicit: 17 role archetypes scored across 22 dimensions
+  > (client-facing comfort, ambiguity tolerance, on-call appetite, and more), so you get a ranked,
+  > explained fit instead of a personality-quiz label. Taxonomy sourced from 68k real job postings
+  > across 744 companies; methodology and every source are public: swe-genie.com/methodology. No
+  > login, no signup.
+  >
+  > Genuinely want the scoring picked apart if there are holes in it.
 - **Timing:** no official rule, but consistent community consensus — weekday (Tue–Thu skews
   best), US morning, roughly 10am–4pm Eastern. Don't over-index on this; content and first-comment
   quality matter more.
@@ -129,19 +131,18 @@ Confirmed live against `news.ycombinator.com/showhn.html` and the HN guidelines 
 - **Step 1:** Post directly into the live Show IH group (`indiehackers.com/group/show-ih`) — open,
   no gatekeeping. IH's own coaching is to lead with story, not spec sheet.
 - **Step 2 — post with this title:**
-  > `I built a free tool that scores engineers against 17 real career archetypes — not just "software engineer"`
-  >
-  > (Swapped from an earlier draft that framed this as "mapping job postings into archetypes" —
-  > that's the mechanism, not the point. Lead with what it does for the reader: scores *them*.)
+  > `"Software engineer" is one title for a dozen different jobs. I built a free tool to make the map explicit.`
 - **Step 3 — body:**
-  > I kept noticing that "software engineer" has quietly split into a dozen different jobs —
-  > different incentives, different days, different people you talk to — but nobody's ever handed
-  > engineers the vocabulary for it. So I built a free assessment that scores your skills and
-  > temperament against 17 of those role archetypes across 22 trait dimensions, and tells you
-  > which ones you'd actually fit — ranked and explained, not a personality-quiz label. The
-  > taxonomy behind it is sourced from ~68k real job postings across 744 companies; methodology's
-  > fully public, no signup, no ads. swe-genie.com — would love feedback, especially if a role
-  > reads inaccurately.
+  > Most engineers describe themselves by stack — "I'm a backend engineer," "I do React" — because
+  > that's the only vocabulary the industry gives you. It doesn't tell you whether you'd be happier
+  > as an SRE, a solutions architect, a forward-deployed engineer, or DevRel.
+  >
+  > I built SWE Genie to make that map explicit. Taxonomy sourced from ~68k real job postings
+  > across 744 companies — scores your skills and temperament against 17 role archetypes across 22
+  > dimensions, tells you which ones you'd actually fit, ranked and explained. Methodology's fully
+  > public, no signup, no ads. swe-genie.com
+  >
+  > Would love feedback, especially if a role reads inaccurately.
 
 ### dev.to
 - **Step 1:** Confirmed self-promotion is explicitly fine here **as long as the post itself is
@@ -171,22 +172,29 @@ Confirmed live against `news.ycombinator.com/showhn.html` and the HN guidelines 
 ### r/SideProject
 - **Step 1:** Check the sidebar for a required flair (e.g. "Sharing").
 - **Step 2 — title:**
-  > SWE Genie — an assessment that maps your skills/temperament to 17 engineering role archetypes (SRE, sales engineer, solutions architect, DevRel, etc.), sourced from ~68k job postings
+  > SWE Genie — a free tool that shows which of 17 engineering roles you'd actually fit, beyond just "software engineer"
 - **Step 2 — body:**
-  > I got tired of "software engineer" being the only vocabulary for a dozen genuinely different
-  > jobs, so I built a taxonomy of 17 engineering role archetypes and a scoring assessment that
-  > maps your skills and temperament to a ranked, explained fit — not just a label.
+  > "Software engineer" is one job title covering a dozen genuinely different jobs. Most engineers
+  > never see the full landscape until they've stumbled into (or out of) one of these roles.
   >
-  > The taxonomy is sourced from ~68k real job postings across 744 companies, and the methodology
-  > page shows every source and how the scoring works. Free, no signup, no login.
+  > SWE Genie maps it explicitly: 17 role archetypes scored from ~68k real job postings across 744
+  > companies. You get a ranked, explained fit, not a personality-quiz label. Methodology's public,
+  > no signup, no login.
   >
   > https://www.swe-genie.com
+- **Step 3:** Reply to every comment in the first hour.
+
+### r/sideprojects
+- **Step 1:** Check sidebar for flair requirements.
+- **Step 2 — title:**
+  > SWE Genie — a free tool that shows which of 17 engineering roles you'd actually fit, beyond just "software engineer"
+- **Step 2 — body:** Reuse the r/SideProject body above.
 - **Step 3:** Reply to every comment in the first hour.
 
 ### r/InternetIsBeautiful
 - **Step 1:** Link-title-only sub. No self-promo commentary in comments.
 - **Step 2 — title (submit as link post):**
-  > A taxonomy and assessment mapping software engineers to 17 role archetypes beyond just "software engineer"
+  > "Software engineer" covers a dozen different jobs. This maps which one you'd actually fit.
 - **URL:** `https://www.swe-genie.com`
 
 ---
@@ -196,14 +204,15 @@ Confirmed live against `news.ycombinator.com/showhn.html` and the HN guidelines 
 ### r/webdev
 - **Step 1:** Check sidebar for self-promo flair requirements or a restricted posting day.
 - **Step 2 — title:**
-  > Built a research-backed assessment that maps devs to 17 engineering role archetypes (not just frontend/backend) — methodology and sourcing are public
+  > Built a free tool that shows which of 17 engineering roles you'd actually fit — frontend/backend is only part of the map
 - **Step 2 — body:**
-  > Built a transparent, rubric-based matcher (not a black-box model) across 17 engineering role
-  > archetypes — 22 scored dimensions, weights and sourcing documented on a public methodology
-  > page, ~68k job postings across 744 companies behind the taxonomy.
+  > Most devs describe themselves by stack — "I do React," "I'm backend" — because that's the only
+  > vocabulary the industry gives you. It doesn't tell you whether you'd fit better as an SRE, a
+  > solutions architect, a forward-deployed engineer, or one of a dozen other roles.
   >
-  > No login, no gating — the full archetype list and methodology are public whether or not you
-  > take the assessment.
+  > SWE Genie maps it: 17 role archetypes scored from ~68k real job postings across 744 companies.
+  > Rubric-based, not a black box — weights and sourcing are on the public methodology page. No
+  > login, no gating.
   >
   > https://www.swe-genie.com
 
@@ -215,10 +224,10 @@ Confirmed live against `news.ycombinator.com/showhn.html` and the HN guidelines 
 - **Step 1 — required:** Confirm current self-promo policy in the wiki before posting; message
   mods first if it requires pre-approval.
 - **Step 2 — title:**
-  > I built a tool to score my own profile against 17 engineering role archetypes instead of just "SWE" — curious if the methodology holds up to this crowd
+  > You describe yourself by stack because that's the only vocabulary the industry gives you. I built something that goes deeper — want the methodology picked apart.
 - **Step 2 — body:**
   > You describe yourself by stack — "senior backend engineer," "I do React" — because that's the
-  > only taxonomy the industry hands you. The thing that actually predicts whether you'll be happy
+  > only vocabulary the industry gives you. The thing that actually predicts whether you'll be happy
   > in a role (client-facing comfort, ambiguity tolerance, on-call appetite, sales-incentive
   > appetite) is mostly orthogonal to stack and rarely made explicit.
   >
@@ -227,6 +236,32 @@ Confirmed live against `news.ycombinator.com/showhn.html` and the HN guidelines 
   > public: https://www.swe-genie.com/methodology
   >
   > Genuinely want the methodology picked apart if there's a hole in it.
+
+### r/compsci
+- **Step 1 — required:** Leans toward CS theory and research — frame around the methodology and
+  data, not the quiz. Check sidebar for self-promo rules before posting.
+- **Step 2 — title:**
+  > Built a taxonomy of 17 engineering role archetypes from ~68k job postings — here's what the data actually shows differentiates each role
+- **Step 2 — body:**
+  > "Software engineer" is one job title covering a dozen genuinely different roles. I built a
+  > taxonomy of 17 of them sourced from ~68k real job postings across 744 companies on Greenhouse,
+  > Lever, Ashby, and Workday — extracting the skills, responsibilities, comp structures, and
+  > working patterns that actually differentiate each role from the others.
+  >
+  > Full methodology and sourcing are public: https://www.swe-genie.com/methodology — there's also
+  > a free assessment if you want to see where you'd land.
+
+### r/ProgrammingJobs
+- **Step 1 — required:** Primarily a jobs board — check sidebar to confirm tool/resource posts are
+  allowed before posting.
+- **Step 2 — title:**
+  > Free tool that maps which of 17 programming/engineering roles you'd actually fit — useful before your next job search
+- **Step 2 — body:**
+  > Before you search for your next role, it helps to know which of the dozen genuinely different
+  > jobs hiding under "software engineer" you're actually built for. SWE Genie maps it: 17 role
+  > archetypes scored from ~68k real job postings across 744 companies. Free, no signup.
+  >
+  > https://www.swe-genie.com
 
 ### r/programming
 - **Step 1 — required:** Skims lukewarm on first-person posts; check the last week's top posts
@@ -254,9 +289,68 @@ Confirmed live against `news.ycombinator.com/showhn.html` and the HN guidelines 
   >
   > https://www.swe-genie.com
 
+### r/learnprogramming
+- **Step 1 — required:** Strict self-promo rules — check the wiki before posting. Frame as a
+  career resource, not a product launch. May require posting in a weekly thread rather than as a
+  standalone post.
+- **Step 2 — title:**
+  > Built a free tool that maps which of 17 engineering roles you'd actually fit — useful when figuring out where to go after learning to code
+- **Step 2 — body:**
+  > Once you can code, "software engineer" is the obvious next step. But it actually covers a dozen
+  > genuinely different jobs — SRE, solutions architect, forward-deployed engineer, DevRel, sales
+  > engineer, and more. Most people never see the full map until they've already landed in one.
+  >
+  > I built SWE Genie to make it explicit: 17 role archetypes scored from ~68k real job postings,
+  > so you can see which ones match your skills and temperament before you start searching. Free,
+  > no signup. https://www.swe-genie.com
+
 ### r/csMajors
 - **Step 1 — required:** Same check as above.
 - **Step 2:** Reuse the r/cscareerquestions caption.
+
+---
+
+## Group 7b — Reddit: job search and developer jobs subs
+
+These are job-board-adjacent communities — check sidebar rules on each before posting, as several
+may only allow actual job listings rather than tools/resources. Where tool posts are allowed,
+frame around the pre-search use case: know which role to search for before you start.
+
+**Title (use across all subs below):**
+> Free tool to figure out which of 17 engineering roles you'd actually fit — useful before you start job searching
+
+**Body:**
+> Most engineers search for "software engineer" because that's the only vocabulary they have.
+> But it covers a dozen genuinely different jobs — SRE, solutions architect, forward-deployed
+> engineer, sales engineer, DevRel, and more — with different incentives, different days, and
+> different hiring criteria.
+>
+> SWE Genie maps it: 17 role archetypes scored from ~68k real job postings across 744 companies,
+> so you know which roles to actually target before you start applying. Free, no signup.
+>
+> https://www.swe-genie.com
+
+### r/jobsearchhacks
+- Good fit — framed as a clarity tool before the search starts. Check sidebar for self-promo rules.
+
+### r/jobhunting
+- Good fit — same framing. Check sidebar before posting.
+
+### r/jobs
+- Large, broad community. Self-promo rules vary — check sidebar. May require flair.
+
+### r/jobsearch
+- Good fit. Check sidebar for self-promo rules before posting.
+
+### r/SoftwareEngineerJobs
+- Primarily a jobs board — **check sidebar first**. If only job listings are allowed, skip.
+  If tools/resources are permitted, this is the highest-precision audience of all the job subs.
+
+### r/DeveloperJobs
+- Same caveat as r/SoftwareEngineerJobs — check sidebar before posting.
+
+### r/CsJobLinks
+- Likely link-only job postings. **Check sidebar** — if it's strictly job links, skip entirely.
 
 ---
 
@@ -271,10 +365,9 @@ Every invite link and self-promo channel below was checked live; several commonl
   search are dead, use this).
 - **Post in:** `#be-shameless` — their own rules explicitly invite self-promotion there.
 - **Caption:**
-  > Built a free tool that might be relevant here: an assessment mapping engineers to 17 role
-  > archetypes (including ML Engineer and Data Engineer specifically) based on ~68k sourced job
-  > postings — scores your fit across 22 trait dimensions, not just tech stack. No signup,
-  > methodology's public. swe-genie.com
+  > Built a free tool that might be relevant here: maps engineers to 17 role archetypes including
+  > ML Engineer and Data Engineer specifically, sourced from ~68k real job postings. Scores your
+  > actual fit across the role, not just tech stack. No signup, methodology's public. swe-genie.com
 
 ### DataTalks.Club — good fit, instant join
 - **Size:** ~79,000+ data/ML professionals.
@@ -291,8 +384,8 @@ Every invite link and self-promo channel below was checked live; several commonl
 - **Post in:** `#i-built-something` (confirmed channel for exactly this).
 - **Caption:**
   > Built a free tool that maps engineers to 17 role archetypes beyond just "SWE" (SRE, solutions
-  > architect, DevRel, forward-deployed, etc.) — useful either for your own career questions or to
-  > point a report at when they're weighing a lateral move. Sourced from ~68k job postings,
+  > architect, DevRel, forward-deployed, etc.). Useful for your own career questions, or to point a
+  > report toward when they're weighing a lateral move. Sourced from ~68k job postings,
   > methodology's public, no signup. swe-genie.com
 
 ### DevOps Engineers Slack — moderate fit
@@ -324,11 +417,9 @@ Every invite link and self-promo channel below was checked live; several commonl
   it's just this server's filter. Not worth appealing for launch purposes — use CS Career Hub or
   Reactiflux instead, same channel pattern.
 - **Caption:**
-  > Built SWE Genie — a free assessment that scores your engineering profile against 17 role
-  > archetypes (SWE, SRE, sales engineer, solutions architect, DevRel, forward-deployed, security
-  > engineer, ML engineer, etc.) instead of just "software engineer." Taxonomy is sourced from
-  > ~68k job postings across 744 companies; methodology and all 17 archetypes are public. No
-  > signup, no ads. swe-genie.com
+  > Built SWE Genie — a free tool that shows which of 17 engineering roles you'd actually fit,
+  > beyond just "software engineer." Sourced from ~68k real job postings across 744 companies,
+  > methodology's public, no signup, no ads. swe-genie.com
 
 ### CS Career Hub — good fit
 - **Size:** 38,239 members, ~3,600 online.
@@ -382,10 +473,9 @@ discussion thread — never a standalone "check this out" post.
 ### Platform / Infrastructure Engineer, SRE, Security Engineer
 
 **Caption for the open communities below:**
-> Built SWE Genie — a free assessment that scores your profile against 17 engineering role
-> archetypes (Platform/Infrastructure Engineer, SRE, Security Engineer, and 14 others) instead of
-> just "software engineer." Sourced from ~68k job postings across 744 companies; methodology's
-> public, no signup, no ads. swe-genie.com
+> Built SWE Genie — a free tool that maps which of 17 engineering roles you'd actually fit,
+> including Platform/Infrastructure Engineer, SRE, and Security Engineer specifically. Sourced from
+> ~68k real job postings across 744 companies, methodology's public, no signup, no ads. swe-genie.com
 
 - **Platform Engineering Slack** — join via `platformengineering.org/slack-rd` (verified live
   redirect to a working invite). ~6k+ members. Best single fit for the Platform Engineer archetype.
@@ -409,9 +499,9 @@ discussion thread — never a standalone "check this out" post.
 ### Data Engineer, ML Engineer
 
 **Caption:**
-> Built SWE Genie — a free assessment that scores your profile against 17 engineering role
-> archetypes, including Data Engineer and ML Engineer specifically, based on ~68k sourced job
-> postings across 744 companies. No signup, methodology's public. swe-genie.com
+> Built SWE Genie — a free tool that maps which of 17 engineering roles you'd actually fit,
+> including Data Engineer and ML Engineer specifically. Sourced from ~68k real job postings across
+> 744 companies, methodology's public, no signup. swe-genie.com
 
 - **DataExpert.io Community Discord** — `discord.com/invite/the-dataexpert-io-community-1106357930443407391`.
   **Verified live: 29,485 members, 1,338 online.** Run by Zach Wilson (ex-Netflix/Airbnb/Meta DE) —
@@ -434,9 +524,9 @@ discussion thread — never a standalone "check this out" post.
 ### Mobile Engineer (iOS/Android), Embedded/IoT Engineer
 
 **Caption:**
-> Built SWE Genie — a free assessment that scores your profile against 17 engineering role
-> archetypes, including Mobile Engineer (iOS/Android) and Embedded/IoT Engineer specifically,
-> sourced from ~68k job postings. No signup, no ads, methodology's public. swe-genie.com
+> Built SWE Genie — a free tool that maps which of 17 engineering roles you'd actually fit,
+> including Mobile Engineer (iOS/Android) and Embedded/IoT Engineer specifically. Sourced from
+> ~68k real job postings, no signup, no ads, methodology's public. swe-genie.com
 
 - **iOS Developers HQ Slack** — `ios-developers.io`, ~40k members, self-serve join, has a public
   Code of Conduct (real-community signal). Best verified Slack fit for Mobile Engineer.
@@ -457,9 +547,9 @@ discussion thread — never a standalone "check this out" post.
 ### Sales Engineer/Pre-Sales, Solutions Architect (both), Forward Deployed Engineer, Consulting Engineer
 
 **Caption (for the open communities — r/salesengineers, BeSA Discord):**
-> Built SWE Genie — a free assessment scoring your profile against 17 engineering role archetypes,
-> including Sales Engineer/Pre-Sales and Solutions Architect specifically, sourced from ~68k job
-> postings. No signup, no ads. swe-genie.com
+> Built SWE Genie — a free tool that maps which of 17 engineering roles you'd actually fit,
+> including Sales Engineer/Pre-Sales and Solutions Architect specifically. Sourced from ~68k real
+> job postings, no signup, no ads. swe-genie.com
 
 **Contextual-mention only (PreSales Collective explicitly bans direct self-promo — only use this
 as a reply inside a relevant existing thread, never a standalone post):**
@@ -532,9 +622,9 @@ that window is what determines whether the algorithm extends reach beyond your i
 
 ---
 
-If you could code, you became a software engineer. That used to be the whole story.
+If you could code, you became a software engineer. That was the whole story.
 
-It's no longer that simple. Sales engineers, solutions architects, forward deployed engineers, SREs, developer advocates — these aren't variations of the same job. They're different jobs.
+Not anymore. Sales engineers, solutions architects, forward deployed engineers, SREs, developer advocates — these are genuinely different jobs, not variations on the same one.
 
 I didn't fully see that until I went into professional services consulting as a software engineer.
 
@@ -546,9 +636,9 @@ What consulting taught me: consultants fill different gaps for different clients
 → Customer Support Engineer — owning production bugs at a client site where every hour of downtime had a dollar figure attached
 → Product / Full-Stack Software Engineer — writing and shipping features, the thing most people picture when they hear "software engineer"
 
-The experience gave me a vocabulary I didn't have before. And it made me realize most engineers never get it — they go straight from "I can code" into a job search without ever seeing the full map.
+Consulting gave me a vocabulary most engineers never get. They go straight from "I can code" into a job search without ever seeing the full map.
 
-So I built SWE Genie to make the map explicit. I had Claude source 65,000+ real job postings from 745 companies across Greenhouse, Lever, Ashby, and Workday — including companies such as Stripe, Whoop, Figma, Datadog, Cloudflare, Salesforce, Databricks, Twilio, Palantir, and OpenAI. From those postings I extracted the skills, day-to-day responsibilities, comp structures, and working patterns that actually differentiate each role — and built an assessment taxonomy directly from that data. Link in the comments.
+So I built SWE Genie to make the map explicit. I had Claude pull 65,000+ real job postings from 745 companies on Greenhouse, Lever, Ashby, and Workday: Stripe, Whoop, Figma, Datadog, Cloudflare, Salesforce, Databricks, Twilio, Palantir, OpenAI, and more. From those I extracted the skills, daily responsibilities, comp structures, and working patterns that actually differentiate each role, then built an assessment taxonomy directly from that data. Link in the comments.
 
 When did you figure out which kind of engineering work you were actually built for? Did you land there on purpose, or did you stumble into it?
 

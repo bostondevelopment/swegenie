@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s — SWE Genie",
   },
   description:
-    "A 6-minute assessment that ranks 17 engineering role archetypes against how you actually work, with an explainable, sourced fit score for each.",
+    '"Software engineer" covers over a dozen different job types. Find which ones actually fit you based on data from over 67k+ jobs and 700+ companies.',
   openGraph: {
     siteName: "SWE Genie",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "SWE Genie — Wish You Knew Which Software Role Was Right For You?" }],
