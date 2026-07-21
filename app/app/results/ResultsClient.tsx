@@ -441,18 +441,16 @@ export default function ResultsClient() {
           </div>
         </section>
 
+        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
+
+        <BetaSurvey topArchetype={top.id} />
+
         {rateDimensions.length > 0 && (
           <>
             <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
             <RateRole archetypeId={top.id} dimensions={rateDimensions} />
           </>
         )}
-
-        <div className="mx-auto max-w-3xl px-4 sm:px-6"><div className="h-px bg-[var(--color-border)]" /></div>
-
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <BetaSurvey topArchetype={top.id} />
-        </section>
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6 pb-12 text-center">
           <Link href="/methodology" className="text-sm text-[var(--color-muted)] underline hover:text-[var(--color-fg)]">

@@ -21,10 +21,9 @@ export function RateRole({ archetypeId }: { archetypeId: string; dimensions: { i
 
   return (
     <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-      <h2 className="font-display text-2xl font-semibold">Rate this role</h2>
+      <h2 className="font-display text-2xl font-semibold">Experts</h2>
       <p className="text-[15px] text-[var(--color-muted)] leading-[1.6] mt-3 max-w-2xl">
-        Do this role, or hire for it? Share what rings true or off — your perspective helps validate
-        the data behind this profile.
+        Do this role, or hire for it? Your perspective helps validate the data behind this profile.
       </p>
       {!open && (
         <button
@@ -32,7 +31,7 @@ export function RateRole({ archetypeId }: { archetypeId: string; dimensions: { i
           onClick={() => setOpen(true)}
           className="mt-5 btn-primary px-5 py-2.5 text-sm font-medium"
         >
-          Share feedback
+          Share expertise
         </button>
       )}
 
